@@ -1,0 +1,214 @@
+{
+  "slug": "vucko-scroll-animation-javascript",
+  "sourceDir": "codegrid-vucko-scroll-animation-javascript",
+  "title": "Vucko Scroll Animation",
+  "description": "A tiny centered video preview grows from a 0.25 thumbnail to full scale as the intro section scrolls into view, driven by a GSAP ScrollTrigger scrub timeline (start top bottom, end top 10%) whose onUpdate interpolates translateY, scale, gap and a two-phase title font-size. A requestAnimationFrame loop applies the transforms and adds an eased mouse-follow horizontal parallax, all under Lenis smooth scroll.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "scrub",
+    "video-reveal",
+    "scale",
+    "mouse-parallax",
+    "lenis",
+    "showreel",
+    "editorial",
+    "minimal"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "scrollTo": 0.7,
+    "afterScrollMs": 800,
+    "clip": {
+      "seconds": 9
+    }
+  },
+  "images": [
+    {
+      "file": "showreel.jpg",
+      "desc": "film crew on location mid-shoot, desaturated cinematic still used as the Slate studio reel poster",
+      "role": "reel-preview poster that scales to full-bleed in the scroll intro",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "minimal",
+      "editorial",
+      "elegant"
+    ],
+    "useCase": [
+      "hero",
+      "product-showcase",
+      "scroll-story"
+    ],
+    "useWhen": "Cuando quieras revelar un video o showreel al hacer scroll: crece de miniatura a pantalla completa con parallax de ratón y scroll suave.",
+    "aliases": [
+      "scroll video reveal",
+      "showreel scroll",
+      "video que crece con scroll",
+      "parallax de ratón",
+      "smooth scroll video",
+      "reveal de video"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 0,
+    "perfCost": "light",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#e4e2d9",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#191a1c",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "muted",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#706f66",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--muted"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "vucko-scroll-animation-javascript",
+    "title": "Vucko Scroll Animation",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": true,
+    "ease_family": "none",
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 1,
+      "bytes": 247841,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "disabled-below-breakpoint",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de vucko-scroll-animation-javascript"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de vucko-scroll-animation-javascript"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de vucko-scroll-animation-javascript"
+      }
+    ],
+    "cluster": "SCROLL-WELDED",
+    "engine": "gsap+raf",
+    "motion_signature": "scrubbed scale-up reveal with rAF mouse parallax — scroll progress linearly interpolates translateY (-105..-135% → 0), scale (0.25 → 1), gap (2 → 1em) and a two-segment font-size ramp (80→40px over the first 40% of progress, then 40→20px), while horizontal mouse offset is exponentially smoothed at lerp 0.05 and gated off once scale ≥ 0.95",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-welded"
+  },
+  "review": {
+    "status": "public",
+    "comment": "En Mobile no se ve el efecto y el vídeo tiene un scroll muy lento y poco fluido"
+  }
+}

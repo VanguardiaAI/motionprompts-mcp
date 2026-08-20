@@ -1,0 +1,224 @@
+{
+  "slug": "barba-js-page-transitions",
+  "sourceDir": "cg-barba-js-page-transitions",
+  "title": "BarbaJS Page Transitions",
+  "description": "A three-page editorial site whose routes swap behind a curtain: click a nav link and two sheets — an accent one leading a solid ink panel that carries the name of the page you are travelling to — ride up over the content area, the route is replaced behind them, and they keep going off the top while the new heading lifts out of its mask and the rows step in. The masthead stays put the whole time, so the swap reads as navigation and not as a loose animation. GSAP timelines (power4.inOut curtain, power3.inOut masked heading) reproducing Barba.js's sync lifecycle with a queued in-page router.",
+  "category": "transition",
+  "tags": [
+    "page-transition",
+    "curtain",
+    "wipe",
+    "barba",
+    "mask",
+    "text-reveal",
+    "minimal",
+    "navigation",
+    "fake-router",
+    "editorial",
+    "router",
+    "queued-navigation"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "click": ".nav a[href=\"about.html\"]",
+    "afterClickMs": 2600,
+    "clip": {
+      "seconds": 10,
+      "settleMs": 1500,
+      "actions": [
+        {
+          "type": "click",
+          "selector": ".nav a[href=\"about.html\"]",
+          "at": 0.12
+        },
+        {
+          "type": "click",
+          "selector": ".nav a[href=\"contact.html\"]",
+          "at": 0.42
+        },
+        {
+          "type": "click",
+          "selector": ".nav a[href=\"index.html\"]",
+          "at": 0.72
+        }
+      ]
+    }
+  },
+  "images": [],
+  "updated": "2026-08-16",
+  "intent": {
+    "mood": [
+      "minimal",
+      "editorial",
+      "elegant"
+    ],
+    "useCase": [
+      "page-transition",
+      "navigation",
+      "text-reveal"
+    ],
+    "useWhen": "Úsalo para navegar entre rutas o secciones con una cortina que sube, tapa, cambia el contenido y se retira, revelando el título de la nueva página desde una máscara.",
+    "aliases": [
+      "transición de página",
+      "page transition",
+      "barba js",
+      "cortina blanca",
+      "wipe transition",
+      "transición de rutas"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 0,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": false,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bg",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#e8e6df",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bg"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#14131a",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "flame",
+      "label": "Acento",
+      "type": "color",
+      "default": "#1f2fd0",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--flame"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "curtain",
+      "label": "Acento 2",
+      "type": "color",
+      "default": "#16151d",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--curtain"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "barba-js-page-transitions",
+    "title": "BarbaJS Page Transitions",
+    "category": "transition",
+    "trigger": "click",
+    "libs": [
+      "gsap"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power4",
+    "duration_range": [
+      0.25,
+      1
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 0,
+      "bytes": 0,
+      "root_absolute_paths": false
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": true
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "html/body overflow:hidden",
+      "html/body height fija en vh"
+    ],
+    "capabilities": [
+      {
+        "capability": "page-scroll-lock",
+        "reason": "fija overflow:hidden en html/body"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "CLICK-CURTAIN",
+    "engine": "mixed",
+    "motion_signature": "full-screen curtain wipe with masked heading reveal",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "curtain-toggle"
+  },
+  "review": {
+    "status": "public"
+  }
+}

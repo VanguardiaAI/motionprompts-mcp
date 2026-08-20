@@ -1,0 +1,282 @@
+{
+  "slug": "threejs-slider-final",
+  "sourceDir": "codegrid-threejs-slider-final",
+  "title": "ThreeJS Curved Distortion Slider",
+  "description": "An infinite horizontal Three.js image slider built from textured PlaneGeometry meshes whose vertices bend into a radial curve as you scroll or drag. Wheel, touch and arrow-key input feed velocity-tracked position and distortion factors that are lerped every frame, so faster flicks warp the slides more and the whole strip wraps seamlessly.",
+  "category": "slider",
+  "tags": [
+    "three.js",
+    "webgl",
+    "infinite-slider",
+    "vertex-distortion",
+    "drag",
+    "momentum",
+    "experimental",
+    "gallery",
+    "cinematic"
+  ],
+  "gsap": [],
+  "deps": [
+    "three"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "clip": {
+      "seconds": 9,
+      "actions": [
+        {
+          "type": "scroll",
+          "to": 0.9,
+          "mode": "pingpong"
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "black-and-white live-music photo of a singer shot from behind, arm raised holding a microphone above a crowd, backlit stage smoke",
+      "role": "slide texture (repeats across the infinite slider)",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "silhouette of a performer backlit by radiating cool-white and warm stage beams, cinematic concert lighting",
+      "role": "slide texture (repeats across the infinite slider)",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "crowd with raised hands silhouetted against red stage smoke and lights, band performing on stage",
+      "role": "slide texture (repeats across the infinite slider)",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "singer at a vintage gold microphone under a single warm spotlight with drifting smoke, dark stage",
+      "role": "slide texture (repeats across the infinite slider)",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "rock band performing live on a stage washed in warm amber light with the audience's hands raised",
+      "role": "slide texture (repeats across the infinite slider)",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "experimental",
+      "cinematic",
+      "bold"
+    ],
+    "useCase": [
+      "slider",
+      "gallery",
+      "product-showcase"
+    ],
+    "useWhen": "Úsalo para una galería o carrusel horizontal infinito e inmersivo donde las imágenes se curvan y distorsionan en WebGL al hacer scroll o arrastrar.",
+    "aliases": [
+      "slider infinito",
+      "carrusel 3d",
+      "webgl slider",
+      "distortion slider",
+      "carrusel curvo",
+      "infinite gallery"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": true,
+    "needsCanvas": true,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 5,
+    "perfCost": "heavy",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#ece7df",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "muted",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#7c766e",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--muted"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "slideCount",
+      "label": "Número de láminas",
+      "type": "range",
+      "min": 6,
+      "max": 18,
+      "step": 1,
+      "default": 10,
+      "apply": {
+        "kind": "js",
+        "path": "slideCount"
+      }
+    },
+    {
+      "id": "slideHeight",
+      "label": "Tamaño de la lámina",
+      "type": "range",
+      "min": 1,
+      "max": 2.6,
+      "step": 0.1,
+      "default": 1.5,
+      "apply": {
+        "kind": "js",
+        "path": "slideHeight"
+      }
+    },
+    {
+      "id": "gap",
+      "label": "Separación entre láminas",
+      "type": "range",
+      "min": 0,
+      "max": 1,
+      "step": 0.05,
+      "default": 0.1,
+      "apply": {
+        "kind": "js",
+        "path": "gap"
+      }
+    },
+    {
+      "id": "maxDistortion",
+      "label": "Curvatura al pasar por el centro",
+      "type": "range",
+      "min": 0,
+      "max": 4,
+      "step": 0.1,
+      "default": 2.5,
+      "apply": {
+        "kind": "js",
+        "path": "maxDistortion"
+      }
+    },
+    {
+      "id": "smoothing",
+      "label": "Suavizado del avance",
+      "type": "range",
+      "min": 0.02,
+      "max": 0.3,
+      "step": 0.005,
+      "default": 0.1,
+      "apply": {
+        "kind": "js",
+        "path": "smoothing"
+      }
+    }
+  ],
+  "motion": {
+    "slug": "threejs-slider-final",
+    "title": "ThreeJS Curved Distortion Slider",
+    "category": "slider",
+    "trigger": "wheel",
+    "libs": [
+      "three"
+    ],
+    "complexity": 4,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": null,
+    "duration_range": [
+      0.25,
+      0.25
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 5,
+      "bytes": 614728,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "html/body overflow:hidden",
+      "preventDefault en wheel"
+    ],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "captura la rueda con preventDefault"
+      },
+      {
+        "capability": "page-scroll-lock",
+        "reason": "fija overflow:hidden en html/body"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "CAPTURED-VIRTUAL-SCROLL",
+    "engine": "webgl-raf",
+    "motion_signature": "wheel/drag/arrow-key lerped infinite WebGL strip, velocity-driven radial vertex bend with momentum decay",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  },
+  "review": {
+    "status": "public"
+  }
+}

@@ -1,0 +1,587 @@
+{
+  "slug": "sarah-bassett",
+  "sourceDir": "cg-sarah-bassett",
+  "title": "Zoomable Image Wall",
+  "description": "A full-viewport mosaic wall of 1200 image tiles that reveals on load with a random GSAP grid stagger (scale + opacity, power1.out). Zoom-in/out buttons run a 2.5s power4.inOut GSAP tween that explodes each tile outward and scales it up, and a drag layer lets you pan the zoomed wall with a lerp-smoothed translate3d.",
+  "category": "gallery",
+  "tags": [
+    "gallery",
+    "mosaic",
+    "image-wall",
+    "drag",
+    "zoom",
+    "stagger",
+    "gsap",
+    "editorial",
+    "interactive"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 3000,
+    "clip": {
+      "seconds": 11,
+      "settleMs": 3000,
+      "actions": [
+        {
+          "type": "click",
+          "selector": "#zoom-in",
+          "at": 0.2
+        },
+        {
+          "type": "scrollX",
+          "to": 0.6,
+          "mode": "pingpong",
+          "start": 0.35,
+          "end": 0.7
+        },
+        {
+          "type": "scroll",
+          "to": 0.5,
+          "mode": "pingpong",
+          "start": 0.7
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "Two fashion models embracing, woman in front in a teal-blue sweater, man behind, warm studio light.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "Overhead editorial shot of crossed legs in red trousers and dark boots on a couch with scattered playing cards.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "Studio portrait of a woman in a red floral-print shirt with large gold hoop earrings.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "Model seated on the floor holding a red handbag against a neutral studio backdrop.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "Two models cuddling, one wearing a black balaclava-style hat and white fur collar.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "Wide full-length shot of a model walking in a red plaid outfit across a bright studio.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "Wide shot of two models seated together on the studio floor.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "Woman lowering round sunglasses in an orange blazer against a warm backdrop.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpg",
+      "desc": "Two women posing side by side in patterned outfits.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpg",
+      "desc": "Two models close together, one with a tattooed scalp and long braids, teal top.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img11.jpg",
+      "desc": "Woman laughing with a hand across her face, red manicure.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img12.jpg",
+      "desc": "Cropped shot of a model holding a tan leather vanity case.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img13.jpg",
+      "desc": "Woman reclining in a red floral outfit on a bed.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img14.jpg",
+      "desc": "Woman in red holding a monogram-print bag, wearing dark sunglasses.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img15.jpg",
+      "desc": "Model in a red suit with black sunglasses holding a small handbag.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img16.jpg",
+      "desc": "Two models dressed in red seated together, both wearing sunglasses.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img17.jpg",
+      "desc": "Moody portrait of a woman inside a car with directional side light.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img18.jpg",
+      "desc": "Model lying on white fur in a patterned outfit.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img19.jpg",
+      "desc": "Model seated by a sunlit window wearing a green suit.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img20.jpg",
+      "desc": "Model in a patterned outfit against a deep red wall.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img21.jpg",
+      "desc": "Reflection composition with red flowers and a model dressed in green.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img22.jpg",
+      "desc": "Man holding a single red rose to his face, wearing white shield sunglasses.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img23.jpg",
+      "desc": "Profile of a man in a yellow tee against a red background, wearing sunglasses.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img24.jpg",
+      "desc": "Model bending forward in denim in a bright studio.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img25.jpg",
+      "desc": "Two models in a dynamic pose in a dark scene (landscape crop).",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img26.jpg",
+      "desc": "Model in fur captured mid-movement on a tiled floor.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img27.jpg",
+      "desc": "Model leaning against a tiled wall in a denim outfit.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img28.jpg",
+      "desc": "Model in a patterned outfit with a red headband and sunglasses.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img29.jpg",
+      "desc": "Model posing against a beige tiled wall.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img30.jpg",
+      "desc": "Model in white raising an arm against green and yellow drapes, wearing sunglasses.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img31.jpg",
+      "desc": "Silhouette of a model against a wall of yellow flames.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img32.jpg",
+      "desc": "Woman in a black bra against a blue curtain in dim light.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img33.jpg",
+      "desc": "Man holding a white flower in a green outfit against a yellow backdrop.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img34.jpg",
+      "desc": "Man photographing with a camera in a green suit on a green-yellow set.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img35.jpg",
+      "desc": "Man in a green suit with a hand to his face against a yellow backdrop.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img36.jpg",
+      "desc": "Runway shot of a model in flowing red trousers walking past a seated front row.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img37.jpg",
+      "desc": "A single yellow high-heel shoe in a spotlight on a dark floor.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img38.jpg",
+      "desc": "Editorial pose of a woman in a draped red dress seated on a white cube, cool studio light.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img39.jpg",
+      "desc": "Model in a red suit over a white top against a pale studio backdrop.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img40.jpg",
+      "desc": "Hand holding a vintage rotary telephone, patterned sleeve, teal tones.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img41.jpg",
+      "desc": "Beauty portrait of a model in red tulle with a red flower in her hair.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img42.jpg",
+      "desc": "Full-length studio shot of a model in a red trouser suit, arms raised.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img43.jpg",
+      "desc": "Retro interior with a circular-relief wall and a red armchair.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img44.jpg",
+      "desc": "Black-and-white portrait of a model in a wide-brim fringed hat, avant-garde styling.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img45.jpg",
+      "desc": "Woman seated in a green-and-black striped suit (wide shot).",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img46.jpg",
+      "desc": "Two women on a yellow sofa with a disco ball in a vintage interior.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img47.jpg",
+      "desc": "Black-and-white close portrait of a woman looking up, soft directional light.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img48.jpg",
+      "desc": "High-contrast black-and-white crop of a woman's eyes.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img49.jpg",
+      "desc": "Black-and-white fashion shot of a model in a white tank adjusting a jacket.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    },
+    {
+      "file": "img50.jpg",
+      "desc": "Black-and-white beauty portrait of a model behind dotted mesh with graphic eye makeup.",
+      "role": "tile in the mosaic image wall (randomly assigned across the grid)",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "editorial",
+      "cinematic",
+      "experimental"
+    ],
+    "useCase": [
+      "gallery",
+      "image-reveal",
+      "background"
+    ],
+    "useWhen": "Cuando quieras un muro tipo mosaico de cientos de fotos que aparece con stagger aleatorio y permite hacer zoom y arrastrar para explorarlo.",
+    "aliases": [
+      "muro de imagenes",
+      "image wall",
+      "mosaico",
+      "galeria zoom",
+      "galeria arrastrable",
+      "drag zoom gallery"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 50,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#0a0908",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f3ede4",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "red",
+      "label": "Acento",
+      "type": "color",
+      "default": "#d4372a",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--red"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "rows",
+      "label": "Filas del muro",
+      "type": "range",
+      "min": 6,
+      "max": 30,
+      "step": 1,
+      "default": 20,
+      "apply": {
+        "kind": "js",
+        "path": "rows"
+      }
+    },
+    {
+      "id": "tileHeight",
+      "label": "Alto de las miniaturas",
+      "type": "range",
+      "min": 18,
+      "max": 72,
+      "step": 1,
+      "default": 35,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "tileHeight"
+      }
+    },
+    {
+      "id": "revealStagger",
+      "label": "Escalonado de la aparición",
+      "type": "range",
+      "min": 0.2,
+      "max": 5,
+      "step": 0.1,
+      "default": 1.5,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "revealStagger"
+      }
+    },
+    {
+      "id": "dragLerp",
+      "label": "Suavizado del arrastre",
+      "type": "range",
+      "min": 0.02,
+      "max": 0.3,
+      "step": 0.005,
+      "default": 0.075,
+      "apply": {
+        "kind": "js",
+        "path": "dragLerp"
+      }
+    },
+    {
+      "id": "zoomScale",
+      "label": "Aumento al ampliar",
+      "type": "range",
+      "min": 2,
+      "max": 10,
+      "step": 0.25,
+      "default": 5,
+      "apply": {
+        "kind": "js",
+        "path": "zoomScale"
+      }
+    },
+    {
+      "id": "spreadX",
+      "label": "Apertura al ampliar",
+      "type": "range",
+      "min": 300,
+      "max": 2400,
+      "step": 50,
+      "default": 1200,
+      "apply": {
+        "kind": "js",
+        "path": "spreadX"
+      }
+    }
+  ],
+  "motion": {
+    "slug": "sarah-bassett",
+    "title": "Zoomable Image Wall",
+    "category": "gallery",
+    "trigger": "drag",
+    "libs": [
+      "gsap"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": 150,
+    "needs_lenis": false,
+    "ease_family": "power4",
+    "duration_range": [
+      0.3,
+      2.5
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 50,
+      "bytes": 3342411,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "html/body overflow:hidden"
+    ],
+    "capabilities": [
+      {
+        "capability": "page-scroll-lock",
+        "reason": "fija overflow:hidden en html/body"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "CAPTURED-VIRTUAL-SCROLL",
+    "engine": "mixed",
+    "motion_signature": "grid-stagger reveal, tween zoom, lerp-dragged wall",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  },
+  "review": {
+    "status": "public"
+  }
+}

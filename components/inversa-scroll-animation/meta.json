@@ -1,0 +1,205 @@
+{
+  "slug": "inversa-scroll-animation",
+  "sourceDir": "codegrid-inversa-scroll-animation-nextjs",
+  "title": "Inversa Scroll Animation",
+  "description": "Hero pinned over four viewport heights where a single scrubbed onUpdate drives phase-based animations from scroll progress with smoothstep easing: text blocks slide up, a 200svh aerial image parallaxes in three phases, a fixed dark layer with a subtractive bar-code SVG mask scales from 2.5 to 1 to frame the image while it desaturates and darkens, and a grid overlay, two pulsing location markers, and a side progress bar fade in and out at precise progress windows.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "pin",
+    "scrub",
+    "mask",
+    "parallax",
+    "lenis",
+    "hero",
+    "svg-mask",
+    "markers",
+    "progress-bar"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 1200,
+    "scrollTo": 0.8,
+    "clip": {
+      "seconds": 9
+    }
+  },
+  "images": [
+    {
+      "file": "hero-img.jpg",
+      "desc": "aerial top-down view of a turquoise braided river weaving through green shallows and autumn forest",
+      "role": "200svh parallax hero image revealed through the bar-code mask",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "cinematic",
+      "technical",
+      "editorial"
+    ],
+    "useCase": [
+      "hero",
+      "scroll-story",
+      "image-reveal"
+    ],
+    "useWhen": "Úsalo cuando quieras un hero cinematográfico donde el scroll revele una imagen aérea tras una máscara de barras, con texto y marcadores que avanzan por fases.",
+    "aliases": [
+      "scroll cinematográfico",
+      "hero con máscara",
+      "máscara de barras",
+      "bar-code mask reveal",
+      "parallax hero scroll",
+      "image reveal por scroll"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 1,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "dark",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#0b100f",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--dark"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "light",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f1f5f3",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--light"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "inversa-scroll-animation",
+    "title": "Inversa Scroll Animation",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 3,
+    "pinned": true,
+    "viewport_heights": 400,
+    "needs_lenis": true,
+    "ease_family": null,
+    "duration_range": [
+      1.5,
+      1.5
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 3,
+      "bytes": 158504,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de inversa-scroll-animation"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de inversa-scroll-animation"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de inversa-scroll-animation"
+      }
+    ],
+    "cluster": "SCROLL-LAGGED",
+    "engine": "gsap+raf",
+    "motion_signature": "pinned hero, scrubbed phase-based mask reveal parallax",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-lagged"
+  },
+  "review": {
+    "status": "public"
+  }
+}

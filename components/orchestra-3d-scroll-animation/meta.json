@@ -1,0 +1,399 @@
+{
+  "slug": "orchestra-3d-scroll-animation",
+  "sourceDir": "cg-orchestra-3d-scroll-animation",
+  "title": "Orchestra 3D Scroll Animation",
+  "description": "A pinned hero where six image-mapped CSS 3D cubes fly in from deep translateZ(-30000px) and assemble into a spread as you scroll. A single Lenis-smoothed ScrollTrigger (pin + scrub over 4x viewport height) drives an onUpdate that interpolates each cube's top/left/rotateX/Y/Z and Z-depth, blurs and fades the block logo, scales and fades the intro headline, then reveals a second de-blurring headline; two cubes get an extra 180 flip in the second half.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "3d",
+    "css-3d",
+    "cube",
+    "pin",
+    "scrub",
+    "perspective",
+    "lenis",
+    "editorial"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "scrollTo": 0.7,
+    "waitMs": 2500,
+    "clip": {
+      "seconds": 9
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpeg",
+      "desc": "Minimal 3D render of cream cubes, plinths and a bronze sphere against a pale blue sky.",
+      "role": "Front face texture of cube-1.",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpeg",
+      "desc": "White, orange, black and green t-shirts hanging on wooden hangers on a rail.",
+      "role": "Back face texture of cube-1.",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpeg",
+      "desc": "Profile portrait of a person in bold blue glasses and a yellow jacket against blue sky.",
+      "role": "Right face texture of cube-1.",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpeg",
+      "desc": "Lone figure standing in a golden grassy field with mountains behind, muted landscape.",
+      "role": "Left face texture of cube-1.",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpeg",
+      "desc": "Glowing mushroom-shaped table lamp on a teal base against a terracotta wall.",
+      "role": "Top face texture of cube-1.",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpeg",
+      "desc": "Figure draped in flowing cream fabric standing among desert sand dunes.",
+      "role": "Bottom face texture of cube-1.",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpeg",
+      "desc": "Fashion editorial portrait of a woman with curly hair in a black velvet ruffled dress.",
+      "role": "Front face texture of cube-2.",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpeg",
+      "desc": "Person in a camel coat holding a minimalist beige leather handbag.",
+      "role": "Back face texture of cube-2.",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpeg",
+      "desc": "Hands cradling a white ridged fluted ceramic vessel on a dark background.",
+      "role": "Right face texture of cube-2.",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpeg",
+      "desc": "A hand holding a round white ceramic vase against an olive-green backdrop.",
+      "role": "Left face texture of cube-2.",
+      "replaced": true
+    },
+    {
+      "file": "img11.jpeg",
+      "desc": "Glass perfume bottle on a plinth with soft leaf shadows on a green background.",
+      "role": "Top face texture of cube-2.",
+      "replaced": true
+    },
+    {
+      "file": "img12.jpeg",
+      "desc": "Cluster of raw green emerald crystals embedded in grey rock.",
+      "role": "Bottom face texture of cube-2.",
+      "replaced": true
+    },
+    {
+      "file": "img13.jpeg",
+      "desc": "Minimalist hotel or office reception desk in warm wood and stone tones.",
+      "role": "Front face texture of cube-3.",
+      "replaced": true
+    },
+    {
+      "file": "img14.jpeg",
+      "desc": "Portrait of a woman with a platinum blonde bob and red lipstick in a metallic top.",
+      "role": "Back face texture of cube-3.",
+      "replaced": true
+    },
+    {
+      "file": "img15.jpeg",
+      "desc": "Top-down macro of an amber liquid resin droplet in a shallow dish.",
+      "role": "Right face texture of cube-3.",
+      "replaced": true
+    },
+    {
+      "file": "img16.jpeg",
+      "desc": "Dark scene of a figure in a white dress spinning with motion blur.",
+      "role": "Left face texture of cube-3.",
+      "replaced": true
+    },
+    {
+      "file": "img17.jpeg",
+      "desc": "White product box resting on a red rocky terracotta cliff surface.",
+      "role": "Top face texture of cube-3.",
+      "replaced": true
+    },
+    {
+      "file": "img18.jpeg",
+      "desc": "Warm sunlit interior with wood cabinetry and a plant casting shadows.",
+      "role": "Bottom face texture of cube-3.",
+      "replaced": true
+    },
+    {
+      "file": "img19.jpeg",
+      "desc": "Foggy high-rise apartment towers at dusk, moody warm-lit cityscape.",
+      "role": "Front face texture of cube-4.",
+      "replaced": true
+    },
+    {
+      "file": "img20.jpeg",
+      "desc": "Modern concrete loft living room with wood kitchen cabinets and a grey sofa.",
+      "role": "Back face texture of cube-4.",
+      "replaced": true
+    },
+    {
+      "file": "img21.jpeg",
+      "desc": "Dark teal futuristic capsule pod, rounded and minimal.",
+      "role": "Right face texture of cube-4.",
+      "replaced": true
+    },
+    {
+      "file": "img22.jpeg",
+      "desc": "Curved organic minimalist lounge interior with white sofas and arches.",
+      "role": "Left face texture of cube-4.",
+      "replaced": true
+    },
+    {
+      "file": "img23.jpeg",
+      "desc": "Editorial portrait of a man wearing a flowing draped cream headscarf.",
+      "role": "Top face texture of cube-4.",
+      "replaced": true
+    },
+    {
+      "file": "img24.jpeg",
+      "desc": "Warm wood interior with a glowing white sphere lamp on a plinth.",
+      "role": "Bottom face texture of cube-4.",
+      "replaced": true
+    },
+    {
+      "file": "img25.jpeg",
+      "desc": "Graphic minimalist composition with a terrazzo arch, orange circle and black shapes.",
+      "role": "Front face texture of cube-5.",
+      "replaced": true
+    },
+    {
+      "file": "img26.jpeg",
+      "desc": "Sunlit interior with tall windows and plants and a seated person.",
+      "role": "Back face texture of cube-5.",
+      "replaced": true
+    },
+    {
+      "file": "img27.jpeg",
+      "desc": "Portrait of a person with sheer fabric floating above their head on a cream background.",
+      "role": "Right face texture of cube-5.",
+      "replaced": true
+    },
+    {
+      "file": "img28.jpeg",
+      "desc": "Long arched corridor with a lone distant figure and a reflective floor.",
+      "role": "Left face texture of cube-5.",
+      "replaced": true
+    },
+    {
+      "file": "img29.jpeg",
+      "desc": "Warm terracotta curved wall and pool with a tiny bird, minimalist architecture.",
+      "role": "Top face texture of cube-5.",
+      "replaced": true
+    },
+    {
+      "file": "img30.jpeg",
+      "desc": "Lower legs in rolled jeans and white and tan sneakers.",
+      "role": "Bottom face texture of cube-5.",
+      "replaced": true
+    },
+    {
+      "file": "img31.jpeg",
+      "desc": "Modern staircase with a glass wall and warm-toned steps, architectural interior.",
+      "role": "Front face texture of cube-6.",
+      "replaced": true
+    },
+    {
+      "file": "img32.jpeg",
+      "desc": "A single sneaker displayed on a rock with green palm-leaf shadows, product shot.",
+      "role": "Back face texture of cube-6.",
+      "replaced": true
+    },
+    {
+      "file": "img33.jpeg",
+      "desc": "A woman working at a desk by a window in a warm sunlit studio.",
+      "role": "Right face texture of cube-6.",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "editorial",
+      "elegant",
+      "cinematic"
+    ],
+    "useCase": [
+      "hero",
+      "scroll-story",
+      "gallery"
+    ],
+    "useWhen": "Úsalo para un hero editorial donde varios cubos 3D con fotos vuelan desde el fondo y se ensamblan mientras el scroll cambia los titulares.",
+    "aliases": [
+      "cubos 3d scroll",
+      "3d cubes scroll",
+      "galeria de cubos",
+      "css 3d perspective",
+      "scroll reveal cubos",
+      "flying cubes"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 33,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "canary",
+      "label": "Acento",
+      "type": "color",
+      "default": "#ffe500",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--canary"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bone",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f4f4f0",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bone"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "orchestra-3d-scroll-animation",
+    "title": "Orchestra 3D Scroll Animation",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 3,
+    "pinned": true,
+    "viewport_heights": 600,
+    "needs_lenis": true,
+    "ease_family": null,
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 33,
+      "bytes": 2961700,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "html/body height fija en vh"
+    ],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      },
+      {
+        "capability": "document-height",
+        "reason": "fija la altura del documento en 600vh"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de orchestra-3d-scroll-animation"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de orchestra-3d-scroll-animation"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de orchestra-3d-scroll-animation"
+      }
+    ],
+    "cluster": "SCROLL-LAGGED",
+    "engine": "gsap+raf",
+    "motion_signature": "single scrub-pinned ScrollTrigger (scrub:1) driving hand-rolled LINEAR interpolation — no tweens, no ease curve: 6 CSS-3D cubes fly from z:-30000px / off-screen top and ±360° rotations to their assembled grid over the first half of the scrub, cube-2 and cube-4 add a further ±180° rotateY over the second half, while the logo blurs 0→20px and fades out, header-1 scales 1→1.5 + blurs 0→20px + fades out, and header-2 scales 0.75→1 + un-blurs 10→0px + fades in after 40% progress",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-lagged"
+  },
+  "review": {
+    "status": "public"
+  }
+}

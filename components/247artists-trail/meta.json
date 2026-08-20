@@ -1,0 +1,434 @@
+{
+  "slug": "247artists-trail",
+  "sourceDir": "cg-247artists-trail-nextjs",
+  "title": "24/7 Artists Image Trail",
+  "description": "A cursor-driven image trail across a full-viewport hero: as the mouse moves past a distance threshold, a new 175px image spawns at the cursor and slides toward it, revealed through 10 horizontal clip-path mask layers that open from the center outward with a staggered ease, then collapse and fade back to the center after a ~1s lifespan. Pure vanilla JS with CSS transitions and requestAnimationFrame (no GSAP); disabled below 1000px width.",
+  "category": "interactive",
+  "tags": [
+    "image-trail",
+    "cursor",
+    "mouse-trail",
+    "clip-path",
+    "reveal",
+    "vanilla-js",
+    "css-transitions",
+    "editorial",
+    "hover"
+  ],
+  "gsap": [],
+  "deps": [],
+  "preview": {
+    "waitMs": 2500,
+    "clip": {
+      "seconds": 9,
+      "settleMs": 1800,
+      "actions": [
+        {
+          "type": "cursor",
+          "path": "figure8",
+          "ax": 0.36,
+          "ay": 0.3
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "hero.jpg",
+      "desc": "abstract plate of lit studio haze — diagonal light shafts raking through smoke over near-black, warm ochre glow low-left, no subject",
+      "role": "faint full-bleed hero background image (40% opacity) behind the trail; texture and light only, so the twenty portraits passing over it stay the only subject",
+      "replaced": true,
+      "reused_from": "bitkraft-menu/menu.jpg"
+    },
+    {
+      "file": "trail-images/img1.jpeg",
+      "desc": "androgynous model with short bleached hair wearing yellow-framed sunglasses and a sheer orange top, saturated red-orange background",
+      "role": "trail image 1 (cycled into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "trail-images/img2.jpeg",
+      "desc": "model with head and face wrapped in a fine wireframe mesh net, black clothing, pale grey background",
+      "role": "trail image 2 (cycled into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "trail-images/img3.jpeg",
+      "desc": "dark-skinned model in a black turtleneck wearing angular black geometric sunglasses, vivid red background",
+      "role": "trail image 3 (cycled into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "trail-images/img4.jpeg",
+      "desc": "profile of a shaved-head dark-skinned model wearing round sunglasses, bright yellow background",
+      "role": "trail image 4 (cycled into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "trail-images/img5.jpeg",
+      "desc": "close-up of an East Asian man's face under red lighting with a patterned collar, red background",
+      "role": "trail image 5 (cycled into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "trail-images/img6.jpeg",
+      "desc": "close-up of an East Asian woman's face partly veiled in translucent black plastic film, dark moody tone",
+      "role": "trail image 6 (cycled into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "trail-images/img7.jpeg",
+      "desc": "man in a denim jacket lit entirely in deep blue light, glancing over his shoulder against a dark red-shadowed background",
+      "role": "trail image 7 (cycled into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "trail-images/img8.jpeg",
+      "desc": "profile of a dark-skinned model with a glowing iridescent light band across the neck and shoulder, grey background",
+      "role": "trail image 8 (cycled into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "trail-images/img9.jpeg",
+      "desc": "profile silhouette of a model against a magenta-pink background with vertical stripes",
+      "role": "trail image 9 (cycled into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "trail-images/img10.jpeg",
+      "desc": "model with a dark bob and blunt bangs, face split by blue and red gradient lighting, black turtleneck",
+      "role": "trail image 10 (cycled into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "trail-images/img11.jpeg",
+      "desc": "model with dark curly hair in tortoiseshell cat-eye sunglasses and a white pinstripe shirt, pale ice-blue background",
+      "role": "trail image 11 (cycled into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "trail-images/img12.jpeg",
+      "desc": "model with pink and purple lit hair and a high black collar, pale grey background",
+      "role": "trail image 12 (cycled into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "trail-images/img13.jpeg",
+      "desc": "blonde model with windswept hair under dramatic teal-and-red split lighting",
+      "role": "trail image 13 (cycled into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "trail-images/img14.jpeg",
+      "desc": "dark-skinned model with short hair and a dangling earring in black clothing, muted teal-grey background",
+      "role": "trail image 14 (cycled into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "trail-images/img15.jpeg",
+      "desc": "model with a curly top bun in an emerald satin dress and gold jewellery, eyes closed, near-black background",
+      "role": "trail image 15 (cycled into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "trail-images/img16.jpeg",
+      "desc": "profile of a long-haired man in black against a glossy red wall with a vertical amber light strip behind his head",
+      "role": "trail image 16 (cycled into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "trail-images/img17.jpeg",
+      "desc": "silhouette of a model in a sheer black gown and wide-brim hat against a blue background",
+      "role": "trail image 17 (cycled into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "trail-images/img18.jpeg",
+      "desc": "black-and-white studio shot of a model stretching sheer black fabric diagonally across her face, grey background",
+      "role": "trail image 18 (cycled into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "trail-images/img19.jpeg",
+      "desc": "model with cropped platinum hair and slim sunglasses in a yellow collar, orange background",
+      "role": "trail image 19 (cycled into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "trail-images/img20.jpeg",
+      "desc": "model with dark hair and face split by blue and red lighting in a black turtleneck, grey background",
+      "role": "trail image 20 (cycled into the cursor trail)",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "editorial",
+      "bold",
+      "minimal"
+    ],
+    "useCase": [
+      "cursor-effect",
+      "hover-interaction"
+    ],
+    "useWhen": "Úsalo en un hero cuando quieras una estela de imágenes editoriales que aparezcan siguiendo el cursor con reveal por franjas clip-path.",
+    "aliases": [
+      "estela de imagenes",
+      "image trail",
+      "rastro de cursor",
+      "mouse trail gallery",
+      "cursor image reveal",
+      "trail de fotos"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 21,
+    "perfCost": "medium",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mouseThreshold",
+      "label": "Sensibilidad del ratón",
+      "type": "range",
+      "min": 40,
+      "max": 400,
+      "step": 10,
+      "default": 150,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "mouseThreshold"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "imageLifespan",
+      "label": "Duración en pantalla",
+      "type": "range",
+      "min": 300,
+      "max": 3000,
+      "step": 100,
+      "default": 1000,
+      "unit": "ms",
+      "apply": {
+        "kind": "js",
+        "path": "imageLifespan"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "inDuration",
+      "label": "Velocidad de apertura",
+      "type": "range",
+      "min": 200,
+      "max": 2000,
+      "step": 50,
+      "default": 750,
+      "unit": "ms",
+      "apply": {
+        "kind": "js",
+        "path": "inDuration"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "slideDuration",
+      "label": "Velocidad de deslizamiento",
+      "type": "range",
+      "min": 200,
+      "max": 2500,
+      "step": 50,
+      "default": 1000,
+      "unit": "ms",
+      "apply": {
+        "kind": "js",
+        "path": "slideDuration"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "staggerIn",
+      "label": "Escalonado de apertura",
+      "type": "range",
+      "min": 0,
+      "max": 300,
+      "step": 10,
+      "default": 100,
+      "unit": "ms",
+      "apply": {
+        "kind": "js",
+        "path": "staggerIn"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "trailImageCount",
+      "label": "Nº de imágenes en el rastro",
+      "type": "range",
+      "min": 4,
+      "max": 20,
+      "step": 1,
+      "default": 20,
+      "apply": {
+        "kind": "js",
+        "path": "trailImageCount"
+      },
+      "tier": "premium"
+    },
+    {
+      "id": "easing",
+      "label": "Curva de la apertura",
+      "type": "select",
+      "default": "cubic-bezier(0.87, 0, 0.13, 1)",
+      "options": [
+        {
+          "value": "cubic-bezier(0.87, 0, 0.13, 1)",
+          "label": "Seca"
+        },
+        {
+          "value": "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+          "label": "Suave"
+        },
+        {
+          "value": "linear",
+          "label": "Constante"
+        },
+        {
+          "value": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+          "label": "Rebote"
+        },
+        {
+          "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+          "label": "Frenada"
+        }
+      ],
+      "apply": {
+        "kind": "js",
+        "path": "easing"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "slideEasing",
+      "label": "Curva del deslizamiento",
+      "type": "select",
+      "default": "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+      "options": [
+        {
+          "value": "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+          "label": "Suave"
+        },
+        {
+          "value": "cubic-bezier(0.87, 0, 0.13, 1)",
+          "label": "Seca"
+        },
+        {
+          "value": "linear",
+          "label": "Constante"
+        },
+        {
+          "value": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+          "label": "Rebote"
+        },
+        {
+          "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+          "label": "Frenada"
+        }
+      ],
+      "apply": {
+        "kind": "js",
+        "path": "slideEasing"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "247artists-trail",
+    "title": "24/7 Artists Image Trail",
+    "category": "interactive",
+    "trigger": "pointer",
+    "libs": [],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": null,
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 21,
+      "bytes": 2243195,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "touch-branch",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "POINTER-LATCHED",
+    "engine": "css-transition",
+    "motion_signature": "pointer-speed image trail: a tile spawns whenever the cursor travels >150px (60px on coarse pointers) inside the hero, born at a lerp-0.1 trailing position and CSS-eased to the live cursor over 1s, revealed as 10 horizontal clip-path bands opening centre-outward (50-450ms stagger, 750ms each) and closing edges-inward 1s later (0-100ms stagger)",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "pointer-latch"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

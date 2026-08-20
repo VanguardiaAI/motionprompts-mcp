@@ -1,0 +1,225 @@
+{
+  "slug": "js-image-minimap",
+  "sourceDir": "cg-js-image-minimap",
+  "title": "Scroll-Synced Image Minimap",
+  "description": "A tall vertical image gallery paired with a sticky sidebar minimap of thumbnails. As the user scrolls, a scroll listener maps the page scroll fraction onto a translateY of the thumbnail strip so the minimap glides through its images in sync, while a fixed bordered indicator marks the active thumbnail via mix-blend-mode; past a threshold the whole page inverts to a light theme.",
+  "category": "gallery",
+  "tags": [
+    "minimap",
+    "scroll",
+    "sticky",
+    "gallery",
+    "thumbnails",
+    "mix-blend-mode",
+    "vanilla-js",
+    "editorial",
+    "navigator"
+  ],
+  "gsap": [],
+  "deps": [],
+  "preview": {
+    "waitMs": 2500,
+    "scrollTo": 0.4,
+    "afterScrollMs": 800
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "Landscape travel photograph, first gallery image",
+      "role": "gallery item 01 and first minimap thumbnail",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "Landscape travel photograph, second gallery image",
+      "role": "gallery item 02 and second minimap thumbnail",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "Landscape travel photograph, third gallery image",
+      "role": "gallery item 03 and third minimap thumbnail",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "Landscape travel photograph, fourth gallery image",
+      "role": "gallery item 04 and fourth minimap thumbnail",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "Landscape travel photograph, fifth gallery image",
+      "role": "gallery item 05 and fifth minimap thumbnail",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "Landscape travel photograph, sixth gallery image",
+      "role": "gallery item 06 and sixth minimap thumbnail",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "Landscape travel photograph, seventh gallery image",
+      "role": "gallery item 07 and seventh minimap thumbnail",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "Landscape travel photograph, eighth gallery image",
+      "role": "gallery item 08 and eighth minimap thumbnail",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpg",
+      "desc": "Landscape travel photograph, ninth gallery image",
+      "role": "gallery item 09 and ninth minimap thumbnail",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpg",
+      "desc": "Milky Way over dark Dolomite ridges with a faint warm horizon glow, closing the day-to-night arc",
+      "role": "gallery item 10 and tenth minimap thumbnail",
+      "replaced": true
+    },
+    {
+      "file": "hero.jpg",
+      "desc": "Photographer at a tripod on a rock ledge at blue hour, purple and magenta sky",
+      "role": "full-width hero image in the closing colophon section",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "editorial",
+      "minimal",
+      "elegant"
+    ],
+    "useCase": [
+      "gallery",
+      "navigation",
+      "scroll-story"
+    ],
+    "useWhen": "Úsalo para una galería vertical de imágenes con un minimapa lateral fijo que se desplaza sincronizado con el scroll e indica la imagen activa.",
+    "aliases": [
+      "minimapa de imágenes",
+      "image minimap",
+      "galería con minimapa",
+      "sticky thumbnails",
+      "navegador de scroll",
+      "scroll minimap"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 11,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "js-image-minimap",
+    "title": "Scroll-Synced Image Minimap",
+    "category": "gallery",
+    "trigger": "scroll",
+    "libs": [],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": null,
+    "duration_range": [
+      0.5,
+      0.5
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 11,
+      "bytes": 1760665,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "width-branch",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de js-image-minimap"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de js-image-minimap"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de js-image-minimap"
+      }
+    ],
+    "cluster": "SCROLL-WELDED",
+    "engine": "css-transition",
+    "motion_signature": "scroll-mapped sticky thumbnail strip translate (linear, no lerp, no easing)",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-welded"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

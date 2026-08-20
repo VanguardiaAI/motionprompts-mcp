@@ -1,0 +1,291 @@
+{
+  "slug": "explode-text-on-scroll-matterjs",
+  "sourceDir": "cg-explode-text-on-scroll-matterjs",
+  "title": "Explode Text On Scroll (Matter.js)",
+  "description": "A pinned sticky paragraph whose highlighted keywords progressively recolor as you scroll, then shatter into individual characters that fall and bounce under Matter.js physics. Driven by a scrubbed GSAP ScrollTrigger timeline that toggles gravity past 60% progress and syncs each character element to its physics body via an afterUpdate transform.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "physics",
+    "matter-js",
+    "text",
+    "gsap",
+    "scrolltrigger",
+    "split-type",
+    "experimental",
+    "explode"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis",
+    "split-type",
+    "matter-js"
+  ],
+  "preview": {
+    "waitMs": 3000,
+    "scrollTo": 0.7,
+    "afterScrollMs": 2500,
+    "clip": {
+      "seconds": 10
+    }
+  },
+  "images": [],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "experimental",
+      "bold",
+      "editorial"
+    ],
+    "useCase": [
+      "scroll-story",
+      "text-reveal",
+      "hero"
+    ],
+    "useWhen": "Cuando quieres un momento sorpresa en scroll: palabras clave que se colorean y luego estallan en letras con física real.",
+    "aliases": [
+      "texto que explota",
+      "exploding text",
+      "physics text scroll",
+      "letras que caen",
+      "matter text reveal",
+      "shatter text"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": true,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 0,
+    "perfCost": "heavy",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": false,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#efece2",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Tinta",
+      "type": "color",
+      "default": "#0e0f15",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ultramarine",
+      "label": "Acento",
+      "type": "color",
+      "default": "#4353ff",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ultramarine"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "gravity",
+      "label": "Fuerza de la gravedad",
+      "type": "range",
+      "min": 0.2,
+      "max": 2.5,
+      "step": 0.05,
+      "default": 1,
+      "apply": {
+        "kind": "js",
+        "path": "gravity"
+      }
+    },
+    {
+      "id": "restitution",
+      "label": "Rebote de las letras",
+      "type": "range",
+      "min": 0,
+      "max": 0.95,
+      "step": 0.05,
+      "default": 0.75,
+      "apply": {
+        "kind": "js",
+        "path": "restitution"
+      }
+    },
+    {
+      "id": "friction",
+      "label": "Rozamiento de las letras",
+      "type": "range",
+      "min": 0,
+      "max": 1,
+      "step": 0.05,
+      "default": 0.5,
+      "apply": {
+        "kind": "js",
+        "path": "friction"
+      }
+    },
+    {
+      "id": "frictionAir",
+      "label": "Resistencia del aire",
+      "type": "range",
+      "min": 0,
+      "max": 0.06,
+      "step": 0.0025,
+      "default": 0.0175,
+      "apply": {
+        "kind": "js",
+        "path": "frictionAir"
+      }
+    },
+    {
+      "id": "burstSpeed",
+      "label": "Empuje del estallido",
+      "type": "range",
+      "min": 0,
+      "max": 10,
+      "step": 0.5,
+      "default": 5,
+      "apply": {
+        "kind": "js",
+        "path": "burstSpeed"
+      }
+    },
+    {
+      "id": "spin",
+      "label": "Giro al estallar",
+      "type": "range",
+      "min": 0,
+      "max": 1,
+      "step": 0.05,
+      "default": 0.25,
+      "apply": {
+        "kind": "js",
+        "path": "spin"
+      }
+    }
+  ],
+  "motion": {
+    "slug": "explode-text-on-scroll-matterjs",
+    "title": "Explode Text On Scroll (Matter.js)",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "SplitType",
+      "lenis",
+      "matter-js"
+    ],
+    "complexity": 5,
+    "pinned": true,
+    "viewport_heights": 400,
+    "needs_lenis": true,
+    "ease_family": "power2",
+    "duration_range": [
+      0.1,
+      2
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 0,
+      "bytes": 0,
+      "root_absolute_paths": false
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": true
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de explode-text-on-scroll-matterjs"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de explode-text-on-scroll-matterjs"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de explode-text-on-scroll-matterjs"
+      }
+    ],
+    "cluster": "INTEGRATOR",
+    "engine": "mixed",
+    "motion_signature": "pinned 400vh scrubbed word-colour sweep (two shuffled, randomly scattered phases) that at progress 0.6 flips Matter.js gravity from 0 to 1, un-statics every glyph body and kicks it with a random impulse (vx ±2.5, vy 0..-5, spin ±0.125 rad/s) so the letters tumble and bounce (restitution 0.75, friction 0.5, frictionAir 0.0175) onto a static floor at the viewport bottom; scrolling back up re-statics, re-seats and re-fades everything",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  },
+  "review": {
+    "status": "public",
+    "comment": "Hay que mejorar el componente para que el scroll sea mucho más suave y hay que volver a grabar el vídeo con una duración mucho más larga para que se vea bien el efecto"
+  }
+}

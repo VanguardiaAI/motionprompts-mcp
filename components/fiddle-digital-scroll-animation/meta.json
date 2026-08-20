@@ -1,0 +1,308 @@
+{
+  "slug": "fiddle-digital-scroll-animation",
+  "sourceDir": "codegrid-fiddle-digital-scroll-animation",
+  "title": "Fiddle Digital Scroll Animation",
+  "description": "A grid of editorial portraits scattered across a multi-column layout where each row's images scale up from 0 to full size as the row scrolls into the viewport, then the row pins and its images scale back down to 0 as it scrolls out. Per-row ScrollTrigger pairs (a scrub scaleIn from 'top bottom' to 'bottom bottom-=10%' and a pinned scaleOut from 'top top' to 'bottom top') drive gsap.set scale via onUpdate, with transform-origin swinging left/right per data-origin, all Lenis-smoothed.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "scrub",
+    "pin",
+    "scale",
+    "grid",
+    "image-reveal",
+    "gsap",
+    "lenis",
+    "editorial"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "scrollTo": 0.8,
+    "waitMs": 2500,
+    "clip": {
+      "seconds": 9
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpeg",
+      "desc": "Figure in a flowing white robe and headwrap mid-turn against a pale studio wall, near-monochrome.",
+      "role": "Scroll-scaled portrait in the first work row (right origin); opens the monochrome studio series.",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpeg",
+      "desc": "Side profile of a model in a long dark coat against a saturated red background.",
+      "role": "Scroll-scaled portrait in the first work row (left origin).",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpeg",
+      "desc": "Model in an angular geometric black sculptural gown, head tilted back, against white.",
+      "role": "Scroll-scaled portrait in the second work row (left origin).",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpeg",
+      "desc": "Full-body silhouette of a figure in a long dark coat against a deep red backdrop.",
+      "role": "Scroll-scaled portrait in the third work row (right origin).",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpeg",
+      "desc": "Portrait of a woman with long dark hair partly veiled in translucent plastic sheeting.",
+      "role": "Scroll-scaled portrait in the third work row (left origin).",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpeg",
+      "desc": "Motion-blurred black-and-white portrait of a woman with a blunt bob haircut.",
+      "role": "Scroll-scaled portrait in the fourth work row (left origin).",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpeg",
+      "desc": "Dark silhouette of a short-haired woman in a black turtleneck against a pale gradient.",
+      "role": "Scroll-scaled portrait in the fourth work row (right origin).",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpeg",
+      "desc": "Woman in an ornate floral lace dress and veil with eyes closed, baroque editorial style.",
+      "role": "Scroll-scaled portrait in the fifth work row (left origin).",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpeg",
+      "desc": "Moody black-and-white portrait of a face partly obscured by shadow and strands of hair.",
+      "role": "Scroll-scaled portrait in the fifth work row (left origin).",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpeg",
+      "desc": "Red-lit portrait of a person with a bob and round glasses against a red background.",
+      "role": "Scroll-scaled portrait in the sixth work row (left origin).",
+      "replaced": true
+    },
+    {
+      "file": "img11.jpeg",
+      "desc": "Portrait of a face reflected and distorted in crumpled silver mylar foil.",
+      "role": "Scroll-scaled portrait in the seventh work row (left origin).",
+      "replaced": true
+    },
+    {
+      "file": "img12.jpeg",
+      "desc": "Portrait of a red-haired freckled woman in a black turtleneck under dramatic side light.",
+      "role": "Scroll-scaled portrait in the seventh work row (left origin).",
+      "replaced": true
+    },
+    {
+      "file": "img13.jpeg",
+      "desc": "Close-up of a freckled blue-eyed woman wearing a soft white bucket hat.",
+      "role": "Scroll-scaled portrait in the eighth work row (right origin).",
+      "replaced": true
+    },
+    {
+      "file": "img14.jpeg",
+      "desc": "Dark silhouette portrait of a person with a blunt bob and earring against teal.",
+      "role": "Scroll-scaled portrait in the eighth work row (left origin).",
+      "replaced": true
+    },
+    {
+      "file": "img15.jpeg",
+      "desc": "Portrait of a red-haired freckled woman with hair in a bun and a pale high-neck top.",
+      "role": "Scroll-scaled portrait in the ninth work row (left origin).",
+      "replaced": true
+    },
+    {
+      "file": "img16.jpeg",
+      "desc": "High-contrast black-and-white profile silhouette of a smooth-shaven head.",
+      "role": "Scroll-scaled portrait in the tenth work row (right origin).",
+      "replaced": true
+    },
+    {
+      "file": "img17.jpeg",
+      "desc": "Full-body silhouette of a figure in a wide-brim hat and sheer flowing gown against blue.",
+      "role": "Scroll-scaled portrait in the tenth work row (left origin).",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "editorial",
+      "minimal",
+      "cinematic"
+    ],
+    "useCase": [
+      "gallery",
+      "scroll-story",
+      "image-reveal"
+    ],
+    "useWhen": "Úsalo para una galería editorial donde las imágenes crecen desde cero al entrar en pantalla y se encogen al salir, con scroll suave y pin por fila.",
+    "aliases": [
+      "galeria scroll",
+      "scale reveal",
+      "image scale on scroll",
+      "scroll gallery",
+      "pinned rows",
+      "reveal editorial"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 17,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#151009",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Texto",
+      "type": "color",
+      "default": "#efe4cf",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink-2",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#1b150d",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink-2"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "fiddle-digital-scroll-animation",
+    "title": "Fiddle Digital Scroll Animation",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 3,
+    "pinned": true,
+    "viewport_heights": null,
+    "needs_lenis": true,
+    "ease_family": null,
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 17,
+      "bytes": 2039336,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de fiddle-digital-scroll-animation"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de fiddle-digital-scroll-animation"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de fiddle-digital-scroll-animation"
+      }
+    ],
+    "cluster": "SCROLL-LAGGED",
+    "engine": "gsap+raf",
+    "motion_signature": "Zero-tween scrub component: per-row, images scale 0→1 linearly as the row enters the viewport (progress clamped by a 1.2x fudge so they finish early, snapped to 1 past 0.95), then the row pins at top top and the images scale 1→0 linearly while pinned. All smoothing comes from scrub:1 alone — there is no ease anywhere. Scale is corner-anchored: transform-origin alternates 0% 0% / 100% 0% via data-origin, so images grow and collapse toward their outer corner rather than their centre.",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-lagged"
+  },
+  "review": {
+    "status": "public"
+  }
+}

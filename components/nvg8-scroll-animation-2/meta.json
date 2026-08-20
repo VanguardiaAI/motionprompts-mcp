@@ -1,0 +1,199 @@
+{
+  "slug": "nvg8-scroll-animation-2",
+  "sourceDir": "cg-nvg8-scroll-animation",
+  "title": "Assembly Icon-to-Text Scroll Animation",
+  "description": "A pinned hero for the 'Assembly' creative workspace, driven by a single scrubbed ScrollTrigger (smoothed with Lenis). As you scroll, the wordmark fades out, a bottom row of five flat app tiles (built as inline SVG) rises with a staggered offset, gathers to center while scaling down, the background flips from near-black to warm paper, the tiles are cloned and flown one-by-one into inline placeholders inside a headline, and the headline words fade in one at a time in a shuffled order.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "pin",
+    "scrub",
+    "lenis",
+    "stagger",
+    "icon-morph",
+    "theme-switch",
+    "text-reveal",
+    "flip"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "scrollTo": 0.85,
+    "afterScrollMs": 800,
+    "clip": {
+      "seconds": 9
+    }
+  },
+  "images": [],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "bold",
+      "playful",
+      "editorial"
+    ],
+    "useCase": [
+      "scroll-story",
+      "hero",
+      "text-reveal",
+      "product-showcase"
+    ],
+    "useWhen": "Úsalo como intro pineada a pantalla completa donde una fila de iconos sube, se agrupa y vuela hasta encajar dentro de un titular mientras el fondo cambia a claro.",
+    "aliases": [
+      "scroll story",
+      "iconos a texto",
+      "icon morph on scroll",
+      "intro pineada",
+      "icons fly into headline",
+      "revelado de titular"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 5,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#101014",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Texto",
+      "type": "color",
+      "default": "#edebe4",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "nvg8-scroll-animation-2",
+    "title": "Assembly Icon-to-Text Scroll Animation",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 3,
+    "pinned": true,
+    "viewport_heights": 800,
+    "needs_lenis": true,
+    "ease_family": null,
+    "duration_range": [
+      0.2,
+      0.3
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 5,
+      "bytes": 4954972,
+      "root_absolute_paths": false
+    },
+    "mobile_behavior": {
+      "kind": "width-branch",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de nvg8-scroll-animation-2"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de nvg8-scroll-animation-2"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de nvg8-scroll-animation-2"
+      }
+    ],
+    "cluster": "SCROLL-LAGGED",
+    "engine": "gsap",
+    "motion_signature": "scrubbed pinned icons fly into headline",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-lagged"
+  },
+  "review": {
+    "status": "public"
+  }
+}

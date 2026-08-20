@@ -1,0 +1,234 @@
+{
+  "slug": "grid-shutter-page-transition",
+  "sourceDir": "codegrid-grid-shutter-page-transition",
+  "title": "Grid Shutter Page Transition",
+  "description": "Page transition where a fixed 4x16 grid of cream blocks scales in horizontally with a per-block stagger, even rows sweeping from the left and odd rows from the right, shuttering the viewport closed before the page swaps and the same animation reverses to reveal the new page. Triggered by clicking the top navbar links routing between three full-viewport hero pages.",
+  "category": "transition",
+  "tags": [
+    "page-transition",
+    "grid",
+    "shutter",
+    "scalex",
+    "stagger",
+    "rows",
+    "fake-router"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 1200,
+    "click": "a[data-route=\"/cascade\"]",
+    "afterClickMs": 500
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "moody blue-hour silhouette of a robed figure in profile against a chain of overlapping translucent moons and orbs",
+      "role": "Genesis page fullscreen background",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "cinematic view skimming across a rust-and-blue nebula cloudscape with a small dark moon hanging in the haze",
+      "role": "Cascade page fullscreen background",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "dreamy tilt-shift ringed gas planet in silver and rust tones floating over dark blurred mountains in blue mist",
+      "role": "Orbit page fullscreen background",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "cinematic",
+      "elegant",
+      "editorial"
+    ],
+    "useCase": [
+      "page-transition",
+      "navigation"
+    ],
+    "useWhen": "Úsalo cuando quieras que al navegar entre páginas una rejilla de bloques cierre y reabra la pantalla como una persiana, con estética cinematográfica.",
+    "aliases": [
+      "transición de página",
+      "persiana de bloques",
+      "shutter transition",
+      "grid wipe",
+      "cortina de rejilla",
+      "page transition"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 3,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "starlight",
+      "label": "Tinta",
+      "type": "color",
+      "default": "#f2ecdd",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--starlight"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "cols",
+      "label": "Columnas de la persiana",
+      "type": "range",
+      "min": 4,
+      "max": 32,
+      "step": 1,
+      "default": 16,
+      "apply": {
+        "kind": "js",
+        "path": "cols"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "rows",
+      "label": "Filas de la persiana",
+      "type": "range",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 4,
+      "apply": {
+        "kind": "js",
+        "path": "rows"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "blockStagger",
+      "label": "Escalonado de los bloques",
+      "type": "range",
+      "min": 0,
+      "max": 0.15,
+      "step": 0.005,
+      "default": 0.025,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "blockStagger"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "blockDuration",
+      "label": "Duración del bloque",
+      "type": "range",
+      "min": 0.15,
+      "max": 2,
+      "step": 0.05,
+      "default": 0.6,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "blockDuration"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "grid-shutter-page-transition",
+    "title": "Grid Shutter Page Transition",
+    "category": "transition",
+    "trigger": "click",
+    "libs": [
+      "gsap"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power3",
+    "duration_range": [
+      0.25,
+      0.6
+    ],
+    "stagger": 0.025,
+    "assets_required": {
+      "count": 3,
+      "bytes": 334868,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "CLICK-CURTAIN",
+    "engine": "gsap",
+    "motion_signature": "row-alternating scaleX shutter closes then reopens: 4 bands of 16 blocks, transform-origin left on even rows and right on odd rows, each band wiping from its own edge with a 0.025s per-block stagger under power3.inOut; all 4 rows fire together at '<', so a full close (or open) takes ~0.975s",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "curtain-toggle"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

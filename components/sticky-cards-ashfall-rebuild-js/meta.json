@@ -1,0 +1,312 @@
+{
+  "slug": "sticky-cards-ashfall-rebuild-js",
+  "sourceDir": "codegrid-sticky-cards-ashfall-rebuild-js",
+  "title": "Ashfall Sticky Cards Scroll",
+  "description": "Five image cards stacked in a centered container are revealed one at a time while a Lenis-driven, ScrollTrigger-pinned section (4 viewport heights) is scrubbed: each front card scales down to 0.5 and rotates 10deg while its image zooms to 1.5, and the next card slides up from y:100% to y:0% to take its place.",
+  "category": "cards",
+  "tags": [
+    "sticky",
+    "stacked-cards",
+    "scroll",
+    "pin",
+    "scrub",
+    "scale",
+    "rotate",
+    "lenis"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "scrollTo": 0.9,
+    "waitMs": 2500,
+    "clip": {
+      "seconds": 10
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "abstract expressionist palette-knife painting, dense overlapping fields of high-chroma colour",
+      "role": "card 1 image (tag '01 Overspill')",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "turbulent black and cobalt acrylic pour, swirling fluid marbled motion",
+      "role": "card 2 image (tag '02 Undertow')",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "burnt red and charcoal impasto abstract, heavy scraped texture",
+      "role": "card 3 image (tag '03 Scorched')",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "bold gestural abstract with clashing primary strokes at full volume",
+      "role": "card 4 image (tag '04 Riot')",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "loosened, freer abstract brushwork opening into light and release",
+      "role": "card 5 image (tag '05 Daybreak')",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-14",
+  "intent": {
+    "mood": [
+      "editorial",
+      "cinematic",
+      "bold"
+    ],
+    "useCase": [
+      "card-deck",
+      "scroll-story",
+      "gallery"
+    ],
+    "useWhen": "Úsalo para revelar 3-5 imágenes o proyectos apilados uno a uno al hacer scroll, con cartas que escalan y rotan sobre un fondo oscuro.",
+    "aliases": [
+      "cartas apiladas",
+      "sticky cards",
+      "stacked cards",
+      "tarjetas al scroll",
+      "deck de imagenes",
+      "cartas que rotan"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 5,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "wall",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#141311",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--wall"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#ece5d7",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "wall-deep",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#0b0a09",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--wall-deep"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "cardScale",
+      "label": "Encogido de la tarjeta",
+      "type": "range",
+      "min": 0.2,
+      "max": 1,
+      "step": 0.05,
+      "default": 0.5,
+      "apply": {
+        "kind": "js",
+        "path": "cardScale"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "cardRotation",
+      "label": "Ladeo al irse",
+      "type": "range",
+      "min": -30,
+      "max": 30,
+      "step": 1,
+      "default": 10,
+      "unit": "°",
+      "apply": {
+        "kind": "js",
+        "path": "cardRotation"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "imageZoom",
+      "label": "Acercamiento de la imagen",
+      "type": "range",
+      "min": 1,
+      "max": 2.5,
+      "step": 0.05,
+      "default": 1.5,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "imageZoom"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "scrollPerCard",
+      "label": "Scroll por tarjeta",
+      "type": "range",
+      "min": 0.4,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "scrollPerCard"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "scrub",
+      "label": "Retraso respecto al scroll",
+      "type": "range",
+      "min": 0,
+      "max": 2,
+      "step": 0.1,
+      "default": 0.5,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "scrub"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "sticky-cards-ashfall-rebuild-js",
+    "title": "Ashfall Sticky Cards Scroll",
+    "category": "cards",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 3,
+    "pinned": true,
+    "viewport_heights": 400,
+    "needs_lenis": true,
+    "ease_family": "none",
+    "duration_range": [
+      1,
+      1
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 5,
+      "bytes": 1649534,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de sticky-cards-ashfall-rebuild-js"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de sticky-cards-ashfall-rebuild-js"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de sticky-cards-ashfall-rebuild-js"
+      }
+    ],
+    "cluster": "SCROLL-LAGGED",
+    "engine": "gsap",
+    "motion_signature": "scrubbed pinned stack, cards shrink-rotate as next rises",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-lagged"
+  },
+  "review": {
+    "status": "public"
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "slug": "guiding-light",
+  "sourceDir": "codegrid-guiding-light",
+  "title": "Guiding Light Cursor Spotlight",
+  "description": "Cursor-following spotlight: a dark full-section mask with a radial-gradient cutout reveals content around the pointer while a Lottie fire flame with a pulsing glow trails the cursor via lerped rAF transforms. Activates on mousemove inside the spotlight section.",
+  "category": "interactive",
+  "tags": [
+    "spotlight",
+    "cursor",
+    "mask",
+    "lottie",
+    "mousemove",
+    "lenis"
+  ],
+  "gsap": [],
+  "deps": [
+    "lenis",
+    "lottie-web"
+  ],
+  "preview": {
+    "waitMs": 2200,
+    "scrollTo": 0.5,
+    "click": ".spotlight",
+    "clip": {
+      "seconds": 9,
+      "actions": [
+        {
+          "type": "scroll",
+          "to": 0.9,
+          "mode": "pingpong"
+        }
+      ]
+    }
+  },
+  "images": [],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "cinematic",
+      "elegant"
+    ],
+    "useCase": [
+      "cursor-effect",
+      "text-reveal",
+      "background"
+    ],
+    "useWhen": "Úsalo cuando quieras que el visitante descubra texto en una sección oscura moviendo el cursor como una linterna, con ambiente íntimo y misterioso.",
+    "aliases": [
+      "spotlight cursor",
+      "linterna",
+      "foco de luz",
+      "cursor spotlight",
+      "reveal con cursor",
+      "máscara de foco"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": true,
+    "gsapPlugins": [],
+    "assetCount": 0,
+    "perfCost": "light",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "dark",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#141414",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--dark"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "dim",
+      "label": "Texto",
+      "type": "color",
+      "default": "#8c8c88",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--dim"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "light",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#efece3",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--light"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "guiding-light",
+    "title": "Guiding Light Cursor Spotlight",
+    "category": "interactive",
+    "trigger": "scroll",
+    "libs": [
+      "lenis",
+      "lottie-web"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": true,
+    "ease_family": null,
+    "duration_range": [
+      0.25,
+      2
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 1,
+      "bytes": 54014,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": true
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de guiding-light"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de guiding-light"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de guiding-light"
+      }
+    ],
+    "cluster": "POINTER-CHASE",
+    "engine": "raf-lerp",
+    "motion_signature": "rAF-lerped cursor spotlight mask with trailing flame",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  },
+  "review": {
+    "status": "public"
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "slug": "exoape-menu-javascript",
+  "sourceDir": "codegrid-exoape-menu-javascript",
+  "title": "ExoApe-Inspired Overlay Menu",
+  "description": "A fullscreen overlay navigation menu inspired by ExoApe. Clicking the Menu toggle drives a synchronized GSAP timeline: the page container rotates/scales/translates away (power4.inOut), the overlay's clip-path polygon skews open, the menu content settles from a rotated-scaled state, and the links stagger up from below (power3.out). Hovering a link swaps a stacked preview image in with a scale/rotate fade (power2.out).",
+  "category": "menu",
+  "tags": [
+    "menu",
+    "overlay",
+    "fullscreen",
+    "clip-path",
+    "stagger",
+    "hover-preview",
+    "gsap",
+    "exoape",
+    "elegant"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "click": ".menu-toggle",
+    "afterClickMs": 1600
+  },
+  "images": [
+    {
+      "file": "hero.jpg",
+      "desc": "Moody architectural photograph used as the fullscreen hero background behind the headline",
+      "role": "hero background image (.hero-img) on the base page",
+      "replaced": true
+    },
+    {
+      "file": "img-1.jpg",
+      "desc": "Preview image tied to the 'Visions' link and the default menu preview",
+      "role": "default menu preview image and 'Visions' hover preview",
+      "replaced": true
+    },
+    {
+      "file": "img-2.jpg",
+      "desc": "Preview image tied to the 'Core' link",
+      "role": "hover preview image for the 'Core' menu link",
+      "replaced": true
+    },
+    {
+      "file": "img-3.jpg",
+      "desc": "Preview image tied to the 'Signals' link",
+      "role": "hover preview image for the 'Signals' menu link",
+      "replaced": true
+    },
+    {
+      "file": "img-4.jpg",
+      "desc": "Sculptural white spiral staircase in a daylit atrium — preview tied to the 'Contact' link",
+      "role": "hover preview image for the 'Contact' menu link",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "elegant",
+      "minimal",
+      "editorial"
+    ],
+    "useCase": [
+      "navigation",
+      "hover-interaction"
+    ],
+    "useWhen": "Cuando quieras un menú overlay fullscreen elegante estilo ExoApe: apertura con clip-path, contenido que se asienta y enlaces con preview de imagen al hover.",
+    "aliases": [
+      "menu overlay",
+      "exoape menu",
+      "fullscreen menu",
+      "menu pantalla completa",
+      "overlay nav",
+      "menu con preview"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 5,
+    "perfCost": "light",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "plaster",
+      "label": "Texto",
+      "type": "color",
+      "default": "#ece3d1",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--plaster"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "clay",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#cbb9a0",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--clay"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "exoape-menu-javascript",
+    "title": "ExoApe-Inspired Overlay Menu",
+    "category": "menu",
+    "trigger": "hover",
+    "libs": [
+      "gsap"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power4",
+    "duration_range": [
+      0.3,
+      1.25
+    ],
+    "stagger": 0.1,
+    "assets_required": {
+      "count": 5,
+      "bytes": 959047,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "CLICK-CURTAIN",
+    "engine": "gsap",
+    "motion_signature": "clip-path wipe overlay: the page container swings away larger (rotate 10°, x300 y450, scale 1.5, origin right top) while the menu content settles in from scale 1.5 / rotate -15° / opacity 0.25 — all three 1.25s power4.inOut — then links rise from translateY(120%) staggered 0.1s with power3.out; hover swaps a stacked preview image in from scale 1.25 / rotate 10° over 0.75s",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "curtain-toggle"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

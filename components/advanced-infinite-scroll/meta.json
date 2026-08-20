@@ -1,0 +1,186 @@
+{
+  "slug": "advanced-infinite-scroll",
+  "sourceDir": "cg-advanced-infinite-scroll",
+  "title": "Advanced Infinite Scroll",
+  "description": "A fullscreen vertical menu of category/title rows that loops endlessly: a requestAnimationFrame loop lerps the scroll position and calls gsap.set with a y modifier using gsap.utils.wrap to seamlessly recycle items, while gsap.to elastically scales down and rotates the rows proportional to scroll velocity. Driven by mouse wheel and click/touch drag.",
+  "category": "menu",
+  "tags": [
+    "infinite-scroll",
+    "loop",
+    "drag",
+    "wheel",
+    "velocity",
+    "gsap-utils-wrap",
+    "editorial",
+    "menu",
+    "raf"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "clip": {
+      "seconds": 9,
+      "actions": [
+        {
+          "type": "scroll",
+          "to": 0.9,
+          "mode": "once"
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "bg.jpg",
+      "desc": "Dark, foggy forest path at dusk in cool slate tones with a faint lit clearing at centre, used full-bleed and dimmed by a radial vignette that fades to near-black at the edges",
+      "role": "fixed fullscreen background behind the scrolling project index",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-14",
+  "intent": {
+    "mood": [
+      "editorial",
+      "elegant",
+      "cinematic"
+    ],
+    "useCase": [
+      "navigation",
+      "gallery",
+      "slider"
+    ],
+    "useWhen": "Úsalo para un menú o índice vertical que gira infinitamente con arrastre y rueda, con inercia suave y filas que escalan y rotan según la velocidad.",
+    "aliases": [
+      "scroll infinito",
+      "menú infinito",
+      "infinite loop menu",
+      "drag scroll",
+      "lista giratoria",
+      "wrap scroll"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 1,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "fog",
+      "label": "Texto",
+      "type": "color",
+      "default": "#edefe8",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--fog"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "sage",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#7f8a7c",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--sage"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "advanced-infinite-scroll",
+    "title": "Advanced Infinite Scroll",
+    "category": "menu",
+    "trigger": "wheel",
+    "libs": [
+      "gsap"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": null,
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 1,
+      "bytes": 307255,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "html/body overflow:hidden",
+      "html/body height fija en vh"
+    ],
+    "capabilities": [
+      {
+        "capability": "page-scroll-lock",
+        "reason": "fija overflow:hidden en html/body"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "CAPTURED-VIRTUAL-SCROLL",
+    "engine": "gsap+raf",
+    "motion_signature": "rAF-lerped infinite list wrapped by gsap.utils.wrap, with a per-frame velocity-driven scale/rotate skew",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  },
+  "review": {
+    "status": "public"
+  }
+}

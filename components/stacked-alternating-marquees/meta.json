@@ -1,0 +1,257 @@
+{
+  "slug": "stacked-alternating-marquees",
+  "title": "Stacked Alternating Marquees",
+  "description": "Four full-width marquee rows stacked with no gap, running continuously in ALTERNATING directions at non-harmonic speeds (26/34/30/22), each row inverting the palette so the opposition is visible at a glance. The rows also lean into the scroll: a single ScrollTrigger reads `getVelocity()` and feeds a push term that speeds each row up in its own direction, decaying at 0.92 per frame so stopping does not leave them racing. Written as one `gsap.ticker` loop rather than CSS `@keyframes` precisely because a CSS animation runs on its own clock and cannot know the scroll exists. The strip content is cloned once at runtime (the copy `aria-hidden`, so categories are not read twice) and the transform wraps at exactly half the measured width, re-measured on `load` and on `fonts.ready` because images change that width. Dressed as a print fair: Archivo Black + Syne Mono, teal, cream and red.",
+  "category": "scroll",
+  "tags": [
+    "marquee",
+    "ticker",
+    "infinite",
+    "scroll",
+    "scrolltrigger",
+    "velocity",
+    "alternating",
+    "rows",
+    "typography",
+    "lenis",
+    "bold"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 1200,
+    "scrollTo": 0.45,
+    "clip": {
+      "seconds": 9
+    }
+  },
+  "images": [
+    {
+      "file": "hero.jpg",
+      "desc": "flat vector illustration, full-bleed hero",
+      "role": "hero image",
+      "replaced": true,
+      "reused_from": "catálogo existente (public/c/camille-mormal-slider), recortado con sharp — ninguna imagen generada"
+    },
+    {
+      "file": "tile-1.jpg",
+      "desc": "round illustration tile in the marquee",
+      "role": "marquee tile",
+      "replaced": true,
+      "reused_from": "catálogo existente (public/c/camille-mormal-slider)"
+    },
+    {
+      "file": "tile-2.jpg",
+      "desc": "round illustration tile in the marquee",
+      "role": "marquee tile",
+      "replaced": true,
+      "reused_from": "catálogo existente (public/c/camille-mormal-slider)"
+    },
+    {
+      "file": "tile-3.jpg",
+      "desc": "round illustration tile in the marquee",
+      "role": "marquee tile",
+      "replaced": true,
+      "reused_from": "catálogo existente (public/c/camille-mormal-slider)"
+    },
+    {
+      "file": "tile-4.jpg",
+      "desc": "round illustration tile in the marquee",
+      "role": "marquee tile",
+      "replaced": true,
+      "reused_from": "catálogo existente (public/c/camille-mormal-slider)"
+    }
+  ],
+  "updated": "2026-08-02",
+  "intent": {
+    "mood": [
+      "bold",
+      "playful",
+      "brutalist"
+    ],
+    "useCase": [
+      "marquee",
+      "navigation"
+    ],
+    "useWhen": "Cuando hay una lista de categorías o reclamos que se leen de un vistazo y quieres densidad y ritmo en vez de una rejilla.",
+    "aliases": [
+      "marquesinas apiladas",
+      "tickers",
+      "bandas que corren",
+      "stacked marquees",
+      "alternating ticker",
+      "infinite rows",
+      "scrolling text bands"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 5,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": false,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "origin": {
+    "kind": "observed",
+    "note": "Efecto abstraído de mrday.it y pizza-amici.nl, observados por fotogramas: filas de marquesina apiladas corriendo en direcciones alternas con producto intercalado. El EFECTO se conserva; paleta, tipografía, imágenes y contenido son propios.",
+    "gap": "0 aciertos al cruzar «marquesinas apiladas en direcciones alternas» contra los 223. El catálogo tiene marquesina horizontal simple (13 aciertos), no la pila alterna acoplada al scroll."
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "cream",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#f3efe4",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--cream"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "red",
+      "label": "Acento",
+      "type": "color",
+      "default": "#d8402f",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--red"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "teal",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#14544d",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--teal"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#101a19",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "stacked-alternating-marquees",
+    "title": "Stacked Alternating Marquees",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": true,
+    "ease_family": null,
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 5,
+      "bytes": 189542,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "no-mobile-handling",
+      "media_queries": 0,
+      "reduced_motion": true
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de stacked-alternating-marquees"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de stacked-alternating-marquees"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de stacked-alternating-marquees"
+      }
+    ],
+    "cluster": "INTEGRATOR",
+    "engine": "gsap",
+    "motion_signature": "four stacked marquee rows on a single gsap.ticker loop, alternating direction at non-harmonic speeds 26/34/30/22 px/s, wrapping at half the measured strip width after a runtime clone; a lone ScrollTrigger feeds getVelocity()/900 clamped to ±2.5 as a push term that decays 0.92 per frame — no tween, no scrub, no CSS keyframes",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  },
+  "review": {
+    "status": "public"
+  }
+}

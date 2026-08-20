@@ -1,0 +1,404 @@
+{
+  "slug": "hypnotic-gallery-gsap-flip",
+  "sourceDir": "cg--hypnotic-gallery-gsap-flip",
+  "title": "Hypnotic Image Gallery (GSAP Flip)",
+  "description": "A 14-image still-life gallery for a set-design studio (Plinth) that morphs between three layouts — Grid, Index, Stack — when you click the nav items; GSAP Flip records the DOM state, swaps a layout class, and animates every image from its old to new position with a custom hop ease and staggered timing. The Index layout becomes a Lenis-smoothed vertical scroll list with a floating minimap and preview column driven by a scroll handler.",
+  "category": "gallery",
+  "tags": [
+    "gallery",
+    "flip",
+    "layout-transition",
+    "gsap",
+    "lenis",
+    "grid",
+    "click",
+    "editorial",
+    "minimal"
+  ],
+  "gsap": [
+    "Flip",
+    "CustomEase",
+    "ScrollToPlugin"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "click": "#layout-3-gallery",
+    "afterClickMs": 2000,
+    "waitMs": 2500,
+    "scrollTo": 0.7,
+    "clip": {
+      "seconds": 9
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "Orange poppy in a mustard vase with lilac and blue discs on peach and pink paper",
+      "role": "gallery tile img1 (also first image in the scroll-preview column)",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "White sculpture on a plinth beneath concentric mauve arches",
+      "role": "gallery tile img2",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "Folded knitwear stacked in rust, cream and oat",
+      "role": "gallery tile img3",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "Glass bottle and dry branch on turquoise against a pink paper backdrop",
+      "role": "gallery tile img4",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "Broken ceramic vessel and pale eggs arranged on blue velvet",
+      "role": "gallery tile img5",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "Marble surface in soft grey swirls, material study",
+      "role": "gallery tile img6",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "Tortoiseshell sunglasses in warm directional light",
+      "role": "gallery tile img7",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "Stoneware vase on a lilac backdrop",
+      "role": "gallery tile img8",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpg",
+      "desc": "Sunlit arrangement of pink and beige vessels with hard shadows",
+      "role": "gallery tile img9",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpg",
+      "desc": "Cream disc and mustard vase with dried stems on ochre",
+      "role": "gallery tile img10",
+      "replaced": true
+    },
+    {
+      "file": "img11.jpg",
+      "desc": "Chrome desk lamp on a yellow backdrop",
+      "role": "gallery tile img11",
+      "replaced": true
+    },
+    {
+      "file": "img12.jpg",
+      "desc": "Olive tree in a rose-plaster courtyard",
+      "role": "gallery tile img12",
+      "replaced": true
+    },
+    {
+      "file": "img13.jpg",
+      "desc": "Cloth-bound books stacked on sage green",
+      "role": "gallery tile img13",
+      "replaced": true
+    },
+    {
+      "file": "img14.jpg",
+      "desc": "Vaulted corridor in cream plaster with a warm light reveal",
+      "role": "gallery tile img14 (last image in the scroll-preview column)",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "minimal",
+      "editorial",
+      "experimental"
+    ],
+    "useCase": [
+      "gallery",
+      "product-showcase",
+      "navigation"
+    ],
+    "useWhen": "Úsalo cuando quieras una galería que reorganice las mismas imágenes entre varios layouts con una transición Flip fluida al hacer clic.",
+    "aliases": [
+      "galeria flip",
+      "cambio de layout",
+      "gallery morph",
+      "flip gallery",
+      "reorganizar imagenes",
+      "layout switcher"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "Flip",
+      "CustomEase",
+      "ScrollToPlugin"
+    ],
+    "assetCount": 14,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#f4f1ec",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "stone",
+      "label": "Texto",
+      "type": "color",
+      "default": "#8f8579",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--stone"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "hypnotic-gallery-gsap-flip",
+    "title": "Hypnotic Image Gallery (GSAP Flip)",
+    "category": "gallery",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "Flip",
+      "CustomEase",
+      "ScrollToPlugin",
+      "lenis"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": true,
+    "ease_family": "none",
+    "duration_range": [
+      0.1,
+      1.5
+    ],
+    "stagger": 0.025,
+    "assets_required": {
+      "count": 14,
+      "bytes": 1517525,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "html/body overflow:hidden"
+    ],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      },
+      {
+        "capability": "page-scroll-lock",
+        "reason": "fija overflow:hidden en html/body"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "aladesign-landing-page-reveal",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "aminezegmou-landing-page",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "aristidebenoist-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "audemarspiguet-menu",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "camille-mormal-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "infinite-draggable-image-gallery-javascript",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "kin-landing-page",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "landing-page-reveal-no-webgl",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "laserbysonymusic-landing-page-reveal-animation",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "maxmilkin-preloader",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "meetings-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "menu-root-food",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "nite-riot-landing-page-reveal-javascript",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "outfit-landing-page-reveal",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "p10-landing-page-reveal-gsap",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "push-over-overlay-menu",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "steelworks-landing-page-reveal",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "story-world-carousel-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "truekindskincare-landing-page-reveal-javascript",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "zajno-lp",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "zajno-page-transitions",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de hypnotic-gallery-gsap-flip"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de hypnotic-gallery-gsap-flip"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de hypnotic-gallery-gsap-flip"
+      }
+    ],
+    "cluster": "STEP-MACHINE",
+    "engine": "gsap+raf",
+    "motion_signature": "Flip layout morph plus scroll-parallaxed index column",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "step-advance"
+  },
+  "review": {
+    "status": "public"
+  }
+}

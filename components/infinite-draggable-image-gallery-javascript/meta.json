@@ -1,0 +1,459 @@
+{
+  "slug": "infinite-draggable-image-gallery-javascript",
+  "sourceDir": "codegrid-infinite-draggable-image-gallery-javascript",
+  "title": "Infinite Draggable Image Gallery",
+  "description": "An endless, draggable grid of thumbnails that recycles DOM items as you pan (custom lerp animation loop with velocity-based momentum on release). Clicking a thumbnail hides it, dims the rest, and expands a clone to a large frame via a GSAP fromTo tween on a CustomEase 'hop', while a SplitType word-by-word project title staggers up; clicking the overlay reverses the animation.",
+  "category": "gallery",
+  "tags": [
+    "draggable",
+    "infinite",
+    "gallery",
+    "grid",
+    "momentum",
+    "lerp",
+    "splittype",
+    "customease",
+    "expand"
+  ],
+  "gsap": [
+    "CustomEase"
+  ],
+  "deps": [
+    "gsap",
+    "split-type"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "clip": {
+      "seconds": 10,
+      "actions": [
+        {
+          "type": "drag"
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "still life of sculptural stone and marble vessels on a gray studio background",
+      "role": "gallery tile ('Vessels in limestone'), one of 20 images tiled across the infinite grid",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "polished chrome torus ring on a gray studio backdrop",
+      "role": "gallery tile ('Ring, polished chrome')",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "black-and-white photo studio with softboxes and a seamless backdrop",
+      "role": "gallery tile ('Studio two, north light')",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "tan suede boot heel photographed on white",
+      "role": "gallery tile ('Heel study, suede')",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "black and white marbled ink swirl",
+      "role": "gallery tile ('Ink marbling')",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "sand-colored sphere on a matching beige backdrop",
+      "role": "gallery tile ('Sphere in sand')",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "soft leaf shadows cast on a warm sunlit wall",
+      "role": "gallery tile ('Shadow play, late sun')",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "draped gray and white fabric photographed from above",
+      "role": "gallery tile ('Drape study')",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpg",
+      "desc": "close-up of an eye with winged eyeliner in sepia tones",
+      "role": "gallery tile ('Liner, one stroke')",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpg",
+      "desc": "grainy beige gradient texture",
+      "role": "gallery tile ('Grain field')",
+      "replaced": true
+    },
+    {
+      "file": "img11.jpg",
+      "desc": "raw stone cube beside terracotta and clay vases, minimal still life",
+      "role": "gallery tile ('Still life with tuff')",
+      "replaced": true
+    },
+    {
+      "file": "img12.jpg",
+      "desc": "open silver compact mirror on black, high-contrast product shot",
+      "role": "gallery tile ('Compact, silver')",
+      "replaced": true
+    },
+    {
+      "file": "img13.jpg",
+      "desc": "smooth white pebble form on a white surface",
+      "role": "gallery tile ('Form in plaster')",
+      "replaced": true
+    },
+    {
+      "file": "img14.jpg",
+      "desc": "cream sneaker staged among red and white flowers",
+      "role": "gallery tile ('Bloom set, spring campaign')",
+      "replaced": true
+    },
+    {
+      "file": "img15.jpg",
+      "desc": "irregular bent chrome torus on dark gray",
+      "role": "gallery tile ('Torus, bent')",
+      "replaced": true
+    },
+    {
+      "file": "img16.jpg",
+      "desc": "flat lay of a white tee, caps and purple sneakers",
+      "role": "gallery tile ('Flat lay in violet')",
+      "replaced": true
+    },
+    {
+      "file": "img17.jpg",
+      "desc": "white and gray marble swirl texture",
+      "role": "gallery tile ('Marble drift')",
+      "replaced": true
+    },
+    {
+      "file": "img18.jpg",
+      "desc": "black-and-white photo of a silk slip dress with a fringed glove in motion",
+      "role": "gallery tile ('Silk in motion')",
+      "replaced": true
+    },
+    {
+      "file": "img19.jpg",
+      "desc": "concentric circles screen print in black on white",
+      "role": "gallery tile ('Concentric, screen print')",
+      "replaced": true
+    },
+    {
+      "file": "img20.jpg",
+      "desc": "window shadow with plant silhouette on a plaster wall",
+      "role": "gallery tile ('Window, four panes')",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "experimental",
+      "editorial",
+      "bold"
+    ],
+    "useCase": [
+      "gallery",
+      "image-reveal",
+      "product-showcase"
+    ],
+    "useWhen": "Úsalo para una galería o portfolio explorable en un lienzo infinito que se arrastra con inercia, con thumbnails que se expanden al hacer clic y muestran su título.",
+    "aliases": [
+      "galeria arrastrable infinita",
+      "infinite draggable gallery",
+      "lienzo infinito de imagenes",
+      "grid arrastrable con inercia",
+      "draggable canvas gallery",
+      "galeria expandible al clic"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "CustomEase"
+    ],
+    "assetCount": 20,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "plaster",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#d9d5cb",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--plaster"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "chrome-text",
+      "label": "Texto",
+      "type": "color",
+      "default": "#ffffff",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--chrome-text"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "itemWidth",
+      "label": "Ancho de la ficha",
+      "type": "range",
+      "min": 70,
+      "max": 260,
+      "step": 5,
+      "default": 120,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "itemWidth"
+      }
+    },
+    {
+      "id": "itemHeight",
+      "label": "Alto de la ficha",
+      "type": "range",
+      "min": 90,
+      "max": 340,
+      "step": 5,
+      "default": 160,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "itemHeight"
+      }
+    },
+    {
+      "id": "itemGap",
+      "label": "Separación entre fichas",
+      "type": "range",
+      "min": 20,
+      "max": 400,
+      "step": 5,
+      "default": 150,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "itemGap"
+      }
+    },
+    {
+      "id": "columns",
+      "label": "Desfase de imágenes entre filas",
+      "type": "range",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "default": 4,
+      "apply": {
+        "kind": "js",
+        "path": "columns"
+      }
+    },
+    {
+      "id": "dragEase",
+      "label": "Suavizado del arrastre",
+      "type": "range",
+      "min": 0.02,
+      "max": 0.25,
+      "step": 0.005,
+      "default": 0.075,
+      "apply": {
+        "kind": "js",
+        "path": "dragEase"
+      }
+    },
+    {
+      "id": "momentum",
+      "label": "Inercia al soltar",
+      "type": "range",
+      "min": 0,
+      "max": 600,
+      "step": 10,
+      "default": 200,
+      "apply": {
+        "kind": "js",
+        "path": "momentum"
+      }
+    }
+  ],
+  "motion": {
+    "slug": "infinite-draggable-image-gallery-javascript",
+    "title": "Infinite Draggable Image Gallery",
+    "category": "gallery",
+    "trigger": "drag",
+    "libs": [
+      "gsap",
+      "CustomEase",
+      "SplitType"
+    ],
+    "complexity": 3,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power2",
+    "duration_range": [
+      0.3,
+      1
+    ],
+    "stagger": 0.1,
+    "assets_required": {
+      "count": 20,
+      "bytes": 2296753,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": true
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "html/body overflow:hidden"
+    ],
+    "capabilities": [
+      {
+        "capability": "page-scroll-lock",
+        "reason": "fija overflow:hidden en html/body"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "aladesign-landing-page-reveal",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "aristidebenoist-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "audemarspiguet-menu",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "camille-mormal-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "hypnotic-gallery-gsap-flip",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "kin-landing-page",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "landing-page-reveal-no-webgl",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "meetings-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "menu-root-food",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "outfit-landing-page-reveal",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "p10-landing-page-reveal-gsap",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "push-over-overlay-menu",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "story-world-carousel-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "zajno-lp",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      }
+    ],
+    "cluster": "CAPTURED-VIRTUAL-SCROLL",
+    "engine": "gsap+raf",
+    "motion_signature": "rAF lerp (0.075) infinite drag canvas with release momentum (velocity * 200), click-to-expand",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  },
+  "review": {
+    "status": "public"
+  }
+}

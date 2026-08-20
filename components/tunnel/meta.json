@@ -1,0 +1,332 @@
+{
+  "slug": "tunnel",
+  "sourceDir": "cg-tunnel",
+  "title": "3D Tunnel Image Slider Carousel",
+  "description": "A full-screen animated monochrome tunnel, rendered as a Three.js fragment-shader plane, sits behind ten framed cinematic film stills laid out along the Z axis inside a CSS perspective container. Smooth scrolling via Lenis feeds a GSAP ScrollTrigger with scrub:1 whose onUpdate handlers push each slide's translateZ toward the camera and fade it in through a Z-to-opacity mapping, while the same scroll progress drives the shader's scrollOffset uniform to warp the tunnel in sync. Presented as the showreel of a film and color studio, 'Tunnel Vision'.",
+  "category": "3d-webgl",
+  "tags": [
+    "3d",
+    "tunnel",
+    "webgl",
+    "shader",
+    "three.js",
+    "scrolltrigger",
+    "lenis",
+    "carousel",
+    "film",
+    "cinematic",
+    "portfolio"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis",
+    "three"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "scrollTo": 0.6,
+    "afterScrollMs": 1000,
+    "clip": {
+      "seconds": 9
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "warm 35mm golden-hour still: a curly-haired woman laughing, sun-flared and backlit beside a tree",
+      "role": "carousel slide",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "warm 35mm street portrait: a young man in a bright orange bomber jacket, backlit by low sun on a pale courtyard",
+      "role": "carousel slide",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "sunlit minimalist interior: a potted tree by a tall window casting long warm shadows across a pale wood floor",
+      "role": "carousel slide",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "dreamy misty-dawn film still: a pale woman in a white Victorian dress on a grassy islet between two black swans, water lilies below",
+      "role": "carousel slide",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "surreal 35mm still: a faded room overgrown with white flowers, a pale figure in a white robe seated beside a vintage TV",
+      "role": "carousel slide",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "surreal art-film still: a blindfolded man in a red band and white ruffled collar under ivy-wrapped gothic cloister arches",
+      "role": "carousel slide",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "soft-focus rose-garden portrait: a pale blonde woman draped in translucent crystal flowers, hazy backlight",
+      "role": "carousel slide",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "warm night interior: a lit brass table lamp on a wooden nightstand beside a floral bedspread, city lights beyond sheer curtains",
+      "role": "carousel slide",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpg",
+      "desc": "amber-lit interior: a man reading a book at a table beside a glowing brass lamp in a wood-panelled study",
+      "role": "carousel slide",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpg",
+      "desc": "warm bar interior: a blonde woman in a red tee behind a wooden bar backed by bottles and string lights",
+      "role": "carousel slide",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-14",
+  "intent": {
+    "mood": [
+      "futuristic",
+      "cinematic",
+      "experimental"
+    ],
+    "useCase": [
+      "gallery",
+      "hero",
+      "scroll-story"
+    ],
+    "useWhen": "Úsalo para una galería o portfolio inmersivo donde las imágenes vuelan hacia la cámara por un túnel de neón animado controlado con el scroll.",
+    "aliases": [
+      "túnel de neón",
+      "neon tunnel",
+      "3d image carousel",
+      "carrusel 3d scroll",
+      "shader tunnel",
+      "galería túnel"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": true,
+    "needsCanvas": true,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 10,
+    "perfCost": "heavy",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#f4f1ec",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "amber",
+      "label": "Acento",
+      "type": "color",
+      "default": "#e0a869",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--amber"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "totalSlides",
+      "label": "Diapositivas del túnel",
+      "type": "range",
+      "min": 4,
+      "max": 18,
+      "step": 1,
+      "default": 10,
+      "apply": {
+        "kind": "js",
+        "path": "totalSlides"
+      }
+    },
+    {
+      "id": "zStep",
+      "label": "Separación entre diapositivas",
+      "type": "range",
+      "min": 1200,
+      "max": 4500,
+      "step": 100,
+      "default": 2500,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "zStep"
+      }
+    },
+    {
+      "id": "spreadX",
+      "label": "Separación lateral",
+      "type": "range",
+      "min": 0,
+      "max": 34,
+      "step": 1,
+      "default": 20,
+      "unit": "%",
+      "apply": {
+        "kind": "js",
+        "path": "spreadX"
+      }
+    },
+    {
+      "id": "driftAmplitude",
+      "label": "Amplitud de la deriva",
+      "type": "range",
+      "min": 0,
+      "max": 350,
+      "step": 10,
+      "default": 120,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "driftAmplitude"
+      }
+    },
+    {
+      "id": "idleDriftSpeed",
+      "label": "Velocidad de la deriva en reposo",
+      "type": "range",
+      "min": 0,
+      "max": 1.2,
+      "step": 0.05,
+      "default": 0.35,
+      "apply": {
+        "kind": "js",
+        "path": "idleDriftSpeed"
+      }
+    }
+  ],
+  "motion": {
+    "slug": "tunnel",
+    "title": "3D Tunnel Image Slider Carousel",
+    "category": "3d-webgl",
+    "trigger": "scroll",
+    "libs": [
+      "three",
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 5,
+    "pinned": false,
+    "viewport_heights": 2000,
+    "needs_lenis": true,
+    "ease_family": null,
+    "duration_range": [
+      0.3,
+      1.8
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 10,
+      "bytes": 1489903,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de tunnel"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de tunnel"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de tunnel"
+      }
+    ],
+    "cluster": "SCROLL-LAGGED",
+    "engine": "webgl-raf",
+    "motion_signature": "scrub-1 z-depth push of 10 fixed cards through a 500px-perspective stage over 2000vh, plus a bounded sine idle drift (±120px Z) whose speed is energised by Lenis scroll velocity and decays 0.94/frame; a full-viewport polar-sine tunnel shader behind it is driven by the same combined value",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-lagged"
+  },
+  "review": {
+    "status": "public",
+    "comment": "El vídeo no muestra correctamente el funcionamiento, hay que hacerlo más rápido y no se si hay que hacer el componente más fluido y que se siente que no está bien cuadrado el movimiento del fondo con el de las imágenes"
+  }
+}

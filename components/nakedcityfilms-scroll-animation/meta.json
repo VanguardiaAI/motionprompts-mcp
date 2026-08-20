@@ -1,0 +1,205 @@
+{
+  "slug": "nakedcityfilms-scroll-animation",
+  "sourceDir": "codegrid-nakedcityfilms-scroll-animation",
+  "title": "NakedCity Films Navbar Scroll Animation",
+  "description": "A fixed, centered 16:9 navbar window (cream panel with nav links over a full-viewport fixed image) expands from 50% width to fullscreen as you scroll the first viewport, scrubbed via ScrollTrigger onUpdate with gsap.utils.interpolate while a paused Flip timeline flies the oversized logo from bottom-center to a pinned top position. Lenis drives the smooth scrolling.",
+  "category": "scroll",
+  "tags": [
+    "navbar",
+    "scroll",
+    "scrub",
+    "flip",
+    "expand",
+    "lenis",
+    "fixed",
+    "logo",
+    "hero"
+  ],
+  "gsap": [
+    "ScrollTrigger",
+    "Flip"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 2000,
+    "scrollTo": 0.7,
+    "clip": {
+      "seconds": 9
+    }
+  },
+  "images": [
+    {
+      "file": "navbar-img.jpg",
+      "desc": "cinematic photograph of a rain-slicked Osaka backstreet at night, empty road reflecting teal, magenta and amber neon",
+      "role": "full-viewport fixed backdrop image framed by the expanding navbar title card",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "cinematic",
+      "editorial",
+      "bold"
+    ],
+    "useCase": [
+      "hero",
+      "navigation",
+      "image-reveal"
+    ],
+    "useWhen": "Úsalo para una intro de hero donde un navbar central se expande a pantalla completa al hacer scroll, revelando una imagen cinematográfica de fondo.",
+    "aliases": [
+      "navbar que se expande",
+      "hero expandible",
+      "expanding navbar",
+      "sticky navbar hero",
+      "window reveal",
+      "logo flip"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger",
+      "Flip"
+    ],
+    "assetCount": 1,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "base-100",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#0e1113",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--base-100"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "base-200",
+      "label": "Texto",
+      "type": "color",
+      "default": "#ece5d7",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--base-200"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "nakedcityfilms-scroll-animation",
+    "title": "NakedCity Films Navbar Scroll Animation",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "Flip",
+      "lenis"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": 200,
+    "needs_lenis": true,
+    "ease_family": "none",
+    "duration_range": [
+      0.25,
+      1
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 2,
+      "bytes": 609652,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "width-branch",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "mata todos los ScrollTrigger"
+    ],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de nakedcityfilms-scroll-animation"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de nakedcityfilms-scroll-animation"
+      }
+    ],
+    "cluster": "SCROLL-LAGGED",
+    "engine": "gsap",
+    "motion_signature": "scrubbed fixed navbar window expanding to fullscreen",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-lagged"
+  },
+  "review": {
+    "status": "public",
+    "comment": "Hay que hacer el vídeo más largo y el scroll más fluido y más rápido para ver el efecto bien. En Mobile no funciona el componente y en desktop al llegar al final del todo tiene un error que salta la imagen principal y se ve muy raro."
+  }
+}

@@ -1,0 +1,274 @@
+{
+  "slug": "fluid-splash-cursor",
+  "title": "Nocturne Baths — Fluid Splash Cursor",
+  "description": "A GPU fluid simulation that lives on top of a whole page instead of behind a hero. Pointer movement injects a force and a puff of dye into double-buffered half-float render targets, and a Navier-Stokes solver — curl, vorticity confinement, divergence, 20 Jacobi pressure passes, semi-Lagrangian advection — makes the ink swirl and dissipate. The display pass derives alpha from the dye's own brightness and blends premultiplied, so unpainted water is fully transparent and the document underneath is untouched. No library: raw WebGL2 with a WebGL1 fallback and per-format probing. Hue cycles by default or holds one brand colour; the loop caps device pixel ratio, stops itself after four idle seconds and restarts on the next movement.",
+  "category": "3d-webgl",
+  "tags": [
+    "fluid-simulation",
+    "navier-stokes",
+    "webgl",
+    "shaders",
+    "cursor",
+    "pointer",
+    "overlay",
+    "canvas",
+    "no-dependencies"
+  ],
+  "gsap": [],
+  "deps": [],
+  "preview": {
+    "waitMs": 2600,
+    "clip": {
+      "seconds": 7,
+      "actions": [
+        {
+          "type": "cursor",
+          "path": "figure8"
+        }
+      ]
+    }
+  },
+  "images": [],
+  "updated": "2026-08-04",
+  "intent": {
+    "mood": [
+      "organic",
+      "experimental",
+      "technical"
+    ],
+    "useCase": [
+      "cursor-effect",
+      "background",
+      "hero"
+    ],
+    "useWhen": "Úsalo cuando quieras que el puntero arrastre tinta líquida por ENCIMA de toda la página, no sólo dentro de un hero, sin tocar el contenido.",
+    "aliases": [
+      "splash cursor",
+      "cursor de fluido",
+      "fluid cursor",
+      "simulación de fluidos",
+      "ink cursor",
+      "tinta que sigue al ratón",
+      "estela líquida",
+      "webgl fluid overlay"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": true,
+    "needsCanvas": true,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 0,
+    "perfCost": "heavy",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": false,
+    "verified": false,
+    "imagesReplaced": false,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "amber",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#ffb45a",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--amber"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "dim",
+      "label": "Texto",
+      "type": "color",
+      "default": "#78898f",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--dim"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "night",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#06090c",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--night"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bone",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#e7edee",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bone"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "curl",
+      "label": "Remolino",
+      "type": "range",
+      "min": 0,
+      "max": 40,
+      "step": 1,
+      "default": 12,
+      "apply": {
+        "kind": "js",
+        "path": "curl"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "splatRadius",
+      "label": "Tamaño de la salpicadura",
+      "type": "range",
+      "min": 0.05,
+      "max": 0.5,
+      "step": 0.01,
+      "default": 0.2,
+      "apply": {
+        "kind": "js",
+        "path": "splatRadius"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "splatForce",
+      "label": "Fuerza del trazo",
+      "type": "range",
+      "min": 1000,
+      "max": 12000,
+      "step": 200,
+      "default": 6000,
+      "apply": {
+        "kind": "js",
+        "path": "splatForce"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "densityDissipation",
+      "label": "Desvanecido de la tinta",
+      "type": "range",
+      "min": 0.5,
+      "max": 6,
+      "step": 0.1,
+      "default": 3,
+      "apply": {
+        "kind": "js",
+        "path": "densityDissipation"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "velocityDissipation",
+      "label": "Frenado del agua",
+      "type": "range",
+      "min": 0.5,
+      "max": 6,
+      "step": 0.1,
+      "default": 2.4,
+      "apply": {
+        "kind": "js",
+        "path": "velocityDissipation"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "intensity",
+      "label": "Intensidad de la tinta",
+      "type": "range",
+      "min": 0.05,
+      "max": 0.6,
+      "step": 0.01,
+      "default": 0.19,
+      "apply": {
+        "kind": "js",
+        "path": "intensity"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "fluid-splash-cursor",
+    "title": "Nocturne Baths — Fluid Splash Cursor",
+    "category": "3d-webgl",
+    "trigger": "pointer",
+    "libs": [],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": null,
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 0,
+      "bytes": 0,
+      "root_absolute_paths": false
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": true
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "INTEGRATOR",
+    "engine": "webgl-raf",
+    "motion_signature": "No timeline and no tween: a requestAnimationFrame loop steps a Navier-Stokes solver on the GPU and blits the dye field into a fixed, transparent, full-window canvas at z-index 50. Each pointermove converts the travel since the last event into a normalised delta, multiplies it by splatForce and writes one gaussian into the velocity field and one into the dye field at the same point; a pointerdown writes a single burst ten times brighter with a random kick. Per frame: curl, vorticity confinement, divergence, a pressure decay, 20 Jacobi pressure iterations, gradient subtraction, then semi-Lagrangian advection of velocity and of dye, each divided by 1 + dissipation*dt. Hue is re-rolled every 1/colorUpdateSpeed seconds while rainbow is on. The loop is not unconditional: it cancels itself four seconds after the last pointer input and on visibilitychange, and any movement or a splat() call restarts it.",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

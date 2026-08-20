@@ -1,0 +1,267 @@
+{
+  "slug": "karim-saab-scroll-animation",
+  "sourceDir": "cg-karim-saab-scroll-animation",
+  "title": "Halide — Masked Portrait Reveal Scroll",
+  "description": "A pinned spotlight section where a tall grid of desaturated images scrolls vertically while an SVG-masked banner image is revealed and scaled up through a growing CSS mask-size, finishing with a word-by-word headline fade-in. A single ScrollTrigger (pin + scrub over 7x viewport height, Lenis-smoothed) drives everything from its onUpdate, mapping scroll progress to image translateY, mask-size, image scale and SplitText word opacity across staged progress ranges.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "pin",
+    "scrub",
+    "css-mask",
+    "image-reveal",
+    "splittext",
+    "lenis",
+    "editorial",
+    "cinematic"
+  ],
+  "gsap": [
+    "ScrollTrigger",
+    "SplitText"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "scrollTo": 0.6,
+    "waitMs": 2500
+  },
+  "images": [
+    {
+      "file": "spotlight-banner.jpg",
+      "desc": "Wide cinematic banner photograph used as the hero reveal image.",
+      "role": "Image revealed inside the growing SVG mask in the mask-container.",
+      "replaced": true
+    },
+    {
+      "file": "img1.jpg",
+      "desc": "Portrait-oriented desaturated editorial photograph.",
+      "role": "Tile in row 1 of the scrolling spotlight image grid.",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "Portrait-oriented desaturated editorial photograph.",
+      "role": "Tile in row 1 of the scrolling spotlight image grid.",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "Portrait-oriented desaturated editorial photograph.",
+      "role": "Tile in row 2 of the scrolling spotlight image grid.",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "Portrait-oriented desaturated editorial photograph.",
+      "role": "Tile in row 3 of the scrolling spotlight image grid.",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "Portrait-oriented desaturated editorial photograph.",
+      "role": "Tile in row 3 of the scrolling spotlight image grid.",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "Portrait-oriented desaturated editorial photograph.",
+      "role": "Tile in row 4 of the scrolling spotlight image grid.",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "Portrait-oriented desaturated editorial photograph.",
+      "role": "Tile in row 4 of the scrolling spotlight image grid.",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "Portrait-oriented desaturated editorial photograph.",
+      "role": "Tile in row 5 of the scrolling spotlight image grid.",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpg",
+      "desc": "Portrait-oriented desaturated editorial photograph.",
+      "role": "Tile in row 5 of the scrolling spotlight image grid.",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "cinematic",
+      "editorial",
+      "bold"
+    ],
+    "useCase": [
+      "scroll-story",
+      "image-reveal",
+      "hero"
+    ],
+    "useWhen": "Úsalo para un scroll narrativo donde una rejilla de imágenes se desplaza y una foto se revela a través de una máscara SVG que crece, cerrando con un titular.",
+    "aliases": [
+      "masked reveal",
+      "revelado con mascara",
+      "svg mask scroll",
+      "image grid scroll",
+      "spotlight scroll",
+      "scrollytelling"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger",
+      "SplitText"
+    ],
+    "assetCount": 11,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f2eee4",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#0e0e0f",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "silver",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#948f85",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--silver"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "karim-saab-scroll-animation",
+    "title": "Halide — Masked Portrait Reveal Scroll",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "SplitText",
+      "lenis"
+    ],
+    "complexity": 4,
+    "pinned": true,
+    "viewport_heights": 700,
+    "needs_lenis": true,
+    "ease_family": null,
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 12,
+      "bytes": 1187547,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de karim-saab-scroll-animation"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de karim-saab-scroll-animation"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de karim-saab-scroll-animation"
+      }
+    ],
+    "cluster": "SCROLL-LAGGED",
+    "engine": "gsap",
+    "motion_signature": "700vh scrubbed pin (scrub 1): image grid translateY 5% → -(H + 0.05H + innerHeight)/H*100% over progress 0–0.5; CSS mask-size 0% → 450% with the masked image scaling 1.5 → 1 over progress 0.25–0.75; then index-ordered per-word opacity snap (0 → 1) over 0.75–0.95. All state is set imperatively per frame — no tweens, no eases, no inertia beyond Lenis's own smoothing.",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-lagged"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

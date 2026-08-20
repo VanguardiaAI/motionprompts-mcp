@@ -1,0 +1,365 @@
+{
+  "slug": "3d-scroll-tunnel",
+  "sourceDir": "codegrid-3d-scroll-tunnel",
+  "title": "3D Scroll Tunnel",
+  "description": "Infinite 3D image tunnel driven by the mouse wheel: six layers of four full-colour images each sit on an ellipse inside a perspective container, and a gsap.ticker loop lerps a virtual scroll value to push layers along the Z axis, wrapping depth modulo the tunnel length for endless looping. A per-item plum-black overlay driven by a --overlay CSS variable fades images in from the depths and darkens them out as they pass the camera. On top of that, a second damped read — the VELOCITY of the lerped scroll, not its position — stretches every plate along its own radial axis and pinches it across, so the frames smear like speed lines while the flight is moving and snap back to clean rectangles the moment it settles.",
+  "category": "3d-webgl",
+  "tags": [
+    "3d",
+    "tunnel",
+    "wheel",
+    "infinite-loop",
+    "css-3d",
+    "perspective",
+    "lerp",
+    "gallery"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 2000,
+    "clip": {
+      "seconds": 8,
+      "actions": [
+        {
+          "type": "scroll",
+          "to": 0.9,
+          "mode": "pingpong"
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "man in a denim jacket lit entirely in deep blue light, glancing over his shoulder against a dark red-shadowed background",
+      "role": "tunnel image",
+      "replaced": true,
+      "reused_from": "247artists-trail/trail-images/img7.jpeg"
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "rain-slicked city street at night seen down a corridor of red and blue neon signage, a woman walking toward the lens",
+      "role": "tunnel image",
+      "replaced": true,
+      "reused_from": "burocratik-image-trail-js/img17.jpeg"
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "macro shot of pale yellow flower stamens curving against a soft lilac backdrop",
+      "role": "tunnel image",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "extreme close-up of an eye with winged black eyeliner on sepia canvas texture",
+      "role": "tunnel image",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "cream-tan suede cowboy boot stepping onto a bright white seamless ground",
+      "role": "tunnel image",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "profile of a long-haired man in black against a glossy red wall with a vertical amber light strip behind his head",
+      "role": "tunnel image",
+      "replaced": true,
+      "reused_from": "247artists-trail/trail-images/img16.jpeg"
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "blue neon-lit silhouette profile of a head in near-darkness, only the rim of the face lit",
+      "role": "tunnel image",
+      "replaced": true,
+      "reused_from": "filters-fielddaysound/img2.jpg"
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "abstract macro of iridescent mineral crystal, dark background, portrait",
+      "role": "tunnel image",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    },
+    {
+      "file": "img9.jpg",
+      "desc": "long-exposure neon light trails, red and cyan arcs sweeping across a black ground",
+      "role": "tunnel image",
+      "replaced": true,
+      "reused_from": "arock-menu/hero.jpg"
+    },
+    {
+      "file": "img10.jpg",
+      "desc": "pale-haired figure crowned with blossom standing in a sunlit rose garden",
+      "role": "tunnel image",
+      "replaced": true
+    },
+    {
+      "file": "img11.jpg",
+      "desc": "motion-blurred head thrown back mid-shout against a saturated red background",
+      "role": "tunnel image",
+      "replaced": true,
+      "reused_from": "247artists-trail/trail-images/img13.jpeg"
+    },
+    {
+      "file": "img12.jpg",
+      "desc": "motion-blurred figure in white trousers twisting mid-movement against a grey wall",
+      "role": "tunnel image",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-08-16",
+  "intent": {
+    "mood": [
+      "editorial",
+      "luxury",
+      "cinematic"
+    ],
+    "useCase": [
+      "gallery",
+      "hero",
+      "scroll-story"
+    ],
+    "useWhen": "Úsalo cuando quieras una galería inmersiva de portfolio o moda donde las imágenes viajan en un túnel 3D infinito controlado por la rueda del ratón.",
+    "aliases": [
+      "túnel 3d",
+      "3d tunnel",
+      "image tunnel",
+      "galería infinita",
+      "infinite image gallery",
+      "túnel de scroll"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 12,
+    "perfCost": "light",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bg",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#17141f",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bg"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "dim",
+      "label": "Texto",
+      "type": "color",
+      "default": "#a7a0b8",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--dim"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#f5f3f7",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "totalImages",
+      "label": "Nº de imágenes",
+      "type": "range",
+      "min": 4,
+      "max": 12,
+      "step": 1,
+      "default": 12,
+      "apply": {
+        "kind": "js",
+        "path": "totalImages"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "layerGap",
+      "label": "Largo del túnel",
+      "type": "range",
+      "min": 800,
+      "max": 6000,
+      "step": 100,
+      "default": 2500,
+      "apply": {
+        "kind": "js",
+        "path": "layerGap"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "scrollSpeed",
+      "label": "Empuje del scroll",
+      "type": "range",
+      "min": 0.5,
+      "max": 6,
+      "step": 0.25,
+      "default": 2,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "scrollSpeed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "lerp",
+      "label": "Suavizado del avance",
+      "type": "range",
+      "min": 0.01,
+      "max": 0.3,
+      "step": 0.01,
+      "default": 0.07,
+      "apply": {
+        "kind": "js",
+        "path": "lerp"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "speedStretch",
+      "label": "Deformación por velocidad",
+      "type": "range",
+      "min": 0,
+      "max": 0.6,
+      "step": 0.05,
+      "default": 0.3,
+      "apply": {
+        "kind": "js",
+        "path": "speedStretch"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "radiusX",
+      "label": "Ancho del anillo",
+      "type": "range",
+      "min": 150,
+      "max": 800,
+      "step": 25,
+      "default": 400,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "radiusX"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "radiusY",
+      "label": "Alto del anillo",
+      "type": "range",
+      "min": 100,
+      "max": 600,
+      "step": 20,
+      "default": 280,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "radiusY"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "3d-scroll-tunnel",
+    "title": "3D Scroll Tunnel",
+    "category": "3d-webgl",
+    "trigger": "wheel",
+    "libs": [
+      "gsap"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": null,
+    "duration_range": [
+      0.25,
+      2.4
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 12,
+      "bytes": 1289972,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": true
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "CAPTURED-VIRTUAL-SCROLL",
+    "engine": "gsap+raf",
+    "motion_signature": "wheel-driven lerped infinite CSS-3D depth tunnel",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  },
+  "review": {
+    "status": "public"
+  }
+}

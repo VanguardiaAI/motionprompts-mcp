@@ -1,0 +1,275 @@
+{
+  "slug": "voltlites-scroll-animation",
+  "sourceDir": "codegrie-voltlites-scroll-animation",
+  "title": "Voltlites Pinned Hero Zoom-Out Reveal",
+  "description": "Hero pinned for four viewport heights where a 3x3 spotlight image grid (300% of the viewport) scales from 1 to 0.5 while each image counter-zooms from 1.25 to 1, a fixed logo shrinks from 6x (2x on mobile) and travels from bottom to top, the footer tagline blurs away, and the SplitText headline plus CTA fade in word by word. A second scrubbed ScrollTrigger on the next section slides the hero up 25% under a darkening overlay as an exit parallax; driven by manual lerp/mapRange in onUpdate with Lenis smooth scroll.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "pin",
+    "hero",
+    "gallery",
+    "grid",
+    "zoom-out",
+    "reveal",
+    "logo",
+    "split-text",
+    "parallax",
+    "lenis"
+  ],
+  "gsap": [
+    "ScrollTrigger",
+    "SplitText"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "scrollTo": 0.8,
+    "waitMs": 3000,
+    "clip": {
+      "seconds": 9
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "surreal metal comb-fork hybrid object on shimmering dark red fabric, top-down",
+      "role": "spotlight grid image (col 1, row 1)",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "young man unpacking cardboard boxes in a room overgrown with plants and wildflowers by a large window",
+      "role": "spotlight grid image (col 1, row 2)",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "minimalist concrete desert house at dusk, warm light glowing from the doorway, cacti and shrubs",
+      "role": "spotlight grid image (col 1, row 3)",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "editorial portrait with strong color contrast, sharp exposure, landscape (sustituye retrato quemado)",
+      "role": "spotlight grid image (col 2, row 1)",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "pale albino woman with pearl-encrusted collar flanked by two black swans, muted studio portrait",
+      "role": "spotlight grid image (col 2, row 2)",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "close-up face bathed in green light with glowing LED eyes and a transparent tube device",
+      "role": "spotlight grid image (col 2, row 3)",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "androgynous shaved-head figure wearing a red satin blindfold, grey studio backdrop",
+      "role": "spotlight grid image (col 3, row 1)",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "woman with dark blunt bangs gazing past out-of-focus pink flowers, warm olive tones",
+      "role": "spotlight grid image (col 3, row 2)",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpg",
+      "desc": "dark leather glove laid flat on a grey-green surface with a thin plant stem, moody still life",
+      "role": "spotlight grid image (col 3, row 3)",
+      "replaced": true
+    },
+    {
+      "file": "logo.svg",
+      "desc": "chartreuse (#C4D600) 'FAME' wordmark logo",
+      "role": "fixed scaling brand logo",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "cinematic",
+      "editorial",
+      "elegant"
+    ],
+    "useCase": [
+      "hero",
+      "scroll-story",
+      "image-reveal"
+    ],
+    "useWhen": "Úsalo cuando quieras una portada inmersiva que, al hacer scroll, aleje una rejilla de imágenes para revelar el logo y el titular de la marca.",
+    "aliases": [
+      "hero pinneado",
+      "zoom out al scroll",
+      "rejilla que se aleja",
+      "spotlight grid reveal",
+      "pinned hero zoom-out",
+      "revelación de logo al scroll"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger",
+      "SplitText"
+    ],
+    "assetCount": 10,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#0c0c0d",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bone",
+      "label": "Texto",
+      "type": "color",
+      "default": "#ece7db",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bone"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "moss",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#2c3226",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--moss"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "voltlites-scroll-animation",
+    "title": "Voltlites Pinned Hero Zoom-Out Reveal",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "SplitText",
+      "lenis"
+    ],
+    "complexity": 4,
+    "pinned": true,
+    "viewport_heights": 400,
+    "needs_lenis": true,
+    "ease_family": null,
+    "duration_range": [
+      0.3,
+      0.3
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 10,
+      "bytes": 1086519,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de voltlites-scroll-animation"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de voltlites-scroll-animation"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de voltlites-scroll-animation"
+      }
+    ],
+    "cluster": "SCROLL-WELDED",
+    "engine": "gsap+raf",
+    "motion_signature": "pinned hero grid zoom-out, scroll-mapped lerps",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-welded"
+  },
+  "review": {
+    "status": "public"
+  }
+}

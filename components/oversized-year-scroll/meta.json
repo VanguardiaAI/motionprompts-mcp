@@ -1,0 +1,244 @@
+{
+  "slug": "oversized-year-scroll",
+  "title": "Oversized Year, Counter-Scrolled",
+  "description": "A timeline where each era band carries an enormous four-digit year as a watermark behind its content, drifting AGAINST the scroll while the copy rises with it. One ScrollTrigger per band tweens the numeral on `xPercent` across the band's entire passage through the viewport (`top bottom` → `bottom top`, scrub 1), and the direction alternates band to band so consecutive years do not read as one long background pan. The numeral is `aria-hidden` at 7% opacity and the readable date lives in the copy: in front it stops being atmosphere and competes with the paragraph it dates. Each band clips horizontally because the numeral is deliberately wider than the viewport. Smoothed by Lenis; reduced motion parks every numeral centred. The demo is dressed as a Gotland ceramics studio: Vollkorn + Martian Mono, oat and kiln-black with an ember accent.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "scrolltrigger",
+    "scrub",
+    "timeline",
+    "history",
+    "watermark",
+    "numerals",
+    "parallax",
+    "counter-scroll",
+    "editorial",
+    "lenis"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 1200,
+    "scrollTo": 0.5,
+    "clip": {
+      "seconds": 9
+    }
+  },
+  "images": [
+    {
+      "file": "hero.jpg",
+      "desc": "ceramic vessels on marble, full-bleed hero",
+      "role": "hero image",
+      "replaced": true,
+      "reused_from": "catálogo existente (public/c/ashfall-3d-image-gallery), recortado con sharp — ninguna imagen generada"
+    },
+    {
+      "file": "era-1.jpg",
+      "desc": "still life, first era band",
+      "role": "image of era 1",
+      "replaced": true,
+      "reused_from": "catálogo existente (public/c/ashfall-3d-image-gallery)"
+    },
+    {
+      "file": "era-2.jpg",
+      "desc": "still life, second era band",
+      "role": "image of era 2",
+      "replaced": true,
+      "reused_from": "catálogo existente (public/c/ashfall-3d-image-gallery)"
+    },
+    {
+      "file": "era-3.jpg",
+      "desc": "still life, third era band",
+      "role": "image of era 3",
+      "replaced": true,
+      "reused_from": "catálogo existente (public/c/ashfall-3d-image-gallery)"
+    }
+  ],
+  "updated": "2026-08-02",
+  "intent": {
+    "mood": [
+      "editorial",
+      "minimal",
+      "organic"
+    ],
+    "useCase": [
+      "scroll-story",
+      "background"
+    ],
+    "useWhen": "Cuando hay una historia con fechas y quieres que el año se lea como atmósfera y no como un dato en una tabla.",
+    "aliases": [
+      "cifra gigante",
+      "año de fondo",
+      "cronología",
+      "timeline",
+      "giant year",
+      "watermark numerals",
+      "history section",
+      "counter scroll"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 4,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": false,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "origin": {
+    "kind": "observed",
+    "note": "Efecto abstraído de banhmivietnam.xyz, observado por fotogramas: cifras de año enormes (1859 · 1958 · 2011) recortadas por el borde de su sección y desplazándose en sentido contrario al contenido. El EFECTO se conserva; paleta, tipografía, imágenes y contenido son propios.",
+    "gap": "0 aciertos en los 223 componentes al cruzar por descripción y etiquetas."
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#f5f2ec",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "navy",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#1c2a4a",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--navy"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "accent",
+      "label": "Acento",
+      "type": "color",
+      "default": "#f26430",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--accent"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "oversized-year-scroll",
+    "title": "Oversized Year, Counter-Scrolled",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": true,
+    "ease_family": "none",
+    "duration_range": [
+      0.9,
+      0.9
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 4,
+      "bytes": 199236,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": true
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de oversized-year-scroll"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de oversized-year-scroll"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de oversized-year-scroll"
+      }
+    ],
+    "cluster": "SCROLL-LAGGED",
+    "engine": "gsap",
+    "motion_signature": "per-band watermark numeral tweened on xPercent against the scroll across the band full passage (top bottom → bottom top, scrub 1), direction alternating band to band, while the band content rises with a power3.out entrance at top 72%",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-lagged"
+  },
+  "review": {
+    "status": "public"
+  }
+}

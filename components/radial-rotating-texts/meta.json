@@ -1,0 +1,262 @@
+{
+  "slug": "radial-rotating-texts",
+  "sourceDir": "cg-radial-rotating-texts",
+  "title": "Radial Rotating Text Layout",
+  "description": "Sixty uppercase text labels are laid out in a huge ring using gsap.set with cosine/sine positioning and a per-item rotation. Scrolling the very tall page feeds window.scrollY into an angle offset so gsap.to spins the whole ring with an elastic.out ease, while a gsap-driven custom cursor trails the mouse (power3.out) and hovering any label reveals a preview image inside the cursor via an animated clip-path polygon wipe.",
+  "category": "gallery",
+  "tags": [
+    "radial",
+    "circular",
+    "rotating-text",
+    "scroll",
+    "hover",
+    "custom-cursor",
+    "clip-path",
+    "image-reveal",
+    "editorial"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "clip": {
+      "seconds": 8,
+      "actions": [
+        {
+          "type": "hold"
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "Faint milky way band across a dense star field (Cygnus region)",
+      "role": "cursor hover-reveal plate for atlas entries 1, 16, 31, 46 (also duplicated as img16/img31/img46.jpg)",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "Full moon at perigee, black and white on black sky",
+      "role": "cursor hover-reveal plate for atlas entries 2, 17, 32, 47 (also duplicated as img17/img32/img47.jpg)",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "Purple-green aurora over a lakeside forest with warm shore light",
+      "role": "cursor hover-reveal plate for atlas entries 3, 18, 33, 48 (also duplicated as img18/img33/img48.jpg)",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "Circular circumpolar star trails around the celestial pole",
+      "role": "cursor hover-reveal plate for atlas entries 4, 19, 34, 49 (also duplicated as img19/img34/img49.jpg)",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "Comet NEOWISE with golden dust tail against a blue-to-amber dusk",
+      "role": "cursor hover-reveal plate for atlas entries 5, 20, 35, 50 (also duplicated as img20/img35/img50.jpg)",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "Dense blue milky way star clouds (Cassiopeia-Perseus stretch)",
+      "role": "cursor hover-reveal plate for atlas entries 6, 21, 36, 51 (also duplicated as img21/img36/img51.jpg)",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "Waning gibbous moon, monochrome telephoto on black",
+      "role": "cursor hover-reveal plate for atlas entries 7, 22, 37, 52 (also duplicated as img22/img37/img52.jpg)",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "Green aurora over snow-covered Lofoten mountains and dark water",
+      "role": "cursor hover-reveal plate for atlas entries 8, 23, 38, 53 (also duplicated as img23/img38/img53.jpg)",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpg",
+      "desc": "Diagonal star trails over a desert ridge, warm sky glow",
+      "role": "cursor hover-reveal plate for atlas entries 9, 24, 39, 54 (also duplicated as img24/img39/img54.jpg)",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpg",
+      "desc": "Small comet with ion tail in a deep blue twilight over sunset clouds",
+      "role": "cursor hover-reveal plate for atlas entries 10, 25, 40, 55 (also duplicated as img25/img40/img55.jpg)",
+      "replaced": true
+    },
+    {
+      "file": "img11.jpg",
+      "desc": "Vertical milky way galactic core over a dark horizon",
+      "role": "cursor hover-reveal plate for atlas entries 11, 26, 41, 56 (also duplicated as img26/img41/img56.jpg)",
+      "replaced": true
+    },
+    {
+      "file": "img12.jpg",
+      "desc": "Detailed full moon close-up, grey cratered disc",
+      "role": "cursor hover-reveal plate for atlas entries 12, 27, 42, 57 (also duplicated as img27/img42/img57.jpg)",
+      "replaced": true
+    },
+    {
+      "file": "img13.jpg",
+      "desc": "Green aurora swirling over a fjord with teal water and snowy peaks",
+      "role": "cursor hover-reveal plate for atlas entries 13, 28, 43, 58 (also duplicated as img28/img43/img58.jpg)",
+      "replaced": true
+    },
+    {
+      "file": "img14.jpg",
+      "desc": "Silhouetted observer with arms spread under a starry dusk sky",
+      "role": "cursor hover-reveal plate for atlas entries 14, 29, 44, 59 (also duplicated as img29/img44/img59.jpg)",
+      "replaced": true
+    },
+    {
+      "file": "img15.jpg",
+      "desc": "Dark milky way core with pink nebulae on a moonless night",
+      "role": "cursor hover-reveal plate for atlas entries 15, 30, 45, 60 (also duplicated as img30/img45/img60.jpg)",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "experimental",
+      "editorial",
+      "futuristic"
+    ],
+    "useCase": [
+      "gallery",
+      "navigation",
+      "hover-interaction"
+    ],
+    "useWhen": "Úsalo para una navegación o galería creativa donde los textos se disponen en círculo y giran con el scroll, revelando imágenes al pasar el cursor.",
+    "aliases": [
+      "texto radial",
+      "menú circular",
+      "radial text",
+      "circular menu",
+      "cursor image reveal",
+      "texto giratorio"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 15,
+    "perfCost": "light",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#05070c",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "radial-rotating-texts",
+    "title": "Radial Rotating Text Layout",
+    "category": "gallery",
+    "trigger": "scroll",
+    "libs": [
+      "gsap"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": 3000,
+    "needs_lenis": false,
+    "ease_family": "power3",
+    "duration_range": [
+      0.05,
+      1
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 60,
+      "bytes": 12698956,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "html/body height fija en vh"
+    ],
+    "capabilities": [
+      {
+        "capability": "document-height",
+        "reason": "fija la altura del documento en 3000vh"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de radial-rotating-texts"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de radial-rotating-texts"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de radial-rotating-texts"
+      }
+    ],
+    "cluster": "SCROLL-WELDED",
+    "engine": "gsap",
+    "motion_signature": "scroll-mapped ring rotation with cursor image reveal",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-welded"
+  },
+  "review": {
+    "status": "public",
+    "comment": "Hay que arreglar el componente porque se solapan las imágenes con el texto animado. Cuando lo arregles vuelve a grabar el vídeo corregido."
+  }
+}

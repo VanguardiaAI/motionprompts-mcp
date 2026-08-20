@@ -1,0 +1,264 @@
+{
+  "slug": "mat-voyce-scroll-animation",
+  "sourceDir": "cg-mat-voyce-scroll-animation",
+  "title": "Mat Voyce Scroll Animation",
+  "description": "A pinned scroll section (scrub over 5x viewport height, Lenis-smoothed) drives a horizontal reel of four huge italic project titles while ten rounded image cards fly toward the viewer from deep translateZ. A single ScrollTrigger onUpdate maps progress to the titles' x offset and, per card, staggers each one's Z position and scale; scroll velocity adds a springy layered x-jitter to two color copies of every title for a Mat Voyce style kinetic-type effect.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "pin",
+    "scrub",
+    "kinetic-typography",
+    "3d-perspective",
+    "translatez",
+    "velocity",
+    "lenis",
+    "playful"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "scrollTo": 0.7,
+    "waitMs": 2500,
+    "clip": {
+      "seconds": 9
+    }
+  },
+  "images": [
+    {
+      "file": "logo.png",
+      "desc": "Vanguardia 'V' mark with a spark, black on transparent.",
+      "role": "Brand logo in the top-left of the fixed navigation bar.",
+      "replaced": true
+    },
+    {
+      "file": "img1.jpeg",
+      "desc": "Photographic image used as card artwork.",
+      "role": "First of ten cards that scales up and flies in from deep Z during scroll.",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpeg",
+      "desc": "Photographic image used as card artwork.",
+      "role": "Second of ten cards that scales up and flies in from deep Z during scroll.",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpeg",
+      "desc": "Photographic image used as card artwork.",
+      "role": "Third of ten cards that scales up and flies in from deep Z during scroll.",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpeg",
+      "desc": "Photographic image used as card artwork.",
+      "role": "Fourth of ten cards that scales up and flies in from deep Z during scroll.",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpeg",
+      "desc": "Warm sunset light burning through patterned lace curtains, deep amber tones.",
+      "role": "Fifth of ten cards that scales up and flies in from deep Z during scroll.",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpeg",
+      "desc": "Cozy vintage interior lit by a warm lamp glow, with a paper lantern, brick wall, and a seated figure.",
+      "role": "Sixth of ten cards that scales up and flies in from deep Z during scroll.",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpeg",
+      "desc": "A vintage estate car silhouetted against a glowing orange sunset on a country road.",
+      "role": "Seventh of ten cards that scales up and flies in from deep Z during scroll.",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpeg",
+      "desc": "A cream 1970s sedan parked in a warm desert landscape at dusk.",
+      "role": "Eighth of ten cards that scales up and flies in from deep Z during scroll.",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpeg",
+      "desc": "Close-up of a vintage wood-cased radio with silver analog tuning dials.",
+      "role": "Ninth of ten cards that scales up and flies in from deep Z during scroll.",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpeg",
+      "desc": "Photographic image used as card artwork.",
+      "role": "Tenth of ten cards that scales up and flies in from deep Z during scroll.",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "playful",
+      "bold",
+      "experimental"
+    ],
+    "useCase": [
+      "scroll-story",
+      "gallery",
+      "text-reveal"
+    ],
+    "useWhen": "Úsalo para una sección de scroll con tipografía cinética gigante y tarjetas de imágenes que entran en 3D; ideal para mostrar proyectos con energía.",
+    "aliases": [
+      "kinetic typography",
+      "tipografia cinetica",
+      "mat voyce",
+      "scroll horizontal titulos",
+      "cards 3d scroll",
+      "velocity text scroll"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 11,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "cream",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#edebde",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--cream"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#1e1913",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "mat-voyce-scroll-animation",
+    "title": "Mat Voyce Scroll Animation",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 3,
+    "pinned": true,
+    "viewport_heights": 500,
+    "needs_lenis": true,
+    "ease_family": "power1",
+    "duration_range": [
+      0.2,
+      0.3
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 11,
+      "bytes": 1786716,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de mat-voyce-scroll-animation"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de mat-voyce-scroll-animation"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de mat-voyce-scroll-animation"
+      }
+    ],
+    "cluster": "SCROLL-LAGGED",
+    "engine": "gsap",
+    "motion_signature": "pinned scrub: horizontal titles + cards flying from deep Z",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-lagged"
+  },
+  "review": {
+    "status": "public"
+  }
+}

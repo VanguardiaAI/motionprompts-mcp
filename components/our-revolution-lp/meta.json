@@ -1,0 +1,254 @@
+{
+  "slug": "our-revolution-lp",
+  "sourceDir": "cg-our-revolution-lp",
+  "title": "Our Revolution Landing Page Reveal",
+  "description": "A preloader-to-hero landing reveal driven by a single GSAP timeline: a row of seven tall portrait images rises from below and staggers in, the whole strip slides horizontally, the side images and then the full black loader wipe away upward via clip-path, and finally the nav, hero headline and footer thumbnails slide up and fade in. Plays automatically once on page load using power3.inOut easing, about 6 seconds total.",
+  "category": "preloader",
+  "tags": [
+    "preloader",
+    "reveal",
+    "clip-path",
+    "stagger",
+    "timeline",
+    "intro",
+    "landing",
+    "hero",
+    "editorial"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 6500
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "cinematic teal-toned scene of a lone figure walking across a wet reflective floor toward a shaft of light between dark angular walls",
+      "role": "loader image strip, position 1",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "cinematic studio portrait of a seated man lit entirely in deep red, face and body sinking into shadow",
+      "role": "loader image strip, position 2",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "astronaut standing on a foggy plain before a huge pale sphere, bathed in hazy golden sunset light",
+      "role": "loader image strip, position 3",
+      "replaced": true
+    },
+    {
+      "file": "logo.png",
+      "desc": "white Vanguardia studio wordmark centered on a solid black background",
+      "role": "loader image strip center logo (#loader-logo, stays while others wipe away)",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "moody dark shot glimpsed through a slit of a woman's lower face holding a lit cigarette, pale-blue painted nails",
+      "role": "loader image strip, position 5",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "orange-lit silhouette of a person pressing a hand against frosted glass",
+      "role": "loader image strip, position 6",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "dramatic side-lit portrait of a blonde woman in dark clothing against a dark teal backdrop",
+      "role": "loader image strip, position 7",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "near-black cinematic profile of a face, only the nose and lips catching a thin amber rim of light",
+      "role": "footer thumbnail 1",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "moody low-key portrait of a young man, half his face crossed by a hard shaft of cool light against darkness",
+      "role": "footer thumbnail 2",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpg",
+      "desc": "portrait of a person in a black suit whose face is fully draped by a pale-blue tulle veil, gray studio background",
+      "role": "footer thumbnail 3",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpg",
+      "desc": "hazy golden-hour city skyline of glass towers bathed in warm orange light",
+      "role": "footer thumbnail 4",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "editorial",
+      "elegant",
+      "cinematic"
+    ],
+    "useCase": [
+      "preloader",
+      "hero",
+      "image-reveal"
+    ],
+    "useWhen": "Úsalo como intro de una landing donde una tira de fotos verticales se revela y da paso al hero con titular, nav y galería de footer.",
+    "aliases": [
+      "preloader de fotos",
+      "revelado de landing",
+      "intro editorial",
+      "image strip reveal",
+      "loader clip-path",
+      "portada con galeria"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 11,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bg",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#0f0f0f",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bg"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f5f2ec",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "accent",
+      "label": "Acento",
+      "type": "color",
+      "default": "#c9b8f5",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--accent"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "muted",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#8c8c88",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--muted"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "our-revolution-lp",
+    "title": "Our Revolution Landing Page Reveal",
+    "category": "preloader",
+    "trigger": "load",
+    "libs": [
+      "gsap"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power3",
+    "duration_range": [
+      0.3,
+      3
+    ],
+    "stagger": 0.1,
+    "assets_required": {
+      "count": 11,
+      "bytes": 1202310,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "html/body overflow:hidden"
+    ],
+    "capabilities": [
+      {
+        "capability": "page-scroll-lock",
+        "reason": "fija overflow:hidden en html/body"
+      },
+      {
+        "capability": "entry-veil",
+        "reason": "velo de entrada a pantalla completa en la carga"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "LOAD-ONESHOT",
+    "engine": "gsap",
+    "motion_signature": "one-shot 4s power3.inOut intro: staggered y-rise of a 7-image strip + a 3s horizontal x:500->0 slide of the strip, then upward clip-path wipes (polygon bottom edge collapsed to the top) on the images and on the fixed black loader, ending with a staggered y/opacity rise of nav, headline and footer thumbs. No scroll, no rAF, no easing curve other than power3.inOut.",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "entry-veil"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

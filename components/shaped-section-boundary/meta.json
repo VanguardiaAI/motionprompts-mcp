@@ -1,0 +1,215 @@
+{
+  "slug": "shaped-section-boundary",
+  "title": "Shaped Section Boundary",
+  "description": "Stacked full-height sections whose top edge is a shape instead of a straight line: each incoming section carries its own boundary element, painted with `background: inherit` so the edge can never drift from the section colour, and clipped by a `clip-path: polygon()` whose vertices are driven by a single `@property`-registered custom property `--forma`. One scrubbed ScrollTrigger per boundary tweens `--forma` from 0 (flat) to 1 (full shape) over a window that closes at `top 55%`, so the edge has finished moving before the section is read. Five forms ship: wave, chevron, oblique, torn (twelve fixed pseudo-random points) and arch (a real curve via `border-radius`, not a polygon). Smoothed by Lenis; honours prefers-reduced-motion by locking the shape open.",
+  "category": "transition",
+  "tags": [
+    "scroll",
+    "scrolltrigger",
+    "scrub",
+    "clip-path",
+    "section",
+    "divider",
+    "boundary",
+    "wave",
+    "chevron",
+    "diagonal",
+    "custom-property",
+    "lenis",
+    "editorial"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 1200,
+    "scrollTo": 0.45,
+    "clip": {
+      "seconds": 9
+    }
+  },
+  "images": [],
+  "updated": "2026-08-02",
+  "intent": {
+    "mood": [
+      "editorial",
+      "bold",
+      "organic"
+    ],
+    "useCase": [
+      "scroll-story",
+      "background"
+    ],
+    "useWhen": "Cuando la página apila secciones de colores planos y los cortes rectos entre ellas la hacen parecer una plantilla.",
+    "aliases": [
+      "borde de sección con forma",
+      "canto ondulado",
+      "separador animado",
+      "section divider",
+      "wave divider",
+      "chevron edge",
+      "diagonal section",
+      "torn paper edge",
+      "shaped section transition"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 0,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": false,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "origin": {
+    "kind": "observed",
+    "note": "No es un port de un sitio concreto. Es la abstracción de una mecánica medida en 4 de 8 sitios premiados del nicho food-drink observados por fotogramas: onda (cravburgers.shop, mrday.it), chevron (sakazuki.io) y oblicua (banhmivietnam.xyz). Ver scratch/perfil-food-drink.md.",
+    "gap": "El catálogo tenía 0 componentes para esto: sus 11 componentes de categoría `transition` son transiciones de RUTA (clic en un enlace, cambia la página), no fronteras entre secciones de una misma página que baja."
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bone",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#efe9e0",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bone"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#14100e",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "signal",
+      "label": "Acento",
+      "type": "color",
+      "default": "#d6522b",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--signal"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "shaped-section-boundary",
+    "title": "Shaped Section Boundary",
+    "category": "transition",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": true,
+    "ease_family": "none",
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 0,
+      "bytes": 0,
+      "root_absolute_paths": false
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": true
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de shaped-section-boundary"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de shaped-section-boundary"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de shaped-section-boundary"
+      }
+    ],
+    "cluster": "SCROLL-LAGGED",
+    "engine": "gsap",
+    "motion_signature": "scroll-scrubbed clip-path morph on section top edges: one ScrollTrigger per boundary tweens an @property-registered custom property --forma 0→1 over start top bottom → end top 55%, and the polygon() vertices of each shape (wave/chevron/oblique/torn) or the border-radius (arch) are calc() expressions of that number; no tween on any content, no pin, no transform",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-lagged"
+  },
+  "review": {
+    "status": "public"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "motionprompts-mcp",
+  "version": "1.0.0",
+  "description": "MCP server over a catalog of 219 production-grade GSAP motion components: search by design brief, plan a page's information architecture, and fetch copy-pasteable prompts and source.",
+  "license": "SEE LICENSE IN LICENSE",
+  "type": "module",
+  "bin": {
+    "motionprompts-mcp": "mcp/server.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "gsap",
+    "scrolltrigger",
+    "lenis",
+    "animation",
+    "web-design"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^4.4.3"
+  },
+  "scripts": {
+    "start": "node mcp/server.mjs"
+  }
+}

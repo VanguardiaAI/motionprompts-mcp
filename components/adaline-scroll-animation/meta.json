@@ -1,0 +1,222 @@
+{
+  "slug": "adaline-scroll-animation",
+  "sourceDir": "cg-adaline-scroll-animation",
+  "title": "Adaline Scroll Animation",
+  "description": "A pinned hero where a 104-frame image sequence is played back frame-by-frame on a <canvas> driven by scroll. A single ScrollTrigger (pin + scrub over 7x viewport height, Lenis-smoothed) maps scroll progress to the frame index while its onUpdate also fades the nav out, pushes the headline back on the Z axis and fades it, then flies a framed photo in from translateZ(1000px) to 0 near the end.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "canvas",
+    "image-sequence",
+    "frame-by-frame",
+    "pin",
+    "scrub",
+    "3d-perspective",
+    "lenis",
+    "cinematic"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "scrollTo": 0.75,
+    "waitMs": 2500
+  },
+  "images": [
+    {
+      "file": "caravan.jpg",
+      "desc": "A guide leading two loaded camels across scrubby tan dunes under a pale hazy sky (Pexels 30710173, Stijn Dijkstra).",
+      "role": "Framed expedition photo that flies in from deep Z toward the end of the scroll, matching the desert frame sequence.",
+      "replaced": true
+    },
+    {
+      "file": "logo.png",
+      "desc": "Small square brand mark (V with star) for the Vento logo.",
+      "role": "Logo icon in the fixed top navigation bar.",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "minimal",
+      "elegant",
+      "cinematic"
+    ],
+    "useCase": [
+      "hero",
+      "scroll-story",
+      "product-showcase"
+    ],
+    "useWhen": "Úsalo para un hero cinematográfico donde el scroll reproduce un video/secuencia de imágenes en canvas mientras el título y un mockup entran en 3D.",
+    "aliases": [
+      "video scroll",
+      "secuencia de imagenes",
+      "image sequence scroll",
+      "canvas scrub",
+      "scrollytelling",
+      "hero cinematografico"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": true,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 2,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#ecdfc8",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#251504",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "dusk",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#211307",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--dusk"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "adaline-scroll-animation",
+    "title": "Adaline Scroll Animation",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 3,
+    "pinned": true,
+    "viewport_heights": 700,
+    "needs_lenis": true,
+    "ease_family": null,
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 106,
+      "bytes": 4600235,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "reclama el primer canvas del documento"
+    ],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      },
+      {
+        "capability": "first-canvas",
+        "reason": "reclama document.querySelector(\"canvas\")"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de adaline-scroll-animation"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de adaline-scroll-animation"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de adaline-scroll-animation"
+      }
+    ],
+    "cluster": "SCROLL-LAGGED",
+    "engine": "mixed",
+    "motion_signature": "scrubbed pinned canvas image-sequence with Z-axis reveals",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-lagged"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

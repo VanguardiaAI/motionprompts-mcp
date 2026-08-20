@@ -1,0 +1,259 @@
+{
+  "slug": "savoirfaire-landing-page-reveal-animation",
+  "sourceDir": "cg-savoirfaire-landing-page-reveal-animation",
+  "title": "SavoirFaire Landing Page Reveal Animation",
+  "description": "An automatic on-load preloader that runs a slot-machine style number counter (a masked .count strip and its .count-wrapper are stepped across the screen with chained gsap.timeline power4.inOut tweens), then three stacked star/sparkle SVGs scale from 0 to 45 in sequence to wipe the loader away, and the hero brand word tilts in from a 60deg rotateY into place (power3.out) while the toggle button pops and the masked info lines slide up.",
+  "category": "preloader",
+  "tags": [
+    "preloader",
+    "landing-reveal",
+    "counter",
+    "gsap",
+    "clip-path",
+    "svg-scale",
+    "3d-rotate",
+    "editorial",
+    "luxury"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 11000,
+    "clip": {
+      "seconds": 10,
+      "settleMs": 500,
+      "actions": [
+        {
+          "type": "hold"
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "icon.svg",
+      "desc": "small black four-point sparkle/star glyph on transparent background",
+      "role": "icon centered inside the white circular toggle button, top-right of the hero",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "luxury",
+      "elegant",
+      "editorial"
+    ],
+    "useCase": [
+      "preloader",
+      "hero",
+      "text-reveal"
+    ],
+    "useWhen": "Úsalo como preloader de una landing de marca de lujo/moda: contador tipo slot-machine y revelado del titular con un giro 3D al terminar de cargar.",
+    "aliases": [
+      "preloader contador",
+      "loading counter reveal",
+      "slot machine loader",
+      "landing reveal",
+      "revelado de titular 3d",
+      "intro de marca"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 1,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "noir",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#18120b",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--noir"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ivory",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f1e8d8",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ivory"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "gold",
+      "label": "Acento",
+      "type": "color",
+      "default": "#e4a853",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--gold"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "steps",
+      "label": "Saltos de la cuenta",
+      "type": "range",
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "default": 6,
+      "apply": {
+        "kind": "js",
+        "path": "steps"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "wrapperWidth",
+      "label": "Ancho del carro de cifras",
+      "type": "range",
+      "min": 80,
+      "max": 320,
+      "step": 10,
+      "default": 180,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "wrapperWidth"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "revealScale",
+      "label": "Tamaño del círculo que revela",
+      "type": "range",
+      "min": 10,
+      "max": 90,
+      "step": 5,
+      "default": 45,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "revealScale"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "lineStagger",
+      "label": "Escalonado del texto",
+      "type": "range",
+      "min": 0,
+      "max": 0.4,
+      "step": 0.01,
+      "default": 0.1,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "lineStagger"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "savoirfaire-landing-page-reveal-animation",
+    "title": "SavoirFaire Landing Page Reveal Animation",
+    "category": "preloader",
+    "trigger": "load",
+    "libs": [
+      "gsap"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power4",
+    "duration_range": [
+      0.85,
+      2
+    ],
+    "stagger": 0.1,
+    "assets_required": {
+      "count": 1,
+      "bytes": 193,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "entry-veil",
+        "reason": "velo de entrada a pantalla completa en la carga"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "LOAD-ONESHOT",
+    "engine": "gsap",
+    "motion_signature": "time-based preloader counter, star wipes, 3D headline reveal",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "entry-veil"
+  },
+  "review": {
+    "status": "public"
+  }
+}

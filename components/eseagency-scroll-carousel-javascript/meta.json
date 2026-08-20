@@ -1,0 +1,227 @@
+{
+  "slug": "eseagency-scroll-carousel-javascript",
+  "sourceDir": "codegrid-eseagency-scroll-carousel-javascript",
+  "title": "ESEAgency Scroll-Powered Carousel",
+  "description": "A full-screen project carousel pinned by ScrollTrigger (scrub, Lenis-smoothed) where scroll progress drives slides in and out: each transition animates a clip-path polygon wipe plus opposing y-translations on the image and copy with power4.inOut, while a looping GSAP linear marquee scrolls the title and five progress bars fill via a --progress CSS variable.",
+  "category": "slider",
+  "tags": [
+    "scroll",
+    "carousel",
+    "slider",
+    "pin",
+    "scrub",
+    "clip-path",
+    "marquee",
+    "lenis",
+    "editorial"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "scrollTo": 0.25,
+    "waitMs": 2500
+  },
+  "images": [
+    {
+      "file": "slide-img-1.jpg",
+      "desc": "monochrome smoke curl on black, graded grayscale",
+      "role": "slide 1 image ('Atlas — Interactive Art Archive', the initial visible slide)",
+      "replaced": true
+    },
+    {
+      "file": "slide-img-2.jpg",
+      "desc": "elegant spiralling smoke on black, graded grayscale",
+      "role": "slide 2 image ('Solano — Avant-Garde Brand System')",
+      "replaced": true
+    },
+    {
+      "file": "slide-img-3.jpg",
+      "desc": "vertical rising smoke column on black, graded grayscale",
+      "role": "slide 3 image ('Lumen — Immersive Light Room')",
+      "replaced": true
+    },
+    {
+      "file": "slide-img-4.jpg",
+      "desc": "flowing corkscrew smoke on black, graded grayscale",
+      "role": "slide 4 image ('Halcyon — Virtual Reality Space')",
+      "replaced": true
+    },
+    {
+      "file": "slide-img-5.jpg",
+      "desc": "dramatic horizontal smoke burst on black, graded grayscale",
+      "role": "slide 5 image ('Ember — Global Launch Film')",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "editorial",
+      "elegant",
+      "cinematic"
+    ],
+    "useCase": [
+      "gallery",
+      "slider",
+      "scroll-story",
+      "product-showcase"
+    ],
+    "useWhen": "Úsalo para mostrar 5 proyectos a pantalla completa que se suceden con transiciones clip-path al hacer scroll, con marquee de título y barras de progreso.",
+    "aliases": [
+      "carrusel al scroll",
+      "scroll carousel",
+      "slider a pantalla completa",
+      "transicion clip-path",
+      "carrusel de proyectos",
+      "portfolio slider"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 5,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bg",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#f2f2f2",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bg"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Tinta",
+      "type": "color",
+      "default": "#16161a",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "eseagency-scroll-carousel-javascript",
+    "title": "ESEAgency Scroll-Powered Carousel",
+    "category": "slider",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 3,
+    "pinned": true,
+    "viewport_heights": 1500,
+    "needs_lenis": true,
+    "ease_family": "power4",
+    "duration_range": [
+      0.25,
+      10
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 5,
+      "bytes": 415408,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de eseagency-scroll-carousel-javascript"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de eseagency-scroll-carousel-javascript"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de eseagency-scroll-carousel-javascript"
+      }
+    ],
+    "cluster": "SCROLL-LAGGED",
+    "engine": "gsap",
+    "motion_signature": "pinned ~15-viewport scroll drives a quintile step-index; each step fires a fixed 1s power4.inOut clip-path wipe with counter-sliding image (±25%) and copy (±100%), plus a linear 10s infinite marquee — only the progress bars are truly scrub-linked, the wipes are discrete and direction-aware",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-lagged"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

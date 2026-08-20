@@ -1,0 +1,284 @@
+{
+  "slug": "threejs-video-gallery",
+  "sourceDir": "cg-threejs-video-gallery",
+  "title": "ThreeJS 3D Video Gallery",
+  "description": "A Three.js WebGL grid of video-textured planes curved into a parabolic wall, each plane mapped to a looping muted video texture. Mouse movement drives a per-frame requestAnimationFrame loop that applies parallax, oscillation and rotation to every plane, eases the camera lookAt target, and tilts the CSS-3D headline via a cubic-bezier transform.",
+  "category": "3d-webgl",
+  "tags": [
+    "three.js",
+    "webgl",
+    "video-texture",
+    "gallery",
+    "parallax",
+    "mouse-interaction",
+    "curved-grid",
+    "cinematic",
+    "experimental"
+  ],
+  "gsap": [],
+  "deps": [
+    "three",
+    "lil-gui"
+  ],
+  "preview": {
+    "waitMs": 3000,
+    "clip": {
+      "seconds": 7,
+      "settleMs": 3500,
+      "actions": [
+        {
+          "type": "cursor",
+          "path": "figure8"
+        }
+      ]
+    }
+  },
+  "images": [],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "cinematic",
+      "experimental",
+      "bold"
+    ],
+    "useCase": [
+      "hero",
+      "gallery",
+      "background",
+      "product-showcase"
+    ],
+    "useWhen": "Cuando quieres un hero inmersivo con una pared curva de videos en 3D que reacciona al movimiento del raton.",
+    "aliases": [
+      "video wall 3d",
+      "pared de videos",
+      "threejs video grid",
+      "muro de videos curvo",
+      "webgl video gallery",
+      "galeria 3d de video"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": true,
+    "needsCanvas": true,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 0,
+    "perfCost": "heavy",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": false,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#ffffff",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#121216",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "accent",
+      "label": "Acento",
+      "type": "color",
+      "default": "#e8381c",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--accent"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "muted",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#6d6d75",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--muted"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "spacing",
+      "label": "Separación entre vídeos",
+      "type": "range",
+      "min": 7,
+      "max": 11,
+      "step": 0.25,
+      "default": 10,
+      "apply": {
+        "kind": "js",
+        "path": "spacing"
+      }
+    },
+    {
+      "id": "imageWidth",
+      "label": "Ancho de cada vídeo",
+      "type": "range",
+      "min": 4.5,
+      "max": 10,
+      "step": 0.25,
+      "default": 7,
+      "apply": {
+        "kind": "js",
+        "path": "imageWidth"
+      }
+    },
+    {
+      "id": "imageHeight",
+      "label": "Alto de cada vídeo",
+      "type": "range",
+      "min": 3,
+      "max": 7,
+      "step": 0.25,
+      "default": 4.5,
+      "apply": {
+        "kind": "js",
+        "path": "imageHeight"
+      }
+    },
+    {
+      "id": "curvature",
+      "label": "Radio de la curva",
+      "type": "range",
+      "min": 4,
+      "max": 14,
+      "step": 0.25,
+      "default": 5,
+      "apply": {
+        "kind": "js",
+        "path": "curvature"
+      }
+    },
+    {
+      "id": "verticalCurvature",
+      "label": "Bombeo vertical",
+      "type": "range",
+      "min": 0,
+      "max": 2,
+      "step": 0.05,
+      "default": 0.5,
+      "apply": {
+        "kind": "js",
+        "path": "verticalCurvature"
+      }
+    },
+    {
+      "id": "lookAtRange",
+      "label": "Alcance del giro con el cursor",
+      "type": "range",
+      "min": 5,
+      "max": 25,
+      "step": 1,
+      "default": 20,
+      "apply": {
+        "kind": "js",
+        "path": "lookAtRange"
+      }
+    }
+  ],
+  "motion": {
+    "slug": "threejs-video-gallery",
+    "title": "ThreeJS 3D Video Gallery",
+    "category": "3d-webgl",
+    "trigger": "pointer",
+    "libs": [
+      "three"
+    ],
+    "complexity": 4,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": null,
+    "duration_range": [
+      0.25,
+      1.8
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 10,
+      "bytes": 10852163,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "html/body overflow:hidden"
+    ],
+    "capabilities": [
+      {
+        "capability": "page-scroll-lock",
+        "reason": "fija overflow:hidden en html/body"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "POINTER-CHASE",
+    "engine": "webgl-raf",
+    "motion_signature": "mouse-lerped (0.05) camera lookAt across a parabolic WebGL video wall; each of the 49 planes adds randomized parallax and a sin(time+phase)*mouseDistance*0.1 oscillation, while the CSS-3D headline tilts on a 0.5s easeOutCubic transition",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  },
+  "review": {
+    "status": "public",
+    "comment": "Hay que optimizar este componente porque tarda en cargar y satura la memoria. Si se puede optimizar enronces graba un video moviendo el curosor para ver el efecto cuando termine de cargar"
+  }
+}

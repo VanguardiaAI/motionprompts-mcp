@@ -1,0 +1,192 @@
+{
+  "slug": "werowallet-scroll-animation",
+  "sourceDir": "codegrid-werowallet-scroll-animation",
+  "title": "WeroWallet Spotlight Stroke Draw",
+  "description": "Pinned spotlight section where 13 thick diagonal SVG strokes draw in with a staggered stroke-dashoffset scrub until they cover the screen, swapping the headline and popping three sparkles before un-drawing in reverse. Driven by scroll (ScrollTrigger pin + scrub with Lenis smooth scrolling).",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "pin",
+    "scrub",
+    "svg",
+    "stroke-draw",
+    "dashoffset",
+    "lenis",
+    "sparkles"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 2000,
+    "scrollTo": 0.56
+  },
+  "images": [],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "playful",
+      "bold"
+    ],
+    "useCase": [
+      "scroll-story",
+      "text-reveal"
+    ],
+    "useWhen": "Úsalo cuando quieras un momento destacado a mitad de página que se pinta con trazos diagonales al scrollear, cubre la pantalla y cambia el titular.",
+    "aliases": [
+      "trazos que se dibujan",
+      "stroke draw scroll",
+      "sección fijada",
+      "spotlight scroll",
+      "líneas diagonales animadas",
+      "pinned reveal"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 0,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "gold",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#ffc04a",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--gold"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#1b1020",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "werowallet-scroll-animation",
+    "title": "WeroWallet Spotlight Stroke Draw",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 3,
+    "pinned": true,
+    "viewport_heights": 400,
+    "needs_lenis": true,
+    "ease_family": "power2",
+    "duration_range": [
+      0.5,
+      1.49
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 0,
+      "bytes": 0,
+      "root_absolute_paths": false
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de werowallet-scroll-animation"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de werowallet-scroll-animation"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de werowallet-scroll-animation"
+      }
+    ],
+    "cluster": "SCROLL-LAGGED",
+    "engine": "gsap",
+    "motion_signature": "scrubbed pinned staggered SVG stroke draw",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-lagged"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

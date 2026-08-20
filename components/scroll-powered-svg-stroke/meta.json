@@ -1,0 +1,227 @@
+{
+  "slug": "scroll-powered-svg-stroke",
+  "sourceDir": "codegrid-scroll-powered-svg-stroke-nextjs",
+  "title": "Scroll-Powered SVG Stroke Draw",
+  "description": "A thick serpentine orange SVG stroke draws itself behind the page content as you scroll, using the classic strokeDasharray/strokeDashoffset technique: the path length is measured on load and a scrubbed ScrollTrigger (ease none) animates the dashoffset to 0 across the spotlight section, with Lenis smooth scrolling.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "svg",
+    "stroke",
+    "draw",
+    "line",
+    "scrolltrigger",
+    "scrub",
+    "lenis"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 1200,
+    "scrollTo": 0.5
+  },
+  "images": [
+    {
+      "file": "img_1.svg",
+      "desc": "ink line-art with orange thread: scattered notification dots on the left converge along a single orange line into a neat stack of grouped cards on the right",
+      "role": "spotlight full-width illustration (row 1)",
+      "replaced": true
+    },
+    {
+      "file": "img_2.svg",
+      "desc": "ink line-art with orange thread: two loose chat bubbles collapse down orange threads into one grouped notification panel with an orange count badge",
+      "role": "spotlight side illustration (row 2)",
+      "replaced": true
+    },
+    {
+      "file": "img_3.svg",
+      "desc": "ink line-art with orange thread: a prioritized list of sorted bars with the top item highlighted orange, incoming dots feeding into it",
+      "role": "spotlight side illustration (row 3)",
+      "replaced": true
+    },
+    {
+      "file": "img_4.svg",
+      "desc": "ink line-art with orange thread: a single continuous orange line weaving through five connected ink nodes, echoing the scroll-drawn stroke",
+      "role": "spotlight full-width illustration (row 4)",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "bold",
+      "editorial",
+      "organic"
+    ],
+    "useCase": [
+      "scroll-story",
+      "background",
+      "image-reveal"
+    ],
+    "useWhen": "Úsalo cuando quieras un trazo SVG decorativo que se dibuja solo detrás del contenido a medida que el usuario hace scroll por una sección.",
+    "aliases": [
+      "trazo SVG que se dibuja",
+      "self-drawing line",
+      "línea que se dibuja al scroll",
+      "svg stroke draw",
+      "stroke dashoffset scroll",
+      "dibujo de línea con scroll"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 4,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#f4f4f0",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink-soft",
+      "label": "Texto",
+      "type": "color",
+      "default": "#5f6368",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink-soft"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "panel",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#e7e7e2",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--panel"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "scroll-powered-svg-stroke",
+    "title": "Scroll-Powered SVG Stroke Draw",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": true,
+    "ease_family": "none",
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 4,
+      "bytes": 4911,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de scroll-powered-svg-stroke"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de scroll-powered-svg-stroke"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de scroll-powered-svg-stroke"
+      }
+    ],
+    "cluster": "SCROLL-WELDED",
+    "engine": "gsap",
+    "motion_signature": "scrubbed SVG stroke-dashoffset draw on scroll",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-welded"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

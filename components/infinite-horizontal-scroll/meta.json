@@ -1,0 +1,253 @@
+{
+  "slug": "infinite-horizontal-scroll",
+  "sourceDir": "infinite-horizontal-scroll-codegrid",
+  "title": "Infinite Horizontal Scroll",
+  "description": "A seamless looping horizontal scroll gallery driven by raw wheel and touch input. Vertical wheel/touch deltas are mapped to horizontal movement with a lerp-smoothed translateX, cloned section buffers on both sides create an endless loop, and a synced progress bar and percentage counter track position.",
+  "category": "scroll",
+  "tags": [
+    "infinite-scroll",
+    "horizontal-scroll",
+    "marquee",
+    "loop",
+    "lerp",
+    "vanilla-js",
+    "requestanimationframe",
+    "editorial",
+    "bold"
+  ],
+  "gsap": [],
+  "deps": [],
+  "preview": {
+    "waitMs": 2500,
+    "scrollTo": 0.5,
+    "afterScrollMs": 700,
+    "clip": {
+      "seconds": 9,
+      "actions": [
+        {
+          "type": "scroll",
+          "to": 0.9,
+          "mode": "pingpong"
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "Track cyclist from above on the pine boards of an indoor velodrome (Unsplash).",
+      "role": "hero-img section (full-viewport image panel)",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "Black-and-white photo of two riders side by side on an outdoor velodrome banking (Pexels).",
+      "role": "about section (inline image next to text columns)",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "Team pursuit squad in blue kit, panned motion blur on the velodrome straight (Pexels).",
+      "role": "banner-img section (full-viewport image panel)",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "Night cyclist with smeared light trails, slow-shutter motion blur (Pexels).",
+      "role": "concept-img section (full-viewport image panel)",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "editorial",
+      "bold",
+      "experimental"
+    ],
+    "useCase": [
+      "gallery",
+      "scroll-story",
+      "marquee"
+    ],
+    "useWhen": "Úsalo cuando quieras una galería horizontal que hace loop infinito y convierte el scroll vertical en desplazamiento lateral suave, con barra de progreso.",
+    "aliases": [
+      "scroll horizontal infinito",
+      "infinite horizontal scroll",
+      "galeria horizontal",
+      "loop horizontal",
+      "horizontal marquee",
+      "scroll lateral"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 4,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#101114",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "chalk",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f4f2ec",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--chalk"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "smoothFactor",
+      "label": "Suavizado del avance",
+      "type": "range",
+      "min": 0.02,
+      "max": 0.25,
+      "step": 0.005,
+      "default": 0.05,
+      "apply": {
+        "kind": "js",
+        "path": "smoothFactor"
+      }
+    },
+    {
+      "id": "wheelSensitivity",
+      "label": "Empuje de la rueda",
+      "type": "range",
+      "min": 0.25,
+      "max": 3,
+      "step": 0.05,
+      "default": 1,
+      "apply": {
+        "kind": "js",
+        "path": "wheelSensitivity"
+      }
+    },
+    {
+      "id": "touchSensitivity",
+      "label": "Sensibilidad del arrastre táctil",
+      "type": "range",
+      "min": 0.5,
+      "max": 5,
+      "step": 0.1,
+      "default": 2.5,
+      "apply": {
+        "kind": "js",
+        "path": "touchSensitivity"
+      }
+    },
+    {
+      "id": "touchFriction",
+      "label": "Inercia al soltar el dedo",
+      "type": "range",
+      "min": 0.8,
+      "max": 0.98,
+      "step": 0.005,
+      "default": 0.95,
+      "apply": {
+        "kind": "js",
+        "path": "touchFriction"
+      }
+    }
+  ],
+  "motion": {
+    "slug": "infinite-horizontal-scroll",
+    "title": "Infinite Horizontal Scroll",
+    "category": "scroll",
+    "trigger": "wheel",
+    "libs": [],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": null,
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 4,
+      "bytes": 1429657,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "preventDefault en wheel"
+    ],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "captura la rueda con preventDefault"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "CAPTURED-VIRTUAL-SCROLL",
+    "engine": "raf-lerp",
+    "motion_signature": "wheel/touch delta accumulated into targetScrollX, exponentially smoothed onto the track with lerp factor 0.05 (~critically damped, no overshoot), wrapped seamlessly at ±0.5 sequence widths against 2 cloned buffers per side; touch flicks add a *20 impulse decaying at 0.95/frame; the progress bar follows the same 0.05 lerp except on wrap frames, where it snaps",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  },
+  "review": {
+    "status": "public"
+  }
+}

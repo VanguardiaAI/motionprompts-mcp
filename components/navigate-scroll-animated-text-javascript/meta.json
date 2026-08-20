@@ -1,0 +1,216 @@
+{
+  "slug": "navigate-scroll-animated-text-javascript",
+  "sourceDir": "cg-navigate-scroll-animated-text-javascript",
+  "title": "Scroll Animated Text Reveal",
+  "description": "A scroll-driven, word-by-word text reveal where Lenis smooth scroll feeds GSAP ScrollTrigger, which pins each text section over four viewport heights and, via manual per-word progress math in onUpdate, fades words in behind a grey highlight pill that then dissolves to expose the letters; select keywords reveal inside colored rounded pills, and past 70% progress the sequence re-highlights the words in reverse.",
+  "category": "text",
+  "tags": [
+    "scroll",
+    "scrub",
+    "pinning",
+    "text-reveal",
+    "word-by-word",
+    "highlight",
+    "lenis",
+    "editorial",
+    "bold"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "scrollTo": 0.6,
+    "afterScrollMs": 700,
+    "clip": {
+      "seconds": 9
+    }
+  },
+  "images": [],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "bold",
+      "editorial",
+      "minimal"
+    ],
+    "useCase": [
+      "text-reveal",
+      "scroll-story"
+    ],
+    "useWhen": "Úsalo cuando quieras revelar un párrafo palabra por palabra con píldoras de resaltado al hacer scroll, fijando la sección con scroll suave.",
+    "aliases": [
+      "texto animado scroll",
+      "animated text scroll",
+      "revelar texto",
+      "word reveal",
+      "highlight text scroll",
+      "texto palabra por palabra"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 0,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": false,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "violet",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#7268f6",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--violet"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f3f0e8",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "coral",
+      "label": "Acento",
+      "type": "color",
+      "default": "#ff6a4d",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--coral"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mint",
+      "label": "Acento 2",
+      "type": "color",
+      "default": "#37d3ae",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--mint"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "navigate-scroll-animated-text-javascript",
+    "title": "Scroll Animated Text Reveal",
+    "category": "text",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 3,
+    "pinned": true,
+    "viewport_heights": 800,
+    "needs_lenis": true,
+    "ease_family": null,
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 0,
+      "bytes": 0,
+      "root_absolute_paths": false
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de navigate-scroll-animated-text-javascript"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de navigate-scroll-animated-text-javascript"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de navigate-scroll-animated-text-javascript"
+      }
+    ],
+    "cluster": "SCROLL-WELDED",
+    "engine": "gsap+raf",
+    "motion_signature": "pinned scroll-progress word-by-word highlight reveal",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-welded"
+  },
+  "review": {
+    "status": "public"
+  }
+}

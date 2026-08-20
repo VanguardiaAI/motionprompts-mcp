@@ -1,0 +1,316 @@
+{
+  "slug": "interactive-team-section-javascript",
+  "sourceDir": "codegrid-interactive-team-section-javascript",
+  "title": "Interactive Team Section",
+  "description": "A row of small monochrome team thumbnails sits above a giant clip-masked headline. Hovering a thumbnail scales it up (power4.out) while GSAP slides that member's name into view, animating the SplitText characters vertically with a center-out stagger; hovering the whole row reveals the default 'Nine of us' title.",
+  "category": "hover",
+  "tags": [
+    "hover",
+    "team",
+    "split-text",
+    "stagger",
+    "clip-path",
+    "gsap",
+    "reveal",
+    "editorial",
+    "typography"
+  ],
+  "gsap": [
+    "SplitText"
+  ],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "clip": {
+      "seconds": 8,
+      "settleMs": 2500,
+      "actions": [
+        {
+          "type": "click",
+          "selector": ".profile-images .img:nth-child(1)",
+          "at": 0.3
+        },
+        {
+          "type": "click",
+          "selector": ".profile-images .img:nth-child(2)",
+          "at": 0.62
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpeg",
+      "desc": "Black-and-white profile portrait of a man in a dark turtleneck looking off-frame, soft window light",
+      "role": "Team thumbnail 1 in the .profile-images row (Anders)",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpeg",
+      "desc": "Black-and-white portrait of a woman with a platinum bob and blunt bangs against a dark studio backdrop",
+      "role": "Team thumbnail 2 in the .profile-images row (Wren)",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpeg",
+      "desc": "Black-and-white candid of a woman laughing with eyes closed, bright overexposed beach background",
+      "role": "Team thumbnail 3 in the .profile-images row (Sofie)",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpeg",
+      "desc": "Illustrator in a sage-green shirt sketching at a plant-filled desk, warm daylight studio (rendered grayscale in UI)",
+      "role": "Team thumbnail 4 in the .profile-images row (Julius)",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpeg",
+      "desc": "Photographer holding a camera beside a softbox in a concrete studio (rendered grayscale in UI)",
+      "role": "Team thumbnail 5 in the .profile-images row (Casper)",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpeg",
+      "desc": "Black-and-white portrait of a laughing woman in round glasses and a satin shirt on a black backdrop",
+      "role": "Team thumbnail 6 in the .profile-images row (Ada)",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpeg",
+      "desc": "Architect in glasses and a denim shirt reviewing drawings at a desk with paper rolls (rendered grayscale in UI)",
+      "role": "Team thumbnail 7 in the .profile-images row (Viktor)",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpeg",
+      "desc": "Black-and-white over-the-shoulder portrait of a man with curly hair and beard looking at the camera",
+      "role": "Team thumbnail 8 in the .profile-images row (Elias)",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpeg",
+      "desc": "Black-and-white close portrait of a smiling woman with an afro, hands folded under her chin",
+      "role": "Team thumbnail 9 in the .profile-images row (Noor)",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "editorial",
+      "minimal",
+      "bold"
+    ],
+    "useCase": [
+      "team-section",
+      "hover-interaction",
+      "text-reveal"
+    ],
+    "useWhen": "Cuando quieras presentar un equipo con miniaturas que al pasar el cursor amplían la foto y revelan el nombre en tipografía gigante con stagger.",
+    "aliases": [
+      "team section",
+      "seccion de equipo",
+      "hover names",
+      "nombres al hover",
+      "meet the team",
+      "split text hover"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "SplitText"
+    ],
+    "assetCount": 9,
+    "perfCost": "light",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bg",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#111110",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bg"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#ece9e0",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "muted",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#85817a",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--muted"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "hoverSize",
+      "label": "Tamaño al señalar",
+      "type": "range",
+      "min": 80,
+      "max": 260,
+      "step": 5,
+      "default": 140,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "hoverSize"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "baseSize",
+      "label": "Tamaño en reposo",
+      "type": "range",
+      "min": 40,
+      "max": 140,
+      "step": 5,
+      "default": 70,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "baseSize"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "letterStagger",
+      "label": "Escalonado de las letras",
+      "type": "range",
+      "min": 0,
+      "max": 0.15,
+      "step": 0.005,
+      "default": 0.025,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "letterStagger"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "letterDuration",
+      "label": "Entrada del nombre",
+      "type": "range",
+      "min": 0.2,
+      "max": 2,
+      "step": 0.05,
+      "default": 0.75,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "letterDuration"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "interactive-team-section-javascript",
+    "title": "Interactive Team Section",
+    "category": "hover",
+    "trigger": "hover",
+    "libs": [
+      "gsap",
+      "SplitText"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power4",
+    "duration_range": [
+      0.25,
+      0.75
+    ],
+    "stagger": 0.02,
+    "assets_required": {
+      "count": 9,
+      "bytes": 927019,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "width-branch",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "POINTER-LATCHED",
+    "engine": "gsap",
+    "motion_signature": "hover a portrait: the 70px tile grows to 140px (0.5s power4.out) while that person's giant name slides up behind an overflow mask, letters staggered 0.025s from the center out (0.75s power4.out); leaving the strip slides the default title back down",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "pointer-latch"
+  },
+  "review": {
+    "status": "public",
+    "comment": "El componente no funciona en Mobile y en desktop hay que ocultar el texto bien por qué no se está ocultando correctamente. Para grabar el vídeo debe ser más largo de la media y hacer clic en las imágenes para ver el efecto."
+  }
+}

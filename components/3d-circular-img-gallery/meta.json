@@ -1,0 +1,278 @@
+{
+  "slug": "3d-circular-img-gallery",
+  "sourceDir": "cg-3d-circular-img-gallery",
+  "title": "3D Circular Image Gallery",
+  "description": "32 full-colour film-still tiles (18 on phones) are placed around a circle with CSS 3D transforms to form a tilted ring seen in perspective. On load the tiles are dealt out from a single stacked point to their places around the ring with a staggered GSAP tween. GSAP ScrollTrigger (scrub) spins the ring on scroll and a pointer drag spins it directly with inertia; a mousemove listener parallax-tilts the gallery toward the cursor, and hovering a tile pushes it outward and swaps the large centred preview still, which is mounted with no border or outline of any kind.",
+  "category": "gallery",
+  "tags": [
+    "3d",
+    "css-3d",
+    "gallery",
+    "scroll",
+    "scrolltrigger",
+    "rotation",
+    "hover",
+    "parallax",
+    "circular"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "scrollTo": 0.12,
+    "afterScrollMs": 900,
+    "clip": {
+      "seconds": 11,
+      "settleMs": 350,
+      "actions": [
+        {
+          "type": "drag",
+          "start": 0.18,
+          "end": 0.55,
+          "ax": 0.3,
+          "ay": 0.1
+        },
+        {
+          "type": "scroll",
+          "to": 0.55,
+          "mode": "pingpong",
+          "start": 0.58,
+          "end": 1
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "Figure in a white ruff collar blindfolded with a red ribbon among ivy-covered stone arches",
+      "role": "Gallery tile in the rotating 3D ring; also the default centered preview image",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "Silhouetted man beside a projector in a dark room flooded with red light and haze",
+      "role": "Gallery tile in the rotating 3D ring",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "Rows of empty dark-red cinema seats in a dim theater",
+      "role": "Gallery tile in the rotating 3D ring",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "Pale ethereal woman with white-blonde hair among white roses in a hazy garden",
+      "role": "Gallery tile in the rotating 3D ring",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "Warm tungsten bedside lamp and clock radio in a dim motel room",
+      "role": "Gallery tile in the rotating 3D ring",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "Man writing at a desk under a warm lamp in a wood-paneled night interior",
+      "role": "Gallery tile in the rotating 3D ring",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "Glowing Cone Motel neon sign with a Vacancy notice against a night sky",
+      "role": "Gallery tile in the rotating 3D ring",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "Vintage 35mm film projector mounted on a stone wall",
+      "role": "Gallery tile in the rotating 3D ring",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpg",
+      "desc": "Blonde woman in a red t-shirt seated in a dim wood-paneled bar",
+      "role": "Gallery tile in the rotating 3D ring",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpg",
+      "desc": "Oak Park Motel neon sign glowing over a street at night, lone figure below",
+      "role": "Gallery tile in the rotating 3D ring",
+      "replaced": true
+    },
+    {
+      "file": "img11.jpg",
+      "desc": "Bedside lamp and unmade bed with a yellow blanket in a warm motel room",
+      "role": "Gallery tile in the rotating 3D ring",
+      "replaced": true
+    },
+    {
+      "file": "img12.jpg",
+      "desc": "Red lens flare streaking across a silhouetted profile in darkness",
+      "role": "Gallery tile in the rotating 3D ring",
+      "replaced": true
+    },
+    {
+      "file": "img13.jpg",
+      "desc": "Rows of empty red theater seats under warm balcony lighting",
+      "role": "Gallery tile in the rotating 3D ring",
+      "replaced": true
+    },
+    {
+      "file": "img14.jpg",
+      "desc": "Black open-hand silhouette against a saturated red background",
+      "role": "Gallery tile in the rotating 3D ring",
+      "replaced": true
+    },
+    {
+      "file": "img15.jpg",
+      "desc": "Strip of 35mm negatives hanging to dry in a darkroom under a deep red safelight",
+      "role": "Gallery tile in the rotating 3D ring",
+      "replaced": true,
+      "reused_from": "image-explosion-scroll-animation/outro.jpg"
+    }
+  ],
+  "updated": "2026-08-16",
+  "intent": {
+    "mood": [
+      "experimental",
+      "cinematic",
+      "minimal"
+    ],
+    "useCase": [
+      "gallery",
+      "scroll-story",
+      "hero"
+    ],
+    "useWhen": "Úsalo como galería inmersiva donde una treintena de miniaturas en color forman un anillo 3D que se reparte al cargar, gira con el scroll o arrastrándolo con el dedo o el ratón, se inclina con el cursor y muestra una previsualización al hacer hover.",
+    "aliases": [
+      "galería 3d circular",
+      "3d circular gallery",
+      "anillo de imágenes",
+      "circular image ring",
+      "galería giratoria",
+      "scroll 3d gallery",
+      "anillo arrastrable",
+      "draggable image ring"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 15,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "3d-circular-img-gallery",
+    "title": "3D Circular Image Gallery",
+    "category": "gallery",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": 1000,
+    "needs_lenis": false,
+    "ease_family": "power2",
+    "duration_range": [
+      0.25,
+      1
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 15,
+      "bytes": 2324184,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "width-branch",
+      "media_queries": 1,
+      "reduced_motion": true
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "html/body height fija en vh",
+      "asigna window.onload"
+    ],
+    "capabilities": [
+      {
+        "capability": "document-height",
+        "reason": "fija la altura del documento en 1000vh"
+      },
+      {
+        "capability": "window-onload",
+        "reason": "asigna window.onload (no addEventListener)"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de 3d-circular-img-gallery"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de 3d-circular-img-gallery"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de 3d-circular-img-gallery"
+      }
+    ],
+    "cluster": "SCROLL-LAGGED",
+    "engine": "gsap",
+    "motion_signature": "scroll-scrubbed tilted 3D CSS ring, cursor parallax",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-lagged"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

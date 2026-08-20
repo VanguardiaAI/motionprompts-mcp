@@ -1,0 +1,266 @@
+{
+  "slug": "nextjs-view-transitions",
+  "sourceDir": "nextjs-view-transitions",
+  "title": "Next.js View Transitions",
+  "description": "A multi-page portfolio where clicking a nav link fires a full-page transition built on the native View Transitions API: the outgoing page slides up and fades to 20% opacity while the incoming page is revealed from the bottom via an animated clip-path, both over 1.5s with a cubic-bezier(0.87,0,0.13,1) ease. Each destination also runs its own GSAP intro on mount, the home headline reveals character-by-character and the info paragraph reveals line-by-line (SplitType, power4.out y-translate).",
+  "category": "transition",
+  "tags": [
+    "page-transition",
+    "view-transitions",
+    "clip-path",
+    "split-type",
+    "char-reveal",
+    "lenis",
+    "editorial",
+    "minimal"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap",
+    "split-type",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "click": "a[data-route=\"/projects\"]",
+    "afterClickMs": 700,
+    "clip": {
+      "seconds": 9,
+      "actions": [
+        {
+          "type": "click",
+          "selector": "a[data-route=\"/projects\"]",
+          "at": 0.25
+        },
+        {
+          "type": "click",
+          "selector": "a[data-route=\"/info\"]",
+          "at": 0.6
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpeg",
+      "desc": "warm-lit beauty portrait of a woman resting her face against her shoulder, glowing skin on a soft beige backdrop",
+      "role": "Projects page, first stacked image (Halo)",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpeg",
+      "desc": "editorial fashion portrait, model in cobalt blue coat against warm orange seamless, sharp studio light",
+      "role": "Projects page, second stacked image",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    },
+    {
+      "file": "img3.jpeg",
+      "desc": "editorial profile portrait, dramatic colored gel lighting teal and red, portrait",
+      "role": "Projects page, third stacked image",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    },
+    {
+      "file": "img4.jpeg",
+      "desc": "fashion editorial, model with flowing fabric in motion, dark studio",
+      "role": "Projects page, fourth stacked image",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    },
+    {
+      "file": "portrait.jpeg",
+      "desc": "cinematic portrait, low-key lighting, subject looking away",
+      "role": "Info page portrait in the left column",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "minimal",
+      "editorial",
+      "elegant"
+    ],
+    "useCase": [
+      "page-transition",
+      "navigation",
+      "text-reveal"
+    ],
+    "useWhen": "Úsalo para transiciones entre páginas de un portfolio: la saliente sube y se desvanece mientras la nueva se revela con clip-path desde abajo.",
+    "aliases": [
+      "transición de páginas",
+      "view transitions",
+      "page transition",
+      "transición nextjs",
+      "clip path reveal",
+      "portfolio transition"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 5,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#17130f",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Texto",
+      "type": "color",
+      "default": "#efe7dd",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "accent",
+      "label": "Acento",
+      "type": "color",
+      "default": "#b15a72",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--accent"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink-deep",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#0c0a08",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink-deep"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "nextjs-view-transitions",
+    "title": "Next.js View Transitions",
+    "category": "transition",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "SplitType",
+      "lenis"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": true,
+    "ease_family": "power4",
+    "duration_range": [
+      0.3,
+      2
+    ],
+    "stagger": 0.075,
+    "assets_required": {
+      "count": 5,
+      "bytes": 725788,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de nextjs-view-transitions"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de nextjs-view-transitions"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de nextjs-view-transitions"
+      }
+    ],
+    "cluster": "CLICK-CURTAIN",
+    "engine": "mixed",
+    "motion_signature": "Whole-document View Transition: the outgoing root fades 1->0.2 while translating Y 0->-35% as the incoming root is wiped in by a bottom-to-top clip-path polygon, both 1500ms on cubic-bezier(0.87,0,0.13,1); per-route SplitType intros slide chars/lines y:400->0 on power4.out with a 0.075 stagger",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "curtain-toggle"
+  },
+  "review": {
+    "status": "public"
+  }
+}

@@ -1,0 +1,283 @@
+{
+  "slug": "jamarea-menu",
+  "sourceDir": "cg-jamarea-menu",
+  "title": "Jam Area Overlay Menu",
+  "description": "Full-screen overlay menu that wipes open with a clip-path reveal when the Menu toggle is clicked, staggering in oversized SplitText links with per-character hover swaps. A lerped accent highlighter bar tracks the hovered link while the whole link strip pans with the mouse.",
+  "category": "menu",
+  "tags": [
+    "overlay",
+    "menu",
+    "lenis",
+    "hover",
+    "clip-path",
+    "split-text"
+  ],
+  "gsap": [
+    "ScrollTrigger",
+    "SplitText"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "click": ".nav-toggle",
+    "waitMs": 2500
+  },
+  "images": [
+    {
+      "file": "menu_img.jpg",
+      "desc": "high-contrast black-and-white editorial portrait of a young man, cropped close",
+      "role": "small centered menu image",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "editorial",
+      "bold"
+    ],
+    "useCase": [
+      "navigation",
+      "text-reveal"
+    ],
+    "useWhen": "Úsalo cuando quieras un menú overlay a pantalla completa que se abre con clip-path y despliega enlaces gigantes tipo editorial con hover.",
+    "aliases": [
+      "menú overlay",
+      "overlay menu",
+      "menú a pantalla completa",
+      "fullscreen menu",
+      "menú de navegación",
+      "nav overlay"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger",
+      "SplitText"
+    ],
+    "assetCount": 1,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "dark",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#141310",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--dark"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "light",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f4f2e9",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--light"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "wrapperLerp",
+      "label": "Suavizado de la fila de enlaces",
+      "type": "range",
+      "min": 0.01,
+      "max": 0.2,
+      "step": 0.005,
+      "default": 0.05,
+      "apply": {
+        "kind": "js",
+        "path": "wrapperLerp"
+      }
+    },
+    {
+      "id": "highlighterLerp",
+      "label": "Suavizado del subrayado",
+      "type": "range",
+      "min": 0.01,
+      "max": 0.25,
+      "step": 0.005,
+      "default": 0.05,
+      "apply": {
+        "kind": "js",
+        "path": "highlighterLerp"
+      }
+    },
+    {
+      "id": "pointerRange",
+      "label": "Franja del ratón que mueve el menú",
+      "type": "range",
+      "min": 0.15,
+      "max": 1,
+      "step": 0.05,
+      "default": 0.5,
+      "apply": {
+        "kind": "js",
+        "path": "pointerRange"
+      }
+    },
+    {
+      "id": "travel",
+      "label": "Recorrido de los enlaces",
+      "type": "range",
+      "min": 0.3,
+      "max": 1.2,
+      "step": 0.05,
+      "default": 1,
+      "apply": {
+        "kind": "js",
+        "path": "travel"
+      }
+    },
+    {
+      "id": "linkStagger",
+      "label": "Escalonado de los enlaces al abrir",
+      "type": "range",
+      "min": 0,
+      "max": 0.35,
+      "step": 0.01,
+      "default": 0.1,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "linkStagger"
+      }
+    },
+    {
+      "id": "charStagger",
+      "label": "Escalonado de las letras al pasar",
+      "type": "range",
+      "min": 0,
+      "max": 0.12,
+      "step": 0.005,
+      "default": 0.03,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "charStagger"
+      }
+    }
+  ],
+  "motion": {
+    "slug": "jamarea-menu",
+    "title": "Jam Area Overlay Menu",
+    "category": "menu",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "SplitText",
+      "lenis"
+    ],
+    "complexity": 3,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": true,
+    "ease_family": "expo",
+    "duration_range": [
+      0.3,
+      1.5
+    ],
+    "stagger": 0.03,
+    "assets_required": {
+      "count": 1,
+      "bytes": 164608,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "disabled-below-breakpoint",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de jamarea-menu"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de jamarea-menu"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de jamarea-menu"
+      }
+    ],
+    "cluster": "CLICK-CURTAIN",
+    "engine": "gsap+raf",
+    "motion_signature": "clip-path overlay wipe with lerped highlighter bar",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "curtain-toggle"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

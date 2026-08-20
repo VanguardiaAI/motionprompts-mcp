@@ -1,0 +1,402 @@
+{
+  "slug": "filters-fielddaysound",
+  "sourceDir": "cg-filters-fielddaysound",
+  "title": "Field Day Sound — Filter Gallery",
+  "description": "A two-column masonry work archive for an independent audio studio, paired with oversized discipline filters; clicking a filter splits its heading into per-character spans and tweens each span's font-size with a staggered power2.out ease while gsap fades the item grid out and back in to swap the filtered items. The giant active word multiplies over the photo grid like an ink stamp.",
+  "category": "gallery",
+  "tags": [
+    "filter",
+    "gallery",
+    "grid",
+    "click",
+    "stagger",
+    "font-size",
+    "typography",
+    "editorial",
+    "gsap"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "click": ".filter[data-filter=\"design\"]",
+    "afterClickMs": 1500,
+    "waitMs": 2500
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "Brutalist concrete building against trees and sky",
+      "role": "gallery card image, titled \"Glass hours\" (Rework for Ottla · 2025; mix filter)",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "Blue neon-lit silhouette profile in the dark",
+      "role": "gallery card image, titled \"Afterimage\" (Short film · 2024; design filter)",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "Terracotta arches against a clear blue sky",
+      "role": "gallery card image, titled \"Hinterland\" (Original score · 2025; music filter)",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "Face in deep shadow with a sliver of warm light",
+      "role": "gallery card image, titled \"Low light\" (Club edit · 2024; mix filter)",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "Sunbeams through a green forest canopy",
+      "role": "gallery card image, titled \"The clearing\" (Feature film · 2025; design filter)",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "analog synthesizer knobs close-up, moody studio light",
+      "role": "gallery card image, titled \"Blush\" (Extended mix · 2023; mix filter)",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "Backlit silhouette of a man against studio light",
+      "role": "gallery card image, titled \"Second self\" (Brand film · 2024; design filter)",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "reel-to-reel tape machine detail, warm tungsten light",
+      "role": "gallery card image, titled \"Dry flowers\" (EP · 2023; music filter)",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    },
+    {
+      "file": "img9.jpg",
+      "desc": "Hooded face in darkness lit by a diagonal slash of light",
+      "role": "gallery card image, titled \"Matinee\" (Rework · 2024; mix filter)",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpg",
+      "desc": "Black-and-white close-up of a woman's face with windblown hair",
+      "role": "gallery card image, titled \"Iris\" (Original score · 2025; music filter)",
+      "replaced": true
+    },
+    {
+      "file": "img11.jpg",
+      "desc": "Teal ocean waves seen from above",
+      "role": "gallery card image, titled \"Open water\" (Documentary · 2024; design filter)",
+      "replaced": true
+    },
+    {
+      "file": "img12.jpg",
+      "desc": "studio microphone in acoustic booth, shallow depth of field",
+      "role": "gallery card image, titled \"Compact\" (Dub version · 2023; mix filter)",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    },
+    {
+      "file": "img13.jpg",
+      "desc": "Vast pale salt flat under moody clouded sky",
+      "role": "gallery card image, titled \"Extra salt\" (Album · 2024; music filter)",
+      "replaced": true
+    },
+    {
+      "file": "img14.jpg",
+      "desc": "Golden desert dunes at sunset",
+      "role": "gallery card image, titled \"Duneshifter\" (Rework · 2025; mix filter)",
+      "replaced": true
+    },
+    {
+      "file": "img15.jpg",
+      "desc": "Black-and-white portrait of a man in a dark turtleneck",
+      "role": "gallery card image, titled \"Knitwear\" (Fashion film · 2024; design filter)",
+      "replaced": true
+    },
+    {
+      "file": "img16.jpg",
+      "desc": "Smooth white ovoid form in soft light",
+      "role": "gallery card image, titled \"Curvature\" (Edit · 2023; mix filter)",
+      "replaced": true
+    },
+    {
+      "file": "img17.jpg",
+      "desc": "Brushed aluminum tin on a pale background",
+      "role": "gallery card image, titled \"Brushed metal\" (Extended mix · 2024; mix filter)",
+      "replaced": true
+    },
+    {
+      "file": "img18.jpg",
+      "desc": "Suede western boot mid-step on white",
+      "role": "gallery card image, titled \"Suede\" (Single · 2025; music filter)",
+      "replaced": true
+    },
+    {
+      "file": "img19.jpg",
+      "desc": "Sepia close-up of an eye with winged eyeliner",
+      "role": "gallery card image, titled \"Lash\" (Beauty spot · 2023; design filter)",
+      "replaced": true
+    },
+    {
+      "file": "img20.jpg",
+      "desc": "Black-and-white extreme close-up of an eye",
+      "role": "gallery card image, titled \"Close up\" (Rework · 2024; mix filter)",
+      "replaced": true
+    },
+    {
+      "file": "img21.jpg",
+      "desc": "Black-and-white candid of a woman laughing",
+      "role": "gallery card image, titled \"Candid\" (Campaign film · 2025; design filter)",
+      "replaced": true
+    },
+    {
+      "file": "img22.jpg",
+      "desc": "Person writing at a plant-filled desk",
+      "role": "gallery card image, titled \"Correspondence\" (Single · 2024; music filter)",
+      "replaced": true
+    },
+    {
+      "file": "img23.jpg",
+      "desc": "mixing console faders under blue light, landscape",
+      "role": "gallery card image, titled \"Mirror\" (Ambient mix · 2023; mix filter)",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    },
+    {
+      "file": "img24.jpg",
+      "desc": "Man beside a softbox light in a photo studio",
+      "role": "gallery card image, titled \"One light\" (Commercial · 2025; design filter)",
+      "replaced": true
+    },
+    {
+      "file": "img25.jpg",
+      "desc": "Pottery studio bench with tools and clay vessels",
+      "role": "gallery card image, titled \"Kiln\" (Club edit · 2024; mix filter)",
+      "replaced": true
+    },
+    {
+      "file": "img26.jpg",
+      "desc": "Curved plaster interior alcove with an armchair",
+      "role": "gallery card image, titled \"Room tone\" (Interior film · 2024; design filter)",
+      "replaced": true
+    },
+    {
+      "file": "img27.jpg",
+      "desc": "View above the clouds from altitude",
+      "role": "gallery card image, titled \"Cruising altitude\" (EP · 2023; music filter)",
+      "replaced": true
+    },
+    {
+      "file": "img28.jpg",
+      "desc": "Man at a drafting desk in front of bookshelves",
+      "role": "gallery card image, titled \"The architect\" (Single · 2025; music filter)",
+      "replaced": true
+    },
+    {
+      "file": "img29.jpg",
+      "desc": "Cream-and-red sneaker among red dahlias",
+      "role": "gallery card image, titled \"Night garden\" (Sneaker spot · 2024; design filter)",
+      "replaced": true
+    },
+    {
+      "file": "img30.jpg",
+      "desc": "Purple-and-white sneakers with a white tee flat lay",
+      "role": "gallery card image, titled \"Court purple\" (Single · 2023; music filter)",
+      "replaced": true
+    },
+    {
+      "file": "img31.jpg",
+      "desc": "Dancer leaping across a sunset field",
+      "role": "gallery card image, titled \"Last light\" (Rework · 2025; mix filter)",
+      "replaced": true
+    },
+    {
+      "file": "img32.jpg",
+      "desc": "Motion-blurred figure in long exposure",
+      "role": "gallery card image, titled \"Shutter drag\" (Edit · 2024; mix filter)",
+      "replaced": true
+    },
+    {
+      "file": "img33.jpg",
+      "desc": "Prismatic light-leak blur of a moving figure",
+      "role": "gallery card image, titled \"Heat haze\" (Album · 2024; music filter)",
+      "replaced": true
+    },
+    {
+      "file": "img34.jpg",
+      "desc": "Black-and-white white satin dress in motion",
+      "role": "gallery card image, titled \"Bias cut\" (Fashion film · 2025; design filter)",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "editorial",
+      "minimal",
+      "bold"
+    ],
+    "useCase": [
+      "gallery",
+      "navigation",
+      "product-showcase"
+    ],
+    "useWhen": "Úsalo para una galería filtrable por categorías con titulares gigantes que crecen letra a letra al seleccionar un filtro.",
+    "aliases": [
+      "galeria filtrable",
+      "filtros",
+      "filter gallery",
+      "categorias",
+      "portfolio grid",
+      "tipografia gigante"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 34,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#eef0f1",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#14171f",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "accent",
+      "label": "Acento",
+      "type": "color",
+      "default": "#2334e4",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--accent"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "muted",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#5d6470",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--muted"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "filters-fielddaysound",
+    "title": "Field Day Sound — Filter Gallery",
+    "category": "gallery",
+    "trigger": "click",
+    "libs": [
+      "gsap"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power2",
+    "duration_range": [
+      0.25,
+      0.6
+    ],
+    "stagger": 0.025,
+    "assets_required": {
+      "count": 34,
+      "bytes": 2128890,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "width-branch",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "STEP-MACHINE",
+    "engine": "gsap",
+    "motion_signature": "click-swapped grid fade with staggered per-char font-size",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "step-advance"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

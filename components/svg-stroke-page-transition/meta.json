@@ -1,0 +1,167 @@
+{
+  "slug": "svg-stroke-page-transition",
+  "sourceDir": "codegrid-svg-stroke-page-transition-nextjs",
+  "title": "SVG Stroke Page Transition",
+  "description": "Page transition where two full-screen squiggly SVG paths draw themselves in via animated strokeDashoffset while their stroke-width swells from 200 to 700, wiping the viewport, then keep drawing out as the stroke thins back to reveal the new page. Triggered by clicking the navbar links routing between three hero pages.",
+  "category": "transition",
+  "tags": [
+    "page-transition",
+    "svg",
+    "stroke",
+    "dashoffset",
+    "wipe",
+    "draw",
+    "fake-router"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 1000,
+    "click": "a[data-route=\"/about\"]",
+    "afterClickMs": 650
+  },
+  "images": [],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "bold",
+      "playful"
+    ],
+    "useCase": [
+      "page-transition",
+      "navigation"
+    ],
+    "useWhen": "Úsalo cuando quieras que los cambios de ruta entre páginas se cubran con un barrido de trazo SVG llamativo y de alto contraste al hacer clic en el menú.",
+    "aliases": [
+      "transición de página",
+      "cortinilla SVG",
+      "barrido de trazo",
+      "page wipe",
+      "stroke draw transition",
+      "wipe de router"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 0,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bg",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#f2f1ec",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bg"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "fg",
+      "label": "Texto",
+      "type": "color",
+      "default": "#16150f",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--fg"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "svg-stroke-page-transition",
+    "title": "SVG Stroke Page Transition",
+    "category": "transition",
+    "trigger": "click",
+    "libs": [
+      "gsap"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power1",
+    "duration_range": [
+      0.3,
+      1
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 0,
+      "bytes": 0,
+      "root_absolute_paths": false
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "CLICK-CURTAIN",
+    "engine": "gsap",
+    "motion_signature": "click-triggered SVG stroke draw wipe overlay: two full-screen squiggle paths run strokeDashoffset length->0 while attr stroke-width fattens 200->700 (leave), then offset->-length while stroke-width thins back to 200 (enter); both 1s power1.inOut, simultaneous, no scroll and no inertia",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "curtain-toggle"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

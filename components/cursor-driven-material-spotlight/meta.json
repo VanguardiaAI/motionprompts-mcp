@@ -1,0 +1,225 @@
+{
+  "slug": "cursor-driven-material-spotlight",
+  "sourceDir": "codegrid-cursor-driven-material-spotlight",
+  "title": "Cursor-Driven Material Spotlight",
+  "description": "Full-viewport Three.js scene with a GLB sculpture whose PBR material is patched via onBeforeCompile: moving the cursor raycasts a world-space hit point and a smoothstep mask around it lowers roughness and darkens diffuse, revealing a glossy spotlight that trails the mouse with a lerped follow.",
+  "category": "3d-webgl",
+  "tags": [
+    "three",
+    "webgl",
+    "shader",
+    "onBeforeCompile",
+    "raycast",
+    "hover",
+    "spotlight",
+    "pbr"
+  ],
+  "gsap": [],
+  "deps": [
+    "three"
+  ],
+  "preview": {
+    "waitMs": 4000,
+    "click": ".spotlight",
+    "clip": {
+      "seconds": 7,
+      "actions": [
+        {
+          "type": "cursor",
+          "path": "figure8"
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "model.glb",
+      "desc": "Discobolus classical marble statue 3D scan (SMK), single grey PBR material, 5.6 MB binary glTF",
+      "role": "3D model revealed by the cursor spotlight",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "elegant",
+      "minimal",
+      "experimental"
+    ],
+    "useCase": [
+      "hero",
+      "cursor-effect",
+      "product-showcase"
+    ],
+    "useWhen": "Úsalo cuando quieras un hero 3D donde el cursor revela un foco brillante sobre una escultura o producto, con aire de galería interactiva.",
+    "aliases": [
+      "cursor spotlight",
+      "foco que sigue el cursor",
+      "revelado con el ratón",
+      "material reveal",
+      "escultura 3D interactiva",
+      "spotlight reveal"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": false,
+    "needsWebgl": true,
+    "needsCanvas": true,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 1,
+    "perfCost": "heavy",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#2b241a",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "stone",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#7d7465",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--stone"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "radius",
+      "label": "Tamaño del foco",
+      "type": "range",
+      "min": 0.03,
+      "max": 0.6,
+      "step": 0.01,
+      "default": 0.15,
+      "apply": {
+        "kind": "js",
+        "path": "radius"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "softness",
+      "label": "Suavidad del borde",
+      "type": "range",
+      "min": 0.02,
+      "max": 1,
+      "step": 0.02,
+      "default": 0.35,
+      "apply": {
+        "kind": "js",
+        "path": "softness"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "lerp",
+      "label": "Suavizado del seguimiento",
+      "type": "range",
+      "min": 0.01,
+      "max": 0.3,
+      "step": 0.01,
+      "default": 0.05,
+      "apply": {
+        "kind": "js",
+        "path": "lerp"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "cursor-driven-material-spotlight",
+    "title": "Cursor-Driven Material Spotlight",
+    "category": "3d-webgl",
+    "trigger": "hover",
+    "libs": [
+      "three",
+      "GLTFLoader",
+      "RoomEnvironment",
+      "PMREMGenerator"
+    ],
+    "complexity": 5,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": null,
+    "duration_range": [
+      0.2,
+      2.4
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 1,
+      "bytes": 5563016,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": true
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "POINTER-CHASE",
+    "engine": "webgl-raf",
+    "motion_signature": "rAF lerped raycast spotlight on PBR shader",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  },
+  "review": {
+    "status": "public"
+  }
+}

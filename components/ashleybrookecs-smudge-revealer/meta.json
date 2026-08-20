@@ -1,0 +1,300 @@
+{
+  "slug": "ashleybrookecs-smudge-revealer",
+  "sourceDir": "codegrid-ashleybrookecs-smudge-revealer",
+  "title": "Cursor Smudge Revealer",
+  "description": "Full-screen hero where moving the cursor (or finger) smudges away the still-wet ink foreground: circles sized by pointer speed are stamped at a lerped pointer position inside a gooey SVG mask, each expanding 2x over 2s then dissolving over 3s, revealing the second-colour layer beneath the title.",
+  "category": "interactive",
+  "tags": [
+    "cursor",
+    "mouse",
+    "svg",
+    "mask",
+    "goo",
+    "reveal",
+    "hero",
+    "touch"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 1500,
+    "click": ".hero"
+  },
+  "images": [],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "bold",
+      "minimal",
+      "editorial"
+    ],
+    "useCase": [
+      "hero",
+      "cursor-effect",
+      "image-reveal"
+    ],
+    "useWhen": "Úsalo cuando quieras un hero interactivo donde el visitante frota con el cursor o el dedo para borrar la capa oscura y descubrir el texto oculto.",
+    "aliases": [
+      "frotar para revelar",
+      "smudge reveal",
+      "borrar con el cursor",
+      "cursor reveal",
+      "scratch reveal",
+      "revelar al pasar el ratón"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 0,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#272b66",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f4efe3",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "sizeFromSpeed",
+      "label": "Tamaño según velocidad",
+      "type": "range",
+      "min": 0.05,
+      "max": 1,
+      "step": 0.05,
+      "default": 0.2,
+      "apply": {
+        "kind": "js",
+        "path": "sizeFromSpeed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "smoothing",
+      "label": "Suavizado del rastro",
+      "type": "range",
+      "min": 0.02,
+      "max": 0.4,
+      "step": 0.01,
+      "default": 0.1,
+      "apply": {
+        "kind": "js",
+        "path": "smoothing"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "expandMultiplier",
+      "label": "Cuánto se abre la mancha",
+      "type": "range",
+      "min": 1,
+      "max": 6,
+      "step": 0.25,
+      "default": 2,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "expandMultiplier"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "expandTime",
+      "label": "Tiempo de apertura",
+      "type": "range",
+      "min": 0.25,
+      "max": 6,
+      "step": 0.25,
+      "default": 2,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "expandTime"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "dissolveTime",
+      "label": "Tiempo de disolución",
+      "type": "range",
+      "min": 0.5,
+      "max": 8,
+      "step": 0.5,
+      "default": 3,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "dissolveTime"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "expandEase",
+      "label": "Curva de la apertura",
+      "type": "select",
+      "default": "power1.inOut",
+      "options": [
+        {
+          "value": "power1.inOut",
+          "label": "Suave"
+        },
+        {
+          "value": "none",
+          "label": "Constante"
+        },
+        {
+          "value": "power4.out",
+          "label": "Rápida"
+        },
+        {
+          "value": "back.out(1.7)",
+          "label": "Rebote"
+        },
+        {
+          "value": "expo.inOut",
+          "label": "Marcada"
+        }
+      ],
+      "apply": {
+        "kind": "js",
+        "path": "expandEase"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "dissolveEase",
+      "label": "Curva de la disolución",
+      "type": "select",
+      "default": "power3.in",
+      "options": [
+        {
+          "value": "power3.in",
+          "label": "Tardía"
+        },
+        {
+          "value": "none",
+          "label": "Constante"
+        },
+        {
+          "value": "power3.out",
+          "label": "Temprana"
+        },
+        {
+          "value": "expo.in",
+          "label": "Muy tardía"
+        }
+      ],
+      "apply": {
+        "kind": "js",
+        "path": "dissolveEase"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "ashleybrookecs-smudge-revealer",
+    "title": "Cursor Smudge Revealer",
+    "category": "interactive",
+    "trigger": "pointer",
+    "libs": [
+      "gsap"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power1",
+    "duration_range": [
+      2,
+      3
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 0,
+      "bytes": 0,
+      "root_absolute_paths": false
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "POINTER-CHASE",
+    "engine": "gsap+raf",
+    "motion_signature": "lerped pointer stamps gooey SVG mask blobs",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

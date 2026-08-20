@@ -1,0 +1,4283 @@
+{
+  "library_weight": {
+    "CustomEase": {
+      "file": "CustomEase-DOdSPRG2.js",
+      "raw": 6447,
+      "gzip": 3375
+    },
+    "Draggable": {
+      "file": "Draggable-D_9CcM6Q.js",
+      "raw": 30040,
+      "gzip": 11588
+    },
+    "Flip": {
+      "file": "Flip-DxRoQ4d-.js",
+      "raw": 19673,
+      "gzip": 7630
+    },
+    "GLTFLoader": {
+      "file": "GLTFLoader-BIJoX6Z4.js",
+      "raw": 44753,
+      "gzip": 13494
+    },
+    "OrbitControls": {
+      "file": "OrbitControls-WAYLIB-x.js",
+      "raw": 19723,
+      "gzip": 4454
+    },
+    "ScrollTrigger": {
+      "file": "ScrollTrigger-ak1EnQU5.js",
+      "raw": 43522,
+      "gzip": 18045
+    },
+    "SplitText": {
+      "file": "SplitText-YBVdmRgZ.js",
+      "raw": 7126,
+      "gzip": 3340
+    },
+    "UnrealBloomPass": {
+      "file": "UnrealBloomPass-B5JnFWq2.js",
+      "raw": 15760,
+      "gzip": 3906
+    },
+    "split_type": {
+      "file": "index-CFpC6n-h.js",
+      "raw": 11652,
+      "gzip": 4483
+    },
+    "gsap_core": {
+      "file": "index-xgxdCp6f.js",
+      "raw": 70040,
+      "gzip": 27454
+    },
+    "lenis": {
+      "file": "lenis-CciUKl-_.js",
+      "raw": 18415,
+      "gzip": 5338
+    },
+    "lottie": {
+      "file": "lottie-UafZm1xi.js",
+      "raw": 307406,
+      "gzip": 78557
+    },
+    "gsap_matrix": {
+      "file": "matrix-Cr82dgH5.js",
+      "raw": 4808,
+      "gzip": 2127
+    },
+    "matter": {
+      "file": "matter-OMWewLFA.js",
+      "raw": 84340,
+      "gzip": 26624
+    },
+    "three": {
+      "file": "three.module-pPJJqzba.js",
+      "raw": 598959,
+      "gzip": 151261
+    },
+    "note": "medido sobre dist/assets con gzip nivel 6 (el mismo que sirve nginx); cada chunk identificado por huella, ver FINGERPRINTS"
+  },
+  "webgl": {
+    "count": 34,
+    "components": [
+      {
+        "slug": "3d-crt-display",
+        "libs": [
+          "three",
+          "GLTFLoader"
+        ],
+        "complexity": 5,
+        "fullViewport": true,
+        "renderTargets": 0,
+        "renderLoop": "animate",
+        "assetBytes": 23714746,
+        "cluster": "POINTER-CHASE"
+      },
+      {
+        "slug": "3d-material-finish-switcher",
+        "libs": [
+          "three",
+          "GLTFLoader"
+        ],
+        "complexity": 4,
+        "fullViewport": true,
+        "renderTargets": 1,
+        "renderLoop": "tick",
+        "assetBytes": 1477201,
+        "cluster": "INTEGRATOR"
+      },
+      {
+        "slug": "3d-parallax-footer",
+        "libs": [
+          "three",
+          "GLTFLoader"
+        ],
+        "complexity": 4,
+        "fullViewport": false,
+        "renderTargets": 0,
+        "renderLoop": "animate",
+        "assetBytes": 128176,
+        "cluster": "SCROLL-WELDED"
+      },
+      {
+        "slug": "3d-slider-threejs",
+        "libs": [
+          "three"
+        ],
+        "complexity": 4,
+        "fullViewport": true,
+        "renderTargets": 0,
+        "renderLoop": null,
+        "assetBytes": 1880590,
+        "cluster": "SCROLL-WELDED"
+      },
+      {
+        "slug": "ashfall-3d-image-gallery",
+        "libs": [
+          "three"
+        ],
+        "complexity": 5,
+        "fullViewport": true,
+        "renderTargets": 0,
+        "renderLoop": "animate",
+        "assetBytes": 7826398,
+        "cluster": "SCROLL-LAGGED"
+      },
+      {
+        "slug": "asset-orb-js",
+        "libs": [
+          "three",
+          "OrbitControls"
+        ],
+        "complexity": 4,
+        "fullViewport": true,
+        "renderTargets": 0,
+        "renderLoop": "animate",
+        "assetBytes": 3332946,
+        "cluster": "CAPTURED-VIRTUAL-SCROLL"
+      },
+      {
+        "slug": "brutalist-corridor",
+        "libs": [
+          "three",
+          "GLTFLoader"
+        ],
+        "complexity": 4,
+        "fullViewport": true,
+        "renderTargets": 0,
+        "renderLoop": "animate",
+        "assetBytes": 9410833,
+        "cluster": "POINTER-CHASE"
+      },
+      {
+        "slug": "cappen-fluid-simulation",
+        "libs": [
+          "three"
+        ],
+        "complexity": 3,
+        "fullViewport": true,
+        "renderTargets": 3,
+        "renderLoop": null,
+        "assetBytes": 0,
+        "cluster": "INTEGRATOR"
+      },
+      {
+        "slug": "chromatic-aberration-gallery",
+        "libs": [],
+        "complexity": 2,
+        "fullViewport": true,
+        "renderTargets": 0,
+        "renderLoop": "animatePan",
+        "assetBytes": 4073838,
+        "cluster": "POINTER-CHASE"
+      },
+      {
+        "slug": "cielrose-threejs-slider-javascript",
+        "libs": [
+          "three"
+        ],
+        "complexity": 5,
+        "fullViewport": true,
+        "renderTargets": 0,
+        "renderLoop": "animate",
+        "assetBytes": 866964,
+        "cluster": "CAPTURED-VIRTUAL-SCROLL"
+      },
+      {
+        "slug": "cursor-driven-material-spotlight",
+        "libs": [
+          "three",
+          "GLTFLoader"
+        ],
+        "complexity": 5,
+        "fullViewport": false,
+        "renderTargets": 0,
+        "renderLoop": "animate",
+        "assetBytes": 5563016,
+        "cluster": "POINTER-CHASE"
+      },
+      {
+        "slug": "fluid-splash-cursor",
+        "libs": [],
+        "complexity": 1,
+        "fullViewport": false,
+        "renderTargets": 0,
+        "renderLoop": null,
+        "assetBytes": 0,
+        "cluster": "INTEGRATOR"
+      },
+      {
+        "slug": "fractal-glass-effect",
+        "libs": [
+          "three"
+        ],
+        "complexity": 5,
+        "fullViewport": true,
+        "renderTargets": 0,
+        "renderLoop": "animate",
+        "assetBytes": 530939,
+        "cluster": "POINTER-CHASE"
+      },
+      {
+        "slug": "gentlerain",
+        "libs": [
+          "three"
+        ],
+        "complexity": 4,
+        "fullViewport": true,
+        "renderTargets": 2,
+        "renderLoop": "animate",
+        "assetBytes": 0,
+        "cluster": "INTEGRATOR"
+      },
+      {
+        "slug": "grid-deformation-effect",
+        "libs": [
+          "three"
+        ],
+        "complexity": 4,
+        "fullViewport": false,
+        "renderTargets": 0,
+        "renderLoop": null,
+        "assetBytes": 172717,
+        "cluster": "INTEGRATOR"
+      },
+      {
+        "slug": "interactive-particle-logo",
+        "libs": [],
+        "complexity": 3,
+        "fullViewport": true,
+        "renderTargets": 0,
+        "renderLoop": null,
+        "assetBytes": 33431,
+        "cluster": "INTEGRATOR"
+      },
+      {
+        "slug": "ironhill-scroll-animation",
+        "libs": [
+          "three"
+        ],
+        "complexity": 5,
+        "fullViewport": false,
+        "renderTargets": 0,
+        "renderLoop": "animate",
+        "assetBytes": 806769,
+        "cluster": "SCROLL-WELDED"
+      },
+      {
+        "slug": "lava-buster",
+        "libs": [
+          "three"
+        ],
+        "complexity": 4,
+        "fullViewport": true,
+        "renderTargets": 1,
+        "renderLoop": "animate",
+        "assetBytes": 0,
+        "cluster": "INTEGRATOR"
+      },
+      {
+        "slug": "offficestud",
+        "libs": [
+          "three",
+          "GLTFLoader"
+        ],
+        "complexity": 5,
+        "fullViewport": true,
+        "renderTargets": 0,
+        "renderLoop": "basicAnimate",
+        "assetBytes": 1866416,
+        "cluster": "SCROLL-THRESHOLD"
+      },
+      {
+        "slug": "phantom-gallery-javascript",
+        "libs": [
+          "three"
+        ],
+        "complexity": 5,
+        "fullViewport": true,
+        "renderTargets": 0,
+        "renderLoop": "animate",
+        "assetBytes": 2728799,
+        "cluster": "CAPTURED-VIRTUAL-SCROLL"
+      },
+      {
+        "slug": "pixelated-text-hover-shaders",
+        "libs": [
+          "three"
+        ],
+        "complexity": 4,
+        "fullViewport": true,
+        "renderTargets": 0,
+        "renderLoop": "animateScene",
+        "assetBytes": 0,
+        "cluster": "POINTER-CHASE"
+      },
+      {
+        "slug": "ripple-displacement-slider",
+        "libs": [
+          "three"
+        ],
+        "complexity": 5,
+        "fullViewport": true,
+        "renderTargets": 0,
+        "renderLoop": "render",
+        "assetBytes": 503834,
+        "cluster": "STEP-MACHINE"
+      },
+      {
+        "slug": "silenceo",
+        "libs": [
+          "three",
+          "GLTFLoader"
+        ],
+        "complexity": 5,
+        "fullViewport": true,
+        "renderTargets": 0,
+        "renderLoop": "basicAnimate",
+        "assetBytes": 889632,
+        "cluster": "SCROLL-WELDED"
+      },
+      {
+        "slug": "sofihealth-product-scroll-animation",
+        "libs": [
+          "three",
+          "GLTFLoader"
+        ],
+        "complexity": 5,
+        "fullViewport": true,
+        "renderTargets": 0,
+        "renderLoop": "animate",
+        "assetBytes": 20068520,
+        "cluster": "SCROLL-LAGGED"
+      },
+      {
+        "slug": "studiodialect-image-gallery",
+        "libs": [
+          "three"
+        ],
+        "complexity": 5,
+        "fullViewport": true,
+        "renderTargets": 0,
+        "renderLoop": "animate",
+        "assetBytes": 1806852,
+        "cluster": "SCROLL-LAGGED"
+      },
+      {
+        "slug": "threejs-slider",
+        "libs": [
+          "three"
+        ],
+        "complexity": 4,
+        "fullViewport": true,
+        "renderTargets": 0,
+        "renderLoop": "animate",
+        "assetBytes": 681616,
+        "cluster": "CAPTURED-VIRTUAL-SCROLL"
+      },
+      {
+        "slug": "threejs-slider-final",
+        "libs": [
+          "three"
+        ],
+        "complexity": 4,
+        "fullViewport": true,
+        "renderTargets": 0,
+        "renderLoop": "animate",
+        "assetBytes": 614728,
+        "cluster": "CAPTURED-VIRTUAL-SCROLL"
+      },
+      {
+        "slug": "threejs-video-gallery",
+        "libs": [
+          "three"
+        ],
+        "complexity": 4,
+        "fullViewport": true,
+        "renderTargets": 0,
+        "renderLoop": "animate",
+        "assetBytes": 112798294,
+        "cluster": "POINTER-CHASE"
+      },
+      {
+        "slug": "tunnel",
+        "libs": [
+          "three"
+        ],
+        "complexity": 5,
+        "fullViewport": true,
+        "renderTargets": 0,
+        "renderLoop": "animateTunnel",
+        "assetBytes": 1489903,
+        "cluster": "SCROLL-LAGGED"
+      },
+      {
+        "slug": "turbulent-inversion-lens-hover-effect-javascript",
+        "libs": [
+          "three"
+        ],
+        "complexity": 5,
+        "fullViewport": false,
+        "renderTargets": 0,
+        "renderLoop": "animate",
+        "assetBytes": 228381,
+        "cluster": "POINTER-CHASE"
+      },
+      {
+        "slug": "warp-slider",
+        "libs": [
+          "three"
+        ],
+        "complexity": 5,
+        "fullViewport": true,
+        "renderTargets": 0,
+        "renderLoop": "render",
+        "assetBytes": 627871,
+        "cluster": "STEP-MACHINE"
+      },
+      {
+        "slug": "warp-slider-next",
+        "libs": [
+          "three"
+        ],
+        "complexity": 5,
+        "fullViewport": true,
+        "renderTargets": 0,
+        "renderLoop": "render",
+        "assetBytes": 732671,
+        "cluster": "STEP-MACHINE"
+      },
+      {
+        "slug": "webgl-interactive-gradient",
+        "libs": [
+          "three"
+        ],
+        "complexity": 5,
+        "fullViewport": true,
+        "renderTargets": 2,
+        "renderLoop": "animate",
+        "assetBytes": 35241,
+        "cluster": "INTEGRATOR"
+      },
+      {
+        "slug": "wodniack-work-section-scroll",
+        "libs": [
+          "three"
+        ],
+        "complexity": 5,
+        "fullViewport": true,
+        "renderTargets": 0,
+        "renderLoop": "animate",
+        "assetBytes": 1393530,
+        "cluster": "SCROLL-LAGGED"
+      }
+    ]
+  },
+  "pinned": {
+    "count": 48,
+    "with_measured_corridor": 45,
+    "vh": {
+      "min": 125,
+      "max": 1500,
+      "median": 600,
+      "p75": 800,
+      "sum_if_all": 28075
+    },
+    "top": [
+      {
+        "slug": "eseagency-scroll-carousel-javascript",
+        "vh": 1500,
+        "cluster": "SCROLL-LAGGED"
+      },
+      {
+        "slug": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "vh": 1500,
+        "cluster": "SCROLL-LAGGED"
+      },
+      {
+        "slug": "404",
+        "vh": 1200,
+        "cluster": "SCROLL-LAGGED"
+      },
+      {
+        "slug": "samuelsiebler-js",
+        "vh": 1000,
+        "cluster": "SCROLL-THRESHOLD"
+      },
+      {
+        "slug": "sofihealth-product-scroll-animation",
+        "vh": 1000,
+        "cluster": "SCROLL-LAGGED"
+      },
+      {
+        "slug": "telescope-scroll-animation",
+        "vh": 1000,
+        "cluster": "SCROLL-LAGGED"
+      },
+      {
+        "slug": "ethnocare",
+        "vh": 900,
+        "cluster": "SCROLL-WELDED"
+      },
+      {
+        "slug": "brandappart-sticky-cards",
+        "vh": 800,
+        "cluster": "SCROLL-LAGGED"
+      },
+      {
+        "slug": "criticaldanger-rebuild",
+        "vh": 800,
+        "cluster": "SCROLL-WELDED"
+      },
+      {
+        "slug": "navigate-scroll-animated-text-javascript",
+        "vh": 800,
+        "cluster": "SCROLL-WELDED"
+      },
+      {
+        "slug": "nvg8-scroll-animation-2",
+        "vh": 800,
+        "cluster": "SCROLL-LAGGED"
+      },
+      {
+        "slug": "orken-world-scroll-animation",
+        "vh": 800,
+        "cluster": "SCROLL-LAGGED"
+      }
+    ]
+  },
+  "capabilities": {
+    "document-height": {
+      "holders": 17,
+      "slugs": [
+        "3d-circular-img-gallery",
+        "3d-slider-threejs",
+        "ashfall-3d-image-gallery",
+        "criticaldanger-rebuild",
+        "ethnocare",
+        "heurebleue-scroll-animation",
+        "lottie-scroll-animation",
+        "offficestud",
+        "orchestra-3d-scroll-animation",
+        "orken-world-scroll-animation",
+        "pure-js-vanilla-image-slider",
+        "qindustrial-scroll",
+        "radga-horizontal-scroll-animation",
+        "radial-rotating-texts",
+        "samuelsiebler-js",
+        "silenceo",
+        "zentry-scroll"
+      ]
+    },
+    "window-onload": {
+      "holders": 4,
+      "slugs": [
+        "3d-circular-img-gallery",
+        "circular-img-gallery",
+        "inkfish-horizontal-scroll",
+        "text-hover-effect"
+      ]
+    },
+    "page-scroll-owner": {
+      "holders": 103,
+      "slugs": [
+        "3d-parallax-footer",
+        "3d-slider-threejs",
+        "adaline-scroll-animation",
+        "anchored-headline-speech-bubbles",
+        "arch-portal-reveal",
+        "ashfall-3d-image-gallery",
+        "brandappart-sticky-cards",
+        "burocratik-image-trail-js",
+        "capsules-animated-columns",
+        "capsules-sticky-cards-javascript",
+        "cielrose-threejs-slider-javascript",
+        "clayboan-scroll-animation",
+        "criticaldanger-rebuild",
+        "detroit-paris-infinite-slider",
+        "dotted-path-traveller",
+        "eduardbodak-scroll-animation",
+        "epic-scroll-anims-scrolltrigger-gsap",
+        "eseagency-scroll-carousel-javascript",
+        "ethnocare",
+        "exo-ape-infinite-carousel",
+        "explode-text-on-scroll-matterjs",
+        "exploded-product-labels",
+        "fameestate-scroll-animation",
+        "fanned-steps-scrub",
+        "fiddle-digital-scroll-animation",
+        "followart-scroll-animation",
+        "gradual-blur-edge",
+        "gregorylalle",
+        "gta-vi-landing-page-scroll-final",
+        "guiding-light",
+        "henriheymans-hover",
+        "heurebleue-scroll-animation",
+        "hypnotic-gallery-gsap-flip",
+        "image-explosion-scroll-animation-js",
+        "infinite-horizontal-scroll",
+        "infinite-horizontal-slider",
+        "infinite-parallax-scroll-with-minimap",
+        "ingamana-scroll-animation",
+        "inversa-scroll-animation",
+        "ironhill-scroll-animation",
+        "jamarea-menu",
+        "javascript-responsive-minimap",
+        "kaitonote-3d-gallery-showcase-scroll-animation",
+        "karim-saab-scroll-animation",
+        "kvs-studio-image-reveal",
+        "larevoltosa-scroll-animation",
+        "lukebaffait-animated-footer",
+        "madeinuxstudio-page-transition",
+        "mask-reveal",
+        "mat-voyce-scroll-animation",
+        "maximatherapy-sticky-cards",
+        "nakedcityfilms-scroll-animation",
+        "navigate-scroll-animated-text-javascript",
+        "nextjs-text-reveal-animation",
+        "nextjs-view-transitions",
+        "nvg8-scroll-animation",
+        "nvg8-scroll-animation-2",
+        "offficestud",
+        "orchestra-3d-scroll-animation",
+        "orken-world-scroll-animation",
+        "outline-text-over-media",
+        "oversized-year-scroll",
+        "page-transitions-view-transition-api",
+        "parallax-effect",
+        "phive-sticky-cards",
+        "phive-text-scroll-animation",
+        "playable-objects",
+        "poly-app-photo-dump",
+        "prototypestudio-scroll-animation",
+        "push-over-overlay-menu",
+        "qindustrial-scroll",
+        "radga-horizontal-scroll-animation",
+        "samuelsiebler-js",
+        "scroll-powered-svg-stroke",
+        "scroll-powered-svg-stroke-2",
+        "scroll-wave-image-gallery",
+        "seventeenagency-scroll-animation",
+        "shaped-section-boundary",
+        "silenceo",
+        "sofihealth-product-scroll-animation",
+        "stacked-alternating-marquees",
+        "sticky-cards",
+        "sticky-cards-ashfall-rebuild-js",
+        "studiodialect-image-gallery",
+        "svg-image-hover-effect",
+        "telescope-img-scroll-animation",
+        "telescope-scroll-animation",
+        "text-reveal-animation",
+        "thefirstthelast-scroll-animation",
+        "threejs-slider",
+        "threejs-slider-final",
+        "tunnel",
+        "var-font-anim",
+        "voltlites-scroll-animation",
+        "voyeurverite-scroll-animation",
+        "vucko-scroll-animation-javascript",
+        "waabi-scroll-animation",
+        "werowallet-scroll-animation",
+        "wodniack-work-section-scroll",
+        "work-carousel-karim-saab",
+        "workingstiff-animated-teams-section",
+        "zajno-page-transitions",
+        "zentry-scroll"
+      ]
+    },
+    "first-canvas": {
+      "holders": 5,
+      "slugs": [
+        "3d-slider-threejs",
+        "adaline-scroll-animation",
+        "chromatic-aberration-gallery",
+        "threejs-slider",
+        "warp-slider"
+      ]
+    },
+    "page-scroll-lock": {
+      "holders": 31,
+      "slugs": [
+        "advanced-infinite-scroll",
+        "cappen-fluid-simulation",
+        "full-screen-slider",
+        "hypnotic-gallery-gsap-flip",
+        "img-trail",
+        "infinite-draggable-image-gallery-javascript",
+        "inkfish-horizontal-scroll",
+        "interactive-particle-logo",
+        "javascript-responsive-minimap",
+        "kpverse-menu",
+        "landing-page-gravity",
+        "lava-buster",
+        "lightbox",
+        "lp-reveal-anim",
+        "modular-slider",
+        "mormal",
+        "mouse-trail-animation-svg-js",
+        "oshane-howard-lp-responsive",
+        "our-revolution-lp",
+        "page-transitions",
+        "parallax-snap-infinite-scroll",
+        "phantom-gallery-javascript",
+        "physics-anim",
+        "pixelated-text-hover-shaders",
+        "products-lightbox-gallery",
+        "project-page-overlay-animation",
+        "sarah-bassett",
+        "savoirfaire-lp",
+        "story-world-carousel-slider",
+        "threejs-slider-final",
+        "threejs-video-gallery"
+      ]
+    },
+    "entry-veil": {
+      "holders": 22,
+      "slugs": [
+        "aladesign-landing-page-reveal",
+        "aminezegmou-landing-page",
+        "kin-landing-page",
+        "konpo-lp-reveal",
+        "landing-page-reveal",
+        "landing-page-reveal-no-webgl",
+        "laserbysonymusic-landing-page-reveal-animation",
+        "lp-reveal-anim",
+        "lusion-lp-reveal",
+        "maxmilkin-preloader",
+        "mormal",
+        "nite-riot-landing-page-reveal-javascript",
+        "oshane-howard-lp-responsive",
+        "our-revolution-lp",
+        "outfit-landing-page-reveal",
+        "p10-landing-page-reveal-gsap",
+        "permianworld-landing-page-animation",
+        "responsive-landing-page",
+        "savoirfaire-landing-page-reveal-animation",
+        "steelworks-landing-page-reveal",
+        "the-happy-few",
+        "truekindskincare-landing-page-reveal-javascript"
+      ]
+    }
+  },
+  "conflicts": {
+    "directed_edges": 723,
+    "by_kind": {
+      "kills-all": 108,
+      "ease-name": 22
+    },
+    "killers": [
+      "kaitonote-3d-gallery-showcase-scroll-animation",
+      "madeinuxstudio-page-transition",
+      "nakedcityfilms-scroll-animation"
+    ]
+  },
+  "custom_ease": {
+    "hop": {
+      "distinct_curves": 13,
+      "components": 22
+    },
+    "glide": {
+      "distinct_curves": 1,
+      "components": 2
+    },
+    "hop2": {
+      "distinct_curves": 2,
+      "components": 2
+    },
+    "pageTransition": {
+      "distinct_curves": 1,
+      "components": 1
+    }
+  },
+  "solo_on_page": {
+    "count": 72,
+    "reasons": {
+      "html/body height fija en vh": 38,
+      "asigna window.onload": 4,
+      "reclama el primer canvas del documento": 5,
+      "html/body overflow:hidden": 31,
+      "preventDefault en wheel": 10,
+      "mata todos los ScrollTrigger": 3,
+      "Lenis infinite:true": 1
+    }
+  },
+  "category_capability": {
+    "scroll": {
+      "total": 68,
+      "entry_veil": 0,
+      "scroll_owner": 58,
+      "page_lock": 1,
+      "doc_height": 10
+    },
+    "interactive": {
+      "total": 15,
+      "entry_veil": 0,
+      "scroll_owner": 2,
+      "page_lock": 6,
+      "doc_height": 0
+    },
+    "gallery": {
+      "total": 20,
+      "entry_veil": 0,
+      "scroll_owner": 4,
+      "page_lock": 8,
+      "doc_height": 2
+    },
+    "3d-webgl": {
+      "total": 21,
+      "entry_veil": 0,
+      "scroll_owner": 7,
+      "page_lock": 3,
+      "doc_height": 4
+    },
+    "footer": {
+      "total": 4,
+      "entry_veil": 0,
+      "scroll_owner": 3,
+      "page_lock": 0,
+      "doc_height": 0
+    },
+    "hover": {
+      "total": 16,
+      "entry_veil": 0,
+      "scroll_owner": 2,
+      "page_lock": 2,
+      "doc_height": 0
+    },
+    "menu": {
+      "total": 16,
+      "entry_veil": 0,
+      "scroll_owner": 2,
+      "page_lock": 2,
+      "doc_height": 0
+    },
+    "preloader": {
+      "total": 23,
+      "entry_veil": 22,
+      "scroll_owner": 0,
+      "page_lock": 4,
+      "doc_height": 0
+    },
+    "transition": {
+      "total": 13,
+      "entry_veil": 0,
+      "scroll_owner": 6,
+      "page_lock": 1,
+      "doc_height": 0
+    },
+    "slider": {
+      "total": 23,
+      "entry_veil": 0,
+      "scroll_owner": 8,
+      "page_lock": 4,
+      "doc_height": 1
+    },
+    "cards": {
+      "total": 7,
+      "entry_veil": 0,
+      "scroll_owner": 5,
+      "page_lock": 0,
+      "doc_height": 0
+    },
+    "text": {
+      "total": 7,
+      "entry_veil": 0,
+      "scroll_owner": 6,
+      "page_lock": 0,
+      "doc_height": 0
+    }
+  },
+  "render_loops": {
+    "count": 42,
+    "webgl": 28,
+    "non_webgl": 14,
+    "components": [
+      {
+        "slug": "3d-crt-display",
+        "fn": "animate",
+        "webgl": true
+      },
+      {
+        "slug": "3d-material-finish-switcher",
+        "fn": "tick",
+        "webgl": true
+      },
+      {
+        "slug": "3d-parallax-footer",
+        "fn": "animate",
+        "webgl": true
+      },
+      {
+        "slug": "ashfall-3d-image-gallery",
+        "fn": "animate",
+        "webgl": true
+      },
+      {
+        "slug": "asset-orb-js",
+        "fn": "animate",
+        "webgl": true
+      },
+      {
+        "slug": "brutalist-corridor",
+        "fn": "animate",
+        "webgl": true
+      },
+      {
+        "slug": "chromatic-aberration-gallery",
+        "fn": "animatePan",
+        "webgl": false
+      },
+      {
+        "slug": "cielrose-threejs-slider-javascript",
+        "fn": "animate",
+        "webgl": true
+      },
+      {
+        "slug": "cursor-driven-material-spotlight",
+        "fn": "animate",
+        "webgl": true
+      },
+      {
+        "slug": "detroit-paris-infinite-slider",
+        "fn": "render",
+        "webgl": false
+      },
+      {
+        "slug": "fractal-glass-effect",
+        "fn": "animate",
+        "webgl": true
+      },
+      {
+        "slug": "gentlerain",
+        "fn": "animate",
+        "webgl": true
+      },
+      {
+        "slug": "griflan-hover-effect",
+        "fn": "update",
+        "webgl": false
+      },
+      {
+        "slug": "guiding-light",
+        "fn": "animate",
+        "webgl": false
+      },
+      {
+        "slug": "infinite-draggable-image-gallery-javascript",
+        "fn": "animate",
+        "webgl": false
+      },
+      {
+        "slug": "ironhill-scroll-animation",
+        "fn": "animate",
+        "webgl": true
+      },
+      {
+        "slug": "javascript-responsive-minimap",
+        "fn": "animate",
+        "webgl": false
+      },
+      {
+        "slug": "lava-buster",
+        "fn": "animate",
+        "webgl": true
+      },
+      {
+        "slug": "lukebaffait-animated-footer",
+        "fn": "render",
+        "webgl": false
+      },
+      {
+        "slug": "menuxl-text-displacement-animation",
+        "fn": "animate",
+        "webgl": false
+      },
+      {
+        "slug": "offficestud",
+        "fn": "basicAnimate",
+        "webgl": true
+      },
+      {
+        "slug": "parallax-effect",
+        "fn": "animate",
+        "webgl": false
+      },
+      {
+        "slug": "parallax-snap-infinite-scroll",
+        "fn": "animate",
+        "webgl": false
+      },
+      {
+        "slug": "phantom-gallery-javascript",
+        "fn": "animate",
+        "webgl": true
+      },
+      {
+        "slug": "pixelated-text-hover-shaders",
+        "fn": "animateScene",
+        "webgl": true
+      },
+      {
+        "slug": "playable-objects",
+        "fn": "updatePositions",
+        "webgl": false
+      },
+      {
+        "slug": "pure-js-vanilla-image-slider",
+        "fn": "update",
+        "webgl": false
+      },
+      {
+        "slug": "ripple-displacement-slider",
+        "fn": "render",
+        "webgl": true
+      },
+      {
+        "slug": "sarah-bassett",
+        "fn": "animate",
+        "webgl": false
+      },
+      {
+        "slug": "silenceo",
+        "fn": "basicAnimate",
+        "webgl": true
+      },
+      {
+        "slug": "sofihealth-product-scroll-animation",
+        "fn": "animate",
+        "webgl": true
+      },
+      {
+        "slug": "studiodialect-image-gallery",
+        "fn": "animate",
+        "webgl": true
+      },
+      {
+        "slug": "threejs-slider",
+        "fn": "animate",
+        "webgl": true
+      },
+      {
+        "slug": "threejs-slider-final",
+        "fn": "animate",
+        "webgl": true
+      },
+      {
+        "slug": "threejs-video-gallery",
+        "fn": "animate",
+        "webgl": true
+      },
+      {
+        "slug": "tunnel",
+        "fn": "animateTunnel",
+        "webgl": true
+      },
+      {
+        "slug": "turbulent-inversion-lens-hover-effect-javascript",
+        "fn": "animate",
+        "webgl": true
+      },
+      {
+        "slug": "vucko-scroll-animation-javascript",
+        "fn": "animate",
+        "webgl": false
+      },
+      {
+        "slug": "warp-slider",
+        "fn": "render",
+        "webgl": true
+      },
+      {
+        "slug": "warp-slider-next",
+        "fn": "render",
+        "webgl": true
+      },
+      {
+        "slug": "webgl-interactive-gradient",
+        "fn": "animate",
+        "webgl": true
+      },
+      {
+        "slug": "wodniack-work-section-scroll",
+        "fn": "animate",
+        "webgl": true
+      }
+    ]
+  },
+  "fixed_overlays": {
+    "count": 51,
+    "declared_full": 47,
+    "unsized_only": 4,
+    "components": [
+      {
+        "slug": "3d-scroll-tunnel",
+        "category": "3d-webgl",
+        "full": [
+          ".vignette"
+        ],
+        "unsized": [
+          ".edge-note"
+        ]
+      },
+      {
+        "slug": "3d-slider-threejs",
+        "category": "3d-webgl",
+        "full": [
+          "canvas"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "aminezegmou-landing-page",
+        "category": "preloader",
+        "full": [
+          ".preloader-backdrop"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "aristidebenoist-slider",
+        "category": "slider",
+        "full": [
+          ".bg-overlay"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "art-tech-nav",
+        "category": "menu",
+        "full": [
+          ".overlay",
+          ".overlay-menu"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "audemarspiguet-menu",
+        "category": "menu",
+        "full": [
+          ".menu"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "block-reveal-page-transition",
+        "category": "transition",
+        "full": [
+          ".transition-grid"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "brutalist-corridor",
+        "category": "3d-webgl",
+        "full": [
+          ".overlay"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "cappen-fluid-simulation",
+        "category": "3d-webgl",
+        "full": [
+          "#fluid"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "circular-img-gallery",
+        "category": "gallery",
+        "full": [
+          "body::after"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "contact-form",
+        "category": "transition",
+        "full": [
+          ".overlay"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "cursor-driven-material-spotlight",
+        "category": "3d-webgl",
+        "full": [
+          ".ui"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "gradual-blur-edge",
+        "category": "scroll",
+        "full": [
+          ".chrome"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "grid-shutter-page-transition",
+        "category": "transition",
+        "full": [
+          ".navbar",
+          ".transition-grid"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "hypnotic-gallery-gsap-flip",
+        "category": "gallery",
+        "full": [],
+        "unsized": [
+          ".gallery.layout-2-gallery"
+        ]
+      },
+      {
+        "slug": "img-trail",
+        "category": "hover",
+        "full": [
+          ".items"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "infinite-horizontal-scroll",
+        "category": "scroll",
+        "full": [
+          ".container"
+        ],
+        "unsized": [
+          ".brand"
+        ]
+      },
+      {
+        "slug": "infinite-parallax-scroll-with-minimap",
+        "category": "scroll",
+        "full": [
+          ".container"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "interactive-particle-logo",
+        "category": "interactive",
+        "full": [
+          "#canvas"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "inversa-scroll-animation",
+        "category": "scroll",
+        "full": [
+          ".hero-mask"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "js-page-transitions",
+        "category": "transition",
+        "full": [
+          ".transition"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "kin-landing-page",
+        "category": "preloader",
+        "full": [
+          ".revealers"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "landing-page-reveal",
+        "category": "preloader",
+        "full": [
+          ".overlay"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "lava-buster",
+        "category": "3d-webgl",
+        "full": [
+          ".frame"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "lukebaffait-animated-footer",
+        "category": "footer",
+        "full": [
+          "footer"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "lusion-lp-reveal",
+        "category": "preloader",
+        "full": [
+          ".loading-screen"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "madeinuxstudio-page-transition",
+        "category": "transition",
+        "full": [
+          ".transition-overlay",
+          ".logo-overlay"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "menu-root-food",
+        "category": "menu",
+        "full": [],
+        "unsized": [
+          ".menu-open"
+        ]
+      },
+      {
+        "slug": "metalab-lp-rebuild",
+        "category": "hover",
+        "full": [
+          ".container"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "mormal",
+        "category": "preloader",
+        "full": [
+          ".container"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "mouse-trail-animation-svg-js",
+        "category": "interactive",
+        "full": [
+          "svg",
+          ".stage"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "nite-riot-landing-page-reveal-javascript",
+        "category": "preloader",
+        "full": [
+          ".overlay"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "nm-menu-rebuild",
+        "category": "menu",
+        "full": [
+          ".website-content",
+          ".overlay"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "offficestud",
+        "category": "3d-webgl",
+        "full": [],
+        "unsized": [
+          ".model"
+        ]
+      },
+      {
+        "slug": "outfit-landing-page-reveal",
+        "category": "preloader",
+        "full": [
+          ".preloader"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "p10-landing-page-reveal-gsap",
+        "category": "preloader",
+        "full": [
+          ".preloader, .split-overlay, .tags-overlay"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "page-transitions",
+        "category": "transition",
+        "full": [
+          ".blocks-container"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "parallax-snap-infinite-scroll",
+        "category": "scroll",
+        "full": [
+          ".container"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "permianworld-landing-page-animation",
+        "category": "preloader",
+        "full": [
+          ".preloader"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "products-lightbox-gallery",
+        "category": "gallery",
+        "full": [
+          ".modal"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "push-over-overlay-menu",
+        "category": "menu",
+        "full": [
+          "nav",
+          ".menu-overlay, .menu-overlay-content"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "rejoice-menu",
+        "category": "menu",
+        "full": [
+          ".menu-overlay"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "responsive-landing-page",
+        "category": "preloader",
+        "full": [
+          ".pre-loader"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "sarah-bassett",
+        "category": "gallery",
+        "full": [
+          "#drag-layer"
+        ],
+        "unsized": [
+          ".logo"
+        ]
+      },
+      {
+        "slug": "silenceo",
+        "category": "3d-webgl",
+        "full": [
+          ".model"
+        ],
+        "unsized": [
+          "canvas"
+        ]
+      },
+      {
+        "slug": "the-happy-few",
+        "category": "preloader",
+        "full": [
+          ".preloader",
+          ".emojis"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "threejs-slider",
+        "category": "slider",
+        "full": [
+          "canvas"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "threejs-slider-final",
+        "category": "slider",
+        "full": [
+          "#canvas"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "threejs-video-gallery",
+        "category": "3d-webgl",
+        "full": [],
+        "unsized": [
+          ".header"
+        ]
+      },
+      {
+        "slug": "tunnel",
+        "category": "3d-webgl",
+        "full": [
+          ".overlay"
+        ],
+        "unsized": []
+      },
+      {
+        "slug": "zajno-page-transitions",
+        "category": "transition",
+        "full": [
+          ".revealer"
+        ],
+        "unsized": []
+      }
+    ]
+  },
+  "absolute_positioned": {
+    "count": 221,
+    "total_rules": 843,
+    "components": [
+      {
+        "slug": "404",
+        "count": 5,
+        "selectors": [
+          ".wrapper-404",
+          ".card",
+          ".card-tag",
+          ".outro",
+          ".outro-inner"
+        ]
+      },
+      {
+        "slug": "247artists-trail",
+        "count": 6,
+        "selectors": [
+          ".hero-img",
+          ".hero-img::after",
+          ".trail-container",
+          ".trail-img",
+          ".trail-img .mask-layer",
+          ".trail-img .mask-layer .image-layer"
+        ]
+      },
+      {
+        "slug": "3d-circular-img-gallery",
+        "count": 2,
+        "selectors": [
+          ".gallery",
+          ".item"
+        ]
+      },
+      {
+        "slug": "3d-crt-display",
+        "count": 2,
+        "selectors": [
+          ".hero canvas",
+          ".hud"
+        ]
+      },
+      {
+        "slug": "3d-material-finish-switcher",
+        "count": 3,
+        "selectors": [
+          ".stage__poster, .stage canvas",
+          ".stage__fallback",
+          ".ui"
+        ]
+      },
+      {
+        "slug": "3d-parallax-footer",
+        "count": 2,
+        "selectors": [
+          "#footer-canvas",
+          ".footer-container::before"
+        ]
+      },
+      {
+        "slug": "3d-scroll-tunnel",
+        "count": 5,
+        "selectors": [
+          ".tunnel",
+          ".layer",
+          ".item",
+          ".item-overlay",
+          ".cue-line::after"
+        ]
+      },
+      {
+        "slug": "accordion-frames",
+        "count": 10,
+        "selectors": [
+          ".spotlight::after",
+          ".spotlight-track",
+          ".spotlight-panel",
+          ".spotlight-panel img",
+          ".spotlight-focus-indicator",
+          ".spotlight-focus-indicator::before, .spotlight-focus-indicator::after"
+        ]
+      },
+      {
+        "slug": "adaline-scroll-animation",
+        "count": 4,
+        "selectors": [
+          ".hero-content",
+          ".header",
+          ".hero-img-container",
+          ".hero-img .caption"
+        ]
+      },
+      {
+        "slug": "advanced-infinite-scroll",
+        "count": 3,
+        "selectors": [
+          ".menu-img",
+          ".menu-img::after",
+          ".menu-item"
+        ]
+      },
+      {
+        "slug": "aladesign-landing-page-reveal",
+        "count": 5,
+        "selectors": [
+          ".hero-overlay",
+          ".hero-overlay .counter",
+          ".overlay-text-container",
+          ".hero-images",
+          ".hero-header"
+        ]
+      },
+      {
+        "slug": "aminezegmou-landing-page",
+        "count": 3,
+        "selectors": [
+          ".preloader-btn-container",
+          ".pbc-svg-strokes, #pbc-logo, #pbc-label, #pbc-outro-label",
+          ".hero .preloader-revealer"
+        ]
+      },
+      {
+        "slug": "anchored-headline-speech-bubbles",
+        "count": 2,
+        "selectors": [
+          ".bubble",
+          ".bubble::after"
+        ]
+      },
+      {
+        "slug": "arch-portal-reveal",
+        "count": 2,
+        "selectors": [
+          ".reveal",
+          ".scene"
+        ]
+      },
+      {
+        "slug": "aristidebenoist-slider",
+        "count": 1,
+        "selectors": [
+          ".slide-title"
+        ]
+      },
+      {
+        "slug": "arock-menu",
+        "count": 4,
+        "selectors": [
+          ".hero",
+          ".hero::after",
+          ".hero .header",
+          ".menu-img img"
+        ]
+      },
+      {
+        "slug": "art-tech-nav",
+        "count": 3,
+        "selectors": [
+          ".hero",
+          ".page-meta",
+          ".burger:before, .burger:after"
+        ]
+      },
+      {
+        "slug": "ascii-image-reveal-effect",
+        "count": 2,
+        "selectors": [
+          ".img img",
+          ".img canvas"
+        ]
+      },
+      {
+        "slug": "ashfall-3d-image-gallery",
+        "count": 4,
+        "selectors": [
+          ".hero",
+          ".hero::before, .outro::before",
+          ".hero-hint",
+          ".outro"
+        ]
+      },
+      {
+        "slug": "ashleybrookecs-smudge-revealer",
+        "count": 5,
+        "selectors": [
+          ".hero::after",
+          ".hero-content-background, .hero-content-foreground",
+          ".layer-chrome",
+          ".edition-line",
+          ".smudge-revealer"
+        ]
+      },
+      {
+        "slug": "asset-orb-js",
+        "count": 2,
+        "selectors": [
+          ".frame::after",
+          ".crop"
+        ]
+      },
+      {
+        "slug": "audemarspiguet-menu",
+        "count": 6,
+        "selectors": [
+          ".hero::after",
+          ".menu .menu-bg",
+          ".menu .menu-bg-left, .menu .menu-bg-right",
+          ".menu .menu-bg-left-inner, .menu .menu-bg-right-inner",
+          ".menu .menu-items",
+          ".menu .menu-footer"
+        ]
+      },
+      {
+        "slug": "autoplay-hero-progress",
+        "count": 4,
+        "selectors": [
+          ".deck",
+          ".slide",
+          ".slide::after",
+          ".slide figcaption"
+        ]
+      },
+      {
+        "slug": "barba-js-page-transitions",
+        "count": 4,
+        "selectors": [
+          ".transition",
+          ".header-revealer",
+          ".header-revealer:after",
+          ".page-foot"
+        ]
+      },
+      {
+        "slug": "bennett-clive-scroll-animation",
+        "count": 2,
+        "selectors": [
+          ".hero-caption",
+          ".footer-caption"
+        ]
+      },
+      {
+        "slug": "bitkraft-menu",
+        "count": 8,
+        "selectors": [
+          ".menu-bg",
+          ".menu-bg::before, .menu-bg::after",
+          ".menu-overlay-nav, .menu-overlay-footer",
+          ".close-btn .close-btn-bar",
+          ".joystick",
+          ".center-icon"
+        ]
+      },
+      {
+        "slug": "block-reveal-page-transition",
+        "count": 3,
+        "selectors": [
+          ".section-bg",
+          ".section-scrim",
+          ".transition-block"
+        ]
+      },
+      {
+        "slug": "brandappart-sticky-cards",
+        "count": 3,
+        "selectors": [
+          ".intro::before, .outro::before",
+          ".sticky-cards .card",
+          ".sticky-cards .card::after"
+        ]
+      },
+      {
+        "slug": "brutalist-corridor",
+        "count": 7,
+        "selectors": [
+          ".corridor",
+          ".corridor::after",
+          ".overlay-mark, .overlay-coord, .overlay-status, .overlay-index",
+          "h1",
+          ".hero",
+          "nav"
+        ]
+      },
+      {
+        "slug": "burocratik-image-trail-js",
+        "count": 7,
+        "selectors": [
+          ".intro-index",
+          ".scroll-cue",
+          ".edge-caption",
+          ".trail-container::before",
+          ".corner",
+          ".trail-img"
+        ]
+      },
+      {
+        "slug": "camille-mormal-slider",
+        "count": 10,
+        "selectors": [
+          ".slider-images",
+          ".img",
+          ".slider-scrim",
+          ".slider-caption",
+          ".slider-counter",
+          ".slider-title"
+        ]
+      },
+      {
+        "slug": "cappen-fluid-simulation",
+        "count": 2,
+        "selectors": [
+          ".nav-links a::after",
+          ".hero-meta"
+        ]
+      },
+      {
+        "slug": "capsules-animated-columns",
+        "count": 7,
+        "selectors": [
+          ".site-head::before",
+          ".scroll-hint",
+          ".site-foot",
+          ".col",
+          ".col-content-wrapper-2",
+          "p.img-tag"
+        ]
+      },
+      {
+        "slug": "capsules-sticky-cards-javascript",
+        "count": 7,
+        "selectors": [
+          ".scroll-cue",
+          ".outro-footer",
+          ".card-marquee",
+          ".card-img",
+          ".card-img::after",
+          ".card-content"
+        ]
+      },
+      {
+        "slug": "cards",
+        "count": 2,
+        "selectors": [
+          ".card-content",
+          "button"
+        ]
+      },
+      {
+        "slug": "chromatic-aberration-gallery",
+        "count": 3,
+        "selectors": [
+          ".container",
+          "img",
+          ".hud-corner"
+        ]
+      },
+      {
+        "slug": "cielrose-threejs-slider-javascript",
+        "count": 2,
+        "selectors": [
+          "nav, footer",
+          ".gradient-bg"
+        ]
+      },
+      {
+        "slug": "circular-img-gallery",
+        "count": 2,
+        "selectors": [
+          ".plaque",
+          ".item"
+        ]
+      },
+      {
+        "slug": "clayboan-scroll-animation",
+        "count": 3,
+        "selectors": [
+          ".work-item-img",
+          ".work-item-img::after",
+          ".work-item-name"
+        ]
+      },
+      {
+        "slug": "contact-form",
+        "count": 5,
+        "selectors": [
+          ".nav, .tagline",
+          ".links",
+          ".header",
+          ".send",
+          "input[type=\"checkbox\"]:checked::after"
+        ]
+      },
+      {
+        "slug": "creative-clutter",
+        "count": 3,
+        "selectors": [
+          ".header",
+          ".header::before",
+          ".item"
+        ]
+      },
+      {
+        "slug": "criticaldanger-rebuild",
+        "count": 3,
+        "selectors": [
+          "nav",
+          ".sticky-header",
+          ".card"
+        ]
+      },
+      {
+        "slug": "cursor-driven-material-spotlight",
+        "count": 4,
+        "selectors": [
+          ".ui-bar",
+          ".exhibit-title",
+          ".label-card",
+          ".hint"
+        ]
+      },
+      {
+        "slug": "detroit-paris-infinite-slider",
+        "count": 2,
+        "selectors": [
+          ".slide",
+          ".hud, .intro"
+        ]
+      },
+      {
+        "slug": "direction-aware-hover-effect-javascript",
+        "count": 1,
+        "selectors": [
+          ".highlight"
+        ]
+      },
+      {
+        "slug": "dotted-path-traveller",
+        "count": 4,
+        "selectors": [
+          ".traveller",
+          ".stop",
+          ".stop::before",
+          ".stop::after"
+        ]
+      },
+      {
+        "slug": "eduardbodak-scroll-animation",
+        "count": 5,
+        "selectors": [
+          ".hero-copy",
+          ".hero-cards",
+          ".hero-cards .card::after, .flip-card-front::after",
+          ".cards-container .card .card-wrapper",
+          ".flip-card-front, .flip-card-back"
+        ]
+      },
+      {
+        "slug": "epic-scroll-anims-scrolltrigger-gsap",
+        "count": 7,
+        "selectors": [
+          "section.hero::before",
+          ".site-head",
+          ".hero-foot",
+          "section.pinned",
+          ".revealer",
+          ".revealer .revealer-1"
+        ]
+      },
+      {
+        "slug": "eseagency-scroll-carousel-javascript",
+        "count": 4,
+        "selectors": [
+          ".slide, .slide-img",
+          ".slide-img::after",
+          ".carousel-progress",
+          ".progress-bar::after"
+        ]
+      },
+      {
+        "slug": "ethnocare",
+        "count": 6,
+        "selectors": [
+          "nav",
+          ".intro::after",
+          ".intro-caption",
+          ".cards",
+          ".card",
+          ".step-counter"
+        ]
+      },
+      {
+        "slug": "exo-ape-infinite-carousel",
+        "count": 9,
+        "selectors": [
+          ".count p",
+          ".slide",
+          ".slide-bg-img",
+          ".slide-bg-img:after",
+          ".slide-main-img",
+          ".slide-main-img-wrapper"
+        ]
+      },
+      {
+        "slug": "exoape-menu-javascript",
+        "count": 7,
+        "selectors": [
+          "nav::before",
+          ".menu-toggle p",
+          ".menu-preview-img img",
+          ".menu-footer",
+          ".link a::after, .social a::after, .menu-footer a::after",
+          ".hero::after"
+        ]
+      },
+      {
+        "slug": "explode-text-on-scroll-matterjs",
+        "count": 4,
+        "selectors": [
+          ".scroll-hint",
+          "nav",
+          ".sticky::before",
+          ".char"
+        ]
+      },
+      {
+        "slug": "exploded-product-labels",
+        "count": 9,
+        "selectors": [
+          ".hero-img",
+          ".hero::after",
+          ".stage::before",
+          ".stage .label",
+          ".layer",
+          ".notes"
+        ]
+      },
+      {
+        "slug": "fameestate-scroll-animation",
+        "count": 3,
+        "selectors": [
+          ".hero-bg, .hero-content, .hero-revealer, .hero-images",
+          ".hero-bg::after",
+          ".hero-img, .hero-outro-content"
+        ]
+      },
+      {
+        "slug": "fanned-steps-scrub",
+        "count": 3,
+        "selectors": [
+          ".label",
+          ".step",
+          ".progress"
+        ]
+      },
+      {
+        "slug": "fiddle-digital-hover-effect",
+        "count": 2,
+        "selectors": [
+          ".grid-overlay",
+          ".grid-block"
+        ]
+      },
+      {
+        "slug": "fiddle-digital-scroll-animation",
+        "count": 2,
+        "selectors": [
+          ".intro::before, .outro::before",
+          ".frame-meta"
+        ]
+      },
+      {
+        "slug": "filters-fielddaysound",
+        "count": 1,
+        "selectors": [
+          ".items"
+        ]
+      },
+      {
+        "slug": "flowing-menu-curtain",
+        "count": 3,
+        "selectors": [
+          ".cover-img",
+          ".cover::after",
+          ".curtain"
+        ]
+      },
+      {
+        "slug": "fluid-splash-cursor",
+        "count": 2,
+        "selectors": [
+          ".tiles",
+          ".lamp"
+        ]
+      },
+      {
+        "slug": "followart-scroll-animation",
+        "count": 2,
+        "selectors": [
+          ".sheet-meta",
+          ".container::after"
+        ]
+      },
+      {
+        "slug": "fractal-glass-effect",
+        "count": 2,
+        "selectors": [
+          ".hero::after",
+          ".hero-content"
+        ]
+      },
+      {
+        "slug": "full-screen-slider",
+        "count": 7,
+        "selectors": [
+          ".slide",
+          ".slider-content",
+          ".hud",
+          ".slide-number",
+          ".slide-name",
+          ".slide-year"
+        ]
+      },
+      {
+        "slug": "gabrielcontassot-scroll",
+        "count": 1,
+        "selectors": [
+          ".img"
+        ]
+      },
+      {
+        "slug": "gradual-blur-edge",
+        "count": 3,
+        "selectors": [
+          ".edge",
+          ".edge > i",
+          ".hero-img"
+        ]
+      },
+      {
+        "slug": "gregorylalle",
+        "count": 2,
+        "selectors": [
+          ".index .mask",
+          ".indicator"
+        ]
+      },
+      {
+        "slug": "grid-deformation-effect",
+        "count": 5,
+        "selectors": [
+          ".hero-video",
+          ".hero-canvas",
+          ".hero-ui",
+          ".hero-ui::before, .hero-ui::after",
+          ".hero-hint"
+        ]
+      },
+      {
+        "slug": "grid-shutter-page-transition",
+        "count": 3,
+        "selectors": [
+          ".navbar-items a::after",
+          ".hero::before",
+          ".transition-block"
+        ]
+      },
+      {
+        "slug": "griflan-hover-effect",
+        "count": 6,
+        "selectors": [
+          ".site-head",
+          ".site-foot",
+          ".service-images",
+          ".img",
+          ".tags-container",
+          ".tag"
+        ]
+      },
+      {
+        "slug": "gsap-clip-carousel",
+        "count": 8,
+        "selectors": [
+          ".copy",
+          "footer",
+          ".slider",
+          ".slide-active",
+          ".slide-next",
+          ".slider-content"
+        ]
+      },
+      {
+        "slug": "gta-vi-landing-page-scroll-final",
+        "count": 4,
+        "selectors": [
+          ".hero-img-container, .hero-img-container img, .fade-overlay",
+          ".hero-img-logo",
+          ".hero-img-copy",
+          ".overlay-copy"
+        ]
+      },
+      {
+        "slug": "guiding-light",
+        "count": 2,
+        "selectors": [
+          ".lottie-container .fire-glow",
+          ".spotlight-mask"
+        ]
+      },
+      {
+        "slug": "henriheymans-hover",
+        "count": 2,
+        "selectors": [
+          "img",
+          ".scroll-cue"
+        ]
+      },
+      {
+        "slug": "heurebleue-scroll-animation",
+        "count": 5,
+        "selectors": [
+          ".hero-img",
+          ".hero-img::after",
+          ".hero-top",
+          ".footer-bg",
+          ".footer-bg::after"
+        ]
+      },
+      {
+        "slug": "hypnotic-gallery-gsap-flip",
+        "count": 3,
+        "selectors": [
+          ".img-previews",
+          ".gallery.layout-1-gallery .img",
+          ".gallery.layout-3-gallery .img"
+        ]
+      },
+      {
+        "slug": "image-explosion-scroll-animation",
+        "count": 2,
+        "selectors": [
+          ".explosion-container",
+          ".explosion-particle-img"
+        ]
+      },
+      {
+        "slug": "image-explosion-scroll-animation-js",
+        "count": 4,
+        "selectors": [
+          ".site-header",
+          ".hero::after",
+          ".explosion-container",
+          ".explosion-particle-img"
+        ]
+      },
+      {
+        "slug": "img-trail",
+        "count": 2,
+        "selectors": [
+          ".stage",
+          ".item"
+        ]
+      },
+      {
+        "slug": "infinite-draggable-image-gallery-javascript",
+        "count": 4,
+        "selectors": [
+          "nav, footer",
+          ".canvas",
+          ".item",
+          ".project-title"
+        ]
+      },
+      {
+        "slug": "infinite-horizontal-slider",
+        "count": 4,
+        "selectors": [
+          "nav, footer",
+          ".intro",
+          ".slide-track",
+          ".slide-overlay"
+        ]
+      },
+      {
+        "slug": "infinite-parallax-scroll-with-minimap",
+        "count": 4,
+        "selectors": [
+          ".project",
+          ".minimap-img-preview",
+          ".minimap-img-item",
+          ".minimap-item-info"
+        ]
+      },
+      {
+        "slug": "ingamana-scroll-animation",
+        "count": 1,
+        "selectors": [
+          ".intro-head, .intro-foot, .outro-foot"
+        ]
+      },
+      {
+        "slug": "inkfish-horizontal-scroll",
+        "count": 3,
+        "selectors": [
+          ".scroller",
+          ".container",
+          ".cap"
+        ]
+      },
+      {
+        "slug": "inkwell-image-gallery-javascript",
+        "count": 4,
+        "selectors": [
+          "nav, footer",
+          ".card",
+          ".center-hint",
+          ".title-container p"
+        ]
+      },
+      {
+        "slug": "interactive-team-section-javascript",
+        "count": 2,
+        "selectors": [
+          ".site-head, .site-foot",
+          ".name h1"
+        ]
+      },
+      {
+        "slug": "inversa-scroll-animation",
+        "count": 8,
+        "selectors": [
+          ".hero-img",
+          ".hero-img::after",
+          ".hero-grid-overlay",
+          ".marker",
+          ".marker .marker-icon:before",
+          ".hero-content"
+        ]
+      },
+      {
+        "slug": "ironhill-scroll-animation",
+        "count": 5,
+        "selectors": [
+          ".hero-img",
+          ".hero-img::after",
+          ".hero-header",
+          ".hero-canvas",
+          ".hero-content"
+        ]
+      },
+      {
+        "slug": "jamarea-menu",
+        "count": 6,
+        "selectors": [
+          ".hero-kicker",
+          ".menu-content",
+          ".menu-img",
+          ".menu-links-wrapper",
+          ".menu-link a span:nth-child(2)",
+          ".link-highlighter"
+        ]
+      },
+      {
+        "slug": "javascript-responsive-minimap",
+        "count": 6,
+        "selectors": [
+          ".site-info",
+          ".img-preview",
+          ".img-preview img",
+          ".minimap",
+          ".sheet-label",
+          ".indicator"
+        ]
+      },
+      {
+        "slug": "js-image-minimap",
+        "count": 2,
+        "selectors": [
+          ".active-img-indicator",
+          ".preview"
+        ]
+      },
+      {
+        "slug": "js-page-transitions",
+        "count": 1,
+        "selectors": [
+          ".hero"
+        ]
+      },
+      {
+        "slug": "junni",
+        "count": 3,
+        "selectors": [
+          "nav",
+          ".tile-face",
+          ".tile-front::before, .tile-back::before"
+        ]
+      },
+      {
+        "slug": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "count": 3,
+        "selectors": [
+          ".spotlight-images, .spotlight-cover-img",
+          ".img",
+          ".spotlight-intro-header, .spotlight-outro-header"
+        ]
+      },
+      {
+        "slug": "karim-saab-scroll-animation",
+        "count": 3,
+        "selectors": [
+          ".header",
+          ".spotlight-images",
+          ".mask-container"
+        ]
+      },
+      {
+        "slug": "karim-saab-work-carousel",
+        "count": 6,
+        "selectors": [
+          ".site-foot .scroll-cue::before",
+          ".slide, .slide-img",
+          ".slide-img::after",
+          ".slide-header",
+          ".slide-link a::after",
+          ".slide-info"
+        ]
+      },
+      {
+        "slug": "kin-landing-page",
+        "count": 6,
+        "selectors": [
+          ".images",
+          ".img",
+          ".site-logo",
+          ".nav",
+          ".team-img",
+          ".site-info"
+        ]
+      },
+      {
+        "slug": "konpo-lp-reveal",
+        "count": 9,
+        "selectors": [
+          ".hero-bg",
+          ".images-container",
+          ".images-container .img",
+          "nav .divider",
+          ".sidebar",
+          ".sidebar .divider"
+        ]
+      },
+      {
+        "slug": "kpverse-menu",
+        "count": 3,
+        "selectors": [
+          ".bg-hover",
+          ".menu-item span",
+          ".menu-content p::after"
+        ]
+      },
+      {
+        "slug": "kvs-studio-image-reveal",
+        "count": 4,
+        "selectors": [
+          ".scroll-cue::before",
+          ".spotlight-img",
+          ".dissolve-grid",
+          ".dissolve-cell"
+        ]
+      },
+      {
+        "slug": "landing-page-gravity",
+        "count": 7,
+        "selectors": [
+          ".container",
+          "#toggle-btn",
+          ".item",
+          ".overlay",
+          ".masthead",
+          ".overlay h1"
+        ]
+      },
+      {
+        "slug": "landing-page-reveal",
+        "count": 4,
+        "selectors": [
+          ".img-holder img",
+          ".logo",
+          ".hero::after",
+          ".hero-copy"
+        ]
+      },
+      {
+        "slug": "landing-page-reveal-no-webgl",
+        "count": 2,
+        "selectors": [
+          ".item",
+          ".loader"
+        ]
+      },
+      {
+        "slug": "larevoltosa-scroll-animation",
+        "count": 4,
+        "selectors": [
+          ".intro::before, .outro::before",
+          ".svg-container",
+          ".svg-container svg",
+          ".spotlight-header"
+        ]
+      },
+      {
+        "slug": "laserbysonymusic-landing-page-reveal-animation",
+        "count": 6,
+        "selectors": [
+          ".hero-bg",
+          ".hero-bg img",
+          ".header",
+          ".hero-footer",
+          ".progress-bar",
+          ".progress-bar .progress"
+        ]
+      },
+      {
+        "slug": "lava-buster",
+        "count": 1,
+        "selectors": [
+          ".corner"
+        ]
+      },
+      {
+        "slug": "lightbox",
+        "count": 2,
+        "selectors": [
+          "nav",
+          ".preview-container img"
+        ]
+      },
+      {
+        "slug": "lottie-scroll-animation",
+        "count": 2,
+        "selectors": [
+          ".end-lottie",
+          ".studio-footer"
+        ]
+      },
+      {
+        "slug": "lp-reveal-anim",
+        "count": 1,
+        "selectors": [
+          ".header"
+        ]
+      },
+      {
+        "slug": "lukebaffait-animated-footer",
+        "count": 4,
+        "selectors": [
+          ".footer-images",
+          ".footer-hand-img canvas",
+          ".footer-content",
+          ".footer-header"
+        ]
+      },
+      {
+        "slug": "lusion-fluid-particles",
+        "count": 2,
+        "selectors": [
+          ".header",
+          ".header::before"
+        ]
+      },
+      {
+        "slug": "lusion-lp-reveal",
+        "count": 4,
+        "selectors": [
+          ".website-content",
+          ".header-revealer",
+          ".header-revealer:after",
+          ".loader"
+        ]
+      },
+      {
+        "slug": "magnetic-marquee",
+        "count": 2,
+        "selectors": [
+          ".spotlight-nav, .spotlight-footer",
+          ".spotlight-marquee"
+        ]
+      },
+      {
+        "slug": "mask-reveal",
+        "count": 2,
+        "selectors": [
+          "nav",
+          ".mask"
+        ]
+      },
+      {
+        "slug": "mat-voyce-scroll-animation",
+        "count": 4,
+        "selectors": [
+          ".titles",
+          ".title h1",
+          ".images",
+          ".card"
+        ]
+      },
+      {
+        "slug": "maximatherapy-sticky-cards",
+        "count": 4,
+        "selectors": [
+          ".hero-content",
+          ".sticky-cards",
+          ".card",
+          ".card-index"
+        ]
+      },
+      {
+        "slug": "maxmilkin-preloader",
+        "count": 6,
+        "selectors": [
+          ".hero-bg",
+          ".hero-scrim",
+          ".hero-nav",
+          ".hero-copy",
+          ".hero-foot",
+          ".loader .counter"
+        ]
+      },
+      {
+        "slug": "media-monks-hover",
+        "count": 3,
+        "selectors": [
+          ".site-header",
+          ".overlay",
+          ".icon-holder"
+        ]
+      },
+      {
+        "slug": "meetings-slider",
+        "count": 11,
+        "selectors": [
+          "nav",
+          ".slide-container",
+          ".slide-img",
+          ".slider-title",
+          ".slider-title h1",
+          ".slider-counter"
+        ]
+      },
+      {
+        "slug": "menu-root-food",
+        "count": 4,
+        "selectors": [
+          ".container::after",
+          ".menu-item::before",
+          ".menu-link",
+          ".menu-img"
+        ]
+      },
+      {
+        "slug": "menuxl-text-displacement-animation",
+        "count": 2,
+        "selectors": [
+          ".masthead",
+          ".baseline"
+        ]
+      },
+      {
+        "slug": "metalab-lp-rebuild",
+        "count": 15,
+        "selectors": [
+          ".preview-bg",
+          ".preview-bg::after",
+          ".preview",
+          ".preview.variant-1 .preview-img",
+          ".preview.variant-1 .preview-title",
+          ".preview.variant-1 .preview-tags"
+        ]
+      },
+      {
+        "slug": "moblinks-interactive-logo",
+        "count": 3,
+        "selectors": [
+          ".depth-layer",
+          ".chrome",
+          ".nav a::after"
+        ]
+      },
+      {
+        "slug": "modular-slider",
+        "count": 6,
+        "selectors": [
+          "img",
+          ".slide-titles",
+          ".active::before",
+          ".slide-images",
+          ".img-top",
+          ".img-bottom"
+        ]
+      },
+      {
+        "slug": "mormal",
+        "count": 3,
+        "selectors": [
+          ".hero",
+          "footer",
+          ".preview"
+        ]
+      },
+      {
+        "slug": "mosaic-flip-hover-effect",
+        "count": 6,
+        "selectors": [
+          ".spotlight::before, .spotlight::after",
+          ".tile-face",
+          ".site-brand",
+          ".site-meta",
+          ".site-hint",
+          ".project-list"
+        ]
+      },
+      {
+        "slug": "nakedcityfilms-scroll-animation",
+        "count": 2,
+        "selectors": [
+          ".navbar-img::after",
+          ".navbar-logo"
+        ]
+      },
+      {
+        "slug": "navigate-scroll-animated-text-javascript",
+        "count": 1,
+        "selectors": [
+          ".anime-text .word span.keyword::before"
+        ]
+      },
+      {
+        "slug": "nextjs-text-reveal-animation",
+        "count": 3,
+        "selectors": [
+          "nav",
+          ".hero-img",
+          ".hero-img::after"
+        ]
+      },
+      {
+        "slug": "nextjs-view-transitions",
+        "count": 2,
+        "selectors": [
+          ".home h1",
+          ".home-meta"
+        ]
+      },
+      {
+        "slug": "nite-riot-landing-page-reveal-javascript",
+        "count": 3,
+        "selectors": [
+          ".banner-img",
+          ".intro-copy",
+          ".title"
+        ]
+      },
+      {
+        "slug": "nm-menu-rebuild",
+        "count": 3,
+        "selectors": [
+          ".burger:before, .burger:after",
+          ".menu-item p#active::after",
+          ".sub-nav"
+        ]
+      },
+      {
+        "slug": "nordquantique-scroll",
+        "count": 5,
+        "selectors": [
+          "img",
+          ".panel-inner",
+          ".index",
+          ".scroll-cue",
+          ".blocks-container"
+        ]
+      },
+      {
+        "slug": "nvg8-scroll-animation",
+        "count": 4,
+        "selectors": [
+          "section h1",
+          ".svg-container, .svg-container-2",
+          ".svg-row svg",
+          ".svg-container-2 svg"
+        ]
+      },
+      {
+        "slug": "nvg8-scroll-animation-2",
+        "count": 1,
+        "selectors": [
+          ".hero-header"
+        ]
+      },
+      {
+        "slug": "orchestra-3d-scroll-animation",
+        "count": 7,
+        "selectors": [
+          ".topbar",
+          ".logo",
+          ".cubes",
+          ".cube",
+          ".cube > div",
+          ".header-1"
+        ]
+      },
+      {
+        "slug": "orken-world-scroll-animation",
+        "count": 4,
+        "selectors": [
+          ".bg-img",
+          ".bg-img::after",
+          "canvas",
+          ".cards"
+        ]
+      },
+      {
+        "slug": "oshane-howard-lp-responsive",
+        "count": 3,
+        "selectors": [
+          "img",
+          ".website-content",
+          ".header"
+        ]
+      },
+      {
+        "slug": "our-revolution-lp",
+        "count": 3,
+        "selectors": [
+          ".loader-imgs",
+          ".hero",
+          "footer"
+        ]
+      },
+      {
+        "slug": "outfit-landing-page-reveal",
+        "count": 6,
+        "selectors": [
+          ".preloader-images",
+          ".preloader-img",
+          ".preloader-header",
+          ".preloader-counter",
+          ".header",
+          ".hero-footer"
+        ]
+      },
+      {
+        "slug": "outline-text-over-media",
+        "count": 3,
+        "selectors": [
+          ".bg",
+          ".stage::after",
+          ".credit"
+        ]
+      },
+      {
+        "slug": "overlay-menu",
+        "count": 4,
+        "selectors": [
+          ".hero::after",
+          ".hero-copy",
+          ".nav-content",
+          ".nav-bg"
+        ]
+      },
+      {
+        "slug": "oversized-year-scroll",
+        "count": 3,
+        "selectors": [
+          ".hero-img",
+          ".hero::after",
+          ".year"
+        ]
+      },
+      {
+        "slug": "p10-landing-page-reveal-gsap",
+        "count": 5,
+        "selectors": [
+          ".intro-title",
+          ".outro-title",
+          ".tag",
+          ".container .hero-img",
+          ".card"
+        ]
+      },
+      {
+        "slug": "page-transitions",
+        "count": 1,
+        "selectors": [
+          ".container"
+        ]
+      },
+      {
+        "slug": "page-transitions-view-transition-api",
+        "count": 1,
+        "selectors": [
+          ".hero h1"
+        ]
+      },
+      {
+        "slug": "parallax-effect",
+        "count": 8,
+        "selectors": [
+          "img",
+          ".img",
+          ".hero .img::after",
+          ".nav",
+          ".hero-title",
+          "section.projects > .img::after"
+        ]
+      },
+      {
+        "slug": "parallax-snap-infinite-scroll",
+        "count": 3,
+        "selectors": [
+          ".project-list",
+          ".project",
+          ".entry__type::before"
+        ]
+      },
+      {
+        "slug": "permianworld-landing-page-animation",
+        "count": 3,
+        "selectors": [
+          ".hero-img",
+          ".hero-content",
+          ".preloader-revealer"
+        ]
+      },
+      {
+        "slug": "phantom-gallery-javascript",
+        "count": 1,
+        "selectors": [
+          ".vignette-overlay"
+        ]
+      },
+      {
+        "slug": "phive-sticky-cards",
+        "count": 1,
+        "selectors": [
+          ".card-inner::after"
+        ]
+      },
+      {
+        "slug": "phive-text-scroll-animation",
+        "count": 2,
+        "selectors": [
+          ".text-container, .bg-img",
+          ".header"
+        ]
+      },
+      {
+        "slug": "physics-anim",
+        "count": 2,
+        "selectors": [
+          ".wordmark",
+          ".item"
+        ]
+      },
+      {
+        "slug": "pixelated-text-hover-shaders",
+        "count": 2,
+        "selectors": [
+          "#textContainer",
+          "canvas"
+        ]
+      },
+      {
+        "slug": "playable-objects",
+        "count": 5,
+        "selectors": [
+          ".topbar",
+          ".scroll-cue",
+          ".footer-content",
+          ".object-container",
+          ".object"
+        ]
+      },
+      {
+        "slug": "poly-app-photo-dump",
+        "count": 2,
+        "selectors": [
+          ".meta",
+          ".card"
+        ]
+      },
+      {
+        "slug": "poppr-menu",
+        "count": 7,
+        "selectors": [
+          ".hero::before",
+          ".hero-caption",
+          ".nav-logo, .menu-logo",
+          ".nav-toggle",
+          ".nav-toggle-close",
+          ".menu"
+        ]
+      },
+      {
+        "slug": "products-lightbox-gallery",
+        "count": 1,
+        "selectors": [
+          "#container"
+        ]
+      },
+      {
+        "slug": "project-page-overlay-animation",
+        "count": 2,
+        "selectors": [
+          ".items",
+          ".overlay"
+        ]
+      },
+      {
+        "slug": "prototypestudio-scroll-animation",
+        "count": 2,
+        "selectors": [
+          ".project-images",
+          ".project-names"
+        ]
+      },
+      {
+        "slug": "push-over-overlay-menu",
+        "count": 2,
+        "selectors": [
+          ".menu-hamburger-icon span",
+          ".menu-content-main"
+        ]
+      },
+      {
+        "slug": "qindustrial-scroll",
+        "count": 2,
+        "selectors": [
+          ".hero::after",
+          ".footer::after"
+        ]
+      },
+      {
+        "slug": "radga-horizontal-scroll-animation",
+        "count": 2,
+        "selectors": [
+          ".img",
+          ".slide::before"
+        ]
+      },
+      {
+        "slug": "radial-rotating-texts",
+        "count": 3,
+        "selectors": [
+          "img",
+          ".chart-ring::after",
+          ".item"
+        ]
+      },
+      {
+        "slug": "react-pan-canvas",
+        "count": 8,
+        "selectors": [
+          ".gallery",
+          ".work-video-wrapper",
+          ".item::after",
+          ".video-name",
+          ".preview-img",
+          ".chrome"
+        ]
+      },
+      {
+        "slug": "rejoice-menu",
+        "count": 5,
+        "selectors": [
+          ".website-content",
+          "h1.header",
+          ".video-play",
+          ".menu-link:after",
+          ".btn:before"
+        ]
+      },
+      {
+        "slug": "responsive-landing-page",
+        "count": 5,
+        "selectors": [
+          ".loader",
+          ".loader-content",
+          ".loader-bg",
+          ".loader-2",
+          ".links a::after"
+        ]
+      },
+      {
+        "slug": "ripple-displacement-slider",
+        "count": 7,
+        "selectors": [
+          ".masthead, .deck",
+          ".deck__hint::before",
+          ".frame-marks",
+          ".tick",
+          ".slide-content",
+          ".slide-title"
+        ]
+      },
+      {
+        "slug": "sageeast-3d-scroll",
+        "count": 12,
+        "selectors": [
+          ".active-slide img",
+          ".slide",
+          "#slide-1",
+          "#slide-2",
+          "#slide-3",
+          "#slide-4"
+        ]
+      },
+      {
+        "slug": "samuelsiebler-js",
+        "count": 4,
+        "selectors": [
+          ".hand-container",
+          ".hand",
+          ".intro",
+          ".website-content"
+        ]
+      },
+      {
+        "slug": "sarah-bassett",
+        "count": 1,
+        "selectors": [
+          ".container"
+        ]
+      },
+      {
+        "slug": "savoirfaire-landing-page-reveal-animation",
+        "count": 5,
+        "selectors": [
+          ".digit h1",
+          ".revealer",
+          ".site-info",
+          ".toggle-btn",
+          ".header"
+        ]
+      },
+      {
+        "slug": "savoirfaire-lp",
+        "count": 4,
+        "selectors": [
+          ".hint",
+          ".header",
+          ".video-container, .img-container",
+          ".cursor"
+        ]
+      },
+      {
+        "slug": "scroll-powered-svg-stroke",
+        "count": 1,
+        "selectors": [
+          ".spotlight .svg-path"
+        ]
+      },
+      {
+        "slug": "scroll-powered-svg-stroke-2",
+        "count": 2,
+        "selectors": [
+          ".topbar",
+          ".spotlight .svg-path"
+        ]
+      },
+      {
+        "slug": "scroll-wave-image-gallery",
+        "count": 3,
+        "selectors": [
+          ".scroll-cue",
+          ".colophon",
+          ".plate-caption"
+        ]
+      },
+      {
+        "slug": "seventeenagency-scroll-animation",
+        "count": 2,
+        "selectors": [
+          ".contact-visual .contact-icon",
+          ".reel-note"
+        ]
+      },
+      {
+        "slug": "shaped-section-boundary",
+        "count": 1,
+        "selectors": [
+          ".edge"
+        ]
+      },
+      {
+        "slug": "sidebar-slide-out-menu",
+        "count": 3,
+        "selectors": [
+          ".container::after",
+          ".hero",
+          ".overlay-toggle"
+        ]
+      },
+      {
+        "slug": "silenceo",
+        "count": 3,
+        "selectors": [
+          ".scan-info",
+          ".barcode",
+          ".purchased"
+        ]
+      },
+      {
+        "slug": "sofihealth-product-scroll-animation",
+        "count": 3,
+        "selectors": [
+          ".model-container",
+          ".circular-mask",
+          ".tooltips"
+        ]
+      },
+      {
+        "slug": "spencergabor-magnetic-cards",
+        "count": 7,
+        "selectors": [
+          ".spotlight::after",
+          ".spotlight::before",
+          ".topbar",
+          ".hero-top, .hero-bottom",
+          ".cards",
+          ".card"
+        ]
+      },
+      {
+        "slug": "stacked-alternating-marquees",
+        "count": 2,
+        "selectors": [
+          ".hero-img",
+          ".hero::after"
+        ]
+      },
+      {
+        "slug": "steelworks-landing-page-reveal",
+        "count": 4,
+        "selectors": [
+          ".preloader-overlay .preloader",
+          ".intro-img",
+          ".img-scrim",
+          ".hero-content"
+        ]
+      },
+      {
+        "slug": "sticky-cards",
+        "count": 1,
+        "selectors": [
+          ".hero-overlay"
+        ]
+      },
+      {
+        "slug": "sticky-cards-2",
+        "count": 3,
+        "selectors": [
+          ".site-nav",
+          ".hero h1",
+          ".img"
+        ]
+      },
+      {
+        "slug": "sticky-cards-ashfall-rebuild-js",
+        "count": 2,
+        "selectors": [
+          ".card",
+          ".tag"
+        ]
+      },
+      {
+        "slug": "sticky-image-minimap",
+        "count": 2,
+        "selectors": [
+          ".reel-label, .reel-count",
+          ".img::after"
+        ]
+      },
+      {
+        "slug": "stories",
+        "count": 9,
+        "selectors": [
+          "img",
+          ".cursor",
+          ".story-img",
+          ".scrim",
+          ".img",
+          ".story-content"
+        ]
+      },
+      {
+        "slug": "story-world-carousel-slider",
+        "count": 5,
+        "selectors": [
+          ".slider",
+          ".slider::after",
+          ".slide",
+          "img",
+          ".timeline"
+        ]
+      },
+      {
+        "slug": "studiodialect-image-gallery",
+        "count": 2,
+        "selectors": [
+          "canvas",
+          ".scrollcue"
+        ]
+      },
+      {
+        "slug": "svg-image-hover-effect",
+        "count": 2,
+        "selectors": [
+          ".card-container .svg-stroke",
+          ".card-title"
+        ]
+      },
+      {
+        "slug": "svg-stroke-page-transition",
+        "count": 1,
+        "selectors": [
+          ".navbar-items a::after"
+        ]
+      },
+      {
+        "slug": "telescope-img-scroll-animation",
+        "count": 3,
+        "selectors": [
+          ".banner-img-container .img",
+          ".banner-header",
+          ".banner-intro-text-container"
+        ]
+      },
+      {
+        "slug": "telescope-scroll-animation",
+        "count": 7,
+        "selectors": [
+          ".spotlight-intro-text-wrapper",
+          ".spotlight-bg-img",
+          ".spotlight-titles-container",
+          ".spotlight-titles-container::before, .spotlight-titles-container::after",
+          ".spotlight-images",
+          ".spotlight-img"
+        ]
+      },
+      {
+        "slug": "text-hover-effect",
+        "count": 2,
+        "selectors": [
+          ".item",
+          ".hero-copy"
+        ]
+      },
+      {
+        "slug": "text-reveal-animation",
+        "count": 1,
+        "selectors": [
+          ".signature"
+        ]
+      },
+      {
+        "slug": "the-happy-few",
+        "count": 3,
+        "selectors": [
+          ".emoji",
+          ".menu a::after",
+          ".hero-img"
+        ]
+      },
+      {
+        "slug": "thefirstthelast-scroll-animation",
+        "count": 1,
+        "selectors": [
+          ".card"
+        ]
+      },
+      {
+        "slug": "threejs-slider-final",
+        "count": 1,
+        "selectors": [
+          ".hint::before"
+        ]
+      },
+      {
+        "slug": "truekindskincare-landing-page-reveal-javascript",
+        "count": 11,
+        "selectors": [
+          ".hero-img",
+          ".hero-img::after",
+          ".nav",
+          ".cta",
+          ".cta-label",
+          ".overlay"
+        ]
+      },
+      {
+        "slug": "tunnel",
+        "count": 2,
+        "selectors": [
+          ".slide",
+          ".slide-copy"
+        ]
+      },
+      {
+        "slug": "turbulent-inversion-lens-hover-effect-javascript",
+        "count": 2,
+        "selectors": [
+          ".lens-ui",
+          ".lens-cta"
+        ]
+      },
+      {
+        "slug": "var-font-anim",
+        "count": 4,
+        "selectors": [
+          "section.hero img",
+          ".hero-overlay",
+          ".scroll-cue",
+          ".marquee"
+        ]
+      },
+      {
+        "slug": "voku-image-slider",
+        "count": 3,
+        "selectors": [
+          ".masthead",
+          ".slide",
+          ".caption"
+        ]
+      },
+      {
+        "slug": "voltlites-scroll-animation",
+        "count": 4,
+        "selectors": [
+          ".hero-spotlight-gallery",
+          ".hero-overlay",
+          ".hero-header",
+          ".hero-footer"
+        ]
+      },
+      {
+        "slug": "voyeurverite-scroll-animation",
+        "count": 8,
+        "selectors": [
+          ".hero-fg-content, .hero-bg-content",
+          ".hero-fg-img",
+          ".hero-fg-kicker",
+          ".hero-fg-header",
+          ".hero-fg-overlay-dark, .hero-fg-overlay",
+          ".hero-bg-content"
+        ]
+      },
+      {
+        "slug": "vucko-scroll-animation-javascript",
+        "count": 2,
+        "selectors": [
+          ".video-wrapper",
+          "iframe"
+        ]
+      },
+      {
+        "slug": "waabi-scroll-animation",
+        "count": 2,
+        "selectors": [
+          ".hero-img, .hero-header, .hero-copy",
+          ".about-header"
+        ]
+      },
+      {
+        "slug": "warp-slider",
+        "count": 5,
+        "selectors": [
+          ".scrim",
+          ".chrome",
+          ".slider-content",
+          ".slide-title",
+          ".slide-description"
+        ]
+      },
+      {
+        "slug": "warp-slider-next",
+        "count": 6,
+        "selectors": [
+          ".slider::after",
+          ".slider-nav",
+          ".slider-content",
+          ".slide-title",
+          ".slide-description",
+          ".slider-hint"
+        ]
+      },
+      {
+        "slug": "we-go-again",
+        "count": 7,
+        "selectors": [
+          ".blurry-prev",
+          ".overlay",
+          ".header",
+          ".project-details",
+          ".project-img",
+          ".item::before"
+        ]
+      },
+      {
+        "slug": "webgl-interactive-gradient",
+        "count": 3,
+        "selectors": [
+          "nav, .hero-footer",
+          ".gradient-canvas",
+          ".hero-mark"
+        ]
+      },
+      {
+        "slug": "werowallet-scroll-animation",
+        "count": 3,
+        "selectors": [
+          ".spotlight-content",
+          ".strokes",
+          ".sparkles"
+        ]
+      },
+      {
+        "slug": "wodniack-work-section-scroll",
+        "count": 6,
+        "selectors": [
+          "canvas",
+          "#grid-canvas",
+          ".text-container",
+          ".letter",
+          ".work__frame",
+          ".work__tag"
+        ]
+      },
+      {
+        "slug": "work-carousel-karim-saab",
+        "count": 6,
+        "selectors": [
+          ".masthead",
+          ".scroll-hint::before",
+          ".slide, .slide-img",
+          ".slide-img::after",
+          ".slide-header",
+          ".slide-info"
+        ]
+      },
+      {
+        "slug": "workingstiff-animated-teams-section",
+        "count": 2,
+        "selectors": [
+          ".team-member-name-initial",
+          ".team-member-card"
+        ]
+      },
+      {
+        "slug": "yard-hover",
+        "count": 4,
+        "selectors": [
+          ".menu-item p",
+          ".preview",
+          ".preview-img",
+          ".preview-img img"
+        ]
+      },
+      {
+        "slug": "zajno-lp",
+        "count": 7,
+        "selectors": [
+          ".counter",
+          ".hero",
+          ".overlay",
+          "nav",
+          ".header",
+          ".hero-img"
+        ]
+      },
+      {
+        "slug": "zajno-page-transitions",
+        "count": 5,
+        "selectors": [
+          ".nav-items .nav-item a::after",
+          ".home .header",
+          ".home .hero-img",
+          ".hero-caption",
+          ".contact .socials"
+        ]
+      },
+      {
+        "slug": "zentry-scroll",
+        "count": 4,
+        "selectors": [
+          ".about-slate",
+          ".intro",
+          ".img-1, .img-2, .img-3",
+          ".copy"
+        ]
+      }
+    ]
+  },
+  "layout_animated": {
+    "count": 36,
+    "components": [
+      {
+        "slug": "adaline-scroll-animation",
+        "props": [
+          "height"
+        ]
+      },
+      {
+        "slug": "ashleybrookecs-smudge-revealer",
+        "props": [
+          "height"
+        ]
+      },
+      {
+        "slug": "bennett-clive-scroll-animation",
+        "props": [
+          "fontSize"
+        ]
+      },
+      {
+        "slug": "bitkraft-menu",
+        "props": [
+          "height"
+        ]
+      },
+      {
+        "slug": "creative-clutter",
+        "props": [
+          "height"
+        ]
+      },
+      {
+        "slug": "detroit-paris-infinite-slider",
+        "props": [
+          "height"
+        ]
+      },
+      {
+        "slug": "direction-aware-hover-effect-javascript",
+        "props": [
+          "height"
+        ]
+      },
+      {
+        "slug": "eduardbodak-scroll-animation",
+        "props": [
+          "height"
+        ]
+      },
+      {
+        "slug": "fiddle-digital-hover-effect",
+        "props": [
+          "height"
+        ]
+      },
+      {
+        "slug": "filters-fielddaysound",
+        "props": [
+          "fontSize"
+        ]
+      },
+      {
+        "slug": "gradual-blur-edge",
+        "props": [
+          "height"
+        ]
+      },
+      {
+        "slug": "griflan-hover-effect",
+        "props": [
+          "height"
+        ]
+      },
+      {
+        "slug": "gsap-clip-carousel",
+        "props": [
+          "height"
+        ]
+      },
+      {
+        "slug": "gta-vi-landing-page-scroll-final",
+        "props": [
+          "height"
+        ]
+      },
+      {
+        "slug": "infinite-draggable-image-gallery-javascript",
+        "props": [
+          "height"
+        ]
+      },
+      {
+        "slug": "infinite-horizontal-slider",
+        "props": [
+          "height"
+        ]
+      },
+      {
+        "slug": "ingamana-scroll-animation",
+        "props": [
+          "height"
+        ]
+      },
+      {
+        "slug": "interactive-particle-logo",
+        "props": [
+          "height"
+        ]
+      },
+      {
+        "slug": "interactive-team-section-javascript",
+        "props": [
+          "height"
+        ]
+      },
+      {
+        "slug": "javascript-responsive-minimap",
+        "props": [
+          "height",
+          "marginTop"
+        ]
+      },
+      {
+        "slug": "kvs-studio-image-reveal",
+        "props": [
+          "fontSize",
+          "height"
+        ]
+      },
+      {
+        "slug": "metalab-lp-rebuild",
+        "props": [
+          "height"
+        ]
+      },
+      {
+        "slug": "nakedcityfilms-scroll-animation",
+        "props": [
+          "height"
+        ]
+      },
+      {
+        "slug": "nvg8-scroll-animation-2",
+        "props": [
+          "height"
+        ]
+      },
+      {
+        "slug": "orken-world-scroll-animation",
+        "props": [
+          "height"
+        ]
+      },
+      {
+        "slug": "p10-landing-page-reveal-gsap",
+        "props": [
+          "fontSize"
+        ]
+      },
+      {
+        "slug": "qindustrial-scroll",
+        "props": [
+          "height"
+        ]
+      },
+      {
+        "slug": "rejoice-menu",
+        "props": [
+          "height"
+        ]
+      },
+      {
+        "slug": "responsive-landing-page",
+        "props": [
+          "height"
+        ]
+      },
+      {
+        "slug": "samuelsiebler-js",
+        "props": [
+          "height"
+        ]
+      },
+      {
+        "slug": "sarah-bassett",
+        "props": [
+          "height"
+        ]
+      },
+      {
+        "slug": "scroll-wave-image-gallery",
+        "props": [
+          "height"
+        ]
+      },
+      {
+        "slug": "the-happy-few",
+        "props": [
+          "height"
+        ]
+      },
+      {
+        "slug": "vucko-scroll-animation-javascript",
+        "props": [
+          "fontSize"
+        ]
+      },
+      {
+        "slug": "waabi-scroll-animation",
+        "props": [
+          "height"
+        ]
+      },
+      {
+        "slug": "we-go-again",
+        "props": [
+          "height"
+        ]
+      }
+    ]
+  },
+  "fixed_chrome": {
+    "count": 44,
+    "components": [
+      {
+        "slug": "404",
+        "bars": [
+          "nav"
+        ],
+        "category": "scroll"
+      },
+      {
+        "slug": "3d-slider-threejs",
+        "bars": [
+          "nav",
+          "footer"
+        ],
+        "category": "3d-webgl"
+      },
+      {
+        "slug": "arock-menu",
+        "bars": [
+          "nav"
+        ],
+        "category": "menu"
+      },
+      {
+        "slug": "ashfall-3d-image-gallery",
+        "bars": [
+          ".nav"
+        ],
+        "category": "3d-webgl"
+      },
+      {
+        "slug": "camille-mormal-slider",
+        "bars": [
+          "nav"
+        ],
+        "category": "slider"
+      },
+      {
+        "slug": "cappen-fluid-simulation",
+        "bars": [
+          "nav"
+        ],
+        "category": "3d-webgl"
+      },
+      {
+        "slug": "eseagency-scroll-carousel-javascript",
+        "bars": [
+          "nav"
+        ],
+        "category": "slider"
+      },
+      {
+        "slug": "exo-ape-infinite-carousel",
+        "bars": [
+          "nav",
+          "footer"
+        ],
+        "category": "slider"
+      },
+      {
+        "slug": "gentlerain",
+        "bars": [
+          "nav",
+          "footer"
+        ],
+        "category": "3d-webgl"
+      },
+      {
+        "slug": "gregorylalle",
+        "bars": [
+          "nav"
+        ],
+        "category": "scroll"
+      },
+      {
+        "slug": "gsap-clip-carousel",
+        "bars": [
+          "nav"
+        ],
+        "category": "slider"
+      },
+      {
+        "slug": "hypnotic-gallery-gsap-flip",
+        "bars": [
+          "nav"
+        ],
+        "category": "gallery"
+      },
+      {
+        "slug": "inkfish-horizontal-scroll",
+        "bars": [
+          "nav"
+        ],
+        "category": "gallery"
+      },
+      {
+        "slug": "jamarea-menu",
+        "bars": [
+          "nav"
+        ],
+        "category": "menu"
+      },
+      {
+        "slug": "javascript-responsive-minimap",
+        "bars": [
+          "nav"
+        ],
+        "category": "gallery"
+      },
+      {
+        "slug": "js-page-transitions",
+        "bars": [
+          "nav"
+        ],
+        "category": "transition"
+      },
+      {
+        "slug": "kpverse-menu",
+        "bars": [
+          "nav"
+        ],
+        "category": "menu"
+      },
+      {
+        "slug": "landing-page-reveal-no-webgl",
+        "bars": [
+          "nav"
+        ],
+        "category": "preloader"
+      },
+      {
+        "slug": "lottie-scroll-animation",
+        "bars": [
+          "nav"
+        ],
+        "category": "scroll"
+      },
+      {
+        "slug": "lp-reveal-anim",
+        "bars": [
+          "nav"
+        ],
+        "category": "preloader"
+      },
+      {
+        "slug": "lukebaffait-animated-footer",
+        "bars": [
+          "footer"
+        ],
+        "category": "footer"
+      },
+      {
+        "slug": "mat-voyce-scroll-animation",
+        "bars": [
+          "nav"
+        ],
+        "category": "scroll"
+      },
+      {
+        "slug": "metalab-lp-rebuild",
+        "bars": [
+          "footer"
+        ],
+        "category": "hover"
+      },
+      {
+        "slug": "nextjs-view-transitions",
+        "bars": [
+          ".nav"
+        ],
+        "category": "transition"
+      },
+      {
+        "slug": "offficestud",
+        "bars": [
+          "nav"
+        ],
+        "category": "3d-webgl"
+      },
+      {
+        "slug": "oshane-howard-lp-responsive",
+        "bars": [
+          "nav"
+        ],
+        "category": "preloader"
+      },
+      {
+        "slug": "overlay-menu",
+        "bars": [
+          "nav"
+        ],
+        "category": "menu"
+      },
+      {
+        "slug": "page-transitions",
+        "bars": [
+          ".nav"
+        ],
+        "category": "transition"
+      },
+      {
+        "slug": "page-transitions-view-transition-api",
+        "bars": [
+          "nav"
+        ],
+        "category": "transition"
+      },
+      {
+        "slug": "permianworld-landing-page-animation",
+        "bars": [
+          "nav"
+        ],
+        "category": "preloader"
+      },
+      {
+        "slug": "poppr-menu",
+        "bars": [
+          ".nav"
+        ],
+        "category": "menu"
+      },
+      {
+        "slug": "project-page-overlay-animation",
+        "bars": [
+          ".nav"
+        ],
+        "category": "interactive"
+      },
+      {
+        "slug": "push-over-overlay-menu",
+        "bars": [
+          "nav"
+        ],
+        "category": "menu"
+      },
+      {
+        "slug": "rejoice-menu",
+        "bars": [
+          "nav"
+        ],
+        "category": "menu"
+      },
+      {
+        "slug": "responsive-landing-page",
+        "bars": [
+          "footer"
+        ],
+        "category": "preloader"
+      },
+      {
+        "slug": "sageeast-3d-scroll",
+        "bars": [
+          "nav",
+          "footer"
+        ],
+        "category": "scroll"
+      },
+      {
+        "slug": "savoirfaire-lp",
+        "bars": [
+          "nav"
+        ],
+        "category": "interactive"
+      },
+      {
+        "slug": "steelworks-landing-page-reveal",
+        "bars": [
+          "nav"
+        ],
+        "category": "preloader"
+      },
+      {
+        "slug": "sticky-image-minimap",
+        "bars": [
+          "nav"
+        ],
+        "category": "scroll"
+      },
+      {
+        "slug": "svg-stroke-page-transition",
+        "bars": [
+          ".navbar"
+        ],
+        "category": "transition"
+      },
+      {
+        "slug": "threejs-slider-final",
+        "bars": [
+          "nav",
+          "footer"
+        ],
+        "category": "slider"
+      },
+      {
+        "slug": "threejs-video-gallery",
+        "bars": [
+          "nav"
+        ],
+        "category": "3d-webgl"
+      },
+      {
+        "slug": "vucko-scroll-animation-javascript",
+        "bars": [
+          "nav"
+        ],
+        "category": "scroll"
+      },
+      {
+        "slug": "zajno-page-transitions",
+        "bars": [
+          ".nav"
+        ],
+        "category": "transition"
+      }
+    ]
+  },
+  "corridor": {
+    "count": 71,
+    "pinned": 45,
+    "unpinned": 26,
+    "unpinned_slugs": [
+      "3d-circular-img-gallery",
+      "3d-slider-threejs",
+      "ashfall-3d-image-gallery",
+      "bennett-clive-scroll-animation",
+      "clayboan-scroll-animation",
+      "full-screen-slider",
+      "gabrielcontassot-scroll",
+      "heurebleue-scroll-animation",
+      "ironhill-scroll-animation",
+      "karim-saab-work-carousel",
+      "lottie-scroll-animation",
+      "nakedcityfilms-scroll-animation",
+      "nordquantique-scroll",
+      "offficestud",
+      "parallax-effect",
+      "pure-js-vanilla-image-slider",
+      "qindustrial-scroll",
+      "radial-rotating-texts",
+      "react-pan-canvas",
+      "sageeast-3d-scroll",
+      "sarah-bassett",
+      "studiodialect-image-gallery",
+      "tunnel",
+      "var-font-anim",
+      "we-go-again",
+      "work-carousel-karim-saab"
+    ]
+  },
+  "assets": {
+    "median": 838359,
+    "p90": 3332946,
+    "max": 112798294,
+    "heaviest": [
+      {
+        "slug": "threejs-video-gallery",
+        "bytes": 112798294
+      },
+      {
+        "slug": "savoirfaire-lp",
+        "bytes": 43627476
+      },
+      {
+        "slug": "adaline-scroll-animation",
+        "bytes": 31045072
+      },
+      {
+        "slug": "3d-crt-display",
+        "bytes": 23714746
+      },
+      {
+        "slug": "lottie-scroll-animation",
+        "bytes": 22503381
+      },
+      {
+        "slug": "sofihealth-product-scroll-animation",
+        "bytes": 20068520
+      },
+      {
+        "slug": "radial-rotating-texts",
+        "bytes": 12698956
+      },
+      {
+        "slug": "gabrielcontassot-scroll",
+        "bytes": 11010054
+      },
+      {
+        "slug": "stories",
+        "bytes": 9668820
+      },
+      {
+        "slug": "brutalist-corridor",
+        "bytes": 9410833
+      }
+    ],
+    "total_library": 559290755
+  }
+}

@@ -1,0 +1,348 @@
+{
+  "slug": "steelworks-landing-page-reveal",
+  "sourceDir": "codegrid-steelworks-landing-page-reveal",
+  "title": "Steelworks Landing Page Reveal",
+  "description": "On-load preloader and hero reveal: a white progress bar scales across a dark overlay that wipes away via clip-path, five small rotated images glide in as a centered row with CustomEase, then the side images fly off-screen while the center one expands to a fullscreen hero as nav, headline and social links reveal line by line with SplitText masks.",
+  "category": "preloader",
+  "tags": [
+    "preloader",
+    "reveal",
+    "hero",
+    "intro",
+    "images",
+    "split-text",
+    "custom-ease",
+    "clip-path",
+    "on-load"
+  ],
+  "gsap": [
+    "SplitText",
+    "CustomEase"
+  ],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 4800,
+    "clip": {
+      "seconds": 9,
+      "actions": [
+        {
+          "type": "scroll",
+          "to": 0.9,
+          "mode": "pingpong"
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "img-1.jpg",
+      "desc": "extreme close-up of a machined brushed-steel surface with concentric turning marks, cool graphite tones and one warm highlight",
+      "role": "intro row image 1 — material texture",
+      "replaced": true
+    },
+    {
+      "file": "img-2.jpg",
+      "desc": "single cast-aluminium sculptural stool on a seamless graphite studio backdrop, soft directional light, editorial product shot",
+      "role": "intro row image 2 — designed object",
+      "replaced": true
+    },
+    {
+      "file": "img-3.jpg",
+      "desc": "flagship shot: a monolithic cast-metal designed object in a dark studio, dramatic raking side light, deep shadow filling the lower-left, warm off-white fall-off upper-right",
+      "role": "center image that scales to fullscreen hero background",
+      "replaced": true
+    },
+    {
+      "file": "img-4.jpg",
+      "desc": "matte-black machined aluminium hardware detail on a warm graphite backdrop, clean studio light with a subtle brass rim",
+      "role": "intro row image 4 — hardware detail",
+      "replaced": true
+    },
+    {
+      "file": "img-5.jpg",
+      "desc": "foundry material study — cooling cast-metal billets with a warm amber glow against deep shadow, atmospheric",
+      "role": "intro row image 5 — foundry / material",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "cinematic",
+      "editorial",
+      "elegant"
+    ],
+    "useCase": [
+      "preloader",
+      "hero",
+      "image-reveal"
+    ],
+    "useWhen": "Úsalo cuando quieras una intro de carga con imágenes editoriales que aterrizan y una portada que crece a pantalla completa con títulos línea a línea.",
+    "aliases": [
+      "preloader de portada",
+      "intro de carga",
+      "hero reveal",
+      "cortina de carga",
+      "landing intro",
+      "reveal editorial"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "SplitText",
+      "CustomEase"
+    ],
+    "assetCount": 5,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#16130f",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "white",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f6f3ed",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--white"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "brass",
+      "label": "Acento",
+      "type": "color",
+      "default": "#c6923f",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--brass"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "introImgScale",
+      "label": "Tamaño de las fotos",
+      "type": "range",
+      "min": 0.08,
+      "max": 0.5,
+      "step": 0.01,
+      "default": 0.2,
+      "apply": {
+        "kind": "js",
+        "path": "introImgScale"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "introImgGap",
+      "label": "Separación entre fotos",
+      "type": "range",
+      "min": 0,
+      "max": 160,
+      "step": 5,
+      "default": 40,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "introImgGap"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "tiltAmount",
+      "label": "Inclinación de las fotos",
+      "type": "range",
+      "min": 0,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "tiltAmount"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "lineStagger",
+      "label": "Escalonado de las líneas",
+      "type": "range",
+      "min": 0,
+      "max": 0.4,
+      "step": 0.01,
+      "default": 0.1,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "lineStagger"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "steelworks-landing-page-reveal",
+    "title": "Steelworks Landing Page Reveal",
+    "category": "preloader",
+    "trigger": "load",
+    "libs": [
+      "gsap",
+      "SplitText",
+      "CustomEase"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "custom",
+    "duration_range": [
+      1,
+      1.5
+    ],
+    "stagger": 0.1,
+    "assets_required": {
+      "count": 5,
+      "bytes": 861073,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "entry-veil",
+        "reason": "velo de entrada a pantalla completa en la carga"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "aladesign-landing-page-reveal",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "aristidebenoist-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "audemarspiguet-menu",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "camille-mormal-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "hypnotic-gallery-gsap-flip",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "kin-landing-page",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "landing-page-reveal-no-webgl",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "meetings-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "menu-root-food",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "outfit-landing-page-reveal",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "p10-landing-page-reveal-gsap",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "push-over-overlay-menu",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "story-world-carousel-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "zajno-lp",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      }
+    ],
+    "cluster": "LOAD-ONESHOT",
+    "engine": "gsap",
+    "motion_signature": "single on-load GSAP timeline (~7.4s wall incl. 1s delay), zero scroll input: brass bar scales in on left origin then retracts from right, black full-viewport overlay clip-path wipes up overlapping it, five 0.2-scaled rotated cards slide from off-screen-left into a centered row on a 0.025s cascade, the outer four fly off ±100vw while the middle card scales to fullscreen, then masked SplitText lines rise y 125%->0 at 0.1 stagger",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "entry-veil"
+  },
+  "review": {
+    "status": "public"
+  }
+}

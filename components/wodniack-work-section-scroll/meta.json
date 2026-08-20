@@ -1,0 +1,254 @@
+{
+  "slug": "wodniack-work-section-scroll",
+  "sourceDir": "cg-wodniack-work-section-scroll",
+  "title": "Wodniack Work Section Scroll",
+  "description": "A pinned scroll section where the word WORK, built from HTML letter divs, streams along four Three.js CatmullRom curves projected to screen space while a warped WebGL plane slides a filmstrip of project images across a scrolling red dot grid. A single ScrollTrigger (pin, scrub, end +=700%) drives the progress that feeds the letter paths, the CanvasTexture card offset and the grid, with Lenis smoothing the scroll and per-frame lerping easing the letters into place.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "webgl",
+    "three",
+    "pin",
+    "scrolltrigger",
+    "lenis",
+    "kinetic-typography",
+    "editorial",
+    "curved-plane"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis",
+    "three"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "scrollTo": 0.8,
+    "afterScrollMs": 1200,
+    "clip": {
+      "seconds": 10
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "Avant-garde fashion editorial: model reclining on a deep-red seamless backdrop with spiked black hair and sharp black tailoring",
+      "role": "project card image in the WebGL filmstrip",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "Editorial portrait of a model in an oversized mustard-yellow wool coat against a hot-magenta seamless backdrop",
+      "role": "project card image in the WebGL filmstrip",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "Side-profile fashion portrait on a pink seamless: sculptural puff-sleeve garment and shaped natural hair with a red cheek accent",
+      "role": "project card image in the WebGL filmstrip",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "Cobalt-blue oversized power suit, model seated on a cream studio floor, editorial lighting",
+      "role": "project card image in the WebGL filmstrip",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "Paper-couture look: pleated white origami headpiece and fan skirt with satin gloves on a red seamless backdrop",
+      "role": "project card image in the WebGL filmstrip",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "Tight crop of two models back-to-back in sky-blue and crimson tailored blazers on a soft cream backdrop",
+      "role": "project card image in the WebGL filmstrip",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "Beauty macro: face under a black polka-dot veil with glossed lips and a sheer resin earring",
+      "role": "project card image in the WebGL filmstrip",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "editorial",
+      "bold",
+      "experimental"
+    ],
+    "useCase": [
+      "scroll-story",
+      "gallery",
+      "product-showcase"
+    ],
+    "useWhen": "Cuando quieras una seccion de trabajos con scroll fijado donde el titulo WORK fluye en curvas 3D y las imagenes desfilan en un plano WebGL curvado.",
+    "aliases": [
+      "work section",
+      "seccion de proyectos",
+      "letras en curva",
+      "webgl filmstrip",
+      "scroll pinned gallery",
+      "tipografia cinetica"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": true,
+    "needsCanvas": true,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 7,
+    "perfCost": "heavy",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "riot-ink",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#0a0a0b",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--riot-ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "riot-red",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f40c3f",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--riot-red"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "riot-bone",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#f4efe4",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--riot-bone"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "wodniack-work-section-scroll",
+    "title": "Wodniack Work Section Scroll",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis",
+      "three"
+    ],
+    "complexity": 5,
+    "pinned": true,
+    "viewport_heights": 700,
+    "needs_lenis": true,
+    "ease_family": null,
+    "duration_range": [
+      0.25,
+      0.25
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 7,
+      "bytes": 1393530,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de wodniack-work-section-scroll"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de wodniack-work-section-scroll"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de wodniack-work-section-scroll"
+      }
+    ],
+    "cluster": "SCROLL-LAGGED",
+    "engine": "mixed",
+    "motion_signature": "scrubbed pin: rAF-lerped letters over WebGL filmstrip",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-lagged"
+  },
+  "review": {
+    "status": "public"
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "slug": "mouse-trail-animation-svg-js",
+  "sourceDir": "cg-mouse-trail-animation-svg-js",
+  "title": "Mouse Trail with SVG and GSAP",
+  "description": "Seven layered SVG polyline paths in a rainbow palette follow the cursor as an interpolated, snake-like ribbon trail. A single mousemove listener eases a shared smooth pointer toward the cursor via gsap.to (duration 0.5, power2.out), and a requestAnimationFrame loop prepends that point to each path's history (40 to 10 points per layer) to redraw the M/L path data every frame, producing staggered trailing tails.",
+  "category": "interactive",
+  "tags": [
+    "mouse-trail",
+    "cursor",
+    "svg",
+    "polyline",
+    "gsap",
+    "requestanimationframe",
+    "playful",
+    "rainbow",
+    "interactive"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "clip": {
+      "seconds": 8,
+      "actions": [
+        {
+          "type": "hold"
+        },
+        {
+          "type": "cursor",
+          "path": "figure8",
+          "start": 0.45
+        }
+      ]
+    }
+  },
+  "images": [],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "playful",
+      "bold",
+      "experimental"
+    ],
+    "useCase": [
+      "cursor-effect",
+      "background",
+      "hero"
+    ],
+    "useWhen": "Úsalo cuando quieras un rastro de cursor colorido y juguetón tipo cinta/serpiente que siga el ratón sobre un fondo llamativo.",
+    "aliases": [
+      "estela del raton",
+      "mouse trail",
+      "rastro de cursor",
+      "svg trail",
+      "cursor ribbon",
+      "cola de colores"
+    ]
+  },
+  "runtime": {
+    "level": "widget",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 0,
+    "perfCost": "light",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": false,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "yellow",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#ffb703",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--yellow"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#14131f",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink-soft",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#3a3746",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink-soft"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Texto 3",
+      "type": "color",
+      "default": "#fff7e6",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "mouse-trail-animation-svg-js",
+    "title": "Mouse Trail with SVG and GSAP",
+    "category": "interactive",
+    "trigger": "pointer",
+    "libs": [
+      "gsap"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power2",
+    "duration_range": [
+      0.2,
+      1.6
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 0,
+      "bytes": 0,
+      "root_absolute_paths": false
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "html/body overflow:hidden"
+    ],
+    "capabilities": [
+      {
+        "capability": "page-scroll-lock",
+        "reason": "fija overflow:hidden en html/body"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "POINTER-LATCHED",
+    "engine": "gsap+raf",
+    "motion_signature": "GSAP-eased pointer feeds rAF SVG polyline trails",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "pointer-latch"
+  },
+  "review": {
+    "status": "public"
+  }
+}

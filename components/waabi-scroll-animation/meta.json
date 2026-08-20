@@ -1,0 +1,314 @@
+{
+  "slug": "waabi-scroll-animation",
+  "sourceDir": "codegrid-waabi-scroll-animation",
+  "title": "Waabi Scroll Animation",
+  "description": "Hero pinned for 3.5 viewport heights with Lenis smooth scroll and a scrubbed ScrollTrigger whose progress is mapped manually: the header slides up, the copy is revealed word by word via SplitText then fades out, and the fullscreen hero image shrinks into a 150px rounded card. A following section parallax-scrolls four image columns upward at different speeds.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "pin",
+    "scrub",
+    "splittext",
+    "word-reveal",
+    "parallax",
+    "lenis",
+    "hero",
+    "image-shrink"
+  ],
+  "gsap": [
+    "ScrollTrigger",
+    "SplitText"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 1500,
+    "scrollTo": 0.85,
+    "clip": {
+      "seconds": 10
+    }
+  },
+  "images": [
+    {
+      "file": "hero.jpg",
+      "desc": "serene misty dawn lake with two black swans gliding, tall green reeds, a distant lone figure in a white dress on a grassy islet, soft golden fog — calm and dreamlike (fullscreen hero that shrinks to a 150px rounded card on scroll)",
+      "role": "fullscreen hero image that shrinks to a 150px rounded card on scroll",
+      "replaced": true
+    },
+    {
+      "file": "img1.jpg",
+      "desc": "pale figure in white among misty green trees at dawn",
+      "role": "parallax column 1 image",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "reeds and grasses on a fog-covered lake at first light",
+      "role": "parallax column 1 image",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "woman in a white dress with arms raised in a hazy grass field",
+      "role": "parallax column 1 image",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "misty lakeside at dawn with dark trees fading into fog",
+      "role": "parallax column 1 image",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "black swan gliding across still dark water",
+      "role": "parallax column 2 image",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "bare trees reflected in a calm misty lake",
+      "role": "parallax column 2 image",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "woman in a flowing white dress on a pale shoreline",
+      "role": "parallax column 2 image",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "foggy meadow of tall grass fading into soft light",
+      "role": "parallax column 2 image",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpg",
+      "desc": "reeds and grasses on a fog-covered lake, reprise of img2",
+      "role": "parallax column 3 image",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpg",
+      "desc": "woman in a white dress in a fog-filled street, muted and dreamlike",
+      "role": "parallax column 3 image",
+      "replaced": true
+    },
+    {
+      "file": "img11.jpg",
+      "desc": "misty lakeside at dawn, reprise of img4",
+      "role": "parallax column 3 image",
+      "replaced": true
+    },
+    {
+      "file": "img12.jpg",
+      "desc": "pale figure in white among misty trees, reprise of img1",
+      "role": "parallax column 3 image",
+      "replaced": true
+    },
+    {
+      "file": "img13.jpg",
+      "desc": "bare trees reflected in a calm misty lake, reprise of img6",
+      "role": "parallax column 4 image",
+      "replaced": true
+    },
+    {
+      "file": "img14.jpg",
+      "desc": "woman in a white dress with arms raised in a hazy field, reprise of img3",
+      "role": "parallax column 4 image",
+      "replaced": true
+    },
+    {
+      "file": "img15.jpg",
+      "desc": "black swan on still dark water, reprise of img5",
+      "role": "parallax column 4 image",
+      "replaced": true
+    },
+    {
+      "file": "img16.jpg",
+      "desc": "woman in a flowing white dress on a pale shoreline, reprise of img7",
+      "role": "parallax column 4 image",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "editorial",
+      "elegant",
+      "minimal"
+    ],
+    "useCase": [
+      "scroll-story",
+      "hero",
+      "gallery"
+    ],
+    "useWhen": "Úsalo cuando quieras una intro editorial con scroll donde el hero se encoge y el texto se revela palabra a palabra antes de una galería con parallax.",
+    "aliases": [
+      "scroll story",
+      "hero pinned",
+      "galería parallax",
+      "texto palabra a palabra",
+      "hero que se encoge",
+      "sticky hero"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger",
+      "SplitText"
+    ],
+    "assetCount": 17,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#e6e3da",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#23211c",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper-deep",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#d6d2c7",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper-deep"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "waabi-scroll-animation",
+    "title": "Waabi Scroll Animation",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "SplitText",
+      "lenis"
+    ],
+    "complexity": 5,
+    "pinned": true,
+    "viewport_heights": 350,
+    "needs_lenis": true,
+    "ease_family": null,
+    "duration_range": [
+      0.2,
+      0.5
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 17,
+      "bytes": 3273218,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de waabi-scroll-animation"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de waabi-scroll-animation"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de waabi-scroll-animation"
+      }
+    ],
+    "cluster": "SCROLL-LAGGED",
+    "engine": "gsap",
+    "motion_signature": "pinned hero scrub (header slide-up + word-by-word reveal + fullscreen image shrinking to a 150px rounded card), then a 4-column image parallax over the next section",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-lagged"
+  },
+  "review": {
+    "status": "public"
+  }
+}

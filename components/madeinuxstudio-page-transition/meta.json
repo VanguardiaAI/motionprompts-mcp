@@ -1,0 +1,245 @@
+{
+  "slug": "madeinuxstudio-page-transition",
+  "sourceDir": "codegrid-madeinuxstudio-page-transition-nextjs",
+  "title": "Silhouette Page Transition",
+  "description": "Full-page route transition where clicking a nav link runs a GSAP timeline that wipes 20 vertical blocks across the screen (scaleX stagger), then draws an SVG logo via strokeDashoffset and fills it before the incoming page is revealed with a reverse block wipe. Page headings animate in with a SplitText masked-character stagger and the archive route uses Lenis smooth scroll.",
+  "category": "transition",
+  "tags": [
+    "page-transition",
+    "block-wipe",
+    "svg-draw",
+    "splittext",
+    "gsap-timeline",
+    "lenis",
+    "editorial",
+    "minimal",
+    "fake-router"
+  ],
+  "gsap": [
+    "ScrollTrigger",
+    "SplitText"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "click": "a[href=\"/archive\"]",
+    "afterClickMs": 1600
+  },
+  "images": [
+    {
+      "file": "img_01.jpg",
+      "desc": "woman reduced to silhouette turning toward a warm amber backlight in a dark studio",
+      "role": "Archive route first stacked image",
+      "replaced": true
+    },
+    {
+      "file": "img_02.jpg",
+      "desc": "man in profile edged by a single warm rim light against a black background",
+      "role": "Archive route second stacked image",
+      "replaced": true
+    },
+    {
+      "file": "img_03.jpg",
+      "desc": "figure silhouetted against a cool blue haze with arms raised over the head",
+      "role": "Archive route third stacked image",
+      "replaced": true
+    },
+    {
+      "file": "img_04.jpg",
+      "desc": "black-and-white studio silhouette of a suited figure standing inside a single circle of light",
+      "role": "Archive route fourth stacked image",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "editorial",
+      "elegant",
+      "minimal"
+    ],
+    "useCase": [
+      "page-transition",
+      "navigation"
+    ],
+    "useWhen": "Cuando navegas entre páginas y quieres una transición cinematográfica: cortina de bloques y un logo que se dibuja para tapar el cambio de ruta.",
+    "aliases": [
+      "transición de página",
+      "page transition",
+      "cortina de bloques",
+      "block wipe",
+      "logo draw reveal",
+      "silhouette"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger",
+      "SplitText"
+    ],
+    "assetCount": 4,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#1a1b1d",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bone",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#e3e4d8",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bone"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "graphite",
+      "label": "Texto",
+      "type": "color",
+      "default": "#6f7168",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--graphite"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mute",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#43443e",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--mute"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "madeinuxstudio-page-transition",
+    "title": "Silhouette Page Transition",
+    "category": "transition",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "SplitText",
+      "lenis"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": true,
+    "ease_family": "power2",
+    "duration_range": [
+      0.2,
+      2
+    ],
+    "stagger": 0.02,
+    "assets_required": {
+      "count": 4,
+      "bytes": 323400,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "mata todos los ScrollTrigger"
+    ],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de madeinuxstudio-page-transition"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de madeinuxstudio-page-transition"
+      }
+    ],
+    "cluster": "CLICK-CURTAIN",
+    "engine": "gsap+raf",
+    "motion_signature": "20 full-height flex blocks scaleX 0->1 from the left in a 0.02s-staggered 0.4s power2.out curtain (reversed to scaleX 0 from the right on reveal), overlapped by a 2s power2.inOut strokeDashoffset draw of the SVG logo plus a 1s power2.out fill and 0.25s fade-out; incoming h1 arrives as masked SplitText chars sliding y 100%->0% over 1s power4.out, 0.03s stagger, 0.3s delay, gated by a once:true ScrollTrigger at 'top 75%'",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "curtain-toggle"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

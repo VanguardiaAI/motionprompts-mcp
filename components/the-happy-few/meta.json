@@ -1,0 +1,256 @@
+{
+  "slug": "the-happy-few",
+  "sourceDir": "cg-the-happy-few",
+  "title": "The Quiet Crowd Landing Reveal",
+  "description": "On page load a GSAP timeline wipes a clip-path preloader and spins a loader, then reveals the hero: heading characters (manually split into spans) slide up with a staggered power4.out tween while a circular hero image scales in and rotates infinitely. Moving the cursor during the load spawns emoji particles that pop in with a back.out ease and drop off-screen.",
+  "category": "preloader",
+  "tags": [
+    "preloader",
+    "hero-reveal",
+    "gsap",
+    "text-reveal",
+    "cursor-trail",
+    "emoji",
+    "clip-path",
+    "playful",
+    "landing-page"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 8000
+  },
+  "images": [
+    {
+      "file": "hero-2.png",
+      "desc": "hollow wireframe globe made only of glowing green latitude longitude lines, fully transparent see-through interior showing the background between the lines, no fill",
+      "role": "Unused; hero is now an inline SVG line mark anchored to the right grid column, scaling in and rotating infinitely",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    },
+    {
+      "file": "emoji-1.png",
+      "desc": "Glossy 3D lemon-yellow sphere brand token",
+      "role": "Falling brand token spawned on cursor movement (variant 1)",
+      "replaced": true
+    },
+    {
+      "file": "emoji-2.png",
+      "desc": "Glossy 3D near-black sphere brand token",
+      "role": "Falling brand token spawned on cursor movement (variant 2)",
+      "replaced": true
+    },
+    {
+      "file": "emoji-3.png",
+      "desc": "Glossy 3D teal-green sphere brand token",
+      "role": "Falling brand token spawned on cursor movement (variant 3)",
+      "replaced": true
+    },
+    {
+      "file": "emoji-4.png",
+      "desc": "Glossy 3D off-white sphere brand token",
+      "role": "Falling brand token spawned on cursor movement (variant 4)",
+      "replaced": true
+    },
+    {
+      "file": "cursor.svg",
+      "desc": "Custom circular cursor graphic",
+      "role": "Replaces the default mouse cursor across the page",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "playful",
+      "elegant"
+    ],
+    "useCase": [
+      "preloader",
+      "hero",
+      "text-reveal"
+    ],
+    "useWhen": "Cuando quieres una intro de landing con preloader animado, revelado del titular y una capa lúdica de emojis que caen al mover el cursor.",
+    "aliases": [
+      "preloader",
+      "revelado de titular",
+      "emoji trail",
+      "landing intro",
+      "hero reveal",
+      "cursor emojis"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 8,
+    "perfCost": "light",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "rubric",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#0f7a5f",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--rubric"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#16150c",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mouseDistance",
+      "label": "Distancia entre emojis",
+      "type": "range",
+      "min": 80,
+      "max": 900,
+      "step": 20,
+      "default": 400,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "mouseDistance"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "emojiScale",
+      "label": "Tamaño de los emojis",
+      "type": "range",
+      "min": 0.3,
+      "max": 2.5,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "emojiScale"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "emojiWaitTime",
+      "label": "Flotación antes de caer",
+      "type": "range",
+      "min": 0,
+      "max": 2000,
+      "step": 50,
+      "default": 500,
+      "unit": "ms",
+      "apply": {
+        "kind": "js",
+        "path": "emojiWaitTime"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "charStagger",
+      "label": "Escalonado del titular",
+      "type": "range",
+      "min": 0,
+      "max": 1.5,
+      "step": 0.05,
+      "default": 0.25,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "charStagger"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "the-happy-few",
+    "title": "The Quiet Crowd Landing Reveal",
+    "category": "preloader",
+    "trigger": "pointer",
+    "libs": [
+      "gsap"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power4",
+    "duration_range": [
+      0.35,
+      20
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 8,
+      "bytes": 3092436,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "entry-veil",
+        "reason": "velo de entrada a pantalla completa en la carga"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "LOAD-ONESHOT",
+    "engine": "gsap",
+    "motion_signature": "Fixed-delay page-load choreography: a full-viewport clip-path preloader wipes upward on power4.inOut at t=5s while a square loader half-turns twice then shrinks to zero; on its completion the heading characters (manually split into spans, CSS-parked at translateY(200px)) slide up on power4.out with a 0.25s total-amount stagger per row while an inline SVG orbit mark scales 0->1 and enters a 20s linear infinite rotation. During the load window a >400px cursor jump spawns a sized emoji that pops in on back.out(1.75) and, after a ~0.5-0.7s hold, falls past window.innerHeight on power2.in and removes itself. No scroll, no rAF, no interpolation loop.",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "entry-veil"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

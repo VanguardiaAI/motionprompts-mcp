@@ -1,0 +1,267 @@
+{
+  "slug": "webgl-interactive-gradient",
+  "sourceDir": "cg-webgl-interactive-gradient",
+  "title": "WebGL Interactive Gradient",
+  "description": "A full-screen animated WebGL gradient built with Three.js and two custom fragment shaders: a fluid-dynamics shader ping-pongs velocity between two float render targets while a display shader warps a flowing multi-color gradient from that field. A requestAnimationFrame loop advances time-based motion, and mousemove events feed cursor position/velocity into the fluid uniform so the gradient ripples and distorts along the cursor's trail in real time.",
+  "category": "3d-webgl",
+  "tags": [
+    "three-js",
+    "webgl",
+    "shader",
+    "fluid-simulation",
+    "gradient",
+    "interactive",
+    "cursor",
+    "background"
+  ],
+  "gsap": [],
+  "deps": [
+    "three"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "clip": {
+      "seconds": 7,
+      "actions": [
+        {
+          "type": "hold"
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "logo_01.png",
+      "desc": "white brand wordmark/logo mark on a transparent background",
+      "role": "centered hero logo overlaid on top of the animated gradient",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "futuristic",
+      "experimental",
+      "elegant"
+    ],
+    "useCase": [
+      "hero",
+      "background",
+      "cursor-effect"
+    ],
+    "useWhen": "Úsalo como fondo de hero llamativo: un degradado WebGL fluido que se ondula y distorsiona siguiendo el cursor del ratón en tiempo real.",
+    "aliases": [
+      "degradado interactivo",
+      "fluid gradient",
+      "fondo webgl",
+      "gradiente fluido",
+      "interactive gradient",
+      "shader background"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": false,
+    "needsWebgl": true,
+    "needsCanvas": true,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 1,
+    "perfCost": "heavy",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#ffffff",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "color1",
+      "label": "Color 1",
+      "type": "color",
+      "default": "#b8fff7",
+      "apply": {
+        "kind": "js",
+        "path": "color1"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "color2",
+      "label": "Color 2",
+      "type": "color",
+      "default": "#6e3466",
+      "apply": {
+        "kind": "js",
+        "path": "color2"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "color3",
+      "label": "Color 3",
+      "type": "color",
+      "default": "#0133ff",
+      "apply": {
+        "kind": "js",
+        "path": "color3"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "color4",
+      "label": "Color 4",
+      "type": "color",
+      "default": "#66d1fe",
+      "apply": {
+        "kind": "js",
+        "path": "color4"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "brushSize",
+      "label": "Tamaño del pincel",
+      "type": "range",
+      "min": 5,
+      "max": 80,
+      "step": 1,
+      "default": 25,
+      "apply": {
+        "kind": "js",
+        "path": "brushSize"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "distortionAmount",
+      "label": "Distorsión",
+      "type": "range",
+      "min": 0,
+      "max": 8,
+      "step": 0.25,
+      "default": 2.5,
+      "apply": {
+        "kind": "js",
+        "path": "distortionAmount"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "fluidDecay",
+      "label": "Permanencia del fluido",
+      "type": "range",
+      "min": 0.9,
+      "max": 0.999,
+      "step": 0.005,
+      "default": 0.98,
+      "apply": {
+        "kind": "js",
+        "path": "fluidDecay"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "softness",
+      "label": "Suavidad del degradado",
+      "type": "range",
+      "min": 0.2,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "apply": {
+        "kind": "js",
+        "path": "softness"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "webgl-interactive-gradient",
+    "title": "WebGL Interactive Gradient",
+    "category": "3d-webgl",
+    "trigger": "hover",
+    "libs": [
+      "three"
+    ],
+    "complexity": 5,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": null,
+    "duration_range": [
+      0.25,
+      0.25
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 1,
+      "bytes": 35241,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "INTEGRATOR",
+    "engine": "webgl-raf",
+    "motion_signature": "cursor-driven fluid shader warping full-screen gradient",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  },
+  "review": {
+    "status": "public"
+  }
+}

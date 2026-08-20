@@ -1,0 +1,339 @@
+{
+  "slug": "physics-anim",
+  "sourceDir": "cg-physics-anim",
+  "title": "Interactive Divs with Physics",
+  "description": "Twelve grayscale polaroid-style image cards float over a full-screen p5.js canvas inside a zero-gravity Matter.js world, each DOM div repositioned every frame from its physics body. Moving the mouse near a card fires a random Matter.js Body.applyForce, so nearby cards scatter, drift with air friction and restitution, and bounce off the invisible viewport walls.",
+  "category": "interactive",
+  "tags": [
+    "physics",
+    "matter-js",
+    "p5js",
+    "mouse-interaction",
+    "floating-cards",
+    "image-scatter",
+    "interactive",
+    "cinematic"
+  ],
+  "gsap": [],
+  "deps": [
+    "matter-js"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "clip": {
+      "seconds": 8,
+      "settleMs": 2500,
+      "actions": [
+        {
+          "type": "click",
+          "selector": ".item img, img",
+          "at": 0.32
+        },
+        {
+          "type": "click",
+          "selector": ".item img, img",
+          "at": 0.62
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "black and white street photography, pedestrian crossing with long shadows, portrait",
+      "role": "One of twelve grayscale physics image cards floating on screen.",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "b/w spiral staircase from above, geometric, portrait",
+      "role": "One of twelve grayscale physics image cards floating on screen.",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "Moody low-light editorial beauty portrait: a woman lying down, dark hair, bold lips, cinematic soft focus.",
+      "role": "One of twelve grayscale physics image cards floating on screen.",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "Dark moody portrait of a woman with a hand raised near her face, seen through cracked glass over a black tiled background.",
+      "role": "One of twelve grayscale physics image cards floating on screen.",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "Warm orange scene of a person's hand and body pressed against a frosted translucent amber surface.",
+      "role": "One of twelve grayscale physics image cards floating on screen.",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "Soft-lit studio portrait of a blonde woman in black against a dark grey backdrop.",
+      "role": "One of twelve grayscale physics image cards floating on screen.",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "b/w musician silhouette with stage light haze, portrait",
+      "role": "One of twelve grayscale physics image cards floating on screen.",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "b/w vintage camera on tripod in empty studio, portrait",
+      "role": "One of twelve grayscale physics image cards floating on screen.",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    },
+    {
+      "file": "img9.jpg",
+      "desc": "Surreal portrait of a person in a black suit whose face is fully draped in translucent white fabric, plain grey background.",
+      "role": "One of twelve grayscale physics image cards floating on screen.",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpg",
+      "desc": "Orange golden-hour city skyline of downtown high-rises washed in monochrome amber light.",
+      "role": "One of twelve grayscale physics image cards floating on screen.",
+      "replaced": true
+    },
+    {
+      "file": "img11.jpg",
+      "desc": "Editorial blue-toned portrait of a person with wet hair falling over the face, a hand emerging, against a soft blue-grey background.",
+      "role": "One of twelve grayscale physics image cards floating on screen.",
+      "replaced": true
+    },
+    {
+      "file": "img12.jpg",
+      "desc": "Dramatic green-lit portrait of a muscular shirtless man bathed in green light with soft bokeh spots.",
+      "role": "One of twelve grayscale physics image cards floating on screen.",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "cinematic",
+      "experimental",
+      "editorial"
+    ],
+    "useCase": [
+      "hero",
+      "background",
+      "gallery"
+    ],
+    "useWhen": "Cuando quieras un fondo interactivo donde tarjetas de imagen flotan con física y se dispersan al acercar el cursor.",
+    "aliases": [
+      "fisica interactiva",
+      "tarjetas flotantes",
+      "floating cards",
+      "matter.js scatter",
+      "physics repel",
+      "imagenes que flotan"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": true,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 12,
+    "perfCost": "heavy",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#000000",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f2f0eb",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "card",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#ffffff",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--card"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "cards",
+      "label": "Tarjetas en el aire",
+      "type": "range",
+      "min": 3,
+      "max": 24,
+      "step": 1,
+      "default": 12,
+      "apply": {
+        "kind": "js",
+        "path": "cards"
+      }
+    },
+    {
+      "id": "forceMagnitude",
+      "label": "Fuerza del empujón",
+      "type": "range",
+      "min": 0.5,
+      "max": 8,
+      "step": 0.1,
+      "default": 3,
+      "apply": {
+        "kind": "js",
+        "path": "forceMagnitude"
+      }
+    },
+    {
+      "id": "pointerRadius",
+      "label": "Alcance del cursor",
+      "type": "range",
+      "min": 40,
+      "max": 500,
+      "step": 10,
+      "default": 150,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "pointerRadius"
+      }
+    },
+    {
+      "id": "frictionAir",
+      "label": "Rozamiento del aire",
+      "type": "range",
+      "min": 0.005,
+      "max": 0.3,
+      "step": 0.005,
+      "default": 0.075,
+      "apply": {
+        "kind": "js",
+        "path": "frictionAir"
+      }
+    },
+    {
+      "id": "restitution",
+      "label": "Rebote al chocar",
+      "type": "range",
+      "min": 0,
+      "max": 1,
+      "step": 0.05,
+      "default": 0.25,
+      "apply": {
+        "kind": "js",
+        "path": "restitution"
+      }
+    }
+  ],
+  "motion": {
+    "slug": "physics-anim",
+    "title": "Interactive Divs with Physics",
+    "category": "interactive",
+    "trigger": null,
+    "libs": [
+      "p5",
+      "matter-js"
+    ],
+    "complexity": 3,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": null,
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 12,
+      "bytes": 1744163,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "html/body overflow:hidden",
+      "html/body height fija en vh"
+    ],
+    "capabilities": [
+      {
+        "capability": "page-scroll-lock",
+        "reason": "fija overflow:hidden en html/body"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "INTEGRATOR",
+    "engine": "physics",
+    "motion_signature": "zero-gravity Matter.js cards scattered by cursor",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  },
+  "review": {
+    "status": "public"
+  }
+}

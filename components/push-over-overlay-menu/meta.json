@@ -1,0 +1,324 @@
+{
+  "slug": "push-over-overlay-menu",
+  "sourceDir": "cg-push-over-overlay-menu",
+  "title": "Minimal Push Overlay Menu",
+  "description": "A fullscreen overlay menu triggered by clicking the hamburger toggle: a GSAP timeline with a custom 'hop' ease pushes the page content down 100svh while the dark overlay expands via an animated clip-path polygon, its inner content slides up from -50% to 0, the media image fades in, and SplitText line-masked links stagger in with a negative stagger. Clicking again reverses the timeline.",
+  "category": "menu",
+  "tags": [
+    "menu",
+    "overlay",
+    "clip-path",
+    "splittext",
+    "stagger",
+    "push",
+    "lenis",
+    "custom-ease",
+    "navigation"
+  ],
+  "gsap": [
+    "CustomEase",
+    "SplitText"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "click": ".menu-toggle-btn",
+    "afterClickMs": 1600
+  },
+  "images": [
+    {
+      "desc": "macro of brass script letterpress type on black, gold letterforms catching the light, used as the ambient low-opacity side panel image in the open overlay menu",
+      "file": "menu-media.jpg",
+      "role": "menu overlay media panel image",
+      "replaced": true
+    },
+    {
+      "file": "hero.jpg",
+      "desc": "half-opacity macro of brass script letterpress type on black filling the middle full-screen banner section, tying the studio to typographic craft",
+      "role": "page banner section background image",
+      "replaced": true
+    },
+    {
+      "file": "logo.png",
+      "desc": "small square studio logo mark",
+      "role": "top-left logo in the fixed menu bar",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "minimal",
+      "elegant",
+      "editorial"
+    ],
+    "useCase": [
+      "navigation"
+    ],
+    "useWhen": "Úsalo para un menú de pantalla completa que empuja el contenido hacia abajo y revela enlaces con líneas escalonadas al hacer clic.",
+    "aliases": [
+      "menú overlay",
+      "overlay menu",
+      "push menu",
+      "menú hamburguesa",
+      "fullscreen menu",
+      "menú empuje"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "CustomEase",
+      "SplitText"
+    ],
+    "assetCount": 3,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bg",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#131210",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bg"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "fg",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f3f0e9",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--fg"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "push-over-overlay-menu",
+    "title": "Minimal Push Overlay Menu",
+    "category": "menu",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "CustomEase",
+      "SplitText",
+      "lenis"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": true,
+    "ease_family": "custom",
+    "duration_range": [
+      0.4,
+      2
+    ],
+    "stagger": -0.075,
+    "assets_required": {
+      "count": 3,
+      "bytes": 499287,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "aladesign-landing-page-reveal",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "aminezegmou-landing-page",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "aristidebenoist-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "audemarspiguet-menu",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "camille-mormal-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "hypnotic-gallery-gsap-flip",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "infinite-draggable-image-gallery-javascript",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "kin-landing-page",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "landing-page-reveal-no-webgl",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "laserbysonymusic-landing-page-reveal-animation",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "maxmilkin-preloader",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "meetings-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "menu-root-food",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "nite-riot-landing-page-reveal-javascript",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "outfit-landing-page-reveal",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "p10-landing-page-reveal-gsap",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "steelworks-landing-page-reveal",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "story-world-carousel-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "truekindskincare-landing-page-reveal-javascript",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "zajno-lp",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "zajno-page-transitions",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de push-over-overlay-menu"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de push-over-overlay-menu"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de push-over-overlay-menu"
+      }
+    ],
+    "cluster": "CLICK-CURTAIN",
+    "engine": "gsap+raf",
+    "motion_signature": "click-toggled clip-path overlay pushing page down",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "curtain-toggle"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

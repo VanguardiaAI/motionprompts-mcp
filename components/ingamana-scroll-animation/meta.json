@@ -1,0 +1,288 @@
+{
+  "slug": "ingamana-scroll-animation",
+  "sourceDir": "codegrid-ingamana-scroll-animation-nextjs",
+  "title": "Ingamana Scroll Animation",
+  "description": "A 10-row project grid whose rows expand from 125% to 500% width (250% to 750% on mobile) based on each row's individual scroll progress through the viewport, producing a continuous zoom-in on the images as you scroll. Driven by a gsap.ticker callback reading window.scrollY (no ScrollTrigger) with Lenis smooth scroll; the section height is pre-computed for the fully expanded state.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "grid",
+    "zoom",
+    "expand",
+    "gallery",
+    "lenis",
+    "ticker",
+    "images"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 1200,
+    "scrollTo": 0.4
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "wilted green tulip against a pitch-black background, moody still life",
+      "role": "project grid thumbnail (Fieldnotes)",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "airplane silhouette overhead on a saturated red-orange sky",
+      "role": "project grid thumbnail (Redline)",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "woman viewing framed artworks in a bright gallery hall lined with large wooden vases",
+      "role": "project grid thumbnail (Gallery Walk)",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "side profile of a Black man wearing an earbud against a vivid orange backdrop",
+      "role": "project grid thumbnail (Side Profile)",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "speaker on stage before a silhouetted audience under pink-red gradient light",
+      "role": "project grid thumbnail (Open Mic)",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "rear of a black perforated monitor with red accents on an articulated arm, product shot",
+      "role": "project grid thumbnail (Backboard)",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "man seen from behind in silhouette against a glowing orange gradient",
+      "role": "project grid thumbnail (Afterglow)",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "branding stationery flat lay, bold color blocking, hard shadows",
+      "role": "project grid thumbnail (Shelf Life)",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    },
+    {
+      "file": "img9.jpg",
+      "desc": "surfer silhouette carrying a board across a golden beach at sunset",
+      "role": "project grid thumbnail (Low Sun)",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpg",
+      "desc": "minimal black wall clock in dim moody light",
+      "role": "project grid thumbnail (Iris, Iris)",
+      "replaced": true
+    },
+    {
+      "file": "img11.jpg",
+      "desc": "extreme close-up of a freckled face and blue-green eye in warm light",
+      "role": "project grid thumbnail (Heel Turn)",
+      "replaced": true
+    },
+    {
+      "file": "img12.jpg",
+      "desc": "shirtless dancer arched backwards mid-motion against an amber gradient sky",
+      "role": "project grid thumbnail (Feedback)",
+      "replaced": true
+    },
+    {
+      "file": "img13.jpg",
+      "desc": "macro shot of a matte black webcam clipped to a monitor edge",
+      "role": "project grid thumbnail (Soft Room)",
+      "replaced": true
+    },
+    {
+      "file": "img14.jpg",
+      "desc": "young man with curly hair floating eyes-closed in orange-red water",
+      "role": "project grid thumbnail (Deep Red)",
+      "replaced": true
+    },
+    {
+      "file": "img15.jpg",
+      "desc": "motion-blurred figure scrambling over rocks in warm earthy tones",
+      "role": "project grid thumbnail (Veil)",
+      "replaced": true
+    },
+    {
+      "file": "img16.jpg",
+      "desc": "poster wall in design studio, saturated accents, landscape",
+      "role": "project grid thumbnail (Close Focus)",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "editorial",
+      "cinematic",
+      "elegant"
+    ],
+    "useCase": [
+      "gallery",
+      "scroll-story",
+      "image-reveal"
+    ],
+    "useWhen": "Úsalo cuando quieras una galería de portfolio o proyectos que haga zoom continuo sobre las imágenes al bajar, con scroll suave estilo Lenis.",
+    "aliases": [
+      "galería con zoom al scroll",
+      "grid que se expande",
+      "expanding image grid",
+      "scroll zoom gallery",
+      "portfolio con scroll",
+      "rejilla de proyectos"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 16,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#20241c",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "olive",
+      "label": "Texto",
+      "type": "color",
+      "default": "#3a4034",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--olive"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "ingamana-scroll-animation",
+    "title": "Ingamana Scroll Animation",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "lenis"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": true,
+    "ease_family": null,
+    "duration_range": [
+      0.25,
+      0.25
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 16,
+      "bytes": 2240078,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "width-branch",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de ingamana-scroll-animation"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de ingamana-scroll-animation"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de ingamana-scroll-animation"
+      }
+    ],
+    "cluster": "SCROLL-WELDED",
+    "engine": "gsap+raf",
+    "motion_signature": "linear per-row width expansion (125%→500%; 250%→750% below 1000px viewport) mapped straight from document scrollY with no easing or inertia of its own, recomputed for all 10 rows on every gsap.ticker frame; Lenis supplies the only smoothing",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-welded"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

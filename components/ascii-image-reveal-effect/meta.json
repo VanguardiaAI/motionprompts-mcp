@@ -1,0 +1,304 @@
+{
+  "slug": "ascii-image-reveal-effect",
+  "sourceDir": "codegrid-ascii-image-reveal-effect",
+  "title": "ASCII Image Reveal Effect",
+  "description": "Editorial photo grid where each frame paints itself as live ASCII on a canvas as it scrolls into view: cells pop in in random order, the lit mid-tones flicker through dense glyphs before locking, and the settled ASCII holds a beat before cross-fading to the real photograph. The glyph grid is measured from the tile's own box, so it stays legible from a 250px desktop frame down to a 170px phone tile; tapping a frame scans it again.",
+  "category": "gallery",
+  "tags": [
+    "ascii",
+    "canvas",
+    "reveal",
+    "scroll",
+    "scramble",
+    "grid",
+    "gallery",
+    "vanilla-js"
+  ],
+  "gsap": [],
+  "deps": [],
+  "preview": {
+    "waitMs": 900,
+    "clip": {
+      "seconds": 10,
+      "actions": [
+        {
+          "type": "scroll",
+          "to": 0.9,
+          "mode": "pingpong"
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "high-contrast black and white portrait, strong side light, dark background",
+      "role": "gallery item 1",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "extreme close-up of lips being glossed with a small brush, warm neutral tones",
+      "role": "gallery item 2",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "black and white close-up of hands with rings, dramatic shadows",
+      "role": "gallery item 3",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "open chrome compact mirror on black background, dramatic monochrome lighting",
+      "role": "gallery item 4",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "black and white portrait of a young man with cropped hair in a dark jacket",
+      "role": "gallery item 5",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "black and white profile portrait of a model with sleek bob and pearl earring",
+      "role": "gallery item 6",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "monochrome portrait of a bald model in dark tailoring",
+      "role": "gallery item 7",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "model face veiled in sheer white fabric, soft monochrome",
+      "role": "gallery item 8",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpg",
+      "desc": "carmine red lipstick bullet beside black jars on gray stone",
+      "role": "gallery item 9",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpg",
+      "desc": "monochrome brutalist architecture facade, hard shadows",
+      "role": "gallery item 10",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    },
+    {
+      "file": "img11.jpg",
+      "desc": "cream bottle with black cap set among dried flowers on a rock",
+      "role": "gallery item 11",
+      "replaced": true
+    },
+    {
+      "file": "img12.jpg",
+      "desc": "black and white dancer mid-leap, studio, high contrast",
+      "role": "gallery item 12",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    },
+    {
+      "file": "img13.jpg",
+      "desc": "motion-blurred figure dancing in white trousers and gray jacket",
+      "role": "gallery item 13",
+      "replaced": true
+    },
+    {
+      "file": "img14.jpg",
+      "desc": "high-contrast b/w profile portrait with dramatic rim light",
+      "role": "gallery item 14",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    },
+    {
+      "file": "img15.jpg",
+      "desc": "motion-blurred crowd at night in warm light, party scene",
+      "role": "gallery item 15",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-08-16",
+  "intent": {
+    "mood": [
+      "editorial",
+      "technical",
+      "minimal"
+    ],
+    "useCase": [
+      "gallery",
+      "image-reveal",
+      "preloader"
+    ],
+    "useWhen": "Úsalo cuando quieras una galería editorial que se revele al hacer scroll, con cada foto formándose desde arte ASCII legible antes de aparecer nítida.",
+    "aliases": [
+      "galería ascii",
+      "ascii art gallery",
+      "revelado ascii",
+      "ascii reveal",
+      "scramble de imágenes",
+      "efecto ascii",
+      "ascii al hacer scroll",
+      "reveal on scroll"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": true,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 15,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ground",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#1a1310",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ground"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Tinta",
+      "type": "color",
+      "default": "#efe6d9",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "glyph",
+      "label": "Glifos ASCII",
+      "type": "color",
+      "default": "#d5cdbd",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--glyph"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "frame",
+      "label": "Fondo del fotograma",
+      "type": "color",
+      "default": "#0f0d0b",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--frame"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "muted",
+      "label": "Tenue",
+      "type": "color",
+      "default": "#a6907f",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--muted"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "ascii-image-reveal-effect",
+    "title": "ASCII Image Reveal Effect",
+    "category": "gallery",
+    "trigger": "click",
+    "libs": [],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": null,
+    "duration_range": [
+      0.2,
+      10
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 15,
+      "bytes": 2446148,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": true
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "LOAD-ONESHOT",
+    "engine": "canvas2d",
+    "motion_signature": "per-cell ASCII grid materializes in shuffled random order at a flat 2ms/cell; dark cells cycle 10 random dense glyphs at 100ms before locking to their final char; when all ~500 cells settle the canvas is hidden and the real photo appears with no crossfade. No easing curves at all — the physics is pure uniform timer spacing.",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "entry-veil"
+  },
+  "review": {
+    "status": "public"
+  }
+}

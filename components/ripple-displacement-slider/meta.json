@@ -1,0 +1,246 @@
+{
+  "slug": "ripple-displacement-slider",
+  "sourceDir": "codegrid-ripple-displacement-slider",
+  "title": "Ripple Displacement Slider",
+  "description": "Fullscreen Three.js WebGL slider where a click anywhere fires a radial ripple (custom GLSL shader, GSAP-tweened progress over ~3s) that displaces UVs and crossfades to the next image along the expanding wave front. SplitText simultaneously staggers the masked title chars and description lines out (y:-100%) and animates the incoming slide's text in, all overlaid with mix-blend-mode: difference.",
+  "category": "slider",
+  "tags": [
+    "three-js",
+    "webgl",
+    "shader",
+    "ripple",
+    "displacement",
+    "slider",
+    "click",
+    "splittext",
+    "crossfade"
+  ],
+  "gsap": [
+    "SplitText"
+  ],
+  "deps": [
+    "gsap",
+    "three"
+  ],
+  "preview": {
+    "waitMs": 2200,
+    "click": ".slider",
+    "afterClickMs": 1200
+  },
+  "images": [
+    {
+      "file": "slider-img-1.jpg",
+      "desc": "cinematic Halloween scene in cold blue night light: side profile of a woman with dramatic makeup facing a figure wearing a carved jack-o'-lantern pumpkin head painted with a white skull face, blurred masked figure in a doorway behind",
+      "role": "slide 1 texture (Blackwater '91)",
+      "replaced": true
+    },
+    {
+      "file": "slider-img-2.jpg",
+      "desc": "high-contrast monochrome red giallo-style close-up of a short-haired woman screaming upward next to a microphone stand, grainy halftone texture, deep black shadows",
+      "role": "slide 2 texture (Crimson Theory)",
+      "replaced": true
+    },
+    {
+      "file": "slider-img-3.jpg",
+      "desc": "moody 1980s living room at night in dim blue tones: a boy in an orange jumpsuit sits on a floral armchair staring at a vintage CRT TV, glowing jack-o'-lantern on the floor, curtained window and floor lamp",
+      "role": "slide 3 texture (Tape Delay Archives)",
+      "replaced": true
+    },
+    {
+      "file": "slider-img-4.jpg",
+      "desc": "teal-tinted horror still through a rain-soaked windshield: a terrified young woman and a blood-streaked young man at the wheel of a car at night, wipers crossing the hood",
+      "role": "slide 4 texture (Exit 14 Westbound)",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "cinematic",
+      "editorial",
+      "minimal"
+    ],
+    "useCase": [
+      "slider",
+      "gallery",
+      "hero"
+    ],
+    "useWhen": "Úsalo para un hero o galería fullscreen donde cada clic dispara una onda que distorsiona y funde una imagen en la siguiente con texto animado.",
+    "aliases": [
+      "slider con ondas",
+      "ripple slider",
+      "displacement slider",
+      "slider WebGL",
+      "slider de imágenes",
+      "shader slider"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": false,
+    "needsWebgl": true,
+    "needsCanvas": true,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "SplitText"
+    ],
+    "assetCount": 4,
+    "perfCost": "heavy",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "waveFreq",
+      "label": "Rizos de la onda",
+      "type": "range",
+      "min": 5,
+      "max": 70,
+      "step": 0.5,
+      "default": 25,
+      "apply": {
+        "kind": "js",
+        "path": "waveFreq"
+      }
+    },
+    {
+      "id": "wavePow",
+      "label": "Fuerza del empuje",
+      "type": "range",
+      "min": 0,
+      "max": 0.1,
+      "step": 0.001,
+      "default": 0.035,
+      "apply": {
+        "kind": "js",
+        "path": "wavePow"
+      }
+    },
+    {
+      "id": "falloff",
+      "label": "Desvanecido de la estela",
+      "type": "range",
+      "min": 2,
+      "max": 30,
+      "step": 0.5,
+      "default": 10,
+      "apply": {
+        "kind": "js",
+        "path": "falloff"
+      }
+    },
+    {
+      "id": "crossfadeWidth",
+      "label": "Ancho del fundido",
+      "type": "range",
+      "min": 0.005,
+      "max": 0.35,
+      "step": 0.005,
+      "default": 0.05,
+      "apply": {
+        "kind": "js",
+        "path": "crossfadeWidth"
+      }
+    },
+    {
+      "id": "textStagger",
+      "label": "Escalonado del texto",
+      "type": "range",
+      "min": 0,
+      "max": 0.06,
+      "step": 0.002,
+      "default": 0.02,
+      "apply": {
+        "kind": "js",
+        "path": "textStagger"
+      }
+    }
+  ],
+  "motion": {
+    "slug": "ripple-displacement-slider",
+    "title": "Ripple Displacement Slider",
+    "category": "slider",
+    "trigger": "click",
+    "libs": [
+      "gsap",
+      "SplitText",
+      "three"
+    ],
+    "complexity": 5,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power2",
+    "duration_range": [
+      0.5,
+      3
+    ],
+    "stagger": 0.02,
+    "assets_required": {
+      "count": 4,
+      "bytes": 503834,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "width-branch",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "STEP-MACHINE",
+    "engine": "webgl-raf",
+    "motion_signature": "click-fired radial displacement wave: a single uProgress uniform ramps 0 → maxCornerDist+0.5 on power2.out, and a sin(age*25) wave damped by exp(-age*10) rides the expanding ring, pushing UVs radially outward while a smoothstep crossfade (width 0.05) swaps textures behind it; SplitText masked char/line reveals run in counterpoint",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "step-advance"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

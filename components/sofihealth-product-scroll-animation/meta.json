@@ -1,0 +1,205 @@
+{
+  "slug": "sofihealth-product-scroll-animation",
+  "sourceDir": "cg-sofihealth-product-scroll-animation",
+  "title": "SofiHealth Product Scroll Animation",
+  "description": "A pinned, scrub-driven scroll section where a Three.js GLTF shaker model spins on its Y-axis while a single ScrollTrigger onUpdate handler maps scroll progress to sliding headers, an expanding circular clip-path mask, and staggered SplitText tooltip reveals. Lenis smooth-scroll feeds ScrollTrigger, and a separate ScrollTrigger reveals the split header characters on enter.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "three.js",
+    "webgl",
+    "scrolltrigger",
+    "splittext",
+    "gltf",
+    "product-showcase",
+    "lenis",
+    "clip-path"
+  ],
+  "gsap": [
+    "ScrollTrigger",
+    "SplitText"
+  ],
+  "deps": [
+    "three",
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 3000,
+    "scrollTo": 0.9,
+    "afterScrollMs": 1000,
+    "clip": {
+      "seconds": 10
+    }
+  },
+  "images": [],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "minimal",
+      "bold",
+      "technical"
+    ],
+    "useCase": [
+      "product-showcase",
+      "scroll-story",
+      "hero"
+    ],
+    "useWhen": "Úsalo para presentar un producto 3D que rota con el scroll mientras aparecen titulares y tooltips en una sección fija.",
+    "aliases": [
+      "producto 3d scroll",
+      "scroll product reveal",
+      "shaker 3d",
+      "gltf scroll animation",
+      "webgl product scroll",
+      "rotacion producto scroll"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": true,
+    "needsCanvas": true,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger",
+      "SplitText"
+    ],
+    "assetCount": 0,
+    "perfCost": "heavy",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": false,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#0d0d0d",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Texto",
+      "type": "color",
+      "default": "#e0dfdf",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "sofihealth-product-scroll-animation",
+    "title": "SofiHealth Product Scroll Animation",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "SplitText",
+      "three",
+      "GLTFLoader",
+      "lenis",
+      "ionicons"
+    ],
+    "complexity": 5,
+    "pinned": true,
+    "viewport_heights": 1000,
+    "needs_lenis": true,
+    "ease_family": "power3",
+    "duration_range": [
+      0.5,
+      1
+    ],
+    "stagger": 0.025,
+    "assets_required": {
+      "count": 1,
+      "bytes": 7252200,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "width-branch",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de sofihealth-product-scroll-animation"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de sofihealth-product-scroll-animation"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de sofihealth-product-scroll-animation"
+      }
+    ],
+    "cluster": "SCROLL-LAGGED",
+    "engine": "mixed",
+    "motion_signature": "pinned scrub: 3D model spin + clip-path mask reveal",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-lagged"
+  },
+  "review": {
+    "status": "public"
+  }
+}

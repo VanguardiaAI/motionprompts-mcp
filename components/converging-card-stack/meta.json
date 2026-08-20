@@ -1,0 +1,192 @@
+{
+  "slug": "converging-card-stack",
+  "title": "Converging Card Stack",
+  "description": "Six scattered, rotated photo cards converge into a single stack as you scroll through a sticky section, uncovering the headline they were covering. A single GSAP timeline drives all six from their authored data-x/data-y/data-r offsets to a shared resting point, wired to ScrollTrigger with `scrub: 1.1` — a lagged scrub, so releasing the wheel leaves the cards travelling for about a second and scrolling back up finds them still piled over the headline.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "scrub",
+    "lagged-scrub",
+    "sticky",
+    "card-stack",
+    "collage",
+    "convergence",
+    "editorial",
+    "lenis",
+    "colour-photography"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "scrollTo": 0.5,
+    "waitMs": 2400,
+    "clip": {
+      "seconds": 9,
+      "settleMs": 2400,
+      "actions": [
+        {
+          "type": "scroll",
+          "to": 0.85,
+          "mode": "pingpong"
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "card-1.jpg",
+      "desc": "Profile against a bright wall, chin lifted, warm daylight.",
+      "role": "Card 1 of the stack (bottom of the pile).",
+      "replaced": true
+    },
+    {
+      "file": "card-2.jpg",
+      "desc": "Dune crest raking across late golden light.",
+      "role": "Card 2 of the stack.",
+      "replaced": true
+    },
+    {
+      "file": "card-3.jpg",
+      "desc": "Shallow turquoise water seen from directly above.",
+      "role": "Card 3 of the stack.",
+      "replaced": true
+    },
+    {
+      "file": "card-4.jpg",
+      "desc": "Hands holding a bunch of cut yellow ranunculus.",
+      "role": "Card 4 of the stack.",
+      "replaced": true
+    },
+    {
+      "file": "card-5.jpg",
+      "desc": "Macro of coral-red woven linen.",
+      "role": "Card 5 of the stack.",
+      "replaced": true
+    },
+    {
+      "file": "card-6.jpg",
+      "desc": "Back of a neck over a sage-green knitted collar.",
+      "role": "Card 6 of the stack — the one left visible on top when the pile closes.",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-08-17",
+  "intent": {
+    "mood": [
+      "editorial",
+      "minimal",
+      "elegant"
+    ],
+    "useCase": [
+      "scroll-story",
+      "gallery",
+      "card-deck"
+    ],
+    "useWhen": "Úsalo para reunir imágenes dispersas en un solo montón mientras se baja, destapando el titular que tenían detrás. El retardo del scrub es lo que le da peso.",
+    "aliases": [
+      "tarjetas que se apilan",
+      "collage que converge",
+      "montón de fotos",
+      "cards converge scroll",
+      "stack de imágenes",
+      "scrub con retardo",
+      "lagged scrub"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 6,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": false
+  },
+  "motion": {
+    "slug": "converging-card-stack",
+    "title": "Converging Card Stack",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": 260,
+    "needs_lenis": true,
+    "ease_family": "none",
+    "duration_range": [
+      1,
+      1
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 6,
+      "bytes": 398495,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": true
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de converging-card-stack"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de converging-card-stack"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de converging-card-stack"
+      }
+    ],
+    "cluster": "SCROLL-SCRUB",
+    "engine": "gsap",
+    "motion_signature": "lagged-scrub convergence of scattered cards into one pile",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded",
+      "reveal-on-enter"
+    ],
+    "native_system": "scrub-lagged"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

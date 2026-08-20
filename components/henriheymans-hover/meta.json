@@ -1,0 +1,290 @@
+{
+  "slug": "henriheymans-hover",
+  "sourceDir": "cg-henriheymans-hover",
+  "title": "Vanguardia Award List Hover",
+  "description": "An awards list where hovering each row slides a three-layer wrapper via gsap.to (y translate, power2.out) so the row flips between the award panel and a cobalt project/year panel depending on whether the cursor enters from the top or bottom, while a fixed corner preview stacks the row’s image scaling it in and out with GSAP for a cursor-driven hover reveal.",
+  "category": "hover",
+  "tags": [
+    "hover",
+    "list",
+    "image-preview",
+    "gsap",
+    "lenis",
+    "cursor",
+    "awards",
+    "editorial",
+    "minimal"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "scrollTo": 0.7,
+    "afterScrollMs": 700,
+    "clip": {
+      "seconds": 8
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "Maison Arlette fashion portrait (red blazer on teal)",
+      "role": "corner preview reveal on award hover",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "North Docks photo studio interior, B&W",
+      "role": "corner preview reveal on award hover",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "KIN Management male portrait, B&W",
+      "role": "corner preview reveal on award hover",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "Casa Origo dark row-house facades, B&W",
+      "role": "corner preview reveal on award hover",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "Silhouet Magazine profile portrait, B&W",
+      "role": "corner preview reveal on award hover",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "Nocturne Records turntable stylus close-up",
+      "role": "corner preview reveal on award hover",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "Atelier Vermeer tailored collar detail, B&W",
+      "role": "corner preview reveal on award hover",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "Ore Jewellery chrome ring on grey",
+      "role": "corner preview reveal on award hover",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpg",
+      "desc": "Bruma Bridal veiled portrait",
+      "role": "corner preview reveal on award hover",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpg",
+      "desc": "Grain & Note marbled-paper swirl",
+      "role": "corner preview reveal on award hover",
+      "replaced": true
+    },
+    {
+      "file": "img11.jpg",
+      "desc": "Tempo Dance motion-blur performer",
+      "role": "corner preview reveal on award hover",
+      "replaced": true
+    },
+    {
+      "file": "img12.jpg",
+      "desc": "Studio Ferro clay sphere still life",
+      "role": "corner preview reveal on award hover",
+      "replaced": true
+    },
+    {
+      "file": "img13.jpg",
+      "desc": "Paper Planets scattered book pages",
+      "role": "corner preview reveal on award hover",
+      "replaced": true
+    },
+    {
+      "file": "img14.jpg",
+      "desc": "Paper Planets geometric paper still life",
+      "role": "corner preview reveal on award hover",
+      "replaced": true
+    },
+    {
+      "file": "img15.jpg",
+      "desc": "Open Field Festival blurred crowd",
+      "role": "corner preview reveal on award hover",
+      "replaced": true
+    },
+    {
+      "file": "img16.jpg",
+      "desc": "Braer Knitwear wool knit close-up",
+      "role": "corner preview reveal on award hover",
+      "replaced": true
+    },
+    {
+      "file": "img17.jpg",
+      "desc": "Hexe tour-site scream portrait on red",
+      "role": "corner preview reveal on award hover",
+      "replaced": true
+    },
+    {
+      "file": "logo.png",
+      "desc": "Vanguardia studio mark (dark) shown above the intro headline",
+      "role": "brand mark in intro section",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "minimal",
+      "editorial",
+      "elegant"
+    ],
+    "useCase": [
+      "hover-interaction",
+      "gallery",
+      "image-reveal"
+    ],
+    "useWhen": "Úsalo para una lista de premios o proyectos donde al pasar el cursor cada fila cambia de panel y aparece una imagen de vista previa en la esquina.",
+    "aliases": [
+      "lista hover",
+      "award list",
+      "hover preview",
+      "vista previa imagen",
+      "lista de premios",
+      "row hover reveal"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 18,
+    "perfCost": "light",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#e6e8e9",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#14161c",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "henriheymans-hover",
+    "title": "Vanguardia Award List Hover",
+    "category": "hover",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "lenis"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": true,
+    "ease_family": "power2",
+    "duration_range": [
+      0.4,
+      0.4
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 18,
+      "bytes": 2652168,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de henriheymans-hover"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de henriheymans-hover"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de henriheymans-hover"
+      }
+    ],
+    "cluster": "POINTER-LATCHED",
+    "engine": "gsap",
+    "motion_signature": "hover-driven row panel slide with corner image stack",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "pointer-latch"
+  },
+  "review": {
+    "status": "public"
+  }
+}

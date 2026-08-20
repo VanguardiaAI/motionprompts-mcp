@@ -1,0 +1,469 @@
+{
+  "slug": "aristidebenoist-slider",
+  "sourceDir": "cg-aristidebenoist-slider",
+  "title": "Aristide Benoist Slider",
+  "description": "A full-screen horizontal image carousel where clicking a segment in the top progress-bar nav slides the track with gsap.to and a custom 'hop' CustomEase, tweens the background overlay to a random color, and re-animates two rows of large display-type title letters sliding in with power2.out. Triggered by click on the nav segments.",
+  "category": "slider",
+  "tags": [
+    "horizontal-slider",
+    "carousel",
+    "custom-ease",
+    "gsap",
+    "kinetic-typography",
+    "click-navigation",
+    "editorial",
+    "fullscreen",
+    "portfolio"
+  ],
+  "gsap": [
+    "CustomEase"
+  ],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "click": ".nav-item-wrapper:nth-child(8)",
+    "afterClickMs": 1800,
+    "clip": {
+      "seconds": 7,
+      "actions": [
+        {
+          "type": "click",
+          "selector": ".nav-item-wrapper:nth-child(8)",
+          "at": 0.22
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "large-scale abstract textile wave, deep red fabric in motion, studio light",
+      "role": "carousel slide 1",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "Person's hand pressing against a translucent frosted surface, moody low light",
+      "role": "carousel slide 2",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "A single white die on a reflective surface under cool blue light",
+      "role": "carousel slide 3",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "White ring vase with dried pampas grass on a marble block, warm neutral still life",
+      "role": "carousel slide 4",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "Row of terracotta urns catching low warm afternoon light",
+      "role": "carousel slide 5",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "A studio photography spotlight on a stand against a grey backdrop",
+      "role": "carousel slide 6",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "Grouped pastel ceramic vases with dried stems on a neutral tabletop",
+      "role": "carousel slide 7",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "Portrait of a woman with a blue bob haircut against a bright blue background",
+      "role": "carousel slide 8",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpg",
+      "desc": "Minimalist still life of a small potted plant and cups against a pale wall",
+      "role": "carousel slide 9",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpg",
+      "desc": "A small dark rock or sculpture on a white pedestal with dappled shadows",
+      "role": "carousel slide 10",
+      "replaced": true
+    },
+    {
+      "file": "img11.jpg",
+      "desc": "Indoor still life with a stone bust vase and handmade ceramics",
+      "role": "carousel slide 11",
+      "replaced": true
+    },
+    {
+      "file": "img12.jpg",
+      "desc": "Speckled stoneware plates and bowls stacked on concrete blocks",
+      "role": "carousel slide 12",
+      "replaced": true
+    },
+    {
+      "file": "img13.jpg",
+      "desc": "Single white bloom in a fluted glass vase on a round table, soft daylight",
+      "role": "carousel slide 13",
+      "replaced": true
+    },
+    {
+      "file": "img14.jpg",
+      "desc": "A wristwatch resting on a mossy rock outdoors",
+      "role": "carousel slide 14",
+      "replaced": true
+    },
+    {
+      "file": "img15.jpg",
+      "desc": "Portrait of a woman with a dark bob, arms raised, soft light",
+      "role": "carousel slide 15",
+      "replaced": true
+    },
+    {
+      "file": "img16.jpg",
+      "desc": "Woman by a bright window in soft morning light, cool neutral tones",
+      "role": "carousel slide 16",
+      "replaced": true
+    },
+    {
+      "file": "img17.jpg",
+      "desc": "Close portrait of a woman resting against a dark ground, low warm light",
+      "role": "carousel slide 17",
+      "replaced": true
+    },
+    {
+      "file": "img18.jpg",
+      "desc": "Cozy dark home office interior with a desk and framed magazine posters",
+      "role": "carousel slide 18",
+      "replaced": true
+    },
+    {
+      "file": "img19.jpg",
+      "desc": "Minimalist camera sitting on a ledge against a textured grey wall",
+      "role": "carousel slide 19",
+      "replaced": true
+    },
+    {
+      "file": "img20.jpg",
+      "desc": "Moody portrait of a woman in a pale dress bathed in warm interior light",
+      "role": "carousel slide 20",
+      "replaced": true
+    },
+    {
+      "file": "img21.jpg",
+      "desc": "Elegant profile portrait of a woman beside a framed mirror, earthy tones",
+      "role": "carousel slide 21",
+      "replaced": true
+    },
+    {
+      "file": "img22.jpg",
+      "desc": "Electronic circuit board device on a stand with plant shadows",
+      "role": "carousel slide 22",
+      "replaced": true
+    },
+    {
+      "file": "img23.jpg",
+      "desc": "A VR headset on a wooden table in a warm interior",
+      "role": "carousel slide 23",
+      "replaced": true
+    },
+    {
+      "file": "img24.jpg",
+      "desc": "A dark VR or AR headset floating in a beam of light",
+      "role": "carousel slide 24",
+      "replaced": true
+    },
+    {
+      "file": "img25.jpg",
+      "desc": "A colorful mechanical keyboard with yellow, blue and red keys on wood and stone",
+      "role": "carousel slide 25",
+      "replaced": true
+    },
+    {
+      "file": "img26.jpg",
+      "desc": "A dark VR headset on a pedestal under moody grey lighting",
+      "role": "carousel slide 26",
+      "replaced": true
+    },
+    {
+      "file": "img27.jpg",
+      "desc": "Backlit profile of a woman in warm golden light against a soft ground",
+      "role": "carousel slide 27",
+      "replaced": true
+    },
+    {
+      "file": "img28.jpg",
+      "desc": "Interior room with a sofa and plants, sunlight streaming through blinds",
+      "role": "carousel slide 28",
+      "replaced": true
+    },
+    {
+      "file": "img29.jpg",
+      "desc": "Plant silhouetted against a sheer curtain in warm backlight",
+      "role": "carousel slide 29",
+      "replaced": true
+    },
+    {
+      "file": "img30.jpg",
+      "desc": "Abstract architectural warm-lit corridor of light with a large number 5",
+      "role": "carousel slide 30",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-14",
+  "intent": {
+    "mood": [
+      "editorial",
+      "elegant",
+      "experimental"
+    ],
+    "useCase": [
+      "slider",
+      "gallery",
+      "hero"
+    ],
+    "useWhen": "Cuando quieras un carrusel horizontal a pantalla completa con navegación por segmentos, cambio de color y títulos tipográficos animados al hacer clic.",
+    "aliases": [
+      "carrusel",
+      "slider horizontal",
+      "image carousel",
+      "galería",
+      "kinetic typography slider",
+      "aristide benoist"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "CustomEase"
+    ],
+    "assetCount": 30,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "plaster",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#ece3d4",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--plaster"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#2b2117",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "aristidebenoist-slider",
+    "title": "Aristide Benoist Slider",
+    "category": "slider",
+    "trigger": "click",
+    "libs": [
+      "gsap",
+      "CustomEase"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "custom",
+    "duration_range": [
+      1,
+      1.5
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 30,
+      "bytes": 4402442,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [
+      {
+        "with": "aladesign-landing-page-reveal",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "aminezegmou-landing-page",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "audemarspiguet-menu",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "hypnotic-gallery-gsap-flip",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "infinite-draggable-image-gallery-javascript",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "kin-landing-page",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "landing-page-reveal-no-webgl",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "laserbysonymusic-landing-page-reveal-animation",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "maxmilkin-preloader",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "meetings-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "menu-root-food",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "nite-riot-landing-page-reveal-javascript",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "outfit-landing-page-reveal",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "p10-landing-page-reveal-gsap",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "push-over-overlay-menu",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "steelworks-landing-page-reveal",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "story-world-carousel-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "truekindskincare-landing-page-reveal-javascript",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "zajno-lp",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "zajno-page-transitions",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      }
+    ],
+    "cluster": "STEP-MACHINE",
+    "engine": "gsap",
+    "motion_signature": "click-driven horizontal slider: a fixed 3000vw flex strip is tweened to -i*100vw over 1.5s on the CustomEase \"hop\" curve (fast-in, long settle) while a fixed full-viewport overlay cross-tints to a new palette colour on the same 1.5s/hop; simultaneously all 14 title letters are re-created as spans set at x:±150 (sign = travel direction) and slid to 0 over 1s power2.out after a 0.125s delay — no scroll, no stagger, no physics",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "step-advance"
+  },
+  "review": {
+    "status": "public",
+    "comment": "El componente está bien, solo que el estilo de las letras con espacios no queda bien y el vídeo no se ve bien se ven saltos imagino por los bajos fps no se puede ver bien el movimiento se ve entrecortado. Mejora el diseño de las letras y que no tenga esos espacios que no tiene mucho sentido."
+  }
+}

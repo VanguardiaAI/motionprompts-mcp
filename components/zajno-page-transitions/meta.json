@@ -1,0 +1,331 @@
+{
+  "slug": "zajno-page-transitions",
+  "sourceDir": "codegrid-zajno-page-transitions-nextjs",
+  "title": "Nuvoro Page Transitions",
+  "description": "A four-view site (home, work, studio, contact) where clicking a nav link runs a native View Transitions API page change: the incoming view is masked by a full-screen clip-path polygon that expands from a thin slit at 75% height to the whole viewport over 2s (cubic-bezier hop ease), while a dark GSAP revealer overlay scales away with a CustomEase 'hop' wipe and the new heading reveals through masked SplitText chars/words/lines on a power4.out stagger. Lenis drives smooth scrolling on the inner pages.",
+  "category": "transition",
+  "tags": [
+    "page-transition",
+    "view-transitions",
+    "clip-path",
+    "splittext",
+    "gsap",
+    "text-reveal",
+    "lenis",
+    "minimal",
+    "editorial"
+  ],
+  "gsap": [
+    "SplitText",
+    "CustomEase"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "click": ".nav a[data-path=\"/work\"]",
+    "afterClickMs": 1000
+  },
+  "images": [
+    {
+      "file": "hero.jpg",
+      "desc": "brutalist concrete facade shot from below against a muted teal sky, deep geometric window bays in shadow",
+      "role": "full-width hero image anchored to the bottom of the home view",
+      "replaced": true
+    },
+    {
+      "file": "img1.jpg",
+      "desc": "minimal grey concrete wall meeting at a soft edge, calm tonal light-and-shadow study",
+      "role": "first project image ('Halden') in the vertical 'selected work' gallery",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "underside of a curved white concrete canopy with a circular oculus opening onto bright sky",
+      "role": "second project image ('Atrium') in the vertical 'selected work' gallery",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "symmetrical brutalist concrete apex, chevron beams converging into a peaked opening",
+      "role": "third project image ('Northbound') in the vertical 'selected work' gallery",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "weathered concrete corner of a modernist building with two dark recessed windows, black-and-white",
+      "role": "fourth project image ('Quarry') in the vertical 'selected work' gallery",
+      "replaced": true
+    },
+    {
+      "file": "studio.jpg",
+      "desc": "dark concrete wall with a sharp diagonal of light and a pale terrazzo ledge below, moody shadow study",
+      "role": "about image in the second column of the studio view",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-18",
+  "intent": {
+    "mood": [
+      "minimal",
+      "elegant",
+      "editorial"
+    ],
+    "useCase": [
+      "page-transition",
+      "navigation",
+      "text-reveal"
+    ],
+    "useWhen": "Cuando quieres transiciones de página fluidas entre secciones, con un barrido clip-path oscuro y titulares que se revelan por líneas al llegar a cada vista.",
+    "aliases": [
+      "transición de página",
+      "page transition",
+      "view transitions",
+      "barrido clip-path",
+      "navegación animada",
+      "split text reveal"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "SplitText",
+      "CustomEase"
+    ],
+    "assetCount": 6,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bg",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#f2f0ea",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bg"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "muted",
+      "label": "Texto",
+      "type": "color",
+      "default": "#857f73",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--muted"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "accent",
+      "label": "Acento",
+      "type": "color",
+      "default": "#2f43c9",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--accent"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "fg",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#17140f",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--fg"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "zajno-page-transitions",
+    "title": "Nuvoro Page Transitions",
+    "category": "transition",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "SplitText",
+      "CustomEase",
+      "lenis"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": true,
+    "ease_family": "custom",
+    "duration_range": [
+      0.3,
+      1.5
+    ],
+    "stagger": 0.1,
+    "assets_required": {
+      "count": 6,
+      "bytes": 1790626,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "aladesign-landing-page-reveal",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "aristidebenoist-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "audemarspiguet-menu",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "camille-mormal-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "hypnotic-gallery-gsap-flip",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "kin-landing-page",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "landing-page-reveal-no-webgl",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "meetings-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "menu-root-food",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "outfit-landing-page-reveal",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "p10-landing-page-reveal-gsap",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "push-over-overlay-menu",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "story-world-carousel-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "zajno-lp",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de zajno-page-transitions"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de zajno-page-transitions"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de zajno-page-transitions"
+      }
+    ],
+    "cluster": "CLICK-CURTAIN",
+    "engine": "mixed",
+    "motion_signature": "View-transition clip-path wipe with masked SplitText reveal",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "curtain-toggle"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

@@ -1,0 +1,293 @@
+{
+  "slug": "accordion-frames",
+  "sourceDir": "codegrid-next-accordion-frames",
+  "title": "Accordion Frames Spotlight Row",
+  "description": "Centered accordion row of 20 vertical image slivers (10 on mobile) where hovering a panel (tapping on mobile) expands it to a 400px frame while the others collapse to 20px, eased by a slow decelerating CSS transition. A white focus frame with full-viewport vertical crosshair lines glides along to track the focused panel, and a ResizeObserver recomputes the pixel layout on resize.",
+  "category": "hover",
+  "tags": [
+    "accordion",
+    "spotlight",
+    "hover",
+    "gallery",
+    "panels",
+    "css-transition",
+    "resize-observer",
+    "responsive"
+  ],
+  "gsap": [],
+  "deps": [],
+  "preview": {
+    "click": ".spotlight-panel:nth-child(12)",
+    "waitMs": 1600
+  },
+  "images": [
+    {
+      "file": "spotlight/spotlight-1.jpg",
+      "desc": "motion-blurred figure in a grey jacket and white trousers, mid-turn",
+      "role": "spotlight panel image 1 of 20",
+      "replaced": true
+    },
+    {
+      "file": "spotlight/spotlight-2.jpg",
+      "desc": "overexposed pale portrait of a blond youth, washed in light",
+      "role": "spotlight panel image 2 of 20",
+      "replaced": true
+    },
+    {
+      "file": "spotlight/spotlight-3.jpg",
+      "desc": "motion-blurred crowd pressing together in the dark",
+      "role": "spotlight panel image 3 of 20",
+      "replaced": true
+    },
+    {
+      "file": "spotlight/spotlight-4.jpg",
+      "desc": "screaming face in violent motion blur, warm red cast",
+      "role": "spotlight panel image 4 of 20",
+      "replaced": true
+    },
+    {
+      "file": "spotlight/spotlight-5.jpg",
+      "desc": "silhouetted profile cut by red light beams",
+      "role": "spotlight panel image 5 of 20",
+      "replaced": true
+    },
+    {
+      "file": "spotlight/spotlight-6.jpg",
+      "desc": "silhouette with a raised hand against a flat red backdrop",
+      "role": "spotlight panel image 6 of 20",
+      "replaced": true
+    },
+    {
+      "file": "spotlight/spotlight-7.jpg",
+      "desc": "silhouette with a hand on their head against a deep blue backdrop",
+      "role": "spotlight panel image 7 of 20",
+      "replaced": true
+    },
+    {
+      "file": "spotlight/spotlight-8.jpg",
+      "desc": "dark figure from behind before a wall of orange bokeh lights",
+      "role": "spotlight panel image 8 of 20",
+      "replaced": true
+    },
+    {
+      "file": "spotlight/spotlight-9.jpg",
+      "desc": "black-and-white portrait of a young man with a cropped fringe",
+      "role": "spotlight panel image 9 of 20",
+      "replaced": true
+    },
+    {
+      "file": "spotlight/spotlight-10.jpg",
+      "desc": "black-and-white portrait of a woman with a bob and pearl earring",
+      "role": "spotlight panel image 10 of 20",
+      "replaced": true
+    },
+    {
+      "file": "spotlight/spotlight-11.jpg",
+      "desc": "black-and-white portrait of a bald sitter in hard side light",
+      "role": "spotlight panel image 11 of 20",
+      "replaced": true
+    },
+    {
+      "file": "spotlight/spotlight-12.jpg",
+      "desc": "black-and-white face veiled in translucent white fabric",
+      "role": "spotlight panel image 12 of 20",
+      "replaced": true
+    },
+    {
+      "file": "spotlight/spotlight-13.jpg",
+      "desc": "woman in a white dress on a misty lake shore with two black swans",
+      "role": "spotlight panel image 13 of 20",
+      "replaced": true
+    },
+    {
+      "file": "spotlight/spotlight-14.jpg",
+      "desc": "white-haired figure in white seated in an overgrown conservatory",
+      "role": "spotlight panel image 14 of 20",
+      "replaced": true
+    },
+    {
+      "file": "spotlight/spotlight-15.jpg",
+      "desc": "red-blindfolded figure beneath gothic stone arches",
+      "role": "spotlight panel image 15 of 20",
+      "replaced": true
+    },
+    {
+      "file": "spotlight/spotlight-16.jpg",
+      "desc": "pale woman with a crown of flowers in a sunlit garden",
+      "role": "spotlight panel image 16 of 20",
+      "replaced": true
+    },
+    {
+      "file": "spotlight/spotlight-17.jpg",
+      "desc": "man sitting on a motel bed beside a lit table lamp",
+      "role": "spotlight panel image 17 of 20",
+      "replaced": true
+    },
+    {
+      "file": "spotlight/spotlight-18.jpg",
+      "desc": "man reading at a table under a warm lamp in a wood-panelled room",
+      "role": "spotlight panel image 18 of 20",
+      "replaced": true
+    },
+    {
+      "file": "spotlight/spotlight-19.jpg",
+      "desc": "blonde woman in a red tee standing behind a home bar",
+      "role": "spotlight panel image 19 of 20",
+      "replaced": true
+    },
+    {
+      "file": "spotlight/spotlight-20.jpg",
+      "desc": "couple sitting up on a yellow quilted bed, warm lamplight",
+      "role": "spotlight panel image 20 of 20",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "editorial",
+      "cinematic",
+      "elegant"
+    ],
+    "useCase": [
+      "gallery",
+      "hover-interaction",
+      "image-reveal"
+    ],
+    "useWhen": "Úsalo cuando quieras una galería editorial de retratos en franjas verticales que se expanden al pasar el cursor o tocar, con un foco tipo spotlight.",
+    "aliases": [
+      "acordeón de imágenes",
+      "spotlight gallery",
+      "franjas expandibles",
+      "image accordion",
+      "galería spotlight",
+      "paneles expandibles"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 20,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#0d0d0d",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f0ede4",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mark",
+      "label": "Acento",
+      "type": "color",
+      "default": "#1141ff",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--mark"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "muted",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#5f6368",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--muted"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "accordion-frames",
+    "title": "Accordion Frames Spotlight Row",
+    "category": "hover",
+    "trigger": "hover",
+    "libs": [],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": null,
+    "duration_range": [
+      0.25,
+      1
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 20,
+      "bytes": 2272254,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "width-branch",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "POINTER-LATCHED",
+    "engine": "css-transition",
+    "motion_signature": "hover/tap accordion strip: JS writes px left/width per panel (focused 400px desktop / 100px mobile, others 20px, 5px gap, strip re-centered in the track) and a 1s cubic-bezier(0.075,0.82,0.165,1) CSS transition does all the easing; a bordered focus indicator with full-viewport crosshair lines glides to the focused panel on the same curve",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "pointer-latch"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

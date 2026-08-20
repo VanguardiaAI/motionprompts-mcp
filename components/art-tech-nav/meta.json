@@ -1,0 +1,172 @@
+{
+  "slug": "art-tech-nav",
+  "sourceDir": "cg-art-tech-nav",
+  "title": "Art Tech Overlay Navigation",
+  "description": "Clicking the burger button plays a paused GSAP timeline that reveals a fullscreen black overlay by animating the clip-path polygon of eight vertical blocks with a 0.075s stagger on a power3.inOut ease, then fades in the menu title and items with a staggered opacity tween; clicking again reverses the timeline to close.",
+  "category": "menu",
+  "tags": [
+    "overlay-menu",
+    "fullscreen-menu",
+    "clip-path",
+    "staggered-reveal",
+    "burger-toggle",
+    "timeline",
+    "gsap",
+    "editorial",
+    "technical"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "click": ".burger",
+    "afterClickMs": 2000
+  },
+  "images": [
+    {
+      "file": "logo-main.png",
+      "desc": "Wide white wordmark/logo lockup on a transparent background",
+      "role": "Centered background logo in the website content and the centered logo in the top nav bar",
+      "replaced": true
+    },
+    {
+      "file": "logo.png",
+      "desc": "Small square white brand mark on a transparent background",
+      "role": "Top-left logo in the fixed navigation bar",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-14",
+  "intent": {
+    "mood": [
+      "editorial",
+      "technical",
+      "minimal"
+    ],
+    "useCase": [
+      "navigation",
+      "text-reveal"
+    ],
+    "useWhen": "Úsalo cuando quieras un menú overlay a pantalla completa que se despliega con bloques verticales en clip-path escalonado y enlaces que aparecen tras un botón burger.",
+    "aliases": [
+      "menú overlay",
+      "fullscreen menu",
+      "menú pantalla completa",
+      "clip-path menu",
+      "burger menu",
+      "menú de bloques"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 2,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "electric",
+      "label": "Acento",
+      "type": "color",
+      "default": "#2317e6",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--electric"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "art-tech-nav",
+    "title": "Art Tech Overlay Navigation",
+    "category": "menu",
+    "trigger": "click",
+    "libs": [
+      "gsap"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power3",
+    "duration_range": [
+      0.3,
+      1
+    ],
+    "stagger": 0.05,
+    "assets_required": {
+      "count": 2,
+      "bytes": 30785,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "CLICK-CURTAIN",
+    "engine": "gsap",
+    "motion_signature": "Burger click plays one paused timeline: 8 full-height columns wipe top-to-bottom via clip-path polygon (1s, power3.inOut, 0.075s stagger), and 0.5s before that wipe finishes the index title + 4 menu items fade up in opacity (0.3s, power1.out default, 0.05s stagger). A second click reverses the same timeline. No scroll, no rAF, no physics.",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "curtain-toggle"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "slug": "gentlerain",
+  "sourceDir": "cg-gentlerain",
+  "title": "Water Ripple Text Simulation",
+  "description": "A full-screen Three.js water-ripple simulation over giant canvas-drawn wordmark text: moving the pointer injects pressure into double-buffered FloatType render targets running a ping-pong wave-equation shader, and a render pass refracts and adds specular highlights to the text beneath, so the cursor leaves rippling wakes across the surface. Driven entirely by mousemove on the WebGL canvas (no GSAP).",
+  "category": "3d-webgl",
+  "tags": [
+    "water-simulation",
+    "ripple",
+    "webgl",
+    "three",
+    "shaders",
+    "wave-equation",
+    "mouse",
+    "canvas",
+    "hero"
+  ],
+  "gsap": [],
+  "deps": [
+    "three"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "clip": {
+      "seconds": 8,
+      "actions": [
+        {
+          "type": "cursor",
+          "path": "figure8"
+        }
+      ]
+    }
+  },
+  "images": [],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "experimental",
+      "organic",
+      "minimal"
+    ],
+    "useCase": [
+      "hero",
+      "background",
+      "cursor-effect"
+    ],
+    "useWhen": "Úsalo cuando quieras un hero donde el cursor deja ondas de agua que distorsionan un titular tipográfico gigante en tiempo real.",
+    "aliases": [
+      "simulación de agua",
+      "water ripple",
+      "efecto ondas",
+      "ripple effect",
+      "agua interactiva",
+      "distorsión de texto"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": false,
+    "needsWebgl": true,
+    "needsCanvas": true,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 0,
+    "perfCost": "heavy",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": false,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "coral",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#ff7a50",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--coral"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "foam",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f2eee3",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--foam"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "gentlerain",
+    "title": "Water Ripple Text Simulation",
+    "category": "3d-webgl",
+    "trigger": "hover",
+    "libs": [
+      "three"
+    ],
+    "complexity": 4,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": null,
+    "duration_range": [
+      0.2,
+      0.2
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 0,
+      "bytes": 0,
+      "root_absolute_paths": false
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "INTEGRATOR",
+    "engine": "webgl-raf",
+    "motion_signature": "ping-pong wave-equation ripples refracting canvas wordmark",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  },
+  "review": {
+    "status": "public"
+  }
+}

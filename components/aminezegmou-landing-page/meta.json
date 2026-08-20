@@ -1,0 +1,306 @@
+{
+  "slug": "aminezegmou-landing-page",
+  "sourceDir": "codegrid-aminezegmou-landing-page",
+  "title": "Sci-Fi Preloader Button Hero Reveal",
+  "description": "Terminal-styled preloader that auto-plays on load: monospace status lines rise with masked SplitText, a circular SVG button outline draws itself while rotating 270deg, and a progress stroke fills in randomized stops before the logo swaps to an 'Engage' label. Clicking the button scales the preloader down, unwinds the strokes, flips the label to 'Access Granted' and wipes preloader plus white revealer left via clip-path, scaling the hero up as its headline words stagger in.",
+  "category": "preloader",
+  "tags": [
+    "preloader",
+    "reveal",
+    "clip-path",
+    "splittext",
+    "custom-ease",
+    "svg-stroke",
+    "hero",
+    "click",
+    "landing",
+    "intro"
+  ],
+  "gsap": [
+    "SplitText",
+    "CustomEase"
+  ],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 9000,
+    "click": ".preloader-btn-container",
+    "clip": {
+      "seconds": 12,
+      "settleMs": 400,
+      "actions": [
+        {
+          "type": "click",
+          "selector": ".preloader-btn-container",
+          "at": 0.72
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "logo.png",
+      "desc": "gray split-hexagon geometric logo mark on transparent background",
+      "role": "small dashed-border logo in the white backdrop layer",
+      "replaced": true
+    },
+    {
+      "file": "logo-light.png",
+      "desc": "white split-hexagon geometric logo mark on transparent background",
+      "role": "center logo inside the circular preloader button",
+      "replaced": true
+    },
+    {
+      "file": "logo-dark.png",
+      "desc": "black split-hexagon geometric logo mark on transparent background (not referenced by the component)",
+      "role": "unused",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "futuristic",
+      "technical",
+      "minimal"
+    ],
+    "useCase": [
+      "preloader",
+      "hero",
+      "text-reveal"
+    ],
+    "useWhen": "Úsalo cuando quieras una intro sci-fi tipo terminal que carga sola y, al pulsar un botón, revela el hero con el titular apareciendo palabra a palabra.",
+    "aliases": [
+      "preloader sci-fi",
+      "pantalla de carga terminal",
+      "intro futurista",
+      "terminal preloader",
+      "access granted",
+      "botón de carga"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "SplitText",
+      "CustomEase"
+    ],
+    "assetCount": 3,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#e5eadf",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "phosphor",
+      "label": "Texto",
+      "type": "color",
+      "default": "#3fe081",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--phosphor"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "console",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#05100b",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--console"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink-soft",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#75836f",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink-soft"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "aminezegmou-landing-page",
+    "title": "Sci-Fi Preloader Button Hero Reveal",
+    "category": "preloader",
+    "trigger": "click",
+    "libs": [
+      "gsap",
+      "SplitText",
+      "CustomEase"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "custom",
+    "duration_range": [
+      0.3,
+      2
+    ],
+    "stagger": 0.05,
+    "assets_required": {
+      "count": 3,
+      "bytes": 50373,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "entry-veil",
+        "reason": "velo de entrada a pantalla completa en la carga"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "aladesign-landing-page-reveal",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "aristidebenoist-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "audemarspiguet-menu",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "camille-mormal-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "hypnotic-gallery-gsap-flip",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "kin-landing-page",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "landing-page-reveal-no-webgl",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "meetings-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "menu-root-food",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "outfit-landing-page-reveal",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "p10-landing-page-reveal-gsap",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "push-over-overlay-menu",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "story-world-carousel-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "zajno-lp",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      }
+    ],
+    "cluster": "LOAD-ONESHOT",
+    "engine": "gsap",
+    "motion_signature": "click-gated preloader: SVG ring draw, clip-path wipe reveal",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "entry-veil"
+  },
+  "review": {
+    "status": "public"
+  }
+}

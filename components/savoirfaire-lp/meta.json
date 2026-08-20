@@ -1,0 +1,229 @@
+{
+  "slug": "savoirfaire-lp",
+  "sourceDir": "cg-savoirfaire-lp",
+  "title": "Savoir-Faire Click Reveal",
+  "description": "A full-screen dark editorial landing where every click spawns a random image or autoplaying video card at the pointer. Each card is set with gsap.set (scale 0, slight random rotation) then a gsap.timeline scales it up (random 0.5–1) and simultaneously drifts it 500px upward over 4s while fading in, then fades out and self-removes. A custom sparkle cursor trails the mouse via gsap.to with power2.out, and a click SFX plays on each spawn.",
+  "category": "interactive",
+  "tags": [
+    "click-interaction",
+    "custom-cursor",
+    "spawn",
+    "image-reveal",
+    "video",
+    "gsap",
+    "timeline",
+    "editorial",
+    "luxury"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "click": "body",
+    "afterClickMs": 1200,
+    "scrollTo": 0.8,
+    "clip": {
+      "seconds": 8,
+      "actions": [
+        {
+          "type": "scroll",
+          "to": 0.8,
+          "mode": "pingpong"
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "img-1.jpg",
+      "desc": "extreme cinematic close-up of a man's lower face and neck lit with moody blue and red gel light, film-still atmosphere",
+      "role": "one of six images randomly spawned on click as a floating card",
+      "replaced": true
+    },
+    {
+      "file": "img-2.jpg",
+      "desc": "low-key dramatic portrait of a young man with curly hair looking down, single hard light against a black background",
+      "role": "one of six images randomly spawned on click as a floating card",
+      "replaced": true
+    },
+    {
+      "file": "img-3.jpg",
+      "desc": "moody night street corner with red neon 'pizza bar' signage, wet reflections and passing figures, cinematic city scene",
+      "role": "one of six images randomly spawned on click as a floating card",
+      "replaced": true
+    },
+    {
+      "file": "img-4.jpg",
+      "desc": "rain-soaked pavement at night with amber and white light reflections and a lone figure under an umbrella, cinematic mood",
+      "role": "one of six images randomly spawned on click as a floating card",
+      "replaced": true
+    },
+    {
+      "file": "img-5.jpg",
+      "desc": "behind-the-scenes of a film shoot on a seamless studio backdrop: camera cases, cables, a crew member and gear",
+      "role": "one of six images randomly spawned on click as a floating card",
+      "replaced": true
+    },
+    {
+      "file": "img-6.jpg",
+      "desc": "dramatic studio portrait of a man with a large curly afro, top light against a grey seamless backdrop, editorial mood",
+      "role": "one of six images randomly spawned on click as a floating card",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "elegant",
+      "luxury",
+      "editorial",
+      "cinematic"
+    ],
+    "useCase": [
+      "hero",
+      "cursor-effect",
+      "image-reveal",
+      "background"
+    ],
+    "useWhen": "Cuando quieras un hero de agencia lujoso donde cada clic haga aparecer fotos o vídeos flotantes con cursor personalizado y sonido.",
+    "aliases": [
+      "click reveal",
+      "spawn de imagenes al hacer click",
+      "custom cursor",
+      "cursor personalizado",
+      "floating media",
+      "agency hero"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 6,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#0b0b0d",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bone",
+      "label": "Texto",
+      "type": "color",
+      "default": "#ece7dd",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bone"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "savoirfaire-lp",
+    "title": "Savoir-Faire Click Reveal",
+    "category": "interactive",
+    "trigger": "pointer",
+    "libs": [
+      "gsap"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power2",
+    "duration_range": [
+      0.5,
+      4
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 15,
+      "bytes": 7637544,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "html/body overflow:hidden",
+      "html/body height fija en vh"
+    ],
+    "capabilities": [
+      {
+        "capability": "page-scroll-lock",
+        "reason": "fija overflow:hidden en html/body"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "POINTER-LATCHED",
+    "engine": "gsap",
+    "motion_signature": "click-spawned media cards scale up and drift",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "pointer-latch"
+  },
+  "review": {
+    "status": "public",
+    "comment": "En Mobile no funciona bien el componente y el vídeo haya UE hacerlo más rápido y el scroll más rápido y fluido."
+  }
+}

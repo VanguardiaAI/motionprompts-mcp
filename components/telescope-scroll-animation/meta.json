@@ -1,0 +1,316 @@
+{
+  "slug": "telescope-scroll-animation",
+  "sourceDir": "cg-telescope-scroll-animation",
+  "title": "Telescope Scroll Animation",
+  "description": "'Afterimage', a pinned spotlight gallery of long-exposure photographs in colored light. Scrolling first splits the 'After / Image' intro text apart and scales a background image up from zero, then scrolls a vertical column of frame titles through a diamond-shaped (telescope) clip-path viewfinder while thumbnails fly along a quadratic bezier arc; the title nearest the viewport center highlights and swaps the full-bleed background image. Driven by a single ScrollTrigger (pin + scrub over 10x viewport height, Lenis-smoothed) whose onUpdate maps scroll progress across phased ranges with gsap.set.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "pin",
+    "scrub",
+    "bezier-arc",
+    "clip-path",
+    "image-reveal",
+    "lenis",
+    "gallery",
+    "editorial"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "scrollTo": 0.8,
+    "waitMs": 2500,
+    "clip": {
+      "seconds": 10
+    }
+  },
+  "images": [
+    {
+      "file": "img_1.jpg",
+      "desc": "Long-exposure photograph of a blurred figure dissolving into prismatic colored light, titled 'Silent Arc'.",
+      "role": "First gallery item; initial full-bleed background image and first flying thumbnail.",
+      "replaced": true
+    },
+    {
+      "file": "img_2.jpg",
+      "desc": "A robed figure standing in a room washed with iridescent prism light, titled 'Glass Fade'.",
+      "role": "Second gallery item; flying thumbnail and background swap when its title is centered.",
+      "replaced": true
+    },
+    {
+      "file": "img_3.jpg",
+      "desc": "Soft chromatic blur of refracted light, titled 'Long Echo'.",
+      "role": "Third gallery item; flying thumbnail and background swap when its title is centered.",
+      "replaced": true
+    },
+    {
+      "file": "img_4.jpg",
+      "desc": "Blue and orange ink blooming through water on a dark ground, titled 'Red Shift'.",
+      "role": "Fourth gallery item; flying thumbnail and background swap when its title is centered.",
+      "replaced": true
+    },
+    {
+      "file": "img_5.jpg",
+      "desc": "Pink and cyan smoke drifting across black, titled 'Slow Bloom'.",
+      "role": "Fifth gallery item; flying thumbnail and background swap when its title is centered.",
+      "replaced": true
+    },
+    {
+      "file": "img_6.jpg",
+      "desc": "Red and teal ink curling through dark water, titled 'Velvet Blur'.",
+      "role": "Sixth gallery item; flying thumbnail and background swap when its title is centered.",
+      "replaced": true
+    },
+    {
+      "file": "img_7.jpg",
+      "desc": "Warm spectral light leak banding across a dark wall, titled 'Spectral Line'.",
+      "role": "Seventh gallery item; flying thumbnail and background swap when its title is centered.",
+      "replaced": true
+    },
+    {
+      "file": "img_8.jpg",
+      "desc": "A single rainbow prism streak cutting across black, titled 'Prism Gate'.",
+      "role": "Eighth gallery item; flying thumbnail and background swap when its title is centered.",
+      "replaced": true
+    },
+    {
+      "file": "img_9.jpg",
+      "desc": "Violet and coral smoke dissolving into shadow, titled 'Violet Hour'.",
+      "role": "Ninth gallery item; flying thumbnail and background swap when its title is centered.",
+      "replaced": true
+    },
+    {
+      "file": "img_10.jpg",
+      "desc": "Purple and blue prism gradient bending across a dark field, titled 'Last Light'.",
+      "role": "Tenth gallery item; flying thumbnail and background swap when its title is centered.",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "editorial",
+      "elegant",
+      "experimental"
+    ],
+    "useCase": [
+      "gallery",
+      "scroll-story",
+      "image-reveal"
+    ],
+    "useWhen": "Úsalo para una galería editorial donde el scroll fija la sección y desplaza títulos por un visor con clip-path mientras miniaturas vuelan en arco y cambian el fondo.",
+    "aliases": [
+      "galeria scroll",
+      "telescope scroll",
+      "spotlight gallery",
+      "titulos con arco",
+      "image reveal scroll",
+      "scrollytelling galeria"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 10,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#efece5",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#0a0a0c",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "gap",
+      "label": "Separación entre imágenes",
+      "type": "range",
+      "min": 0.01,
+      "max": 0.2,
+      "step": 0.01,
+      "default": 0.08,
+      "apply": {
+        "kind": "js",
+        "path": "gap"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "speed",
+      "label": "Recorrido de cada imagen",
+      "type": "range",
+      "min": 0.1,
+      "max": 0.8,
+      "step": 0.05,
+      "default": 0.3,
+      "apply": {
+        "kind": "js",
+        "path": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "arcRadius",
+      "label": "Curvatura del arco",
+      "type": "range",
+      "min": 100,
+      "max": 1200,
+      "step": 25,
+      "default": 500,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "arcRadius"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "scrollLength",
+      "label": "Longitud del recorrido",
+      "type": "range",
+      "min": 4,
+      "max": 20,
+      "step": 1,
+      "default": 10,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "scrollLength"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "telescope-scroll-animation",
+    "title": "Telescope Scroll Animation",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 3,
+    "pinned": true,
+    "viewport_heights": 1000,
+    "needs_lenis": true,
+    "ease_family": null,
+    "duration_range": [
+      0.3,
+      0.3
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 10,
+      "bytes": 1700654,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de telescope-scroll-animation"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de telescope-scroll-animation"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de telescope-scroll-animation"
+      }
+    ],
+    "cluster": "SCROLL-LAGGED",
+    "engine": "gsap",
+    "motion_signature": "pinned scrub gallery, titles column plus bezier-arc thumbnails",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-lagged"
+  },
+  "review": {
+    "status": "public"
+  }
+}

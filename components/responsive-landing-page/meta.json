@@ -1,0 +1,159 @@
+{
+  "slug": "responsive-landing-page",
+  "sourceDir": "cg-responsive-landing-page",
+  "title": "Responsive Landing Page Reveal",
+  "description": "On page load a full-screen preloader plays: a numeric counter races from 0 to 100 while an anime.js easeOutExpo timeline reveals the label letter-by-letter and slides it away, then GSAP power4.inOut tweens scale the loader down and wipe the black and red panels (animating height to 0) to uncover the hero GIF via clip-path, staggering in the headline (gsap.from y) and footer images. Entirely time-delayed on load with no user interaction.",
+  "category": "preloader",
+  "tags": [
+    "preloader",
+    "reveal",
+    "counter",
+    "clip-path",
+    "gsap",
+    "anime.js",
+    "staggered",
+    "landing",
+    "editorial"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 6500
+  },
+  "images": [
+    {
+      "file": "hero.gif",
+      "desc": "Cinematic neon-lit Tokyo backstreet at night — glowing Japanese signage, lanterns and wet pavement in reds and cyans.",
+      "role": "Hero background (loader-2) revealed behind the headline as the preloader wipes away.",
+      "replaced": true
+    },
+    {
+      "file": "nav-2.avif",
+      "desc": "Vertical neon-lit Tokyo alley at night, dense with illuminated signs.",
+      "role": "First footer thumbnail (.img:nth-child(1)) that clip-path reveals at the end.",
+      "replaced": true
+    },
+    {
+      "file": "nav-1.avif",
+      "desc": "Abstract long-exposure light trails in cool blue tones against a dark ground.",
+      "role": "Second footer thumbnail (.img:nth-child(2)) that clip-path reveals at the end.",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "editorial",
+      "cinematic",
+      "bold"
+    ],
+    "useCase": [
+      "preloader",
+      "hero",
+      "image-reveal"
+    ],
+    "useWhen": "Cuando quieras una intro de carga con contador y un revelado a pantalla completa que descubre el hero y la cabecera al entrar en la pagina.",
+    "aliases": [
+      "preloader",
+      "pantalla de carga",
+      "landing reveal",
+      "contador de carga",
+      "revelado hero",
+      "intro animada"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 3,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "responsive-landing-page",
+    "title": "Responsive Landing Page Reveal",
+    "category": "preloader",
+    "trigger": "load",
+    "libs": [
+      "gsap",
+      "anime.js (vendored v3.2.2)"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power4",
+    "duration_range": [
+      0.25,
+      2
+    ],
+    "stagger": 0.05,
+    "assets_required": {
+      "count": 3,
+      "bytes": 882565,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "html/body height fija en vh"
+    ],
+    "capabilities": [
+      {
+        "capability": "entry-veil",
+        "reason": "velo de entrada a pantalla completa en la carga"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "LOAD-ONESHOT",
+    "engine": "mixed",
+    "motion_signature": "time-delayed full-screen preloader wipe reveal: no interaction and no scroll, a fixed absolute-delay schedule (3s-4.5s starts) whose last tween lands at ~6.25s",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "entry-veil"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

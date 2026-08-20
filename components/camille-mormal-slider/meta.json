@@ -1,0 +1,332 @@
+{
+  "slug": "camille-mormal-slider",
+  "sourceDir": "cg-camille-mormal-slider",
+  "title": "Camille Mormal Slider",
+  "description": "A four-plate portrait slider: each photograph is framed as a print on a bone-paper wall (crop marks and all) rather than used as a full-bleed background, with the whole naming rail — title, sampled ground colour, counter, progress and thumbnails — kept beside the picture. Clicking either half of the plate, a thumbnail, an arrow key or one of the rotating '+' marks swaps plates with a GSAP clip-path wipe while the outgoing photograph pushes sideways. A CustomEase 'hop' curve drives the wipe, the three odometers (title, ground hex, counter), the progress fill and the +/-90 degree mark rotation; the accent colour of the whole page is sampled from the seamless paper of the current plate.",
+  "category": "slider",
+  "tags": [
+    "slider",
+    "clip-path",
+    "gsap",
+    "customease",
+    "image-reveal",
+    "counter",
+    "editorial",
+    "click-driven",
+    "keyboard"
+  ],
+  "gsap": [
+    "CustomEase"
+  ],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 2200,
+    "click": ".thumbs .thumb:nth-child(3)",
+    "afterClickMs": 1800,
+    "clip": {
+      "seconds": 10,
+      "settleMs": 1600,
+      "actions": [
+        {
+          "type": "click",
+          "selector": ".thumbs .thumb:nth-child(2)",
+          "at": 0.15
+        },
+        {
+          "type": "click",
+          "selector": ".thumbs .thumb:nth-child(3)",
+          "at": 0.42
+        },
+        {
+          "type": "click",
+          "selector": ".thumbs .thumb:nth-child(4)",
+          "at": 0.68
+        },
+        {
+          "type": "click",
+          "selector": ".thumbs .thumb:nth-child(1)",
+          "at": 0.9
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "Studio profile portrait of a dark-haired woman against a vermilion seamless paper (ground #B30B15)",
+      "role": "First plate, first thumbnail; its ground colour seeds the page accent on load",
+      "replaced": true,
+      "reused_from": "kaitonote-3d-gallery-showcase-scroll-animation/img_11.jpg"
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "Studio profile portrait of a blond man against a verdigris seamless paper (ground #049A96)",
+      "role": "Second plate and thumbnail",
+      "replaced": true,
+      "reused_from": "kaitonote-3d-gallery-showcase-scroll-animation/img_12.jpg"
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "Studio profile portrait of a dark-haired man against an ochre seamless paper (ground #DD9E17)",
+      "role": "Third plate and thumbnail; the default preview click lands here",
+      "replaced": true,
+      "reused_from": "kaitonote-3d-gallery-showcase-scroll-animation/img_13.jpg"
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "Studio profile portrait of a long-haired woman against an amethyst seamless paper (ground #754B9A)",
+      "role": "Fourth and last plate and thumbnail",
+      "replaced": true,
+      "reused_from": "kaitonote-3d-gallery-showcase-scroll-animation/img_14.jpg"
+    }
+  ],
+  "updated": "2026-08-16",
+  "intent": {
+    "mood": [
+      "editorial",
+      "elegant",
+      "minimal"
+    ],
+    "useCase": [
+      "slider",
+      "gallery",
+      "image-reveal"
+    ],
+    "useWhen": "Cuando necesitas un slider editorial donde la foto se presenta como lámina enmarcada, no a sangre, y el texto vive al lado con paginación y miniaturas.",
+    "aliases": [
+      "slider de imagenes",
+      "image slider",
+      "carousel clip-path",
+      "fullscreen slider",
+      "galeria editorial",
+      "clip-path wipe"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "CustomEase"
+    ],
+    "assetCount": 4,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Papel",
+      "type": "color",
+      "default": "#ebe6dc",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Tinta",
+      "type": "color",
+      "default": "#16130f",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "camille-mormal-slider",
+    "title": "Camille Mormal Slider",
+    "category": "slider",
+    "trigger": "click",
+    "libs": [
+      "gsap",
+      "CustomEase"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "custom",
+    "duration_range": [
+      0.25,
+      1.5
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 4,
+      "bytes": 400413,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": true
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [
+      {
+        "with": "aladesign-landing-page-reveal",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "aminezegmou-landing-page",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "audemarspiguet-menu",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "hypnotic-gallery-gsap-flip",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "infinite-draggable-image-gallery-javascript",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "kin-landing-page",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "landing-page-reveal-no-webgl",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "laserbysonymusic-landing-page-reveal-animation",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "maxmilkin-preloader",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "meetings-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "menu-root-food",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "nite-riot-landing-page-reveal-javascript",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "outfit-landing-page-reveal",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "p10-landing-page-reveal-gsap",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "push-over-overlay-menu",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "steelworks-landing-page-reveal",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "story-world-carousel-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "truekindskincare-landing-page-reveal-javascript",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "zajno-lp",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "zajno-page-transitions",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      }
+    ],
+    "cluster": "STEP-MACHINE",
+    "engine": "gsap",
+    "motion_signature": "click-driven clip-path wipe: new slide unmasks from the clicked edge while both images push ±500px, all six tweens on one custom 'hop' ease (fast-out, long settle), with odometer-style y-stepped counter/title and ±90° rotating + marks",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "step-advance"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

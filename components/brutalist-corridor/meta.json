@@ -1,0 +1,281 @@
+{
+  "slug": "brutalist-corridor",
+  "sourceDir": "cg-brutalist-corridor",
+  "title": "Brutalist Sci-fi Corridor",
+  "description": "On page load a preloader counter climbs to 100 over a black overlay, then a GSAP timeline fades the overlay, rotates the Three.js camera around a sodium-lit brutalist concrete corridor (ACES grade, UnrealBloom + film-grain post-processing) and scrambles the nav and heading text into view via staggered opacity; afterward the camera follows the mouse with a lerped parallax.",
+  "category": "3d-webgl",
+  "tags": [
+    "three.js",
+    "gsap",
+    "webgl",
+    "gltf",
+    "bloom",
+    "film-grain",
+    "parallax",
+    "brutalist",
+    "preloader"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap",
+    "three"
+  ],
+  "preview": {
+    "waitMs": 15000,
+    "clip": {
+      "seconds": 10,
+      "settleMs": 400,
+      "actions": [
+        {
+          "type": "hold"
+        }
+      ]
+    }
+  },
+  "images": [],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "brutalist",
+      "futuristic",
+      "cinematic"
+    ],
+    "useCase": [
+      "hero",
+      "preloader",
+      "background"
+    ],
+    "useWhen": "Cuando quieres un hero inmersivo en 3D con preloader de contador y una escena WebGL que se revela al cargar, para marcas futuristas o brutalistas.",
+    "aliases": [
+      "corredor 3d",
+      "3d corridor",
+      "escena webgl",
+      "brutalist hero",
+      "sci-fi scene",
+      "bloom grain"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": true,
+    "needsCanvas": true,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 0,
+    "perfCost": "heavy",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": false,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "sodium",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#ffb35c",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--sodium"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "shadow",
+      "label": "Texto",
+      "type": "color",
+      "default": "#767e8d",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--shadow"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#0b0c10",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "concrete",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#e8e4da",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--concrete"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "fov",
+      "label": "Apertura de la cámara",
+      "type": "range",
+      "min": 45,
+      "max": 105,
+      "step": 1,
+      "default": 75,
+      "unit": "°",
+      "apply": {
+        "kind": "js",
+        "path": "fov"
+      }
+    },
+    {
+      "id": "fogDensity",
+      "label": "Densidad de la niebla",
+      "type": "range",
+      "min": 0.015,
+      "max": 0.13,
+      "step": 0.005,
+      "default": 0.055,
+      "apply": {
+        "kind": "js",
+        "path": "fogDensity"
+      }
+    },
+    {
+      "id": "bloomStrength",
+      "label": "Halo de las lámparas",
+      "type": "range",
+      "min": 0.2,
+      "max": 2,
+      "step": 0.05,
+      "default": 0.9,
+      "apply": {
+        "kind": "js",
+        "path": "bloomStrength"
+      }
+    },
+    {
+      "id": "numJumps",
+      "label": "Escalones del contador",
+      "type": "range",
+      "min": 3,
+      "max": 14,
+      "step": 1,
+      "default": 7,
+      "apply": {
+        "kind": "js",
+        "path": "numJumps"
+      }
+    },
+    {
+      "id": "lookAngle",
+      "label": "Giro con el puntero",
+      "type": "range",
+      "min": 0.05,
+      "max": 1.2,
+      "step": 0.05,
+      "default": 0.35,
+      "apply": {
+        "kind": "js",
+        "path": "lookAngle"
+      }
+    },
+    {
+      "id": "lerp",
+      "label": "Suavizado del avance",
+      "type": "range",
+      "min": 0.005,
+      "max": 0.15,
+      "step": 0.005,
+      "default": 0.025,
+      "apply": {
+        "kind": "js",
+        "path": "lerp"
+      }
+    }
+  ],
+  "motion": {
+    "slug": "brutalist-corridor",
+    "title": "Brutalist Sci-fi Corridor",
+    "category": "3d-webgl",
+    "trigger": "pointer",
+    "libs": [
+      "gsap",
+      "three",
+      "GLTFLoader",
+      "EffectComposer",
+      "RenderPass",
+      "ShaderPass",
+      "UnrealBloomPass"
+    ],
+    "complexity": 4,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power2",
+    "duration_range": [
+      0.1,
+      4
+    ],
+    "stagger": 0.1,
+    "assets_required": {
+      "count": 6,
+      "bytes": 9410833,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "POINTER-CHASE",
+    "engine": "mixed",
+    "motion_signature": "Load-time preloader: a 4s linear counter to 100, then overlay fade + a 2s power2.inOut camera orbit (180deg swing to the corridor axis) crossfaded with a random-order char scramble; afterwards a permanent rAF loop lerps the camera angle/height toward the pointer at 0.025/0.05. Nothing is scroll-driven.",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  },
+  "review": {
+    "status": "public"
+  }
+}

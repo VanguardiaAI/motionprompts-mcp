@@ -1,0 +1,194 @@
+{
+  "slug": "block-reveal-page-transition",
+  "sourceDir": "block-reveal-page-transition",
+  "title": "Block Reveal Page Transition",
+  "description": "Page transition where a fixed fullscreen grid of 60px black blocks flickers in with a random stagger to cover the viewport, the page content swaps behind it, then the blocks fade back out to reveal the new page. Triggered by clicking the bottom nav links that route between four full-viewport sci-fi sections.",
+  "category": "transition",
+  "tags": [
+    "page-transition",
+    "blocks",
+    "pixelated",
+    "stagger",
+    "random",
+    "fake-router",
+    "grid"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 1200,
+    "click": "a[data-route=\"/gateway\"]",
+    "afterClickMs": 1100
+  },
+  "images": [
+    {
+      "file": "bg_1.jpg",
+      "desc": "painterly sci-fi Mars outpost with arched monolithic towers engulfed by a massive orange sandstorm",
+      "role": "Homebase page fullscreen background",
+      "replaced": true
+    },
+    {
+      "file": "bg_2.jpg",
+      "desc": "teal-and-orange night scene of an astronaut before a giant glowing ancient stone gate under a green moon",
+      "role": "Gateway page fullscreen background",
+      "replaced": true
+    },
+    {
+      "file": "bg_3.jpg",
+      "desc": "sepia desert research station with domes and a tall tower beneath an enormous cratered planet",
+      "role": "Station page fullscreen background",
+      "replaced": true
+    },
+    {
+      "file": "bg_4.jpg",
+      "desc": "red-pink industrial sci-fi colony with dark towers silhouetted against a huge glowing sun",
+      "role": "Colony page fullscreen background",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-14",
+  "intent": {
+    "mood": [
+      "cinematic",
+      "futuristic",
+      "bold"
+    ],
+    "useCase": [
+      "page-transition",
+      "preloader",
+      "navigation"
+    ],
+    "useWhen": "Úsalo para transicionar entre páginas o secciones a pantalla completa con una cortina de bloques pixelados que tapa y revela el nuevo contenido.",
+    "aliases": [
+      "transición de bloques",
+      "block reveal",
+      "transición pixelada",
+      "pixel transition",
+      "cortina de bloques",
+      "grid reveal"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 4,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mist",
+      "label": "Texto",
+      "type": "color",
+      "default": "#e9f1ee",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--mist"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "gold",
+      "label": "Acento",
+      "type": "color",
+      "default": "#f4b331",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--gold"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "block-reveal-page-transition",
+    "title": "Block Reveal Page Transition",
+    "category": "transition",
+    "trigger": "click",
+    "libs": [
+      "gsap"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power2",
+    "duration_range": [
+      0.05,
+      0.05
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 4,
+      "bytes": 566672,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "CLICK-CURTAIN",
+    "engine": "gsap",
+    "motion_signature": "random-stagger block curtain covers then reveals page: 60px grid blocks each flip opacity in 0.05s power2.inOut, randomized across a 0.5s window, 0.3s hold covered, then the same random 0.5s dissolve out",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "curtain-toggle"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

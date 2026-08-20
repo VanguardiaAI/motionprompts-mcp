@@ -1,0 +1,277 @@
+{
+  "slug": "scroll-wave-image-gallery",
+  "sourceDir": "codegrid-scroll-wave-image-gallery",
+  "title": "Scroll Wave Image Gallery",
+  "description": "Vertical gallery of 12 JS-generated images that drift horizontally in a sine-wave pattern as you scroll: each image has its own ScrollTrigger whose progress drives a translateX composed of three layered sine waves (base/flow/detail) scaled to viewport width, plus a horizontal clip-path inset that opens fully when the image is centered on screen. Lenis smooth scroll is hooked into the GSAP ticker, and the last quarter of images progressively shrink in height.",
+  "category": "gallery",
+  "tags": [
+    "scroll",
+    "gallery",
+    "wave",
+    "sine",
+    "clip-path",
+    "lenis",
+    "scrolltrigger",
+    "images"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 1200,
+    "scrollTo": 0.7,
+    "clip": {
+      "seconds": 9
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "silver spoon piled with translucent amber sugar crystals on a dark blue-grey backdrop",
+      "role": "plate 01 — Amber, by the spoon",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "folds of bright red fabric filling the frame like waves (Pexels 4863069)",
+      "role": "plate 02 — The current",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "two pale moths in flight against deep burgundy velvet",
+      "role": "plate 03 — Moths on velvet",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "pale-haired woman wearing translucent glass flowers in a sunlit rose garden",
+      "role": "plate 04 — Glass garland",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "profile silhouette against crossing red and amber light beams",
+      "role": "plate 05 — Signal red",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "woman in a carmine coat and dress against a cobalt blue studio wall",
+      "role": "plate 06 — Coat, carmine",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "whole pomegranate casting a hard shadow on a blue surface in raking light (Pexels 15545361)",
+      "role": "plate 07 — Pomegranate, noon",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "purple bearded irises in front of glossy oxblood-red tiles",
+      "role": "plate 08 — Iris on lacquer",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpg",
+      "desc": "black-and-white profile of a woman with a sharp bob in a dark collar",
+      "role": "plate 09 — Profile, ink",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpg",
+      "desc": "faded room with a flowering vine at the window and a gilt mirror",
+      "role": "plate 10 — The pale room",
+      "replaced": true
+    },
+    {
+      "file": "img11.jpg",
+      "desc": "dried leaves curling in warm light against a dark ground",
+      "role": "plate 11 — Copper curl",
+      "replaced": true
+    },
+    {
+      "file": "img12.jpg",
+      "desc": "single red rose emerging from darkness (Pexels 9951169)",
+      "role": "plate 12 — Last rose",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "cinematic",
+      "editorial",
+      "bold"
+    ],
+    "useCase": [
+      "gallery",
+      "image-reveal",
+      "scroll-story"
+    ],
+    "useWhen": "Úsalo cuando quieras una galería editorial de scroll vertical donde las imágenes se deslicen en ondas sinusoidales y se revelen al centrarse en pantalla.",
+    "aliases": [
+      "galería ondulante",
+      "wave gallery",
+      "sine wave gallery",
+      "galería de scroll vertical",
+      "imágenes onduladas",
+      "scroll image reveal"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 12,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#e4e5d8",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "muted",
+      "label": "Texto",
+      "type": "color",
+      "default": "#6e7365",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--muted"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#1d1e15",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "scroll-wave-image-gallery",
+    "title": "Scroll Wave Image Gallery",
+    "category": "gallery",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": true,
+    "ease_family": null,
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 12,
+      "bytes": 1367398,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de scroll-wave-image-gallery"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de scroll-wave-image-gallery"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de scroll-wave-image-gallery"
+      }
+    ],
+    "cluster": "SCROLL-WELDED",
+    "engine": "gsap+raf",
+    "motion_signature": "Scroll-position-driven, tween-free: each plate's horizontal translate is the sum of three layered sines of (normalizedIndex, scroll progress) — base amp 0.10*vw / freq 1.0 / speed 1.0 / phase 5.0 (driven by 1-progress), flow amp 0.15*vw / freq 5.0 / speed 5.0 / phase 10.0, detail amp 0.025*vw / freq 5.0 / speed 1.5 / phase 2.5 (last two offset by +0.5) — laid on a centering term (vw - offsetWidth)/2 minus 0.1*vw. Simultaneously a clip-path inset opens quadratically as the plate centers: inset = (|progress-0.5|*2)^2 * 20%, so plates arrive fully revealed at mid-viewport and pinch back to 20%/side at the extremes. No easing curve exists; the 'ease' is the sine geometry plus Lenis' default smoothing.",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-welded"
+  },
+  "review": {
+    "status": "public"
+  }
+}

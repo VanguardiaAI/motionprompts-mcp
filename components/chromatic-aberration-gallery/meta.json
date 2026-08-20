@@ -1,0 +1,428 @@
+{
+  "slug": "chromatic-aberration-gallery",
+  "sourceDir": "cg-chromatic-aberration-gallery",
+  "title": "Halide — Chromatic Aberration Lens Archive",
+  "description": "Halide, an editorial photo studio, presents its image archive as a full-screen grid that pans with the cursor while a WebGL/GLSL lens magnifies the plates beneath the pointer and splits their RGB channels into a chromatic-aberration fringe. Fixed HUD chips (wordmark, volume, caption, hint) frame the effect; the grid is rasterized to a canvas texture and sampled by the fragment shader every frame, eased via requestAnimationFrame (no GSAP).",
+  "category": "gallery",
+  "tags": [
+    "webgl",
+    "glsl",
+    "shader",
+    "chromatic-aberration",
+    "lens-distortion",
+    "cursor",
+    "grid",
+    "magnifier",
+    "experimental"
+  ],
+  "gsap": [],
+  "deps": [],
+  "preview": {
+    "waitMs": 2500,
+    "clip": {
+      "seconds": 7,
+      "actions": [
+        {
+          "type": "cursor",
+          "path": "sweep"
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "Contemporary fashion editorial in motion: models with motion blur on a pale teal studio set",
+      "role": "grid tile (random fill)",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "Person in a cream knit balaclava hood looking upward, red hair peeking out",
+      "role": "grid tile (random fill)",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "Black-and-white portrait of a woman with long straight hair and freckles",
+      "role": "grid tile (random fill)",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "Full-body editorial of a woman in a white shirt and gray trousers against a tiled wall",
+      "role": "grid tile (random fill)",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "Man with long dark hair in a blue denim jacket with layered necklaces",
+      "role": "grid tile (random fill)",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "Person with curly hair in a glossy disc-print jacket on a warm tan backdrop",
+      "role": "grid tile (random fill)",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "Moody black-and-white portrait of a person in a large fuzzy fur hat",
+      "role": "grid tile (random fill)",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "Close-up beauty portrait of a young woman with freckles, brown eyes and pink lips",
+      "role": "grid tile (random fill)",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpg",
+      "desc": "Man with curly hair, arms raised overhead, in a dark ribbed knit top",
+      "role": "grid tile (random fill)",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpg",
+      "desc": "Man mid-jump in a patterned gray blazer and plaid shorts against a tan wall",
+      "role": "grid tile (random fill)",
+      "replaced": true
+    },
+    {
+      "file": "img11.jpg",
+      "desc": "Avant-garde beauty look with a blue-white painted face and black hair",
+      "role": "grid tile (random fill)",
+      "replaced": true
+    },
+    {
+      "file": "img12.jpg",
+      "desc": "Beauty portrait of a dark-skinned model under dotted mesh veil with graphic white eye makeup",
+      "role": "grid tile (random fill)",
+      "replaced": true
+    },
+    {
+      "file": "img13.jpg",
+      "desc": "Woman with long wavy brown hair in a red cardigan over a collared shirt",
+      "role": "grid tile (random fill)",
+      "replaced": true
+    },
+    {
+      "file": "img14.jpg",
+      "desc": "Person with long straight hair in a black pinstripe zip jacket, minimalist editorial",
+      "role": "grid tile (random fill)",
+      "replaced": true
+    },
+    {
+      "file": "img15.jpg",
+      "desc": "Man in a blue leather hooded jacket with freckles, looking down",
+      "role": "grid tile (random fill)",
+      "replaced": true
+    },
+    {
+      "file": "img16.jpg",
+      "desc": "Black-and-white editorial portrait of two male models in leather and tailoring",
+      "role": "grid tile (random fill)",
+      "replaced": true
+    },
+    {
+      "file": "img17.jpg",
+      "desc": "Red-haired woman with bangs in a brown fur coat on a blue background",
+      "role": "grid tile (random fill)",
+      "replaced": true
+    },
+    {
+      "file": "img18.jpg",
+      "desc": "Red-haired woman with bangs in a brown fur collar, intense freckled close-up",
+      "role": "grid tile (random fill)",
+      "replaced": true
+    },
+    {
+      "file": "img19.jpg",
+      "desc": "Asian woman with short dark hair and bare shoulders, low-key moody portrait",
+      "role": "grid tile (random fill)",
+      "replaced": true
+    },
+    {
+      "file": "img20.jpg",
+      "desc": "Woman with wind-blown dark hair in a cream eyelet cut-out blouse",
+      "role": "grid tile (random fill)",
+      "replaced": true
+    },
+    {
+      "file": "img21.jpg",
+      "desc": "Full-body shot of a woman in a white top and dark jeans against a concrete industrial wall",
+      "role": "grid tile (random fill)",
+      "replaced": true
+    },
+    {
+      "file": "img22.jpg",
+      "desc": "Red-haired woman with bangs in a pale pink sweater, soft freckled portrait",
+      "role": "grid tile (random fill)",
+      "replaced": true
+    },
+    {
+      "file": "img23.jpg",
+      "desc": "Person in a white high-neck top wearing black wraparound sunglasses, wet-look hair",
+      "role": "grid tile (random fill)",
+      "replaced": true
+    },
+    {
+      "file": "img24.jpg",
+      "desc": "Motion-blurred editorial figure in a textured cream feather coat, warm neutral tones",
+      "role": "grid tile (random fill)",
+      "replaced": true
+    },
+    {
+      "file": "img25.jpg",
+      "desc": "Person with a short bleached-blond afro and gold earring on a red background",
+      "role": "grid tile (random fill)",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "experimental",
+      "editorial",
+      "futuristic"
+    ],
+    "useCase": [
+      "gallery",
+      "cursor-effect",
+      "background"
+    ],
+    "useWhen": "Cuando quieras una galería inmersiva a pantalla completa con una lente de aberración cromática que magnifica y distorsiona las imágenes bajo el cursor.",
+    "aliases": [
+      "aberración cromática",
+      "chromatic aberration",
+      "lente magnificadora",
+      "lens distortion",
+      "webgl gallery",
+      "efecto lente cursor"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 25,
+    "perfCost": "medium",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "film",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#191309",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--film"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "silver",
+      "label": "Texto",
+      "type": "color",
+      "default": "#ddd7c8",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--silver"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "edge",
+      "label": "Acento",
+      "type": "color",
+      "default": "#e39b33",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--edge"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "rebate",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#0d0a05",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--rebate"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "lensRadius",
+      "label": "Tamaño de la lupa",
+      "type": "range",
+      "min": 0.1,
+      "max": 0.6,
+      "step": 0.01,
+      "default": 0.3,
+      "apply": {
+        "kind": "js",
+        "path": "lensRadius"
+      }
+    },
+    {
+      "id": "zoom",
+      "label": "Aumento de la lupa",
+      "type": "range",
+      "min": 1,
+      "max": 3,
+      "step": 0.05,
+      "default": 1.75,
+      "apply": {
+        "kind": "js",
+        "path": "zoom"
+      }
+    },
+    {
+      "id": "aberration",
+      "label": "Fuerza de la aberración",
+      "type": "range",
+      "min": 0,
+      "max": 1,
+      "step": 0.05,
+      "default": 0.25,
+      "apply": {
+        "kind": "js",
+        "path": "aberration"
+      }
+    },
+    {
+      "id": "tileSize",
+      "label": "Tamaño de las láminas",
+      "type": "range",
+      "min": 80,
+      "max": 220,
+      "step": 5,
+      "default": 100,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "tileSize"
+      }
+    },
+    {
+      "id": "panEase",
+      "label": "Suavizado del desplazamiento",
+      "type": "range",
+      "min": 0.005,
+      "max": 0.15,
+      "step": 0.005,
+      "default": 0.035,
+      "apply": {
+        "kind": "js",
+        "path": "panEase"
+      }
+    },
+    {
+      "id": "lensEase",
+      "label": "Suavizado de la lupa",
+      "type": "range",
+      "min": 0.02,
+      "max": 0.4,
+      "step": 0.01,
+      "default": 0.1,
+      "apply": {
+        "kind": "js",
+        "path": "lensEase"
+      }
+    }
+  ],
+  "motion": {
+    "slug": "chromatic-aberration-gallery",
+    "title": "Halide — Chromatic Aberration Lens Archive",
+    "category": "gallery",
+    "trigger": "pointer",
+    "libs": [],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": null,
+    "duration_range": [
+      2.2,
+      2.2
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 25,
+      "bytes": 4073838,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "reclama el primer canvas del documento"
+    ],
+    "capabilities": [
+      {
+        "capability": "first-canvas",
+        "reason": "reclama document.querySelector(\"canvas\")"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "POINTER-CHASE",
+    "engine": "webgl-raf",
+    "motion_signature": "rAF lerp pan with WebGL chromatic lens: two independent frame-rate-dependent exponential lerps — 0.035 on the 200vw x 200vh grid's translate (very heavy, long settle) and 0.1 on the lens centre — with no easing curve, no time delta and no scroll involvement",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  },
+  "review": {
+    "status": "public"
+  }
+}

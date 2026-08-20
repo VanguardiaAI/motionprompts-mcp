@@ -1,0 +1,200 @@
+{
+  "slug": "bennett-clive-scroll-animation",
+  "sourceDir": "cg-bennett-clive-scroll-animation",
+  "title": "Barrett & Hale Scroll Animation",
+  "description": "A wordmark ('Barrett & Hale'), centered on both axes of the viewport, rides its own fixed full-viewport layer painted with `mix-blend-mode: difference`, so it inverts against everything scrolling behind it — near-black over the paper client index, near-white over the dark stills. A second, un-blended copy of the same wordmark carries only the red ampersand so the accent never inverts. As each row of client names crosses the wordmark's band, two scrubbed ScrollTriggers animate the row's flex `gap` in px so the names spread apart around the title and close again. Reaching the tall footer section, further ScrollTriggers walk the wordmark's center line down the viewport and grow its type into a full-width title card over a sticky full-bleed photograph.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "scrolltrigger",
+    "scrub",
+    "flex-gap",
+    "mix-blend-mode",
+    "typography",
+    "editorial",
+    "minimal"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "scrollTo": 0.95,
+    "waitMs": 2500,
+    "clip": {
+      "seconds": 14,
+      "settleMs": 2000,
+      "actions": [
+        {
+          "type": "scroll",
+          "to": 0.95,
+          "mode": "pingpong"
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "hero.jpg",
+      "desc": "Chiaroscuro portrait: a face half-lit by a narrow blade of warm light in darkness.",
+      "role": "Full-screen hero image at the top of the page.",
+      "replaced": true
+    },
+    {
+      "file": "footer.jpg",
+      "desc": "A figure lit by a single warm beam of light in a dark room; matches the hero's chiaroscuro mood.",
+      "role": "Sticky full-viewport visual inside the tall footer trigger section where the wordmark scales up.",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "minimal",
+      "editorial",
+      "elegant"
+    ],
+    "useCase": [
+      "scroll-story",
+      "logo",
+      "text-reveal"
+    ],
+    "useWhen": "Úsalo para una lista de logos o clientes donde un título fijo se mantiene centrado y las filas se separan y agrandan al hacer scroll.",
+    "aliases": [
+      "logo list scroll",
+      "lista de logos",
+      "sticky title scroll",
+      "titulo fijo scroll",
+      "gap animation",
+      "client logos"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 2,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "black",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#16161a",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--black"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "bennett-clive-scroll-animation",
+    "title": "Barrett & Hale Scroll Animation",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger"
+    ],
+    "complexity": 3,
+    "pinned": false,
+    "viewport_heights": 300,
+    "needs_lenis": false,
+    "ease_family": null,
+    "duration_range": [
+      0.3,
+      0.3
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 2,
+      "bytes": 354154,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "width-branch",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de bennett-clive-scroll-animation"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de bennett-clive-scroll-animation"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de bennett-clive-scroll-animation"
+      }
+    ],
+    "cluster": "SCROLL-WELDED",
+    "engine": "gsap",
+    "motion_signature": "row gaps scrub open 1em→15em then closed 15em→1em as each row passes a fixed wordmark, which then descends 50%→92% and grows 1.25vw→9vw over a 300vh sticky footer",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-welded"
+  },
+  "review": {
+    "status": "public",
+    "comment": "Resuelto en el run del 2026-08-16: video a 14s y la barra de titulo se centra y sincroniza con la fila que se abre midiendo el hueco real, sin offsets fijos en pixeles."
+  }
+}

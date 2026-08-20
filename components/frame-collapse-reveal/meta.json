@@ -1,0 +1,198 @@
+{
+  "slug": "frame-collapse-reveal",
+  "title": "Frame Collapse Reveal",
+  "description": "A rounded frame contracts from the edges of a sticky section down to the size of a centre window; the full-bleed photograph behind it then fades out, and because that window carries the same shot at the same screen coordinates, the picture appears to shrink into the rectangle without a single pixel moving. Only once the fade finishes do six slabs slide out from behind the window, innermost first, and lock in place. Welded to scroll (`scrub: true`), no lag.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "scrub",
+    "sticky",
+    "frame",
+    "crossfade",
+    "image-reveal",
+    "cards",
+    "glassmorphism",
+    "cinematic",
+    "black-and-white",
+    "lenis"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "scrollTo": 0.55,
+    "waitMs": 2400,
+    "clip": {
+      "seconds": 11,
+      "settleMs": 2400,
+      "actions": [
+        {
+          "type": "scroll",
+          "to": 0.58,
+          "mode": "pingpong"
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "wide.jpg",
+      "desc": "Black and white portrait of a woman by a window, eyes closed, one hand on her collarbone. 16:10, subject centred.",
+      "role": "Used TWICE: as the full-bleed layer that fades out, and inside the centre window at identical screen coordinates. The whole effect depends on both being the same file.",
+      "replaced": true
+    },
+    {
+      "file": "slab-1.jpg",
+      "desc": "Black and white close-up of a closed eye, cropped tall.",
+      "role": "Outer left slab.",
+      "replaced": true
+    },
+    {
+      "file": "slab-2.jpg",
+      "desc": "Black and white backlit ginkgo leaves, cropped tall.",
+      "role": "Middle left slab.",
+      "replaced": true
+    },
+    {
+      "file": "slab-3.jpg",
+      "desc": "Black and white folds of hanging linen, cropped tall.",
+      "role": "Inner left slab — the first to leave the centre.",
+      "replaced": true
+    },
+    {
+      "file": "slab-4.jpg",
+      "desc": "Black and white macro of woven linen, cropped tall.",
+      "role": "Inner right slab — the first to leave the centre.",
+      "replaced": true
+    },
+    {
+      "file": "slab-5.jpg",
+      "desc": "Black and white profile of an older woman, cropped tall.",
+      "role": "Middle right slab.",
+      "replaced": true
+    },
+    {
+      "file": "slab-6.jpg",
+      "desc": "Black and white water and foam texture, cropped tall.",
+      "role": "Outer right slab.",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-08-17",
+  "intent": {
+    "mood": [
+      "cinematic",
+      "elegant",
+      "minimal"
+    ],
+    "useCase": [
+      "image-reveal",
+      "scroll-story",
+      "gallery"
+    ],
+    "useWhen": "Úsalo para pasar de una imagen a sangre a una fila de tarjetas sin que la imagen se mueva: el marco cierra y la foto se apaga sobre su propia copia.",
+    "aliases": [
+      "marco que se encoge",
+      "foto que se encaja",
+      "tarjetas desde el centro",
+      "frame collapse",
+      "imagen a pantalla completa que se reduce",
+      "revelado de fila"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 7,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": false
+  },
+  "motion": {
+    "slug": "frame-collapse-reveal",
+    "title": "Frame Collapse Reveal",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 4,
+    "pinned": false,
+    "viewport_heights": 360,
+    "needs_lenis": true,
+    "ease_family": "power3",
+    "duration_range": [
+      0.05,
+      0.16
+    ],
+    "stagger": 0.03,
+    "assets_required": {
+      "count": 7,
+      "bytes": 559607,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": true
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de frame-collapse-reveal"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de frame-collapse-reveal"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de frame-collapse-reveal"
+      }
+    ],
+    "cluster": "SCROLL-SCRUB",
+    "engine": "gsap",
+    "motion_signature": "frame contracts while the bleed cross-fades into its own window",
+    "systems": [
+      "scrub-welded",
+      "scrub-lagged",
+      "reveal-on-enter"
+    ],
+    "native_system": "scrub-welded"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

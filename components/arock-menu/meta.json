@@ -1,0 +1,171 @@
+{
+  "slug": "arock-menu",
+  "sourceDir": "cg-arock-menu",
+  "title": "Responsive Fullscreen Menu",
+  "description": "A fullscreen overlay menu that opens on clicking 'Menu': the panel sweeps up via an animated clip-path polygon on a power4.inOut ease while the hero slides away, then the logo, oversized nav links and footer lines reveal with staggered power3.out y-translations. A stack of four semi-transparent images parallaxes and tilts in 3D (rotate3d) following the mouse via GSAP tweens.",
+  "category": "menu",
+  "tags": [
+    "fullscreen-menu",
+    "overlay",
+    "clip-path",
+    "parallax",
+    "3d-tilt",
+    "staggered-reveal",
+    "gsap",
+    "editorial"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "click": ".menu-open",
+    "afterClickMs": 2000
+  },
+  "images": [
+    {
+      "file": "hero.jpg",
+      "desc": "dark long-exposure neon light-trail photograph used as both the fullscreen hero background and the stacked semi-transparent images inside the open menu",
+      "role": "hero background and menu image stack",
+      "replaced": true
+    },
+    {
+      "file": "logo.png",
+      "desc": "small monochrome white logo mark for the Break record label",
+      "role": "top-left nav logo and menu logo",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "editorial",
+      "bold",
+      "minimal"
+    ],
+    "useCase": [
+      "navigation",
+      "text-reveal"
+    ],
+    "useWhen": "Úsalo cuando quieras un menú overlay a pantalla completa con revelado de enlaces escalonado y una pila de imágenes con parallax y tilt 3D siguiendo el ratón.",
+    "aliases": [
+      "menú pantalla completa",
+      "fullscreen menu",
+      "menú overlay",
+      "menú con parallax",
+      "clip-path menu",
+      "tilt images menu"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 2,
+    "perfCost": "light",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f3edea",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "arock-menu",
+    "title": "Responsive Fullscreen Menu",
+    "category": "menu",
+    "trigger": "pointer",
+    "libs": [
+      "gsap"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power4",
+    "duration_range": [
+      0.25,
+      2
+    ],
+    "stagger": 0.05,
+    "assets_required": {
+      "count": 2,
+      "bytes": 482271,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "CLICK-CURTAIN",
+    "engine": "gsap",
+    "motion_signature": "Click-driven fullscreen overlay: a 1.25s power4.inOut clip-path polygon sweep raises .menu from the bottom edge while .hero slides to top:-50% and fades out; content then reveals as delayed power3.out y-translations behind clip-path masks (logo 1s@0.75s, links 1s stagger 0.075@1s, sub-items 0.75s stagger 0.05@1s) and three stacked images rise top:150%→50% with stagger 0.1@0.25s. Independently, every mousemove retargets five 2s power3.out tweens — rotate3d(tiltx, tilty, 0, 15deg) on the image container plus per-image translate offsets scaled by index — giving long-tail inertial easing rather than a spring or lerp loop. No timelines, no scroll, no rAF loop.",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "curtain-toggle"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

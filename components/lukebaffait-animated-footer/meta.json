@@ -1,0 +1,296 @@
+{
+  "slug": "lukebaffait-animated-footer",
+  "sourceDir": "codegrid-lukebaffait-animated-footer",
+  "title": "LukeBaffait Animated Footer",
+  "description": "Fixed full-viewport footer revealed behind the page on scroll: a spacer div fires ScrollTrigger callbacks (in at top 50%, out on leave-back at top 85%) that stagger SplitText chars of the split 'Half tone' wordmark heading from the center, unmask footer links/paragraph lines, and slide two hand images in from the sides. The hands render as orange ASCII art on canvas (brightness sampling) with random cluster highlights on hover and lerped mouse parallax; Lenis drives the smooth scroll.",
+  "category": "footer",
+  "tags": [
+    "footer",
+    "scroll",
+    "reveal",
+    "ascii",
+    "canvas",
+    "splittext",
+    "stagger",
+    "parallax",
+    "hover",
+    "lenis"
+  ],
+  "gsap": [
+    "ScrollTrigger",
+    "SplitText"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "scrollTo": 1,
+    "waitMs": 2800,
+    "clip": {
+      "seconds": 10
+    }
+  },
+  "images": [
+    {
+      "file": "hand-left.jpg",
+      "desc": "hand reaching in from the left on dark background, used only as brightness source for canvas ASCII rendering",
+      "role": "left ASCII hand source",
+      "replaced": true
+    },
+    {
+      "file": "hand-right.jpg",
+      "desc": "hand reaching in from the right on dark background, used only as brightness source for canvas ASCII rendering",
+      "role": "right ASCII hand source",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "elegant",
+      "editorial",
+      "technical"
+    ],
+    "useCase": [
+      "footer",
+      "text-reveal",
+      "hover-interaction"
+    ],
+    "useWhen": "Úsalo como footer que se revela al final del scroll con tipografía gigante y arte ASCII naranja, ideal para estudios creativos o portfolios.",
+    "aliases": [
+      "footer animado",
+      "animated footer",
+      "footer ascii",
+      "footer con manos ascii",
+      "pie de página animado",
+      "scroll reveal footer"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": true,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger",
+      "SplitText"
+    ],
+    "assetCount": 2,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#16161a",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "orange",
+      "label": "Acento",
+      "type": "color",
+      "default": "#ff6a00",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--orange"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "asciiColumns",
+      "label": "Columnas de la trama ASCII",
+      "type": "range",
+      "min": 40,
+      "max": 120,
+      "step": 1,
+      "default": 80,
+      "apply": {
+        "kind": "js",
+        "path": "asciiColumns"
+      }
+    },
+    {
+      "id": "cellSize",
+      "label": "Separación entre caracteres",
+      "type": "range",
+      "min": 12,
+      "max": 32,
+      "step": 1,
+      "default": 20,
+      "apply": {
+        "kind": "js",
+        "path": "cellSize"
+      }
+    },
+    {
+      "id": "hoverRadius",
+      "label": "Radio de proximidad del puntero",
+      "type": "range",
+      "min": 2,
+      "max": 24,
+      "step": 1,
+      "default": 8,
+      "apply": {
+        "kind": "js",
+        "path": "hoverRadius"
+      }
+    },
+    {
+      "id": "clusterSize",
+      "label": "Tamaño del reguero encendido",
+      "type": "range",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 10,
+      "apply": {
+        "kind": "js",
+        "path": "clusterSize"
+      }
+    },
+    {
+      "id": "parallaxStrength",
+      "label": "Fuerza del paralaje de las manos",
+      "type": "range",
+      "min": 0,
+      "max": 40,
+      "step": 1,
+      "default": 20,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "parallaxStrength"
+      }
+    },
+    {
+      "id": "parallaxEase",
+      "label": "Suavizado del paralaje",
+      "type": "range",
+      "min": 0.01,
+      "max": 0.25,
+      "step": 0.005,
+      "default": 0.05,
+      "apply": {
+        "kind": "js",
+        "path": "parallaxEase"
+      }
+    }
+  ],
+  "motion": {
+    "slug": "lukebaffait-animated-footer",
+    "title": "LukeBaffait Animated Footer",
+    "category": "footer",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "SplitText",
+      "lenis"
+    ],
+    "complexity": 3,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": true,
+    "ease_family": "power3",
+    "duration_range": [
+      0.2,
+      1
+    ],
+    "stagger": 0.01,
+    "assets_required": {
+      "count": 2,
+      "bytes": 186237,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de lukebaffait-animated-footer"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de lukebaffait-animated-footer"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de lukebaffait-animated-footer"
+      }
+    ],
+    "cluster": "SCROLL-THRESHOLD",
+    "engine": "mixed",
+    "motion_signature": "fixed footer reveal: ASCII canvas hands, lerped parallax",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "reveal-on-enter"
+  },
+  "review": {
+    "status": "public"
+  }
+}

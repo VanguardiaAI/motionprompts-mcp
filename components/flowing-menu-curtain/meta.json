@@ -1,0 +1,246 @@
+{
+  "slug": "flowing-menu-curtain",
+  "title": "Meridian — Flowing Menu Curtain",
+  "description": "A vertical list of large rows where hovering pulls an inverted sheet across the row, carrying the row's own name on an endless marquee with a photographic still between each repetition. The sheet enters from whichever horizontal edge the pointer actually crossed and leaves towards the edge it exits by, measured on both events with a squared-distance test against the top and bottom midpoints. Panel and strip travel in opposite directions — the panel from ∓101%, its content from ±101% — so the marquee holds almost still against the window while the sheet wipes over it, which is what makes it read as a physical sheet rather than a div sliding up. The loop is seamless because exactly one measured copy of the content is animated, and the copy count is derived from that width against the viewport and recomputed on resize.",
+  "category": "hover",
+  "tags": [
+    "hover",
+    "marquee",
+    "curtain",
+    "closest-edge",
+    "direction-aware",
+    "menu",
+    "navigation",
+    "infinite-loop",
+    "editorial",
+    "gsap"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 1700,
+    "clip": {
+      "seconds": 8,
+      "actions": [
+        {
+          "type": "scroll",
+          "to": 0.34,
+          "mode": "once",
+          "start": 0,
+          "end": 0.16
+        },
+        {
+          "type": "cursor",
+          "path": "circle",
+          "cx": 0.45,
+          "cy": 0.5,
+          "ax": 0.07,
+          "ay": 0.4,
+          "start": 0.18,
+          "end": 1
+        }
+      ]
+    },
+    "scrollTo": 0.17,
+    "afterScrollMs": 800
+  },
+  "images": [
+    {
+      "file": "cover.jpg",
+      "desc": "A woman laughing, lit from behind by low golden sun.",
+      "role": "Full-bleed cover plate behind the masthead copy, masked so the type sits on bare paper.",
+      "replaced": true,
+      "reused_from": "sarah-bassett/img18.jpg"
+    },
+    {
+      "file": "portrait.jpg",
+      "desc": "A curly-haired person leaning on a sunlit green wall.",
+      "role": "Still in the Portrait row's marquee.",
+      "replaced": true,
+      "reused_from": "sarah-bassett/img17.jpg"
+    },
+    {
+      "file": "object.jpg",
+      "desc": "A pale ceramic vase against a lilac ground.",
+      "role": "Still in the Object row's marquee.",
+      "replaced": true,
+      "reused_from": "sarah-bassett/img15.jpg"
+    },
+    {
+      "file": "landscape.jpg",
+      "desc": "Layered blue mountain ridges in morning haze.",
+      "role": "Still in the Landscape row's marquee.",
+      "replaced": true,
+      "reused_from": "sarah-bassett/img21.jpg"
+    },
+    {
+      "file": "interior.jpg",
+      "desc": "A potted tree beside a tall window in a bare room.",
+      "role": "Still in the Interior row's marquee.",
+      "replaced": true,
+      "reused_from": "sarah-bassett/img20.jpg"
+    },
+    {
+      "file": "archive.jpg",
+      "desc": "Two black swans and a figure in white on a misted lake.",
+      "role": "Still in the Archive row's marquee.",
+      "replaced": true,
+      "reused_from": "sarah-bassett/img22.jpg"
+    }
+  ],
+  "updated": "2026-08-04",
+  "intent": {
+    "mood": [
+      "editorial",
+      "minimal",
+      "bold"
+    ],
+    "useCase": [
+      "navigation",
+      "hover-interaction",
+      "marquee"
+    ],
+    "useWhen": "Úsalo para un índice o un menú de pocas filas grandes: al pasar el puntero cada fila se cubre con una lámina que entra por el borde por el que entraste.",
+    "aliases": [
+      "flowing menu",
+      "menú fluido",
+      "marquee hover",
+      "cortina de marquesina",
+      "direction aware menu",
+      "closest edge hover",
+      "menu con marquesina",
+      "sliding panel menu"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 6,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": false,
+    "verified": false,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#f4f1ea",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#14120f",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper-2",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#eae5da",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper-2"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "flowing-menu-curtain",
+    "title": "Meridian — Flowing Menu Curtain",
+    "category": "hover",
+    "trigger": "hover",
+    "libs": [
+      "gsap"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": null,
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 6,
+      "bytes": 224108,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "touch-branch",
+      "media_queries": 1,
+      "reduced_motion": true
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "POINTER-LATCHED",
+    "engine": "gsap",
+    "motion_signature": "Five rows, each a link with an absolutely positioned curtain clipped to the row. On mouseenter the handler measures which horizontal edge of the row the pointer is nearer — squared distance against (w/2, 0) and (w/2, h) — and a 0.6s expo timeline SETS the panel to yPercent ∓101 and its strip to the opposite ±101 at time 0, then tweens both to 0 together. On mouseleave the same measurement runs again and both tween back out towards the edge the pointer is leaving by. The counter-movement between panel and strip is the whole illusion: the marquee text barely moves against the window while the sheet wipes across it. Independently of that, each strip runs an endless x tween of exactly one measured copy width at ease none over 18s, with the copy count derived from that width against the viewport and rebuilt on a 120ms-debounced resize. Rows without hover never build their copies or their loop at all. One load-time flourish outside the mechanic: the row numerals rise 60% with a 0.06 stagger.",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "pointer-latch"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

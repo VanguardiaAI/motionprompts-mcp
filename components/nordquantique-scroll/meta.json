@@ -1,0 +1,223 @@
+{
+  "slug": "nordquantique-scroll",
+  "sourceDir": "cg-nordquantique-scroll",
+  "title": "Nordquantique Scroll",
+  "description": "A scroll-driven pixelated block transition between full-bleed sections. Each image section is 200vh tall and overlaid with two grids of 4 rows x 16 blocks (top and bottom); a scrubbed ScrollTrigger per row maps scroll progress, plus a per-row delay and a gsap.utils.shuffle randomized per-block offset, to each block's opacity so the top blocks dissolve away to reveal the photo while the bottom blocks build up to cover it as the section scrolls through the viewport.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "pixelated",
+    "blocks",
+    "reveal",
+    "transition",
+    "scrolltrigger",
+    "scrub",
+    "grid",
+    "minimal"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "scrollTo": 0.6,
+    "afterScrollMs": 600,
+    "waitMs": 2500,
+    "clip": {
+      "seconds": 9
+    }
+  },
+  "images": [
+    {
+      "file": "img-1.jpg",
+      "desc": "Black-and-white editorial portrait of a woman in profile wearing a double-pearl drop earring and black tailoring against a pale backdrop.",
+      "role": "Background photo revealed by the first (hero-img) pixelated block section.",
+      "replaced": true
+    },
+    {
+      "file": "img-2.jpg",
+      "desc": "High-contrast black-and-white beauty portrait, dramatic side light, shaved head, in dark tailoring.",
+      "role": "Background photo revealed by the second (about-img) pixelated block section.",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "minimal",
+      "editorial",
+      "elegant"
+    ],
+    "useCase": [
+      "image-reveal",
+      "scroll-story",
+      "page-transition"
+    ],
+    "useWhen": "Úsalo para transiciones a pantalla completa entre secciones donde una foto se revela con un efecto de píxeles/bloques al hacer scroll.",
+    "aliases": [
+      "pixel transition",
+      "transicion de bloques",
+      "block reveal scroll",
+      "pixelated reveal",
+      "revelado de imagen",
+      "scroll pixel dissolve"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 2,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#16161a",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bone",
+      "label": "Texto",
+      "type": "color",
+      "default": "#ebe5d9",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bone"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "pewter",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#6f6a61",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--pewter"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "pewter-hi",
+      "label": "Fondo 3",
+      "type": "color",
+      "default": "#ece7dd",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--pewter-hi"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "nordquantique-scroll",
+    "title": "Nordquantique Scroll",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": 200,
+    "needs_lenis": false,
+    "ease_family": null,
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 2,
+      "bytes": 290095,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de nordquantique-scroll"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de nordquantique-scroll"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de nordquantique-scroll"
+      }
+    ],
+    "cluster": "SCROLL-WELDED",
+    "engine": "mixed",
+    "motion_signature": "scrub-driven per-row, random-order block opacity dissolve — no GSAP tweens at all; ScrollTrigger.onUpdate writes inline opacity per block and a 250ms CSS opacity transition supplies all the easing",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-welded"
+  },
+  "review": {
+    "status": "public"
+  }
+}

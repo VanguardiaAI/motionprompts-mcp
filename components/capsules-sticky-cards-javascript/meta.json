@@ -1,0 +1,236 @@
+{
+  "slug": "capsules-sticky-cards-javascript",
+  "sourceDir": "cg-capsules-sticky-cards-javascript",
+  "title": "Capsules Animated Sticky Cards",
+  "description": "Scroll-driven deck of pinned full-screen cards where the first card grows from a small rounded capsule into a full-bleed image over 300vh (ScrollTrigger scrub via onUpdate, synced to Lenis), fading out a looping horizontal marquee as it expands. Each following card pins, scales/fades the previous one back, morphs its image border-radius and scale, and reveals SplitText title characters plus description with power4.out.",
+  "category": "cards",
+  "tags": [
+    "sticky",
+    "sticky-cards",
+    "scroll",
+    "pin",
+    "scrub",
+    "marquee",
+    "splittext",
+    "lenis",
+    "capsule"
+  ],
+  "gsap": [
+    "ScrollTrigger",
+    "SplitText"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "scrollTo": 0.85,
+    "waitMs": 2500,
+    "clip": {
+      "seconds": 10
+    }
+  },
+  "images": [
+    {
+      "file": "card-img-1.jpg",
+      "desc": "white farmhouse alone in the black volcanic vine fields of La Geria, Lanzarote (Pexels 15173366)",
+      "role": "card 1 image ('La Geria', the intro capsule card that expands on scroll)",
+      "replaced": true
+    },
+    {
+      "file": "card-img-2.jpg",
+      "desc": "dark standing-seam A-frame roof with string lights among tall Baltic pines (Pexels 9209878)",
+      "role": "card 2 image ('Furu')",
+      "replaced": true
+    },
+    {
+      "file": "card-img-3.jpg",
+      "desc": "small timber herder's hut alone on a snow-patched mountainside in the Dolomites (Pexels 28463961)",
+      "role": "card 3 image ('Passo')",
+      "replaced": true
+    },
+    {
+      "file": "card-img-4.jpg",
+      "desc": "red turf-roofed cabins on a ridge above a cold mountain lake in Norway (Pexels 34666874)",
+      "role": "card 4 image ('Vasstua')",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "minimal",
+      "elegant",
+      "editorial"
+    ],
+    "useCase": [
+      "card-deck",
+      "scroll-story",
+      "gallery"
+    ],
+    "useWhen": "Úsalo para presentar 3-5 proyectos o features a pantalla completa que se revelan uno a uno al hacer scroll, con una carta inicial que crece desde una cápsula redondeada.",
+    "aliases": [
+      "cartas apiladas",
+      "sticky cards",
+      "tarjetas pegajosas al scroll",
+      "cápsula que crece",
+      "deck de tarjetas",
+      "sticky cards con marquee"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger",
+      "SplitText"
+    ],
+    "assetCount": 4,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "moss",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#a9b189",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--moss"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "peat",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#1a1410",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--peat"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "parchment",
+      "label": "Texto",
+      "type": "color",
+      "default": "#eae3d2",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--parchment"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "capsules-sticky-cards-javascript",
+    "title": "Capsules Animated Sticky Cards",
+    "category": "cards",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "SplitText",
+      "lenis"
+    ],
+    "complexity": 5,
+    "pinned": true,
+    "viewport_heights": 300,
+    "needs_lenis": true,
+    "ease_family": "power4",
+    "duration_range": [
+      0.25,
+      0.75
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 4,
+      "bytes": 2948981,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de capsules-sticky-cards-javascript"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de capsules-sticky-cards-javascript"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de capsules-sticky-cards-javascript"
+      }
+    ],
+    "cluster": "SCROLL-WELDED",
+    "engine": "gsap",
+    "motion_signature": "pinned stacking cards, capsule expands, marquee loops — the intro card's .card-img morphs from a 0.5-scale 400px-radius capsule to full-bleed 25px radius over 300vh (inner img counter-scales 1.5->1.0, stroke marquee cross-fades out between progress 0 and 0.5), then each later card scales its wrapper 1->0.75 and fades 1->0 as the next rises, while the incoming image scales 2->1 and its container radius goes 150->25px. All of it is imperative gsap.set inside ScrollTrigger onUpdate; there is no scrub anywhere.",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-welded"
+  },
+  "review": {
+    "status": "public"
+  }
+}

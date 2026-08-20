@@ -1,0 +1,313 @@
+{
+  "slug": "threejs-slider",
+  "sourceDir": "codegrid-threejs-slider-main",
+  "title": "ThreeJS Infinite Slider",
+  "description": "Infinite vertical slider built entirely in Three.js (no GSAP): ten textured planes loop endlessly inside a WebGL scene, driven by mouse wheel, drag and touch with lerped smoothing and momentum friction. Scroll velocity bends each plane's vertices along Z with a sine falloff, creating a directional curvature distortion, while an HTML title and counter track the slide closest to center.",
+  "category": "slider",
+  "tags": [
+    "three.js",
+    "webgl",
+    "slider",
+    "infinite-loop",
+    "vertical",
+    "wheel",
+    "drag",
+    "touch",
+    "vertex-distortion",
+    "momentum",
+    "lerp"
+  ],
+  "gsap": [],
+  "deps": [
+    "three"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "scrollTo": 0.6,
+    "clip": {
+      "seconds": 9
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "black-and-white editorial portrait of a young man with a cropped fringe, direct gaze, grey studio seamless",
+      "role": "slide texture",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "monochrome profile of a woman in a black blazer with a bob and pearl earring on a pale backdrop",
+      "role": "slide texture",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "low-key black-and-white crop of a jaw, neck and black collar in shadow",
+      "role": "slide texture",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "high-key monochrome portrait of a face half-veiled behind sheer white fabric",
+      "role": "slide texture",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "low-key black-and-white studio portrait of a seated man with arms crossed in a black tee",
+      "role": "slide texture",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "monochrome portrait of a woman with hands clasped at her shoulder, eyes lowered, soft studio light",
+      "role": "slide texture",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "black-and-white close portrait of a woman with dark hair and lowered eyes against a dark ground",
+      "role": "slide texture",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "high-key monochrome crop of a hand cradling a neck and ear, editorial detail",
+      "role": "slide texture",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpg",
+      "desc": "black-and-white portrait of a woman laughing in a black blazer on a grey seamless",
+      "role": "slide texture",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpg",
+      "desc": "monochrome portrait of a woman turned into a raised dark collar, high-key backdrop",
+      "role": "slide texture",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "editorial",
+      "elegant",
+      "cinematic"
+    ],
+    "useCase": [
+      "slider",
+      "gallery",
+      "product-showcase"
+    ],
+    "useWhen": "Úsalo para un carrusel vertical de imágenes a pantalla completa con distorsión WebGL al hacer scroll, ideal en portadas editoriales o de moda.",
+    "aliases": [
+      "slider infinito",
+      "infinite slider",
+      "webgl slider",
+      "carrusel vertical",
+      "galería de imágenes",
+      "three.js slider"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": false,
+    "needsWebgl": true,
+    "needsCanvas": true,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 10,
+    "perfCost": "heavy",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ivory",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f4f1ea",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ivory"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "aspectRatio",
+      "label": "Proporción de la lámina",
+      "type": "range",
+      "min": 0.8,
+      "max": 2.5,
+      "step": 0.05,
+      "default": 1.5,
+      "apply": {
+        "kind": "js",
+        "path": "aspectRatio"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "gap",
+      "label": "Separación entre láminas",
+      "type": "range",
+      "min": 0,
+      "max": 0.4,
+      "step": 0.01,
+      "default": 0.05,
+      "apply": {
+        "kind": "js",
+        "path": "gap"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "smoothing",
+      "label": "Suavizado del movimiento",
+      "type": "range",
+      "min": 0.01,
+      "max": 0.3,
+      "step": 0.01,
+      "default": 0.05,
+      "apply": {
+        "kind": "js",
+        "path": "smoothing"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "distortionStrength",
+      "label": "Curvatura al desplazarse",
+      "type": "range",
+      "min": 0,
+      "max": 8,
+      "step": 0.25,
+      "default": 2.5,
+      "apply": {
+        "kind": "js",
+        "path": "distortionStrength"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "wheelSpeed",
+      "label": "Empuje del scroll",
+      "type": "range",
+      "min": 0.002,
+      "max": 0.05,
+      "step": 0.002,
+      "default": 0.01,
+      "apply": {
+        "kind": "js",
+        "path": "wheelSpeed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "momentumFriction",
+      "label": "Inercia",
+      "type": "range",
+      "min": 0.8,
+      "max": 0.99,
+      "step": 0.01,
+      "default": 0.95,
+      "apply": {
+        "kind": "js",
+        "path": "momentumFriction"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "threejs-slider",
+    "title": "ThreeJS Infinite Slider",
+    "category": "slider",
+    "trigger": "wheel",
+    "libs": [
+      "three"
+    ],
+    "complexity": 4,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": null,
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 10,
+      "bytes": 681616,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "preventDefault en wheel",
+      "reclama el primer canvas del documento"
+    ],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "captura la rueda con preventDefault"
+      },
+      {
+        "capability": "first-canvas",
+        "reason": "reclama document.querySelector(\"canvas\")"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "CAPTURED-VIRTUAL-SCROLL",
+    "engine": "webgl-raf",
+    "motion_signature": "wheel/drag-driven infinite WebGL plane stack, vertex bend",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  },
+  "review": {
+    "status": "public"
+  }
+}

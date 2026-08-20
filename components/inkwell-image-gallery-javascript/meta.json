@@ -1,0 +1,390 @@
+{
+  "slug": "inkwell-image-gallery-javascript",
+  "sourceDir": "codegrid-inkwell-image-gallery-javascript",
+  "title": "Inkwell-Inspired Image Gallery",
+  "description": "A ring of 25 small cards arranged in a circle that reacts to cursor proximity: nearby cards flip 180deg on rotationY, scale up and push outward via per-frame lerp, while the whole ring parallax-tilts (rotateX/Y) toward the mouse. Clicking a card runs a GSAP power4 timeline that spins and scales the gallery 5x downward into a full preview and reveals the card title with a SplitText word stagger; clicking anywhere or pressing Escape reverses it.",
+  "category": "gallery",
+  "tags": [
+    "gallery",
+    "circular",
+    "gsap",
+    "split-text",
+    "hover",
+    "parallax",
+    "3d-flip",
+    "lerp",
+    "interactive"
+  ],
+  "gsap": [
+    "SplitText"
+  ],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 2500
+  },
+  "images": [
+    {
+      "file": "img1.jpeg",
+      "desc": "half-lit young man against dark studio backdrop",
+      "role": "one of 20 low-light portrait frames in the circular contact ring",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpeg",
+      "desc": "curly-haired man in near-total shadow",
+      "role": "one of 20 low-light portrait frames in the circular contact ring",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpeg",
+      "desc": "side-lit face with eyes closed, warm single source",
+      "role": "one of 20 low-light portrait frames in the circular contact ring",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpeg",
+      "desc": "figure silhouetted in a spotlight pool",
+      "role": "one of 20 low-light portrait frames in the circular contact ring",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpeg",
+      "desc": "backlit figure with hands raised, cool glow",
+      "role": "one of 20 low-light portrait frames in the circular contact ring",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpeg",
+      "desc": "gold rim-lit profile silhouette",
+      "role": "one of 20 low-light portrait frames in the circular contact ring",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpeg",
+      "desc": "woman veiled by hair in teal-amber dusk light",
+      "role": "one of 20 low-light portrait frames in the circular contact ring",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpeg",
+      "desc": "woman in warm lamplight with drifting smoke",
+      "role": "one of 20 low-light portrait frames in the circular contact ring",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpeg",
+      "desc": "street portrait after dark, warm practical light",
+      "role": "one of 20 low-light portrait frames in the circular contact ring",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpeg",
+      "desc": "black-and-white half-face close-up",
+      "role": "one of 20 low-light portrait frames in the circular contact ring",
+      "replaced": true
+    },
+    {
+      "file": "img11.jpeg",
+      "desc": "black-and-white woman in soft shadow",
+      "role": "one of 20 low-light portrait frames in the circular contact ring",
+      "replaced": true
+    },
+    {
+      "file": "img12.jpeg",
+      "desc": "face striped by light through blinds",
+      "role": "one of 20 low-light portrait frames in the circular contact ring",
+      "replaced": true
+    },
+    {
+      "file": "img13.jpeg",
+      "desc": "man in dark suit emerging from shadow",
+      "role": "one of 20 low-light portrait frames in the circular contact ring",
+      "replaced": true
+    },
+    {
+      "file": "img14.jpeg",
+      "desc": "unlit profile in near darkness",
+      "role": "one of 20 low-light portrait frames in the circular contact ring",
+      "replaced": true
+    },
+    {
+      "file": "img15.jpeg",
+      "desc": "woman holding flowers in deep shadow",
+      "role": "one of 20 low-light portrait frames in the circular contact ring",
+      "replaced": true
+    },
+    {
+      "file": "img16.jpeg",
+      "desc": "blue-lit silhouette profile",
+      "role": "one of 20 low-light portrait frames in the circular contact ring",
+      "replaced": true
+    },
+    {
+      "file": "img17.jpeg",
+      "desc": "face barely emerging from black",
+      "role": "one of 20 low-light portrait frames in the circular contact ring",
+      "replaced": true
+    },
+    {
+      "file": "img18.jpeg",
+      "desc": "backlit head with halo of light",
+      "role": "one of 20 low-light portrait frames in the circular contact ring",
+      "replaced": true
+    },
+    {
+      "file": "img19.jpeg",
+      "desc": "eyes catching a slit of light in darkness",
+      "role": "one of 20 low-light portrait frames in the circular contact ring",
+      "replaced": true
+    },
+    {
+      "file": "img20.jpeg",
+      "desc": "black-and-white windswept portrait",
+      "role": "one of 20 low-light portrait frames in the circular contact ring",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "elegant",
+      "editorial",
+      "experimental"
+    ],
+    "useCase": [
+      "gallery",
+      "product-showcase",
+      "hover-interaction"
+    ],
+    "useWhen": "Úsalo cuando quieras una galería circular donde las cartas giran y se acercan al cursor y al hacer clic una imagen se despliega a pantalla completa con su título.",
+    "aliases": [
+      "galeria circular",
+      "circular gallery",
+      "carrusel radial",
+      "card flip ring",
+      "galeria interactiva",
+      "image ring hover"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "SplitText"
+    ],
+    "assetCount": 20,
+    "perfCost": "medium",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#131210",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bone",
+      "label": "Texto",
+      "type": "color",
+      "default": "#e9e4d8",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bone"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "muted",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#8f8878",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--muted"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "imageCount",
+      "label": "Nº de tarjetas",
+      "type": "range",
+      "min": 8,
+      "max": 40,
+      "step": 1,
+      "default": 25,
+      "apply": {
+        "kind": "js",
+        "path": "imageCount"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "radius",
+      "label": "Radio del círculo",
+      "type": "range",
+      "min": 120,
+      "max": 500,
+      "step": 5,
+      "default": 275,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "radius"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "sensitivity",
+      "label": "Alcance del cursor",
+      "type": "range",
+      "min": 100,
+      "max": 900,
+      "step": 25,
+      "default": 500,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "sensitivity"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "effectFalloff",
+      "label": "Caída del efecto",
+      "type": "range",
+      "min": 50,
+      "max": 600,
+      "step": 25,
+      "default": 250,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "effectFalloff"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "cardMoveAmount",
+      "label": "Desplazamiento de la tarjeta",
+      "type": "range",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "default": 50,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "cardMoveAmount"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "lerpFactor",
+      "label": "Suavizado del movimiento",
+      "type": "range",
+      "min": 0.02,
+      "max": 0.5,
+      "step": 0.01,
+      "default": 0.15,
+      "apply": {
+        "kind": "js",
+        "path": "lerpFactor"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "inkwell-image-gallery-javascript",
+    "title": "Inkwell-Inspired Image Gallery",
+    "category": "gallery",
+    "trigger": "hover",
+    "libs": [
+      "gsap",
+      "SplitText"
+    ],
+    "complexity": 3,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power4",
+    "duration_range": [
+      0.3,
+      2.5
+    ],
+    "stagger": 0.1,
+    "assets_required": {
+      "count": 20,
+      "bytes": 782705,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "width-branch",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "POINTER-CHASE",
+    "engine": "gsap+raf",
+    "motion_signature": "rAF-lerped 3D card ring with zoom-to-preview",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

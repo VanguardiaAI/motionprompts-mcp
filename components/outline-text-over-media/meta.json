@@ -1,0 +1,222 @@
+{
+  "slug": "outline-text-over-media",
+  "title": "Outline Text Filled by Media",
+  "description": "A pinned stage where a giant word sits hollow — stroked, transparent fill — over a photograph, and a scroll-driven wipe uncovers a second copy of the same word filled with that photograph via `background-clip: text`. Two pixel-aligned copies rather than one element that changes: `-webkit-text-stroke` with a transparent fill and a clipped background are different paint paths, and any crossfade between them flickers on the sub-pixel edge of every letter, while two stacked copies with a `clip-path` wipe are exact, cheap and reversible. Both copies share a single grid cell and identical typography — nothing may differ but colour, stroke and clip, because a one-pixel drift shows the outline as a ghost beside the fill and the effect is dead. The fill image is set from JS off the background's own `src`, so the letters are in register with what is behind them and read as a window cut into the photograph. The wipe completes at 78% of the track so the finished word lands while the section is still on screen. Dressed as a dance season: Young Serif + Geologica, deep teal and bone.",
+  "category": "text",
+  "tags": [
+    "scroll",
+    "scrolltrigger",
+    "sticky",
+    "text-stroke",
+    "background-clip",
+    "outline-text",
+    "image-in-text",
+    "wipe",
+    "typography",
+    "lenis",
+    "cinematic"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 1200,
+    "scrollTo": 0.5,
+    "clip": {
+      "seconds": 9
+    }
+  },
+  "images": [
+    {
+      "file": "hero.jpg",
+      "desc": "blurred ethereal figure, background and the fill inside the letters",
+      "role": "stage background + text fill",
+      "replaced": true,
+      "reused_from": "catálogo existente (public/c/studiodialect-image-gallery), recortado y desenfocado con sharp — ninguna imagen generada"
+    },
+    {
+      "file": "act-1.jpg",
+      "desc": "performance still, first act",
+      "role": "act 1",
+      "replaced": true,
+      "reused_from": "catálogo existente (public/c/studiodialect-image-gallery)"
+    },
+    {
+      "file": "act-2.jpg",
+      "desc": "performance still, second act",
+      "role": "act 2",
+      "replaced": true,
+      "reused_from": "catálogo existente (public/c/studiodialect-image-gallery)"
+    }
+  ],
+  "updated": "2026-08-02",
+  "intent": {
+    "mood": [
+      "cinematic",
+      "elegant",
+      "editorial"
+    ],
+    "useCase": [
+      "text-reveal",
+      "hero"
+    ],
+    "useWhen": "Cuando el nombre de algo tiene que ser la imagen: un título de temporada, de película o de disco sobre su propia fotografía.",
+    "aliases": [
+      "texto en contorno",
+      "letras rellenas de imagen",
+      "outline text",
+      "text stroke",
+      "image inside text",
+      "background-clip text",
+      "knockout type"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 3,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": false,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "origin": {
+    "kind": "observed",
+    "note": "Efecto abstraído del cierre de sakazuki.io, observado por fotogramas: texto en contorno sobre una fotografía desenfocada. El EFECTO se conserva; paleta, tipografía, imágenes y contenido son propios.",
+    "gap": "0 aciertos al cruzar «texto en contorno sobre foto desenfocada» contra los 223."
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "deep",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#0b1f24",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--deep"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bone",
+      "label": "Texto",
+      "type": "color",
+      "default": "#ece7dd",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bone"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "outline-text-over-media",
+    "title": "Outline Text Filled by Media",
+    "category": "text",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": true,
+    "ease_family": null,
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 3,
+      "bytes": 290801,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": true
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de outline-text-over-media"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de outline-text-over-media"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de outline-text-over-media"
+      }
+    ],
+    "cluster": "SCROLL-WELDED",
+    "engine": "gsap",
+    "motion_signature": "sticky stage over 280svh where a ScrollTrigger writes --wipe 0→100% into a clip-path inset on a background-clip:text copy of a word stacked pixel-aligned over a stroked hollow copy; the wipe saturates at 78% of the track so the finished word holds on screen, and the stage background opacity rises 0.42→0.72 in step; no tween, no scrub, smoothing from Lenis",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-welded"
+  },
+  "review": {
+    "status": "public"
+  }
+}

@@ -1,0 +1,293 @@
+{
+  "slug": "3d-slider-threejs",
+  "sourceDir": "cg-3d-slider-threejs",
+  "title": "ThreeJS 3D Slider",
+  "description": "A Three.js curved plane displays an endless vertical slideshow of captioned images drawn onto a repeating 2D canvas texture. Lenis smooth-scroll progress feeds a scroll listener that shifts the texture offset and re-renders the WebGL scene, so scrolling the tall page pushes the image strip through the 3D wave.",
+  "category": "3d-webgl",
+  "tags": [
+    "three.js",
+    "webgl",
+    "scroll",
+    "slider",
+    "canvas-texture",
+    "lenis",
+    "curved-plane",
+    "editorial",
+    "gallery"
+  ],
+  "gsap": [],
+  "deps": [
+    "three",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "scrollTo": 0.3,
+    "afterScrollMs": 800,
+    "clip": {
+      "seconds": 9,
+      "actions": [
+        {
+          "type": "scroll",
+          "to": 0.9,
+          "mode": "pingpong"
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "dark carved stoneware urn with crackle-glaze rim and loop handles against a grey wall",
+      "role": "slide image (Strata)",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "clay-covered hands pulling up a small pot on a spinning kick wheel, warm workshop light",
+      "role": "slide image (Throwing)",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "overhead view of large unglazed clay jars packed together, warm brown tones",
+      "role": "slide image (Vessels)",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "raw terracotta vessel drying on a bat in a dim amber-lit studio",
+      "role": "slide image (Greenware)",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "dark metallic-glazed bowls stacked on crumpled black paper, bronze highlights",
+      "role": "slide image (Tenmoku)",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "overhead workbench with hands shaping a bowl, plaster molds, tools and slip buckets on wood",
+      "role": "slide image (Benchwork)",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "small dark-glazed bottle vase among round burgundy vessels on a wooden table",
+      "role": "slide image (Bottles)",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "editorial",
+      "cinematic",
+      "elegant"
+    ],
+    "useCase": [
+      "gallery",
+      "slider",
+      "scroll-story"
+    ],
+    "useWhen": "Úsalo para una galería o portfolio inmersivo donde las imágenes con títulos avanzan en bucle sobre un plano 3D curvado al hacer scroll.",
+    "aliases": [
+      "slider 3d",
+      "3d slider",
+      "galería threejs",
+      "webgl slider",
+      "carrusel curvo",
+      "scroll gallery 3d"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": true,
+    "needsCanvas": true,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 7,
+    "perfCost": "heavy",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ground",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#17141f",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ground"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "curvature",
+      "label": "Curvatura del panel",
+      "type": "range",
+      "min": 10,
+      "max": 70,
+      "step": 1,
+      "default": 35,
+      "apply": {
+        "kind": "js",
+        "path": "curvature"
+      }
+    },
+    {
+      "id": "totalSlides",
+      "label": "Diapositivas del ciclo",
+      "type": "range",
+      "min": 3,
+      "max": 14,
+      "step": 1,
+      "default": 7,
+      "apply": {
+        "kind": "js",
+        "path": "totalSlides"
+      }
+    },
+    {
+      "id": "cameraDistance",
+      "label": "Distancia de la cámara",
+      "type": "range",
+      "min": 12,
+      "max": 26,
+      "step": 0.5,
+      "default": 17.5,
+      "apply": {
+        "kind": "js",
+        "path": "cameraDistance"
+      }
+    },
+    {
+      "id": "gap",
+      "label": "Hueco entre diapositivas",
+      "type": "range",
+      "min": 0,
+      "max": 5,
+      "step": 0.1,
+      "default": 0.5,
+      "apply": {
+        "kind": "js",
+        "path": "gap"
+      }
+    },
+    {
+      "id": "segments",
+      "label": "Subdivisiones de la malla",
+      "type": "range",
+      "min": 6,
+      "max": 260,
+      "step": 2,
+      "default": 200,
+      "apply": {
+        "kind": "js",
+        "path": "segments"
+      }
+    }
+  ],
+  "motion": {
+    "slug": "3d-slider-threejs",
+    "title": "ThreeJS 3D Slider",
+    "category": "3d-webgl",
+    "trigger": "scroll",
+    "libs": [
+      "three",
+      "lenis"
+    ],
+    "complexity": 4,
+    "pinned": false,
+    "viewport_heights": 1000,
+    "needs_lenis": true,
+    "ease_family": null,
+    "duration_range": [
+      0.25,
+      0.25
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 7,
+      "bytes": 1880590,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "width-branch",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "html/body height fija en vh",
+      "reclama el primer canvas del documento"
+    ],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      },
+      {
+        "capability": "document-height",
+        "reason": "fija la altura del documento en 1000vh"
+      },
+      {
+        "capability": "first-canvas",
+        "reason": "reclama document.querySelector(\"canvas\")"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de 3d-slider-threejs"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de 3d-slider-threejs"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de 3d-slider-threejs"
+      }
+    ],
+    "cluster": "SCROLL-WELDED",
+    "engine": "webgl-raf",
+    "motion_signature": "scroll-driven looping texture strip on curved 3D plane (quadratic curl, pow(dist,2)*35), no easing of its own — only Lenis' default smoothing",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-welded"
+  },
+  "review": {
+    "status": "public"
+  }
+}

@@ -1,0 +1,230 @@
+{
+  "slug": "phive-sticky-cards",
+  "sourceDir": "cg-phive-sticky-cards-nextjs",
+  "title": "Phive Sticky Cards",
+  "description": "A vertical stack of full-height sticky cards that fold away on scroll: each card is pinned (pinSpacing false) while ScrollTrigger scrub-animates its inner panel translating up 50%, pushing back -250px in Z and tilting 45deg on rotationX in 3D perspective, with a black overlay fading in via an animated --after-opacity variable as the next card arrives. Driven by GSAP ScrollTrigger synced to Lenis smooth scrolling.",
+  "category": "scroll",
+  "tags": [
+    "sticky",
+    "cards",
+    "scroll",
+    "pin",
+    "scrub",
+    "3d-fold",
+    "perspective",
+    "lenis",
+    "pop-art"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "scrollTo": 0.7,
+    "waitMs": 2500,
+    "clip": {
+      "seconds": 9
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "psychedelic pop-art vector illustration of a white skull with yellow accents biting into a purple slime creature, set against pink cloud shapes on a deep indigo sky",
+      "role": "card 1 image (light-blue card, 'Reverie')",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "retro-futurist vaporwave scene with stacked 80s error windows, a striped sunset in a browser window, black-and-white checkerboard floor and ceiling, and pastel gradient cubes",
+      "role": "card 2 image (pink card, 'Vaporwave')",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "symmetrical kaleidoscopic mandala of folk motifs in warm oranges, browns and pinks, centered on a large eye surrounded by smaller eyes, flowers and hearts",
+      "role": "card 3 image (yellow card, 'Kaleido')",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "busy doodle-art portrait of a blue-skinned figure in a headband surrounded by cartoon mascots, monsters, a cat, a moon, a spray can and a steaming mug",
+      "role": "card 4 image (teal card, 'Menagerie')",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "bold",
+      "playful",
+      "editorial"
+    ],
+    "useCase": [
+      "card-deck",
+      "scroll-story",
+      "gallery"
+    ],
+    "useWhen": "Úsalo para presentar 3-5 obras o proyectos a pantalla completa que se pliegan en 3D al hacer scroll, con tipografía enorme y estilo pop-art.",
+    "aliases": [
+      "cartas pegajosas",
+      "sticky cards",
+      "tarjetas que se pliegan",
+      "stacked cards scroll",
+      "deck de tarjetas",
+      "folding cards"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 4,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#171128",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "accent-3",
+      "label": "Acento",
+      "type": "color",
+      "default": "#fcd782",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--accent-3"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "accent-1",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#aeb8f2",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--accent-1"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "phive-sticky-cards",
+    "title": "Phive Sticky Cards",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 3,
+    "pinned": true,
+    "viewport_heights": 125,
+    "needs_lenis": true,
+    "ease_family": null,
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 4,
+      "bytes": 1820857,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de phive-sticky-cards"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de phive-sticky-cards"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de phive-sticky-cards"
+      }
+    ],
+    "cluster": "SCROLL-WELDED",
+    "engine": "gsap",
+    "motion_signature": "scrub-pinned cards folding back and down in 3D (y -50%, z -250, rotationX 45 about a bottom-edge origin under 1000px perspective) while a black ::after overlay fades in; no explicit ease, so GSAP's default power1.out shapes the scrub non-linearly",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-welded"
+  },
+  "review": {
+    "status": "public"
+  }
+}

@@ -1,0 +1,250 @@
+{
+  "slug": "creative-clutter",
+  "sourceDir": "codegrid-gsap-creative-clutter",
+  "title": "Creative Clutter Flip Layouts",
+  "description": "A messy-desk hero of 11 floating cut-out items scattered around a centered Space Grotesk display header, with three arrangements (chaos scatter, tidy cleanup grid, notebook cluster) switched via bottom icon buttons. Each switch captures Flip.getState, applies new percent-based positions and rotations with gsap.set, then animates with Flip.from (1.25s, power3.inOut, 0.1s center-out stagger, absolute); the layout recalculates on window resize.",
+  "category": "interactive",
+  "tags": [
+    "flip",
+    "layout-switch",
+    "collage",
+    "desk",
+    "stagger",
+    "grid",
+    "buttons"
+  ],
+  "gsap": [
+    "Flip"
+  ],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 1500,
+    "click": ".modes button[data-mode='notebook']"
+  },
+  "images": [
+    {
+      "file": "music.png",
+      "desc": "light-gray iOS now-playing music widget with dark album art, song title 'Dracula (JENNIE Remix)' by Tame Impala, progress bar and playback controls",
+      "role": "floating desk item (music player)",
+      "replaced": true
+    },
+    {
+      "file": "cd.png",
+      "desc": "shiny silver compact disc with rainbow light refractions, transparent background",
+      "role": "floating desk item (CD)",
+      "replaced": true
+    },
+    {
+      "file": "dialog.png",
+      "desc": "retro Windows-98-style error dialog titled Figma reading 'Figma has crashed' with pixelated red X icon and OK button",
+      "role": "floating desk item (error dialog)",
+      "replaced": true
+    },
+    {
+      "file": "folder.png",
+      "desc": "teal-cyan macOS folder icon embossed with the VS Code angle-bracket logo",
+      "role": "floating desk item (folder icon)",
+      "replaced": true
+    },
+    {
+      "file": "macmini.png",
+      "desc": "silver Apple Mac mini desktop computer from a top-front angle with black Apple logo and front ports",
+      "role": "floating desk item (computer)",
+      "replaced": true
+    },
+    {
+      "file": "paper.png",
+      "desc": "thick stack of plain white printer paper seen from a three-quarter angle, magenta edge fringe despilled",
+      "role": "floating desk item (paper stack)",
+      "replaced": true
+    },
+    {
+      "file": "passport.png",
+      "desc": "studio coffee mug cutout (pending generation; replaces a duplicate white paper stack)",
+      "role": "floating desk item (coffee mug)",
+      "replaced": true
+    },
+    {
+      "file": "portrait.png",
+      "desc": "art print with white border and baked soft shadow: minimal facade photo split between a teal wall and orange corrugated cladding (Pexels 3082150, Oslo)",
+      "role": "floating desk item (facade study print)",
+      "replaced": true
+    },
+    {
+      "file": "appicon.png",
+      "desc": "cyan rounded-square app icon with white geometric blueprint grid of circles and diagonals",
+      "role": "floating desk item (app icon)",
+      "replaced": true
+    },
+    {
+      "file": "lighter.png",
+      "desc": "lime-green disposable cigarette lighter with white striker top, transparent background",
+      "role": "floating desk item (lighter)",
+      "replaced": true
+    },
+    {
+      "file": "cursor.png",
+      "desc": "black macOS arrow cursor next to a rainbow spinning-wait beachball",
+      "role": "floating desk item (cursor + beachball)",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "playful",
+      "editorial",
+      "experimental"
+    ],
+    "useCase": [
+      "hero",
+      "gallery"
+    ],
+    "useWhen": "Úsalo cuando quieras un hero tipo collage de escritorio con objetos recortados que saltan entre caos y cuadrícula al pulsar botones.",
+    "aliases": [
+      "collage hero",
+      "escritorio desordenado",
+      "messy desk",
+      "flip layout switch",
+      "objetos flotantes",
+      "reordenar cuadrícula"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "Flip"
+    ],
+    "assetCount": 11,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "desk-low",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#e8e8ea",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--desk-low"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "muted",
+      "label": "Texto",
+      "type": "color",
+      "default": "#2b2b31",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--muted"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "accent",
+      "label": "Acento",
+      "type": "color",
+      "default": "#ff4e45",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--accent"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "creative-clutter",
+    "title": "Creative Clutter Flip Layouts",
+    "category": "interactive",
+    "trigger": "click",
+    "libs": [
+      "gsap",
+      "Flip"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power3",
+    "duration_range": [
+      1.25,
+      1.25
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 11,
+      "bytes": 5108022,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 4,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "STEP-MACHINE",
+    "engine": "gsap",
+    "motion_signature": "Click-driven GSAP Flip: one 1.25s power3.inOut FLIP morph (absolute:true) remaps header + 11 cutouts between three hard-coded percent arrangements with a 0.1s center-out stagger; no scroll, rAF or physics involved",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "step-advance"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

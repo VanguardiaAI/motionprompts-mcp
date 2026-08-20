@@ -1,0 +1,315 @@
+{
+  "slug": "truekindskincare-landing-page-reveal-javascript",
+  "sourceDir": "codegrid-truekindskincare-landing-page-reveal-javascript",
+  "title": "TrueKind Landing Page Reveal",
+  "description": "A preloader-to-hero landing reveal driven by a single GSAP timeline with a custom 'hop' ease: a two-digit counter rolls through milestone numbers (00, 27, 65, 98, 99) with a staggered vertical roll, the 'KindRoot' logo words slide together, a vertical divider scales up and fades, then two dark blocks wipe upward via clip-path while the background hero image scales from 1.5 to 1 and the nav, masked headline lines, paragraph and CTA pill slide and scale into place. Plays automatically once on page load.",
+  "category": "preloader",
+  "tags": [
+    "preloader",
+    "reveal",
+    "counter",
+    "clip-path",
+    "customease",
+    "landing",
+    "hero",
+    "stagger",
+    "skincare"
+  ],
+  "gsap": [
+    "CustomEase"
+  ],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 8000,
+    "clip": {
+      "seconds": 11,
+      "settleMs": 400,
+      "actions": [
+        {
+          "type": "hold"
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "hero-img.jpg",
+      "desc": "close-up beauty portrait of a young woman with wet slicked-back brown hair, freckles, bare glowing skin and blue-grey eyes, wearing a white tank top against a warm beige backdrop",
+      "role": "full-bleed background hero image revealed behind the loader",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "minimal",
+      "elegant",
+      "organic"
+    ],
+    "useCase": [
+      "preloader",
+      "hero",
+      "text-reveal"
+    ],
+    "useWhen": "Úsalo como intro de una landing de skincare o marca natural donde un contador y logo desembocan en un hero a pantalla completa.",
+    "aliases": [
+      "preloader skincare",
+      "intro con contador",
+      "revelado de landing",
+      "landing reveal",
+      "portada natural",
+      "counter preloader"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "CustomEase"
+    ],
+    "assetCount": 1,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#1f241d",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "digitStagger",
+      "label": "Escalonado de las cifras",
+      "type": "range",
+      "min": 0,
+      "max": 0.3,
+      "step": 0.005,
+      "default": 0.075,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "digitStagger"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "countStep",
+      "label": "Ritmo de la cuenta",
+      "type": "range",
+      "min": 0.3,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "countStep"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "blockStagger",
+      "label": "Escalonado de los bloques",
+      "type": "range",
+      "min": 0,
+      "max": 0.5,
+      "step": 0.01,
+      "default": 0.1,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "blockStagger"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "textStagger",
+      "label": "Escalonado del texto",
+      "type": "range",
+      "min": 0,
+      "max": 0.8,
+      "step": 0.02,
+      "default": 0.2,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "textStagger"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "truekindskincare-landing-page-reveal-javascript",
+    "title": "TrueKind Landing Page Reveal",
+    "category": "preloader",
+    "trigger": "load",
+    "libs": [
+      "gsap",
+      "CustomEase",
+      "ionicons"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "custom",
+    "duration_range": [
+      0.25,
+      2
+    ],
+    "stagger": 0.075,
+    "assets_required": {
+      "count": 1,
+      "bytes": 160547,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "entry-veil",
+        "reason": "velo de entrada a pantalla completa en la carga"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "aladesign-landing-page-reveal",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "aristidebenoist-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "audemarspiguet-menu",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "camille-mormal-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "hypnotic-gallery-gsap-flip",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "kin-landing-page",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "landing-page-reveal-no-webgl",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "meetings-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "menu-root-food",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "outfit-landing-page-reveal",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "p10-landing-page-reveal-gsap",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "push-over-overlay-menu",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "story-world-carousel-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "zajno-lp",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      }
+    ],
+    "cluster": "LOAD-ONESHOT",
+    "engine": "gsap",
+    "motion_signature": "Autoplay one-shot preloader: five 2-digit counter pairs roll up and out on a 1s-per-index cadence (0.075s per-digit stagger), all driven by a single CustomEase \"hop\" = cubic-bezier(0.9, 0, 0.1, 1) — an extreme symmetric ease-in-out that holds still, snaps through the middle, then settles, so every move reads as a hard mechanical flick rather than an organic curve. The counter hands off to a vertical divider that scaleY-wipes down from the top, a two-panel clip-path curtain that lifts the .block overlay, and a slow 2s scale 1.5->1 push-out of the hero image on the same hop curve, with nav/headline/CTA sliding up beneath on 1.5s tweens. No scroll input, no rAF, no physics — a fixed-length ~9s scripted sequence.",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "entry-veil"
+  },
+  "review": {
+    "status": "public"
+  }
+}

@@ -1,0 +1,431 @@
+{
+  "slug": "meetings-slider",
+  "sourceDir": "cg-meetings-slider",
+  "title": "Meetings Arc Slider",
+  "description": "A click-driven fullscreen slider showing three cards on an arc (prev/active/next); clicking a side card or a list item fires a 2s GSAP CustomEase 'hop' transition where cards orbit into position while their inner images counter-rotate, the incoming card's clip-path opens from a centered window, the outgoing card scales to zero and fades, and the title swaps via per-character span y-staggers. A blurred background preview image cross-fades and a slow CSS pan animation runs continuously.",
+  "category": "slider",
+  "tags": [
+    "slider",
+    "carousel",
+    "clip-path",
+    "custom-ease",
+    "rotation",
+    "split-text",
+    "click",
+    "editorial",
+    "gsap"
+  ],
+  "gsap": [
+    "CustomEase"
+  ],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "clip": {
+      "seconds": 9,
+      "actions": [
+        {
+          "type": "click",
+          "selector": ".slide-container.active .slide-img",
+          "at": 0.3
+        },
+        {
+          "type": "click",
+          "selector": ".slide-container.active .slide-img",
+          "at": 0.62
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "aerial photograph of a wide horseshoe river bend cutting through forested hills under a hazy sun",
+      "role": "slide 1 image (River Bend), also initial active slide and background preview",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "aerial photograph of warm golden desert sand ripples raked by wind and low light",
+      "role": "slide 2 image (Dune Sea), initial next slide",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "aerial photograph of a turquoise coral reef and shallows seen from directly overhead",
+      "role": "slide 3 image (Coral Shallows)",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "aerial photograph of a crevassed glacier field in icy blue-white and grey",
+      "role": "slide 4 image (Glacier Field)",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "top-down aerial photograph of a dense green forest canopy in mixed spring greens",
+      "role": "slide 5 image (Forest Canopy)",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "aerial photograph of a vast snow-covered mountain range under deep blue sky",
+      "role": "slide 6 image (Alpine Ridge)",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "aerial photograph of a braided tidal river delta with silver channels through dark marsh and mist",
+      "role": "slide 7 image (Tidal Delta), initial prev slide",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "minimal",
+      "elegant",
+      "editorial",
+      "cinematic"
+    ],
+    "useCase": [
+      "gallery",
+      "slider",
+      "product-showcase",
+      "hero"
+    ],
+    "useWhen": "Úsalo como galería o showcase a pantalla completa donde tres tarjetas en arco rotan con una transición dramática de clip-path al hacer clic.",
+    "aliases": [
+      "slider en arco",
+      "arc slider",
+      "carrusel de tarjetas",
+      "card slider",
+      "slider con clic",
+      "galeria giratoria"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "CustomEase"
+    ],
+    "assetCount": 7,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bg",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#0a0c0d",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bg"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f2f0ea",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "accent",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#86b0bd",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--accent"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "muted-strong",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#9aa1a4",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--muted-strong"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "sideOffset",
+      "label": "Separación de las tarjetas laterales",
+      "type": "range",
+      "min": 20,
+      "max": 45,
+      "step": 1,
+      "default": 35,
+      "unit": "%",
+      "apply": {
+        "kind": "js",
+        "path": "sideOffset"
+      }
+    },
+    {
+      "id": "sideRotation",
+      "label": "Giro de entrada de las tarjetas",
+      "type": "range",
+      "min": 0,
+      "max": 180,
+      "step": 5,
+      "default": 90,
+      "unit": "°",
+      "apply": {
+        "kind": "js",
+        "path": "sideRotation"
+      }
+    },
+    {
+      "id": "sideCrop",
+      "label": "Recorte de las tarjetas laterales",
+      "type": "range",
+      "min": 0,
+      "max": 35,
+      "step": 1,
+      "default": 25,
+      "unit": "%",
+      "apply": {
+        "kind": "js",
+        "path": "sideCrop"
+      }
+    },
+    {
+      "id": "titleShift",
+      "label": "Recorrido de las letras del título",
+      "type": "range",
+      "min": 10,
+      "max": 150,
+      "step": 5,
+      "default": 60,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "titleShift"
+      }
+    },
+    {
+      "id": "titleStagger",
+      "label": "Escalonado de las letras",
+      "type": "range",
+      "min": 0,
+      "max": 0.035,
+      "step": 0.005,
+      "default": 0.02,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "titleStagger"
+      }
+    }
+  ],
+  "motion": {
+    "slug": "meetings-slider",
+    "title": "Meetings Arc Slider",
+    "category": "slider",
+    "trigger": "click",
+    "libs": [
+      "gsap",
+      "CustomEase"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "custom",
+    "duration_range": [
+      1,
+      2
+    ],
+    "stagger": 0.02,
+    "assets_required": {
+      "count": 7,
+      "bytes": 3423972,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [
+      {
+        "with": "aladesign-landing-page-reveal",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "aminezegmou-landing-page",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "aristidebenoist-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "audemarspiguet-menu",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "camille-mormal-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "hypnotic-gallery-gsap-flip",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "infinite-draggable-image-gallery-javascript",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "kin-landing-page",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "landing-page-reveal-no-webgl",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "laserbysonymusic-landing-page-reveal-animation",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "maxmilkin-preloader",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "menu-root-food",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "nite-riot-landing-page-reveal-javascript",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "outfit-landing-page-reveal",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "p10-landing-page-reveal-gsap",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "push-over-overlay-menu",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "steelworks-landing-page-reveal",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "story-world-carousel-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "truekindskincare-landing-page-reveal-javascript",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "zajno-lp",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "zajno-page-transitions",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      }
+    ],
+    "cluster": "STEP-MACHINE",
+    "engine": "gsap",
+    "motion_signature": "click-driven arc orbit with clip-path card swap",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "step-advance"
+  },
+  "review": {
+    "status": "public"
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "slug": "autoplay-hero-progress",
+  "title": "Autoplay Hero with Progress",
+  "description": "A full-bleed hero carousel driven by a CLOCK rather than by the scroll, with one progress tick per slide filling over exactly that slide's duration. Deliberately built with no GSAP, no ScrollTrigger and no Lenis: wiring a time-driven hero to a scroll library would be pretending. A single rAF loop drives both the advance and the bar fill — a CSS transition on the bar plus a `setInterval` for the slide drift apart the first time the tab is backgrounded or the user pauses, and then the bar lies about when the next slide lands. The loop stops when the hero leaves the viewport (IntersectionObserver) and when the tab is hidden (`visibilitychange`), resuming without a jump because the epoch is rebased rather than the elapsed time preserved. Manual advance restarts the clock. Crossfade is opacity-only: with full-bleed photography a translate reads as a jolt because the eye tracks the image edge. Reduced motion stops the autoplay but keeps the controls working. Dressed as a repertory cinema season: Unbounded + Rethink Sans, near-black, cream and red.",
+  "category": "slider",
+  "tags": [
+    "carousel",
+    "hero",
+    "autoplay",
+    "progress",
+    "timer",
+    "raf",
+    "crossfade",
+    "intersection-observer",
+    "accessible",
+    "no-gsap",
+    "cinematic"
+  ],
+  "gsap": [],
+  "deps": [],
+  "preview": {
+    "waitMs": 800,
+    "clip": {
+      "seconds": 12
+    }
+  },
+  "images": [
+    {
+      "file": "hero.jpg",
+      "desc": "film still, first slide",
+      "role": "slide 1",
+      "replaced": true,
+      "reused_from": "catálogo existente (public/c/3d-circular-img-gallery), recortado con sharp — ninguna imagen generada"
+    },
+    {
+      "file": "still-1.jpg",
+      "desc": "film still, second slide",
+      "role": "slide 2",
+      "replaced": true,
+      "reused_from": "catálogo existente (public/c/3d-circular-img-gallery)"
+    },
+    {
+      "file": "still-2.jpg",
+      "desc": "film still, third slide",
+      "role": "slide 3",
+      "replaced": true,
+      "reused_from": "catálogo existente (public/c/3d-circular-img-gallery)"
+    },
+    {
+      "file": "still-3.jpg",
+      "desc": "film still, fourth slide",
+      "role": "slide 4",
+      "replaced": true,
+      "reused_from": "catálogo existente (public/c/3d-circular-img-gallery)"
+    }
+  ],
+  "updated": "2026-08-02",
+  "intent": {
+    "mood": [
+      "cinematic",
+      "editorial",
+      "bold"
+    ],
+    "useCase": [
+      "hero",
+      "slider"
+    ],
+    "useWhen": "Cuando la portada tiene que enseñar cuatro cosas y ninguna manda sobre las otras: programación, temporada, cartel.",
+    "aliases": [
+      "carrusel automático",
+      "hero rotativo",
+      "barra de progreso",
+      "autoplay carousel",
+      "hero slider",
+      "progress bar carousel",
+      "timed slideshow"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 4,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": false,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "origin": {
+    "kind": "observed",
+    "note": "Efecto abstraído de mrday.it, observado por fotogramas. Se identificó como dirigido por TIEMPO porque la barra marcaba 40 % bajando y 86 % subiendo en la MISMA posición de scroll — imposible si el driver fuera el scroll. El EFECTO se conserva; paleta, tipografía, imágenes y contenido son propios.",
+    "gap": "0 aciertos al cruzar «hero autoplay con barra de progreso» contra los 223."
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "cream",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#f2ece1",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--cream"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#0d0c0b",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "autoplay-hero-progress",
+    "title": "Autoplay Hero with Progress",
+    "category": "slider",
+    "trigger": "click",
+    "libs": [],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": null,
+    "duration_range": [
+      0.7,
+      5.2
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 4,
+      "bytes": 474173,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": true
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "STEP-MACHINE",
+    "engine": "raf",
+    "motion_signature": "time-driven hero: a single requestAnimationFrame loop advances a four-slide opacity crossfade every 5.2s and writes the active progress tick width from the same clock; paused by IntersectionObserver when off-screen and by visibilitychange when the tab is hidden, resuming by rebasing the epoch so it never jumps; manual advance restarts the clock. No GSAP, no ScrollTrigger, no Lenis",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "step-advance"
+  },
+  "review": {
+    "status": "public"
+  }
+}

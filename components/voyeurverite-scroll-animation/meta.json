@@ -1,0 +1,219 @@
+{
+  "slug": "voyeurverite-scroll-animation",
+  "sourceDir": "codegrid-voyeurverite-scroll-animation",
+  "title": "VoyeurVerite Scroll Animation",
+  "description": "Pinned hero scrubbed over five viewport heights with four manual phases: the foreground image clips into a central vertical slit while a dark overlay fades in, then rotates to 65deg, scales to zero over sliding background text columns as a red overlay flashes on, and finally two outro images wipe in via clip-path from top and bottom before a SplitText line-masked headline staggers up at 90% progress.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "pin",
+    "scrub",
+    "clip-path",
+    "rotate",
+    "overlay",
+    "split-text",
+    "lenis",
+    "hero"
+  ],
+  "gsap": [
+    "ScrollTrigger",
+    "SplitText"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 1500,
+    "scrollTo": 0.7,
+    "clip": {
+      "seconds": 9
+    }
+  },
+  "images": [
+    {
+      "file": "hero.jpg",
+      "desc": "silhouetted figure in profile against foggy darkness cut by orange-red laser beams and hazy spotlights, distant crowd silhouettes",
+      "role": "foreground hero image that clips to a slit, rotates and scales away",
+      "replaced": true
+    },
+    {
+      "file": "hero-outro-img-1.jpg",
+      "desc": "man in silhouette standing in a corridor before glowing orange and red curved light panels, James Turrell style",
+      "role": "left outro image, revealed top-down via clip-path",
+      "replaced": true
+    },
+    {
+      "file": "hero-outro-img-2.jpg",
+      "desc": "lone silhouette standing inside a fan of red laser lines sweeping across a dark warehouse floor",
+      "role": "right outro image, revealed bottom-up via clip-path",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "editorial",
+      "bold",
+      "cinematic"
+    ],
+    "useCase": [
+      "hero",
+      "scroll-story",
+      "image-reveal"
+    ],
+    "useWhen": "Úsalo para un hero de apertura cinematográfico que se desarma al hacer scroll, con imágenes en rendija y un titular editorial al final.",
+    "aliases": [
+      "hero pinned scroll",
+      "scroll story hero",
+      "imagen en rendija",
+      "clip-path reveal hero",
+      "scrub hero editorial",
+      "hero cinematográfico"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger",
+      "SplitText"
+    ],
+    "assetCount": 3,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "base-300",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#140402",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--base-300"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "base-100",
+      "label": "Texto",
+      "type": "color",
+      "default": "#e8e3d8",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--base-100"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "voyeurverite-scroll-animation",
+    "title": "VoyeurVerite Scroll Animation",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "SplitText",
+      "lenis"
+    ],
+    "complexity": 4,
+    "pinned": true,
+    "viewport_heights": 500,
+    "needs_lenis": true,
+    "ease_family": "power3",
+    "duration_range": [
+      0.25,
+      0.75
+    ],
+    "stagger": -0.05,
+    "assets_required": {
+      "count": 3,
+      "bytes": 252243,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de voyeurverite-scroll-animation"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de voyeurverite-scroll-animation"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de voyeurverite-scroll-animation"
+      }
+    ],
+    "cluster": "SCROLL-LAGGED",
+    "engine": "gsap",
+    "motion_signature": "pinned hero, scrubbed multi-phase clip/rotate/scale collapse",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-lagged"
+  },
+  "review": {
+    "status": "public"
+  }
+}

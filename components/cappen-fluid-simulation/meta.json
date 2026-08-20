@@ -1,0 +1,298 @@
+{
+  "slug": "cappen-fluid-simulation",
+  "sourceDir": "codegrid-cappen-fluid-simulation",
+  "title": "Cappen Fluid Simulation",
+  "description": "Cappen-style GPU fluid simulation built with Three.js: moving the pointer injects ink and velocity splats into double-buffered HalfFloat render targets, and a Navier-Stokes shader solver (advection, curl/vorticity confinement, divergence, 40 pressure iterations) makes the ink swirl and dissipate. The full-screen canvas sits over a white typographic hero with mix-blend-mode: difference, so the flowing ink inverts the giant text beneath it.",
+  "category": "3d-webgl",
+  "tags": [
+    "fluid-simulation",
+    "webgl",
+    "three",
+    "shaders",
+    "navier-stokes",
+    "mouse",
+    "mix-blend-mode",
+    "hero",
+    "canvas"
+  ],
+  "gsap": [],
+  "deps": [
+    "three"
+  ],
+  "preview": {
+    "waitMs": 400,
+    "click": ".hero",
+    "clip": {
+      "seconds": 7,
+      "actions": [
+        {
+          "type": "cursor",
+          "path": "figure8"
+        }
+      ]
+    }
+  },
+  "images": [],
+  "updated": "2026-07-14",
+  "intent": {
+    "mood": [
+      "experimental",
+      "organic",
+      "minimal"
+    ],
+    "useCase": [
+      "hero",
+      "background",
+      "cursor-effect"
+    ],
+    "useWhen": "Úsalo cuando quieras un hero impactante donde el cursor arrastra tinta líquida que fluye e invierte un titular tipográfico gigante en blanco.",
+    "aliases": [
+      "simulación de fluidos",
+      "fluid simulation",
+      "tinta líquida",
+      "ink effect",
+      "efecto agua interactivo",
+      "cursor de fluido"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": false,
+    "needsWebgl": true,
+    "needsCanvas": true,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 0,
+    "perfCost": "heavy",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "accent",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#0031c8",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--accent"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#0c131d",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#e9edf0",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "muted",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#5e6b79",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--muted"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "inkColor",
+      "label": "Color de la tinta",
+      "type": "color",
+      "default": "#ffffff",
+      "apply": {
+        "kind": "js",
+        "path": "inkColor"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "curl",
+      "label": "Remolino",
+      "type": "range",
+      "min": 0,
+      "max": 120,
+      "step": 5,
+      "default": 50,
+      "apply": {
+        "kind": "js",
+        "path": "curl"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "splatRadius",
+      "label": "Tamaño de la salpicadura",
+      "type": "range",
+      "min": 0.05,
+      "max": 1,
+      "step": 0.05,
+      "default": 0.3,
+      "apply": {
+        "kind": "js",
+        "path": "splatRadius"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "forceStrength",
+      "label": "Fuerza del trazo",
+      "type": "range",
+      "min": 1,
+      "max": 25,
+      "step": 0.5,
+      "default": 8.5,
+      "apply": {
+        "kind": "js",
+        "path": "forceStrength"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "dyeDissipation",
+      "label": "Permanencia de la tinta",
+      "type": "range",
+      "min": 0.8,
+      "max": 0.999,
+      "step": 0.005,
+      "default": 0.95,
+      "apply": {
+        "kind": "js",
+        "path": "dyeDissipation"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "velocityDissipation",
+      "label": "Frenado del fluido",
+      "type": "range",
+      "min": 0.8,
+      "max": 0.999,
+      "step": 0.005,
+      "default": 0.95,
+      "apply": {
+        "kind": "js",
+        "path": "velocityDissipation"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "threshold",
+      "label": "Umbral de la tinta",
+      "type": "range",
+      "min": 0.1,
+      "max": 2,
+      "step": 0.05,
+      "default": 1,
+      "apply": {
+        "kind": "js",
+        "path": "threshold"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "cappen-fluid-simulation",
+    "title": "Cappen Fluid Simulation",
+    "category": "3d-webgl",
+    "trigger": "pointer",
+    "libs": [
+      "three"
+    ],
+    "complexity": 3,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": null,
+    "duration_range": [
+      0.25,
+      1.8
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 0,
+      "bytes": 0,
+      "root_absolute_paths": false
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "html/body overflow:hidden"
+    ],
+    "capabilities": [
+      {
+        "capability": "page-scroll-lock",
+        "reason": "fija overflow:hidden en html/body"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "INTEGRATOR",
+    "engine": "webgl-raf",
+    "motion_signature": "pointer-driven GPU Navier-Stokes ink splats, difference-blended",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  },
+  "review": {
+    "status": "public"
+  }
+}

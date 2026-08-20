@@ -1,0 +1,371 @@
+{
+  "slug": "mormal",
+  "sourceDir": "cg-mormal",
+  "title": "Camille Mormal Grid Reveal",
+  "description": "An on-load intro reveal built from a single GSAP timeline: five vertical columns of images slide in from off-screen top/bottom (alternating positive and negative staggers per column with a power4.inOut ease), then the whole image grid scales up 6x while the nav links, masked hero title, slide counter and footer preview thumbnails slide up into their clip-path frames and the two '+' icons scale from 0 to 1. Plays automatically once on page load.",
+  "category": "preloader",
+  "tags": [
+    "reveal",
+    "intro",
+    "image-grid",
+    "gsap",
+    "stagger",
+    "scale",
+    "clip-path",
+    "editorial",
+    "portfolio"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 12000,
+    "clip": {
+      "seconds": 18,
+      "settleMs": 400,
+      "actions": [
+        {
+          "type": "click",
+          "selector": ".preview img:nth-child(2)",
+          "at": 0.5
+        },
+        {
+          "type": "click",
+          "selector": ".preview img:nth-child(4)",
+          "at": 0.66
+        },
+        {
+          "type": "click",
+          "selector": ".preview img:nth-child(6)",
+          "at": 0.8
+        },
+        {
+          "type": "click",
+          "selector": ".preview img:nth-child(3)",
+          "at": 0.92
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "Black-and-white long-exposure portrait, a figure smeared into ghosted double-exposure motion against a dark studio backdrop",
+      "role": "Grid column 1 (duplicated in column 4), plus first footer preview thumbnail",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "Long-exposure ballerina on a dark stage, warm red light trails tracing the sweep of her movement",
+      "role": "Grid column 1 (duplicated in column 4), plus second footer preview thumbnail",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "Silhouette of a dancer mid-pose caught in a hard spotlight on a black stage, dramatic backlight",
+      "role": "Grid column 1 (duplicated in column 4), plus third footer preview thumbnail",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "Moody night portrait of a person in blue neon light, motion-blurred street lights behind — the single cool colour accent",
+      "role": "Grid column 1 (duplicated in column 4), plus fourth footer preview thumbnail",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "Abstract black-and-white long exposure of dancers moving across a dark stage, bodies dissolving into streaks",
+      "role": "Grid column 1 (duplicated in column 4), plus fifth footer preview thumbnail",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "Long-exposure figure lit by a pale overhead shaft of light, arms raised, cool blue-grey motion blur",
+      "role": "Grid column 2 (duplicated in column 5), plus sixth footer preview thumbnail",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "Black-and-white motion-blur portrait, a face swept sideways into a blur over a black shirt and dark ground",
+      "role": "Grid column 2 (duplicated in column 5)",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "Editorial fashion figure in a pale textured feathered gown, whole body smeared by long-exposure movement against dark",
+      "role": "Grid column 2 (duplicated in column 5), plus seventh footer preview thumbnail",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpg",
+      "desc": "Black-and-white motion-blur portrait of a woman, her turning head ghosted across a dark low-key frame",
+      "role": "Grid column 2 (duplicated in column 5)",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpg",
+      "desc": "Blurred figure under a soft cool light shaft, dreamy long-exposure movement on a dark background",
+      "role": "Grid column 2 (duplicated in column 5)",
+      "replaced": true
+    },
+    {
+      "file": "img11.jpg",
+      "desc": "Warm low-key portrait of a woman lit by a single soft gold light against near-black, quiet and cinematic",
+      "role": "Grid column 3",
+      "replaced": true
+    },
+    {
+      "file": "img12.jpg",
+      "desc": "Elegant dark portrait of a woman, hand to face, warm amber key light on a black backdrop",
+      "role": "Grid column 3",
+      "replaced": true
+    },
+    {
+      "file": "img13.jpg",
+      "desc": "Warm-toned long-exposure portrait of a woman in sunglasses, hair and light streaked sideways by motion",
+      "role": "Grid column 3",
+      "replaced": true
+    },
+    {
+      "file": "img14.jpg",
+      "desc": "Contemporary dancer on a dark stage lit by a warm floor spotlight — the full-bleed hero image the grid resolves onto",
+      "role": "Grid column 3 (centre item — final scaled-up hero background)",
+      "replaced": true
+    },
+    {
+      "file": "img15.jpg",
+      "desc": "Abstract black-and-white long exposure of dancers streaking across a dark stage",
+      "role": "Grid column 3",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "editorial",
+      "cinematic",
+      "elegant"
+    ],
+    "useCase": [
+      "preloader",
+      "hero",
+      "image-reveal",
+      "gallery"
+    ],
+    "useWhen": "Úsalo como intro de un portfolio o landing creativa donde una rejilla de imágenes se ensambla y escala revelando el hero a pantalla completa.",
+    "aliases": [
+      "grid reveal",
+      "revelado de rejilla",
+      "intro de portfolio",
+      "columnas de imagenes",
+      "image grid intro",
+      "landing reveal"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 15,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bg",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#0b0c0e",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bg"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f3f0ea",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "accent",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#c9ac86",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--accent"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "itemStagger",
+      "label": "Escalonado de las piezas",
+      "type": "range",
+      "min": 0,
+      "max": 1,
+      "step": 0.05,
+      "default": 0.25,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "itemStagger"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "columnDuration",
+      "label": "Duración de la columna",
+      "type": "range",
+      "min": 0.5,
+      "max": 6,
+      "step": 0.25,
+      "default": 3,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "columnDuration"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "zoom",
+      "label": "Zoom de la rejilla",
+      "type": "range",
+      "min": 2,
+      "max": 14,
+      "step": 0.5,
+      "default": 6,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "zoom"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "textStagger",
+      "label": "Escalonado del texto",
+      "type": "range",
+      "min": 0,
+      "max": 0.3,
+      "step": 0.005,
+      "default": 0.075,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "textStagger"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "mormal",
+    "title": "Camille Mormal Grid Reveal",
+    "category": "preloader",
+    "trigger": "click",
+    "libs": [
+      "gsap",
+      "ionicons"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power4",
+    "duration_range": [
+      0.25,
+      4
+    ],
+    "stagger": -0.25,
+    "assets_required": {
+      "count": 15,
+      "bytes": 2278175,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "html/body overflow:hidden",
+      "html/body height fija en vh"
+    ],
+    "capabilities": [
+      {
+        "capability": "page-scroll-lock",
+        "reason": "fija overflow:hidden en html/body"
+      },
+      {
+        "capability": "entry-veil",
+        "reason": "velo de entrada a pantalla completa en la carga"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "LOAD-ONESHOT",
+    "engine": "gsap",
+    "motion_signature": "autoplay staggered column grid reveal then zoom",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "entry-veil"
+  },
+  "review": {
+    "status": "public",
+    "comment": "Resuelto en el run del 2026-08-16: el titular se esconde midiendo el marco desde JS (el offset fijo fallaba entre ~900 y 1260px) y el video pasa a 18s con clics en las miniaturas."
+  }
+}

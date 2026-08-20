@@ -1,0 +1,158 @@
+{
+  "slug": "kpverse-menu",
+  "sourceDir": "cg-kpverse-menu",
+  "title": "KPVERSE Sliding Menu with Text-Shuffle Hover",
+  "description": "A black rounded side-panel navigation menu that slides in from the left (CSS cubic-bezier transition) when the 'Menu' toggle is clicked, staggering each link into place. Menu labels are split into characters with SplitType and, on hover or open, run a random character-shuffle scramble effect while a clip-path 'bg-hover' block and per-character color sweep animate underneath.",
+  "category": "menu",
+  "tags": [
+    "menu",
+    "navigation",
+    "slide-in",
+    "text-shuffle",
+    "scramble",
+    "hover",
+    "split-type",
+    "clip-path",
+    "editorial"
+  ],
+  "gsap": [],
+  "deps": [
+    "split-type"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "click": ".menu-toggle",
+    "afterClickMs": 1600
+  },
+  "images": [],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "editorial",
+      "minimal",
+      "bold"
+    ],
+    "useCase": [
+      "navigation",
+      "hover-interaction",
+      "text-reveal"
+    ],
+    "useWhen": "Cuando quieras un menu lateral que se desliza desde la izquierda con efecto de texto que se baraja (scramble) al abrir y al hacer hover.",
+    "aliases": [
+      "menu lateral",
+      "sliding menu",
+      "menu deslizante",
+      "text shuffle menu",
+      "scramble menu",
+      "menu hover"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 0,
+    "perfCost": "light",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": false,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "kpverse-menu",
+    "title": "KPVERSE Sliding Menu with Text-Shuffle Hover",
+    "category": "menu",
+    "trigger": "hover",
+    "libs": [
+      "split-type",
+      "ionicons"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": null,
+    "duration_range": [
+      0.3,
+      1
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 0,
+      "bytes": 0,
+      "root_absolute_paths": false
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "html/body overflow:hidden",
+      "html/body height fija en vh"
+    ],
+    "capabilities": [
+      {
+        "capability": "page-scroll-lock",
+        "reason": "fija overflow:hidden en html/body"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "CLICK-CURTAIN",
+    "engine": "css-transition",
+    "motion_signature": "CSS-transition slide-in panel with setTimeout char scramble",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "curtain-toggle"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

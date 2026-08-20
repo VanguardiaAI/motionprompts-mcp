@@ -1,0 +1,329 @@
+{
+  "slug": "gsap-clip-carousel",
+  "sourceDir": "cg-gsap-clip-carousel",
+  "title": "GSAP Clip Carousel",
+  "description": "A click-to-advance fullscreen product carousel: each click reveals the next image from a center clip-path box that scales to fill the viewport while the active image zooms (scale 2), and the product name transitions via per-character span staggers sliding up and out as the next name rises in. Driven entirely by gsap.to with power3.out eases and animated clipPath polygons.",
+  "category": "slider",
+  "tags": [
+    "gsap",
+    "carousel",
+    "clip-path",
+    "click",
+    "image-reveal",
+    "product-showcase",
+    "stagger",
+    "editorial",
+    "fullscreen"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "click": "body",
+    "afterClickMs": 2200,
+    "waitMs": 2500,
+    "clip": {
+      "seconds": 8,
+      "settleMs": 400,
+      "actions": [
+        {
+          "type": "click",
+          "selector": "body",
+          "at": 0.35
+        },
+        {
+          "type": "click",
+          "selector": "body",
+          "at": 0.68
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "1.jpg",
+      "desc": "Sculptural lamp glowing in a warm, dark interior",
+      "role": "initial active fullscreen slide background",
+      "replaced": true
+    },
+    {
+      "file": "2.jpg",
+      "desc": "Sculptural lamp glowing in a warm, dark interior",
+      "role": "first next-slide image revealed from the center clip box",
+      "replaced": true
+    },
+    {
+      "file": "3.jpg",
+      "desc": "Sculptural lamp glowing in a warm, dark interior",
+      "role": "carousel slide image (advances on click)",
+      "replaced": true
+    },
+    {
+      "file": "4.jpg",
+      "desc": "Sculptural lamp glowing in a warm, dark interior",
+      "role": "carousel slide image (advances on click)",
+      "replaced": true
+    },
+    {
+      "file": "5.jpg",
+      "desc": "Sculptural lamp glowing in a warm, dark interior",
+      "role": "carousel slide image (advances on click)",
+      "replaced": true
+    },
+    {
+      "file": "6.jpg",
+      "desc": "Sculptural lamp glowing in a warm, dark interior",
+      "role": "carousel slide image (advances on click)",
+      "replaced": true
+    },
+    {
+      "file": "7.jpg",
+      "desc": "Sculptural lamp glowing in a warm, dark interior",
+      "role": "carousel slide image (advances on click)",
+      "replaced": true
+    },
+    {
+      "file": "8.jpg",
+      "desc": "Sculptural lamp glowing in a warm, dark interior",
+      "role": "carousel slide image (advances on click)",
+      "replaced": true
+    },
+    {
+      "file": "9.jpg",
+      "desc": "Sculptural lamp glowing in a warm, dark interior",
+      "role": "carousel slide image (advances on click)",
+      "replaced": true
+    },
+    {
+      "file": "10.jpg",
+      "desc": "Sculptural lamp glowing in a warm, dark interior",
+      "role": "carousel slide image (advances on click)",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "editorial",
+      "elegant",
+      "bold"
+    ],
+    "useCase": [
+      "slider",
+      "gallery",
+      "product-showcase"
+    ],
+    "useWhen": "Úsalo como carrusel de productos a pantalla completa que avanza al hacer clic, con revelado de imagen por clip-path y nombres animados letra a letra.",
+    "aliases": [
+      "carrusel clip-path",
+      "product carousel",
+      "slider click",
+      "revelado de imagen",
+      "carrusel productos",
+      "gsap slider"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 10,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "lime",
+      "label": "Acento",
+      "type": "color",
+      "default": "#c6f21e",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--lime"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#0d0d0d",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bone",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#f0ede4",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bone"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "cobalt",
+      "label": "Acento 2",
+      "type": "color",
+      "default": "#1141ff",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--cobalt"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "zoom",
+      "label": "Zoom de la imagen que sale",
+      "type": "range",
+      "min": 1,
+      "max": 4,
+      "step": 0.1,
+      "default": 2,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "zoom"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "textRise",
+      "label": "Subida del título",
+      "type": "range",
+      "min": 60,
+      "max": 400,
+      "step": 5,
+      "default": 175,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "textRise"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "letterStagger",
+      "label": "Escalonado de las letras",
+      "type": "range",
+      "min": 0,
+      "max": 0.3,
+      "step": 0.01,
+      "default": 0.05,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "letterStagger"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "revealDuration",
+      "label": "Descubrimiento de la imagen",
+      "type": "range",
+      "min": 0.3,
+      "max": 4,
+      "step": 0.1,
+      "default": 1.5,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "revealDuration"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "gsap-clip-carousel",
+    "title": "GSAP Clip Carousel",
+    "category": "slider",
+    "trigger": "click",
+    "libs": [
+      "gsap"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power3",
+    "duration_range": [
+      0.25,
+      2
+    ],
+    "stagger": 0.05,
+    "assets_required": {
+      "count": 10,
+      "bytes": 2174734,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "STEP-MACHINE",
+    "engine": "gsap",
+    "motion_signature": "click-advanced clip-path slide reveal with char stagger",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "step-advance"
+  },
+  "review": {
+    "status": "public"
+  }
+}

@@ -1,0 +1,398 @@
+{
+  "slug": "image-explosion-scroll-animation-js",
+  "sourceDir": "codegrid-image-explosion-scroll-animation-js",
+  "title": "Image Explosion with JS Physics",
+  "description": "As the footer scrolls into view, 15 images burst upward from the bottom edge and rain back down with a hand-rolled requestAnimationFrame physics simulation (per-particle velocity, gravity, friction and rotation). A scroll listener watches the footer's bounding rect and fires the one-shot explosion, resetting after the particles fall past the container midpoint. Lenis provides the smooth scroll.",
+  "category": "scroll",
+  "tags": [
+    "scroll-trigger",
+    "particles",
+    "physics",
+    "explosion",
+    "image-burst",
+    "lenis",
+    "requestanimationframe",
+    "footer",
+    "editorial"
+  ],
+  "gsap": [],
+  "deps": [
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 3000,
+    "scrollTo": 1,
+    "afterScrollMs": 1200
+  },
+  "images": [
+    {
+      "file": "hero.jpg",
+      "desc": "red safelight-lit darkroom with a 35mm negative strip hanging in the foreground, deep red tones, 2400x1600",
+      "role": "full-screen hero section background",
+      "replaced": true
+    },
+    {
+      "file": "outro.jpg",
+      "desc": "black-and-white photographic prints drying on a line with clips in a darkroom, lamp glow at right, 2400x1600",
+      "role": "full-screen outro section background",
+      "replaced": true
+    },
+    {
+      "file": "img1.jpg",
+      "desc": "vintage film canisters arranged against a pink and orange backdrop, 800x1200",
+      "role": "explosion particle image (1 of 15)",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "close-up of camera equipment with multiple 35mm film rolls, 800x449",
+      "role": "explosion particle image (2 of 15)",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "vintage film camera resting on a brown corkboard surface, 800x1090",
+      "role": "explosion particle image (3 of 15)",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "classic black and silver camera surrounded by various film rolls, 800x533",
+      "role": "explosion particle image (4 of 15)",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "black and white shot of an Olympus OM-2 camera with film rolls, 800x1200",
+      "role": "explosion particle image (5 of 15)",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "close-up of vintage film rolls and canisters in detail, 800x533",
+      "role": "explosion particle image (6 of 15)",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "stacked Kodak film rolls with vibrant packaging, 800x1208",
+      "role": "explosion particle image (7 of 15)",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "flatlay of vintage camera, film rolls and photographs on pale wood, 800x1067",
+      "role": "explosion particle image (8 of 15)",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpg",
+      "desc": "Kodak film rolls placed on a sunny window sill, 800x530",
+      "role": "explosion particle image (9 of 15)",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpg",
+      "desc": "hands loading camera film by a window, 800x533",
+      "role": "explosion particle image (10 of 15)",
+      "replaced": true
+    },
+    {
+      "file": "img11.jpg",
+      "desc": "tangled old-fashioned camera film strips, warm retro tones, 800x600",
+      "role": "explosion particle image (11 of 15)",
+      "replaced": true
+    },
+    {
+      "file": "img12.jpg",
+      "desc": "hand holding film strips against the light, 800x1200",
+      "role": "explosion particle image (12 of 15)",
+      "replaced": true
+    },
+    {
+      "file": "img13.jpg",
+      "desc": "person holding developed film negative strips on white paper, 800x1199",
+      "role": "explosion particle image (13 of 15)",
+      "replaced": true
+    },
+    {
+      "file": "img14.jpg",
+      "desc": "hands examining black-and-white negatives with a magnifying glass, 800x1200",
+      "role": "explosion particle image (14 of 15)",
+      "replaced": true
+    },
+    {
+      "file": "img15.jpg",
+      "desc": "hand inspecting photographic negatives on a red-lit darkroom table, 800x533",
+      "role": "explosion particle image (15 of 15)",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "bold",
+      "editorial",
+      "experimental"
+    ],
+    "useCase": [
+      "footer",
+      "scroll-story",
+      "image-reveal"
+    ],
+    "useWhen": "Cuando quieres un final de página impactante: al llegar al footer, un montón de imágenes explotan hacia arriba con física real.",
+    "aliases": [
+      "explosion de imagenes",
+      "image burst",
+      "particulas al scroll",
+      "footer explosivo",
+      "image explosion",
+      "scroll particles"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 17,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#16130f",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "white",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f6f4ef",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--white"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#ece8df",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "particleCount",
+      "label": "Nº de imágenes",
+      "type": "range",
+      "min": 3,
+      "max": 15,
+      "step": 1,
+      "default": 15,
+      "apply": {
+        "kind": "js",
+        "path": "particleCount"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "gravity",
+      "label": "Gravedad",
+      "type": "range",
+      "min": 0.05,
+      "max": 1,
+      "step": 0.05,
+      "default": 0.25,
+      "apply": {
+        "kind": "js",
+        "path": "gravity"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "friction",
+      "label": "Fricción del aire",
+      "type": "range",
+      "min": 0.9,
+      "max": 1,
+      "step": 0.005,
+      "default": 0.99,
+      "apply": {
+        "kind": "js",
+        "path": "friction"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "verticalForce",
+      "label": "Fuerza del estallido",
+      "type": "range",
+      "min": 5,
+      "max": 40,
+      "step": 1,
+      "default": 15,
+      "apply": {
+        "kind": "js",
+        "path": "verticalForce"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "rotationSpeed",
+      "label": "Giro de las imágenes",
+      "type": "range",
+      "min": 0,
+      "max": 40,
+      "step": 1,
+      "default": 10,
+      "apply": {
+        "kind": "js",
+        "path": "rotationSpeed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "imageSize",
+      "label": "Tamaño de la imagen",
+      "type": "range",
+      "min": 60,
+      "max": 300,
+      "step": 10,
+      "default": 150,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "imageSize"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "scrollLerp",
+      "label": "Suavizado del scroll",
+      "type": "range",
+      "min": 0.05,
+      "max": 1,
+      "step": 0.05,
+      "default": 0.5,
+      "apply": {
+        "kind": "js",
+        "path": "scrollLerp"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "image-explosion-scroll-animation-js",
+    "title": "Image Explosion with JS Physics",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "lenis"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": true,
+    "ease_family": null,
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 17,
+      "bytes": 2803422,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de image-explosion-scroll-animation-js"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de image-explosion-scroll-animation-js"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de image-explosion-scroll-animation-js"
+      }
+    ],
+    "cluster": "INTEGRATOR",
+    "engine": "physics",
+    "motion_signature": "footer-triggered rAF gravity burst of images — 15 particles launched with vy = -15 - rand*10 and vx = (rand-0.5)*20, gravity +0.25/frame, friction 0.99 on vx/vy/rotationSpeed (terminal velocity ~25px/frame), transform translate()+rotate() rewritten every frame until all particles pass the container midpoint",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

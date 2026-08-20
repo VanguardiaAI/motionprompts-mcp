@@ -1,0 +1,581 @@
+{
+  "slug": "poly-app-photo-dump",
+  "sourceDir": "codegrid-poly-app-photo-dump",
+  "title": "Photo Dump Scroll Scatter",
+  "description": "A pinned photo-dump gallery for a photo studio archive: 15 randomly rotated print-style photo cards scattered in a ring around a centered serif chapter heading. The section pins for 6 viewport heights of scroll split into 4 chapters (still life, location, studies, portraits); on each chapter change the current cards fly out to their nearest screen edge (power2.in) while 15 cards from the next set fly in from the edges (power2.out, 0.5s overlap) and the heading cross-fades. Built with GSAP ScrollTrigger pinning and Lenis smooth scroll.",
+  "category": "gallery",
+  "tags": [
+    "scroll",
+    "pin",
+    "scrolltrigger",
+    "lenis",
+    "photo-cards",
+    "scatter",
+    "photo-dump",
+    "cross-fade"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "scrollTo": 0.85,
+    "waitMs": 2500,
+    "clip": {
+      "seconds": 9
+    }
+  },
+  "images": [
+    {
+      "file": "set1/img1.jpg",
+      "desc": "back of a black studio monitor on an articulated arm, dark still life",
+      "role": "photo card, set 1 — still life chapter (scroll section 1)",
+      "replaced": true
+    },
+    {
+      "file": "set1/img2.jpg",
+      "desc": "two black candle tins on a white geometric plinth, hard light",
+      "role": "photo card, set 1 — still life chapter (scroll section 1)",
+      "replaced": true
+    },
+    {
+      "file": "set1/img3.jpg",
+      "desc": "black leather bomber jacket floating on a pale gray backdrop",
+      "role": "photo card, set 1 — still life chapter (scroll section 1)",
+      "replaced": true
+    },
+    {
+      "file": "set1/img4.jpg",
+      "desc": "corner of a brushed-silver device with cross-shaped button, macro",
+      "role": "photo card, set 1 — still life chapter (scroll section 1)",
+      "replaced": true
+    },
+    {
+      "file": "set1/img5.jpg",
+      "desc": "silver leaf rake resting on deep red crushed velvet",
+      "role": "photo card, set 1 — still life chapter (scroll section 1)",
+      "replaced": true
+    },
+    {
+      "file": "set1/img6.jpg",
+      "desc": "stone plate with wooden spoon and loose powder, warm beige tones",
+      "role": "photo card, set 1 — still life chapter (scroll section 1)",
+      "replaced": true
+    },
+    {
+      "file": "set1/img7.jpg",
+      "desc": "hands covering a face, fingers stacked with silver rings, beige backdrop",
+      "role": "photo card, set 1 — still life chapter (scroll section 1)",
+      "replaced": true
+    },
+    {
+      "file": "set1/img8.jpg",
+      "desc": "black panther portrait against a pale studio backdrop",
+      "role": "photo card, set 1 — still life chapter (scroll section 1)",
+      "replaced": true
+    },
+    {
+      "file": "set1/img9.jpg",
+      "desc": "red lipstick beside black cosmetic jars on gray stone",
+      "role": "photo card, set 1 — still life chapter (scroll section 1)",
+      "replaced": true
+    },
+    {
+      "file": "set1/img10.jpg",
+      "desc": "pink lipsticks and cream jars on a blush-toned set",
+      "role": "photo card, set 1 — still life chapter (scroll section 1)",
+      "replaced": true
+    },
+    {
+      "file": "set1/img11.jpg",
+      "desc": "white foundation bottle with black cap among dried flowers and rock",
+      "role": "photo card, set 1 — still life chapter (scroll section 1)",
+      "replaced": true
+    },
+    {
+      "file": "set1/img12.jpg",
+      "desc": "open silver compact powder catching a beam of light, dark set",
+      "role": "photo card, set 1 — still life chapter (scroll section 1)",
+      "replaced": true
+    },
+    {
+      "file": "set1/img13.jpg",
+      "desc": "round aluminum tin with ribbed edge on a white table",
+      "role": "photo card, set 1 — still life chapter (scroll section 1)",
+      "replaced": true
+    },
+    {
+      "file": "set1/img14.jpg",
+      "desc": "beige suede cowboy boot mid-step on a cream backdrop",
+      "role": "photo card, set 1 — still life chapter (scroll section 1)",
+      "replaced": true
+    },
+    {
+      "file": "set1/img15.jpg",
+      "desc": "close crop of an eye with winged eyeliner, warm sepia tones",
+      "role": "photo card, set 1 — still life chapter (scroll section 1)",
+      "replaced": true
+    },
+    {
+      "file": "set2/img1.jpg",
+      "desc": "aerial view of forested mountain ridge with drifting fog",
+      "role": "photo card, set 2 — on location chapter (scroll section 2)",
+      "replaced": true
+    },
+    {
+      "file": "set2/img2.jpg",
+      "desc": "sea of clouds under a blue sky from a mountain summit",
+      "role": "photo card, set 2 — on location chapter (scroll section 2)",
+      "replaced": true
+    },
+    {
+      "file": "set2/img3.jpg",
+      "desc": "golden foggy hills with scattered pines at first light",
+      "role": "photo card, set 2 — on location chapter (scroll section 2)",
+      "replaced": true
+    },
+    {
+      "file": "set2/img4.jpg",
+      "desc": "coastal cliffs dropping into a dark blue sea",
+      "role": "photo card, set 2 — on location chapter (scroll section 2)",
+      "replaced": true
+    },
+    {
+      "file": "set2/img5.jpg",
+      "desc": "curved plaster interior with lounge chair and warm cove lighting",
+      "role": "photo card, set 2 — on location chapter (scroll section 2)",
+      "replaced": true
+    },
+    {
+      "file": "set2/img6.jpg",
+      "desc": "concrete stair interior with wooden table and potted plants",
+      "role": "photo card, set 2 — on location chapter (scroll section 2)",
+      "replaced": true
+    },
+    {
+      "file": "set2/img7.jpg",
+      "desc": "rough stone slab counter with brass ring pendant light",
+      "role": "photo card, set 2 — on location chapter (scroll section 2)",
+      "replaced": true
+    },
+    {
+      "file": "set2/img8.jpg",
+      "desc": "pink plaster courtyard with potted olive tree under a skylight",
+      "role": "photo card, set 2 — on location chapter (scroll section 2)",
+      "replaced": true
+    },
+    {
+      "file": "set2/img9.jpg",
+      "desc": "unbroken sea of clouds from above, midday blue",
+      "role": "photo card, set 2 — on location chapter (scroll section 2)",
+      "replaced": true
+    },
+    {
+      "file": "set2/img10.jpg",
+      "desc": "misty pine forest in heavy fog, muted green",
+      "role": "photo card, set 2 — on location chapter (scroll section 2)",
+      "replaced": true
+    },
+    {
+      "file": "set2/img11.jpg",
+      "desc": "rippled sand dunes in low raking light",
+      "role": "photo card, set 2 — on location chapter (scroll section 2)",
+      "replaced": true
+    },
+    {
+      "file": "set2/img12.jpg",
+      "desc": "burnt-orange sunset over a cloud layer from altitude",
+      "role": "photo card, set 2 — on location chapter (scroll section 2)",
+      "replaced": true
+    },
+    {
+      "file": "set2/img13.jpg",
+      "desc": "hazy blue mountain valley receding in layers",
+      "role": "photo card, set 2 — on location chapter (scroll section 2)",
+      "replaced": true
+    },
+    {
+      "file": "set2/img14.jpg",
+      "desc": "dark sea surface from above, textured waves",
+      "role": "photo card, set 2 — on location chapter (scroll section 2)",
+      "replaced": true
+    },
+    {
+      "file": "set2/img15.jpg",
+      "desc": "white winter fog over a road with a distant car",
+      "role": "photo card, set 2 — on location chapter (scroll section 2)",
+      "replaced": true
+    },
+    {
+      "file": "set3/img1.jpg",
+      "desc": "dark charcoal silk fabric folds, studio texture study",
+      "role": "photo card, set 3 — studies chapter (scroll section 3)",
+      "replaced": true
+    },
+    {
+      "file": "set3/img2.jpg",
+      "desc": "beige fabric folded into dune-like ridges, abstract study",
+      "role": "photo card, set 3 — studies chapter (scroll section 3)",
+      "replaced": true
+    },
+    {
+      "file": "set3/img3.jpg",
+      "desc": "small white smoke puff suspended on black",
+      "role": "photo card, set 3 — studies chapter (scroll section 3)",
+      "replaced": true
+    },
+    {
+      "file": "set3/img4.jpg",
+      "desc": "crumpled white paper sheet, flat texture study",
+      "role": "photo card, set 3 — studies chapter (scroll section 3)",
+      "replaced": true
+    },
+    {
+      "file": "set3/img5.jpg",
+      "desc": "leaf shadows falling across a warm beige wall",
+      "role": "photo card, set 3 — studies chapter (scroll section 3)",
+      "replaced": true
+    },
+    {
+      "file": "set3/img6.jpg",
+      "desc": "black sand ripples in low light, near-abstract",
+      "role": "photo card, set 3 — studies chapter (scroll section 3)",
+      "replaced": true
+    },
+    {
+      "file": "set3/img7.jpg",
+      "desc": "raindrop ripples on dark water, black and white",
+      "role": "photo card, set 3 — studies chapter (scroll section 3)",
+      "replaced": true
+    },
+    {
+      "file": "set3/img8.jpg",
+      "desc": "dried pampas grass heads against a beige wall",
+      "role": "photo card, set 3 — studies chapter (scroll section 3)",
+      "replaced": true
+    },
+    {
+      "file": "set3/img9.jpg",
+      "desc": "stone and ceramic vessels grouped on a plaster table",
+      "role": "photo card, set 3 — studies chapter (scroll section 3)",
+      "replaced": true
+    },
+    {
+      "file": "set3/img10.jpg",
+      "desc": "beige ceramic vases beside a raw stone block, warm light",
+      "role": "photo card, set 3 — studies chapter (scroll section 3)",
+      "replaced": true
+    },
+    {
+      "file": "set3/img11.jpg",
+      "desc": "white marble surface with soft gray veining, close up",
+      "role": "photo card, set 3 — studies chapter (scroll section 3)",
+      "replaced": true
+    },
+    {
+      "file": "set3/img12.jpg",
+      "desc": "concentric circles print, black line on white",
+      "role": "photo card, set 3 — studies chapter (scroll section 3)",
+      "replaced": true
+    },
+    {
+      "file": "set3/img13.jpg",
+      "desc": "golden sand ripple pattern filling the frame",
+      "role": "photo card, set 3 — studies chapter (scroll section 3)",
+      "replaced": true
+    },
+    {
+      "file": "set3/img14.jpg",
+      "desc": "white smoke cloud drifting across a dark frame",
+      "role": "photo card, set 3 — studies chapter (scroll section 3)",
+      "replaced": true
+    },
+    {
+      "file": "set3/img15.jpg",
+      "desc": "film negatives hanging in a red-lit darkroom",
+      "role": "photo card, set 3 — studies chapter (scroll section 3)",
+      "replaced": true
+    },
+    {
+      "file": "set4/img1.jpg",
+      "desc": "black and white portrait of a young man with a buzz cut",
+      "role": "photo card, set 4 — portraits chapter (scroll section 4)",
+      "replaced": true
+    },
+    {
+      "file": "set4/img2.jpg",
+      "desc": "black and white profile of a woman with a sharp bob and pearl earring",
+      "role": "photo card, set 4 — portraits chapter (scroll section 4)",
+      "replaced": true
+    },
+    {
+      "file": "set4/img3.jpg",
+      "desc": "black and white portrait of a bald model in a dark jacket",
+      "role": "photo card, set 4 — portraits chapter (scroll section 4)",
+      "replaced": true
+    },
+    {
+      "file": "set4/img4.jpg",
+      "desc": "portrait veiled behind white sheer fabric, high key",
+      "role": "photo card, set 4 — portraits chapter (scroll section 4)",
+      "replaced": true
+    },
+    {
+      "file": "set4/img5.jpg",
+      "desc": "woman in an oversized red coat dress against cobalt blue",
+      "role": "photo card, set 4 — portraits chapter (scroll section 4)",
+      "replaced": true
+    },
+    {
+      "file": "set4/img6.jpg",
+      "desc": "man in an olive-green suit before a painterly backdrop",
+      "role": "photo card, set 4 — portraits chapter (scroll section 4)",
+      "replaced": true
+    },
+    {
+      "file": "set4/img7.jpg",
+      "desc": "woman in a printed dress against a burnt-orange backdrop",
+      "role": "photo card, set 4 — portraits chapter (scroll section 4)",
+      "replaced": true
+    },
+    {
+      "file": "set4/img8.jpg",
+      "desc": "model in a red blazer with gold chains on teal",
+      "role": "photo card, set 4 — portraits chapter (scroll section 4)",
+      "replaced": true
+    },
+    {
+      "file": "set4/img9.jpg",
+      "desc": "motion-blurred figure in white trousers pulling off a jacket",
+      "role": "photo card, set 4 — portraits chapter (scroll section 4)",
+      "replaced": true
+    },
+    {
+      "file": "set4/img10.jpg",
+      "desc": "pale blond portrait dissolved in pink haze",
+      "role": "photo card, set 4 — portraits chapter (scroll section 4)",
+      "replaced": true
+    },
+    {
+      "file": "set4/img11.jpg",
+      "desc": "crowd of figures in heavy motion blur, dark tones",
+      "role": "photo card, set 4 — portraits chapter (scroll section 4)",
+      "replaced": true
+    },
+    {
+      "file": "set4/img12.jpg",
+      "desc": "blurred screaming face against a red backdrop",
+      "role": "photo card, set 4 — portraits chapter (scroll section 4)",
+      "replaced": true
+    },
+    {
+      "file": "set4/img13.jpg",
+      "desc": "young man in a coral tank top on a sunlit street",
+      "role": "photo card, set 4 — portraits chapter (scroll section 4)",
+      "replaced": true
+    },
+    {
+      "file": "set4/img14.jpg",
+      "desc": "laughing curly-haired person in golden-hour light",
+      "role": "photo card, set 4 — portraits chapter (scroll section 4)",
+      "replaced": true
+    },
+    {
+      "file": "set4/img15.jpg",
+      "desc": "man in an orange bomber jacket on a residential street",
+      "role": "photo card, set 4 — portraits chapter (scroll section 4)",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "editorial",
+      "cinematic",
+      "elegant"
+    ],
+    "useCase": [
+      "gallery",
+      "scroll-story"
+    ],
+    "useWhen": "Úsalo cuando quieras una galería editorial a pantalla completa que, al hacer scroll, dispersa y renueva tarjetas de fotos alrededor de un titular serif.",
+    "aliases": [
+      "photo dump",
+      "galería dispersa",
+      "fotos esparcidas",
+      "scatter gallery",
+      "scroll de fotos",
+      "moodboard editorial"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 60,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#0f0d0b",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "taupe",
+      "label": "Texto",
+      "type": "color",
+      "default": "#a3988a",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--taupe"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ember",
+      "label": "Acento",
+      "type": "color",
+      "default": "#c96a52",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ember"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink-raised",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#171310",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink-raised"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "poly-app-photo-dump",
+    "title": "Photo Dump Scroll Scatter",
+    "category": "gallery",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 3,
+    "pinned": true,
+    "viewport_heights": 600,
+    "needs_lenis": true,
+    "ease_family": "power2",
+    "duration_range": [
+      0.5,
+      0.75
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 60,
+      "bytes": 7947388,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "width-branch",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de poly-app-photo-dump"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de poly-app-photo-dump"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de poly-app-photo-dump"
+      }
+    ],
+    "cluster": "SCROLL-THRESHOLD",
+    "engine": "gsap+lenis",
+    "motion_signature": "pinned scroll-quantized card scatter swap — no scrub, no inertia: progress buckets at 0/.25/.5/.75 fire discrete 1.25s eased left/top/rotation tweens that fling 15 cards to the nearest viewport edge (power2.in) while 15 new ones fly in from an edge to a radial-random ring (power2.out, offset 0.5s)",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "reveal-on-enter"
+  },
+  "review": {
+    "status": "public"
+  }
+}

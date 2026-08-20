@@ -1,0 +1,207 @@
+{
+  "slug": "modular-slider",
+  "sourceDir": "cg-modular-slider",
+  "title": "Modular Carousel",
+  "description": "A click-driven modular image carousel: each click advances a horizontal strip of slide titles via a 2s gsap.to power4.out tween, while two split image panels (top/bottom, shaped with CSS clip-path polygons) are freshly injected and revealed by animating their clip-path and scale from collapsed to full with a 0.15s stagger. Hovering the image widens the top/bottom clip-path windows; excess stacked images are trimmed on tween complete.",
+  "category": "slider",
+  "tags": [
+    "carousel",
+    "clip-path",
+    "gsap",
+    "image-reveal",
+    "split-panels",
+    "click-driven",
+    "architecture",
+    "editorial",
+    "dark"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "click": "body",
+    "afterClickMs": 2200
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "warm cream-stucco apartment facade with a regular grid of windows, lit by low golden late-day sun against a clear sky",
+      "role": "spare slide image in the carousel image pool (not reached in default click cycle)",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "sunlit honey-toned stone colonnade walkway, carved columns casting long diagonal shadows with climbing bougainvillea overhead, deep perspective",
+      "role": "slide image (initial/first shown in the carousel)",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "minimal cream-plastered building volumes meeting at a crisp shadowed setback against a deep blue sky, graphic and clean",
+      "role": "slide image cycled into the carousel",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "monumental terracotta-toned building of stacked arched vaults and colonnade under a clear blue sky, warm earthen monochrome",
+      "role": "slide image cycled into the carousel",
+      "replaced": false
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "minimalist raw board-formed concrete courtyard with a tall tie-hole wall and low concrete block seats, soft daylight",
+      "role": "slide image cycled into the carousel",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "curved white-plaster interior niche with a bouclé lounge chair, potted plant and warm concealed cove lighting",
+      "role": "slide image cycled into the carousel",
+      "replaced": false
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "board-marked concrete house interior with a floating cantilevered stair, raw timber dining table, woven rug and greenery in warm daylight",
+      "role": "slide image cycled into the carousel",
+      "replaced": false
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "rolling warm sand dunes with rippled crests at golden hour, the sun low on a soft peach horizon",
+      "role": "slide image cycled into the carousel",
+      "replaced": false
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "minimal",
+      "editorial",
+      "elegant"
+    ],
+    "useCase": [
+      "slider",
+      "gallery",
+      "product-showcase",
+      "image-reveal"
+    ],
+    "useWhen": "Úsalo para un carrusel a pantalla completa donde cada clic avanza títulos y revela la imagen partida en dos con clip-path animado.",
+    "aliases": [
+      "carrusel modular",
+      "modular carousel",
+      "slider clip-path",
+      "split image slider",
+      "galeria a pantalla completa",
+      "carousel de imagenes"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 8,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "modular-slider",
+    "title": "Modular Carousel",
+    "category": "slider",
+    "trigger": "click",
+    "libs": [
+      "gsap"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power4",
+    "duration_range": [
+      0.25,
+      2
+    ],
+    "stagger": 0.15,
+    "assets_required": {
+      "count": 8,
+      "bytes": 1568841,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "html/body overflow:hidden",
+      "html/body height fija en vh"
+    ],
+    "capabilities": [
+      {
+        "capability": "page-scroll-lock",
+        "reason": "fija overflow:hidden en html/body"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "STEP-MACHINE",
+    "engine": "gsap",
+    "motion_signature": "click-advanced title strip, clip-path split image reveal",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "step-advance"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

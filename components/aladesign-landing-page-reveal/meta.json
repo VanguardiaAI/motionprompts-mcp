@@ -1,0 +1,421 @@
+{
+  "slug": "aladesign-landing-page-reveal",
+  "sourceDir": "codegrid-aladesign-landing-page-reveal-nextjs",
+  "title": "AlaDesign Landing Page Reveal",
+  "description": "Preloader-to-hero landing page reveal driven by three parallel GSAP timelines with a custom 'hop' ease: a dark overlay counts 0 to 100 while masked overlay text steps through three lines, five portrait images rise and collapse their flex gap, the side images wipe away with clip-path as the center image scales up, then the overlay wipes upward and the giant hero name slides in word by word (SplitText). Plays automatically once on page load, about 7 seconds total.",
+  "category": "preloader",
+  "tags": [
+    "preloader",
+    "reveal",
+    "counter",
+    "clip-path",
+    "splittext",
+    "customease",
+    "landing",
+    "hero",
+    "stagger",
+    "intro"
+  ],
+  "gsap": [
+    "CustomEase",
+    "SplitText"
+  ],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 7200,
+    "clip": {
+      "seconds": 11,
+      "settleMs": 400,
+      "actions": [
+        {
+          "type": "hold"
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "img_1.jpg",
+      "desc": "close-up fashion portrait of a model with crystal gems across the brow, chunky gold necklace and earrings, orange trench coat, teal-blue backdrop",
+      "role": "hero image 1 (left, wiped away)",
+      "replaced": true
+    },
+    {
+      "file": "img_2.jpg",
+      "desc": "editorial fashion shot of a model in an orange belted trench coat holding a white calla lily, teal-blue backdrop",
+      "role": "hero image 2 (wiped away)",
+      "replaced": true
+    },
+    {
+      "file": "img_3.jpg",
+      "desc": "editorial fashion shot of a model in a voluminous red ball gown skirt with sharp-shouldered black jacket and gold statement jewelry, teal-blue backdrop",
+      "role": "center hero image (scales to fill)",
+      "replaced": true
+    },
+    {
+      "file": "img_4.jpg",
+      "desc": "profile portrait of a model in an orange trench coat with gold choker, crystal gems on her face, teal-blue backdrop",
+      "role": "hero image 4 (wiped away)",
+      "replaced": true
+    },
+    {
+      "file": "img_5.jpg",
+      "desc": "full-body fashion shot of a model striding in a long orange coat over black turtleneck and trousers, holding an orange clutch, teal-blue backdrop",
+      "role": "hero image 5 (right, wiped away)",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-14",
+  "intent": {
+    "mood": [
+      "editorial",
+      "elegant",
+      "minimal"
+    ],
+    "useCase": [
+      "preloader",
+      "hero",
+      "text-reveal"
+    ],
+    "useWhen": "Úsalo para la entrada de una landing de moda o portfolio donde un preloader con contador desemboca en un nombre gigante y foto editorial.",
+    "aliases": [
+      "preloader editorial",
+      "intro de moda",
+      "revelado de nombre gigante",
+      "landing reveal",
+      "portada fashion",
+      "giant name hero"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "CustomEase",
+      "SplitText"
+    ],
+    "assetCount": 5,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#f2f2f2",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "light",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f2f2f2",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--light"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "overlay",
+      "label": "Acento",
+      "type": "color",
+      "default": "#ff4e45",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--overlay"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "accent",
+      "label": "Acento 2",
+      "type": "color",
+      "default": "#ff4e45",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--accent"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "imageStagger",
+      "label": "Escalonado de las imágenes",
+      "type": "range",
+      "min": 0,
+      "max": 0.4,
+      "step": 0.01,
+      "default": 0.05,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "imageStagger"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "exitStagger",
+      "label": "Escalonado de la salida",
+      "type": "range",
+      "min": 0,
+      "max": 0.5,
+      "step": 0.01,
+      "default": 0.1,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "exitStagger"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "wordStagger",
+      "label": "Escalonado del titular",
+      "type": "range",
+      "min": 0,
+      "max": 0.4,
+      "step": 0.01,
+      "default": 0.1,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "wordStagger"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "finalZoom",
+      "label": "Zoom de la imagen final",
+      "type": "range",
+      "min": 1,
+      "max": 4,
+      "step": 0.1,
+      "default": 2,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "finalZoom"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "gapVw",
+      "label": "Separación entre imágenes",
+      "type": "range",
+      "min": 0,
+      "max": 5,
+      "step": 0.25,
+      "default": 0.75,
+      "unit": "vw",
+      "apply": {
+        "kind": "js",
+        "path": "gapVw"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "aladesign-landing-page-reveal",
+    "title": "AlaDesign Landing Page Reveal",
+    "category": "preloader",
+    "trigger": "load",
+    "libs": [
+      "gsap",
+      "CustomEase",
+      "SplitText"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "custom",
+    "duration_range": [
+      0.3,
+      5
+    ],
+    "stagger": 0.1,
+    "assets_required": {
+      "count": 5,
+      "bytes": 825010,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "entry-veil",
+        "reason": "velo de entrada a pantalla completa en la carga"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "aminezegmou-landing-page",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "aristidebenoist-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "camille-mormal-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "hypnotic-gallery-gsap-flip",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "infinite-draggable-image-gallery-javascript",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "kin-landing-page",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "landing-page-reveal-no-webgl",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "laserbysonymusic-landing-page-reveal-animation",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "maxmilkin-preloader",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "meetings-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "menu-root-food",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "nite-riot-landing-page-reveal-javascript",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "outfit-landing-page-reveal",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "p10-landing-page-reveal-gsap",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "push-over-overlay-menu",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "steelworks-landing-page-reveal",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "story-world-carousel-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "truekindskincare-landing-page-reveal-javascript",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "zajno-lp",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "zajno-page-transitions",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      }
+    ],
+    "cluster": "LOAD-ONESHOT",
+    "engine": "gsap",
+    "motion_signature": "autoplay timed preloader wipe revealing hero",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "entry-veil"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

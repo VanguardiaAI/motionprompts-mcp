@@ -1,0 +1,332 @@
+{
+  "slug": "maxmilkin-preloader",
+  "sourceDir": "codegrid-maxmilkin-preloader",
+  "title": "Maxmilkin Orbit Text Preloader",
+  "description": "Portfolio preloader where eight words ride concentric SVG circular orbits, stretching and sliding around their rings via animated textPath textLength/startOffset while the whole SVG wobbles in random ±25° rotations and a central counter tweens 0 to 100. After ~6s the orbit words fade out ring by ring, the loader dissolves away and the hero reveals with a 1.25→1 background zoom-out and word-masked SplitText copy sliding up on a custom ease. Plays automatically on page load.",
+  "category": "preloader",
+  "tags": [
+    "preloader",
+    "svg",
+    "textpath",
+    "orbit",
+    "counter",
+    "splittext",
+    "customease",
+    "reveal",
+    "intro",
+    "hero"
+  ],
+  "gsap": [
+    "SplitText",
+    "CustomEase"
+  ],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 3200
+  },
+  "images": [
+    {
+      "file": "hero.jpg",
+      "desc": "close-up of sculpted white marble with flowing wave-like folds and grey veining",
+      "role": "hero background image revealed after the preloader",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "minimal",
+      "elegant",
+      "experimental"
+    ],
+    "useCase": [
+      "preloader",
+      "page-transition",
+      "text-reveal"
+    ],
+    "useWhen": "Úsalo cuando quieras una pantalla de carga sobria y tipográfica que orbite palabras alrededor de un contador antes de revelar el hero.",
+    "aliases": [
+      "preloader orbital",
+      "texto en circulos",
+      "orbit text loader",
+      "pantalla de carga",
+      "contador 0 a 100",
+      "circular text preloader"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "SplitText",
+      "CustomEase"
+    ],
+    "assetCount": 1,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#1c1a15",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bone",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f5f1e8",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bone"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "stone",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#e6dfd2",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--stone"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ringStagger",
+      "label": "Escalonado de los anillos",
+      "type": "range",
+      "min": 0,
+      "max": 0.5,
+      "step": 0.01,
+      "default": 0.1,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "ringStagger"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "spinStep",
+      "label": "Giro por tirón",
+      "type": "range",
+      "min": 5,
+      "max": 120,
+      "step": 5,
+      "default": 25,
+      "unit": "°",
+      "apply": {
+        "kind": "js",
+        "path": "spinStep"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "counterDuration",
+      "label": "Duración de la cuenta",
+      "type": "range",
+      "min": 1,
+      "max": 10,
+      "step": 0.5,
+      "default": 4,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "counterDuration"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "orbitInStagger",
+      "label": "Escalonado de los textos",
+      "type": "range",
+      "min": 0,
+      "max": 0.5,
+      "step": 0.005,
+      "default": 0.125,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "orbitInStagger"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "maxmilkin-preloader",
+    "title": "Maxmilkin Orbit Text Preloader",
+    "category": "preloader",
+    "trigger": "load",
+    "libs": [
+      "gsap",
+      "SplitText",
+      "CustomEase"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power1",
+    "duration_range": [
+      0.3,
+      4
+    ],
+    "stagger": 0.1,
+    "assets_required": {
+      "count": 1,
+      "bytes": 92808,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "entry-veil",
+        "reason": "velo de entrada a pantalla completa en la carga"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "aladesign-landing-page-reveal",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "aristidebenoist-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "audemarspiguet-menu",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "camille-mormal-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "hypnotic-gallery-gsap-flip",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "kin-landing-page",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "landing-page-reveal-no-webgl",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "meetings-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "menu-root-food",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "outfit-landing-page-reveal",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "p10-landing-page-reveal-gsap",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "push-over-overlay-menu",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "story-world-carousel-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "zajno-lp",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      }
+    ],
+    "cluster": "LOAD-ONESHOT",
+    "engine": "gsap",
+    "motion_signature": "autoplay page veil: 8 concentric SVG textPaths stretch/slide along their orbits on power2.inOut yoyo loops (index-staggered 0.7s, per-ring duration scaled 1.08-1.25s by radius) while the whole SVG creeps ±25° in endless 2s randomized turns and a 4s power1.out counter runs 0-100; at t=6s the rings fade out inner-first and the fixed overlay dissolves (1s) and deletes itself as the hero image un-scales 1.25->1 and masked words rise on the 'hop' ease (0.9,0,0.1,1)",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "entry-veil"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

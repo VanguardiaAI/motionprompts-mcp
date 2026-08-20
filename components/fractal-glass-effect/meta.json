@@ -1,0 +1,268 @@
+{
+  "slug": "fractal-glass-effect",
+  "sourceDir": "codegrid-fractal-glass-effect",
+  "title": "Fractal Glass Parallax Effect",
+  "description": "Full-viewport Three.js hero where a custom fragment shader refracts a full-bleed portrait through vertical fractal-glass ribbons (mod-based stripe displacement averaged over 11 samples, smoothstep-faded at the edges), slicing the figure into overlapping shards. Moving the mouse feeds a lerped uMouse uniform that drives a horizontal parallax amplified inside the distorted stripes.",
+  "category": "3d-webgl",
+  "tags": [
+    "three",
+    "webgl",
+    "shader",
+    "fractal-glass",
+    "refraction",
+    "parallax",
+    "mousemove",
+    "hero"
+  ],
+  "gsap": [],
+  "deps": [
+    "three"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "clip": {
+      "seconds": 8,
+      "actions": [
+        {
+          "type": "cursor",
+          "path": "sweep"
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "hero-portrait.jpg",
+      "desc": "editorial studio portrait: model in an oversized scarlet blazer against a petrol-teal wall, facing camera, extended sideways into a 1920x1200 landscape plate",
+      "role": "the texture the fractal glass shader actually refracts (wired into #glassTexture)",
+      "reused_from": "247artists-trail/trail-images/img3.jpeg"
+    },
+    {
+      "file": "mesh-nocturne.svg",
+      "desc": "hand-written SVG mesh gradient: violet, peach and teal aurora over #17141f, 1600x1000",
+      "role": "the texture this demo used to refract; kept only as the counter-example — a gradient has no edges for the flutes to cut, so the effect reads as flat colour",
+      "replaced": true
+    },
+    {
+      "file": "hero.jpg",
+      "desc": "model in a painterly multicolour silk dress against a burnt-orange studio wall, arm at her side, 1440x810",
+      "role": "unused alternate hero texture (not referenced by code)",
+      "replaced": true
+    },
+    {
+      "file": "hero2.jpg",
+      "desc": "abstract grayscale 3D render of a soft ruffled organic sphere floating on a black background, 2400x1600",
+      "role": "unused alternate hero texture (not referenced by code)",
+      "replaced": true
+    },
+    {
+      "file": "hero3.jpg",
+      "desc": "silhouette of a person in a fedora hat facing a glowing orange sun disc on a red background, 4800x2743",
+      "role": "unused alternate hero texture (not referenced by code)",
+      "replaced": true
+    },
+    {
+      "file": "hero4.jpg",
+      "desc": "dark glossy black spheres rim-lit with warm orange light on a near-black background, 2400x1800",
+      "role": "unused alternate hero texture (not referenced by code)",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-08-16",
+  "intent": {
+    "mood": [
+      "experimental",
+      "editorial",
+      "bold"
+    ],
+    "useCase": [
+      "hero",
+      "image-reveal",
+      "background"
+    ],
+    "useWhen": "Úsalo en un hero de portada que refracta una imagen tras láminas de cristal fractal y reacciona al ratón, ideal para marcas de moda, arte o diseño.",
+    "aliases": [
+      "vidrio fractal",
+      "efecto cristal",
+      "glass refraction",
+      "distorsión de imagen",
+      "fractal glass hero",
+      "parallax de cristal"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": false,
+    "needsWebgl": true,
+    "needsCanvas": true,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 6,
+    "perfCost": "heavy",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f5f3f7",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "stripesFrequency",
+      "label": "Nº de franjas",
+      "type": "range",
+      "min": 5,
+      "max": 120,
+      "step": 1,
+      "default": 35,
+      "apply": {
+        "kind": "js",
+        "path": "stripesFrequency"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "glassStrength",
+      "label": "Fuerza del cristal",
+      "type": "range",
+      "min": 0,
+      "max": 6,
+      "step": 0.1,
+      "default": 2,
+      "apply": {
+        "kind": "js",
+        "path": "glassStrength"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "distortionMultiplier",
+      "label": "Distorsión",
+      "type": "range",
+      "min": 0,
+      "max": 30,
+      "step": 0.5,
+      "default": 10,
+      "apply": {
+        "kind": "js",
+        "path": "distortionMultiplier"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "parallaxStrength",
+      "label": "Parallax del cursor",
+      "type": "range",
+      "min": 0,
+      "max": 0.5,
+      "step": 0.01,
+      "default": 0.1,
+      "apply": {
+        "kind": "js",
+        "path": "parallaxStrength"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "lerpFactor",
+      "label": "Suavizado del seguimiento",
+      "type": "range",
+      "min": 0.005,
+      "max": 0.2,
+      "step": 0.005,
+      "default": 0.035,
+      "apply": {
+        "kind": "js",
+        "path": "lerpFactor"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "fractal-glass-effect",
+    "title": "Fractal Glass Parallax Effect",
+    "category": "3d-webgl",
+    "trigger": "pointer",
+    "libs": [
+      "three"
+    ],
+    "complexity": 5,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": null,
+    "duration_range": [
+      0.2,
+      0.2
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 6,
+      "bytes": 668087,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "width-branch",
+      "media_queries": 3,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "POINTER-CHASE",
+    "engine": "webgl-raf",
+    "motion_signature": "rAF-lerped mouse (factor 0.035, no GSAP) drives a uMouse uniform; fragment shader mod-stripes the UV (35 stripes, 11-tap smoothing) and adds a horizontal-only parallax offset scaled by |mouse.x-0.5| and edge-faded",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  },
+  "review": {
+    "status": "public"
+  }
+}

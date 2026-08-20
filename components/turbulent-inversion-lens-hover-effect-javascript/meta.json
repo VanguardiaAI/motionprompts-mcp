@@ -1,0 +1,258 @@
+{
+  "slug": "turbulent-inversion-lens-hover-effect-javascript",
+  "sourceDir": "codegrid-turbulent-inversion-lens-hover-effect-javascript",
+  "title": "Turbulent Inversion Lens Hover Effect",
+  "description": "A full-viewport Three.js plane renders a portrait through a fragment shader; moving the cursor drives a lerped mask whose radius grows on hover, and inside that circular lens the image is converted to inverted grayscale with animated fBm turbulence jittering the mask edge.",
+  "category": "hover",
+  "tags": [
+    "three",
+    "webgl",
+    "shader",
+    "hover",
+    "cursor",
+    "invert",
+    "turbulence",
+    "lens",
+    "grayscale"
+  ],
+  "gsap": [],
+  "deps": [
+    "three"
+  ],
+  "preview": {
+    "waitMs": 2500
+  },
+  "images": [
+    {
+      "file": "portrait.jpeg",
+      "desc": "Editorial beauty portrait of a woman with graphic white eyeliner, safety-pin hair jewellery and gold hoop earrings against a light grey seamless backdrop, cropped landscape to the face",
+      "role": "Full-viewport base image sampled by the shader and revealed as inverted grayscale inside the hover lens",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "experimental",
+      "editorial",
+      "minimal"
+    ],
+    "useCase": [
+      "hover-interaction",
+      "cursor-effect",
+      "image-reveal"
+    ],
+    "useWhen": "Úsalo cuando el cursor deba revelar una lente turbulenta que invierte la imagen a escala de grises sobre un retrato o hero a pantalla completa.",
+    "aliases": [
+      "lente de inversión",
+      "hover invertir imagen",
+      "turbulent inversion lens",
+      "invert hover effect",
+      "efecto lupa del cursor",
+      "grayscale reveal"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": false,
+    "needsWebgl": true,
+    "needsCanvas": true,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 1,
+    "perfCost": "heavy",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f5f1e8",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "black",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#121014",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--black"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "maskRadius",
+      "label": "Tamaño de la lente",
+      "type": "range",
+      "min": 0.03,
+      "max": 0.5,
+      "step": 0.01,
+      "default": 0.15,
+      "apply": {
+        "kind": "js",
+        "path": "maskRadius"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "maskSpeed",
+      "label": "Velocidad del borde",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.05,
+      "default": 0.75,
+      "apply": {
+        "kind": "js",
+        "path": "maskSpeed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "turbulenceIntensity",
+      "label": "Turbulencia",
+      "type": "range",
+      "min": 0,
+      "max": 0.3,
+      "step": 0.005,
+      "default": 0.075,
+      "apply": {
+        "kind": "js",
+        "path": "turbulenceIntensity"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "lerpFactor",
+      "label": "Suavizado del seguimiento",
+      "type": "range",
+      "min": 0.01,
+      "max": 0.3,
+      "step": 0.01,
+      "default": 0.05,
+      "apply": {
+        "kind": "js",
+        "path": "lerpFactor"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "radiusLerpSpeed",
+      "label": "Apertura de la lente",
+      "type": "range",
+      "min": 0.01,
+      "max": 0.5,
+      "step": 0.01,
+      "default": 0.1,
+      "apply": {
+        "kind": "js",
+        "path": "radiusLerpSpeed"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "turbulent-inversion-lens-hover-effect-javascript",
+    "title": "Turbulent Inversion Lens Hover Effect",
+    "category": "hover",
+    "trigger": "scroll",
+    "libs": [
+      "three"
+    ],
+    "complexity": 5,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": null,
+    "duration_range": [
+      0.25,
+      0.25
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 1,
+      "bytes": 228381,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de turbulent-inversion-lens-hover-effect-javascript"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de turbulent-inversion-lens-hover-effect-javascript"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de turbulent-inversion-lens-hover-effect-javascript"
+      }
+    ],
+    "cluster": "POINTER-CHASE",
+    "engine": "webgl-raf",
+    "motion_signature": "rAF-lerped shader lens inverting image on hover; 8-octave fBm turbulence jitters the circular mask edge",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

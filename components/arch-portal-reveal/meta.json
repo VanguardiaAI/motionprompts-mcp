@@ -1,0 +1,224 @@
+{
+  "slug": "arch-portal-reveal",
+  "title": "Arch Portal Reveal",
+  "description": "A sticky stage where an arch-shaped opening grows from a small doorway to the entire frame as you scroll, revealing the scene behind it. The scene never scales: it keeps its own viewport-sized box and is anchored to the same bottom-centre point as the opening, so it sits perfectly still while the aperture grows around it — scaling the container instead would balloon the type, lose the photograph's crop and read as a zoom rather than as walking through a door. The arch is `border-radius`, not `clip-path` (a real curve, no facets, two numbers to animate instead of a polygon whose vertex count must stay constant), and the radius is pulled down on a `pow(1-p, 1.9)` curve so the shape is unmistakably an arch during the first third, which is the part the reader watches. One ScrollTrigger writing directly on every update, no scrub; Lenis supplies the smoothing. Dressed as a glasshouse: Playfair Display + Kumbh Sans, moss green and chalk.",
+  "category": "transition",
+  "tags": [
+    "scroll",
+    "scrolltrigger",
+    "sticky",
+    "reveal",
+    "portal",
+    "arch",
+    "doorway",
+    "mask",
+    "border-radius",
+    "architecture",
+    "lenis",
+    "editorial"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 1200,
+    "scrollTo": 0.45,
+    "clip": {
+      "seconds": 9
+    }
+  },
+  "images": [
+    {
+      "file": "hero.jpg",
+      "desc": "architectural interior, window and trees",
+      "role": "unused in demo — kept for re-dressing",
+      "replaced": true,
+      "reused_from": "catálogo existente (public/c/kvs-studio-image-reveal), recortado con sharp — ninguna imagen generada"
+    },
+    {
+      "file": "room-1.jpg",
+      "desc": "interior seen through the portal",
+      "role": "the revealed scene",
+      "replaced": true,
+      "reused_from": "catálogo existente (public/c/kvs-studio-image-reveal)"
+    },
+    {
+      "file": "room-2.jpg",
+      "desc": "interior, closing section",
+      "role": "after section",
+      "replaced": true,
+      "reused_from": "catálogo existente (public/c/kvs-studio-image-reveal)"
+    }
+  ],
+  "updated": "2026-08-02",
+  "intent": {
+    "mood": [
+      "elegant",
+      "editorial",
+      "minimal"
+    ],
+    "useCase": [
+      "scroll-story",
+      "image-reveal"
+    ],
+    "useWhen": "Cuando quieres que entrar en una sección se sienta como cruzar una puerta y no como que aparezca un bloque.",
+    "aliases": [
+      "arco",
+      "portal",
+      "puerta",
+      "revelado en arco",
+      "arch reveal",
+      "doorway",
+      "portal transition",
+      "aperture"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 3,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": false,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "origin": {
+    "kind": "observed",
+    "note": "Efecto abstraído de era-residence.com, observado por fotogramas: una forma de arco que se abre desde abajo y descubre la sección siguiente. El EFECTO se conserva; paleta, tipografía, imágenes y contenido son propios.",
+    "gap": "0 aciertos al cruzar «revelado en forma de arco / portal» contra los 223. La categoría `transition` entera son transiciones de RUTA."
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "moss",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#14301f",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--moss"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "chalk",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#eef0e8",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--chalk"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "arch-portal-reveal",
+    "title": "Arch Portal Reveal",
+    "category": "transition",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": true,
+    "ease_family": null,
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 3,
+      "bytes": 514913,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "width-branch",
+      "media_queries": 1,
+      "reduced_motion": true
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de arch-portal-reveal"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de arch-portal-reveal"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de arch-portal-reveal"
+      }
+    ],
+    "cluster": "SCROLL-WELDED",
+    "engine": "gsap",
+    "motion_signature": "sticky stage over a 260svh track where an arch-shaped opening grows from 26vw/34svh to 100vw/100svh by writing --w/--h/--r on every ScrollTrigger update; the radius follows pow(1-p,1.9) so the arch reads as an arch through the first third; the revealed scene keeps a viewport-sized box anchored to the same bottom-centre point and never scales; no tween, no scrub, smoothing from Lenis only",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-welded"
+  },
+  "review": {
+    "status": "public"
+  }
+}

@@ -1,0 +1,329 @@
+{
+  "slug": "asset-orb-js",
+  "sourceDir": "cg-asset-orb-js",
+  "title": "Asset ORB",
+  "description": "A WebGL sphere built from 100 image planes distributed via a Fibonacci-sphere layout, each plane textured with a random editorial photo. Three.js OrbitControls let the user drag to rotate the orb and scroll to zoom, with damping/inertia for smooth momentum.",
+  "category": "3d-webgl",
+  "tags": [
+    "three.js",
+    "webgl",
+    "orbitcontrols",
+    "image-sphere",
+    "fibonacci-sphere",
+    "gallery",
+    "interactive",
+    "editorial",
+    "dark"
+  ],
+  "gsap": [],
+  "deps": [
+    "three"
+  ],
+  "preview": {
+    "waitMs": 3000
+  },
+  "images": [
+    {
+      "file": "img1.jpeg",
+      "desc": "Model in a white pleated dress posed on a deep red studio backdrop",
+      "role": "One of 30 photos randomly mapped onto the orb's planes",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpeg",
+      "desc": "Close-up portrait behind a dotted black veil with graphic white eyeliner and a pearl earring",
+      "role": "One of 30 photos randomly mapped onto the orb's planes",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpeg",
+      "desc": "Blonde model in gray tailoring pulling on a rust-red wool coat in a gray studio",
+      "role": "One of 30 photos randomly mapped onto the orb's planes",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpeg",
+      "desc": "Model in an oversized red coat against a cobalt blue backdrop",
+      "role": "One of 30 photos randomly mapped onto the orb's planes",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpeg",
+      "desc": "Model in a green coat crouched on an orange backdrop",
+      "role": "One of 30 photos randomly mapped onto the orb's planes",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpeg",
+      "desc": "Model in a yellow coat against a magenta backdrop",
+      "role": "One of 30 photos randomly mapped onto the orb's planes",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpeg",
+      "desc": "Woman in black posing in a slash of red light in darkness",
+      "role": "One of 30 photos randomly mapped onto the orb's planes",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpeg",
+      "desc": "Low-key portrait of a man with dark curls in black knitwear",
+      "role": "One of 30 photos randomly mapped onto the orb's planes",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpeg",
+      "desc": "Model in a cobalt blue suit seated on a pale yellow ground",
+      "role": "One of 30 photos randomly mapped onto the orb's planes",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpeg",
+      "desc": "Black-and-white close-up portrait, half the face in deep shadow",
+      "role": "One of 30 photos randomly mapped onto the orb's planes",
+      "replaced": true
+    },
+    {
+      "file": "img11.jpeg",
+      "desc": "Black-and-white portrait in a sculptural white coat",
+      "role": "One of 30 photos randomly mapped onto the orb's planes",
+      "replaced": true
+    },
+    {
+      "file": "img12.jpeg",
+      "desc": "Black-and-white figure under a sheer veil on a dark ground",
+      "role": "One of 30 photos randomly mapped onto the orb's planes",
+      "replaced": true
+    },
+    {
+      "file": "img13.jpeg",
+      "desc": "Black-and-white profile of a shaved head with the ear in focus",
+      "role": "One of 30 photos randomly mapped onto the orb's planes",
+      "replaced": true
+    },
+    {
+      "file": "img14.jpeg",
+      "desc": "Black profile silhouette of a woman with a ruffled collar on white",
+      "role": "One of 30 photos randomly mapped onto the orb's planes",
+      "replaced": true
+    },
+    {
+      "file": "img15.jpeg",
+      "desc": "Man in a long dark coat crossing a city crosswalk",
+      "role": "One of 30 photos randomly mapped onto the orb's planes",
+      "replaced": true
+    },
+    {
+      "file": "img16.jpeg",
+      "desc": "Teen in a beanie and hoodie leaning against a concrete wall",
+      "role": "One of 30 photos randomly mapped onto the orb's planes",
+      "replaced": true
+    },
+    {
+      "file": "img17.jpeg",
+      "desc": "Two friends in denim and dark coats on a city street",
+      "role": "One of 30 photos randomly mapped onto the orb's planes",
+      "replaced": true
+    },
+    {
+      "file": "img18.jpeg",
+      "desc": "Black-and-white high-fashion portrait with a dark jacket slipping off the shoulder",
+      "role": "One of 30 photos randomly mapped onto the orb's planes",
+      "replaced": true
+    },
+    {
+      "file": "img19.jpeg",
+      "desc": "Pedestrians passing on a city sidewalk, motion in the frame",
+      "role": "One of 30 photos randomly mapped onto the orb's planes",
+      "replaced": true
+    },
+    {
+      "file": "img20.jpeg",
+      "desc": "Golden-hour portrait of a smiling woman with curly hair",
+      "role": "One of 30 photos randomly mapped onto the orb's planes",
+      "replaced": true
+    },
+    {
+      "file": "img21.jpeg",
+      "desc": "Two men laughing in a field at golden hour",
+      "role": "One of 30 photos randomly mapped onto the orb's planes",
+      "replaced": true
+    },
+    {
+      "file": "img22.jpeg",
+      "desc": "Backlit head with headphones against low sun",
+      "role": "One of 30 photos randomly mapped onto the orb's planes",
+      "replaced": true
+    },
+    {
+      "file": "img23.jpeg",
+      "desc": "Black-and-white seated man in black leather inside a spotlight",
+      "role": "One of 30 photos randomly mapped onto the orb's planes",
+      "replaced": true
+    },
+    {
+      "file": "img24.jpeg",
+      "desc": "Studio portrait of a young man on a pale pink backdrop",
+      "role": "One of 30 photos randomly mapped onto the orb's planes",
+      "replaced": true
+    },
+    {
+      "file": "img25.jpeg",
+      "desc": "Studio portrait of a man on a sage green backdrop",
+      "role": "One of 30 photos randomly mapped onto the orb's planes",
+      "replaced": true
+    },
+    {
+      "file": "img26.jpeg",
+      "desc": "Studio portrait of a woman with a dark bob on a pale yellow backdrop",
+      "role": "One of 30 photos randomly mapped onto the orb's planes",
+      "replaced": true
+    },
+    {
+      "file": "img27.jpeg",
+      "desc": "Studio portrait of a woman on a light blue backdrop",
+      "role": "One of 30 photos randomly mapped onto the orb's planes",
+      "replaced": true
+    },
+    {
+      "file": "img28.jpeg",
+      "desc": "Profile silhouette rimmed in blue light on black",
+      "role": "One of 30 photos randomly mapped onto the orb's planes",
+      "replaced": true
+    },
+    {
+      "file": "img29.jpeg",
+      "desc": "Barely lit face emerging from darkness",
+      "role": "One of 30 photos randomly mapped onto the orb's planes",
+      "replaced": true
+    },
+    {
+      "file": "img30.jpeg",
+      "desc": "Backlit silhouette of a figure against a white glow",
+      "role": "One of 30 photos randomly mapped onto the orb's planes",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "editorial",
+      "experimental",
+      "cinematic"
+    ],
+    "useCase": [
+      "gallery",
+      "hero",
+      "product-showcase"
+    ],
+    "useWhen": "Cuando quieras una galeria de imagenes en 3D como esfera navegable, arrastrable y con zoom, para portfolios o archivos visuales.",
+    "aliases": [
+      "esfera de imagenes",
+      "image orb",
+      "photo sphere",
+      "galeria 3d",
+      "webgl gallery",
+      "orb slider"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": true,
+    "needsCanvas": true,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 30,
+    "perfCost": "heavy",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f3efe7",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink-dim",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#a59d93",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink-dim"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "asset-orb-js",
+    "title": "Asset ORB",
+    "category": "3d-webgl",
+    "trigger": null,
+    "libs": [
+      "three",
+      "OrbitControls"
+    ],
+    "complexity": 4,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": null,
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 30,
+      "bytes": 3332946,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "CAPTURED-VIRTUAL-SCROLL",
+    "engine": "webgl-raf",
+    "motion_signature": "damped orbit drag around textured photo sphere; OrbitControls inertia (dampingFactor 0.05, rotateSpeed 1.2, pan disabled, zoom clamped to distance 6–10) is the only physics, integrated inside one uncapped rAF loop",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

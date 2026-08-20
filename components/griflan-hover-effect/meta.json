@@ -1,0 +1,333 @@
+{
+  "slug": "griflan-hover-effect",
+  "sourceDir": "codegrid-griflan-hover-effect",
+  "title": "Griflan Hover Effect",
+  "description": "Three stacked service rows expand on hover with an elastic GSAP tween: a fanned stack of three images slides up behind the title, the title recolors from red to cream, and after 0.2s pill-shaped tags drop into the row under Matter.js gravity, bouncing and settling on an invisible floor. On mouseleave the tags fade out and the row springs back closed.",
+  "category": "hover",
+  "tags": [
+    "hover",
+    "physics",
+    "matter-js",
+    "elastic",
+    "expand",
+    "tags",
+    "image-stack",
+    "services-list"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap",
+    "matter-js"
+  ],
+  "preview": {
+    "waitMs": 1800,
+    "click": ".services .service:nth-child(2)",
+    "clip": {
+      "seconds": 6,
+      "actions": [
+        {
+          "type": "hoverEl",
+          "selector": ".services .service:nth-child(2)",
+          "start": 0.12
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "service_1_img_1.jpg",
+      "desc": "pop-art screen-print portrait of a blue-skinned woman in a white newsboy cap and dark jacket, flat bone-cream background",
+      "role": "Silhouette row, image 1 (fanned stack, rotated -5deg)",
+      "replaced": true
+    },
+    {
+      "file": "service_1_img_2.jpg",
+      "desc": "pop-art screen-print portrait of a blue-skinned woman with wavy black hair, gold hoops and a white blazer, flat cobalt blue background",
+      "role": "Silhouette row, image 2 (fanned stack, rotated 2.5deg)",
+      "replaced": true
+    },
+    {
+      "file": "service_1_img_3.jpg",
+      "desc": "pop-art screen-print portrait of a blue-skinned woman in yellow sunglasses and a striped sweater, flat vermilion red background",
+      "role": "Silhouette row, image 3 (top of stack)",
+      "replaced": true
+    },
+    {
+      "file": "service_2_img_1.jpg",
+      "desc": "pop-art screen-print portrait of a blue-skinned woman with a black bob and striped breton top, flat process-blue background",
+      "role": "Chroma row, image 1 (fanned stack, rotated -5deg)",
+      "replaced": true
+    },
+    {
+      "file": "service_2_img_2.jpg",
+      "desc": "pop-art screen-print portrait of a blue-skinned woman in a white newsboy cap and dark jacket, flat bone-cream background (duplicate of service_1_img_1)",
+      "role": "Chroma row, image 2 (fanned stack, rotated 2.5deg)",
+      "replaced": true
+    },
+    {
+      "file": "service_2_img_3.jpg",
+      "desc": "pop-art screen-print portrait of a blue-skinned woman with wavy black hair and a white blazer, flat cobalt blue background (duplicate of service_1_img_2)",
+      "role": "Chroma row, image 3 (top of stack)",
+      "replaced": true
+    },
+    {
+      "file": "service_3_img_1.jpg",
+      "desc": "pop-art screen-print portrait of a blue-skinned woman in yellow sunglasses and a striped sweater, flat vermilion red background (duplicate of service_1_img_3)",
+      "role": "Persona row, image 1 (fanned stack, rotated -5deg)",
+      "replaced": true
+    },
+    {
+      "file": "service_3_img_2.jpg",
+      "desc": "pop-art screen-print portrait of a blue-skinned woman with a black bob and striped breton top, flat process-blue background (duplicate of service_2_img_1)",
+      "role": "Persona row, image 2 (fanned stack, rotated 2.5deg)",
+      "replaced": true
+    },
+    {
+      "file": "service_3_img_3.jpg",
+      "desc": "pop-art screen-print portrait of a blue-skinned woman in a white newsboy cap and dark jacket, flat bone-cream background (duplicate of service_1_img_1)",
+      "role": "Persona row, image 3 (top of stack)",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "bold",
+      "editorial",
+      "playful"
+    ],
+    "useCase": [
+      "hover-interaction",
+      "image-reveal",
+      "product-showcase"
+    ],
+    "useWhen": "Úsalo cuando una sección de servicios deba expandir cada fila al pasar el cursor, mostrando imágenes en abanico y etiquetas que caen y rebotan.",
+    "aliases": [
+      "lista de servicios",
+      "services list",
+      "hover con física",
+      "etiquetas que caen",
+      "physics tags",
+      "filas que se expanden"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": true,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 9,
+    "perfCost": "heavy",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#14151b",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bone",
+      "label": "Texto",
+      "type": "color",
+      "default": "#ffffd9",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bone"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "vermilion",
+      "label": "Acento",
+      "type": "color",
+      "default": "#ff3831",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--vermilion"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "cobalt",
+      "label": "Acento 2",
+      "type": "color",
+      "default": "#2e6be6",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--cobalt"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "expandedHeight",
+      "label": "Apertura de la fila",
+      "type": "range",
+      "min": 12,
+      "max": 32,
+      "step": 0.5,
+      "default": 25,
+      "apply": {
+        "kind": "js",
+        "path": "expandedHeight"
+      }
+    },
+    {
+      "id": "gravity",
+      "label": "Gravedad de las etiquetas",
+      "type": "range",
+      "min": 0.4,
+      "max": 6,
+      "step": 0.1,
+      "default": 2,
+      "apply": {
+        "kind": "js",
+        "path": "gravity"
+      }
+    },
+    {
+      "id": "restitution",
+      "label": "Rebote al chocar",
+      "type": "range",
+      "min": 0,
+      "max": 0.8,
+      "step": 0.05,
+      "default": 0.15,
+      "apply": {
+        "kind": "js",
+        "path": "restitution"
+      }
+    },
+    {
+      "id": "friction",
+      "label": "Rozamiento al apilarse",
+      "type": "range",
+      "min": 0,
+      "max": 1,
+      "step": 0.05,
+      "default": 0.6,
+      "apply": {
+        "kind": "js",
+        "path": "friction"
+      }
+    },
+    {
+      "id": "floorOffset",
+      "label": "Altura del suelo",
+      "type": "range",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "default": 50,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "floorOffset"
+      }
+    },
+    {
+      "id": "dropSpread",
+      "label": "Dispersión de la caída",
+      "type": "range",
+      "min": 0.1,
+      "max": 1,
+      "step": 0.05,
+      "default": 0.5,
+      "apply": {
+        "kind": "js",
+        "path": "dropSpread"
+      }
+    }
+  ],
+  "motion": {
+    "slug": "griflan-hover-effect",
+    "title": "Griflan Hover Effect",
+    "category": "hover",
+    "trigger": "hover",
+    "libs": [
+      "gsap",
+      "matter-js"
+    ],
+    "complexity": 3,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "elastic",
+    "duration_range": [
+      0.2,
+      0.75
+    ],
+    "stagger": 0.075,
+    "assets_required": {
+      "count": 9,
+      "bytes": 966261,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "width-branch",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "INTEGRATOR",
+    "engine": "physics",
+    "motion_signature": "Hover rows that spring open on elastic.out(1,0.5) over 0.75s (collapse 0.5s, elastic.out(1,0.75)) while a 0.075s-staggered image stack slides through; 0.2s later Matter.js drops 5 chamfered pill tags per row under doubled gravity (y:2) with restitution 0.15, friction 0.6, density 0.002, onto a static floor 50px (25px under 1000px) above the row bottom, DOM-transformed each frame by a per-row rAF loop at a fixed 1000/60 timestep",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  },
+  "review": {
+    "status": "public",
+    "comment": "Hay que corregir el componente para que en Mobile al hacer clic en el texto no se seleccione el texto como si lo quisiéramos copiar \n. También el vídeo hayq ue volverlo a grabar y solo hacer clic en una palabra, como es el mismo efecto es mejor ver la animación de una palabra bien que de varias entrecortadas como ahora."
+  }
+}

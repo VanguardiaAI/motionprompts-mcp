@@ -1,0 +1,208 @@
+{
+  "slug": "work-carousel-karim-saab",
+  "sourceDir": "cg-work-carousel-karim-saab",
+  "title": "Karim Saab Fashion Carousel",
+  "description": "A full-screen fashion carousel where a wheel or touch swipe triggers a GSAP transition: the current slide scales down, rotates and flies off while the incoming slide slides in from an animated clip-path polygon; SplitText then reveals the title words and the description, tags, index and link lines with staggered power4 masked upward moves.",
+  "category": "slider",
+  "tags": [
+    "carousel",
+    "fullscreen",
+    "gsap",
+    "splittext",
+    "clip-path",
+    "wheel",
+    "text-reveal",
+    "editorial",
+    "fashion"
+  ],
+  "gsap": [
+    "SplitText"
+  ],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "scrollTo": 0.5,
+    "afterScrollMs": 2200
+  },
+  "images": [
+    {
+      "file": "slide-img-1.jpg",
+      "desc": "black-and-white studio shot of a black leather bomber jacket suspended in mid-air against a plain grey backdrop, no model",
+      "role": "slide 1 image (Second Skin)",
+      "replaced": true
+    },
+    {
+      "file": "slide-img-2.jpg",
+      "desc": "high-contrast black-and-white close-up portrait, half the face in deep shadow, single hard light source, grey wall",
+      "role": "slide 2 image (Half Light)",
+      "replaced": true
+    },
+    {
+      "file": "slide-img-3.jpg",
+      "desc": "black-and-white editorial of a sharp-shouldered pale wool blazer against a dark backdrop, sculptural tailoring",
+      "role": "slide 3 image (Sharp Shoulder)",
+      "replaced": true
+    },
+    {
+      "file": "slide-img-4.jpg",
+      "desc": "black-and-white portrait of a figure behind draped silk tulle, softened to grain against a dark ground",
+      "role": "slide 4 image (Under Veil)",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "editorial",
+      "luxury",
+      "cinematic"
+    ],
+    "useCase": [
+      "slider",
+      "gallery",
+      "product-showcase"
+    ],
+    "useWhen": "Úsalo para presentar proyectos o una colección de moda a pantalla completa, avanzando de slide en slide con scroll y revelados de texto dramáticos.",
+    "aliases": [
+      "carrusel pantalla completa",
+      "fullscreen carousel",
+      "slider de proyectos",
+      "work slider",
+      "carrusel editorial",
+      "clip path slide reveal"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "SplitText"
+    ],
+    "assetCount": 4,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "muted",
+      "label": "Texto",
+      "type": "color",
+      "default": "#9b948a",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--muted"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#f2efe8",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "work-carousel-karim-saab",
+    "title": "Karim Saab Fashion Carousel",
+    "category": "slider",
+    "trigger": "wheel",
+    "libs": [
+      "gsap",
+      "SplitText"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": 200,
+    "needs_lenis": false,
+    "ease_family": "power4",
+    "duration_range": [
+      0.35,
+      50
+    ],
+    "stagger": 0.1,
+    "assets_required": {
+      "count": 4,
+      "bytes": 395461,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "preventDefault en wheel"
+    ],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "captura la rueda con preventDefault"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "STEP-MACHINE",
+    "engine": "gsap",
+    "motion_signature": "wheel-gated slide swap, clip-path entry, staggered text",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "step-advance"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

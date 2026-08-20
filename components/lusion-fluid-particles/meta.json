@@ -1,0 +1,255 @@
+{
+  "slug": "lusion-fluid-particles",
+  "sourceDir": "cg-lusion-fluid-particles",
+  "title": "Lusion Fluid Particle Simulation",
+  "description": "A full-screen p5.js particle physics simulation where hundreds of small shapes (triangles, squares, circles) fall under gravity and pile up with fluid-like collision resolution using a spatial grid. Pressing and dragging the mouse pushes and swirls nearby particles. It is not GSAP-driven — the physics integrate every frame inside p5's draw loop.",
+  "category": "interactive",
+  "tags": [
+    "p5js",
+    "particles",
+    "physics",
+    "fluid",
+    "gravity",
+    "canvas",
+    "interactive",
+    "simulation",
+    "mouse"
+  ],
+  "gsap": [],
+  "deps": [],
+  "preview": {
+    "waitMs": 2800
+  },
+  "images": [],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "playful",
+      "experimental",
+      "bold"
+    ],
+    "useCase": [
+      "hero",
+      "background",
+      "cta"
+    ],
+    "useWhen": "Cuando quieras un fondo interactivo de partículas que caen y reaccionan al arrastrar el ratón, ideal para un hero o CTA de contacto llamativo.",
+    "aliases": [
+      "particulas fluidas",
+      "fluid particles",
+      "simulacion de particulas",
+      "particle physics",
+      "arrastrar particulas",
+      "p5 particles"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": true,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 0,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": false,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "blue",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#1a2ffb",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--blue"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "white",
+      "label": "Texto",
+      "type": "color",
+      "default": "#ffffff",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--white"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#0f1440",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "particleCount",
+      "label": "Número de partículas",
+      "type": "range",
+      "min": 60,
+      "max": 400,
+      "step": 10,
+      "default": 250,
+      "apply": {
+        "kind": "js",
+        "path": "particleCount"
+      }
+    },
+    {
+      "id": "particleSize",
+      "label": "Tamaño de la partícula",
+      "type": "range",
+      "min": 4,
+      "max": 28,
+      "step": 1,
+      "default": 12,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "particleSize"
+      }
+    },
+    {
+      "id": "spacing",
+      "label": "Separación entre partículas",
+      "type": "range",
+      "min": 72,
+      "max": 200,
+      "step": 4,
+      "default": 144,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "spacing"
+      }
+    },
+    {
+      "id": "gravity",
+      "label": "Gravedad",
+      "type": "range",
+      "min": 0.4,
+      "max": 6,
+      "step": 0.1,
+      "default": 2.2,
+      "apply": {
+        "kind": "js",
+        "path": "gravity"
+      }
+    },
+    {
+      "id": "bounce",
+      "label": "Rebote contra las paredes",
+      "type": "range",
+      "min": 0,
+      "max": 0.9,
+      "step": 0.05,
+      "default": 0.45,
+      "apply": {
+        "kind": "js",
+        "path": "bounce"
+      }
+    },
+    {
+      "id": "mouseRadius",
+      "label": "Alcance del arrastre",
+      "type": "range",
+      "min": 60,
+      "max": 600,
+      "step": 10,
+      "default": 250,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "mouseRadius"
+      }
+    }
+  ],
+  "motion": {
+    "slug": "lusion-fluid-particles",
+    "title": "Lusion Fluid Particle Simulation",
+    "category": "interactive",
+    "trigger": null,
+    "libs": [
+      "p5"
+    ],
+    "complexity": 4,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": null,
+    "duration_range": [
+      0.25,
+      0.25
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 0,
+      "bytes": 0,
+      "root_absolute_paths": false
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "INTEGRATOR",
+    "engine": "physics",
+    "motion_signature": "p5 grid-based particle physics, mouse-drag push",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

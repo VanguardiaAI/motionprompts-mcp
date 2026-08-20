@@ -1,0 +1,244 @@
+{
+  "slug": "mask-reveal",
+  "sourceDir": "cg-mask-reveal",
+  "title": "Mask Reveal On Scroll",
+  "description": "As each image row enters the viewport, a 3x3 grid of clip-path masks unveils the picture piece by piece: GSAP injects nine overlay divs per image and a ScrollTrigger timeline (start 'top 75%') animates their clip-path polygons from collapsed points to full cells in a diagonal wave (power2.out, 0.5s, staggered), producing a tiled mosaic reveal. Lenis drives smooth scrolling synced to ScrollTrigger.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "clip-path",
+    "mask-reveal",
+    "image-reveal",
+    "gsap",
+    "scrolltrigger",
+    "lenis",
+    "mosaic",
+    "editorial"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "scrollTo": 0.6,
+    "afterScrollMs": 1500,
+    "clip": {
+      "seconds": 9
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "sculptural still life: rough stone block beside cream and clay ceramic vessels, warm neutral light",
+      "role": "mask-reveal tile background (img-4, img-10 in the products grid)",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "travertine and stoneware vessels grouped on a stone plinth, soft grey wall",
+      "role": "mask-reveal tile background (img-5, img-11, img-16)",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "warm walnut display niche framing a single potted plant, gallery detail",
+      "role": "mask-reveal tile background (img-1, img-6, img-12)",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "designer mushroom table lamp glowing warm against a caned headboard",
+      "role": "mask-reveal tile background (img-2, img-7, img-14)",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "cluster of exposed filament pendant bulbs, warm bokeh lighting shop",
+      "role": "mask-reveal tile background (img-8, img-17)",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "white ceramic donut vase with dried pampas on a marble plinth, warm wall",
+      "role": "mask-reveal tile background (img-9, img-13)",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "warm plaster wall raked by diagonal sunlight, minimal architectural surface study",
+      "role": "mask-reveal tile background for the large full-width band (img-3, img-15)",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "editorial",
+      "bold",
+      "cinematic"
+    ],
+    "useCase": [
+      "gallery",
+      "image-reveal",
+      "scroll-story"
+    ],
+    "useWhen": "Úsalo cuando quieras que las imágenes aparezcan en un mosaico de celdas con clip-path al hacer scroll, con scroll suave Lenis en una galería editorial.",
+    "aliases": [
+      "revelado en mosaico",
+      "mask reveal scroll",
+      "clip-path grid reveal",
+      "galería scroll mosaico",
+      "tiled image reveal",
+      "revelado por celdas"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 7,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#141414",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#efece3",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "mask-reveal",
+    "title": "Mask Reveal On Scroll",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": true,
+    "ease_family": "power2",
+    "duration_range": [
+      0.25,
+      0.5
+    ],
+    "stagger": 0.1,
+    "assets_required": {
+      "count": 7,
+      "bytes": 1339856,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de mask-reveal"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de mask-reveal"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de mask-reveal"
+      }
+    ],
+    "cluster": "SCROLL-THRESHOLD",
+    "engine": "gsap",
+    "motion_signature": "enter-triggered 3x3 clip-path mosaic reveal, diagonal wave",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "reveal-on-enter"
+  },
+  "review": {
+    "status": "public"
+  }
+}

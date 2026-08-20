@@ -1,0 +1,245 @@
+{
+  "slug": "zentry-scroll",
+  "sourceDir": "cg-zentry-scroll",
+  "title": "Zentry Scroll Animations",
+  "description": "A long scroll story where a section is pinned for 4x the viewport height and every stage is scrubbed by scroll. As you scroll, letters of the intro copy flicker in with a random stagger, a center image expands from a small rectangle to fullscreen via an animated clip-path while its image scales, then a third image opens from a vertical seam and zooms far in before zooming back out, and finally a rotateY(-75deg) headline swings flat to reveal the closing copy. All driven by GSAP ScrollTrigger (pin + scrub) with Lenis smooth scrolling.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "pin",
+    "scrub",
+    "clip-path",
+    "image-reveal",
+    "text-flicker",
+    "3d-perspective",
+    "lenis",
+    "cinematic"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "scrollTo": 0.7,
+    "waitMs": 2500,
+    "clip": {
+      "seconds": 9
+    }
+  },
+  "images": [
+    {
+      "file": "hero.jpg",
+      "desc": "Golden sunrise breaking above a sea of clouds on a mountain slope.",
+      "role": "Full-bleed background of the hero section behind the 'Meridian' title.",
+      "replaced": true
+    },
+    {
+      "file": "about.jpg",
+      "desc": "Moody foggy conifer treeline with a trail before sunrise, portrait format.",
+      "role": "Framed image beside the 'We wait for the light' heading in the dusk-toned about section.",
+      "replaced": true
+    },
+    {
+      "file": "img-1.jpg",
+      "desc": "Layered mountain ridges under a mauve blue-hour sky; fullscreen backdrop that slowly scales up as the pinned section begins.",
+      "role": "First (bottom) layer of the pinned sticky sequence.",
+      "replaced": true
+    },
+    {
+      "file": "img-2.jpg",
+      "desc": "Sun cresting a dune at last light in deep orange; revealed from a small centered rectangle that expands to fullscreen via clip-path.",
+      "role": "Second layer of the pinned sticky sequence, clip-path reveal.",
+      "replaced": true
+    },
+    {
+      "file": "img-3.jpg",
+      "desc": "Sea stacks on a rocky coastline at last light under a warm golden-mauve sky; opens from a vertical seam then zooms deeply into the sky and back out.",
+      "role": "Third (top) layer of the pinned sticky sequence, seam reveal and zoom.",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "cinematic",
+      "experimental",
+      "bold"
+    ],
+    "useCase": [
+      "scroll-story",
+      "image-reveal",
+      "hero"
+    ],
+    "useWhen": "Úsalo para una sección pinneada larga donde el scroll revela imágenes con clip-path, zooms y texto que parpadea, tipo landing inmersiva.",
+    "aliases": [
+      "scroll pinned",
+      "revelado clip-path",
+      "seccion fija scroll",
+      "zentry scroll",
+      "image reveal scroll",
+      "scrollytelling"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 5,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#141119",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bone",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f3eee4",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bone"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "dusk",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#23233a",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--dusk"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "zentry-scroll",
+    "title": "Zentry Scroll Animations",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 4,
+    "pinned": true,
+    "viewport_heights": 700,
+    "needs_lenis": true,
+    "ease_family": "none",
+    "duration_range": [
+      0.05,
+      1
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 5,
+      "bytes": 838359,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "html/body height fija en vh"
+    ],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      },
+      {
+        "capability": "document-height",
+        "reason": "fija la altura del documento en 700vh"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de zentry-scroll"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de zentry-scroll"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de zentry-scroll"
+      }
+    ],
+    "cluster": "SCROLL-WELDED",
+    "engine": "gsap",
+    "motion_signature": "400vh-pinned sticky section: linear scrubbed clip-path iris reveals (img-2 rectangle opening, img-3 centre-out) layered with continuous image zooms (1 -> 1.125 -> 1.25, and 2.9 -> 1 zoom-out from a top-right transform origin), plus a random-order per-letter opacity flicker on the intro text and a final 3D rotateY(-75deg)+scale(0.5) copy reveal through a 1000px perspective — every motion is scroll-position-driven with ease 'none', no inertia of its own beyond Lenis smoothing",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-welded"
+  },
+  "review": {
+    "status": "public"
+  }
+}

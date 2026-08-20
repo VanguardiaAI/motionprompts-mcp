@@ -1,0 +1,299 @@
+{
+  "slug": "heurebleue-scroll-animation",
+  "sourceDir": "cg-heurebleue-scroll-animation",
+  "title": "HeureBleue Scroll Animation",
+  "description": "A scroll-driven zoom-through gallery: a fixed grid of five image columns sits behind the page and, as a tall spacer section scrolls past, a single ScrollTrigger (scrub 1) reads its progress and scales the whole gallery wrapper up (to ~2.65x, or 4x under 900px), pushes the side columns down and shrinks the centered main image from scale 2 to ~1.15, so the viewer appears to fly forward through the images. Lenis drives smooth scrolling synced to GSAP's ticker.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "scrolltrigger",
+    "zoom",
+    "gallery",
+    "lenis",
+    "parallax",
+    "fullscreen",
+    "cinematic",
+    "scrub"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "scrollTo": 0.7,
+    "afterScrollMs": 1200,
+    "clip": {
+      "seconds": 9
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "faint moon over a rose-grey dusk sky with a dark tree branch",
+      "role": "gallery grid, column side-1 (top) and reused in column side-4",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "city skyline fully lit at blue hour, deep blue sky",
+      "role": "gallery grid, column side-1 (middle) and reused in column side-4",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "flock of birds crossing a grey-green sea at dusk",
+      "role": "gallery grid, column side-1 (bottom) and reused in column side-4",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "layered blue mountain ridges fading into evening haze",
+      "role": "gallery grid, column side-2 (top)",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "amber-lit windows glowing on a dark building corner against a deep blue twilight sky",
+      "role": "gallery grid, column side-2 (middle)",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "thin crescent moon in a mauve-violet evening sky",
+      "role": "gallery grid, column side-2 (bottom)",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "silhouetted figure standing on a jetty against deep orange afterglow",
+      "role": "gallery grid, center main column (top)",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "lone tree standing in still violet water under a twilight gradient — the focal image that scales from 2x down as you zoom in",
+      "role": "gallery grid, center main column (middle) — the focal image that scales from 2x down as you zoom in",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpg",
+      "desc": "dark broken clouds over hills just after sundown",
+      "role": "gallery grid, center main column (bottom)",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpg",
+      "desc": "aerial view of a city at night, thousands of lit windows",
+      "role": "gallery grid, column side-3 (top)",
+      "replaced": true
+    },
+    {
+      "file": "img11.jpg",
+      "desc": "fog rolling over a mountain ridge under heavy twilight clouds",
+      "role": "gallery grid, column side-3 (middle)",
+      "replaced": true
+    },
+    {
+      "file": "img12.jpg",
+      "desc": "violet and pink afterglow above dark treetops",
+      "role": "gallery grid, column side-3 (bottom)",
+      "replaced": true
+    },
+    {
+      "file": "hero.jpg",
+      "desc": "skyline glowing under a deep blue evening sky (hero, behind the heure bleue heading)",
+      "role": "full-bleed background of the hero section (behind the 'serene drift' heading)",
+      "replaced": true
+    },
+    {
+      "file": "footer.jpg",
+      "desc": "building silhouettes under a burning red-orange evening sky (footer background)",
+      "role": "full-bleed background of the footer section",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "cinematic",
+      "elegant",
+      "editorial"
+    ],
+    "useCase": [
+      "hero",
+      "scroll-story",
+      "gallery",
+      "background",
+      "image-reveal"
+    ],
+    "useWhen": "Úsalo cuando quieras una intro o galería inmersiva donde el scroll haga volar a través de una rejilla de imágenes con zoom continuo.",
+    "aliases": [
+      "zoom scroll",
+      "volar a traves de imagenes",
+      "galeria zoom",
+      "scroll zoom gallery",
+      "fly through images",
+      "rejilla que hace zoom"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 14,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "dusk",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#0e1626",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--dusk"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "pale",
+      "label": "Texto",
+      "type": "color",
+      "default": "#e9edf7",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--pale"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "night",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#05070f",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--night"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "heurebleue-scroll-animation",
+    "title": "HeureBleue Scroll Animation",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": 1000,
+    "needs_lenis": true,
+    "ease_family": null,
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 14,
+      "bytes": 1634370,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "html/body height fija en vh"
+    ],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      },
+      {
+        "capability": "document-height",
+        "reason": "fija la altura del documento en 1000vh"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de heurebleue-scroll-animation"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de heurebleue-scroll-animation"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de heurebleue-scroll-animation"
+      }
+    ],
+    "cluster": "SCROLL-LAGGED",
+    "engine": "gsap+raf",
+    "motion_signature": "scrubbed fixed-grid zoom fly-through on scroll",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-lagged"
+  },
+  "review": {
+    "status": "public"
+  }
+}

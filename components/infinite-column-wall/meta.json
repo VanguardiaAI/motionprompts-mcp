@@ -1,0 +1,300 @@
+{
+  "slug": "infinite-column-wall",
+  "title": "Infinite Column Wall",
+  "description": "Six columns of photographs scroll vertically on their own clock — one up, the next down — and never stop, their top and bottom edges dissolving into the background. Scrolling through the sticky section darkens the ground to near-black, turns the headline hiding behind the grid lime, and slides the columns apart as two rigid blocks until only one column is left at each edge. The opening is ratcheted (scrolling back up does not rebuild the wall) while the colour change is a plain scrub and does rewind.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "sticky",
+    "marquee",
+    "infinite-loop",
+    "columns",
+    "ratchet",
+    "colour-shift",
+    "photo-grid",
+    "black-and-white",
+    "lenis"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "scrollTo": 0.47,
+    "waitMs": 2600,
+    "clip": {
+      "seconds": 10,
+      "settleMs": 2600,
+      "actions": [
+        {
+          "type": "scroll",
+          "to": 0.62,
+          "mode": "pingpong"
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "tile-1.jpg",
+      "desc": "Black and white portrait of a woman in a knitted jumper against a plaster wall.",
+      "role": "Wall tile 1 of 24.",
+      "replaced": true
+    },
+    {
+      "file": "tile-2.jpg",
+      "desc": "Black and white man in a t-shirt, seen in profile against a wall.",
+      "role": "Wall tile 2 of 24.",
+      "replaced": true
+    },
+    {
+      "file": "tile-3.jpg",
+      "desc": "Black and white profile of an older woman with short white hair.",
+      "role": "Wall tile 3 of 24.",
+      "replaced": true
+    },
+    {
+      "file": "tile-4.jpg",
+      "desc": "Black and white empty room corner with hard window light on the wall.",
+      "role": "Wall tile 4 of 24.",
+      "replaced": true
+    },
+    {
+      "file": "tile-5.jpg",
+      "desc": "Black and white backlit ginkgo leaves.",
+      "role": "Wall tile 5 of 24.",
+      "replaced": true
+    },
+    {
+      "file": "tile-6.jpg",
+      "desc": "Black and white portrait of a person with a shaved head and round glasses in a white shirt.",
+      "role": "Wall tile 6 of 24.",
+      "replaced": true
+    },
+    {
+      "file": "tile-7.jpg",
+      "desc": "Black and white close-up of two hands resting one over the other.",
+      "role": "Wall tile 7 of 24.",
+      "replaced": true
+    },
+    {
+      "file": "tile-8.jpg",
+      "desc": "Black and white back of a woman's head, hair pinned up, white shirt.",
+      "role": "Wall tile 8 of 24.",
+      "replaced": true
+    },
+    {
+      "file": "tile-9.jpg",
+      "desc": "Black and white shallow water seen from above.",
+      "role": "Wall tile 9 of 24.",
+      "replaced": true
+    },
+    {
+      "file": "tile-10.jpg",
+      "desc": "Black and white macro of moss on a rock.",
+      "role": "Wall tile 10 of 24.",
+      "replaced": true
+    },
+    {
+      "file": "tile-11.jpg",
+      "desc": "Black and white low-key profile of a bearded older man.",
+      "role": "Wall tile 11 of 24.",
+      "replaced": true
+    },
+    {
+      "file": "tile-12.jpg",
+      "desc": "Black and white bare feet on floorboards.",
+      "role": "Wall tile 12 of 24.",
+      "replaced": true
+    },
+    {
+      "file": "tile-13.jpg",
+      "desc": "Black and white misty mountain ridges fading into white.",
+      "role": "Wall tile 13 of 24.",
+      "replaced": true
+    },
+    {
+      "file": "tile-14.jpg",
+      "desc": "Black and white woman laughing with her hair in the wind.",
+      "role": "Wall tile 14 of 24.",
+      "replaced": true
+    },
+    {
+      "file": "tile-15.jpg",
+      "desc": "Black and white folds of hanging linen.",
+      "role": "Wall tile 15 of 24.",
+      "replaced": true
+    },
+    {
+      "file": "tile-16.jpg",
+      "desc": "Black and white man sitting on the edge of a bed, seen from behind.",
+      "role": "Wall tile 16 of 24.",
+      "replaced": true
+    },
+    {
+      "file": "tile-17.jpg",
+      "desc": "Black and white bare branches against a blank white sky.",
+      "role": "Wall tile 17 of 24.",
+      "replaced": true
+    },
+    {
+      "file": "tile-18.jpg",
+      "desc": "Black and white close-up of a closed eye.",
+      "role": "Wall tile 18 of 24.",
+      "replaced": true
+    },
+    {
+      "file": "tile-19.jpg",
+      "desc": "Black and white face seen from below, chin lifted.",
+      "role": "Wall tile 19 of 24.",
+      "replaced": true
+    },
+    {
+      "file": "tile-20.jpg",
+      "desc": "Black and white dune crest raking across the light.",
+      "role": "Wall tile 20 of 24.",
+      "replaced": true
+    },
+    {
+      "file": "tile-21.jpg",
+      "desc": "Black and white water and foam texture.",
+      "role": "Wall tile 21 of 24.",
+      "replaced": true
+    },
+    {
+      "file": "tile-22.jpg",
+      "desc": "Black and white older woman holding a bunch of cut flowers.",
+      "role": "Wall tile 22 of 24.",
+      "replaced": true
+    },
+    {
+      "file": "tile-23.jpg",
+      "desc": "Black and white macro of woven linen.",
+      "role": "Wall tile 23 of 24.",
+      "replaced": true
+    },
+    {
+      "file": "tile-24.jpg",
+      "desc": "Black and white back of a young man's neck over a knitted collar.",
+      "role": "Wall tile 24 of 24.",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-08-17",
+  "intent": {
+    "mood": [
+      "bold",
+      "editorial",
+      "brutalist"
+    ],
+    "useCase": [
+      "gallery",
+      "scroll-story",
+      "marquee"
+    ],
+    "useWhen": "Úsalo para enseñar un archivo grande de imágenes que se mueve solo y se abre por el centro para dejar ver un titular. Las cintas siguen aunque el scroll pare.",
+    "aliases": [
+      "muro de imágenes",
+      "columnas infinitas",
+      "cintas verticales",
+      "marquesina vertical",
+      "grid que se abre",
+      "infinite columns",
+      "photo wall scroll"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 24,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": false
+  },
+  "motion": {
+    "slug": "infinite-column-wall",
+    "title": "Infinite Column Wall",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 4,
+    "pinned": false,
+    "viewport_heights": 300,
+    "needs_lenis": true,
+    "ease_family": "none",
+    "duration_range": [
+      0.16,
+      49
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 24,
+      "bytes": 434116,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": true
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de infinite-column-wall"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de infinite-column-wall"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de infinite-column-wall"
+      }
+    ],
+    "cluster": "SCROLL-THRESHOLD",
+    "engine": "gsap",
+    "motion_signature": "endless vertical belts that ratchet open into a corridor",
+    "systems": [
+      "reveal-on-enter",
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "reveal-on-enter"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

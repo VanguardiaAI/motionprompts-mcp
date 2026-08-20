@@ -1,0 +1,361 @@
+{
+  "slug": "phantom-gallery-javascript",
+  "sourceDir": "cg-phantom-gallery-javascript",
+  "title": "Halation — Phantom Draggable Infinite Gallery",
+  "description": "A Three.js orthographic full-screen plane renders an infinite grid of captioned images via a fragment shader, using image and text texture atlases and a barrel-distortion lens with a radial fade. Pointer/touch dragging pans the grid (offset lerped for inertia) and momentarily zooms in while dragging; a quick tap on a cell navigates to its project link.",
+  "category": "gallery",
+  "tags": [
+    "three.js",
+    "webgl",
+    "glsl-shader",
+    "drag",
+    "infinite-grid",
+    "texture-atlas",
+    "lens-distortion",
+    "editorial",
+    "interactive"
+  ],
+  "gsap": [],
+  "deps": [
+    "three"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "clip": {
+      "seconds": 10,
+      "actions": [
+        {
+          "type": "drag"
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpeg",
+      "desc": "black-and-white abstract portrait, face erased by spinning motion blur",
+      "role": "gallery cell image (Spin Study)",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpeg",
+      "desc": "black-and-white long-exposure dancer with ghostly veiled double image",
+      "role": "gallery cell image (Apparition)",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpeg",
+      "desc": "double-exposure portrait of a woman in violet and magenta light",
+      "role": "gallery cell image (Double Exposure)",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpeg",
+      "desc": "woman in warm low light with streaked motion blur, dark background",
+      "role": "gallery cell image (Half Light)",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpeg",
+      "desc": "fashion model in an oversized red coat against a cobalt blue backdrop",
+      "role": "gallery cell image (Red Coat)",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpeg",
+      "desc": "model in a green blazer reclining on a vivid orange backdrop",
+      "role": "gallery cell image (Green on Orange)",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpeg",
+      "desc": "model wrapped in yellow fabric against a magenta backdrop",
+      "role": "gallery cell image (Yellow on Magenta)",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpeg",
+      "desc": "model in an oversized cobalt suit on a pale yellow backdrop",
+      "role": "gallery cell image (Blue on Blue)",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpeg",
+      "desc": "black-and-white dancer mid-turn with flowing translucent fabric",
+      "role": "gallery cell image (Slow Shutter)",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpeg",
+      "desc": "black-and-white half-lit close portrait of a woman",
+      "role": "gallery cell image (Half Profile)",
+      "replaced": true
+    },
+    {
+      "file": "img11.jpeg",
+      "desc": "black-and-white portrait of a woman in a pale structured coat",
+      "role": "gallery cell image (White Coat)",
+      "replaced": true
+    },
+    {
+      "file": "img12.jpeg",
+      "desc": "black-and-white figure beneath a translucent veil, ghostlike",
+      "role": "gallery cell image (The Veil)",
+      "replaced": true
+    },
+    {
+      "file": "img13.jpeg",
+      "desc": "black-and-white close study of a shaved head in soft grain",
+      "role": "gallery cell image (Close Study)",
+      "replaced": true
+    },
+    {
+      "file": "img14.jpeg",
+      "desc": "blurred figure walking through fog at night, long exposure",
+      "role": "gallery cell image (Night Walker)",
+      "replaced": true
+    },
+    {
+      "file": "img15.jpeg",
+      "desc": "woman in a dark coat crossing a city street, muted tones",
+      "role": "gallery cell image (Crosswalk)",
+      "replaced": true
+    },
+    {
+      "file": "img16.jpeg",
+      "desc": "young man in a beanie leaning on a wall, overcast street",
+      "role": "gallery cell image (Street Portrait)",
+      "replaced": true
+    },
+    {
+      "file": "img17.jpeg",
+      "desc": "dancer silhouettes raised behind backlit white fabric",
+      "role": "gallery cell image (Shadow Play)",
+      "replaced": true
+    },
+    {
+      "file": "img18.jpeg",
+      "desc": "man in a dark coat walking past parked cars on a city street",
+      "role": "gallery cell image (Commute)",
+      "replaced": true
+    },
+    {
+      "file": "img19.jpeg",
+      "desc": "man walking away down a city sidewalk at dusk",
+      "role": "gallery cell image (Walking Away)",
+      "replaced": true
+    },
+    {
+      "file": "img20.jpeg",
+      "desc": "fog drifting over golden grassy hills at sunrise",
+      "role": "gallery cell image (First Light)",
+      "replaced": true
+    },
+    {
+      "file": "img21.jpeg",
+      "desc": "smiling curly-haired person lit by warm golden-hour sun",
+      "role": "gallery cell image (Golden Hour)",
+      "replaced": true
+    },
+    {
+      "file": "img22.jpeg",
+      "desc": "man laughing in a dry golden field at sunset",
+      "role": "gallery cell image (Field Notes)",
+      "replaced": true
+    },
+    {
+      "file": "img23.jpeg",
+      "desc": "coastal cliffs in warm hazy evening light",
+      "role": "gallery cell image (Coast Road)",
+      "replaced": true
+    },
+    {
+      "file": "img24.jpeg",
+      "desc": "backlit person with headphones in golden field light",
+      "role": "gallery cell image (Listener)",
+      "replaced": true
+    },
+    {
+      "file": "img25.jpeg",
+      "desc": "zoom-pull blur of a figure in a golden autumn field",
+      "role": "gallery cell image (Zoom Pull)",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "editorial",
+      "experimental",
+      "cinematic"
+    ],
+    "useCase": [
+      "gallery",
+      "product-showcase",
+      "background"
+    ],
+    "useWhen": "Úsalo para un portfolio o galería inmersiva donde el usuario arrastra libremente por una cuadrícula infinita de imágenes con lente distorsionada.",
+    "aliases": [
+      "galería infinita",
+      "infinite gallery",
+      "draggable grid",
+      "cuadrícula arrastrable",
+      "phantom gallery",
+      "webgl gallery"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": true,
+    "needsCanvas": true,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 25,
+    "perfCost": "heavy",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink-muted",
+      "label": "Texto",
+      "type": "color",
+      "default": "#9b968c",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink-muted"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "cellSize",
+      "label": "Tamaño de la celda",
+      "type": "range",
+      "min": 0.3,
+      "max": 2,
+      "step": 0.05,
+      "default": 0.75,
+      "apply": {
+        "kind": "js",
+        "path": "cellSize"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "zoomLevel",
+      "label": "Zoom al pulsar",
+      "type": "range",
+      "min": 1,
+      "max": 3,
+      "step": 0.05,
+      "default": 1.25,
+      "apply": {
+        "kind": "js",
+        "path": "zoomLevel"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "lerpFactor",
+      "label": "Suavizado del movimiento",
+      "type": "range",
+      "min": 0.01,
+      "max": 0.3,
+      "step": 0.005,
+      "default": 0.075,
+      "apply": {
+        "kind": "js",
+        "path": "lerpFactor"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "phantom-gallery-javascript",
+    "title": "Halation — Phantom Draggable Infinite Gallery",
+    "category": "gallery",
+    "trigger": "drag",
+    "libs": [
+      "three"
+    ],
+    "complexity": 5,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": null,
+    "duration_range": [
+      2.4,
+      2.4
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 25,
+      "bytes": 2728799,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": true
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "html/body overflow:hidden"
+    ],
+    "capabilities": [
+      {
+        "capability": "page-scroll-lock",
+        "reason": "fija overflow:hidden en html/body"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "CAPTURED-VIRTUAL-SCROLL",
+    "engine": "webgl-raf",
+    "motion_signature": "drag-lerped infinite WebGL grid with zoom-out",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  },
+  "review": {
+    "status": "public"
+  }
+}

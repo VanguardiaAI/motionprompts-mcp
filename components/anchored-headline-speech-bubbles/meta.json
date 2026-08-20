@@ -1,0 +1,266 @@
+{
+  "slug": "anchored-headline-speech-bubbles",
+  "title": "Anchored Headline with Speech Bubbles",
+  "description": "A tall section whose headline is pinned with `position: sticky` at the vertical centre while testimonial speech bubbles arrive around it, one at a time, out of the left and right margins. Each bubble is positioned in percentages of the track with `--x`/`--y` and carries its own ScrollTrigger fired by its own position (`top 78%`), so the visual order and the temporal order are the same datum: move a bubble in the HTML and its arrival moves with it. Bubbles enter from the side they live on with a `back.out(1.9)` landing, and `toggleActions: play none none reverse` empties the field on the way back up. The headline fades to 0.55 opacity across the track via a scrubbed tween, ceding focus without leaving. Below 760px the bubbles stop floating and stack under the headline. Smoothed by Lenis.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "scrolltrigger",
+    "sticky",
+    "testimonial",
+    "reviews",
+    "social-proof",
+    "speech-bubble",
+    "stagger",
+    "reverse",
+    "lenis",
+    "editorial"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 1200,
+    "scrollTo": 0.5,
+    "clip": {
+      "seconds": 9
+    }
+  },
+  "images": [
+    {
+      "file": "face-1.jpg",
+      "desc": "reader portrait 1, cropped square for a 26px avatar in a testimonial bubble",
+      "role": "avatar in speech bubble",
+      "replaced": true,
+      "reused_from": "catálogo existente (public/c), recortado con sharp — no se generó ninguna imagen nueva"
+    },
+    {
+      "file": "face-2.jpg",
+      "desc": "reader portrait 2, cropped square for a 26px avatar in a testimonial bubble",
+      "role": "avatar in speech bubble",
+      "replaced": true,
+      "reused_from": "catálogo existente (public/c), recortado con sharp — no se generó ninguna imagen nueva"
+    },
+    {
+      "file": "face-3.jpg",
+      "desc": "reader portrait 3, cropped square for a 26px avatar in a testimonial bubble",
+      "role": "avatar in speech bubble",
+      "replaced": true,
+      "reused_from": "catálogo existente (public/c), recortado con sharp — no se generó ninguna imagen nueva"
+    },
+    {
+      "file": "face-4.jpg",
+      "desc": "reader portrait 4, cropped square for a 26px avatar in a testimonial bubble",
+      "role": "avatar in speech bubble",
+      "replaced": true,
+      "reused_from": "catálogo existente (public/c), recortado con sharp — no se generó ninguna imagen nueva"
+    },
+    {
+      "file": "face-5.jpg",
+      "desc": "reader portrait 5, cropped square for a 26px avatar in a testimonial bubble",
+      "role": "avatar in speech bubble",
+      "replaced": true,
+      "reused_from": "catálogo existente (public/c), recortado con sharp — no se generó ninguna imagen nueva"
+    }
+  ],
+  "updated": "2026-08-02",
+  "intent": {
+    "mood": [
+      "playful",
+      "editorial",
+      "bold"
+    ],
+    "useCase": [
+      "scroll-story",
+      "text-reveal"
+    ],
+    "useWhen": "Cuando hay reseñas o citas de terceros y no quieres un carrusel con flechas que nadie pulsa.",
+    "aliases": [
+      "testimonios",
+      "reseñas",
+      "voces de clientes",
+      "bocadillos",
+      "speech bubbles",
+      "testimonials",
+      "social proof",
+      "reviews section",
+      "quotes around a headline"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 5,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": false,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "origin": {
+    "kind": "observed",
+    "note": "Abstracción de la sección de testimonios de terryhoproducts.com, observada por fotogramas: titular anclado ('They Drizzle / They Dunk / They Devour.') con bocadillos amarillos y avatares circulares emergiendo alrededor. Ver scratch/perfil-food-drink.md.",
+    "gap": "`testimonial` era uno de los cinco roles declarados HUECOS del catálogo. Este componente lo llena, así que ROLES.testimonial deja de ser `catalogo: null`."
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bone",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#efe9e0",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bone"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#14100e",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bubble",
+      "label": "Acento",
+      "type": "color",
+      "default": "#f5c518",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bubble"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "signal",
+      "label": "Acento 2",
+      "type": "color",
+      "default": "#d6522b",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--signal"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "anchored-headline-speech-bubbles",
+    "title": "Anchored Headline with Speech Bubbles",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": true,
+    "ease_family": "back",
+    "duration_range": [
+      0.55,
+      0.55
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 5,
+      "bytes": 23220,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": true
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de anchored-headline-speech-bubbles"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de anchored-headline-speech-bubbles"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de anchored-headline-speech-bubbles"
+      }
+    ],
+    "cluster": "SCROLL-THRESHOLD",
+    "engine": "gsap",
+    "motion_signature": "sticky-centred headline with scroll-staggered speech bubbles arriving from the margins: one ScrollTrigger per bubble fired by the bubble own position in a 130svh track, back.out landing, play/reverse so the field empties on the way up; a separate scrubbed tween fades the headline to 0.55 across the track",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "reveal-on-enter"
+  },
+  "review": {
+    "status": "public"
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "slug": "exploded-product-labels",
+  "title": "Exploded Product with Leader Labels",
+  "description": "A pinned stage where a six-layer product separates along Z as you scroll and each part names itself with a hairline leader. The label is bound to its layer by `data-for` → `data-i`, and BOTH its vertical position and the leader's width are computed from the layer's live bounding box every frame — hand-placed labels survive exactly until somebody adds a part or swaps two, and a wrong label is worse than none because it still looks authoritative. The separation is staggered per layer (each gets its own slice of the progress) rather than uniform: moving all six at the same rate keeps them evenly spaced the whole way, so the object never reads as coming apart, only as getting taller. The leader stops at the edge of the stack rather than chasing its own layer, so its length does not jitter with the separation. Layers are CSS ellipses in a shallow 58° rotation — a photograph of a product cannot come apart. Dressed as a refillable compact: Antonio + Bitter, ink, blush and brass.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "scrolltrigger",
+    "sticky",
+    "exploded-view",
+    "diagram",
+    "labels",
+    "leader-line",
+    "product",
+    "annotation",
+    "3d-transform",
+    "lenis"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 1200,
+    "scrollTo": 0.55,
+    "clip": {
+      "seconds": 9
+    }
+  },
+  "images": [
+    {
+      "file": "hero.jpg",
+      "desc": "black rangefinder camera on dark blue linen, moody side light, full-bleed hero",
+      "role": "hero image",
+      "replaced": true,
+      "reused_from": "catálogo existente (public/c/aristidebenoist-slider), recortado con sharp — ninguna imagen generada"
+    }
+  ],
+  "updated": "2026-08-02",
+  "intent": {
+    "mood": [
+      "technical",
+      "elegant",
+      "editorial"
+    ],
+    "useCase": [
+      "product-showcase",
+      "scroll-story"
+    ],
+    "useWhen": "Cuando el producto tiene partes y el argumento es de qué está hecho: un despiece nombrado se lee mejor que una lista de características.",
+    "aliases": [
+      "despiece",
+      "vista explotada",
+      "anatomía del producto",
+      "exploded view",
+      "product breakdown",
+      "annotated diagram",
+      "leader lines",
+      "callouts"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 1,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": false,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "origin": {
+    "kind": "observed",
+    "note": "Efecto abstraído de banhmivietnam.xyz, cravburgers.shop y sunbeambagels.com (3 de 8 sitios del nicho food-drink lo usaban), observados por fotogramas: el producto despiezado con etiquetas guía a ambos lados. El EFECTO se conserva; paleta, tipografía, imágenes y contenido son propios.",
+    "gap": "0 aciertos al cruzar «despiece de producto con etiquetas guía» contra los 223."
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f5f2ec",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#1c2a4a",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "exploded-product-labels",
+    "title": "Exploded Product with Leader Labels",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": true,
+    "ease_family": null,
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 1,
+      "bytes": 121151,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": true
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de exploded-product-labels"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de exploded-product-labels"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de exploded-product-labels"
+      }
+    ],
+    "cluster": "SCROLL-WELDED",
+    "engine": "gsap",
+    "motion_signature": "sticky stage over 320svh where six CSS ellipses in a 58deg rotateX separate along Z with a per-layer staggered slice of progress (offset i/n*0.55, span 0.45, cubic ease-out) written by gsap.set on every ScrollTrigger update; labels bound by data-for fade and slide in on their own offset, with vertical position and leader width recomputed from each layer live bounding box; no tween, no scrub, smoothing from Lenis",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-welded"
+  },
+  "review": {
+    "status": "public"
+  }
+}

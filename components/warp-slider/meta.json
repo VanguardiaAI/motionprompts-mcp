@@ -1,0 +1,199 @@
+{
+  "slug": "warp-slider",
+  "sourceDir": "cg-warp-slider",
+  "title": "Hero Warp Slider",
+  "description": "A full-screen WebGL hero slider where clicking anywhere advances to the next image through an expanding lens-warp bubble rendered by a Three.js fragment shader. A gsap.fromTo tween drives the shader's uProgress uniform (2.5s, power2.inOut) to grow the distortion sphere, while a GSAP/SplitText timeline slides the per-character title and per-line description text out and back in.",
+  "category": "slider",
+  "tags": [
+    "three.js",
+    "webgl",
+    "shader",
+    "lens-distortion",
+    "slider",
+    "gsap",
+    "splittext",
+    "cinematic",
+    "editorial"
+  ],
+  "gsap": [
+    "SplitText"
+  ],
+  "deps": [
+    "three",
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "click": ".slider",
+    "afterClickMs": 1200
+  },
+  "images": [
+    {
+      "file": "img-1.jpg",
+      "desc": "cinematic portrait of a fair-haired woman lit from the side against a black background, surrounded by dark green foliage with small orange berries and a white flower, wearing a pale draped garment",
+      "role": "slide 1 image (Quiet Green)",
+      "replaced": true
+    },
+    {
+      "file": "img-2.jpg",
+      "desc": "woman with long dark curly hair reclining on ornate red-and-gold brocade, wearing a red dress with gilded embroidered bodice, gold treasure and shells beside her",
+      "role": "slide 2 image (Crimson Reign)",
+      "replaced": true
+    },
+    {
+      "file": "img-3.jpg",
+      "desc": "extreme macro close-up of skin, fine hairs and a brow, topped by a glittering gold jeweled beaded headpiece catching warm light",
+      "role": "slide 3 image (Gilded Brow)",
+      "replaced": true
+    },
+    {
+      "file": "img-4.jpg",
+      "desc": "motion-blurred shot of a person in a pale cream garment running through sun-soaked golden grass with water splashing, warm cinematic tones",
+      "role": "slide 4 image (Golden Flight)",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "cinematic",
+      "editorial",
+      "elegant"
+    ],
+    "useCase": [
+      "hero",
+      "slider",
+      "image-reveal"
+    ],
+    "useWhen": "Úsalo como hero a pantalla completa donde cada clic pasa a la siguiente imagen con una transición de lente warp WebGL y texto animado carácter a carácter.",
+    "aliases": [
+      "warp slider",
+      "slider warp",
+      "lens distortion slider",
+      "transicion de imagen webgl",
+      "hero shader slider",
+      "distorsion de lente"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": false,
+    "needsWebgl": true,
+    "needsCanvas": true,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "SplitText"
+    ],
+    "assetCount": 4,
+    "perfCost": "heavy",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f4efe7",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "warp-slider",
+    "title": "Hero Warp Slider",
+    "category": "slider",
+    "trigger": "click",
+    "libs": [
+      "gsap",
+      "SplitText",
+      "three"
+    ],
+    "complexity": 5,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power2",
+    "duration_range": [
+      0.5,
+      2.5
+    ],
+    "stagger": 0.025,
+    "assets_required": {
+      "count": 4,
+      "bytes": 627871,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "reclama el primer canvas del documento"
+    ],
+    "capabilities": [
+      {
+        "capability": "first-canvas",
+        "reason": "reclama document.querySelector(\"canvas\")"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "STEP-MACHINE",
+    "engine": "mixed",
+    "motion_signature": "click-advanced WebGL lens-warp wipe with char stagger",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "step-advance"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

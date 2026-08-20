@@ -1,0 +1,268 @@
+{
+  "slug": "permianworld-landing-page-animation",
+  "sourceDir": "codegrid-permianworld-landing-page-animation",
+  "title": "PermianWorld Landing Page Reveal Animation",
+  "description": "Preloader reveal on page load: SplitText masked lines slide the preloader copy and counter up while a randomized counter climbs from 00 to 100 and a centered square revealer scales in stepped increments, then the black preloader collapses via clip-path as nav, hero image and hero content slide into place. Runs automatically on DOMContentLoaded.",
+  "category": "preloader",
+  "tags": [
+    "preloader",
+    "reveal",
+    "splittext",
+    "counter",
+    "clip-path",
+    "landing",
+    "intro",
+    "stagger"
+  ],
+  "gsap": [
+    "SplitText"
+  ],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 4200
+  },
+  "images": [
+    {
+      "file": "hero.jpg",
+      "desc": "aerial view of layered desert rock strata, abstract mineral texture, warm dusk light",
+      "role": "full-screen hero background image",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "elegant",
+      "luxury",
+      "editorial"
+    ],
+    "useCase": [
+      "preloader",
+      "hero",
+      "text-reveal"
+    ],
+    "useWhen": "Úsalo cuando quieras una intro de carga premium que revele hero e imagen con contador y líneas de texto enmascaradas al entrar a la landing.",
+    "aliases": [
+      "preloader",
+      "pantalla de carga",
+      "loading screen",
+      "intro reveal",
+      "contador de carga",
+      "cortina de entrada"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "SplitText"
+    ],
+    "assetCount": 1,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "base-300",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#8a6535",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--base-300"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "base-100",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f6f2ea",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--base-100"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "base-200",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#e7e0d1",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--base-200"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "base-400",
+      "label": "Fondo 3",
+      "type": "color",
+      "default": "#0a0908",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--base-400"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "lineStagger",
+      "label": "Escalonado de las líneas",
+      "type": "range",
+      "min": 0,
+      "max": 0.3,
+      "step": 0.005,
+      "default": 0.075,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "lineStagger"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "heroRise",
+      "label": "Subida de la portada",
+      "type": "range",
+      "min": 5,
+      "max": 80,
+      "step": 5,
+      "default": 35,
+      "unit": "svh",
+      "apply": {
+        "kind": "js",
+        "path": "heroRise"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "counterDuration",
+      "label": "Duración de la cuenta",
+      "type": "range",
+      "min": 1,
+      "max": 10,
+      "step": 0.5,
+      "default": 4.5,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "counterDuration"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "counterDelay",
+      "label": "Espera antes de contar",
+      "type": "range",
+      "min": 0,
+      "max": 5,
+      "step": 0.25,
+      "default": 2,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "counterDelay"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "permianworld-landing-page-animation",
+    "title": "PermianWorld Landing Page Reveal Animation",
+    "category": "preloader",
+    "trigger": "load",
+    "libs": [
+      "gsap",
+      "SplitText"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power3",
+    "duration_range": [
+      0.5,
+      4.5
+    ],
+    "stagger": 0.075,
+    "assets_required": {
+      "count": 1,
+      "bytes": 381106,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "entry-veil",
+        "reason": "velo de entrada a pantalla completa en la carga"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "LOAD-ONESHOT",
+    "engine": "gsap",
+    "motion_signature": "load-triggered preloader: staggered masked lines rise, centered square revealer scales in 5 discrete steps (0.1/0.25/0.5/0.75/1) with power2/power3 out, then a 1.25s clip-path wipe uncovers the page while nav + hero-img + hero-content ride up from y:35svh on the same overlapping beat; ~6s total, no scroll, no rAF",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "entry-veil"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

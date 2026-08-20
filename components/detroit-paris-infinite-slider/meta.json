@@ -1,0 +1,319 @@
+{
+  "slug": "detroit-paris-infinite-slider",
+  "sourceDir": "codegrid-detroit-paris-infinite-slider",
+  "title": "DetroitParis Infinite Slider",
+  "description": "Infinite draggable image slider with exponential perspective sizing: slides anchored to the bottom edge grow exponentially wider toward the right, creating a perpetual-motion depth effect. Wheel, touch and pointer-drag update a scroll target that is lerped each rAF frame, with slide images wrapped modulo 10 for endless looping in both directions.",
+  "category": "slider",
+  "tags": [
+    "infinite",
+    "draggable",
+    "wheel",
+    "lerp",
+    "perspective",
+    "vanilla-js",
+    "raf"
+  ],
+  "gsap": [],
+  "deps": [],
+  "preview": {
+    "waitMs": 2500,
+    "clip": {
+      "seconds": 9,
+      "actions": [
+        {
+          "type": "scroll",
+          "to": 0.9,
+          "mode": "pingpong"
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "slide-img-1.jpg",
+      "desc": "dim sculptural interior with curved walls and a glowing white winding light stream",
+      "role": "slider slide 1",
+      "replaced": true
+    },
+    {
+      "file": "slide-img-2.jpg",
+      "desc": "surreal still life: wine glass with submerged egg, eggs, spoon and green flower on terracotta cloth",
+      "role": "slider slide 2",
+      "replaced": true
+    },
+    {
+      "file": "slide-img-3.jpg",
+      "desc": "clear glass decanter on grey backdrop casting a prismatic light refraction",
+      "role": "slider slide 3",
+      "replaced": true
+    },
+    {
+      "file": "slide-img-4.jpg",
+      "desc": "glowing fringe pendant lamp hanging in a brutalist concrete interior",
+      "role": "slider slide 4",
+      "replaced": true
+    },
+    {
+      "file": "slide-img-5.jpg",
+      "desc": "white monolithic columns standing in a foggy volcanic landscape",
+      "role": "slider slide 5",
+      "replaced": true
+    },
+    {
+      "file": "slide-img-6.jpg",
+      "desc": "raw stone reception desk under a giant ring chandelier with blurred figures",
+      "role": "slider slide 6",
+      "replaced": true
+    },
+    {
+      "file": "slide-img-7.jpg",
+      "desc": "terracotta metal chair with magazine in a dark moody garden of tropical plants",
+      "role": "slider slide 7",
+      "replaced": true
+    },
+    {
+      "file": "slide-img-8.jpg",
+      "desc": "green rectangular wall sconce with amber glass sphere in raking sunlight",
+      "role": "slider slide 8",
+      "replaced": true
+    },
+    {
+      "file": "slide-img-9.jpg",
+      "desc": "monumental white fringe textile installation in a brown desert landscape",
+      "role": "slider slide 9",
+      "replaced": true
+    },
+    {
+      "file": "slide-img-10.jpg",
+      "desc": "hand touching an illuminated topographic map on an interactive glass table",
+      "role": "slider slide 10",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "editorial",
+      "elegant",
+      "minimal"
+    ],
+    "useCase": [
+      "gallery",
+      "slider",
+      "hero"
+    ],
+    "useWhen": "Úsalo cuando quieras una galería de imágenes de scroll infinito y arrastrable con efecto de perspectiva, ideal para portfolios de arquitectura, diseño o moda.",
+    "aliases": [
+      "slider infinito",
+      "infinite slider",
+      "carrusel arrastrable",
+      "draggable slider",
+      "carrusel de perspectiva",
+      "perpetual motion slider"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 10,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "oxblood",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#8c2e1a",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--oxblood"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#271c10",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#ece1cf",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "totalSlides",
+      "label": "Nº de imágenes distintas",
+      "type": "range",
+      "min": 2,
+      "max": 10,
+      "step": 1,
+      "default": 10,
+      "apply": {
+        "kind": "js",
+        "path": "totalSlides"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "scrollSpeed",
+      "label": "Empuje del scroll",
+      "type": "range",
+      "min": 0.5,
+      "max": 8,
+      "step": 0.1,
+      "default": 3.5,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "scrollSpeed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "lerp",
+      "label": "Suavizado del movimiento",
+      "type": "range",
+      "min": 0.02,
+      "max": 0.3,
+      "step": 0.005,
+      "default": 0.075,
+      "apply": {
+        "kind": "js",
+        "path": "lerp"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "growth",
+      "label": "Crecimiento hacia el frente",
+      "type": "range",
+      "min": 0.1,
+      "max": 0.6,
+      "step": 0.01,
+      "default": 0.25,
+      "apply": {
+        "kind": "js",
+        "path": "growth"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "aspect",
+      "label": "Proporción de la imagen",
+      "type": "range",
+      "min": 0.4,
+      "max": 1.6,
+      "step": 0.05,
+      "default": 0.8,
+      "apply": {
+        "kind": "js",
+        "path": "aspect"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "detroit-paris-infinite-slider",
+    "title": "DetroitParis Infinite Slider",
+    "category": "slider",
+    "trigger": "wheel",
+    "libs": [],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": null,
+    "duration_range": [
+      0.2,
+      2.6
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 10,
+      "bytes": 1438274,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": true
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "preventDefault en wheel"
+    ],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "captura la rueda con preventDefault"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "CAPTURED-VIRTUAL-SCROLL",
+    "engine": "raf-lerp",
+    "motion_signature": "rAF-lerped infinite exponential-width slide track",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  },
+  "review": {
+    "status": "public",
+    "comment": "Hay que mejorar el componente ya que al hacer scroll las imágenes se mueven correctamente pero tienen como un temblor, debería ser mucho más fluido ya que se ven saltos extraños. Cuando lo arregles y se vea fluido graba el vídeo ya que solo es hacer scroll"
+  }
+}

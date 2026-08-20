@@ -1,0 +1,500 @@
+{
+  "slug": "gregorylalle",
+  "sourceDir": "cg-gregorylalle",
+  "title": "Gregory Lalle Awwwards Rebuild",
+  "description": "A scroll-driven vertical portfolio gallery where a fixed project index number reveals and pushes up via masked GSAP digit tweens as each section enters the viewport center. ScrollTrigger drives a side progress bar, a moving project-name indicator, and a bottom-right preview image that syncs to whichever gallery image is currently centered, with Lenis smooth scrolling.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "gallery",
+    "gsap",
+    "scrolltrigger",
+    "lenis",
+    "portfolio",
+    "editorial",
+    "masked-text",
+    "minimal"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "scrollTo": 0.35,
+    "afterScrollMs": 1200
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "close-up natural-light portrait (weathered faces series)",
+      "role": "Series 01 “Faultlines” gallery image and initial bottom-right preview",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "close-up natural-light portrait (weathered faces series)",
+      "role": "Series 01 “Faultlines” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "close-up natural-light portrait (weathered faces series)",
+      "role": "Series 01 “Faultlines” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "close-up natural-light portrait (weathered faces series)",
+      "role": "Series 01 “Faultlines” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "close-up natural-light portrait (weathered faces series)",
+      "role": "Series 01 “Faultlines” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "close-up natural-light portrait (weathered faces series)",
+      "role": "Series 01 “Faultlines” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "moody live-music performance photograph",
+      "role": "Series 02 “Stagelight” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "moody live-music performance photograph",
+      "role": "Series 02 “Stagelight” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpg",
+      "desc": "moody live-music performance photograph",
+      "role": "Series 02 “Stagelight” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpg",
+      "desc": "moody live-music performance photograph",
+      "role": "Series 02 “Stagelight” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img11.jpg",
+      "desc": "moody live-music performance photograph",
+      "role": "Series 02 “Stagelight” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img12.jpg",
+      "desc": "moody live-music performance photograph",
+      "role": "Series 02 “Stagelight” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img13.jpg",
+      "desc": "warm candid home and family scene",
+      "role": "Series 03 “Kin” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img14.jpg",
+      "desc": "warm candid home and family scene",
+      "role": "Series 03 “Kin” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img15.jpg",
+      "desc": "warm candid home and family scene",
+      "role": "Series 03 “Kin” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img16.jpg",
+      "desc": "warm candid home and family scene",
+      "role": "Series 03 “Kin” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img17.jpg",
+      "desc": "warm candid home and family scene",
+      "role": "Series 03 “Kin” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img18.jpg",
+      "desc": "warm candid home and family scene",
+      "role": "Series 03 “Kin” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img19.jpg",
+      "desc": "studio profile portrait on saturated colored backdrop",
+      "role": "Series 04 “Chroma” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img20.jpg",
+      "desc": "studio profile portrait on saturated colored backdrop",
+      "role": "Series 04 “Chroma” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img21.jpg",
+      "desc": "studio profile portrait on saturated colored backdrop",
+      "role": "Series 04 “Chroma” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img22.jpg",
+      "desc": "studio profile portrait on saturated colored backdrop",
+      "role": "Series 04 “Chroma” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img23.jpg",
+      "desc": "studio profile portrait on saturated colored backdrop",
+      "role": "Series 04 “Chroma” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img24.jpg",
+      "desc": "studio profile portrait on saturated colored backdrop",
+      "role": "Series 04 “Chroma” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img25.jpg",
+      "desc": "fabric and dancer in motion photograph",
+      "role": "Series 05 “Drift” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img26.jpg",
+      "desc": "fabric and dancer in motion photograph",
+      "role": "Series 05 “Drift” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img27.jpg",
+      "desc": "fabric and dancer in motion photograph",
+      "role": "Series 05 “Drift” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img28.jpg",
+      "desc": "fabric and dancer in motion photograph",
+      "role": "Series 05 “Drift” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img29.jpg",
+      "desc": "fabric and dancer in motion photograph",
+      "role": "Series 05 “Drift” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img30.jpg",
+      "desc": "fabric and dancer in motion photograph",
+      "role": "Series 05 “Drift” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img31.jpg",
+      "desc": "soft film-look spring portrait among blossoms",
+      "role": "Series 06 “Bloom” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img32.jpg",
+      "desc": "soft film-look spring portrait among blossoms",
+      "role": "Series 06 “Bloom” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img33.jpg",
+      "desc": "soft film-look spring portrait among blossoms",
+      "role": "Series 06 “Bloom” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img34.jpg",
+      "desc": "soft film-look spring portrait among blossoms",
+      "role": "Series 06 “Bloom” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img35.jpg",
+      "desc": "soft film-look spring portrait among blossoms",
+      "role": "Series 06 “Bloom” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img36.jpg",
+      "desc": "soft film-look spring portrait among blossoms",
+      "role": "Series 06 “Bloom” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img37.jpg",
+      "desc": "foggy mountain landscape photograph",
+      "role": "Series 07 “Terrain” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img38.jpg",
+      "desc": "foggy mountain landscape photograph",
+      "role": "Series 07 “Terrain” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img39.jpg",
+      "desc": "foggy mountain landscape photograph",
+      "role": "Series 07 “Terrain” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img40.jpg",
+      "desc": "foggy mountain landscape photograph",
+      "role": "Series 07 “Terrain” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img41.jpg",
+      "desc": "foggy mountain landscape photograph",
+      "role": "Series 07 “Terrain” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img42.jpg",
+      "desc": "foggy mountain landscape photograph",
+      "role": "Series 07 “Terrain” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img43.jpg",
+      "desc": "minimal brutalist architecture photograph",
+      "role": "Series 08 “Cast concrete” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img44.jpg",
+      "desc": "minimal brutalist architecture photograph",
+      "role": "Series 08 “Cast concrete” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img45.jpg",
+      "desc": "minimal brutalist architecture photograph",
+      "role": "Series 08 “Cast concrete” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img46.jpg",
+      "desc": "minimal brutalist architecture photograph",
+      "role": "Series 08 “Cast concrete” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img47.jpg",
+      "desc": "minimal brutalist architecture photograph",
+      "role": "Series 08 “Cast concrete” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img48.jpg",
+      "desc": "minimal brutalist architecture photograph",
+      "role": "Series 08 “Cast concrete” gallery image",
+      "replaced": true
+    },
+    {
+      "file": "img49.jpg",
+      "desc": "foggy mountain landscape photograph",
+      "role": "Spare (not rendered by the page)",
+      "replaced": true
+    },
+    {
+      "file": "img50.jpg",
+      "desc": "minimal brutalist architecture photograph",
+      "role": "Spare (not rendered by the page)",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "editorial",
+      "minimal",
+      "elegant"
+    ],
+    "useCase": [
+      "gallery",
+      "scroll-story",
+      "image-reveal"
+    ],
+    "useWhen": "Cuando quieras un portfolio vertical con scroll suave donde el numero de proyecto se fija y se anima mientras una preview sigue la imagen centrada.",
+    "aliases": [
+      "portfolio scroll",
+      "galeria vertical",
+      "indice de proyectos",
+      "scroll gallery",
+      "numero animado",
+      "preview flotante"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 50,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#0a0a0a",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#f4f4f0",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "gregorylalle",
+    "title": "Gregory Lalle Awwwards Rebuild",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": true,
+    "ease_family": "power2",
+    "duration_range": [
+      0.3,
+      0.75
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 50,
+      "bytes": 7861809,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de gregorylalle"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de gregorylalle"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de gregorylalle"
+      }
+    ],
+    "cluster": "SCROLL-THRESHOLD",
+    "engine": "gsap+raf",
+    "motion_signature": "scroll-pinned index numerals swap over fixed preview",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "reveal-on-enter"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

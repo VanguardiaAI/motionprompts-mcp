@@ -1,0 +1,205 @@
+{
+  "slug": "warp-slider-next",
+  "sourceDir": "cg-warp-slider-next",
+  "title": "Warp Lens Slider",
+  "description": "A full-screen WebGL image slider where clicking anywhere expands a circular lens/bubble mask from the center, warping the incoming photo with a magnifying-glass distortion driven by a custom Three.js fragment shader. GSAP tweens the shader's uProgress uniform (2.5s power2.inOut) while SplitText staggers the title characters and description lines out and back in.",
+  "category": "slider",
+  "tags": [
+    "three.js",
+    "webgl",
+    "shader",
+    "lens-distortion",
+    "gsap",
+    "splittext",
+    "click",
+    "editorial",
+    "cinematic"
+  ],
+  "gsap": [
+    "SplitText"
+  ],
+  "deps": [
+    "gsap",
+    "three"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "clip": {
+      "seconds": 8,
+      "actions": [
+        {
+          "type": "click",
+          "selector": ".nav-links a:nth-child(2)",
+          "at": 0.3
+        },
+        {
+          "type": "click",
+          "selector": ".nav-links a:nth-child(3)",
+          "at": 0.65
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "img-1.jpg",
+      "desc": "man on a phone standing in a sunlit brick loft crowded with houseplants, coffee and a windowsill of potted greenery in warm morning light",
+      "role": "slide 1 texture (Morning Room)",
+      "replaced": true
+    },
+    {
+      "file": "img-2.jpg",
+      "desc": "young monstera and zamioculcas on a bright white windowsill with trailing pothos on a grid wall, urban apartment daylight",
+      "role": "slide 2 texture (South Window)",
+      "replaced": true
+    },
+    {
+      "file": "img-3.jpg",
+      "desc": "close-up of a hand misting a leafy plant with a brass mister, fine spray backlit against warm green foliage bokeh",
+      "role": "slide 3 texture (Fine Mist)",
+      "replaced": true
+    },
+    {
+      "file": "img-4.jpg",
+      "desc": "dense wall of large glossy deep-green philodendron leaves against a wooden slat backdrop, botanical detail study",
+      "role": "slide 4 texture (Understory)",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-18",
+  "intent": {
+    "mood": [
+      "cinematic",
+      "editorial",
+      "elegant"
+    ],
+    "useCase": [
+      "hero",
+      "slider",
+      "image-reveal",
+      "product-showcase"
+    ],
+    "useWhen": "Cuando quieras un slider hero a pantalla completa donde cada cambio de imagen se revela con una distorsion de lente WebGL al hacer click.",
+    "aliases": [
+      "warp slider",
+      "slider de lente",
+      "lens distortion slider",
+      "bubble transition",
+      "slider webgl",
+      "shader image transition"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": true,
+    "needsCanvas": true,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "SplitText"
+    ],
+    "assetCount": 4,
+    "perfCost": "heavy",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f4f1e9",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "warp-slider-next",
+    "title": "Warp Lens Slider",
+    "category": "slider",
+    "trigger": "click",
+    "libs": [
+      "gsap",
+      "SplitText",
+      "three"
+    ],
+    "complexity": 5,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power2",
+    "duration_range": [
+      0.25,
+      2.5
+    ],
+    "stagger": 0.025,
+    "assets_required": {
+      "count": 4,
+      "bytes": 732671,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "STEP-MACHINE",
+    "engine": "mixed",
+    "motion_signature": "click-driven WebGL lens-bubble wipe with text stagger",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "step-advance"
+  },
+  "review": {
+    "status": "public"
+  }
+}

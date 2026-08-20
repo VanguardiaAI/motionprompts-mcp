@@ -1,0 +1,321 @@
+{
+  "slug": "metalab-lp-rebuild",
+  "sourceDir": "cg-metalab-lp-rebuild",
+  "title": "Merle Photo-Studio Hover Index",
+  "description": "A dark full-screen index for a photography & art-direction studio where hovering a series in the left list crossfades a full-bleed background image and reveals a positioned project preview (image, title, tags, description). GSAP tweens a clip-path wipe on the preview image plus staggered x/y + opacity transforms driven by per-item layout variants, all triggered on mouseenter/mouseleave.",
+  "category": "hover",
+  "tags": [
+    "hover",
+    "gsap",
+    "clip-path",
+    "image-reveal",
+    "crossfade",
+    "portfolio",
+    "dark",
+    "minimal",
+    "interactive"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "clip": {
+      "seconds": 8,
+      "actions": [
+        {
+          "type": "click",
+          "selector": ".items .item:nth-child(2)",
+          "at": 0.3
+        },
+        {
+          "type": "click",
+          "selector": ".items .item:nth-child(4)",
+          "at": 0.62
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "main-1.jpg",
+      "desc": "Black-and-white photo studio with a lone folding chair on a grey cyclorama",
+      "role": "preview thumbnail for series 'Casting' (variant-1)",
+      "replaced": true
+    },
+    {
+      "file": "main-2.jpg",
+      "desc": "Golden rolling hills dotted with lone oaks, 35mm film look",
+      "role": "preview thumbnail for series 'Hinterland' (variant-2)",
+      "replaced": true
+    },
+    {
+      "file": "main-3.jpg",
+      "desc": "Grey and white marbled fluid abstract, stone-like swirls",
+      "role": "preview thumbnail for series 'Material studies' (variant-3)",
+      "replaced": true
+    },
+    {
+      "file": "main-4.jpg",
+      "desc": "Fan-shaped metal rake laid on crushed oxblood velvet",
+      "role": "preview thumbnail for series 'Nightshade' (variant-1)",
+      "replaced": true
+    },
+    {
+      "file": "main-5.jpg",
+      "desc": "Stoneware plate with a beechwood knife in soft beige light",
+      "role": "preview thumbnail for series 'Table service' (variant-2)",
+      "replaced": true
+    },
+    {
+      "file": "main-6.jpg",
+      "desc": "Glass office tower against a blue noon sky with clouds",
+      "role": "preview thumbnail for series 'Vertical city' (variant-3)",
+      "replaced": true
+    },
+    {
+      "file": "main-7.jpg",
+      "desc": "Figure covering their face with hands stacked with silver rings, sepia editorial",
+      "role": "preview thumbnail for series 'Heirlooms' (variant-1)",
+      "replaced": true
+    },
+    {
+      "file": "main-8.jpg",
+      "desc": "Black panther studio portrait on a pale seamless backdrop",
+      "role": "preview thumbnail for series 'Panthera' (variant-2)",
+      "replaced": true
+    },
+    {
+      "file": "main-9.jpg",
+      "desc": "Unfired clay sphere in raking light on a beige ground",
+      "role": "preview thumbnail for series 'Form' (variant-3)",
+      "replaced": true
+    },
+    {
+      "file": "main-10.jpg",
+      "desc": "Purple irises photographed against a deep red wall",
+      "role": "preview thumbnail for series 'Iris' (variant-1)",
+      "replaced": true
+    },
+    {
+      "file": "bg-1.jpg",
+      "desc": "Black-and-white photo studio with a lone folding chair (echo of main-1)",
+      "role": "full-screen hover background for 'Casting'",
+      "replaced": true
+    },
+    {
+      "file": "bg-2.jpg",
+      "desc": "Coastal cliffs and surf on film, hazy horizon",
+      "role": "full-screen hover background for 'Hinterland'",
+      "replaced": true
+    },
+    {
+      "file": "bg-3.jpg",
+      "desc": "Glass decanter of water casting prismatic light on a grey wall",
+      "role": "full-screen hover background for 'Material studies'",
+      "replaced": true
+    },
+    {
+      "file": "bg-4.jpg",
+      "desc": "Metal rake on crushed oxblood velvet (echo of main-4)",
+      "role": "full-screen hover background for 'Nightshade'",
+      "replaced": true
+    },
+    {
+      "file": "bg-5.jpg",
+      "desc": "Soft beige suede texture backdrop",
+      "role": "full-screen hover background for 'Table service'",
+      "replaced": true
+    },
+    {
+      "file": "bg-6.jpg",
+      "desc": "Brutalist concrete facade against a clear blue sky",
+      "role": "full-screen hover background for 'Vertical city'",
+      "replaced": true
+    },
+    {
+      "file": "bg-7.jpg",
+      "desc": "Brown egg inside a wine glass beside a dried flower, mauve backdrop",
+      "role": "full-screen hover background for 'Heirlooms'",
+      "replaced": true
+    },
+    {
+      "file": "bg-8.jpg",
+      "desc": "Black panther studio portrait (echo of main-8)",
+      "role": "full-screen hover background for 'Panthera'",
+      "replaced": true
+    },
+    {
+      "file": "bg-9.jpg",
+      "desc": "Unfired clay sphere still life (echo of main-9)",
+      "role": "full-screen hover background for 'Form'",
+      "replaced": true
+    },
+    {
+      "file": "bg-10.jpg",
+      "desc": "Irises in a glass vase on a green marble table against a red wall",
+      "role": "full-screen hover background for 'Iris'",
+      "replaced": true
+    },
+    {
+      "file": "default-bg.jpg",
+      "desc": "Black-and-white empty photo studio with a lone folding chair",
+      "role": "default full-screen background shown before/after hovering, at 35% opacity",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "minimal",
+      "elegant",
+      "editorial"
+    ],
+    "useCase": [
+      "hover-interaction",
+      "navigation",
+      "gallery"
+    ],
+    "useWhen": "Cuando quieras una landing o índice de proyectos donde al pasar el cursor por una lista se revela una imagen de fondo y una ficha del proyecto.",
+    "aliases": [
+      "hover reveal",
+      "revelar al pasar cursor",
+      "portfolio index",
+      "índice de proyectos",
+      "menú con preview",
+      "clip-path reveal"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 21,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "lime",
+      "label": "Acento",
+      "type": "color",
+      "default": "#c6f21e",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--lime"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#0d0d0d",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink-dim",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#0b2545",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink-dim"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "metalab-lp-rebuild",
+    "title": "Merle Photo-Studio Hover Index",
+    "category": "hover",
+    "trigger": "hover",
+    "libs": [
+      "gsap"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power3",
+    "duration_range": [
+      0.1,
+      1
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 21,
+      "bytes": 2071353,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "POINTER-LATCHED",
+    "engine": "gsap",
+    "motion_signature": "hover-swapped clip-path preview with directional text slides",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "pointer-latch"
+  },
+  "review": {
+    "status": "public"
+  }
+}

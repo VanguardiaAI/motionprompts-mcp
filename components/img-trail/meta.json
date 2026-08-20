@@ -1,0 +1,252 @@
+{
+  "slug": "img-trail",
+  "sourceDir": "cg-img-trail",
+  "title": "Mouse Image Trail",
+  "description": "A cursor-driven image trail: moving the mouse spawns positioned image tiles that follow the pointer, and after a brief pause of no movement GSAP animates the whole batch downward with a staggered scale-and-fade drop before removing them. Purely hover/mousemove triggered using gsap.to with y, scale, opacity and a 0.025s stagger.",
+  "category": "hover",
+  "tags": [
+    "cursor",
+    "trail",
+    "mousemove",
+    "image-trail",
+    "stagger",
+    "gsap",
+    "interactive",
+    "playful"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 2500
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "woman dressed head-to-toe in green with beret and gloves holding a green ball, green studio ground",
+      "role": "trail tile image (index 1)",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "model in metallic cobalt-blue wrap dress against a warm yellow ground",
+      "role": "trail tile image (index 2)",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "woman in a marigold suit reclining on a matching yellow studio floor",
+      "role": "trail tile image (index 3)",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "woman in red vinyl dress unrolling red paper against a deep red ground",
+      "role": "trail tile image (index 4)",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "woman in a neon-pink blazer leaning into a two-tone pink corner",
+      "role": "trail tile image (index 5)",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "profile of a model in all black with white sunglasses on an electric-blue ground",
+      "role": "trail tile image (index 6)",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "portrait of a model in a striped crimson shirt with sculpted braids on a saffron ground",
+      "role": "trail tile image (index 7)",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "model in a blush one-shoulder dress against a violet spotlight circle",
+      "role": "trail tile image (index 8)",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpg",
+      "desc": "low-key silhouette of a model in a suit with gold chain on a vivid green ground",
+      "role": "trail tile image (index 9)",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpg",
+      "desc": "man in a pink suit lying on a white floor against a lemon-yellow ground",
+      "role": "trail tile image (index 10)",
+      "replaced": true
+    },
+    {
+      "file": "img11.jpg",
+      "desc": "model in oversized powder-blue shirting crouched on a cobalt ground, stacked hair buns",
+      "role": "trail tile image (index 11)",
+      "replaced": true
+    },
+    {
+      "file": "img12.jpg",
+      "desc": "model in an oversized red wool coat against an ultramarine ground",
+      "role": "trail tile image (index 12)",
+      "replaced": true
+    },
+    {
+      "file": "img13.jpg",
+      "desc": "model in a bottle-green coat reclining on a vermilion ground",
+      "role": "trail tile image (index 13)",
+      "replaced": true
+    },
+    {
+      "file": "img14.jpg",
+      "desc": "model in a hooded marigold coat against a magenta ground",
+      "role": "trail tile image (index 14)",
+      "replaced": true
+    },
+    {
+      "file": "img15.jpg",
+      "desc": "model in a teal jumpsuit braced against a peach corner",
+      "role": "trail tile image (index 15)",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "experimental",
+      "futuristic",
+      "cinematic"
+    ],
+    "useCase": [
+      "cursor-effect",
+      "hover-interaction",
+      "gallery",
+      "hero"
+    ],
+    "useWhen": "Cuando quieres una interacción de cursor llamativa que deje un rastro de imágenes al mover el ratón sobre un hero o galería.",
+    "aliases": [
+      "rastro de imagenes",
+      "image trail",
+      "cursor trail",
+      "estela de cursor",
+      "mouse trail",
+      "hover gallery"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 15,
+    "perfCost": "light",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#231508",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "field",
+      "label": "Acento",
+      "type": "color",
+      "default": "#f08c00",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--field"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "img-trail",
+    "title": "Mouse Image Trail",
+    "category": "hover",
+    "trigger": "pointer",
+    "libs": [
+      "gsap"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": null,
+    "duration_range": [
+      0.5,
+      0.5
+    ],
+    "stagger": 0.025,
+    "assets_required": {
+      "count": 15,
+      "bytes": 957917,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": true
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "html/body overflow:hidden"
+    ],
+    "capabilities": [
+      {
+        "capability": "page-scroll-lock",
+        "reason": "fija overflow:hidden en html/body"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "POINTER-LATCHED",
+    "engine": "gsap",
+    "motion_signature": "cursor-spawned tiles pile up (max 20), then on a 100ms rest a staggered fall-away — y+1000, scale 0.5, fade — with no ease passed, so GSAP's default power1.out, not real gravity",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "pointer-latch"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

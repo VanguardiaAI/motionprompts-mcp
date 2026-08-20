@@ -1,0 +1,230 @@
+{
+  "slug": "gabrielcontassot-scroll",
+  "sourceDir": "cg-gabrielcontassot-scroll",
+  "title": "Scroll Image Reveal Sequence",
+  "description": "A long vertical scroll photo essay ('Close Range — Essay No. 04: Skin') where seven big centered chapter-headers (Ornament, Repose, Surface, Gaze, Mouth, Rain, Close) pass over a fixed 500x700 image stack of close-up body photographs. GSAP ScrollTrigger drives two scrubbed animations per section: a clip-path polygon that wipes each preview up into view then off again as the next chapter arrives, plus a continuous scale-to-3 zoom on the active image, ease 'none', so images grow and cross-dissolve through clip-path masks as you scroll.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "scrolltrigger",
+    "clip-path",
+    "image-reveal",
+    "scrub",
+    "scale",
+    "editorial",
+    "gsap",
+    "fashion"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "scrollTo": 0.6,
+    "afterScrollMs": 900,
+    "clip": {
+      "seconds": 9
+    }
+  },
+  "images": [
+    {
+      "file": "img-1.jpg",
+      "desc": "editorial portrait of hands stacked with chunky silver rings covering a face, warm beige wall behind, dark wavy hair",
+      "role": "preview image 1 (revealed at chapter 'Ornament')",
+      "replaced": true
+    },
+    {
+      "file": "img-2.jpg",
+      "desc": "warm close-up of a woman with lowered eyes resting a hand on her bare shoulder, soft muted tones (Pexels 10055311)",
+      "role": "preview image 2 (revealed at chapter 'Repose')",
+      "replaced": true
+    },
+    {
+      "file": "img-3.jpg",
+      "desc": "fine art portrait fragment, draped linen over shoulder, sculptural window light",
+      "role": "preview image 3 (revealed at chapter 'Surface')",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    },
+    {
+      "file": "img-4.jpg",
+      "desc": "fine art study of clasped hands, chiaroscuro, painterly light",
+      "role": "preview image 4 (revealed at chapter 'Gaze')",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    },
+    {
+      "file": "img-5.jpg",
+      "desc": "fine art profile in shadow, single beam of light across face, portrait",
+      "role": "preview image 5 (revealed at chapter 'Mouth')",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    },
+    {
+      "file": "img-6.jpg",
+      "desc": "fine art study of back and shoulder with fabric, soft directional light, portrait",
+      "role": "preview image 6 (revealed at chapter 'Rain')",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "editorial",
+      "elegant",
+      "cinematic"
+    ],
+    "useCase": [
+      "scroll-story",
+      "image-reveal",
+      "gallery"
+    ],
+    "useWhen": "Cuando quieras una historia de scroll con headers gigantes y una pila de imagenes que se revelan y escalan por clip-path a medida que bajas.",
+    "aliases": [
+      "scroll image reveal",
+      "revelado por scroll",
+      "clip path scroll",
+      "galeria de scroll",
+      "scroll storytelling",
+      "imagenes que crecen al scrollear"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 6,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ground",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#171009",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ground"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "plaster",
+      "label": "Texto",
+      "type": "color",
+      "default": "#eadfce",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--plaster"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "gabrielcontassot-scroll",
+    "title": "Scroll Image Reveal Sequence",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": 150,
+    "needs_lenis": false,
+    "ease_family": "none",
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 6,
+      "bytes": 742763,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de gabrielcontassot-scroll"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de gabrielcontassot-scroll"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de gabrielcontassot-scroll"
+      }
+    ],
+    "cluster": "SCROLL-LAGGED",
+    "engine": "gsap",
+    "motion_signature": "scrubbed clip-path wipes over scaling fixed image stack",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-lagged"
+  },
+  "review": {
+    "status": "public",
+    "comment": "Hay que mejorar el componente por qué hay un momento que se solapan los textos. También el vídeo requiere volver a grabarse y que sea más largo"
+  }
+}

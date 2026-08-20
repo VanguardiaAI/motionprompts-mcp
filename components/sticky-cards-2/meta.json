@@ -1,0 +1,224 @@
+{
+  "slug": "sticky-cards-2",
+  "sourceDir": "cg-sticky-cards",
+  "title": "Sticky Cards ScrollTrigger",
+  "description": "A stack of full-screen sections is pinned one after another with ScrollTrigger (pin, pinSpacing:false, scrub) so each card holds in place while the next scrolls over it, and each pinned image scales from 1 down to 0.5 as the following section approaches. The hero heading fades its opacity from 1 to 0 across the first 400vh of scroll.",
+  "category": "scroll",
+  "tags": [
+    "sticky",
+    "sticky-cards",
+    "scroll",
+    "pin",
+    "scrub",
+    "scale",
+    "scrolltrigger",
+    "gallery"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "scrollTo": 0.35,
+    "waitMs": 2500
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "wool overcoat worn crossing a city crosswalk, cold overcast streetwear look",
+      "role": "first pinned card image",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "tech fleece zip-up layered under a puffer on a grey high street",
+      "role": "second pinned card image",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "cotton hoodie under a work jacket against a concrete wall",
+      "role": "third pinned card image",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "varsity jacket and washed baggy denim on concrete steps",
+      "role": "fourth pinned card image",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "heavy overcoat on a parked-up city street",
+      "role": "fifth pinned card image",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "oversized black hoodie outside a corner storefront",
+      "role": "last non-pinned scrolling card image",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "minimal",
+      "elegant",
+      "editorial"
+    ],
+    "useCase": [
+      "gallery",
+      "scroll-story",
+      "image-reveal"
+    ],
+    "useWhen": "Úsalo para una galería de imágenes a pantalla completa donde cada tarjeta se fija y encoge al hacer scroll, revelando la siguiente con transición suave.",
+    "aliases": [
+      "tarjetas fijas",
+      "sticky cards",
+      "galeria scroll",
+      "imagenes que se encogen",
+      "pinned image gallery",
+      "cartas pegajosas"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 6,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bg",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#08090a",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bg"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f4f4f2",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "sticky-cards-2",
+    "title": "Sticky Cards ScrollTrigger",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger"
+    ],
+    "complexity": 4,
+    "pinned": true,
+    "viewport_heights": 400,
+    "needs_lenis": false,
+    "ease_family": "none",
+    "duration_range": [
+      0.2,
+      0.2
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 6,
+      "bytes": 889718,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de sticky-cards-2"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de sticky-cards-2"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de sticky-cards-2"
+      }
+    ],
+    "cluster": "SCROLL-LAGGED",
+    "engine": "gsap",
+    "motion_signature": "stacked pinned full-screen cards, images scrub-scale down",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-lagged"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

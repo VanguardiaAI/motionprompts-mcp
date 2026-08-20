@@ -1,0 +1,221 @@
+{
+  "slug": "ironhill-scroll-animation",
+  "sourceDir": "codegrid-ironhill-scroll-animation",
+  "title": "IronHill Scroll Animation",
+  "description": "Scroll-scrubbed WebGL dissolve over a tall 175svh hero: a Three.js fullscreen quad with an fbm-noise shader sweeps a solid near-black fill up over the hero image with an organic ragged edge, its uProgress driven by Lenis scroll position. As scrolling continues, GSAP SplitText splits the hero paragraph into words and a ScrollTrigger fades them in one by one over the freshly revealed background.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "webgl",
+    "three-js",
+    "shader",
+    "dissolve",
+    "noise",
+    "reveal",
+    "lenis",
+    "split-text",
+    "hero"
+  ],
+  "gsap": [
+    "ScrollTrigger",
+    "SplitText"
+  ],
+  "deps": [
+    "gsap",
+    "lenis",
+    "three"
+  ],
+  "preview": {
+    "waitMs": 1200,
+    "scrollTo": 0.6,
+    "clip": {
+      "seconds": 9
+    }
+  },
+  "images": [
+    {
+      "file": "hero-img.jpg",
+      "desc": "weathered warm lime-plaster wall cracking to reveal the earthen substrate beneath, soft leaf shadows in raking sunlight",
+      "role": "full-bleed hero image progressively covered by the limestone dissolve",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "editorial",
+      "organic",
+      "elegant"
+    ],
+    "useCase": [
+      "hero",
+      "image-reveal",
+      "scroll-story"
+    ],
+    "useWhen": "Úsalo cuando quieras un hero con scroll donde una capa crema de borde orgánico disuelve la imagen y revela el texto palabra por palabra al bajar.",
+    "aliases": [
+      "revelado con scroll",
+      "webgl dissolve",
+      "disolvencia crema",
+      "noise reveal",
+      "revelado orgánico",
+      "scroll hero"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": true,
+    "needsCanvas": true,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger",
+      "SplitText"
+    ],
+    "assetCount": 1,
+    "perfCost": "heavy",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bg",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#141414",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bg"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ivory",
+      "label": "Texto",
+      "type": "color",
+      "default": "#efece3",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ivory"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ember",
+      "label": "Acento",
+      "type": "color",
+      "default": "#f04e23",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ember"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "ironhill-scroll-animation",
+    "title": "IronHill Scroll Animation",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "SplitText",
+      "three",
+      "lenis"
+    ],
+    "complexity": 5,
+    "pinned": false,
+    "viewport_heights": 175,
+    "needs_lenis": true,
+    "ease_family": null,
+    "duration_range": [
+      0.1,
+      0.1
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 1,
+      "bytes": 806769,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de ironhill-scroll-animation"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de ironhill-scroll-animation"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de ironhill-scroll-animation"
+      }
+    ],
+    "cluster": "SCROLL-WELDED",
+    "engine": "mixed",
+    "motion_signature": "scroll-driven fbm-noise WebGL dissolve plus word fade",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-welded"
+  },
+  "review": {
+    "status": "public"
+  }
+}

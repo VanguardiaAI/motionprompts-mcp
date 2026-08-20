@@ -1,0 +1,182 @@
+{
+  "slug": "nm-menu-rebuild",
+  "sourceDir": "cg-nm-menu-rebuild",
+  "title": "Fullscreen Portfolio Menu",
+  "description": "A fullscreen overlay navigation that toggles open on clicking the burger button: a GSAP timeline sweeps a clip-path polygon over the whole viewport on a power4.inOut ease, then staggers the oversized menu items up from a y offset with power4.out, grows a CSSRulePlugin-animated underline on the active item, and fades the social sub-nav up into place. Clicking again reverses the same timeline.",
+  "category": "menu",
+  "tags": [
+    "fullscreen-menu",
+    "overlay",
+    "clip-path",
+    "burger-toggle",
+    "staggered-reveal",
+    "cssruleplugin",
+    "gsap",
+    "editorial",
+    "minimal"
+  ],
+  "gsap": [
+    "CSSRulePlugin"
+  ],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "click": ".burger",
+    "afterClickMs": 2000
+  },
+  "images": [
+    {
+      "file": "hero.jpg",
+      "desc": "high-contrast black-and-white portrait study filling a bordered magazine-style hero frame on the landing view behind the menu",
+      "role": "hero background image on the base website content",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "editorial",
+      "minimal",
+      "elegant"
+    ],
+    "useCase": [
+      "navigation",
+      "text-reveal"
+    ],
+    "useWhen": "Úsalo para un menú overlay a pantalla completa que se abre con un botón burger, con enlaces gigantes revelados en cascada y subrayado animado del ítem activo.",
+    "aliases": [
+      "menú pantalla completa",
+      "fullscreen menu",
+      "menú overlay",
+      "burger menu",
+      "menú clip-path",
+      "portfolio menu"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "CSSRulePlugin"
+    ],
+    "assetCount": 1,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#0f0e0c",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bone",
+      "label": "Texto",
+      "type": "color",
+      "default": "#e7e0d2",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bone"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "nm-menu-rebuild",
+    "title": "Fullscreen Portfolio Menu",
+    "category": "menu",
+    "trigger": "click",
+    "libs": [
+      "gsap",
+      "CSSRulePlugin"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power4",
+    "duration_range": [
+      0.25,
+      1.5
+    ],
+    "stagger": 0.2,
+    "assets_required": {
+      "count": 1,
+      "bytes": 639250,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "CLICK-CURTAIN",
+    "engine": "gsap",
+    "motion_signature": "clip-path overlay sweep (top edge expanding downward, power4.inOut, 1.5s) with a 0.2s-staggered masked y:225->0 menu rise overlapping 1s early, then an underline width grow and sub-nav fade",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "curtain-toggle"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

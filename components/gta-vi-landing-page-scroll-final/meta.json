@@ -1,0 +1,289 @@
+{
+  "slug": "gta-vi-landing-page-scroll-final",
+  "sourceDir": "codegrid-gta-vi-landing-page-scroll-final",
+  "title": "GTA VI Landing Page Scroll",
+  "description": "A GTA-VI-style pinned hero reveal driven by scroll, art-directed as 'Casa Vicente', a Lisbon tailoring house AW26 campaign. A single ScrollTrigger (pin + scrub over 5x viewport height, Lenis-smoothed) fades out the intro wordmark/copy, scales down the hero portrait, and shrinks a giant SVG-masked overlay (500x) so the dark screen retracts into the CASA / VICENTE lockup revealing the scene, then an ivory fade-overlay blooms and a Space Grotesk headline is unveiled with an animated bottom-up gradient wipe.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "pin",
+    "scrub",
+    "logo-reveal",
+    "svg-mask",
+    "layered-parallax",
+    "lenis",
+    "gsap",
+    "cinematic"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "scrollTo": 0.9,
+    "afterScrollMs": 800,
+    "waitMs": 2500,
+    "clip": {
+      "seconds": 11
+    }
+  },
+  "images": [
+    {
+      "file": "hero-campaign.jpg",
+      "desc": "Campaign portrait: a young man in an olive wool suit and tie standing before a hand-painted mural in warm orange and teal watercolor strokes.",
+      "role": "Single hero image that scales down as you scroll and is revealed through the CASA / VICENTE mask lockup.",
+      "replaced": true
+    },
+    {
+      "file": "hero-campaign-mobile.jpg",
+      "desc": "Portrait-orientation companion crop of the same campaign portrait for small screens.",
+      "role": "Served via <picture> below 768px so the mobile hero shows the subject rather than an extreme close-up.",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "cinematic",
+      "bold",
+      "editorial"
+    ],
+    "useCase": [
+      "hero",
+      "scroll-story",
+      "logo",
+      "image-reveal"
+    ],
+    "useWhen": "Úsalo para un hero de lanzamiento donde el scroll encoge una máscara SVG con forma de logo para revelar la escena, al estilo del reveal de GTA VI.",
+    "aliases": [
+      "gta vi reveal",
+      "logo reveal scroll",
+      "revelado con mascara svg",
+      "vice city hero",
+      "svg mask scroll",
+      "hero cinematografico"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 1,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bg",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#141414",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bg"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ivory",
+      "label": "Texto",
+      "type": "color",
+      "default": "#efece3",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ivory"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "initialOverlayScale",
+      "label": "Zoom inicial del telón",
+      "type": "range",
+      "min": 50,
+      "max": 1500,
+      "step": 10,
+      "default": 500,
+      "apply": {
+        "kind": "js",
+        "path": "initialOverlayScale"
+      }
+    },
+    {
+      "id": "heroStartScale",
+      "label": "Escala inicial de la foto",
+      "type": "range",
+      "min": 1.1,
+      "max": 2.6,
+      "step": 0.05,
+      "default": 1.5,
+      "apply": {
+        "kind": "js",
+        "path": "heroStartScale"
+      }
+    },
+    {
+      "id": "logoSize",
+      "label": "Tamaño del logotipo calado",
+      "type": "range",
+      "min": 0.5,
+      "max": 1.4,
+      "step": 0.05,
+      "default": 1,
+      "apply": {
+        "kind": "js",
+        "path": "logoSize"
+      }
+    },
+    {
+      "id": "gradientSpread",
+      "label": "Ancho del degradado del titular",
+      "type": "range",
+      "min": 20,
+      "max": 260,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "js",
+        "path": "gradientSpread"
+      }
+    },
+    {
+      "id": "copyStartScale",
+      "label": "Escala inicial del titular",
+      "type": "range",
+      "min": 1,
+      "max": 1.8,
+      "step": 0.05,
+      "default": 1.25,
+      "apply": {
+        "kind": "js",
+        "path": "copyStartScale"
+      }
+    },
+    {
+      "id": "heroScrollLength",
+      "label": "Recorrido del telón (pantallas)",
+      "type": "range",
+      "min": 2,
+      "max": 10,
+      "step": 0.5,
+      "default": 5,
+      "apply": {
+        "kind": "js",
+        "path": "heroScrollLength"
+      }
+    }
+  ],
+  "motion": {
+    "slug": "gta-vi-landing-page-scroll-final",
+    "title": "GTA VI Landing Page Scroll",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 3,
+    "pinned": true,
+    "viewport_heights": 500,
+    "needs_lenis": true,
+    "ease_family": null,
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 2,
+      "bytes": 305016,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de gta-vi-landing-page-scroll-final"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de gta-vi-landing-page-scroll-final"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de gta-vi-landing-page-scroll-final"
+      }
+    ],
+    "cluster": "SCROLL-LAGGED",
+    "engine": "gsap",
+    "motion_signature": "scrubbed pinned hero with shrinking SVG-mask logo reveal — zero tweens, every property is a direct function of ScrollTrigger progress under scrub:1 (overlay scale 500→1 exponentially over progress 0→0.85, hero image 1.5→1, headline gradient wipe 0.7→0.85)",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-lagged"
+  },
+  "review": {
+    "status": "public",
+    "comment": "El componente tiene errores por lo menos en Mobile pega un salto raro y se ve la página vacía al hacer scroll a media página. El vídeo debe ser largo y haciendo scroll hacia abajo para que se vea bien el efecto"
+  }
+}

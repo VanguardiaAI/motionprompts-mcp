@@ -1,0 +1,205 @@
+{
+  "slug": "products-lightbox-gallery",
+  "sourceDir": "codegrid-products-lightbox-gallery",
+  "title": "Products Lightbox Gallery",
+  "description": "A large draggable canvas holds a 12x12 grid of sneaker product tiles that the user pans by mouse-dragging, with movement GSAP-tweened (x/y, power1.out) for inertial smoothing. Clicking a tile (drag vs click is disambiguated via mousedown/mousemove flags) fades in a full-screen lightbox modal populated with that product's image, name and info via gsap.to opacity 0 to 1.",
+  "category": "gallery",
+  "tags": [
+    "draggable",
+    "lightbox",
+    "modal",
+    "product-grid",
+    "gsap",
+    "canvas-pan",
+    "ecommerce",
+    "minimal"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "clip": {
+      "seconds": 10,
+      "actions": [
+        {
+          "type": "drag",
+          "end": 0.55
+        },
+        {
+          "type": "click",
+          "selector": ".product-img-container",
+          "at": 0.66
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "Two colorful grey/yellow/red technical runners floating against a pale blue-grey studio background ('Court Two — Grey' colorways).",
+      "role": "Product tile in the draggable grid and the lightbox product image (also the default modal image).",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "Pair of all-white knit sneakers shot top-down on a white surface ('Court One — Chalk' colorways).",
+      "role": "Product tile in the draggable grid and a 'Pairs well with' suggestion thumbnail in the lightbox.",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "Pair of light-grey knit trainers with white soles leaning against a soft grey studio background ('Trainer — Fog' colorways).",
+      "role": "Product tile in the draggable grid and lightbox product image.",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "White perforated runner with a bright red collar lining resting on white crumpled fabric ('Runner — White' colorways).",
+      "role": "Product tile in the draggable grid, lightbox product image and a 'Pairs well with' suggestion thumbnail.",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "Toe of an all-black leather sneaker touching down on a clean white studio floor ('Court Low — Ink' colorways).",
+      "role": "Product tile in the draggable grid and lightbox product image.",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "minimal",
+      "elegant",
+      "editorial"
+    ],
+    "useCase": [
+      "gallery",
+      "product-showcase",
+      "image-reveal"
+    ],
+    "useWhen": "Úsalo para un escaparate de productos explorable: un lienzo enorme que se arrastra con el ratón y un lightbox a pantalla completa al hacer clic en cada producto.",
+    "aliases": [
+      "galeria arrastrable",
+      "lienzo de productos",
+      "lightbox de producto",
+      "product canvas",
+      "draggable grid",
+      "modal de producto"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 5,
+    "perfCost": "light",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Tinta",
+      "type": "color",
+      "default": "#1b1812",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "products-lightbox-gallery",
+    "title": "Products Lightbox Gallery",
+    "category": "gallery",
+    "trigger": "drag",
+    "libs": [
+      "gsap",
+      "ionicons"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power1",
+    "duration_range": [
+      0.2,
+      0.5
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 5,
+      "bytes": 208771,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "html/body overflow:hidden"
+    ],
+    "capabilities": [
+      {
+        "capability": "page-scroll-lock",
+        "reason": "fija overflow:hidden en html/body"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "CAPTURED-VIRTUAL-SCROLL",
+    "engine": "gsap",
+    "motion_signature": "drag-panned giant tile grid, fade lightbox",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  },
+  "review": {
+    "status": "public"
+  }
+}

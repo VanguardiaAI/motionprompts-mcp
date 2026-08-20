@@ -1,0 +1,237 @@
+{
+  "slug": "draggable-menu",
+  "sourceDir": "codegrid-draggable-menu",
+  "title": "Draggable Pill Menu",
+  "description": "Pill-shaped floating menu drawer that can be dragged anywhere in the viewport with GSAP Draggable (bounds: window); a dashed drop-zone outline fades in within a 200px snap threshold of its origin and the drawer springs back to its corner with power2.out on release. Clicking the hamburger toggler expands the pill: the items row animates from width 0 to full width (power3.inOut, 0.5s) while each link fades and scales in with a 0.05s stagger, reversed from the end on close.",
+  "category": "menu",
+  "tags": [
+    "draggable",
+    "menu",
+    "pill",
+    "snap",
+    "drop-zone",
+    "hamburger",
+    "stagger"
+  ],
+  "gsap": [
+    "Draggable"
+  ],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 1200,
+    "click": ".menu-toggler"
+  },
+  "images": [
+    {
+      "file": "logo.svg",
+      "desc": "ink 'Drift' wordmark logo, geometric sans letterforms, tight tracking, vector SVG",
+      "role": "logo inside the menu drawer pill",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-15",
+  "intent": {
+    "mood": [
+      "minimal",
+      "elegant",
+      "playful"
+    ],
+    "useCase": [
+      "navigation"
+    ],
+    "useWhen": "Úsalo cuando quieras un menú de navegación flotante y lúdico que se pueda arrastrar por la pantalla y se expanda al pulsar la hamburguesa.",
+    "aliases": [
+      "menú arrastrable",
+      "draggable menu",
+      "pill menu",
+      "menú flotante",
+      "floating nav",
+      "menú hamburguesa"
+    ]
+  },
+  "runtime": {
+    "level": "widget",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "Draggable"
+    ],
+    "assetCount": 1,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#f0ede4",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Tinta",
+      "type": "color",
+      "default": "#0d0d0d",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "itemStagger",
+      "label": "Escalonado de las entradas",
+      "type": "range",
+      "min": 0,
+      "max": 0.3,
+      "step": 0.01,
+      "default": 0.05,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "itemStagger"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "openDuration",
+      "label": "Apertura del cajón",
+      "type": "range",
+      "min": 0.15,
+      "max": 2,
+      "step": 0.05,
+      "default": 0.5,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "openDuration"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "itemScale",
+      "label": "Tamaño guardado",
+      "type": "range",
+      "min": 0.3,
+      "max": 1,
+      "step": 0.05,
+      "default": 0.85,
+      "apply": {
+        "kind": "js",
+        "path": "itemScale"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "snapThreshold",
+      "label": "Imán al soltarlo",
+      "type": "range",
+      "min": 50,
+      "max": 600,
+      "step": 10,
+      "default": 200,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "snapThreshold"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "draggable-menu",
+    "title": "Draggable Pill Menu",
+    "category": "menu",
+    "trigger": "drag",
+    "libs": [
+      "gsap",
+      "Draggable"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power3",
+    "duration_range": [
+      0.1,
+      0.5
+    ],
+    "stagger": 0.05,
+    "assets_required": {
+      "count": 1,
+      "bytes": 288,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "CLICK-CURTAIN",
+    "engine": "gsap",
+    "motion_signature": "draggable pill menu with snap-back and staggered expand",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "curtain-toggle"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

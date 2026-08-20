@@ -1,0 +1,303 @@
+{
+  "slug": "gradual-blur-edge",
+  "title": "Kiln Seven — Gradual Blur Edges",
+  "description": "A progressive blur band that softens the edge of a scrolling page instead of cutting it. Rather than one blurred layer behind a gradient mask — which still shows the line where blurring starts — the band is a stack of N backdrop-filter layers, each with its own blur radius and its own linear-gradient mask window, and the windows deliberately overlap so each layer fades out where the next has already faded in. A falloff curve distributes the radii (linear, smoothstep or exponential), the same builder serves top, bottom, left and right edges, and one scrubbed ScrollTrigger breathes the fixed bottom band from 3rem to 11rem as the index runs.",
+  "category": "scroll",
+  "tags": [
+    "backdrop-filter",
+    "progressive-blur",
+    "css-mask",
+    "layered-blur",
+    "sticky-edge",
+    "scrolltrigger",
+    "scrub",
+    "lenis",
+    "editorial",
+    "ceramics"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "scrollTo": 0.42,
+    "waitMs": 2200
+  },
+  "images": [
+    {
+      "file": "kiln-floor.jpg",
+      "desc": "Raked ridges of warm sand-coloured grit filling the frame, lit from a low angle.",
+      "role": "Full-bleed hero photograph. Its high-frequency texture is what makes the top blur band legible — on a flat field the effect is invisible.",
+      "replaced": true,
+      "reused_from": "ashfall-3d-image-gallery/img4.jpg"
+    },
+    {
+      "file": "throwing.jpg",
+      "desc": "Two hands centring a wet clay bowl on a wheel.",
+      "role": "Last card of the horizontal shelf rail.",
+      "replaced": true,
+      "reused_from": "ashfall-3d-image-gallery/img12.jpg"
+    },
+    {
+      "file": "glaze-01.jpg",
+      "desc": "A white ring-shaped vase with a dried stem, on a plaster block.",
+      "role": "Thumbnail in the glaze index.",
+      "replaced": true,
+      "reused_from": "ashfall-3d-image-gallery/img1.jpg"
+    },
+    {
+      "file": "glaze-02.jpg",
+      "desc": "Stacked matte plates and a cup on concrete blocks.",
+      "role": "Thumbnail in the glaze index.",
+      "replaced": true,
+      "reused_from": "ashfall-3d-image-gallery/img2.jpg"
+    },
+    {
+      "file": "glaze-03.jpg",
+      "desc": "Three stone and wood vessels of differing heights against a pale wall.",
+      "role": "Thumbnail in the glaze index.",
+      "replaced": true,
+      "reused_from": "ashfall-3d-image-gallery/img5.jpg"
+    },
+    {
+      "file": "glaze-04.jpg",
+      "desc": "Pale vases holding dried stems, lined up on a shelf.",
+      "role": "Thumbnail in the glaze index.",
+      "replaced": true,
+      "reused_from": "ashfall-3d-image-gallery/img9.jpg"
+    },
+    {
+      "file": "glaze-05.jpg",
+      "desc": "A rough clay block beside two pale bottles.",
+      "role": "Thumbnail in the glaze index.",
+      "replaced": true,
+      "reused_from": "ashfall-3d-image-gallery/img20.jpg"
+    },
+    {
+      "file": "glaze-06.jpg",
+      "desc": "A woven vase and a jug on a wooden stool against a pink ground.",
+      "role": "Thumbnail in the glaze index.",
+      "replaced": true,
+      "reused_from": "ashfall-3d-image-gallery/img18.jpg"
+    },
+    {
+      "file": "glaze-07.jpg",
+      "desc": "Two hands holding a raw, unfired clay bowl.",
+      "role": "Thumbnail in the glaze index.",
+      "replaced": true,
+      "reused_from": "ashfall-3d-image-gallery/img24.jpg"
+    },
+    {
+      "file": "glaze-08.jpg",
+      "desc": "A single dried fern laid on white.",
+      "role": "Thumbnail in the glaze index.",
+      "replaced": true,
+      "reused_from": "ashfall-3d-image-gallery/img21.jpg"
+    },
+    {
+      "file": "shelf-01.jpg",
+      "desc": "Stacked concrete blocks in hard raking light.",
+      "role": "Card in the horizontal shelf rail.",
+      "replaced": true,
+      "reused_from": "ashfall-3d-image-gallery/img22.jpg"
+    },
+    {
+      "file": "shelf-02.jpg",
+      "desc": "Folded white cloth in soft daylight.",
+      "role": "Card in the horizontal shelf rail.",
+      "replaced": true,
+      "reused_from": "ashfall-3d-image-gallery/img11.jpg"
+    },
+    {
+      "file": "shelf-03.jpg",
+      "desc": "A small plant against a bare white wall.",
+      "role": "Card in the horizontal shelf rail.",
+      "replaced": true,
+      "reused_from": "ashfall-3d-image-gallery/img13.jpg"
+    },
+    {
+      "file": "shelf-04.jpg",
+      "desc": "Pampas grasses lit from behind.",
+      "role": "Card in the horizontal shelf rail.",
+      "replaced": true,
+      "reused_from": "ashfall-3d-image-gallery/img14.jpg"
+    }
+  ],
+  "updated": "2026-08-04",
+  "intent": {
+    "mood": [
+      "minimal",
+      "editorial",
+      "organic"
+    ],
+    "useCase": [
+      "gallery",
+      "hero",
+      "background"
+    ],
+    "useWhen": "Úsalo cuando un borde deba disolverse en vez de cortarse: una lista larga que se pierde por abajo o una cabecera fija sobre fotografía.",
+    "aliases": [
+      "progressive blur",
+      "gradual blur",
+      "desenfoque progresivo",
+      "blur gradient",
+      "edge fade",
+      "frosted edge",
+      "backdrop blur band"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 14,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": false,
+    "verified": false,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "kiln",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#14100d",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--kiln"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "slip",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f0ebe2",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--slip"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "celadon",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#8fb3a3",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--celadon"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "gradual-blur-edge",
+    "title": "Kiln Seven — Gradual Blur Edges",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": true,
+    "ease_family": null,
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 14,
+      "bytes": 969323,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": true
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de gradual-blur-edge"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de gradual-blur-edge"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de gradual-blur-edge"
+      }
+    ],
+    "cluster": "SCROLL-LAGGED",
+    "engine": "gsap",
+    "motion_signature": "Almost all of the effect is static CSS: three .edge containers are filled at load with N stacked <i> layers, each carrying its own backdrop-filter radius and its own overlapping linear-gradient mask window (5 layers top, 6 right, 6 bottom). Top and bottom bands are position: fixed at page level; the right band is absolute inside the rail wrapper. The only scroll-driven motion is the height of the fixed bottom band: two scrubbed (0.4) ScrollTriggers on .book animate the :root custom property --edge-height 8rem -> 11rem across the index's entry (top 80% -> top 20%) and 11rem -> 3rem across its exit (bottom 90% -> bottom 40%). Both are skipped entirely under prefers-reduced-motion, leaving the band at its CSS default of 8rem. Three dial buttons rebuild the bottom stack; that is a rebuild, not a transition.",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-lagged"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

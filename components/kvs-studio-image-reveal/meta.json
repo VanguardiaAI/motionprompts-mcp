@@ -1,0 +1,306 @@
+{
+  "slug": "kvs-studio-image-reveal",
+  "sourceDir": "codegrid-kvs-studio-image-reveal",
+  "title": "KVS Studio Scroll-Powered Image Reveal",
+  "description": "Pinned full-viewport stack of five images scrubbed over four viewport heights: each image's clip-path wipes upward to reveal the next while an orange ASCII-character dissolve band (a 16px grid of random glyphs with hash-based scatter and density falloff) dithers the wipe edge, all synced to Lenis smooth scrolling.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "pin",
+    "scrub",
+    "clip-path",
+    "image-reveal",
+    "ascii",
+    "dissolve",
+    "dithering",
+    "lenis"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "scrollTo": 0.25,
+    "waitMs": 2000
+  },
+  "images": [
+    {
+      "file": "img-1.jpg",
+      "desc": "board-marked concrete courtyard walls meeting at a bright slot of sky, warm minimalist architecture photo",
+      "role": "stacked image 1 (top of stack, first to wipe away)",
+      "replaced": true
+    },
+    {
+      "file": "img-2.jpg",
+      "desc": "curved atrium interior spiralling up toward a glazed skylight, warm golden architectural photo",
+      "role": "stacked image 2",
+      "replaced": true
+    },
+    {
+      "file": "img-3.jpg",
+      "desc": "ribbed plaster tunnel interior opening onto a lounge chair and potted plant in soft daylight",
+      "role": "stacked image 3",
+      "replaced": false
+    },
+    {
+      "file": "img-4.jpg",
+      "desc": "sunlight cutting hard diagonal shadows across a plastered gallery room with a tall sash window",
+      "role": "stacked image 4",
+      "replaced": true
+    },
+    {
+      "file": "img-5.jpg",
+      "desc": "a single dark chair set against tall gridded windows looking out onto summer greenery, museum interior",
+      "role": "stacked image 5 (revealed last)",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "futuristic",
+      "technical",
+      "experimental"
+    ],
+    "useCase": [
+      "image-reveal",
+      "scroll-story",
+      "gallery"
+    ],
+    "useWhen": "Úsalo cuando quieras encadenar al scroll el revelado de varias imágenes a pantalla completa con un llamativo borde de disolución ASCII entre cada una.",
+    "aliases": [
+      "revelado de imágenes con scroll",
+      "scroll image reveal",
+      "disolución ascii",
+      "ascii dissolve",
+      "imágenes apiladas clip-path",
+      "pinned image stack"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 5,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#16161a",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f2f2f0",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "cellSize",
+      "label": "Tamaño de la celda",
+      "type": "range",
+      "min": 12,
+      "max": 48,
+      "step": 1,
+      "default": 16,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "cellSize"
+      }
+    },
+    {
+      "id": "spreadAbove",
+      "label": "Dispersión hacia arriba",
+      "type": "range",
+      "min": 0.05,
+      "max": 0.6,
+      "step": 0.005,
+      "default": 0.25,
+      "apply": {
+        "kind": "js",
+        "path": "spreadAbove"
+      }
+    },
+    {
+      "id": "spreadBelow",
+      "label": "Dispersión hacia abajo",
+      "type": "range",
+      "min": 0.05,
+      "max": 0.6,
+      "step": 0.005,
+      "default": 0.25,
+      "apply": {
+        "kind": "js",
+        "path": "spreadBelow"
+      }
+    },
+    {
+      "id": "scatterIntensity",
+      "label": "Intensidad del esparcido",
+      "type": "range",
+      "min": 0,
+      "max": 0.5,
+      "step": 0.005,
+      "default": 0.15,
+      "apply": {
+        "kind": "js",
+        "path": "scatterIntensity"
+      }
+    },
+    {
+      "id": "visibilityThreshold",
+      "label": "Umbral de aparición",
+      "type": "range",
+      "min": 0.05,
+      "max": 1.3,
+      "step": 0.01,
+      "default": 0.65,
+      "apply": {
+        "kind": "js",
+        "path": "visibilityThreshold"
+      }
+    },
+    {
+      "id": "scrollPerTransition",
+      "label": "Scroll por imagen",
+      "type": "range",
+      "min": 0.4,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "scrollPerTransition"
+      }
+    }
+  ],
+  "motion": {
+    "slug": "kvs-studio-image-reveal",
+    "title": "KVS Studio Scroll-Powered Image Reveal",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 3,
+    "pinned": true,
+    "viewport_heights": 400,
+    "needs_lenis": true,
+    "ease_family": null,
+    "duration_range": [
+      1.8,
+      1.8
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 5,
+      "bytes": 1280207,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de kvs-studio-image-reveal"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de kvs-studio-image-reveal"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de kvs-studio-image-reveal"
+      }
+    ],
+    "cluster": "SCROLL-WELDED",
+    "engine": "gsap",
+    "motion_signature": "scrubbed pinned clip-path wipe with ASCII dissolve band",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-welded"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

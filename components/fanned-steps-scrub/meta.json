@@ -1,0 +1,252 @@
+{
+  "slug": "fanned-steps-scrub",
+  "title": "Fanned Steps on an Arc",
+  "description": "A sticky-pinned scene where ticket-shaped step cards rest on the rim of a giant wheel below the viewport and roll through it as you scroll: each card swings up from the right, passes upright through the centre and swings off to the left, staying tangent to the arc. One ScrollTrigger writes every position with `gsap.set` from trigonometry — no tween, no timeline on the cards, so the smoothing comes entirely from Lenis. The radius is derived from viewport width (never a constant) and the opacity falloff is deliberately gentle, because both are the parameters that empty the stage when set wrong. Cards are masked into tickets with two radial-gradient notches. A thin progress bar is the only cue of position inside a pinned section. Reduced motion drops the arc and stacks the steps.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "scrolltrigger",
+    "sticky",
+    "arc",
+    "circular",
+    "steps",
+    "process",
+    "cards",
+    "ticket",
+    "trigonometry",
+    "lenis",
+    "editorial"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 1200,
+    "scrollTo": 0.5,
+    "clip": {
+      "seconds": 9
+    }
+  },
+  "images": [
+    {
+      "file": "step-1.jpg",
+      "desc": "food/production photograph 1, 16:10, top of ticket card",
+      "role": "image of step 01",
+      "replaced": true,
+      "reused_from": "catálogo existente (public/c), recortado con sharp — no se generó ninguna imagen nueva"
+    },
+    {
+      "file": "step-2.jpg",
+      "desc": "food/production photograph 2, 16:10, top of ticket card",
+      "role": "image of step 02",
+      "replaced": true,
+      "reused_from": "catálogo existente (public/c), recortado con sharp — no se generó ninguna imagen nueva"
+    },
+    {
+      "file": "step-3.jpg",
+      "desc": "food/production photograph 3, 16:10, top of ticket card",
+      "role": "image of step 03",
+      "replaced": true,
+      "reused_from": "catálogo existente (public/c), recortado con sharp — no se generó ninguna imagen nueva"
+    },
+    {
+      "file": "step-4.jpg",
+      "desc": "food/production photograph 4, 16:10, top of ticket card",
+      "role": "image of step 04",
+      "replaced": true,
+      "reused_from": "catálogo existente (public/c), recortado con sharp — no se generó ninguna imagen nueva"
+    }
+  ],
+  "updated": "2026-08-02",
+  "intent": {
+    "mood": [
+      "editorial",
+      "playful",
+      "technical"
+    ],
+    "useCase": [
+      "scroll-story",
+      "card-deck"
+    ],
+    "useWhen": "Cuando hay una secuencia con orden real —pasos, fases, un calendario— y quieres que se lea como una secuencia y no como una rejilla.",
+    "aliases": [
+      "pasos en abanico",
+      "proceso en arco",
+      "tarjetas sobre una curva",
+      "arc steps",
+      "fanned cards",
+      "process scroll",
+      "timeline curva"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 4,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": false,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "origin": {
+    "kind": "observed",
+    "note": "Abstracción de la sección de proceso de pizza-amici.nl, observada por fotogramas: cuatro pasos como tickets desplegados en abanico sobre una curva, pineados y scrubbed (su DIV.steps-container, 1 pin y 10 scrub de 16 ScrollTriggers).",
+    "gap": "El catálogo tenía `ethnocare` con un arco circular de tarjetas, pero con radio fijo enorme y sin la lección del desvanecido. Éste documenta los dos parámetros que vacían la escena."
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bone",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#efe9e0",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bone"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#14100e",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "signal",
+      "label": "Acento",
+      "type": "color",
+      "default": "#d6522b",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--signal"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#fbf7f0",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "fanned-steps-scrub",
+    "title": "Fanned Steps on an Arc",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": true,
+    "ease_family": null,
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 5,
+      "bytes": 229592,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "width-branch",
+      "media_queries": 0,
+      "reduced_motion": true
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de fanned-steps-scrub"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de fanned-steps-scrub"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de fanned-steps-scrub"
+      }
+    ],
+    "cluster": "SCROLL-WELDED",
+    "engine": "gsap",
+    "motion_signature": "sticky-pinned scene over a 300svh track where N ticket cards sit on a wheel of radius max(560, innerWidth*0.7) across a 0.9pi arc; a single ScrollTrigger onUpdate remaps progress and writes x/y/rotation/opacity/scale with gsap.set — no tween, no scrub, smoothing comes only from Lenis; the vertical component of the arc is squashed to 0.55",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-welded"
+  },
+  "review": {
+    "status": "public"
+  }
+}

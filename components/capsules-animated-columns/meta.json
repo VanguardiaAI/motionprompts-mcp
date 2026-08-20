@@ -1,0 +1,294 @@
+{
+  "slug": "capsules-animated-columns",
+  "sourceDir": "cg-capsules-animated-columns",
+  "title": "Capsules Animated Sticky Columns",
+  "description": "A pinned full-screen section where four rounded 'capsule' columns swap in place as you scroll. A single ScrollTrigger pins the section over 5x viewport height (Lenis-smoothed) while a second ScrollTrigger watches progress and, at the 0.33 and 0.66 thresholds, fires phased gsap.to tweens that slide columns in from X/Y offsets, fade/scale the previous column out, grow a clip-path reveal on an image, and swap SplitText line spans between two stacked text blocks. Scrolling back reverses each phase.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "pin",
+    "sticky-columns",
+    "clip-path",
+    "splittext",
+    "lenis",
+    "phased-transition",
+    "editorial",
+    "minimal"
+  ],
+  "gsap": [
+    "ScrollTrigger",
+    "SplitText"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "scrollTo": 0.5,
+    "waitMs": 2500
+  },
+  "images": [
+    {
+      "file": "img_01.jpg",
+      "desc": "Warm garden room with boucle sofa and floor-to-ceiling glazing (Casa Alzina).",
+      "role": "First image capsule (col-2), visible before the first phase swap.",
+      "replaced": true
+    },
+    {
+      "file": "img_02.jpg",
+      "desc": "Arched lime-plaster courtyard with long pool (Sa Clasta).",
+      "role": "Second image capsule (col-2), revealed via a growing clip-path in phase one.",
+      "replaced": true
+    },
+    {
+      "file": "img_03.jpg",
+      "desc": "White rendered villa and pool, warm-graded to match the set (Casa Vent).",
+      "role": "Final image capsule (col-4), slides up into view in the last phase.",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "minimal",
+      "elegant",
+      "editorial"
+    ],
+    "useCase": [
+      "scroll-story",
+      "gallery",
+      "image-reveal"
+    ],
+    "useWhen": "Úsalo para una sección de scroll fijada donde columnas tipo cápsula (texto e imágenes) se intercambian por fases con clip-path y SplitText.",
+    "aliases": [
+      "columnas animadas",
+      "sticky columns",
+      "capsulas scroll",
+      "pinned columns",
+      "revelado por fases",
+      "scroll columns"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger",
+      "SplitText"
+    ],
+    "assetCount": 3,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "acid",
+      "label": "Acento",
+      "type": "color",
+      "default": "#e5ee6e",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--acid"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Tinta",
+      "type": "color",
+      "default": "#111111",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "scrollLength",
+      "label": "Longitud del tramo fijado",
+      "type": "range",
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "default": 5,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "scrollLength"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "shrinkScale",
+      "label": "Encogido al salir",
+      "type": "range",
+      "min": 0.3,
+      "max": 1,
+      "step": 0.05,
+      "default": 0.75,
+      "apply": {
+        "kind": "js",
+        "path": "shrinkScale"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "imgZoom",
+      "label": "Acercamiento de la imagen",
+      "type": "range",
+      "min": 1,
+      "max": 2,
+      "step": 0.05,
+      "default": 1.25,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "imgZoom"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "phaseDuration",
+      "label": "Duración del relevo",
+      "type": "range",
+      "min": 0.2,
+      "max": 2.5,
+      "step": 0.05,
+      "default": 0.75,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "phaseDuration"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "textDelay",
+      "label": "Espera del texto",
+      "type": "range",
+      "min": 0,
+      "max": 2,
+      "step": 0.05,
+      "default": 0.5,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "textDelay"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "capsules-animated-columns",
+    "title": "Capsules Animated Sticky Columns",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "SplitText",
+      "lenis"
+    ],
+    "complexity": 4,
+    "pinned": true,
+    "viewport_heights": 600,
+    "needs_lenis": true,
+    "ease_family": null,
+    "duration_range": [
+      0.25,
+      2.4
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 3,
+      "bytes": 596090,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 3,
+      "reduced_motion": true
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de capsules-animated-columns"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de capsules-animated-columns"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de capsules-animated-columns"
+      }
+    ],
+    "cluster": "SCROLL-THRESHOLD",
+    "engine": "gsap",
+    "motion_signature": "pinned phase-swapped capsule columns with clip-path reveal",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "reveal-on-enter"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

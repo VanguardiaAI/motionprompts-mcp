@@ -1,0 +1,309 @@
+{
+  "slug": "react-pan-canvas",
+  "sourceDir": "cg-react-pan-canvas",
+  "title": "Pan-Canvas Video Gallery",
+  "description": "A full-viewport canvas holds an oversized 200vw x 200vh grid of film tiles centered with translate(-50%, -50%); on mousemove the gallery is translated the opposite way of the cursor relative to the container center, eased by a 2000ms cubic-bezier CSS transition, so moving the mouse smoothly pans across the grid. Each tile hover-fades its preview still out and a second frame plus a lower-third film credit in; fixed studio chrome (wordmark, nav, viewfinder corner brackets, pan hint) frames the canvas, and on touch devices the reel auto-drifts via a CSS keyframe animation with credits always visible.",
+  "category": "gallery",
+  "tags": [
+    "gallery",
+    "mousemove",
+    "pan",
+    "parallax",
+    "interactive",
+    "hover",
+    "video",
+    "cinematic",
+    "cursor"
+  ],
+  "gsap": [],
+  "deps": [],
+  "preview": {
+    "waitMs": 2500,
+    "clip": {
+      "seconds": 8,
+      "actions": [
+        {
+          "type": "cursor",
+          "path": "figure8"
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "Figures in dynamic motion, energetic sport-campaign feel",
+      "role": "preview",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "Sneaker and apparel product shot, athletic gear",
+      "role": "reveal",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "Surreal editorial composition, bold brand-vision imagery",
+      "role": "preview",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "Abstract 3D render, sculptural forms",
+      "role": "reveal",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "Minimal metallic still life, clean motion-graphics vibe",
+      "role": "preview",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "Architectural interior, minimal geometry",
+      "role": "reveal",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "Warm lifestyle scene, momentum and movement",
+      "role": "preview",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "People in motion, highlight-reel energy",
+      "role": "reveal",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpg",
+      "desc": "Color portrait, editorial ad-strategy subject",
+      "role": "preview",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpg",
+      "desc": "Surreal editorial frame, conceptual strategy imagery",
+      "role": "reveal",
+      "replaced": true
+    },
+    {
+      "file": "img11.jpg",
+      "desc": "Dynamic people in motion, sport-drive showcase",
+      "role": "preview",
+      "replaced": true
+    },
+    {
+      "file": "img12.jpg",
+      "desc": "Neon-lit street scene, night-time energy",
+      "role": "reveal",
+      "replaced": true
+    },
+    {
+      "file": "img13.jpg",
+      "desc": "Black-and-white portrait, brand-essence storytelling",
+      "role": "preview",
+      "replaced": true
+    },
+    {
+      "file": "img14.jpg",
+      "desc": "Warm lifestyle moment, human and inviting",
+      "role": "reveal",
+      "replaced": true
+    },
+    {
+      "file": "img15.jpg",
+      "desc": "Architectural interior, minimal flair",
+      "role": "preview",
+      "replaced": true
+    },
+    {
+      "file": "img16.jpg",
+      "desc": "Abstract render, sculptural composition",
+      "role": "reveal",
+      "replaced": true
+    },
+    {
+      "file": "img17.jpg",
+      "desc": "Backlit silhouette, documentary mood",
+      "role": "preview",
+      "replaced": true
+    },
+    {
+      "file": "img18.jpg",
+      "desc": "Black-and-white portrait, intimate documentary tone",
+      "role": "reveal",
+      "replaced": true
+    },
+    {
+      "file": "img19.jpg",
+      "desc": "Pop-art portrait, creative ad concept",
+      "role": "preview",
+      "replaced": true
+    },
+    {
+      "file": "img20.jpg",
+      "desc": "Surreal editorial image, imaginative concept work",
+      "role": "reveal",
+      "replaced": true
+    },
+    {
+      "file": "img21.jpg",
+      "desc": "Sneaker and apparel hero, sport-icon styling",
+      "role": "preview",
+      "replaced": true
+    },
+    {
+      "file": "img22.jpg",
+      "desc": "Figure in motion, athletic journey",
+      "role": "reveal",
+      "replaced": true
+    },
+    {
+      "file": "logo.png",
+      "desc": "Vanguardia mark, light variant, header wordmark",
+      "role": "logo",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "minimal",
+      "cinematic",
+      "editorial"
+    ],
+    "useCase": [
+      "gallery",
+      "hover-interaction",
+      "product-showcase"
+    ],
+    "useWhen": "Úsalo para una galería inmersiva a pantalla completa que se recorre moviendo el ratón (pan) y revela vídeos al pasar por encima de cada tile.",
+    "aliases": [
+      "galeria pan raton",
+      "mousemove gallery",
+      "canvas paneable",
+      "parallax gallery",
+      "video reel hover",
+      "galeria interactiva"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 23,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "canvas",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#0f0f0f",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--canvas"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "muted",
+      "label": "Texto",
+      "type": "color",
+      "default": "#8c8c88",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--muted"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "react-pan-canvas",
+    "title": "Pan-Canvas Video Gallery",
+    "category": "gallery",
+    "trigger": "pointer",
+    "libs": [],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": 200,
+    "needs_lenis": false,
+    "ease_family": null,
+    "duration_range": [
+      2.4,
+      52
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 23,
+      "bytes": 2495787,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": true
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "POINTER-CHASE",
+    "engine": "css-transition",
+    "motion_signature": "cursor-inverse pan: mousemove writes an absolute translate() on an oversized canvas and a single 2000ms cubic-bezier(0.075,0.82,0.165,1) transition supplies all the inertia — no rAF loop, no lerp, no easing library",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  },
+  "review": {
+    "status": "public",
+    "comment": "En Mobile no funciona"
+  }
+}

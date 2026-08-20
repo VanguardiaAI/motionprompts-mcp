@@ -1,0 +1,528 @@
+{
+  "slug": "nite-riot-landing-page-reveal-javascript",
+  "sourceDir": "codegrid-nite-riot-landing-page-reveal-javascript",
+  "title": "Nite Riot Landing Page Reveal",
+  "description": "Autoplay landing-page intro: a black overlay reveals a gradient-fill logo and staggered project/location lists, then a centered 3x3 image grid clips open and rapidly cycles through random fashion photos. The outer cells clip away and the central hero image scales up (clip-path zoom) while two banner images pop and rotate outward, the nav drops in, and masked SplitType word reveals push in the intro copy and title. Runs on DOMContentLoaded via three parallel GSAP timelines with a custom 'hop' CustomEase.",
+  "category": "preloader",
+  "tags": [
+    "reveal",
+    "preloader",
+    "clip-path",
+    "gsap",
+    "splittype",
+    "customease",
+    "editorial",
+    "image-grid",
+    "landing"
+  ],
+  "gsap": [
+    "CustomEase"
+  ],
+  "deps": [
+    "gsap",
+    "split-type"
+  ],
+  "preview": {
+    "waitMs": 11500
+  },
+  "images": [
+    {
+      "file": "img1.jpeg",
+      "desc": "Close-up portrait of a woman with dark bangs in a red jacket, moody lighting",
+      "role": "initial grid cell + rotation pool",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpeg",
+      "desc": "Woman in a dark coat photographed side-on against a bright red background",
+      "role": "initial grid cell + rotation pool",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpeg",
+      "desc": "Model in a sculptural black origami-fold gown with long straight hair on white",
+      "role": "initial grid cell + rotation pool",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpeg",
+      "desc": "Silhouette of a figure in a long dress against a saturated red background",
+      "role": "initial grid cell + rotation pool",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpeg",
+      "desc": "Extreme close-up of a woman's face draped in a sheer plastic veil",
+      "role": "hero image (center grid cell, scales up to full hero) + rotation pool",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpeg",
+      "desc": "Black-and-white portrait of a woman with a dark bob, half in shadow",
+      "role": "initial grid cell + rotation pool",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpeg",
+      "desc": "Minimal dark silhouette of a cropped-hair figure against a pale ground",
+      "role": "banner image 1 + initial grid cell + rotation pool",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpeg",
+      "desc": "Woman with closed eyes wearing a floral lace veil with orange blooms",
+      "role": "initial grid cell + rotation pool",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpeg",
+      "desc": "Low-key dark portrait of a face half-lit in deep shadow",
+      "role": "initial grid cell + rotation pool",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpeg",
+      "desc": "Woman with a bob and glasses in profile against a red background",
+      "role": "rotation pool",
+      "replaced": true
+    },
+    {
+      "file": "img11.jpeg",
+      "desc": "Face wrapped and reflected in shiny chrome metallic sheeting",
+      "role": "rotation pool",
+      "replaced": true
+    },
+    {
+      "file": "img12.jpeg",
+      "desc": "Red-haired freckled woman in a dark high-neck top, moody blue tone",
+      "role": "rotation pool",
+      "replaced": true
+    },
+    {
+      "file": "img13.jpeg",
+      "desc": "Freckled face with blue eyes under a pale bucket hat, close-up",
+      "role": "rotation pool",
+      "replaced": true
+    },
+    {
+      "file": "img14.jpeg",
+      "desc": "Muted teal silhouette portrait of a figure with cropped hair and an earring",
+      "role": "rotation pool",
+      "replaced": true
+    },
+    {
+      "file": "img15.jpeg",
+      "desc": "Red-haired freckled woman with a bun in a pale high-neck top",
+      "role": "rotation pool",
+      "replaced": true
+    },
+    {
+      "file": "img16.jpeg",
+      "desc": "Near-black silhouette of a head with a thin sliver of light",
+      "role": "banner image 2 + rotation pool",
+      "replaced": true
+    },
+    {
+      "file": "img17.jpeg",
+      "desc": "Figure in a sheer blue tulle dress and wide-brim hat on a blue background",
+      "role": "rotation pool",
+      "replaced": true
+    },
+    {
+      "file": "img18.jpeg",
+      "desc": "Person with hair whipping across the face, black-and-white striped top",
+      "role": "rotation pool",
+      "replaced": true
+    },
+    {
+      "file": "img19.jpeg",
+      "desc": "High-contrast black-and-white profile of a woman with a long braid",
+      "role": "rotation pool",
+      "replaced": true
+    },
+    {
+      "file": "img20.jpeg",
+      "desc": "Profile of a dark-skinned woman with short hair lit by a rainbow prism",
+      "role": "rotation pool",
+      "replaced": true
+    },
+    {
+      "file": "img21.jpeg",
+      "desc": "Gold-painted face and neck, bald, eyes closed, metallic sheen",
+      "role": "rotation pool",
+      "replaced": true
+    },
+    {
+      "file": "img22.jpeg",
+      "desc": "Extreme close-up of blue eyes and freckles under a glossy red visor reflection",
+      "role": "rotation pool",
+      "replaced": true
+    },
+    {
+      "file": "img23.jpeg",
+      "desc": "Woman with closed eyes in a floral lace veil with orange flowers",
+      "role": "rotation pool",
+      "replaced": true
+    },
+    {
+      "file": "img24.jpeg",
+      "desc": "Model in a pale sculptural head-wrap and chainmail top in a muted landscape",
+      "role": "rotation pool",
+      "replaced": true
+    },
+    {
+      "file": "img25.jpeg",
+      "desc": "Dramatic low-key portrait, bald head tilted up with bold makeup",
+      "role": "rotation pool",
+      "replaced": true
+    },
+    {
+      "file": "img26.jpeg",
+      "desc": "Red-haired person holding a red glove over one eye, pinstripe jacket",
+      "role": "rotation pool",
+      "replaced": true
+    },
+    {
+      "file": "img27.jpeg",
+      "desc": "Person with orange curly hair in a rainbow-fur turtleneck",
+      "role": "rotation pool",
+      "replaced": true
+    },
+    {
+      "file": "img28.jpeg",
+      "desc": "Face wrapped and reflected in glossy black plastic sheeting",
+      "role": "rotation pool",
+      "replaced": true
+    },
+    {
+      "file": "img29.jpeg",
+      "desc": "Woman in a beaded black high-neck holding a vertical sword",
+      "role": "rotation pool",
+      "replaced": true
+    },
+    {
+      "file": "img30.jpeg",
+      "desc": "Person in a pale ribbed hood against a dark muted background",
+      "role": "rotation pool",
+      "replaced": true
+    },
+    {
+      "file": "img31.jpeg",
+      "desc": "Painterly portrait of a woman with a blonde bob in a red patterned top",
+      "role": "rotation pool",
+      "replaced": true
+    },
+    {
+      "file": "img32.jpeg",
+      "desc": "Dark moody portrait of a freckled red-haired woman against black",
+      "role": "rotation pool",
+      "replaced": true
+    },
+    {
+      "file": "img33.jpeg",
+      "desc": "Woman with curly hair in a gold metallic high-neck top, warm tone",
+      "role": "rotation pool",
+      "replaced": true
+    },
+    {
+      "file": "img34.jpeg",
+      "desc": "Freckled blue-eyed face under a pale bucket hat, close-up",
+      "role": "rotation pool",
+      "replaced": true
+    },
+    {
+      "file": "img35.jpeg",
+      "desc": "Figure in a black balaclava and high-neck Victorian gown in a desert",
+      "role": "rotation pool",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "editorial",
+      "bold",
+      "cinematic"
+    ],
+    "useCase": [
+      "preloader",
+      "hero",
+      "image-reveal"
+    ],
+    "useWhen": "Úsalo como intro de una landing de agencia creativa o moda cuando quieras un revelado dramático con rejilla de fotos que baraja y hace zoom a una imagen hero.",
+    "aliases": [
+      "revelado de landing",
+      "intro de agencia",
+      "grid reveal",
+      "preloader editorial",
+      "image grid shuffle",
+      "hero zoom reveal"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "CustomEase"
+    ],
+    "assetCount": 35,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#14110d",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "overlay",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#0d0b09",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--overlay"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "totalCycles",
+      "label": "Barajados de las fotos",
+      "type": "range",
+      "min": 4,
+      "max": 40,
+      "step": 1,
+      "default": 20,
+      "apply": {
+        "kind": "js",
+        "path": "totalCycles"
+      }
+    },
+    {
+      "id": "listStagger",
+      "label": "Escalonado de las listas",
+      "type": "range",
+      "min": 0.02,
+      "max": 0.105,
+      "step": 0.005,
+      "default": 0.075,
+      "apply": {
+        "kind": "js",
+        "path": "listStagger"
+      }
+    },
+    {
+      "id": "gridStagger",
+      "label": "Escalonado de la rejilla",
+      "type": "range",
+      "min": 0.01,
+      "max": 0.15,
+      "step": 0.005,
+      "default": 0.05,
+      "apply": {
+        "kind": "js",
+        "path": "gridStagger"
+      }
+    },
+    {
+      "id": "heroZoom",
+      "label": "Zoom de partida de la portada",
+      "type": "range",
+      "min": 1,
+      "max": 4,
+      "step": 0.05,
+      "default": 2,
+      "apply": {
+        "kind": "js",
+        "path": "heroZoom"
+      }
+    },
+    {
+      "id": "heroScale",
+      "label": "Tamaño final de la portada",
+      "type": "range",
+      "min": 2,
+      "max": 6,
+      "step": 0.1,
+      "default": 4,
+      "apply": {
+        "kind": "js",
+        "path": "heroScale"
+      }
+    }
+  ],
+  "motion": {
+    "slug": "nite-riot-landing-page-reveal-javascript",
+    "title": "Nite Riot Landing Page Reveal",
+    "category": "preloader",
+    "trigger": "load",
+    "libs": [
+      "gsap",
+      "CustomEase",
+      "SplitType"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "custom",
+    "duration_range": [
+      0.15,
+      1.5
+    ],
+    "stagger": 0.05,
+    "assets_required": {
+      "count": 35,
+      "bytes": 3880036,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 3,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "entry-veil",
+        "reason": "velo de entrada a pantalla completa en la carga"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "aladesign-landing-page-reveal",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "aristidebenoist-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "audemarspiguet-menu",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "camille-mormal-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "hypnotic-gallery-gsap-flip",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "kin-landing-page",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "landing-page-reveal-no-webgl",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "meetings-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "menu-root-food",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "outfit-landing-page-reveal",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "p10-landing-page-reveal-gsap",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "push-over-overlay-menu",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "story-world-carousel-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "zajno-lp",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      }
+    ],
+    "cluster": "LOAD-ONESHOT",
+    "engine": "gsap",
+    "motion_signature": "timed preloader: clip-path grid reveal into hero",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "entry-veil"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

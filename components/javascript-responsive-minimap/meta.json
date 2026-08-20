@@ -1,0 +1,365 @@
+{
+  "slug": "javascript-responsive-minimap",
+  "sourceDir": "cg-javascript-responsive-minimap",
+  "title": "JavaScript Responsive Minimap",
+  "description": "A vertical thumbnail minimap (horizontal on mobile) whose framed indicator scrubs through 15 images as you scroll the wheel or drag on touch; a requestAnimationFrame loop lerps the strip toward its target offset, dims the thumbnail with the greatest overlap inside the indicator, and swaps that image into the large centered preview. Clicking a thumbnail eases the strip to center it with a slower lerp factor.",
+  "category": "gallery",
+  "tags": [
+    "minimap",
+    "gallery",
+    "scroll",
+    "lerp",
+    "requestanimationframe",
+    "vanilla-js",
+    "responsive",
+    "image-preview",
+    "interactive"
+  ],
+  "gsap": [],
+  "deps": [],
+  "preview": {
+    "waitMs": 2500,
+    "clip": {
+      "seconds": 9,
+      "actions": [
+        {
+          "type": "scroll",
+          "to": 0.9,
+          "mode": "pingpong"
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpeg",
+      "desc": "black-and-white silhouette of a dancer in a tutu against a window; default preview plate",
+      "role": "minimap thumbnail 1 / default preview image",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpeg",
+      "desc": "black-and-white photo of a dancer arched back in a full skirt",
+      "role": "minimap thumbnail 2",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpeg",
+      "desc": "black-and-white photo of a dancer dissolving into motion blur",
+      "role": "minimap thumbnail 3",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpeg",
+      "desc": "black-and-white photo of a dancer low to the floor reaching forward",
+      "role": "minimap thumbnail 4",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpeg",
+      "desc": "black-and-white photo of a split leap with a trailing skirt",
+      "role": "minimap thumbnail 5",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpeg",
+      "desc": "black-and-white photo of a dancer tying a shoe in stage haze",
+      "role": "minimap thumbnail 6",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpeg",
+      "desc": "black-and-white photo of fabric swung mid-turn",
+      "role": "minimap thumbnail 7",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpeg",
+      "desc": "black-and-white photo of a skirt caught at full swirl",
+      "role": "minimap thumbnail 8",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpeg",
+      "desc": "black-and-white silhouette in smoke with arms raised",
+      "role": "minimap thumbnail 9",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpeg",
+      "desc": "black-and-white backlit figure with one arm overhead",
+      "role": "minimap thumbnail 10",
+      "replaced": true
+    },
+    {
+      "file": "img11.jpeg",
+      "desc": "black-and-white photo of two dancers correcting a pose in rehearsal",
+      "role": "minimap thumbnail 11",
+      "replaced": true
+    },
+    {
+      "file": "img12.jpeg",
+      "desc": "black-and-white photo of a dancer mid-jump with legs folded",
+      "role": "minimap thumbnail 12",
+      "replaced": true
+    },
+    {
+      "file": "img13.jpeg",
+      "desc": "black-and-white photo of an extended leg over draped foil",
+      "role": "minimap thumbnail 13",
+      "replaced": true
+    },
+    {
+      "file": "img14.jpeg",
+      "desc": "black-and-white photo of a leap through a beam of light",
+      "role": "minimap thumbnail 14",
+      "replaced": true
+    },
+    {
+      "file": "img15.jpeg",
+      "desc": "black-and-white photo of a dancer at rest on a draped plinth",
+      "role": "minimap thumbnail 15",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "minimal",
+      "editorial",
+      "technical"
+    ],
+    "useCase": [
+      "gallery",
+      "navigation",
+      "product-showcase"
+    ],
+    "useWhen": "Úsalo cuando quieras navegar una galería de imágenes con un minimapa de miniaturas y una vista previa grande, controlado por scroll, arrastre o clic.",
+    "aliases": [
+      "minimapa",
+      "minimap gallery",
+      "navegador de miniaturas",
+      "image scrubber",
+      "galería con minimapa",
+      "thumbnail navigator"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 15,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#131316",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ash",
+      "label": "Texto",
+      "type": "color",
+      "default": "#8f8c94",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ash"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bone",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#eae7df",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bone"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "thumbSize",
+      "label": "Tamaño de las miniaturas",
+      "type": "range",
+      "min": 34,
+      "max": 110,
+      "step": 2,
+      "default": 60,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "thumbSize"
+      }
+    },
+    {
+      "id": "thumbGap",
+      "label": "Separación entre miniaturas",
+      "type": "range",
+      "min": -28,
+      "max": 24,
+      "step": 1,
+      "default": 0,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "thumbGap"
+      }
+    },
+    {
+      "id": "indicatorSize",
+      "label": "Tamaño del visor",
+      "type": "range",
+      "min": 30,
+      "max": 150,
+      "step": 2,
+      "default": 60,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "indicatorSize"
+      }
+    },
+    {
+      "id": "activeOpacity",
+      "label": "Opacidad de la miniatura activa",
+      "type": "range",
+      "min": 0,
+      "max": 1,
+      "step": 0.05,
+      "default": 0.3,
+      "apply": {
+        "kind": "js",
+        "path": "activeOpacity"
+      }
+    },
+    {
+      "id": "lerp",
+      "label": "Suavizado del recorrido",
+      "type": "range",
+      "min": 0.02,
+      "max": 0.25,
+      "step": 0.005,
+      "default": 0.075,
+      "apply": {
+        "kind": "js",
+        "path": "lerp"
+      }
+    },
+    {
+      "id": "scrollSpeed",
+      "label": "Sensibilidad de la rueda",
+      "type": "range",
+      "min": 0.15,
+      "max": 1.5,
+      "step": 0.05,
+      "default": 0.5,
+      "apply": {
+        "kind": "js",
+        "path": "scrollSpeed"
+      }
+    }
+  ],
+  "motion": {
+    "slug": "javascript-responsive-minimap",
+    "title": "JavaScript Responsive Minimap",
+    "category": "gallery",
+    "trigger": "wheel",
+    "libs": [],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": null,
+    "duration_range": [
+      0.2,
+      0.2
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 15,
+      "bytes": 1922702,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "width-branch",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "html/body overflow:hidden",
+      "preventDefault en wheel"
+    ],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "captura la rueda con preventDefault"
+      },
+      {
+        "capability": "page-scroll-lock",
+        "reason": "fija overflow:hidden en html/body"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "CAPTURED-VIRTUAL-SCROLL",
+    "engine": "raf-lerp",
+    "motion_signature": "Frame-rate-dependent exponential lerp (factor 0.075, or 0.05 during a click-to-center move) drives a thumbnail strip's translateX/translateY toward a target that wheel/touch deltas push by clamp(delta*0.5, -20, 20) per event and clicks snap to a centred plate; target is clamped to [-maxTranslate, 0]. The strip element with the greatest overlap against a fixed indicator box is dimmed to opacity 0.3 and swapped into the large preview. No tweening engine, no scroll space, no inertia beyond the lerp tail.",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  },
+  "review": {
+    "status": "public"
+  }
+}

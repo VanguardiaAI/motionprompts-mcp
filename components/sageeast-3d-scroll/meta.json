@@ -1,0 +1,240 @@
+{
+  "slug": "sageeast-3d-scroll",
+  "sourceDir": "cg-sageeast-3d-scroll",
+  "title": "Sage East 3D Scroll",
+  "description": "A fixed 3D perspective slider where ten alternating slides sit at staggered translateZ depths and fly toward the viewer as you scroll a 2000vh page. A per-slide ScrollTrigger (scrub) maps scroll progress to a Z increment, recomputes each slide's opacity via a mapRange fade, and cross-fades a blurred full-screen background image with gsap.to power3.out as each slide reaches the front.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "3d-perspective",
+    "translatez",
+    "scrub",
+    "depth",
+    "fashion",
+    "gsap",
+    "editorial",
+    "gallery"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "scrollTo": 0.8,
+    "waitMs": 2500,
+    "clip": {
+      "seconds": 9
+    }
+  },
+  "images": [
+    {
+      "file": "1.jpg",
+      "desc": "Studio profile portrait, warm-lit model against a saturated violet backdrop.",
+      "role": "Slide 1 'Violet Hour' image and its blurred full-screen background layer.",
+      "replaced": true
+    },
+    {
+      "file": "2.jpg",
+      "desc": "Motion editorial, pale ivory dress caught mid-twirl on a soft grey seamless.",
+      "role": "Slide 2 'Weightless' image and its blurred full-screen background layer.",
+      "replaced": true
+    },
+    {
+      "file": "3.jpg",
+      "desc": "Motion editorial, camel wool coat flaring in a full turn on grey seamless.",
+      "role": "Slide 3 'Full Circle' image and its blurred full-screen background layer.",
+      "replaced": true
+    },
+    {
+      "file": "4.jpg",
+      "desc": "Backlit portrait, wind-blown hair over a copper silk wrap against deep teal.",
+      "role": "Slide 4 'Undone' image and its blurred full-screen background layer.",
+      "replaced": true
+    },
+    {
+      "file": "5.jpg",
+      "desc": "Fabric study, molten-orange silk suspended in air on a mint-teal ground.",
+      "role": "Slide 5 'Silk Study' image and its blurred full-screen background layer.",
+      "replaced": true
+    },
+    {
+      "file": "6.jpg",
+      "desc": "Soft-focus film portrait seen through a sheer net curtain in warm daylight.",
+      "role": "Slide 6 'Net Curtain' image and its blurred full-screen background layer.",
+      "replaced": true
+    },
+    {
+      "file": "7.jpg",
+      "desc": "Available-light portrait behind gauzy curtains, sunlit garden beyond.",
+      "role": "Slide 7 'Garden Window' image and its blurred full-screen background layer.",
+      "replaced": true
+    },
+    {
+      "file": "8.jpg",
+      "desc": "Backlit portrait among white spring blossom, hazy film grain.",
+      "role": "Slide 8 'In Bloom' image and its blurred full-screen background layer.",
+      "replaced": true
+    },
+    {
+      "file": "9.jpg",
+      "desc": "Sunlit close portrait against blossom and stone, natural film warmth.",
+      "role": "Slide 9 'First Warmth' image and its blurred full-screen background layer.",
+      "replaced": true
+    },
+    {
+      "file": "10.jpg",
+      "desc": "Studio full-length, deep crimson coat and gown against cobalt-blue seamless.",
+      "role": "Slide 10 'Red on Cobalt' image and its blurred full-screen background layer.",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "elegant",
+      "editorial",
+      "futuristic"
+    ],
+    "useCase": [
+      "gallery",
+      "scroll-story",
+      "product-showcase"
+    ],
+    "useWhen": "Úsalo para una galería o showcase donde las imágenes emergen en profundidad 3D con el scroll, ideal para moda o portfolios editoriales.",
+    "aliases": [
+      "3d scroll gallery",
+      "galeria en profundidad",
+      "translatez scroll",
+      "slides en perspectiva",
+      "depth scroll",
+      "tunnel de imagenes"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 10,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#0a0a0c",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "sageeast-3d-scroll",
+    "title": "Sage East 3D Scroll",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger"
+    ],
+    "complexity": 3,
+    "pinned": false,
+    "viewport_heights": 2000,
+    "needs_lenis": false,
+    "ease_family": "power3",
+    "duration_range": [
+      0.3,
+      1.5
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 10,
+      "bytes": 1361082,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": true
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de sageeast-3d-scroll"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de sageeast-3d-scroll"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de sageeast-3d-scroll"
+      }
+    ],
+    "cluster": "SCROLL-WELDED",
+    "engine": "gsap",
+    "motion_signature": "scrub-driven translateZ tunnel: each slide's CSS-authored initial Z (-22500 → 0 in 2500px steps) is read once via getComputedStyle and advanced linearly by progress*22500 across 2000vh, with opacity piecewise-mapped from Z (0→0.5 over -5000..-2500, 0.5→1 over -2500..0); no easing on the depth motion itself",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-welded"
+  },
+  "review": {
+    "status": "public"
+  }
+}

@@ -1,0 +1,560 @@
+{
+  "slug": "landing-page-reveal-no-webgl",
+  "sourceDir": "cg-landing-page-reveal-no-webgl",
+  "title": "Landing Page Reveal With Circular Gallery",
+  "description": "On load a numeric preloader counts up to 100, then 30 photo cards rise from below into a centered horizontal strip and, using GSAP Flip, morph into a rotating circular gallery while the nav labels slide up into view. Fully load-triggered with a CustomEase 'hop' curve.",
+  "category": "preloader",
+  "tags": [
+    "gsap",
+    "flip",
+    "custom-ease",
+    "preloader",
+    "counter",
+    "circular-gallery",
+    "reveal",
+    "editorial",
+    "loader"
+  ],
+  "gsap": [
+    "Flip",
+    "CustomEase"
+  ],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 7000,
+    "clip": {
+      "seconds": 9,
+      "settleMs": 500,
+      "actions": [
+        {
+          "type": "hold"
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "Blonde woman seated in a chair wearing a dark red dress in a warm-toned interior",
+      "role": "gallery card",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "Woman in a dark red top and headscarf seated against a terracotta background",
+      "role": "gallery card",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "Woman with a shaved head wearing green cat-eye sunglasses and green earrings",
+      "role": "gallery card",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "Person in a checkered outfit leaning against a wall beside a curtain in muted tones",
+      "role": "gallery card",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "Figure in a black coat standing against a deep red-orange wall",
+      "role": "gallery card",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "Two people embracing and posing against a muted grey studio backdrop",
+      "role": "gallery card",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "Woman lying down in a mustard dress holding a banana with her eyes closed",
+      "role": "gallery card",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "A reed diffuser bottle on a table against a green wall, still-life",
+      "role": "gallery card",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpg",
+      "desc": "Close-up portrait of a woman with wet hair wearing a white tank top",
+      "role": "gallery card",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpg",
+      "desc": "Profile portrait of a Black woman with an afro against a grey background",
+      "role": "gallery card",
+      "replaced": true
+    },
+    {
+      "file": "img11.jpg",
+      "desc": "Woman reclining on a sofa in dark red tights in a moody dim scene",
+      "role": "gallery card",
+      "replaced": true
+    },
+    {
+      "file": "img12.jpg",
+      "desc": "Young man with dark hair and arms crossed under dramatic side lighting",
+      "role": "gallery card",
+      "replaced": true
+    },
+    {
+      "file": "img13.jpg",
+      "desc": "Woman posing in a striped top against a dark backdrop with hard shadow lines",
+      "role": "gallery card",
+      "replaced": true
+    },
+    {
+      "file": "img14.jpg",
+      "desc": "Person sitting on a bed beside a lamp in a dim warm bedroom scene",
+      "role": "gallery card",
+      "replaced": true
+    },
+    {
+      "file": "img15.jpg",
+      "desc": "Two people embracing in a green top and a magenta top against a blue background",
+      "role": "gallery card",
+      "replaced": true
+    },
+    {
+      "file": "img16.jpg",
+      "desc": "Person in a white tee and red pants seated against a green background",
+      "role": "gallery card",
+      "replaced": true
+    },
+    {
+      "file": "img17.jpg",
+      "desc": "Person in a navy puffer jacket with raised arms in a green-walled room",
+      "role": "gallery card",
+      "replaced": true
+    },
+    {
+      "file": "img18.jpg",
+      "desc": "Woman reclining in a cream outfit against a bright blue sky, sunlit",
+      "role": "gallery card",
+      "replaced": true
+    },
+    {
+      "file": "img19.jpg",
+      "desc": "Black man shielding his eyes from harsh sunlight with dramatic shadow",
+      "role": "gallery card",
+      "replaced": true
+    },
+    {
+      "file": "img20.jpg",
+      "desc": "Person in a white shirt and sunglasses standing in a wheat field",
+      "role": "gallery card",
+      "replaced": true
+    },
+    {
+      "file": "img21.jpg",
+      "desc": "Woman in a beige outfit and headscarf against a neutral backdrop with dried plants",
+      "role": "gallery card",
+      "replaced": true
+    },
+    {
+      "file": "img22.jpg",
+      "desc": "Figure in a dark coat against a deep red wall in low moody light",
+      "role": "gallery card",
+      "replaced": true
+    },
+    {
+      "file": "img23.jpg",
+      "desc": "Black woman in a white shirt and blue dress posing against a dark red background",
+      "role": "gallery card",
+      "replaced": true
+    },
+    {
+      "file": "img24.jpg",
+      "desc": "Person in a green jacket and headscarf against a red background under dramatic light",
+      "role": "gallery card",
+      "replaced": true
+    },
+    {
+      "file": "img25.jpg",
+      "desc": "Black woman in a fur-collar jacket with hand to face in brown moody tones",
+      "role": "gallery card",
+      "replaced": true
+    },
+    {
+      "file": "img26.jpg",
+      "desc": "Two people posing in white and dark clothing against a dark night backdrop",
+      "role": "gallery card",
+      "replaced": true
+    },
+    {
+      "file": "img27.jpg",
+      "desc": "Woman in a mustard dress seated by a window in cool moody light",
+      "role": "gallery card",
+      "replaced": true
+    },
+    {
+      "file": "img28.jpg",
+      "desc": "Close-up beauty portrait of a woman resting her hands on her face in soft neutral light",
+      "role": "gallery card",
+      "replaced": true
+    },
+    {
+      "file": "img29.jpg",
+      "desc": "Young man sitting on a bed beside a lamp in a dim warm room",
+      "role": "gallery card",
+      "replaced": true
+    },
+    {
+      "file": "img30.jpg",
+      "desc": "Portrait of a blonde curly-haired woman in soft sunlit earthy tones",
+      "role": "gallery card",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "editorial",
+      "elegant",
+      "cinematic"
+    ],
+    "useCase": [
+      "preloader",
+      "gallery",
+      "hero"
+    ],
+    "useWhen": "Cuando quieres una intro de landing con contador de carga y una galería de fotos que se reorganiza en un círculo giratorio al terminar.",
+    "aliases": [
+      "galeria circular",
+      "circular gallery",
+      "preloader contador",
+      "landing reveal",
+      "flip layout",
+      "gallery reveal"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "Flip",
+      "CustomEase"
+    ],
+    "assetCount": 30,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "canvas",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#d9d6cf",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--canvas"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#16130d",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "signal",
+      "label": "Acento",
+      "type": "color",
+      "default": "#bf4126",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--signal"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "muted",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#837e72",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--muted"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "itemsCount",
+      "label": "Nº de piezas",
+      "type": "range",
+      "min": 8,
+      "max": 30,
+      "step": 1,
+      "default": 30,
+      "apply": {
+        "kind": "js",
+        "path": "itemsCount"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "radius",
+      "label": "Radio del anillo",
+      "type": "range",
+      "min": 100,
+      "max": 450,
+      "step": 10,
+      "default": 210,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "radius"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "entryStagger",
+      "label": "Escalonado de entrada",
+      "type": "range",
+      "min": 0,
+      "max": 0.2,
+      "step": 0.005,
+      "default": 0.03,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "entryStagger"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "linearGap",
+      "label": "Separación de la baraja",
+      "type": "range",
+      "min": 2,
+      "max": 60,
+      "step": 2,
+      "default": 10,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "linearGap"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "landing-page-reveal-no-webgl",
+    "title": "Landing Page Reveal With Circular Gallery",
+    "category": "preloader",
+    "trigger": "load",
+    "libs": [
+      "gsap",
+      "Flip",
+      "CustomEase"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power3",
+    "duration_range": [
+      0.25,
+      2
+    ],
+    "stagger": -0.03,
+    "assets_required": {
+      "count": 30,
+      "bytes": 1729855,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "html/body height fija en vh"
+    ],
+    "capabilities": [
+      {
+        "capability": "entry-veil",
+        "reason": "velo de entrada a pantalla completa en la carga"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "aladesign-landing-page-reveal",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "aminezegmou-landing-page",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "aristidebenoist-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "audemarspiguet-menu",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "camille-mormal-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "hypnotic-gallery-gsap-flip",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "infinite-draggable-image-gallery-javascript",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "kin-landing-page",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "laserbysonymusic-landing-page-reveal-animation",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "maxmilkin-preloader",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "meetings-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "menu-root-food",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "nite-riot-landing-page-reveal-javascript",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "outfit-landing-page-reveal",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "p10-landing-page-reveal-gsap",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "push-over-overlay-menu",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "steelworks-landing-page-reveal",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "story-world-carousel-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "truekindskincare-landing-page-reveal-javascript",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "zajno-lp",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "zajno-page-transitions",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      }
+    ],
+    "cluster": "LOAD-ONESHOT",
+    "engine": "gsap",
+    "motion_signature": "load-triggered strip rise, Flip morph to circle",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "entry-veil"
+  },
+  "review": {
+    "status": "public"
+  }
+}

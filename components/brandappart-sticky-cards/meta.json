@@ -1,0 +1,296 @@
+{
+  "slug": "brandappart-sticky-cards",
+  "sourceDir": "codegrid-brandappart-sticky-cards",
+  "title": "BrandAppart Sticky Cards",
+  "description": "Scroll-pinned deck of four stacked cards: as you scroll through the pinned section (8 viewport heights, scrub-synced with Lenis), the front card flies up while tilting back 35deg in 3D perspective, and the cards behind slide forward and scale up to take its place.",
+  "category": "cards",
+  "tags": [
+    "sticky",
+    "stacked-cards",
+    "scroll",
+    "pin",
+    "scrub",
+    "3d-tilt",
+    "lenis"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "scrollTo": 0.85,
+    "waitMs": 1500,
+    "clip": {
+      "seconds": 10
+    }
+  },
+  "images": [
+    {
+      "file": "card-img-1.jpg",
+      "desc": "retro-futurist painting of two scribes in orange robes and chunky white headphones writing at computer desks above the clouds, glass-sphere airships floating in a blue sky",
+      "role": "card 1 image (indigo card, 'Signal Drift')",
+      "replaced": true
+    },
+    {
+      "file": "card-img-2.jpg",
+      "desc": "art-deco retro-futuristic illustration of a monumental orange civic building with stepped towers under towering cumulus clouds, reflected in a wet plaza",
+      "role": "card 2 image (orange card, 'Skyline Drift')",
+      "replaced": true
+    },
+    {
+      "file": "card-img-3.jpg",
+      "desc": "sci-fi portrait of a young man in white wired into a brass brain-interface helmet, dense biomechanical machinery blooming behind him in muted green and pink",
+      "role": "card 3 image (red card, 'Neural Assembly')",
+      "replaced": true
+    },
+    {
+      "file": "card-img-4.jpg",
+      "desc": "vintage sci-fi classroom scene, boy in a red sweater taking notes beside a glass-domed learning machine, rows of students with dome devices behind him",
+      "role": "card 4 image (brown card, 'Learning Loop')",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-14",
+  "intent": {
+    "mood": [
+      "bold",
+      "retro",
+      "editorial"
+    ],
+    "useCase": [
+      "card-deck",
+      "scroll-story",
+      "gallery"
+    ],
+    "useWhen": "Úsalo cuando quieras presentar 3-5 proyectos o features apilados que se revelan uno a uno al hacer scroll, con estilo llamativo y tipografía grande.",
+    "aliases": [
+      "cartas apiladas",
+      "sticky cards",
+      "stacked cards",
+      "tarjetas apiladas al scroll",
+      "deck de tarjetas",
+      "cartas pegajosas"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 4,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "base-2",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#c85327",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--base-2"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#14243b",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#ece3cf",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "cardYOffset",
+      "label": "Separación de la pila",
+      "type": "range",
+      "min": 0,
+      "max": 12,
+      "step": 0.5,
+      "default": 5,
+      "apply": {
+        "kind": "js",
+        "path": "cardYOffset"
+      }
+    },
+    {
+      "id": "cardScaleStep",
+      "label": "Encogido de las tarjetas de atrás",
+      "type": "range",
+      "min": 0,
+      "max": 0.18,
+      "step": 0.005,
+      "default": 0.075,
+      "apply": {
+        "kind": "js",
+        "path": "cardScaleStep"
+      }
+    },
+    {
+      "id": "cardTilt",
+      "label": "Vuelco al salir",
+      "type": "range",
+      "min": 0,
+      "max": 70,
+      "step": 1,
+      "default": 35,
+      "unit": "°",
+      "apply": {
+        "kind": "js",
+        "path": "cardTilt"
+      }
+    },
+    {
+      "id": "cardExit",
+      "label": "Recorrido de salida",
+      "type": "range",
+      "min": 150,
+      "max": 320,
+      "step": 10,
+      "default": 200,
+      "unit": "%",
+      "apply": {
+        "kind": "js",
+        "path": "cardExit"
+      }
+    },
+    {
+      "id": "scrollPerCard",
+      "label": "Scroll por tarjeta",
+      "type": "range",
+      "min": 0.75,
+      "max": 4,
+      "step": 0.25,
+      "default": 2,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "scrollPerCard"
+      }
+    }
+  ],
+  "motion": {
+    "slug": "brandappart-sticky-cards",
+    "title": "BrandAppart Sticky Cards",
+    "category": "cards",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 3,
+    "pinned": true,
+    "viewport_heights": 800,
+    "needs_lenis": true,
+    "ease_family": null,
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 4,
+      "bytes": 970292,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de brandappart-sticky-cards"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de brandappart-sticky-cards"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de brandappart-sticky-cards"
+      }
+    ],
+    "cluster": "SCROLL-LAGGED",
+    "engine": "gsap",
+    "motion_signature": "scrub-pinned 3D card deck flying up",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-lagged"
+  },
+  "review": {
+    "status": "public"
+  }
+}

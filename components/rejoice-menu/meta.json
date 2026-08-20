@@ -1,0 +1,161 @@
+{
+  "slug": "rejoice-menu",
+  "sourceDir": "cg-rejoice-menu",
+  "title": "Rejoice Fullscreen Overlay Menu",
+  "description": "A fullscreen overlay navigation menu that opens on clicking the 'Menu' button and closes on 'Close'. A single paused GSAP timeline plays/reverses: it animates the overlay clip-path open, staggers the nav links and CTA up with a fade, grows the video preview thumbnail and draws the footer divider from 0 to 100% width.",
+  "category": "menu",
+  "tags": [
+    "menu",
+    "fullscreen-overlay",
+    "clip-path",
+    "gsap-timeline",
+    "staggered-reveal",
+    "hamburger",
+    "navigation",
+    "vanilla-js",
+    "minimal"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "click": ".menu-open-btn",
+    "afterClickMs": 1500
+  },
+  "images": [
+    {
+      "file": "hero.jpg",
+      "desc": "Dark, moody close-up of a hand-held flame-grilled burger against black — the full-page backdrop for the Char burger house",
+      "role": "body background image behind the page content and nav",
+      "replaced": true
+    },
+    {
+      "file": "showreel-thumbnail.jpg",
+      "desc": "Cinematic grill still — a spatula pressing a smash patty over open flame — used as the kitchen reel preview",
+      "role": "background of the .video-preview panel inside the open overlay menu",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "minimal",
+      "bold",
+      "editorial"
+    ],
+    "useCase": [
+      "navigation"
+    ],
+    "useWhen": "Úsalo cuando quieras un menú overlay a pantalla completa que se abre con clip-path y revela enlaces escalonados, un reel y un divisor animado.",
+    "aliases": [
+      "menu overlay",
+      "menu pantalla completa",
+      "fullscreen menu",
+      "clip path menu",
+      "menu hamburguesa",
+      "overlay nav"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 2,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "rejoice-menu",
+    "title": "Rejoice Fullscreen Overlay Menu",
+    "category": "menu",
+    "trigger": "click",
+    "libs": [
+      "gsap",
+      "phosphor-icons"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power2",
+    "duration_range": [
+      0.25,
+      2
+    ],
+    "stagger": 0.05,
+    "assets_required": {
+      "count": 2,
+      "bytes": 361921,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "CLICK-CURTAIN",
+    "engine": "gsap",
+    "motion_signature": "Paused, reversible GSAP timeline: a top-edge clip-path wipe opens a full-viewport overlay (1s power2.out) while, from the same t=0, links stagger up 60px at 0.05s each (0.75s power1.inOut), a video preview grows 0 -> 200px (1s power2.out) and a footer divider draws 0% -> 100% width (2s power4.out, the tail that sets the 2s total). Close plays the exact same curves backwards.",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "curtain-toggle"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "slug": "media-monks-hover",
+  "sourceDir": "cg-media-monks-hover",
+  "title": "Media Monks Hover",
+  "description": "A dark film-studio work-list where hovering each project flips the whole panel to that project's pastel tint and lifts every row's opacity via CSS transitions, while a tilted strip of film-still previews behind the text repositions (top/left) and swaps its active card to reveal the matching project, plus an arrow icon that slides in from the left edge of a pill button on the hovered row.",
+  "category": "hover",
+  "tags": [
+    "hover",
+    "css-transitions",
+    "vanilla-js",
+    "work-list",
+    "image-reveal",
+    "portfolio",
+    "phosphor-icons",
+    "editorial",
+    "interactive"
+  ],
+  "gsap": [],
+  "deps": [],
+  "preview": {
+    "waitMs": 2500
+  },
+  "images": [
+    {
+      "file": "prev-1.jpg",
+      "desc": "Underwater shot of a swimmer rising toward pink-violet light rays breaking through the surface; cinematic portrait still",
+      "role": "tilted preview card shown behind the list when hovering the first work item (Still water)",
+      "replaced": true
+    },
+    {
+      "file": "prev-2.jpg",
+      "desc": "Low-angle corner view of a white modernist concrete tower against a clear blue sky; filmic portrait still",
+      "role": "default active preview card, shown behind the list at rest and when hovering the second work item (Vertical city)",
+      "replaced": true
+    },
+    {
+      "file": "prev-3.jpg",
+      "desc": "Moody close-up of red-orange blanket flowers in low evening light against near-black foliage; portrait still",
+      "role": "tilted preview card shown behind the list when hovering the third work item (Late bloom)",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-18",
+  "intent": {
+    "mood": [
+      "editorial",
+      "bold",
+      "experimental"
+    ],
+    "useCase": [
+      "hover-interaction",
+      "gallery",
+      "image-reveal"
+    ],
+    "useWhen": "Úsalo en una lista de proyectos/trabajos donde cada fila, al pasar el ratón, cambia el fondo y revela un preview animado detrás del texto.",
+    "aliases": [
+      "media monks hover",
+      "lista de trabajos hover",
+      "hover reveal lista",
+      "work list hover",
+      "portfolio hover",
+      "preview al hover"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 3,
+    "perfCost": "light",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "media-monks-hover",
+    "title": "Media Monks Hover",
+    "category": "hover",
+    "trigger": "hover",
+    "libs": [
+      "phosphor-icons"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": null,
+    "duration_range": [
+      0.2,
+      1
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 3,
+      "bytes": 836905,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": true
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "POINTER-LATCHED",
+    "engine": "css-transition",
+    "motion_signature": "row hover tints the whole panel (background-color 0.5s ease) and slides the tilted preview strip to a new top/left over 1s, while the active .prev nudges rotate(10deg)->rotate(12.5deg) and the strip fades 0.45->0.9 opacity; an arrow pill wipes in with a 0.2s delay on the incoming glyph",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "pointer-latch"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

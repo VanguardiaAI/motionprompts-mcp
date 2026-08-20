@@ -1,0 +1,267 @@
+{
+  "slug": "fameestate-scroll-animation",
+  "sourceDir": "codegrid-fameestate-scroll-animation",
+  "title": "FameEstate Scroll Animation",
+  "description": "Pinned hero scrubbed over seven viewport heights with Lenis smooth scroll: a red panel opens from a thin clip-path slit to full screen, three images cascade in with staggered clip-path and scale reveals, then an outro panel scales in and splits into two clip-path halves that slide apart to uncover the about section.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "pin",
+    "scrub",
+    "clip-path",
+    "reveal",
+    "lenis",
+    "hero",
+    "stagger"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 1000,
+    "scrollTo": 0.85,
+    "clip": {
+      "seconds": 9
+    }
+  },
+  "images": [
+    {
+      "file": "hero-bg.jpg",
+      "desc": "misty golden-hour hillside landscape with pine trees and rolling fields",
+      "role": "hero background, zooms from scale 1.5 to 1",
+      "replaced": true
+    },
+    {
+      "file": "hero-img-1.jpg",
+      "desc": "warm editorial living room in earthy neutrals with leather and linen, floor-to-ceiling windows onto forest greenery",
+      "role": "first cascading hero image",
+      "replaced": true
+    },
+    {
+      "file": "hero-img-2.jpg",
+      "desc": "modern timber-and-glass hillside home glowing warm at dusk, set among tall eucalyptus with lawn in foreground",
+      "role": "second cascading hero image",
+      "replaced": true
+    },
+    {
+      "file": "hero-img-3.jpg",
+      "desc": "sunlit coastal rock formations on a sandy beach under a hazy sky, warm neutral tones",
+      "role": "third cascading hero image",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "elegant",
+      "editorial",
+      "luxury"
+    ],
+    "useCase": [
+      "hero",
+      "scroll-story",
+      "image-reveal"
+    ],
+    "useWhen": "Úsalo cuando la home de una marca premium (inmobiliaria, estudio, hotel) necesita un hero cinemático que se revela con scroll suave y cascada de imágenes.",
+    "aliases": [
+      "hero con scroll",
+      "pinned hero",
+      "scroll storytelling",
+      "revelado clip-path",
+      "hero inmobiliaria",
+      "smooth scroll hero"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 4,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "cream",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#f3edde",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--cream"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "scrollLength",
+      "label": "Longitud del tramo fijado",
+      "type": "range",
+      "min": 3,
+      "max": 14,
+      "step": 1,
+      "default": 7,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "scrollLength"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "cascadeStagger",
+      "label": "Escalonado de la cascada",
+      "type": "range",
+      "min": 0.01,
+      "max": 0.15,
+      "step": 0.005,
+      "default": 0.04,
+      "apply": {
+        "kind": "js",
+        "path": "cascadeStagger"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "cascadeDuration",
+      "label": "Apertura de cada imagen",
+      "type": "range",
+      "min": 0.05,
+      "max": 0.5,
+      "step": 0.01,
+      "default": 0.16,
+      "apply": {
+        "kind": "js",
+        "path": "cascadeDuration"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "cascadeStart",
+      "label": "Inicio de la cascada",
+      "type": "range",
+      "min": 0.1,
+      "max": 0.7,
+      "step": 0.05,
+      "default": 0.4,
+      "apply": {
+        "kind": "js",
+        "path": "cascadeStart"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "fameestate-scroll-animation",
+    "title": "FameEstate Scroll Animation",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 3,
+    "pinned": true,
+    "viewport_heights": 700,
+    "needs_lenis": true,
+    "ease_family": null,
+    "duration_range": [
+      0.16,
+      0.5
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 4,
+      "bytes": 924969,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de fameestate-scroll-animation"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de fameestate-scroll-animation"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de fameestate-scroll-animation"
+      }
+    ],
+    "cluster": "SCROLL-WELDED",
+    "engine": "gsap",
+    "motion_signature": "pinned hero scrubbed clip-path reveal cascade",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-welded"
+  },
+  "review": {
+    "status": "public"
+  }
+}

@@ -1,0 +1,250 @@
+{
+  "slug": "grid-deformation-effect",
+  "sourceDir": "codegrid-grid-deformation-effect",
+  "title": "Grid Deformation Effect",
+  "description": "A fullscreen hero photograph is rendered as a Three.js texture on a shader plane; moving the pointer injects velocity into a 25-cell grid DataTexture that displaces the UVs with RGB chromatic aberration, and the distortion relaxes back smoothly (0.925/frame) when the cursor stops. Styled as the landing page of Moiré, a dance and digital-image festival: the photo is monochrome, so the aberration is the only color on the page.",
+  "category": "3d-webgl",
+  "tags": [
+    "three-js",
+    "webgl",
+    "shader",
+    "video",
+    "mouse",
+    "distortion",
+    "grid",
+    "chromatic-aberration",
+    "hover"
+  ],
+  "gsap": [],
+  "deps": [
+    "three"
+  ],
+  "preview": {
+    "waitMs": 3500,
+    "click": ".hero",
+    "afterClickMs": 250,
+    "clip": {
+      "seconds": 7,
+      "actions": [
+        {
+          "type": "cursor",
+          "path": "sweep"
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "hero-image.jpg",
+      "desc": "2400x1350 black-and-white long-exposure photograph of dancers blurred mid-movement on a dark stage (Pexels 29660540)",
+      "role": "texture for the Three.js deformation shader; monochrome so the RGB chromatic aberration is the only color on the page",
+      "style": "photo",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "experimental",
+      "cinematic",
+      "technical"
+    ],
+    "useCase": [
+      "hero",
+      "background",
+      "hover-interaction"
+    ],
+    "useWhen": "Úsalo cuando quieras un hero de video a pantalla completa que se deforme con una rejilla glitch y aberración cromática RGB al mover el cursor.",
+    "aliases": [
+      "distorsión de grid",
+      "grid distortion",
+      "aberración cromática",
+      "chromatic aberration",
+      "video glitch hover",
+      "distorsión con el ratón"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": false,
+    "needsWebgl": true,
+    "needsCanvas": true,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 1,
+    "perfCost": "heavy",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Texto",
+      "type": "color",
+      "default": "#e9edef",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "gridSize",
+      "label": "Resolución de la rejilla",
+      "type": "range",
+      "min": 6,
+      "max": 60,
+      "step": 1,
+      "default": 25,
+      "apply": {
+        "kind": "js",
+        "path": "gridSize"
+      }
+    },
+    {
+      "id": "mouseRadius",
+      "label": "Radio de influencia del puntero",
+      "type": "range",
+      "min": 0.05,
+      "max": 0.6,
+      "step": 0.01,
+      "default": 0.25,
+      "apply": {
+        "kind": "js",
+        "path": "mouseRadius"
+      }
+    },
+    {
+      "id": "strength",
+      "label": "Fuerza del empuje",
+      "type": "range",
+      "min": 0.02,
+      "max": 0.35,
+      "step": 0.005,
+      "default": 0.1,
+      "apply": {
+        "kind": "js",
+        "path": "strength"
+      }
+    },
+    {
+      "id": "relaxation",
+      "label": "Persistencia de la deformación",
+      "type": "range",
+      "min": 0.8,
+      "max": 0.985,
+      "step": 0.005,
+      "default": 0.925,
+      "apply": {
+        "kind": "js",
+        "path": "relaxation"
+      }
+    },
+    {
+      "id": "displacement",
+      "label": "Arrastre de la imagen",
+      "type": "range",
+      "min": 0.002,
+      "max": 0.06,
+      "step": 0.001,
+      "default": 0.015,
+      "apply": {
+        "kind": "js",
+        "path": "displacement"
+      }
+    },
+    {
+      "id": "aberration",
+      "label": "Separación de canales RGB",
+      "type": "range",
+      "min": 0,
+      "max": 0.6,
+      "step": 0.01,
+      "default": 0.15,
+      "apply": {
+        "kind": "js",
+        "path": "aberration"
+      }
+    }
+  ],
+  "motion": {
+    "slug": "grid-deformation-effect",
+    "title": "Grid Deformation Effect",
+    "category": "3d-webgl",
+    "trigger": "pointer",
+    "libs": [
+      "three"
+    ],
+    "complexity": 4,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": null,
+    "duration_range": [
+      0.2,
+      2.4
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 1,
+      "bytes": 172717,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "INTEGRATOR",
+    "engine": "webgl-raf",
+    "motion_signature": "pointer-velocity grid distortion with RGB aberration, relaxing",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  },
+  "review": {
+    "status": "public"
+  }
+}

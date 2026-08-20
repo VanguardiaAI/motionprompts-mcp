@@ -1,0 +1,201 @@
+{
+  "slug": "bitkraft-menu",
+  "sourceDir": "cg-bitkraft-menu",
+  "title": "Circular Futuristic Navigation Menu",
+  "description": "A fullscreen overlay menu whose links are arranged as radial clip-path segments around a draggable center joystick. Clicking the bottom hamburger button toggles the overlay with GSAP opacity, scale (back.out/back.in) and randomized yoyo-flicker reveals; dragging the joystick with lerped follow motion highlights the segment it points toward via CSS flicker keyframes, with audio feedback on open/close/select.",
+  "category": "menu",
+  "tags": [
+    "menu",
+    "circular",
+    "radial",
+    "joystick",
+    "drag",
+    "glitch",
+    "flicker",
+    "gsap",
+    "futuristic"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "click": ".menu-toggle-btn",
+    "afterClickMs": 1600,
+    "clip": {
+      "seconds": 14,
+      "settleMs": 2000,
+      "actions": [
+        {
+          "type": "click",
+          "selector": ".menu-toggle-btn",
+          "at": 0.08
+        },
+        {
+          "type": "drag",
+          "start": 0.25,
+          "end": 0.8,
+          "ax": 0.1,
+          "ay": 0.16
+        },
+        {
+          "type": "click",
+          "selector": ".close-btn",
+          "at": 0.9
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "menu.jpg",
+      "desc": "Dark moody abstract smoke/light texture, cinematic backdrop (kie.ai generated).",
+      "role": "fullscreen background of the open menu overlay (.menu-bg)",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-14",
+  "intent": {
+    "mood": [
+      "futuristic",
+      "experimental",
+      "bold"
+    ],
+    "useCase": [
+      "navigation",
+      "hover-interaction"
+    ],
+    "useWhen": "Cuando quieras un menú de navegación fullscreen distinto: segmentos en disposición circular con joystick arrastrable y estética glitch futurista.",
+    "aliases": [
+      "menu circular",
+      "circular menu",
+      "joystick menu",
+      "menu radial",
+      "radial nav",
+      "glitch menu"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 1,
+    "perfCost": "light",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "lilac",
+      "label": "Texto",
+      "type": "color",
+      "default": "#c9b8f5",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--lilac"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bone",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#f5f2ec",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bone"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "bitkraft-menu",
+    "title": "Circular Futuristic Navigation Menu",
+    "category": "menu",
+    "trigger": "pointer",
+    "libs": [
+      "gsap",
+      "ionicons"
+    ],
+    "complexity": 3,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power2",
+    "duration_range": [
+      0.05,
+      0.4
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 4,
+      "bytes": 181486,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": true
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "CLICK-CURTAIN",
+    "engine": "gsap+raf",
+    "motion_signature": "radial clip-path segments, random yoyo flicker, lerped joystick",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "curtain-toggle"
+  },
+  "review": {
+    "status": "public",
+    "comment": "Resuelto en el run del 2026-08-16: video a 14s con apertura, joystick y cierre; la forma redonda en tactil ya no depende del backdrop-filter, que era lo que WebKit pintaba como cuadrado. Falta confirmarlo en un iPhone real."
+  }
+}

@@ -1,0 +1,249 @@
+{
+  "slug": "fiddle-digital-hover-effect",
+  "sourceDir": "codegrid-fiddle-digital-hover-effect",
+  "title": "Fiddle Digital Scramble Hover Effect",
+  "description": "A centered hero image is covered by an invisible grid of 25px blocks, some holding random symbols (O X * > $ W). Moving the mouse over the image activates the nearest block plus a random cluster of up to 7 neighbors (cobalt background, cream glyph) for ~300ms, while a subset of blocks scrambles its symbol every 150ms, leaving a digital-noise trail behind the cursor. Framed as a risograph print studio's catalogue plate.",
+  "category": "hover",
+  "tags": [
+    "scramble",
+    "pixel-grid",
+    "hover",
+    "image",
+    "symbols",
+    "vanilla-js",
+    "cursor-trail"
+  ],
+  "gsap": [],
+  "deps": [],
+  "preview": {
+    "waitMs": 1200,
+    "click": ".hover-img",
+    "afterClickMs": 120
+  },
+  "images": [
+    {
+      "file": "img.jpg",
+      "desc": "two-colour risograph-style portrait of a woman in a white cap and dark coat, cobalt ink on cream paper",
+      "role": "central hero image the scramble grid overlays",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "editorial",
+      "experimental",
+      "technical"
+    ],
+    "useCase": [
+      "hover-interaction",
+      "image-reveal",
+      "gallery"
+    ],
+    "useWhen": "Úsalo cuando quieras que una imagen reaccione al cursor con un rastro de ruido digital y símbolos que se descomponen al pasar el ratón.",
+    "aliases": [
+      "scramble hover",
+      "efecto scramble",
+      "rejilla de píxeles",
+      "ruido digital",
+      "hover con símbolos",
+      "glitch de imagen"
+    ]
+  },
+  "runtime": {
+    "level": "widget",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 1,
+    "perfCost": "light",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "cobalt",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#2b57c8",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--cobalt"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "sheet",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f4edd6",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--sheet"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "room",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#16223c",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--room"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#17253f",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "blockSize",
+      "label": "Tamaño del bloque",
+      "type": "range",
+      "min": 10,
+      "max": 60,
+      "step": 1,
+      "default": 25,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "blockSize"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "clusterSize",
+      "label": "Tamaño del racimo",
+      "type": "range",
+      "min": 1,
+      "max": 20,
+      "step": 1,
+      "default": 7,
+      "apply": {
+        "kind": "js",
+        "path": "clusterSize"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "blockLifetime",
+      "label": "Duración del destello",
+      "type": "range",
+      "min": 100,
+      "max": 1500,
+      "step": 50,
+      "default": 300,
+      "unit": "ms",
+      "apply": {
+        "kind": "js",
+        "path": "blockLifetime"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "emptyRatio",
+      "label": "Proporción de huecos",
+      "type": "range",
+      "min": 0,
+      "max": 0.8,
+      "step": 0.05,
+      "default": 0.3,
+      "apply": {
+        "kind": "js",
+        "path": "emptyRatio"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "fiddle-digital-hover-effect",
+    "title": "Fiddle Digital Scramble Hover Effect",
+    "category": "hover",
+    "trigger": "pointer",
+    "libs": [],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": null,
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 1,
+      "bytes": 187820,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "POINTER-LATCHED",
+    "engine": "none",
+    "motion_signature": "pointer-nearest grid blocks flash with scrambling glyphs",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "pointer-latch"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

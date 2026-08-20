@@ -1,0 +1,165 @@
+{
+  "slug": "direction-aware-hover-effect-javascript",
+  "sourceDir": "codegrid-direction-aware-hover-effect-javascript",
+  "title": "Direction-Aware Hover Effect (JavaScript)",
+  "description": "A grid of labeled cells where a solid highlight block glides beneath the hovered cell, snapping to its exact bounds and swapping to a per-cell accent color. Driven by mousemove + elementFromPoint hit-testing and pure CSS transitions on transform/width/height/background (no GSAP).",
+  "category": "hover",
+  "tags": [
+    "hover",
+    "grid",
+    "highlight",
+    "cursor-follow",
+    "css-transition",
+    "vanilla-js",
+    "interactive",
+    "minimal",
+    "direction-aware"
+  ],
+  "gsap": [],
+  "deps": [],
+  "preview": {
+    "waitMs": 2500
+  },
+  "images": [],
+  "updated": "2026-07-15",
+  "intent": {
+    "mood": [
+      "minimal",
+      "technical",
+      "bold"
+    ],
+    "useCase": [
+      "hover-interaction",
+      "navigation",
+      "gallery"
+    ],
+    "useWhen": "Cuando quieras un resaltado que sigue el cursor por una rejilla de celdas, con color por celda y transiciones suaves sin librerias.",
+    "aliases": [
+      "hover resaltado",
+      "grid highlight",
+      "highlight follower",
+      "efecto hover direccional",
+      "cursor grid",
+      "menu highlight"
+    ]
+  },
+  "runtime": {
+    "level": "widget",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 0,
+    "perfCost": "light",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": false,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bg",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#1c120a",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bg"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#efe6d3",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "direction-aware-hover-effect-javascript",
+    "title": "Direction-Aware Hover Effect (JavaScript)",
+    "category": "hover",
+    "trigger": "pointer",
+    "libs": [],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": null,
+    "duration_range": [
+      0.25,
+      0.25
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 0,
+      "bytes": 0,
+      "root_absolute_paths": false
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": true
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "POINTER-LATCHED",
+    "engine": "css-transition",
+    "motion_signature": "CSS-transitioned highlight block snaps between hovered grid cells: transform/width/height/background-color all tween 0.25s ease from the previous cell's rect to the new one, so it reads as a single block gliding and resizing; on load it slides in from translate(0,0) at zero size to the first cell. Fully static under prefers-reduced-motion.",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "pointer-latch"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

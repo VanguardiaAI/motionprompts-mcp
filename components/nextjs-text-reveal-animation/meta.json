@@ -1,0 +1,216 @@
+{
+  "slug": "nextjs-text-reveal-animation",
+  "sourceDir": "codegrid-nextjs-text-reveal-animation",
+  "title": "Line-by-Line Text Reveal",
+  "description": "A scroll-driven line-by-line text reveal. GSAP SplitText breaks each heading and paragraph into masked lines, gsap.set pushes them to y:100%, and a ScrollTrigger fired once at 'top 75%' tweens them back to y:0% (duration 1, stagger 0.1, power4.out); the hero headline runs on load with a 0.5s delay. Lenis provides smooth scrolling.",
+  "category": "text",
+  "tags": [
+    "text-reveal",
+    "split-text",
+    "line-mask",
+    "scroll",
+    "stagger",
+    "lenis",
+    "editorial",
+    "minimal"
+  ],
+  "gsap": [
+    "SplitText",
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "scrollTo": 1,
+    "afterScrollMs": 1200,
+    "clip": {
+      "seconds": 10
+    }
+  },
+  "images": [
+    {
+      "file": "hero.jpg",
+      "desc": "Dark charcoal textured plaster/concrete wall with a soft radial vignette, wide landscape crop.",
+      "role": "Full-bleed moody hero background behind the centered warm off-white headline.",
+      "replaced": true
+    },
+    {
+      "file": "about.jpg",
+      "desc": "Close macro weave of natural beige linen, tactile woven grid, vertical 4:5 crop.",
+      "role": "Small centered portrait 'material study' swatch in the standalone about-img section, tying to the Greyloom (loom/weave) identity.",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "minimal",
+      "elegant",
+      "editorial"
+    ],
+    "useCase": [
+      "text-reveal",
+      "scroll-story",
+      "hero"
+    ],
+    "useWhen": "Cuando quieras que titulares y párrafos aparezcan línea por línea con máscara al hacer scroll, en una landing editorial y sobria.",
+    "aliases": [
+      "revelado de texto",
+      "text reveal on scroll",
+      "split text lines",
+      "lineas enmascaradas",
+      "aparicion de titulares",
+      "masked line reveal"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "SplitText",
+      "ScrollTrigger"
+    ],
+    "assetCount": 2,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#edeae2",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "dark",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#232421",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--dark"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "nextjs-text-reveal-animation",
+    "title": "Line-by-Line Text Reveal",
+    "category": "text",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "SplitText",
+      "lenis"
+    ],
+    "complexity": 3,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": true,
+    "ease_family": "power4",
+    "duration_range": [
+      1,
+      1
+    ],
+    "stagger": 0.1,
+    "assets_required": {
+      "count": 2,
+      "bytes": 763163,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de nextjs-text-reveal-animation"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de nextjs-text-reveal-animation"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de nextjs-text-reveal-animation"
+      }
+    ],
+    "cluster": "SCROLL-THRESHOLD",
+    "engine": "gsap",
+    "motion_signature": "once-triggered masked line reveal, staggered upward",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "reveal-on-enter"
+  },
+  "review": {
+    "status": "public"
+  }
+}

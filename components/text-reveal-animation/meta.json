@@ -1,0 +1,230 @@
+{
+  "slug": "text-reveal-animation",
+  "sourceDir": "codegrid-next-text-reveal-animation",
+  "title": "Text Reveal Animation",
+  "description": "Char-level text reveal built on GSAP SplitText: each character slides in from x:100 with a 20-degree skew and fades to place (power3.out, 0.65s), staggered 0.05s by its index within its own line so all lines animate in parallel. Three trigger modes across full-height sections: on page load, on scroll enter (replays entering, resets when scrolled back above), and scrubbed between viewport positions, all under Lenis smooth scrolling.",
+  "category": "text",
+  "tags": [
+    "text",
+    "reveal",
+    "split-text",
+    "chars",
+    "stagger",
+    "skew",
+    "scroll",
+    "scrub",
+    "lenis"
+  ],
+  "gsap": [
+    "ScrollTrigger",
+    "SplitText"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 700,
+    "clip": {
+      "seconds": 9,
+      "settleMs": 1500,
+      "actions": [
+        {
+          "type": "scroll",
+          "to": 0.6,
+          "mode": "once",
+          "start": 0.35
+        }
+      ]
+    }
+  },
+  "images": [],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "bold",
+      "editorial",
+      "playful"
+    ],
+    "useCase": [
+      "text-reveal",
+      "hero",
+      "scroll-story"
+    ],
+    "useWhen": "Úsalo cuando quieras que titulares o frases grandes entren carácter a carácter al cargar o al hacer scroll, con look atrevido y tipográfico.",
+    "aliases": [
+      "revelado de texto",
+      "text reveal",
+      "split text",
+      "titular animado",
+      "animación de titulares",
+      "texto que aparece"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger",
+      "SplitText"
+    ],
+    "assetCount": 0,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#14101a",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "aubergine",
+      "label": "Texto",
+      "type": "color",
+      "default": "#1e0f34",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--aubergine"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "signal",
+      "label": "Acento",
+      "type": "color",
+      "default": "#ff5c34",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--signal"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bone",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#f4ede0",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bone"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "text-reveal-animation",
+    "title": "Text Reveal Animation",
+    "category": "text",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "SplitText",
+      "lenis"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": true,
+    "ease_family": "power3",
+    "duration_range": [
+      0.65,
+      0.65
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 0,
+      "bytes": 0,
+      "root_absolute_paths": false
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de text-reveal-animation"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de text-reveal-animation"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de text-reveal-animation"
+      }
+    ],
+    "cluster": "SCROLL-WELDED",
+    "engine": "gsap",
+    "motion_signature": "per-char skewed slide-in (x 100→0, opacity 0→1, skewX 20→0, 0.65s power3.out), stagger by index within each line so all lines fire in parallel",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-welded"
+  },
+  "review": {
+    "status": "public"
+  }
+}

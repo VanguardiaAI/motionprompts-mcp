@@ -1,0 +1,301 @@
+{
+  "slug": "konpo-lp-reveal",
+  "sourceDir": "cg-konpo-lp-reveal",
+  "title": "Konpo Landing Page Reveal",
+  "description": "Auto-playing landing page intro: three vertical rolling counters tick to 100 while a background wipe scales up and 15 rounded thumbnails pop in from scale 0. On load complete, GSAP Flip animates every image from the top-left corner to the bottom-right with a staggered scale-punch, then masked SplitText lines rise into place for the nav, heading, side info and footer. Triggered entirely on DOMContentLoaded.",
+  "category": "preloader",
+  "tags": [
+    "reveal",
+    "preloader",
+    "flip",
+    "splittext",
+    "counter",
+    "landing",
+    "hero",
+    "stagger",
+    "editorial"
+  ],
+  "gsap": [
+    "Flip",
+    "SplitText"
+  ],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 4000
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "photographic thumbnail used in the reveal grid",
+      "role": "images-container flip thumbnail 1",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "photographic thumbnail used in the reveal grid",
+      "role": "images-container flip thumbnail 2",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "photographic thumbnail used in the reveal grid",
+      "role": "images-container flip thumbnail 3",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "photographic thumbnail used in the reveal grid",
+      "role": "images-container flip thumbnail 4",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "photographic thumbnail used in the reveal grid",
+      "role": "images-container flip thumbnail 5",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "photographic thumbnail used in the reveal grid",
+      "role": "images-container flip thumbnail 6",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "photographic thumbnail used in the reveal grid",
+      "role": "images-container flip thumbnail 7",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "photographic thumbnail used in the reveal grid",
+      "role": "images-container flip thumbnail 8",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpg",
+      "desc": "photographic thumbnail used in the reveal grid",
+      "role": "images-container flip thumbnail 9",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpg",
+      "desc": "photographic thumbnail used in the reveal grid",
+      "role": "images-container flip thumbnail 10",
+      "replaced": true
+    },
+    {
+      "file": "img11.jpg",
+      "desc": "photographic thumbnail used in the reveal grid",
+      "role": "images-container flip thumbnail 11",
+      "replaced": true
+    },
+    {
+      "file": "img12.jpg",
+      "desc": "photographic thumbnail used in the reveal grid",
+      "role": "images-container flip thumbnail 12",
+      "replaced": true
+    },
+    {
+      "file": "img13.jpg",
+      "desc": "photographic thumbnail used in the reveal grid",
+      "role": "images-container flip thumbnail 13",
+      "replaced": true
+    },
+    {
+      "file": "img14.jpg",
+      "desc": "photographic thumbnail used in the reveal grid",
+      "role": "images-container flip thumbnail 14",
+      "replaced": true
+    },
+    {
+      "file": "img15.jpg",
+      "desc": "photographic thumbnail used in the reveal grid",
+      "role": "images-container flip thumbnail 15",
+      "replaced": true
+    },
+    {
+      "file": "logo.png",
+      "desc": "small square studio logo mark",
+      "role": "sidebar logo that scales in",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "minimal",
+      "editorial",
+      "elegant"
+    ],
+    "useCase": [
+      "preloader",
+      "hero",
+      "image-reveal"
+    ],
+    "useWhen": "Úsalo como intro de landing de estudio o portfolio cuando quieras un contador animado, rejilla de imágenes con Flip y titulares que suben en máscara.",
+    "aliases": [
+      "revelado de landing",
+      "intro de portfolio",
+      "flip image reveal",
+      "contador animado",
+      "landing intro",
+      "hero reveal"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "Flip",
+      "SplitText"
+    ],
+    "assetCount": 16,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bg",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#e7e4dc",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bg"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "fg",
+      "label": "Texto",
+      "type": "color",
+      "default": "#1a1714",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--fg"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "accent",
+      "label": "Acento",
+      "type": "color",
+      "default": "#b56a2b",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--accent"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "loader-bg",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#d6d2c8",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--loader-bg"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "konpo-lp-reveal",
+    "title": "Konpo Landing Page Reveal",
+    "category": "preloader",
+    "trigger": "load",
+    "libs": [
+      "gsap",
+      "Flip",
+      "SplitText"
+    ],
+    "complexity": 3,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power3",
+    "duration_range": [
+      0.3,
+      3
+    ],
+    "stagger": 0.1,
+    "assets_required": {
+      "count": 16,
+      "bytes": 2845340,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "entry-veil",
+        "reason": "velo de entrada a pantalla completa en la carga"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "LOAD-ONESHOT",
+    "engine": "gsap",
+    "motion_signature": "auto-play load reveal: 3s bottom-anchored bg wipe, three independent digit columns rolling on power2.inOut, then a Flip travel of 15 thumbnails from top-left to bottom-right with a 0.1s per-image stagger and a 2.5x scale punch, closing with power4.out line-mask text",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "entry-veil"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

@@ -1,0 +1,422 @@
+{
+  "slug": "outfit-landing-page-reveal",
+  "sourceDir": "codegrid-outfit-landing-page-reveal",
+  "title": "Outfit Landing Page Reveal",
+  "description": "Preloader reveal for a fashion-archive landing page: six stacked centered images with random tilts scale up and un-clip with stagger while a SplitText title animates in and a 000-to-100 counter ticks; everything then exits and the preloader clips away upward, revealing the hero with masked char/word slide-ups on the header, nav and footer. Plays automatically once on page load.",
+  "category": "preloader",
+  "tags": [
+    "preloader",
+    "reveal",
+    "clip-path",
+    "splittext",
+    "counter",
+    "stagger",
+    "intro",
+    "landing",
+    "hero"
+  ],
+  "gsap": [
+    "SplitText",
+    "CustomEase"
+  ],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 3000
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "moody editorial studio portrait of a woman in a deep oxblood dress and matching fur stole, dramatic side light on grey backdrop",
+      "role": "preloader stacked image 1",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "black-and-white editorial fashion image of a model draped in sheer black mesh fabric, arms raised, grey studio backdrop",
+      "role": "preloader stacked image 2",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "translucent blue-grey human figure curled in fetal position floating on a pale background, x-ray look",
+      "role": "preloader stacked image 3",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "still life of purple iris flowers in a glass vase on a marble table against an oxblood red wall",
+      "role": "preloader stacked image 4",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "black-and-white photo of the back of a woman's head with slicked wet hair in a low bun",
+      "role": "preloader stacked image 5",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "macro close-up of pale yellow flower stamens against a soft lilac background, shallow depth of field",
+      "role": "preloader stacked image 6",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "editorial",
+      "cinematic",
+      "elegant"
+    ],
+    "useCase": [
+      "preloader",
+      "hero",
+      "text-reveal"
+    ],
+    "useWhen": "Úsalo cuando lances una landing de moda o archivo y quieras una intro a pantalla completa con contador y fotos apiladas antes de revelar el hero.",
+    "aliases": [
+      "preloader de moda",
+      "intro con contador",
+      "fashion archive intro",
+      "pila de fotos",
+      "counter loader",
+      "reveal de portada"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "SplitText",
+      "CustomEase"
+    ],
+    "assetCount": 6,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "base-200",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#e5e1d7",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--base-200"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "base-300",
+      "label": "Texto",
+      "type": "color",
+      "default": "#16130f",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--base-300"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "accent",
+      "label": "Acento",
+      "type": "color",
+      "default": "#7a2230",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--accent"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "base-100",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#faf8f2",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--base-100"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "imgStagger",
+      "label": "Escalonado de las fotos",
+      "type": "range",
+      "min": 0,
+      "max": 0.8,
+      "step": 0.02,
+      "default": 0.2,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "imgStagger"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "charStagger",
+      "label": "Escalonado de las letras",
+      "type": "range",
+      "min": 0,
+      "max": 0.4,
+      "step": 0.005,
+      "default": 0.125,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "charStagger"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "headerStagger",
+      "label": "Escalonado del titular",
+      "type": "range",
+      "min": 0,
+      "max": 0.3,
+      "step": 0.005,
+      "default": 0.075,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "headerStagger"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "imgTilt",
+      "label": "Inclinación de las fotos",
+      "type": "range",
+      "min": 0,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "imgTilt"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "counterDuration",
+      "label": "Duración de la cuenta",
+      "type": "range",
+      "min": 0.5,
+      "max": 6,
+      "step": 0.25,
+      "default": 2,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "counterDuration"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "outfit-landing-page-reveal",
+    "title": "Outfit Landing Page Reveal",
+    "category": "preloader",
+    "trigger": "load",
+    "libs": [
+      "gsap",
+      "SplitText",
+      "CustomEase"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "custom",
+    "duration_range": [
+      0.75,
+      2
+    ],
+    "stagger": 0.075,
+    "assets_required": {
+      "count": 6,
+      "bytes": 543508,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "entry-veil",
+        "reason": "velo de entrada a pantalla completa en la carga"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "aladesign-landing-page-reveal",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "aminezegmou-landing-page",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "aristidebenoist-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "audemarspiguet-menu",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "camille-mormal-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "hypnotic-gallery-gsap-flip",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "infinite-draggable-image-gallery-javascript",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "kin-landing-page",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "landing-page-reveal-no-webgl",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "laserbysonymusic-landing-page-reveal-animation",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "maxmilkin-preloader",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "meetings-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "menu-root-food",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "nite-riot-landing-page-reveal-javascript",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "p10-landing-page-reveal-gsap",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "push-over-overlay-menu",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "steelworks-landing-page-reveal",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "story-world-carousel-slider",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "truekindskincare-landing-page-reveal-javascript",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "zajno-lp",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      },
+      {
+        "with": "zajno-page-transitions",
+        "kind": "ease-name",
+        "reason": "ambos registran CustomEase \"hop\" con curvas distintas; el último evaluado sobrescribe al otro sin aviso"
+      }
+    ],
+    "cluster": "LOAD-ONESHOT",
+    "engine": "gsap",
+    "motion_signature": "autoplay preloader timeline: a deck of six pre-rotated, scale-0 images blooms open via clip-path inset→full-bleed on a 0.2s stagger, a masked SplitText wordmark and a 000→100 counter ride up, everything scales back out on a negative stagger, then the fixed dark panel clips upward to hand off to masked hero/nav/footer text",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "entry-veil"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

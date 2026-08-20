@@ -1,0 +1,315 @@
+{
+  "slug": "var-font-anim",
+  "sourceDir": "cg-var-font-anim",
+  "title": "ScrollTrigger Variable Font Marquee",
+  "description": "Four horizontal image marquees drift sideways as you scroll (gsap.fromTo on x driven by a scrubbed ScrollTrigger), while SplitType splits the interspersed word headings into characters whose variable fontWeight is tweened from 100 to 900 with a staggered, scrubbed ScrollTrigger. Lenis provides the smooth scroll that ScrollTrigger reads.",
+  "category": "text",
+  "tags": [
+    "scrolltrigger",
+    "variable-font",
+    "font-weight",
+    "marquee",
+    "split-text",
+    "lenis",
+    "editorial",
+    "scrub",
+    "gsap"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "split-type",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "scrollTo": 0.6,
+    "afterScrollMs": 1200,
+    "clip": {
+      "seconds": 10
+    }
+  },
+  "images": [
+    {
+      "file": "hero.jpg",
+      "desc": "Full-bleed neon-noir hero: a helmeted figure beside a glowing red monolith on a rain-soaked street, with the exhibition title 'Meridian' overlaid",
+      "role": "hero section full-screen image",
+      "replaced": true
+    },
+    {
+      "file": "img1.jpg",
+      "desc": "Marquee thumbnail in row 1 before the word 'Neon'",
+      "role": "marquee-1 item image",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "Marquee thumbnail in row 1 after the word 'Neon'",
+      "role": "marquee-1 item image",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "Marquee thumbnail in row 1",
+      "role": "marquee-1 item image",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "Marquee thumbnail in row 1 (last item)",
+      "role": "marquee-1 item image",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "Marquee thumbnail in row 2 (first item)",
+      "role": "marquee-2 item image",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "Marquee thumbnail in row 2",
+      "role": "marquee-2 item image",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "Marquee thumbnail in row 2 before the word 'Rain'",
+      "role": "marquee-2 item image",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "Marquee thumbnail in row 2 after the word 'Rain'",
+      "role": "marquee-2 item image",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpg",
+      "desc": "Marquee thumbnail in row 3 before the word '2087'",
+      "role": "marquee-3 item image",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpg",
+      "desc": "Marquee thumbnail in row 3 after the word '2087'",
+      "role": "marquee-3 item image",
+      "replaced": true
+    },
+    {
+      "file": "img11.jpg",
+      "desc": "Marquee thumbnail in row 3",
+      "role": "marquee-3 item image",
+      "replaced": true
+    },
+    {
+      "file": "img12.jpg",
+      "desc": "Marquee thumbnail in row 3 (last item)",
+      "role": "marquee-3 item image",
+      "replaced": true
+    },
+    {
+      "file": "img13.jpg",
+      "desc": "Marquee thumbnail in row 4 (first item)",
+      "role": "marquee-4 item image",
+      "replaced": true
+    },
+    {
+      "file": "img14.jpg",
+      "desc": "Marquee thumbnail in row 4",
+      "role": "marquee-4 item image",
+      "replaced": true
+    },
+    {
+      "file": "img15.jpg",
+      "desc": "Marquee thumbnail in row 4 before the word 'Noir'",
+      "role": "marquee-4 item image",
+      "replaced": true
+    },
+    {
+      "file": "img16.jpg",
+      "desc": "Marquee thumbnail in row 4 after the word 'Noir'",
+      "role": "marquee-4 item image",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "editorial",
+      "bold",
+      "experimental"
+    ],
+    "useCase": [
+      "scroll-story",
+      "text-reveal",
+      "gallery",
+      "marquee"
+    ],
+    "useWhen": "Cuando quieres una galería de imágenes en marquees horizontales con títulos cuyo grosor de fuente variable crece al hacer scroll.",
+    "aliases": [
+      "fuente variable",
+      "variable font",
+      "peso de fuente",
+      "marquee scroll",
+      "texto scroll",
+      "font weight animation"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 17,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#08070f",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f2eef7",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "neon",
+      "label": "Acento",
+      "type": "color",
+      "default": "#ff2d6b",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--neon"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "var-font-anim",
+    "title": "ScrollTrigger Variable Font Marquee",
+    "category": "text",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "SplitType",
+      "lenis"
+    ],
+    "complexity": 3,
+    "pinned": false,
+    "viewport_heights": 150,
+    "needs_lenis": true,
+    "ease_family": "none",
+    "duration_range": [
+      0.5,
+      1
+    ],
+    "stagger": 0.35,
+    "assets_required": {
+      "count": 18,
+      "bytes": 2682930,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de var-font-anim"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de var-font-anim"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de var-font-anim"
+      }
+    ],
+    "cluster": "SCROLL-WELDED",
+    "engine": "gsap",
+    "motion_signature": "scrub-driven marquee drift with per-char weight wave; position is a pure linear function of scroll progress (ease:'none' + scrub:true), all smoothing comes from Lenis and scrub's default catch-up",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-welded"
+  },
+  "review": {
+    "status": "public"
+  }
+}

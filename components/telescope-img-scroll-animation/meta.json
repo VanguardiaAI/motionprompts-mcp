@@ -1,0 +1,220 @@
+{
+  "slug": "telescope-img-scroll-animation",
+  "sourceDir": "cg-telescope-img-scroll-animation",
+  "title": "Telescope Image Scroll Animation",
+  "description": "A pinned banner scrubbed over four viewport heights with Lenis smooth scroll: the image container scales up from zero while seven stacked silhouette-masked copies of the same photo grow at staggered scales, creating a telescoping lens-in-lens depth effect. Two intro words slide apart horizontally and the centered headline reveals word-by-word, all driven by a single ScrollTrigger onUpdate reading self.progress.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "pin",
+    "scrub",
+    "mask",
+    "scale",
+    "telescope",
+    "lenis",
+    "editorial",
+    "reveal"
+  ],
+  "gsap": [
+    "ScrollTrigger",
+    "SplitText"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "scrollTo": 0.55,
+    "afterScrollMs": 800
+  },
+  "images": [
+    {
+      "file": "banner-img.jpg",
+      "desc": "editorial studio portrait of a woman with long curly hair, hands on hips, wearing a brown corduroy blazer over a rust V-neck sweater, against a burnt-orange background",
+      "role": "banner photo, repeated across the base layer and every silhouette-masked layer",
+      "replaced": true
+    },
+    {
+      "file": "banner-img-mask.jpg",
+      "desc": "black silhouette of the same figure (head, curly hair, shoulders, arms akimbo) on a white background, used as an alpha mask",
+      "role": "CSS mask-image applied to the .mask layers so the repeated photo only shows through the figure's silhouette",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "editorial",
+      "elegant",
+      "cinematic"
+    ],
+    "useCase": [
+      "hero",
+      "scroll-story",
+      "image-reveal"
+    ],
+    "useWhen": "Úsalo para un hero de moda o editorial donde una foto se revela con scroll suave y un efecto telescópico de capas enmascaradas por una silueta.",
+    "aliases": [
+      "telescopio de imagenes",
+      "scroll con mascara",
+      "hero editorial",
+      "layered mask scroll",
+      "silhouette reveal",
+      "zoom telescopico"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger",
+      "SplitText"
+    ],
+    "assetCount": 2,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bg",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#191622",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bg"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Texto",
+      "type": "color",
+      "default": "#ece7e0",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bg-deep",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#120f18",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bg-deep"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "telescope-img-scroll-animation",
+    "title": "Telescope Image Scroll Animation",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "SplitText",
+      "lenis"
+    ],
+    "complexity": 4,
+    "pinned": true,
+    "viewport_heights": 400,
+    "needs_lenis": true,
+    "ease_family": null,
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 2,
+      "bytes": 212614,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de telescope-img-scroll-animation"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de telescope-img-scroll-animation"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de telescope-img-scroll-animation"
+      }
+    ],
+    "cluster": "SCROLL-LAGGED",
+    "engine": "gsap",
+    "motion_signature": "pinned 400vh scrub where a single onUpdate maps scroll progress linearly onto transforms: container scale 0→1, six silhouette-masked copies each lerping from initialScale 0.9−i*0.2 (layer 6 starts at −0.1, flipped) toward 1 over progress/0.9 — a telescoping lens-in-lens zoom; two intro words counter-slide horizontally ±progress*50vw; headline words fade in one by one across progress 0.7→0.9. No tweens, no eases: all smoothing comes from scrub:1 plus Lenis inertia",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-lagged"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

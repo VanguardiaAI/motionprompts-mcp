@@ -1,0 +1,580 @@
+{
+  "slug": "burocratik-image-trail-js",
+  "sourceDir": "codegrid-burocratik-image-trail-js",
+  "title": "Burocratik Image Trail",
+  "description": "A cursor-driven image trail: while the mouse moves across the central full-viewport panel, a new 200px photo spawns at the cursor once it passes a distance threshold, scaling up from 0 with a random rotation via a CSS transform transition, then collapsing back to scale 0 and unmounting after a ~750ms lifespan. Idle cursors and scroll events also seed images. Pure vanilla JS driven by requestAnimationFrame and CSS cubic-bezier transitions (no GSAP); Lenis provides smooth scrolling.",
+  "category": "interactive",
+  "tags": [
+    "image-trail",
+    "cursor",
+    "mouse-trail",
+    "lenis",
+    "vanilla-js",
+    "css-transitions",
+    "editorial",
+    "hover",
+    "scroll"
+  ],
+  "gsap": [],
+  "deps": [
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "scrollTo": 0.4,
+    "afterScrollMs": 800,
+    "clip": {
+      "seconds": 9,
+      "actions": [
+        {
+          "type": "scroll",
+          "to": 0.4,
+          "mode": "once",
+          "end": 0.4
+        },
+        {
+          "type": "cursor",
+          "path": "sweep",
+          "start": 0.4
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpeg",
+      "desc": "close-up of an East Asian woman with straight black hair and blunt bangs, red top, dramatic side lighting on a dark background",
+      "role": "trail image (randomly picked into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpeg",
+      "desc": "model with a slicked-back low bun in a dark coat, standing in profile against a vivid red background",
+      "role": "trail image (randomly picked into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpeg",
+      "desc": "model in an angular black origami-structured dress with long dark hair, plain white background",
+      "role": "trail image (randomly picked into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpeg",
+      "desc": "silhouette of a model in a long dark coat standing in profile against a deep red background",
+      "role": "trail image (randomly picked into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpeg",
+      "desc": "close-up of an East Asian woman's face wrapped in translucent plastic sheeting, muted cool tones",
+      "role": "trail image (randomly picked into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpeg",
+      "desc": "black-and-white portrait of a woman with a dark bob, hair falling across her face in moody shadow",
+      "role": "trail image (randomly picked into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpeg",
+      "desc": "side profile of a young Black man laughing outdoors in bright sun against green foliage",
+      "role": "trail image (randomly picked into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpeg",
+      "desc": "blonde woman with eyes closed wearing an ornate floral lace veil and rose-patterned dress, holding orange flowers, dark background",
+      "role": "trail image (randomly picked into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpeg",
+      "desc": "dark low-key portrait of a face partly obscured by motion-blurred hair and shadow",
+      "role": "trail image (randomly picked into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpeg",
+      "desc": "profile of a person with a dark bob wearing glasses against a vivid red background",
+      "role": "trail image (randomly picked into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "img11.jpeg",
+      "desc": "face pressed against reflective silver foil/mylar with a strong metallic sheen",
+      "role": "trail image (randomly picked into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "img12.jpeg",
+      "desc": "red-haired freckled woman in a black turtleneck against a moody dark background",
+      "role": "trail image (randomly picked into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "img13.jpeg",
+      "desc": "close-up of a freckled pale-eyed woman wearing a translucent plastic bonnet/hood",
+      "role": "trail image (randomly picked into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "img14.jpeg",
+      "desc": "editorial portrait, warm backlight, candid laugh",
+      "role": "trail image (randomly picked into the cursor trail)",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    },
+    {
+      "file": "img15.jpeg",
+      "desc": "editorial portrait against colored seamless, portrait",
+      "role": "trail image (randomly picked into the cursor trail)",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    },
+    {
+      "file": "img16.jpeg",
+      "desc": "studio portrait of a man with a beaded necklace laughing hard against a dark background",
+      "role": "trail image (randomly picked into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "img17.jpeg",
+      "desc": "cinematic portrait in city at dusk, neon reflections, portrait",
+      "role": "trail image (randomly picked into the cursor trail)",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    },
+    {
+      "file": "img18.jpeg",
+      "desc": "model in motion in a black-and-white striped outfit with hair whipping across a white background",
+      "role": "trail image (randomly picked into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "img19.jpeg",
+      "desc": "high-contrast profile silhouette of a woman with a long braid against a white background",
+      "role": "trail image (randomly picked into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "img20.jpeg",
+      "desc": "profile of a dark-skinned model with a glowing iridescent light band across the neck, pale grey background",
+      "role": "trail image (randomly picked into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "img21.jpeg",
+      "desc": "profile of a platinum-blonde model with eyes closed wearing a shimmering metallic sequined turtleneck, muted green background",
+      "role": "trail image (randomly picked into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "img22.jpeg",
+      "desc": "extreme close-up of freckled eyes and nose framed by a red device/mask with white slots, red background",
+      "role": "trail image (randomly picked into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "img23.jpeg",
+      "desc": "blonde woman with eyes closed in an ornate floral lace veil over a rose-patterned dress, warm dark background",
+      "role": "trail image (randomly picked into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "img24.jpeg",
+      "desc": "pale blonde model with slicked hair wearing a chainmail mesh top against an overcast outdoor landscape",
+      "role": "trail image (randomly picked into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "img25.jpeg",
+      "desc": "low-angle portrait of a shaved-head model with orange eye makeup and a beaded black high-neck, dark teal background",
+      "role": "trail image (randomly picked into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "img26.jpeg",
+      "desc": "red-haired model in a pinstripe suit holding a bright red glove over one eye, grey background",
+      "role": "trail image (randomly picked into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "img27.jpeg",
+      "desc": "model with a vivid orange curly updo and freckles in a black turtleneck over a rainbow-striped top",
+      "role": "trail image (randomly picked into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "img28.jpeg",
+      "desc": "face pressed against reflective black plastic/latex sheeting with glossy highlights",
+      "role": "trail image (randomly picked into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "img29.jpeg",
+      "desc": "freckled model with slicked-back hair holding a vertical blade in front of her face, black high-neck, blue-grey background",
+      "role": "trail image (randomly picked into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "img30.jpeg",
+      "desc": "model in a pale grey knit balaclava/hood covering the head, muted neutral background",
+      "role": "trail image (randomly picked into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "img31.jpeg",
+      "desc": "blonde-bob model with red lips in a glossy red patterned top against a warm sunset background",
+      "role": "trail image (randomly picked into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "img32.jpeg",
+      "desc": "red-haired freckled woman in a black turtleneck lit from the side against a dark background",
+      "role": "trail image (randomly picked into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "img33.jpeg",
+      "desc": "curly-haired model with bold makeup in a shimmering metallic sequined turtleneck, olive-green background",
+      "role": "trail image (randomly picked into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "img34.jpeg",
+      "desc": "close-up of a freckled blue-eyed woman wearing a reflective silver plastic bonnet, outdoor background",
+      "role": "trail image (randomly picked into the cursor trail)",
+      "replaced": true
+    },
+    {
+      "file": "img35.jpeg",
+      "desc": "model in a high-neck black ruffled Victorian-style gown and black balaclava mask on outdoor moorland",
+      "role": "trail image (randomly picked into the cursor trail)",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "editorial",
+      "minimal",
+      "bold"
+    ],
+    "useCase": [
+      "hero",
+      "cursor-effect",
+      "image-reveal"
+    ],
+    "useWhen": "Úsalo en un hero o sección editorial cuando quieras que fotos aparezcan y desaparezcan siguiendo el cursor con rotaciones y escalado suaves.",
+    "aliases": [
+      "estela de imagenes",
+      "image trail",
+      "rastro de cursor",
+      "mouse trail",
+      "cursor image reveal",
+      "trail de fotos"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 35,
+    "perfCost": "medium",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#ede4d3",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ground",
+      "label": "Fondo profundo",
+      "type": "color",
+      "default": "#1b120c",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ground"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "print",
+      "label": "Texto claro",
+      "type": "color",
+      "default": "#f6efe1",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--print"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "imageCount",
+      "label": "Nº de imágenes distintas",
+      "type": "range",
+      "min": 4,
+      "max": 35,
+      "step": 1,
+      "default": 35,
+      "apply": {
+        "kind": "js",
+        "path": "imageCount"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mouseThreshold",
+      "label": "Sensibilidad del ratón",
+      "type": "range",
+      "min": 20,
+      "max": 400,
+      "step": 10,
+      "default": 100,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "mouseThreshold"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "imageLifespan",
+      "label": "Duración en pantalla",
+      "type": "range",
+      "min": 200,
+      "max": 3000,
+      "step": 50,
+      "default": 750,
+      "unit": "ms",
+      "apply": {
+        "kind": "js",
+        "path": "imageLifespan"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "idleCursorInterval",
+      "label": "Ritmo con el cursor quieto",
+      "type": "range",
+      "min": 100,
+      "max": 1500,
+      "step": 50,
+      "default": 300,
+      "unit": "ms",
+      "apply": {
+        "kind": "js",
+        "path": "idleCursorInterval"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "inDuration",
+      "label": "Velocidad de entrada",
+      "type": "range",
+      "min": 150,
+      "max": 2000,
+      "step": 50,
+      "default": 750,
+      "unit": "ms",
+      "apply": {
+        "kind": "js",
+        "path": "inDuration"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "outDuration",
+      "label": "Velocidad de salida",
+      "type": "range",
+      "min": 200,
+      "max": 2500,
+      "step": 50,
+      "default": 1000,
+      "unit": "ms",
+      "apply": {
+        "kind": "js",
+        "path": "outDuration"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "inEasing",
+      "label": "Curva de entrada",
+      "type": "select",
+      "default": "cubic-bezier(.07,.5,.5,1)",
+      "options": [
+        {
+          "value": "cubic-bezier(.07,.5,.5,1)",
+          "label": "Suave"
+        },
+        {
+          "value": "cubic-bezier(.87, 0, .13, 1)",
+          "label": "Seca"
+        },
+        {
+          "value": "linear",
+          "label": "Constante"
+        },
+        {
+          "value": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+          "label": "Rebote"
+        },
+        {
+          "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+          "label": "Frenada"
+        }
+      ],
+      "apply": {
+        "kind": "js",
+        "path": "inEasing"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "outEasing",
+      "label": "Curva de salida",
+      "type": "select",
+      "default": "cubic-bezier(.87, 0, .13, 1)",
+      "options": [
+        {
+          "value": "cubic-bezier(.87, 0, .13, 1)",
+          "label": "Seca"
+        },
+        {
+          "value": "cubic-bezier(.07,.5,.5,1)",
+          "label": "Suave"
+        },
+        {
+          "value": "linear",
+          "label": "Constante"
+        },
+        {
+          "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+          "label": "Frenada"
+        }
+      ],
+      "apply": {
+        "kind": "js",
+        "path": "outEasing"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "burocratik-image-trail-js",
+    "title": "Burocratik Image Trail",
+    "category": "interactive",
+    "trigger": "scroll",
+    "libs": [
+      "lenis"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": true,
+    "ease_family": null,
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 35,
+      "bytes": 4834149,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de burocratik-image-trail-js"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de burocratik-image-trail-js"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de burocratik-image-trail-js"
+      }
+    ],
+    "cluster": "POINTER-LATCHED",
+    "engine": "css-transition",
+    "motion_signature": "pointer-spawned CSS-transition image trail, rAF-culled",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "pointer-latch"
+  },
+  "review": {
+    "status": "public"
+  }
+}

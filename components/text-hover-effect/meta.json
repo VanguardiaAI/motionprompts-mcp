@@ -1,0 +1,243 @@
+{
+  "slug": "text-hover-effect",
+  "sourceDir": "cg-text-hover-effect",
+  "title": "Text Hover Image Ring",
+  "description": "Hovering a highlighted word in the hero paragraph reveals a ring of 11 images that continuously orbits around the cursor. The images fan out on a circle via GSAP: a gsap.ticker loop advances the rotation angle each frame while gsap.to tweens each item's x/y, opacity in and out (0.5s, power1.out) with lerped cursor-following.",
+  "category": "hover",
+  "tags": [
+    "text-hover",
+    "image-reveal",
+    "cursor-follow",
+    "circular-orbit",
+    "rotating-ring",
+    "gsap",
+    "editorial",
+    "interactive"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "clip": {
+      "seconds": 7,
+      "actions": [
+        {
+          "type": "cursor",
+          "path": "sweep"
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "moody teal-tinted scene of a lone silhouetted figure walking on a reflective surface toward a bright light",
+      "role": "orbiting ring image (item 1)",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "warm portrait of a smiling elderly woman with soft blonde hair in natural light",
+      "role": "orbiting ring image (item 2)",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "freckled young woman with a stripe of hard sunlight across her face",
+      "role": "orbiting ring image (item 3)",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "dim portrait glimpsed through a slot of a woman's lower face holding a cigarette with pale blue nails",
+      "role": "orbiting ring image (item 4)",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "silhouette of a person pressing a hand against frosted glass, backlit in warm orange",
+      "role": "orbiting ring image (item 5)",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "moody low-key portrait of a blonde woman looking to the side against a dark smoky backdrop",
+      "role": "orbiting ring image (item 6)",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "moody low-key studio portrait of a young man with dark curly hair in black",
+      "role": "orbiting ring image (item 7)",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "tight warm close-up of a red-haired woman's face in soft shadow",
+      "role": "orbiting ring image (item 8)",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpg",
+      "desc": "person in a black suit with a pale blue tulle veil draped over the head against a grey wall",
+      "role": "orbiting ring image (item 9)",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpg",
+      "desc": "dramatic dark studio portrait of a seated man in a black t-shirt",
+      "role": "orbiting ring image (item 10)",
+      "replaced": true
+    },
+    {
+      "file": "img11.jpg",
+      "desc": "cool blue-toned portrait of a woman with wet hair pushing it back, face partly hidden",
+      "role": "orbiting ring image (item 11)",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "editorial",
+      "minimal",
+      "experimental"
+    ],
+    "useCase": [
+      "hover-interaction",
+      "image-reveal",
+      "cursor-effect"
+    ],
+    "useWhen": "Úsalo cuando quieras que pasar el cursor sobre palabras clave de un párrafo revele un anillo de imágenes que orbita y sigue al ratón.",
+    "aliases": [
+      "texto con hover de imágenes",
+      "image ring on hover",
+      "orbita de imagenes",
+      "hover reveal gallery",
+      "palabras con imagenes",
+      "cursor image ring"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 11,
+    "perfCost": "light",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bg",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#121110",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bg"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "muted",
+      "label": "Texto",
+      "type": "color",
+      "default": "#8b847b",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--muted"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "amber",
+      "label": "Acento",
+      "type": "color",
+      "default": "#cfa35f",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--amber"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "text-hover-effect",
+    "title": "Text Hover Image Ring",
+    "category": "hover",
+    "trigger": "hover",
+    "libs": [
+      "gsap"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power1",
+    "duration_range": [
+      0.5,
+      0.5
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 11,
+      "bytes": 1612120,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "html/body height fija en vh",
+      "asigna window.onload"
+    ],
+    "capabilities": [
+      {
+        "capability": "window-onload",
+        "reason": "asigna window.onload (no addEventListener)"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "POINTER-CHASE",
+    "engine": "gsap+raf",
+    "motion_signature": "cursor-following orbiting image ring on word hover",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  },
+  "review": {
+    "status": "public"
+  }
+}

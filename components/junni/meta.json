@@ -1,0 +1,207 @@
+{
+  "slug": "junni",
+  "sourceDir": "cg-junni",
+  "title": "Junni Tile Flip Board",
+  "description": "A full-screen 6x6 grid of 3D tiles, each showing a slice of a shared image split by background-position. Hovering a tile triggers a GSAP timeline that spins it a full turn on rotateX with a column-based rotateY tilt; a 'Flip Tiles' button flips the whole board with gsap.to and a random stagger, swapping between the front and back images. A fixed grid overlay highlights cells under the cursor on mousemove.",
+  "category": "interactive",
+  "tags": [
+    "3d-flip",
+    "grid",
+    "hover",
+    "tiles",
+    "gsap",
+    "perspective",
+    "cursor-grid",
+    "bold",
+    "editorial"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "click": "#flipButton",
+    "afterClickMs": 1600
+  },
+  "images": [
+    {
+      "file": "front.jpg",
+      "desc": "Cinematic low-key photograph of two aikido practitioners in white gi kneeling in seiza, bokken extended, dark teal-lit dojo. Single-subject-heavy composition that slices cleanly across the grid.",
+      "role": "Front face of every flip tile, sliced across the 6x6 grid via background-position (initial board state).",
+      "replaced": true
+    },
+    {
+      "file": "back.jpg",
+      "desc": "Cinematic low-key photograph of a practitioner bowing to a bokken laid on a wooden dojo floor, warm rim light on the blade against deep shadow.",
+      "role": "Back face of every flip tile, revealed after the 'Reverse' button flips the board, sliced across the 6x6 grid.",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "bold",
+      "editorial",
+      "experimental"
+    ],
+    "useCase": [
+      "hero",
+      "image-reveal",
+      "gallery",
+      "hover-interaction"
+    ],
+    "useWhen": "Cuando quieres un hero llamativo de imagen troceada en cuadricula 3D que gira al pasar el raton y voltea todo el tablero con un boton.",
+    "aliases": [
+      "tile flip",
+      "cuadricula 3d",
+      "flip board",
+      "grid reveal",
+      "voltear fichas",
+      "3d tiles"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 2,
+    "perfCost": "light",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#0b100f",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Texto",
+      "type": "color",
+      "default": "#ece6da",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "amber",
+      "label": "Acento",
+      "type": "color",
+      "default": "#c9a15e",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--amber"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "tile-base",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#16211f",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--tile-base"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "junni",
+    "title": "Junni Tile Flip Board",
+    "category": "interactive",
+    "trigger": "hover",
+    "libs": [
+      "gsap"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power2",
+    "duration_range": [
+      0.25,
+      1
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 2,
+      "bytes": 753811,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "POINTER-LATCHED",
+    "engine": "mixed",
+    "motion_signature": "hover-triggered 3D tile flips with per-column tilt, random-stagger board-wide flip, plus a CSS-transition cursor grid highlight",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "pointer-latch"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

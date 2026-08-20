@@ -1,0 +1,333 @@
+{
+  "slug": "voku-image-slider",
+  "sourceDir": "codegrid-voku-image-slider-nextjs",
+  "title": "Voku Image Slider",
+  "description": "Infinite horizontal image slider with 9 slides arranged along a cosine arc: each rAF frame computes a modular wrap position per slide and applies it with gsap.set, enlarging and lifting the center slide while side slides shrink to 0.25x and drop along the arc. Driven by mouse wheel and touch drag with a 0.05 lerp, and a caption at the bottom updates to the slide closest to center.",
+  "category": "slider",
+  "tags": [
+    "infinite",
+    "arc",
+    "wheel",
+    "touch",
+    "lerp",
+    "raf",
+    "gsap-set",
+    "coverflow"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "clip": {
+      "seconds": 9,
+      "actions": [
+        {
+          "type": "scroll",
+          "to": 0.9,
+          "mode": "pingpong"
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "sculptural ceramic vessel on chrome pedestal, dramatic studio lighting, deep charcoal background",
+      "role": "slide 1 (Cleansing balm)",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "twisted glass sculpture catching prismatic light, black backdrop, macro detail",
+      "role": "slide 2 (Facial oil)",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "brushed aluminum abstract form, soft rim light, dark studio",
+      "role": "slide 3 (Kohl liner)",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "open chrome refill mirror, both halves reflecting, on black",
+      "role": "slide 4 (Refill mirror)",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "matte red lipstick bullet beside a black glass jar on grey — the deliberate colour accent",
+      "role": "slide 5 (Matte lipstick)",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "stacked stone and steel totem, chiaroscuro lighting, portrait 4:5",
+      "role": "slide 6 (Hand cream)",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "frosted glass monolith glowing from within, dark scene, portrait 4:5",
+      "role": "slide 7 (Foaming cleanser)",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "chrome torus knot floating over velvet, specular highlights, portrait 4:5",
+      "role": "slide 8 (Pressed powder)",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    },
+    {
+      "file": "img9.jpg",
+      "desc": "hand-blown amber glass form on black slate, cinematic light, portrait 4:5",
+      "role": "slide 9 (Refill case)",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "elegant",
+      "editorial",
+      "minimal"
+    ],
+    "useCase": [
+      "slider",
+      "gallery",
+      "product-showcase"
+    ],
+    "useWhen": "Úsalo cuando quieras un carrusel coverflow infinito en arco para lucir productos o fotos, con la imagen central destacada y navegable por rueda o arrastre.",
+    "aliases": [
+      "coverflow",
+      "carrusel en arco",
+      "arc slider",
+      "carrusel infinito",
+      "product carousel",
+      "slider de imágenes"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 9,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bg-fade",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#ded9d1",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bg-fade"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "muted",
+      "label": "Texto",
+      "type": "color",
+      "default": "#79736a",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--muted"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#1b1916",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "slideWidth",
+      "label": "Ancho de la diapositiva",
+      "type": "range",
+      "min": 80,
+      "max": 400,
+      "step": 5,
+      "default": 200,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "slideWidth"
+      }
+    },
+    {
+      "id": "slideHeight",
+      "label": "Alto de la diapositiva",
+      "type": "range",
+      "min": 120,
+      "max": 400,
+      "step": 5,
+      "default": 275,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "slideHeight"
+      }
+    },
+    {
+      "id": "slideGap",
+      "label": "Separación entre diapositivas",
+      "type": "range",
+      "min": 80,
+      "max": 220,
+      "step": 5,
+      "default": 100,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "slideGap"
+      }
+    },
+    {
+      "id": "arcDepth",
+      "label": "Profundidad del arco",
+      "type": "range",
+      "min": 0,
+      "max": 320,
+      "step": 10,
+      "default": 200,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "arcDepth"
+      }
+    },
+    {
+      "id": "centerLift",
+      "label": "Elevación de la pieza central",
+      "type": "range",
+      "min": 0,
+      "max": 160,
+      "step": 10,
+      "default": 100,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "centerLift"
+      }
+    },
+    {
+      "id": "lerp",
+      "label": "Suavizado del avance",
+      "type": "range",
+      "min": 0.01,
+      "max": 0.2,
+      "step": 0.005,
+      "default": 0.05,
+      "apply": {
+        "kind": "js",
+        "path": "lerp"
+      }
+    }
+  ],
+  "motion": {
+    "slug": "voku-image-slider",
+    "title": "Voku Image Slider",
+    "category": "slider",
+    "trigger": "wheel",
+    "libs": [
+      "gsap"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": null,
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 9,
+      "bytes": 1749427,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": true
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "preventDefault en wheel"
+    ],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "captura la rueda con preventDefault"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "CAPTURED-VIRTUAL-SCROLL",
+    "engine": "raf-lerp",
+    "motion_signature": "rAF-lerped (0.05) infinite coverflow arc over a 900px virtual track: cosine arc drop (200px) + center lift (100px), scale 1→0.25 with distance, zIndex depth; wheel (deltaY*0.5) and touch-drag (delta*1.2) driven",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  },
+  "review": {
+    "status": "public"
+  }
+}

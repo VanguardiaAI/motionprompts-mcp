@@ -1,0 +1,247 @@
+{
+  "slug": "sticky-cards",
+  "sourceDir": "codegrid-nextjs-sticky-cards",
+  "title": "Sticky Stacking Cards on Scroll",
+  "description": "Full-width service cards that pin at 35% of the viewport on scroll and stack under each incoming card: every pinned card's inner wrapper is scrubbed upward by a decreasing multiple of 14vh, producing a layered peel effect, while the intro headline stays pinned (no pin spacing) between the first and last card. Driven by GSAP ScrollTrigger with Lenis smooth scrolling.",
+  "category": "cards",
+  "tags": [
+    "sticky",
+    "stacked-cards",
+    "scroll",
+    "pin",
+    "scrub",
+    "lenis"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "scrollTo": 0.9,
+    "waitMs": 1500,
+    "clip": {
+      "seconds": 10
+    }
+  },
+  "images": [
+    {
+      "file": "assets/hero.jpeg",
+      "desc": "warm design-studio interior with plants and desk",
+      "role": "hero background image",
+      "replaced": true
+    },
+    {
+      "file": "assets/card-1.jpeg",
+      "desc": "moodboard of sketches and printed references on periwinkle card",
+      "role": "Brand foundation card image",
+      "replaced": true
+    },
+    {
+      "file": "assets/card-2.jpeg",
+      "desc": "colour and material swatches fanned across a desk on bone card",
+      "role": "Design identity card image",
+      "replaced": true
+    },
+    {
+      "file": "assets/card-3.jpeg",
+      "desc": "laptop open on a warm-lit studio desk on amber card",
+      "role": "Digital presence card image",
+      "replaced": true
+    },
+    {
+      "file": "assets/card-4.jpeg",
+      "desc": "ceramic objects on studio plinths on ink card",
+      "role": "Product design card image",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "editorial",
+      "elegant",
+      "minimal"
+    ],
+    "useCase": [
+      "card-deck",
+      "scroll-story",
+      "product-showcase"
+    ],
+    "useWhen": "Úsalo cuando presentes servicios o secciones en tarjetas a pantalla completa que se fijan y se apilan una sobre otra al hacer scroll.",
+    "aliases": [
+      "cartas apiladas",
+      "sticky cards",
+      "tarjetas apiladas",
+      "stacking cards",
+      "tarjetas pegajosas",
+      "pinned cards"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 5,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#f2eee5",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#17150f",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "amber",
+      "label": "Acento",
+      "type": "color",
+      "default": "#edbb47",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--amber"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "periwinkle",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#bcb3f2",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--periwinkle"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "sticky-cards",
+    "title": "Sticky Stacking Cards on Scroll",
+    "category": "cards",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 3,
+    "pinned": true,
+    "viewport_heights": null,
+    "needs_lenis": true,
+    "ease_family": "none",
+    "duration_range": [
+      0.2,
+      0.2
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 5,
+      "bytes": 1149316,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de sticky-cards"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de sticky-cards"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de sticky-cards"
+      }
+    ],
+    "cluster": "SCROLL-WELDED",
+    "engine": "gsap",
+    "motion_signature": "pinned full-bleed cards stacking via scrubbed vh lift",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-welded"
+  },
+  "review": {
+    "status": "public"
+  }
+}

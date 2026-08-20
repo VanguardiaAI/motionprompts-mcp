@@ -1,0 +1,225 @@
+{
+  "slug": "silenceo",
+  "sourceDir": "cg-silenceo",
+  "title": "3D Scroll Scanner Experience",
+  "description": "A full-page scroll experience where a Three.js GLTF model floats and rotates as you scroll, its X-rotation mapped to scroll progress via a Lenis-fed render loop. In a pinned scanner section, a ScrollTrigger onEnter handler plays a scan sound, spins the model a full turn with GSAP, then shrinks it and the scan frame to zero; scrolling back reverses the reveal.",
+  "category": "3d-webgl",
+  "tags": [
+    "scroll",
+    "three.js",
+    "webgl",
+    "scrolltrigger",
+    "gltf",
+    "lenis",
+    "pin",
+    "product-showcase",
+    "cinematic"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "three",
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 3000,
+    "scrollTo": 0.7,
+    "afterScrollMs": 1200,
+    "clip": {
+      "seconds": 9
+    }
+  },
+  "images": [
+    {
+      "file": "barcode.png",
+      "desc": "A black-and-white product barcode for the Pantera can",
+      "role": "Bottom-left overlay in the pinned scanner section",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-14",
+  "intent": {
+    "mood": [
+      "minimal",
+      "technical",
+      "cinematic"
+    ],
+    "useCase": [
+      "hero",
+      "scroll-story",
+      "product-showcase"
+    ],
+    "useWhen": "Úsalo para presentar un producto 3D que flota y rota con el scroll y se \"escanea\" al fijarse una sección con sonido y animación GSAP.",
+    "aliases": [
+      "producto 3d scroll",
+      "escaner 3d",
+      "scanner scroll experience",
+      "gltf scroll animation",
+      "webgl producto scroll",
+      "3d model reveal"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": true,
+    "needsCanvas": true,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 1,
+    "perfCost": "heavy",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#17120e",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "red",
+      "label": "Acento",
+      "type": "color",
+      "default": "#de3a18",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--red"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "muted",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#877d73",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--muted"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "silenceo",
+    "title": "3D Scroll Scanner Experience",
+    "category": "3d-webgl",
+    "trigger": "scroll",
+    "libs": [
+      "three",
+      "GLTFLoader",
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 5,
+    "pinned": true,
+    "viewport_heights": 500,
+    "needs_lenis": true,
+    "ease_family": "power2",
+    "duration_range": [
+      0.5,
+      1
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 3,
+      "bytes": 889632,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "html/body height fija en vh"
+    ],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      },
+      {
+        "capability": "document-height",
+        "reason": "fija la altura del documento en 500vh"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de silenceo"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de silenceo"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de silenceo"
+      }
+    ],
+    "cluster": "SCROLL-WELDED",
+    "engine": "mixed",
+    "motion_signature": "Scroll-rotated GLTF can, pinned scan-and-vanish",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-welded"
+  },
+  "review": {
+    "status": "public"
+  }
+}

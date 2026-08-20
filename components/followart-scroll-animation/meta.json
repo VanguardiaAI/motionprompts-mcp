@@ -1,0 +1,231 @@
+{
+  "slug": "followart-scroll-animation",
+  "sourceDir": "codegrid-followart-scroll-animation-nextjs",
+  "title": "FollowArt Scroll Animation",
+  "description": "Stacked full-screen sections that swing in from a 30-degree tilt as you scroll, each panel scrubbing back to level before pinning underneath the next one for a layered card-deck reveal.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "pin",
+    "rotation",
+    "scrub",
+    "sections",
+    "lenis",
+    "stacking"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 1200,
+    "scrollTo": 0.2
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "illustrated red-haired girl in dark dress dancing against blue background, comic style",
+      "role": "section three inline image",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "illustrated masked figure with wild red hair in tuxedo against orange background, comic style",
+      "role": "section two inline image",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "illustrated red-haired woman in blue suit and sunglasses against red background, comic style",
+      "role": "section four centered image",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "bold",
+      "editorial",
+      "playful"
+    ],
+    "useCase": [
+      "scroll-story",
+      "card-deck",
+      "image-reveal"
+    ],
+    "useWhen": "Úsalo cuando quieras un recorrido de secciones a pantalla completa que entran inclinadas y se apilan una sobre otra al hacer scroll.",
+    "aliases": [
+      "secciones apiladas",
+      "stacked sections",
+      "paneles inclinados",
+      "tilt scroll reveal",
+      "card deck scroll",
+      "secciones que se apilan"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 3,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#17150f",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f3eee3",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "riso-yellow",
+      "label": "Acento",
+      "type": "color",
+      "default": "#ffe800",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--riso-yellow"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "riso-blue",
+      "label": "Acento 2",
+      "type": "color",
+      "default": "#0078bf",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--riso-blue"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "followart-scroll-animation",
+    "title": "FollowArt Scroll Animation",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 3,
+    "pinned": true,
+    "viewport_heights": 200,
+    "needs_lenis": true,
+    "ease_family": "none",
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 3,
+      "bytes": 537199,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de followart-scroll-animation"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de followart-scroll-animation"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de followart-scroll-animation"
+      }
+    ],
+    "cluster": "SCROLL-WELDED",
+    "engine": "gsap",
+    "motion_signature": "scrubbed tilt-to-level sections pinned into a stack",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-welded"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

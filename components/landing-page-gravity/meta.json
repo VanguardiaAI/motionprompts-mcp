@@ -1,0 +1,327 @@
+{
+  "slug": "landing-page-gravity",
+  "sourceDir": "cg- landing-page-gravity",
+  "title": "Physics Gravity Landing Page",
+  "description": "A full-viewport hero for a cinematic frame archive (Freefall) where twelve scattered film-still tiles toggle between a floating grid and a physics drop. A [ Release / Restore ] button switches Matter.js gravity on so the rectangles fall, tumble and pile on a floor with restitution and friction, then a manual eased requestAnimationFrame lerp glides them back to their start positions. GSAP simultaneously animates the overlay clip-path, the huge 'Freefall' headline font-size/left, button color and the reveal of the nav link columns.",
+  "category": "interactive",
+  "tags": [
+    "physics",
+    "gravity",
+    "matter-js",
+    "image-grid",
+    "toggle",
+    "interactive",
+    "editorial",
+    "drop"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap",
+    "matter-js"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "click": "#toggle-btn",
+    "afterClickMs": 2200
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "Pale moth caught in a wash of deep red light against near-black, cinematic macro film still.",
+      "role": "One of twelve cinematic film-still tiles scattered across the physics grid.",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "Profile silhouette split by a hard red light ray against a saturated red field.",
+      "role": "One of twelve cinematic film-still tiles scattered across the physics grid.",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "Shadow of an open hand cast on a flat, saturated red backdrop.",
+      "role": "One of twelve cinematic film-still tiles scattered across the physics grid.",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "Figure lit in electric blue, hands raised to the head, high-contrast silhouette.",
+      "role": "One of twelve cinematic film-still tiles scattered across the physics grid.",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "Motion-blurred dancers seen through cool blue light, long-exposure cinematic frame.",
+      "role": "One of twelve cinematic film-still tiles scattered across the physics grid.",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "Amber bokeh dissolving out of focus, warm abstract film texture.",
+      "role": "One of twelve cinematic film-still tiles scattered across the physics grid.",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "Woman's face in profile emerging from shadow under warm backlight, low-key portrait.",
+      "role": "One of twelve cinematic film-still tiles scattered across the physics grid.",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "Lone figure standing in a plume of red smoke, dramatic backlit silhouette.",
+      "role": "One of twelve cinematic film-still tiles scattered across the physics grid.",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpg",
+      "desc": "Man and his cast shadow under a hard spotlight in a dark studio, black-and-white noir.",
+      "role": "One of twelve cinematic film-still tiles scattered across the physics grid.",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpg",
+      "desc": "Warm amber texture in shallow focus, moody abstract film grain.",
+      "role": "One of twelve cinematic film-still tiles scattered across the physics grid.",
+      "replaced": true
+    },
+    {
+      "file": "img11.jpg",
+      "desc": "Solitary figure standing in a circular pool of red spotlight on a dark floor.",
+      "role": "One of twelve cinematic film-still tiles scattered across the physics grid.",
+      "replaced": true
+    },
+    {
+      "file": "img12.jpg",
+      "desc": "Head in profile rimmed by gold light against deep shadow, cinematic backlit portrait.",
+      "role": "One of twelve cinematic film-still tiles scattered across the physics grid.",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "bold",
+      "experimental",
+      "editorial"
+    ],
+    "useCase": [
+      "hero",
+      "gallery",
+      "background"
+    ],
+    "useWhen": "Cuando quieras una hero interactiva donde las imágenes caen con gravedad física al pulsar un botón y luego vuelven a su sitio.",
+    "aliases": [
+      "gravedad",
+      "physics drop",
+      "matter.js gravity",
+      "imagenes que caen",
+      "falling images",
+      "landing con fisica"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": true,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 12,
+    "perfCost": "heavy",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#111111",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "lime-lo",
+      "label": "Acento",
+      "type": "color",
+      "default": "#dcea4e",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--lime-lo"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "gravity",
+      "label": "Fuerza de la gravedad",
+      "type": "range",
+      "min": 0.2,
+      "max": 2.5,
+      "step": 0.05,
+      "default": 1,
+      "apply": {
+        "kind": "js",
+        "path": "gravity"
+      }
+    },
+    {
+      "id": "restitution",
+      "label": "Rebote de las piezas",
+      "type": "range",
+      "min": 0,
+      "max": 0.95,
+      "step": 0.05,
+      "default": 0.75,
+      "apply": {
+        "kind": "js",
+        "path": "restitution"
+      }
+    },
+    {
+      "id": "frictionAir",
+      "label": "Resistencia del aire",
+      "type": "range",
+      "min": 0,
+      "max": 0.08,
+      "step": 0.0025,
+      "default": 0.0175,
+      "apply": {
+        "kind": "js",
+        "path": "frictionAir"
+      }
+    },
+    {
+      "id": "spin",
+      "label": "Giro al soltarse",
+      "type": "range",
+      "min": 0,
+      "max": 1,
+      "step": 0.05,
+      "default": 0.25,
+      "apply": {
+        "kind": "js",
+        "path": "spin"
+      }
+    },
+    {
+      "id": "lineStagger",
+      "label": "Escalonado del menú",
+      "type": "range",
+      "min": 0,
+      "max": 0.3,
+      "step": 0.005,
+      "default": 0.1,
+      "apply": {
+        "kind": "js",
+        "path": "lineStagger"
+      }
+    },
+    {
+      "id": "letterStagger",
+      "label": "Escalonado de las letras",
+      "type": "range",
+      "min": 0,
+      "max": 0.15,
+      "step": 0.005,
+      "default": 0.035,
+      "apply": {
+        "kind": "js",
+        "path": "letterStagger"
+      }
+    }
+  ],
+  "motion": {
+    "slug": "landing-page-gravity",
+    "title": "Physics Gravity Landing Page",
+    "category": "interactive",
+    "trigger": "click",
+    "libs": [
+      "gsap",
+      "matter-js"
+    ],
+    "complexity": 3,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power4",
+    "duration_range": [
+      0.75,
+      1.5
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 12,
+      "bytes": 374118,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "html/body overflow:hidden",
+      "html/body height fija en vh"
+    ],
+    "capabilities": [
+      {
+        "capability": "page-scroll-lock",
+        "reason": "fija overflow:hidden en html/body"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "INTEGRATOR",
+    "engine": "mixed",
+    "motion_signature": "Matter.js gravity drop, eased rAF return",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

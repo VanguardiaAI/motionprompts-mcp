@@ -1,0 +1,273 @@
+{
+  "slug": "karim-saab-work-carousel",
+  "sourceDir": "cg-karim-saab-work-carousel-nextjs",
+  "title": "Karim Saab Work Carousel",
+  "description": "A fullscreen one-slide-at-a-time work carousel where each wheel or touch swipe fires a GSAP transition: the outgoing slide scales down, rotates 30deg, fades and flings off-screen with power4.inOut, while the incoming slide flies in from a clip-path window that opens to full frame with power4.out. Title words and info lines are revealed with masked SplitText staggers on each slide entry.",
+  "category": "slider",
+  "tags": [
+    "carousel",
+    "fullscreen",
+    "wheel",
+    "clip-path",
+    "split-text",
+    "reveal",
+    "editorial",
+    "gsap",
+    "touch"
+  ],
+  "gsap": [
+    "SplitText"
+  ],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "clip": {
+      "seconds": 10,
+      "actions": [
+        {
+          "type": "scroll",
+          "to": 0.9,
+          "mode": "once"
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "slide-img-1.jpg",
+      "desc": "moody studio portrait of a bleach-buzzcut model in a black tank top and layered silver chains wearing angular black sunglasses, grey backdrop",
+      "role": "carousel slide 1 background (Veil)",
+      "replaced": true
+    },
+    {
+      "file": "slide-img-2.jpg",
+      "desc": "cinematic close-up of a woman in a glossy black cyborg helmet and transparent visor against a deep red background, nose ring",
+      "role": "carousel slide 2 background (Drift)",
+      "replaced": true
+    },
+    {
+      "file": "slide-img-3.jpg",
+      "desc": "fullscreen editorial portrait, dramatic contrast, colored gel light",
+      "role": "carousel slide 3 background (Haze)",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    },
+    {
+      "file": "slide-img-4.jpg",
+      "desc": "futuristic portrait of a platinum-blonde model in a glowing visor with a chrome segmented cybernetic neckpiece on a purple background",
+      "role": "carousel slide 4 background (Nocturne)",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "editorial",
+      "cinematic",
+      "futuristic"
+    ],
+    "useCase": [
+      "gallery",
+      "slider",
+      "product-showcase"
+    ],
+    "useWhen": "Úsalo para un portfolio o showcase a pantalla completa donde cada scroll revela un proyecto con una transición dramática de clip-path y texto animado.",
+    "aliases": [
+      "carrusel de trabajos",
+      "work carousel",
+      "slider a pantalla completa",
+      "fullscreen slider",
+      "carrusel de scroll",
+      "transicion de slide"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "SplitText"
+    ],
+    "assetCount": 4,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f2ede4",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "exitScale",
+      "label": "Encogido de la obra que sale",
+      "type": "range",
+      "min": 0.05,
+      "max": 1,
+      "step": 0.05,
+      "default": 0.25,
+      "apply": {
+        "kind": "js",
+        "path": "exitScale"
+      }
+    },
+    {
+      "id": "exitRotation",
+      "label": "Giro de la obra que sale",
+      "type": "range",
+      "min": 0,
+      "max": 90,
+      "step": 5,
+      "default": 30,
+      "unit": "°",
+      "apply": {
+        "kind": "js",
+        "path": "exitRotation"
+      }
+    },
+    {
+      "id": "exitDistance",
+      "label": "Recorrido de salida",
+      "type": "range",
+      "min": 100,
+      "max": 320,
+      "step": 10,
+      "default": 200,
+      "apply": {
+        "kind": "js",
+        "path": "exitDistance"
+      }
+    },
+    {
+      "id": "entryCrop",
+      "label": "Recorte de la obra que entra",
+      "type": "range",
+      "min": 0,
+      "max": 40,
+      "step": 1,
+      "default": 20,
+      "unit": "%",
+      "apply": {
+        "kind": "js",
+        "path": "entryCrop"
+      }
+    },
+    {
+      "id": "textStagger",
+      "label": "Escalonado del texto",
+      "type": "range",
+      "min": 0,
+      "max": 0.3,
+      "step": 0.01,
+      "default": 0.1,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "textStagger"
+      }
+    }
+  ],
+  "motion": {
+    "slug": "karim-saab-work-carousel",
+    "title": "Karim Saab Work Carousel",
+    "category": "slider",
+    "trigger": "wheel",
+    "libs": [
+      "gsap",
+      "SplitText"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": 200,
+    "needs_lenis": false,
+    "ease_family": "power4",
+    "duration_range": [
+      0.3,
+      2
+    ],
+    "stagger": 0.1,
+    "assets_required": {
+      "count": 4,
+      "bytes": 475032,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "preventDefault en wheel"
+    ],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "captura la rueda con preventDefault"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "STEP-MACHINE",
+    "engine": "gsap",
+    "motion_signature": "wheel-stepped fullscreen slide swap: outgoing slide scales/rotates and flings off-screen over 2s while the incoming slide rises from ±100vh and opens a centered clip-path window to full frame in 1.5s, with staggered masked word/line reveals layered on top",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "step-advance"
+  },
+  "review": {
+    "status": "public"
+  }
+}

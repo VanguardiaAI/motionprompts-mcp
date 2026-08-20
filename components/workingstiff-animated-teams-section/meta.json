@@ -1,0 +1,295 @@
+{
+  "slug": "workingstiff-animated-teams-section",
+  "sourceDir": "codegrid-workingstiff-animated-teams-section",
+  "title": "WorkingStiff Animated Teams Section",
+  "description": "Scroll-driven team section with Lenis smooth scroll and two manual scrubbed ScrollTriggers: as the section enters the viewport each member column rises in a stagger while its giant name initial scales up, then the section pins for three viewport heights and the member cards slide in from the right with stagger, rotating from 20deg to 0 and scaling from 0.75 to 1 to cover the initials. Animations are disabled below 1000px width.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "pin",
+    "scrub",
+    "stagger",
+    "team",
+    "cards",
+    "lenis",
+    "rotation"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 1500,
+    "scrollTo": 0.7,
+    "clip": {
+      "seconds": 9
+    }
+  },
+  "images": [
+    {
+      "file": "team-member-1.jpg",
+      "desc": "editorial portrait of a young man with wavy auburn hair in an olive-green blazer against a muted painted landscape mural, warm earthy tones",
+      "role": "team member card photo (Creative Director)",
+      "replaced": true
+    },
+    {
+      "file": "team-member-2.jpg",
+      "desc": "editorial side-profile portrait of a man with dark curly hair in a brick-red blazer against an abstract botanical mural in green, blue and cream",
+      "role": "team member card photo (Executive Producer)",
+      "replaced": true
+    },
+    {
+      "file": "team-member-3.jpg",
+      "desc": "editorial portrait of a man with voluminous black curls in a cobalt-blue blazer against a bold matisse-style leaf mural in green, red and yellow",
+      "role": "team member card photo (Head of Production)",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "editorial",
+      "bold"
+    ],
+    "useCase": [
+      "team-section",
+      "scroll-story"
+    ],
+    "useWhen": "Úsalo para presentar al equipo con estética editorial de moda: nombres gigantes y tarjetas con retrato que entran rotando al hacer scroll.",
+    "aliases": [
+      "sección de equipo",
+      "team section",
+      "equipo animado",
+      "tarjetas de equipo",
+      "meet the team",
+      "quiénes somos"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 3,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "base-100",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#171717",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--base-100"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "base-300",
+      "label": "Texto",
+      "type": "color",
+      "default": "#fcf34c",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--base-300"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "entranceStagger",
+      "label": "Escalonado de entrada de las columnas",
+      "type": "range",
+      "min": 0.02,
+      "max": 0.35,
+      "step": 0.005,
+      "default": 0.15,
+      "apply": {
+        "kind": "js",
+        "path": "entranceStagger"
+      }
+    },
+    {
+      "id": "entranceOffsetY",
+      "label": "Altura de entrada de las columnas",
+      "type": "range",
+      "min": 60,
+      "max": 200,
+      "step": 5,
+      "default": 125,
+      "unit": "%",
+      "apply": {
+        "kind": "js",
+        "path": "entranceOffsetY"
+      }
+    },
+    {
+      "id": "cardOffsetX",
+      "label": "Desplazamiento inicial de las tarjetas",
+      "type": "range",
+      "min": 150,
+      "max": 500,
+      "step": 10,
+      "default": 300,
+      "unit": "%",
+      "apply": {
+        "kind": "js",
+        "path": "cardOffsetX"
+      }
+    },
+    {
+      "id": "cardStagger",
+      "label": "Escalonado de la llegada de las tarjetas",
+      "type": "range",
+      "min": 0.01,
+      "max": 0.2,
+      "step": 0.005,
+      "default": 0.075,
+      "apply": {
+        "kind": "js",
+        "path": "cardStagger"
+      }
+    },
+    {
+      "id": "cardRotation",
+      "label": "Inclinación inicial de las tarjetas",
+      "type": "range",
+      "min": 0,
+      "max": 45,
+      "step": 1,
+      "default": 20,
+      "unit": "°",
+      "apply": {
+        "kind": "js",
+        "path": "cardRotation"
+      }
+    },
+    {
+      "id": "cardStartScale",
+      "label": "Tamaño inicial de las tarjetas",
+      "type": "range",
+      "min": 0.4,
+      "max": 0.95,
+      "step": 0.05,
+      "default": 0.75,
+      "apply": {
+        "kind": "js",
+        "path": "cardStartScale"
+      }
+    }
+  ],
+  "motion": {
+    "slug": "workingstiff-animated-teams-section",
+    "title": "WorkingStiff Animated Teams Section",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 3,
+    "pinned": true,
+    "viewport_heights": 300,
+    "needs_lenis": true,
+    "ease_family": null,
+    "duration_range": [
+      0.4,
+      0.7
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 3,
+      "bytes": 382890,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "width-branch",
+      "media_queries": 3,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de workingstiff-animated-teams-section"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de workingstiff-animated-teams-section"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de workingstiff-animated-teams-section"
+      }
+    ],
+    "cluster": "SCROLL-LAGGED",
+    "engine": "mixed",
+    "motion_signature": "scroll-scrubbed, no tweens: columns rise y 125%→0% with a 0.15-progress index offset, then inside a 300vh pin the cards slide x 300/200/100%→-50%, unrotate 20deg→0 and scale 0.75→1, all as linear progress arithmetic written by gsap.set on every tick (scrub:1 is the only smoothing)",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-lagged"
+  },
+  "review": {
+    "status": "public",
+    "comment": "El componente en mobile no se ve animado, es una página fija. Y el vídeo solo muestra el scroll pero no alcanza a verse nada, hay que hacerlo más largo"
+  }
+}

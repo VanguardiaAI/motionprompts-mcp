@@ -1,0 +1,260 @@
+{
+  "slug": "prototypestudio-scroll-animation",
+  "sourceDir": "codegrid-prototypestudio-scroll-animation",
+  "title": "PrototypeStudio Scroll Animation",
+  "description": "Pinned spotlight section scrubbed over five viewport heights with Lenis smooth scroll: a 01/10 counter travels down the section while a centered column of ten project images translates upward, the image crossing the viewport midline brightens to full opacity, and each project name slides up in its own progress window and turns white while active.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "pin",
+    "scrub",
+    "lenis",
+    "spotlight",
+    "counter",
+    "portfolio",
+    "images"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 1500,
+    "scrollTo": 0.7,
+    "clip": {
+      "seconds": 9
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "athletic young man in a brown sleeveless top and grey shorts stretching against a beige studio backdrop",
+      "role": "spotlight project image 1 of 10",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "joyful woman with curly hair wearing headphones, eyes closed in warm golden studio light",
+      "role": "spotlight project image 2 of 10",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "minimal sunlit interior with a beige armchair, potted plant and leaf shadows on cream walls",
+      "role": "spotlight project image 3 of 10",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "close-up portrait of a man in sunglasses and an orange jacket lit by hard directional sunlight",
+      "role": "spotlight project image 4 of 10",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "minimal design studio scene, sculptural lamp on plinth, dramatic spotlight",
+      "role": "spotlight project image 5 of 10",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "abstract architectural model under raking light, landscape 16:9",
+      "role": "spotlight project image 6 of 10",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "shirtless cyclist riding a road bike against a dark olive studio backdrop",
+      "role": "spotlight project image 7 of 10",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "chrome and glass abstract composition, dark studio, landscape 16:9",
+      "role": "spotlight project image 8 of 10",
+      "replaced": true,
+      "regenerated": "2026-08-13 redesign"
+    },
+    {
+      "file": "img9.jpg",
+      "desc": "close, low-light portrait of a woman resting her head on her hand, warm film grain",
+      "role": "spotlight project image 9 of 10",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpg",
+      "desc": "profile of a person lit by warm side light against a deep amber backdrop",
+      "role": "spotlight project image 10 of 10",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "elegant",
+      "editorial",
+      "minimal"
+    ],
+    "useCase": [
+      "scroll-story",
+      "gallery",
+      "product-showcase"
+    ],
+    "useWhen": "Úsalo para presentar un portafolio de proyectos con imágenes que se iluminan y un contador 01/10 fijado en pantalla mientras se hace scroll.",
+    "aliases": [
+      "spotlight portfolio",
+      "galería con scroll",
+      "portfolio scroll",
+      "contador 01/10",
+      "sección spotlight fijada",
+      "sticky scroll gallery"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 10,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bg",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#17141f",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bg"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f5f3f7",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "prototypestudio-scroll-animation",
+    "title": "PrototypeStudio Scroll Animation",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 3,
+    "pinned": true,
+    "viewport_heights": 500,
+    "needs_lenis": true,
+    "ease_family": null,
+    "duration_range": [
+      0.3,
+      0.3
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 10,
+      "bytes": 1644553,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de prototypestudio-scroll-animation"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de prototypestudio-scroll-animation"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de prototypestudio-scroll-animation"
+      }
+    ],
+    "cluster": "SCROLL-LAGGED",
+    "engine": "gsap",
+    "motion_signature": "pinned scrubbed spotlight column with active-item highlight",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-lagged"
+  },
+  "review": {
+    "status": "public"
+  }
+}

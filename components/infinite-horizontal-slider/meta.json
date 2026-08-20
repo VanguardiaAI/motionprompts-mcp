@@ -1,0 +1,306 @@
+{
+  "slug": "infinite-horizontal-slider",
+  "sourceDir": "cg-infinite-horizontal-slider",
+  "title": "Infinite Horizontal Parallax Slider",
+  "description": "A seamless, infinitely looping horizontal image slider driven by mouse wheel, drag and touch. A custom requestAnimationFrame loop lerps the track position (no GSAP), recycles duplicated slide sequences for the endless loop, and shifts each image inside its frame based on distance from the viewport center for a parallax effect; hovering a slide reveals its title and arrow overlay while the track is idle.",
+  "category": "slider",
+  "tags": [
+    "infinite-slider",
+    "parallax",
+    "drag",
+    "marquee",
+    "requestanimationframe",
+    "lerp",
+    "vanilla-js",
+    "editorial"
+  ],
+  "gsap": [],
+  "deps": [],
+  "preview": {
+    "waitMs": 2500,
+    "clip": {
+      "seconds": 9,
+      "actions": [
+        {
+          "type": "drag"
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "slider_img_01.jpg",
+      "desc": "warm cinematic photograph of steep coastal cliffs dropping to a surf-lined beach and the open sea",
+      "role": "slide 1 image ('North Cliffs')",
+      "replaced": true
+    },
+    {
+      "file": "slider_img_02.jpg",
+      "desc": "high-contrast black-and-white close portrait of a woman's face in dramatic shadow",
+      "role": "slide 2 image ('Half Light')",
+      "replaced": true
+    },
+    {
+      "file": "slider_img_03.jpg",
+      "desc": "moody misty pine forest with tall dark trunks receding into fog",
+      "role": "slide 3 image ('Fog Line')",
+      "replaced": true
+    },
+    {
+      "file": "slider_img_04.jpg",
+      "desc": "atmospheric misty mountain peaks emerging from thick white cloud",
+      "role": "slide 4 image ('Cloudbreak')",
+      "replaced": true
+    },
+    {
+      "file": "slider_img_05.jpg",
+      "desc": "black-and-white fashion editorial of a figure in a tailored white blazer against a dark ground",
+      "role": "slide 5 image ('White Suit')",
+      "replaced": true
+    },
+    {
+      "file": "slider_img_06.jpg",
+      "desc": "black-and-white portrait of a figure behind translucent sheer fabric, face softly veiled",
+      "role": "slide 6 image ('Veil')",
+      "replaced": true
+    },
+    {
+      "file": "slider_img_07.jpg",
+      "desc": "sunlit green forest with light rays breaking through the canopy",
+      "role": "slide 7 image ('First Light')",
+      "replaced": true
+    },
+    {
+      "file": "slider_img_08.jpg",
+      "desc": "warm-toned portrait of a person covering their face with ringed hands",
+      "role": "slide 8 image ('Held')",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "editorial",
+      "minimal",
+      "elegant"
+    ],
+    "useCase": [
+      "slider",
+      "gallery",
+      "marquee",
+      "product-showcase"
+    ],
+    "useWhen": "Úsalo para una galería o portfolio con un carrusel horizontal infinito, arrastrable, con parallax en cada imagen y estética editorial.",
+    "aliases": [
+      "carrusel infinito",
+      "slider horizontal",
+      "parallax slider",
+      "infinite marquee",
+      "draggable gallery",
+      "galeria arrastrable"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 8,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bg",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#0d0c0b",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bg"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Texto",
+      "type": "color",
+      "default": "#ece7df",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "muted",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#8b837a",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--muted"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "SCROLL_SPEED",
+      "label": "Empuje del scroll",
+      "type": "range",
+      "min": 0.25,
+      "max": 5,
+      "step": 0.25,
+      "default": 1.75,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "SCROLL_SPEED"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "LERP_FACTOR",
+      "label": "Suavizado del movimiento",
+      "type": "range",
+      "min": 0.01,
+      "max": 0.3,
+      "step": 0.01,
+      "default": 0.05,
+      "apply": {
+        "kind": "js",
+        "path": "LERP_FACTOR"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "MAX_VELOCITY",
+      "label": "Velocidad máxima",
+      "type": "range",
+      "min": 20,
+      "max": 400,
+      "step": 10,
+      "default": 150,
+      "apply": {
+        "kind": "js",
+        "path": "MAX_VELOCITY"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "parallaxAmount",
+      "label": "Parallax de la imagen",
+      "type": "range",
+      "min": 0,
+      "max": 0.8,
+      "step": 0.05,
+      "default": 0.25,
+      "apply": {
+        "kind": "js",
+        "path": "parallaxAmount"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "imageScale",
+      "label": "Zoom de la imagen",
+      "type": "range",
+      "min": 1,
+      "max": 3.5,
+      "step": 0.05,
+      "default": 2.25,
+      "apply": {
+        "kind": "js",
+        "path": "imageScale"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "infinite-horizontal-slider",
+    "title": "Infinite Horizontal Parallax Slider",
+    "category": "slider",
+    "trigger": "wheel",
+    "libs": [],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": null,
+    "duration_range": [
+      0.25,
+      0.35
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 8,
+      "bytes": 1136119,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "width-branch",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "preventDefault en wheel"
+    ],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "captura la rueda con preventDefault"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "CAPTURED-VIRTUAL-SCROLL",
+    "engine": "raf-lerp",
+    "motion_signature": "rAF lerp infinite drag track with image parallax",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  },
+  "review": {
+    "status": "public"
+  }
+}

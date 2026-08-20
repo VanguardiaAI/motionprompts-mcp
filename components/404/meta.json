@@ -1,0 +1,223 @@
+{
+  "slug": "404",
+  "sourceDir": "cg-404",
+  "title": "ScrollTrigger 404 Horizontal Scroll + Parallax",
+  "description": "A 404 page where a pinned full-width headline section is driven by ScrollTrigger scrub: as you scroll, the .wrapper-404 translates horizontally (gsap.to x in vw, power3.out) while four absolutely-positioned image cards parallax sideways and rotate at different rates, revealing a closing outro message.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "pin",
+    "scrolltrigger",
+    "horizontal-scroll",
+    "parallax",
+    "404",
+    "cards",
+    "editorial"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "scrollTo": 0.2,
+    "waitMs": 2500
+  },
+  "images": [
+    {
+      "file": "img-1.jpg",
+      "desc": "Black and white studio portrait of two male models in tailored jackets against a white backdrop (Pexels 35587808)",
+      "role": "card #card-1 image",
+      "replaced": true
+    },
+    {
+      "file": "img-2.jpg",
+      "desc": "Black and white studio portrait of a model in a structured black off-shoulder jacket looking over her shoulder (Pexels 30748685)",
+      "role": "card #card-3 image",
+      "replaced": true
+    },
+    {
+      "file": "img-3.jpg",
+      "desc": "Black and white portrait of a man with long-exposure motion blur streaking his face sideways across the frame (Pexels 19664584)",
+      "role": "card #card-2 image",
+      "replaced": true
+    },
+    {
+      "file": "img-4.jpg",
+      "desc": "Grainy black and white close-up beauty portrait with winged eyeliner and dark lips (Pexels 19284974)",
+      "role": "card #card-4 image",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-18",
+  "intent": {
+    "mood": [
+      "editorial",
+      "elegant",
+      "cinematic"
+    ],
+    "useCase": [
+      "scroll-story",
+      "hero",
+      "gallery"
+    ],
+    "useWhen": "Úsalo para una página 404 (o sección hero) que se recorre en horizontal al scrollear, con tarjetas de imagen que se desplazan y giran en parallax.",
+    "aliases": [
+      "pagina 404",
+      "404 scroll",
+      "scroll horizontal",
+      "parallax cards",
+      "horizontal scroll",
+      "error page"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 4,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bg",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#120d0b",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bg"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#ece4d8",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#f3ece1",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "404",
+    "title": "ScrollTrigger 404 Horizontal Scroll + Parallax",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger"
+    ],
+    "complexity": 4,
+    "pinned": true,
+    "viewport_heights": 1200,
+    "needs_lenis": false,
+    "ease_family": "power3",
+    "duration_range": [
+      0.25,
+      0.5
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 4,
+      "bytes": 849853,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de 404"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de 404"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de 404"
+      }
+    ],
+    "cluster": "SCROLL-LAGGED",
+    "engine": "gsap",
+    "motion_signature": "scrubbed pinned horizontal track: ScrollTrigger scrub:1 drives an onUpdate handler that fires a fresh 0.5s power3.out catch-up tween per frame (wrapper x in vw; four cards x in px + rotate), so the smoothing comes from overlapping tweens rather than from the scrub tween itself",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-lagged"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

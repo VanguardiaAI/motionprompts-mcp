@@ -1,0 +1,124 @@
+{
+  "slug": "lottie-bee-spotlight-scroll",
+  "sourceDir": "codegrid-leoparpeix-scroll-animation",
+  "title": "Lottie Spotlight Flight",
+  "title_es": "Vuelo Lottie en foco",
+  "description": "A Lottie-animated insect flies across the screen following scroll while a full-screen image gallery plays through with titles and numbering.",
+  "description_es": "Un insecto animado con Lottie recorre la pantalla siguiendo el scroll mientras una galería de imágenes a pantalla completa se sucede con título y numeración.",
+  "category": "scroll",
+  "tags": [
+    "lottie",
+    "scroll",
+    "gallery",
+    "scrub",
+    "lenis"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis",
+    "lottie-web"
+  ],
+  "premium": true,
+  "preview": {
+    "scrollTo": 0.5,
+    "waitMs": 1500,
+    "clip": {
+      "seconds": 10
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "dried coral and shells on clay linen",
+      "role": "galería 1",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "dusty blue ink in milk",
+      "role": "galería 2",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "folded linen over ceramic vase",
+      "role": "galería 3",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "dunes at dusk, dusty blue sky",
+      "role": "galería 4",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "gloved hand with pressed flower slide",
+      "role": "galería 5",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "editorial portrait, clay knit, blue backdrop",
+      "role": "galería 6",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-10-10",
+  "status": {
+    "ported": true,
+    "verified": false,
+    "imagesReplaced": true,
+    "recolored": true
+  },
+  "review": {
+    "status": "premium"
+  },
+  "motion": {
+    "slug": "lottie-bee-spotlight-scroll",
+    "title": "Lottie Spotlight Flight",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis",
+      "lottie-web"
+    ],
+    "complexity": 4,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": true,
+    "ease_family": "none",
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 6,
+      "bytes": 0,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "width-branch"
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "Lenis posee el scroll de la página"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "SCROLL-SCRUB",
+    "engine": "gsap",
+    "motion_signature": "scroll scrubs a Lottie bee along the page while a spotlight reveals sections",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-welded"
+  }
+}

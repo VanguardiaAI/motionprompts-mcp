@@ -1,0 +1,118 @@
+{
+  "slug": "spotlight-card-stack-scroll",
+  "sourceDir": "codegrid-lxlcreative-sticky-cards",
+  "title": "Spinning Card Stack",
+  "title_es": "Pila de tarjetas en giro",
+  "description": "A pinned section where five cards stacked in perspective leave upward, spinning and stepping forward, while the ones behind grow with a soft bounce.",
+  "description_es": "Sección fija en la que cinco tarjetas apiladas en perspectiva van saliendo hacia arriba girando y adelantándose, mientras las de detrás crecen con un rebote suave.",
+  "category": "cards",
+  "tags": [
+    "spotlight",
+    "card-stack",
+    "scroll",
+    "pin",
+    "scrub",
+    "lenis",
+    "perspective"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "scrollTo": 0.5,
+    "waitMs": 1500,
+    "clip": {
+      "seconds": 10
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "anorak plateado bajo estrobo azul hielo",
+      "role": "tarjeta 1",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "mano con guante plateado y prisma de cristal",
+      "role": "tarjeta 2",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "maquillaje iridiscente azul plata",
+      "role": "tarjeta 3",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "botas de charol blanco sobre suelo mojado",
+      "role": "tarjeta 4",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "mujer con capucha blanca bajo luz azul",
+      "role": "tarjeta 5",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-10-10",
+  "status": {
+    "ported": true,
+    "verified": false,
+    "imagesReplaced": true,
+    "recolored": true
+  },
+  "premium": true,
+  "review": {
+    "status": "premium"
+  },
+  "motion": {
+    "slug": "spotlight-card-stack-scroll",
+    "title": "Spinning Card Stack",
+    "category": "cards",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 4,
+    "pinned": true,
+    "viewport_heights": null,
+    "needs_lenis": true,
+    "ease_family": "custom",
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 5,
+      "bytes": 0,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "width-branch"
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "Lenis posee el scroll de la página"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "SCROLL-SCRUB",
+    "engine": "gsap",
+    "motion_signature": "pinned section where scroll scrubs a stack of cards through a spotlight, one card per segment",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-lagged"
+  }
+}

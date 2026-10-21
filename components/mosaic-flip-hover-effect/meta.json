@@ -1,0 +1,249 @@
+{
+  "slug": "mosaic-flip-hover-effect",
+  "sourceDir": "codegrid-mosaic-flip-hover-effect",
+  "title": "Mosaic Flip Hover Effect",
+  "description": "A 12x9 grid of 3D cube tiles displays an image sliced via per-tile background-position, each tile gently floating on the z-axis in an endless 'breathe' loop. Hovering a project link flips every tile 180deg on rotateY with a center-out grid stagger (power3.inOut), revealing the hovered project's image on the cubes' hidden faces; leaving the list flips back to the default image.",
+  "category": "hover",
+  "tags": [
+    "mosaic",
+    "3d",
+    "flip",
+    "hover",
+    "grid",
+    "stagger",
+    "cube",
+    "image-reveal"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 2000,
+    "click": ".project-list a[data-index='3']",
+    "afterClickMs": 500,
+    "clip": {
+      "seconds": 8,
+      "actions": [
+        {
+          "type": "click",
+          "selector": ".project-list a[data-index='3']",
+          "at": 0.25
+        },
+        {
+          "type": "click",
+          "selector": ".project-list a[data-index='5']",
+          "at": 0.6
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "default.jpg",
+      "desc": "bright minimal macro of an even fresh-snow field, pale grey-white texture",
+      "role": "default mosaic image shown at rest and between flips",
+      "replaced": true
+    },
+    {
+      "file": "img1.jpg",
+      "desc": "glowing blue glacier ice cave interior at Vatnajokull, Iceland",
+      "role": "project 1 (Vatnajokull) reveal image",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "icebergs drifting in a dark glacier lagoon under a faint green aurora",
+      "role": "project 2 (Jokulsarlon) reveal image",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "vivid green northern lights over the black silhouette of Kirkjufell mountain",
+      "role": "project 3 (Kirkjufell) reveal image",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "Skogafoss waterfall pouring over moss-green cliffs, high vantage",
+      "role": "project 4 (Skogafoss) reveal image",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "storm-grey Vestrahorn peaks behind grassy black-sand dunes at Stokksnes",
+      "role": "project 5 (Stokksnes) reveal image",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "teal aurora sweeping over snow-capped coastal peaks and village lights in Lofoten",
+      "role": "project 6 (Lofoten) reveal image",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "futuristic",
+      "experimental",
+      "cinematic"
+    ],
+    "useCase": [
+      "gallery",
+      "image-reveal",
+      "hover-interaction"
+    ],
+    "useWhen": "Úsalo cuando quieras un índice de proyectos donde al pasar el cursor por cada enlace un mosaico 3D de cubos gira desde el centro y revela su portada.",
+    "aliases": [
+      "mosaico de cubos 3D",
+      "cube flip grid",
+      "mosaic image reveal",
+      "cubos que giran al hover",
+      "grid 3D hover",
+      "revelado por mosaico"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 7,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bg",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#0e1213",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bg"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "muted",
+      "label": "Texto",
+      "type": "color",
+      "default": "#78827f",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--muted"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#e9edeb",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "accent",
+      "label": "Texto 3",
+      "type": "color",
+      "default": "#8fcdb2",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--accent"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "mosaic-flip-hover-effect",
+    "title": "Mosaic Flip Hover Effect",
+    "category": "hover",
+    "trigger": "hover",
+    "libs": [
+      "gsap"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "sine",
+    "duration_range": [
+      0.3,
+      0.5
+    ],
+    "stagger": 0.05,
+    "assets_required": {
+      "count": 7,
+      "bytes": 1599087,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "POINTER-LATCHED",
+    "engine": "gsap",
+    "motion_signature": "center-out 3D cube-grid flip on hover (108 tiles, 0.5s power3.inOut, grid-staggered 0.05 each from center), over a perpetual randomized z-drift breathe (0.6-1.4s sine.inOut, self-recursive)",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "pointer-latch"
+  },
+  "review": {
+    "status": "public"
+  }
+}

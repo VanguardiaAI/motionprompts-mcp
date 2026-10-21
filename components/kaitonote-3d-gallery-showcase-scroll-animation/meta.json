@@ -1,0 +1,322 @@
+{
+  "slug": "kaitonote-3d-gallery-showcase-scroll-animation",
+  "sourceDir": "cg-kaitonote-3d-gallery-showcase-scroll-animation-nextjs",
+  "title": "Kaitonote 3D Gallery Showcase",
+  "description": "A pinned spotlight section scrubbed over fifteen viewport heights with Lenis smooth scroll: twenty editorial portrait and movement images fly from deep z-space (z:-1000, scale 0) toward the viewer and scatter outward in staggered 3D perspective driven by ScrollTrigger onUpdate, while SplitText fades an intro headline out word-by-word and reveals an outro headline word-by-word, ending with a cover portrait zooming into frame.",
+  "category": "3d-webgl",
+  "tags": [
+    "scroll",
+    "pin",
+    "scrub",
+    "3d",
+    "perspective",
+    "gallery",
+    "lenis",
+    "splittext",
+    "stagger"
+  ],
+  "gsap": [
+    "ScrollTrigger",
+    "SplitText"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "scrollTo": 0.7,
+    "afterScrollMs": 1200,
+    "clip": {
+      "seconds": 10
+    }
+  },
+  "images": [
+    {
+      "file": "img_1.jpg",
+      "desc": "editorial beauty portrait of a red-haired woman with red lipstick against a deep red studio background",
+      "role": "one of 20 portrait and movement images that scatter in 3D",
+      "replaced": true
+    },
+    {
+      "file": "img_2.jpg",
+      "desc": "portrait of a blonde woman lit in saturated blue studio light",
+      "role": "one of 20 portrait and movement images that scatter in 3D",
+      "replaced": true
+    },
+    {
+      "file": "img_3.jpg",
+      "desc": "profile of a woman in a bright orange blazer against a warm grey studio wall",
+      "role": "one of 20 portrait and movement images that scatter in 3D",
+      "replaced": true
+    },
+    {
+      "file": "img_4.jpg",
+      "desc": "editorial portrait of a woman in a green satin dress, arm raised, in dark studio light",
+      "role": "one of 20 portrait and movement images that scatter in 3D",
+      "replaced": true
+    },
+    {
+      "file": "img_5.jpg",
+      "desc": "cinematic portrait of a woman with red lips glancing toward a mirror in low light",
+      "role": "one of 20 portrait and movement images that scatter in 3D",
+      "replaced": true
+    },
+    {
+      "file": "img_6.jpg",
+      "desc": "glamour portrait of a woman with gold jewellery and a plum head-wrap on a dark background",
+      "role": "one of 20 portrait and movement images that scatter in 3D",
+      "replaced": true
+    },
+    {
+      "file": "img_7.jpg",
+      "desc": "close profile of a man looking down in soft muted studio light",
+      "role": "one of 20 portrait and movement images that scatter in 3D",
+      "replaced": true
+    },
+    {
+      "file": "img_8.jpg",
+      "desc": "moody low-key portrait of a man gazing at camera against near-black",
+      "role": "one of 20 portrait and movement images that scatter in 3D",
+      "replaced": true
+    },
+    {
+      "file": "img_9.jpg",
+      "desc": "fashion editorial of a woman in a deep-red dress against a grey studio background",
+      "role": "one of 20 portrait and movement images that scatter in 3D",
+      "replaced": true
+    },
+    {
+      "file": "img_10.jpg",
+      "desc": "black-and-white motion study of a dancer in flowing fabric with soft bokeh",
+      "role": "one of 20 portrait and movement images that scatter in 3D",
+      "replaced": true
+    },
+    {
+      "file": "img_11.jpg",
+      "desc": "studio profile portrait of a dark-haired woman against a saturated red background",
+      "role": "one of 20 portrait and movement images that scatter in 3D",
+      "replaced": true
+    },
+    {
+      "file": "img_12.jpg",
+      "desc": "studio profile portrait of a blond man against a teal background",
+      "role": "one of 20 portrait and movement images that scatter in 3D",
+      "replaced": true
+    },
+    {
+      "file": "img_13.jpg",
+      "desc": "studio profile portrait of a dark-haired man against a golden-yellow background",
+      "role": "one of 20 portrait and movement images that scatter in 3D",
+      "replaced": true
+    },
+    {
+      "file": "img_14.jpg",
+      "desc": "studio profile portrait of a woman against a purple background",
+      "role": "one of 20 portrait and movement images that scatter in 3D",
+      "replaced": true
+    },
+    {
+      "file": "img_15.jpg",
+      "desc": "movement study of a person spinning in a white pleated dress",
+      "role": "one of 20 portrait and movement images that scatter in 3D",
+      "replaced": true
+    },
+    {
+      "file": "img_16.jpg",
+      "desc": "movement study of a person spinning in a flowing cream dress",
+      "role": "one of 20 portrait and movement images that scatter in 3D",
+      "replaced": true
+    },
+    {
+      "file": "img_17.jpg",
+      "desc": "motion portrait of a woman with hair mid-swing in an orange dress on teal",
+      "role": "one of 20 portrait and movement images that scatter in 3D",
+      "replaced": true
+    },
+    {
+      "file": "img_18.jpg",
+      "desc": "orange silk fabric caught mid-flight against a teal background",
+      "role": "one of 20 portrait and movement images that scatter in 3D",
+      "replaced": true
+    },
+    {
+      "file": "img_19.jpg",
+      "desc": "black-and-white motion study of a dancer in flowing fabric with soft bokeh",
+      "role": "one of 20 portrait and movement images that scatter in 3D",
+      "replaced": true
+    },
+    {
+      "file": "img_20.jpg",
+      "desc": "warm close-up of gold satin fabric against sunlit skin",
+      "role": "one of 20 portrait and movement images that scatter in 3D",
+      "replaced": true
+    },
+    {
+      "file": "spotlight_cover.jpg",
+      "desc": "bold beauty close-up with pink and gold eye makeup, the final cover portrait that zooms into frame",
+      "role": "final cover portrait that zooms into frame at the end of the scroll",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "cinematic",
+      "editorial",
+      "elegant"
+    ],
+    "useCase": [
+      "gallery",
+      "scroll-story",
+      "product-showcase"
+    ],
+    "useWhen": "Úsalo para una galería o portfolio inmersivo donde las imágenes emergen del fondo y se dispersan en 3D con scroll, con titulares que se revelan palabra a palabra.",
+    "aliases": [
+      "galeria 3d scroll",
+      "spotlight scroll",
+      "3d image scatter",
+      "scroll gallery showcase",
+      "perspective gallery",
+      "titulares splittext"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger",
+      "SplitText"
+    ],
+    "assetCount": 21,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#111013",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#ebe7de",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "kaitonote-3d-gallery-showcase-scroll-animation",
+    "title": "Kaitonote 3D Gallery Showcase",
+    "category": "3d-webgl",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "SplitText",
+      "lenis"
+    ],
+    "complexity": 4,
+    "pinned": true,
+    "viewport_heights": 1500,
+    "needs_lenis": true,
+    "ease_family": null,
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 21,
+      "bytes": 2322380,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "width-branch",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "mata todos los ScrollTrigger"
+    ],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de kaitonote-3d-gallery-showcase-scroll-animation"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de kaitonote-3d-gallery-showcase-scroll-animation"
+      }
+    ],
+    "cluster": "SCROLL-LAGGED",
+    "engine": "gsap",
+    "motion_signature": "scrub-pinned 3D images flying past camera",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-lagged"
+  },
+  "review": {
+    "status": "public"
+  }
+}

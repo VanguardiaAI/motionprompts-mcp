@@ -1,0 +1,293 @@
+{
+  "slug": "tile-grid-preloader-reveal",
+  "sourceDir": "codegrid-voltlites-landing-page-reveal",
+  "title": "Tile Grid Preloader Reveal",
+  "description": "Load sequence: an odd-numbered grid of frosted glass tiles fills in random order while a progress marker hops with GSAP Flip across four stops on the middle row (25, 50, 75, then the logo). The veil then drops away and every tile folds on its top edge in random order, briefly blurring the hero photo underneath, before the headline characters, subtitle lines and nav words rise from their masks.",
+  "category": "preloader",
+  "tags": [
+    "preloader",
+    "grid",
+    "tiles",
+    "flip",
+    "splittext",
+    "glass",
+    "reveal",
+    "random-stagger"
+  ],
+  "gsap": [
+    "Flip",
+    "SplitText"
+  ],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 7800,
+    "clip": {
+      "seconds": 9,
+      "actions": []
+    }
+  },
+  "images": [
+    {
+      "file": "hero.jpg",
+      "desc": "lake with two black swans in morning mist",
+      "role": "hero background revealed by the tiles",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-09-05",
+  "motion": {
+    "slug": "tile-grid-preloader-reveal",
+    "title": "Tile Grid Preloader Reveal",
+    "category": "preloader",
+    "trigger": "load",
+    "libs": [
+      "gsap",
+      "Flip",
+      "SplitText"
+    ],
+    "complexity": 3,
+    "ease_family": "power3",
+    "duration_range": [
+      0.125,
+      2.2
+    ],
+    "stagger": 0.0035,
+    "needs_lenis": false,
+    "mobile_behavior": {
+      "kind": "width-branch",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "entry-veil",
+        "reason": "velo de entrada a pantalla completa en la carga"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "LOAD-ONESHOT",
+    "engine": "gsap",
+    "motion_signature": "random-stagger tile fill, Flip marker hops between grid stops, random-stagger scaleY collapse over a blurred hero, masked text rise",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "entry-veil",
+    "pinned": false,
+    "viewport_heights": null,
+    "assets_required": {
+      "count": 1,
+      "bytes": 292037,
+      "root_absolute_paths": true
+    }
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "tgAccent",
+      "label": "Color del titular",
+      "type": "color",
+      "default": "#c4d600",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--tg-accent"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "tgVeil",
+      "label": "Color del velo",
+      "type": "color",
+      "default": "#e9e8e3",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--tg-veil"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "tgMarker",
+      "label": "Color del marcador",
+      "type": "color",
+      "default": "#14161b",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--tg-marker"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "startDelay",
+      "label": "Retraso inicial",
+      "type": "range",
+      "min": 0,
+      "max": 2,
+      "step": 0.1,
+      "default": 0.6,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "startDelay"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "fillDuration",
+      "label": "Relleno de la rejilla",
+      "type": "range",
+      "min": 0.5,
+      "max": 5,
+      "step": 0.1,
+      "default": 2.5,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "fillDuration"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "hopDuration",
+      "label": "Salto del marcador",
+      "type": "range",
+      "min": 0.3,
+      "max": 2,
+      "step": 0.05,
+      "default": 1,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "hopDuration"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "collapseDuration",
+      "label": "Pliegue de cada baldosa",
+      "type": "range",
+      "min": 0.3,
+      "max": 1.5,
+      "step": 0.05,
+      "default": 0.75,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "collapseDuration"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "collapseStagger",
+      "label": "Escalonado del pliegue",
+      "type": "range",
+      "min": 0,
+      "max": 0.01,
+      "step": 0.0005,
+      "default": 0.0035,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "collapseStagger"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "titleStagger",
+      "label": "Escalonado del titular",
+      "type": "range",
+      "min": 0,
+      "max": 0.15,
+      "step": 0.005,
+      "default": 0.05,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "titleStagger"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "tileSize",
+      "label": "Tamaño de baldosa",
+      "type": "range",
+      "min": 40,
+      "max": 140,
+      "step": 5,
+      "default": 85,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "tileSize"
+      },
+      "tier": "free"
+    }
+  ],
+  "intent": {
+    "mood": [
+      "technical",
+      "minimal",
+      "bold"
+    ],
+    "useCase": [
+      "preloader",
+      "hero",
+      "text-reveal"
+    ],
+    "useWhen": "Úsalo como entrada de una landing cuando quieras un preloader que se lea como progreso real (un marcador que salta por la rejilla) y termine descubriendo el hero; encaja en estudios, tecnología y marcas con un logotipo simple. No lo uses si la página debe estar interactiva desde el primer segundo: la secuencia ocupa unos siete.",
+    "aliases": [
+      "preloader de rejilla",
+      "cuadrícula que se pliega",
+      "grid preloader",
+      "tile reveal",
+      "carga con baldosas",
+      "preloader con marcador"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "Flip",
+      "SplitText"
+    ],
+    "assetCount": 1,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": false,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "review": {
+    "status": "premium",
+    "comment": ""
+  }
+}

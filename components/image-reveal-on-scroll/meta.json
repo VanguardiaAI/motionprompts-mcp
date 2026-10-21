@@ -1,0 +1,254 @@
+{
+  "slug": "image-reveal-on-scroll",
+  "sourceDir": "04022024-Image-Reveal-On-Scroll",
+  "title": "Image Reveal On Scroll",
+  "description": "A staggered grid of tall portrait images that each unmask as they enter the viewport: GSAP animates a clip-path polygon from a zero-height sliver to a full rectangle (power1.out, 2s) driven by ScrollTrigger, while onEnter/onEnterBack tween the fixed background gradient to the current item's accent color and a fixed counter tracks scroll percentage.",
+  "category": "scroll",
+  "tags": [
+    "scroll",
+    "clip-path",
+    "image-reveal",
+    "gsap",
+    "scrolltrigger",
+    "gradient",
+    "editorial",
+    "counter",
+    "gallery"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "scrollTo": 0.6,
+    "afterScrollMs": 1500,
+    "clip": {
+      "seconds": 10
+    }
+  },
+  "images": [
+    {
+      "file": "1.jpg",
+      "desc": "woman in gingham and tulle against a bright sky-blue painted facade (Pexels 1650604)",
+      "role": "frame 01 · Sky — first reveal item in the staggered scroll grid",
+      "replaced": true
+    },
+    {
+      "file": "2.jpg",
+      "desc": "portrait with jewelled earrings against a saffron-yellow wall (Pexels 3839904)",
+      "role": "frame 02 · Saffron — second reveal item in the staggered scroll grid",
+      "replaced": true
+    },
+    {
+      "file": "3.jpg",
+      "desc": "dancer in red mid-turn on an amber studio backdrop (Pexels 29080375)",
+      "role": "frame 03 · Amber — third reveal item in the staggered scroll grid",
+      "replaced": true
+    },
+    {
+      "file": "4.jpg",
+      "desc": "man in a white tuxedo before an oxidised rust-orange wall (Pexels 31240694)",
+      "role": "frame 04 · Rust — fourth reveal item in the staggered scroll grid",
+      "replaced": true
+    },
+    {
+      "file": "5.jpg",
+      "desc": "woman in red silk on a red-lit seamless backdrop (Pexels 11844298)",
+      "role": "frame 05 · Vermilion — fifth reveal item in the staggered scroll grid",
+      "replaced": true
+    },
+    {
+      "file": "6.jpg",
+      "desc": "sculptural velvet coat kicked heel on a pink seamless (Pexels 30492651)",
+      "role": "frame 06 · Rose — sixth reveal item in the staggered scroll grid",
+      "replaced": true
+    },
+    {
+      "file": "7.jpg",
+      "desc": "model in pale green blazer and crochet skirt with green sunglasses (Pexels 9769853)",
+      "role": "frame 07 · Sage — seventh reveal item in the staggered scroll grid",
+      "replaced": true
+    },
+    {
+      "file": "8.jpg",
+      "desc": "profile portrait lit by blue and red gels in near darkness (Pexels 3073978)",
+      "role": "frame 08 · Dusk — eighth reveal item in the staggered scroll grid",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "editorial",
+      "minimal",
+      "bold"
+    ],
+    "useCase": [
+      "gallery",
+      "image-reveal",
+      "scroll-story"
+    ],
+    "useWhen": "Úsalo para una galería editorial donde cada imagen se revela con clip-path al hacer scroll y el fondo cambia de color por item.",
+    "aliases": [
+      "revelado de imagen al scroll",
+      "clip-path reveal",
+      "galería scroll",
+      "image reveal scroll",
+      "unmask gallery",
+      "fondo de color por item"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "ScrollTrigger"
+    ],
+    "assetCount": 8,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#f7f3ec",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Tinta",
+      "type": "color",
+      "default": "#17140f",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "c1",
+      "label": "Acento",
+      "type": "color",
+      "default": "#6fadbf",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--c1"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "image-reveal-on-scroll",
+    "title": "Image Reveal On Scroll",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power1",
+    "duration_range": [
+      2,
+      2
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 8,
+      "bytes": 1036935,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de image-reveal-on-scroll"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de image-reveal-on-scroll"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de image-reveal-on-scroll"
+      }
+    ],
+    "cluster": "SCROLL-THRESHOLD",
+    "engine": "gsap",
+    "motion_signature": "enter-triggered clip-path unmask, tweened gradient background",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "reveal-on-enter"
+  },
+  "review": {
+    "status": "public"
+  }
+}

@@ -1,0 +1,269 @@
+{
+  "slug": "lightbox",
+  "sourceDir": "cg-lightbox",
+  "title": "Sliding Lightbox Gallery",
+  "description": "A click-triggered image lightbox for a ceramics-studio archive: clicking any thumbnail in the 4x4 plate grid slides a large preview in from the right while the previous one scales up and slides off left, and the page background tweens to a tone sampled from that image. Driven purely by gsap.to animating right/left/scale over a 1s duration.",
+  "category": "gallery",
+  "tags": [
+    "lightbox",
+    "gallery",
+    "click",
+    "image-preview",
+    "slide",
+    "gsap",
+    "editorial",
+    "minimal"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "click": ".gallery .row:nth-child(1) .item:nth-child(2) .img img",
+    "afterClickMs": 1200,
+    "clip": {
+      "seconds": 7
+    }
+  },
+  "images": [
+    {
+      "file": "1.jpeg",
+      "desc": "hands wedging a ball of pale clay against a linen apron, soft studio light",
+      "role": "gallery thumbnail 1 / initial large preview",
+      "replaced": true
+    },
+    {
+      "file": "2.jpeg",
+      "desc": "wet hands centring clay on a spinning pottery wheel, close-up",
+      "role": "gallery thumbnail 2",
+      "replaced": true
+    },
+    {
+      "file": "3.jpeg",
+      "desc": "clay-covered fingers opening the mouth of a freshly thrown terracotta pot",
+      "role": "gallery thumbnail 3",
+      "replaced": true
+    },
+    {
+      "file": "4.jpeg",
+      "desc": "hands trimming the shoulder of a leather-hard pot, pale clay tones",
+      "role": "gallery thumbnail 4",
+      "replaced": true
+    },
+    {
+      "file": "5.jpeg",
+      "desc": "coil-built vessel being shaped by hand on a wooden bench, slate apron",
+      "role": "gallery thumbnail 5",
+      "replaced": true
+    },
+    {
+      "file": "6.jpeg",
+      "desc": "a hand smoothing the rim of an unfired stoneware bowl, warm wood tones",
+      "role": "gallery thumbnail 6",
+      "replaced": true
+    },
+    {
+      "file": "7.jpeg",
+      "desc": "muddy hands resting over rows of raw earthenware pots, dark earth",
+      "role": "gallery thumbnail 7",
+      "replaced": true
+    },
+    {
+      "file": "8.jpeg",
+      "desc": "pottery workbench with wheel head, sponge and a small drying vase",
+      "role": "gallery thumbnail 8",
+      "replaced": true
+    },
+    {
+      "file": "9.jpeg",
+      "desc": "white ring-shaped vase holding dried grass on stacked stone plinths",
+      "role": "gallery thumbnail 9",
+      "replaced": true
+    },
+    {
+      "file": "10.jpeg",
+      "desc": "blush and cream glazed vessels beside a rough limestone cube",
+      "role": "gallery thumbnail 10",
+      "replaced": true
+    },
+    {
+      "file": "11.jpeg",
+      "desc": "ochre, pink and smoke glazed vases holding dried seed heads",
+      "role": "gallery thumbnail 11",
+      "replaced": true
+    },
+    {
+      "file": "12.jpeg",
+      "desc": "still life of sand-glazed vessels, a fan palm leaf and an hourglass",
+      "role": "gallery thumbnail 12",
+      "replaced": true
+    },
+    {
+      "file": "13.jpeg",
+      "desc": "fluted mauve vase of gypsophila in hard window light with leaf shadows",
+      "role": "gallery thumbnail 13",
+      "replaced": true
+    },
+    {
+      "file": "14.jpeg",
+      "desc": "warm afternoon light raking across a plaster wall, abstract study",
+      "role": "gallery thumbnail 14",
+      "replaced": true
+    },
+    {
+      "file": "15.jpeg",
+      "desc": "a single ribbon of sunlight falling down a pale wall",
+      "role": "gallery thumbnail 15",
+      "replaced": true
+    },
+    {
+      "file": "16.jpeg",
+      "desc": "the potter in a white shirt holding a terracotta pot up to the light",
+      "role": "gallery thumbnail 16",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "minimal",
+      "editorial",
+      "elegant"
+    ],
+    "useCase": [
+      "gallery",
+      "image-reveal",
+      "product-showcase"
+    ],
+    "useWhen": "Cuando quieres una galeria tipo lightbox donde al hacer clic en una miniatura entra una imagen grande deslizando y el fondo cambia de color.",
+    "aliases": [
+      "lightbox",
+      "galeria de imagenes",
+      "image gallery",
+      "vista previa",
+      "click preview",
+      "slide gallery"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 16,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#0a0a0a",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "accent",
+      "label": "Acento",
+      "type": "color",
+      "default": "#ffe500",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--accent"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "lightbox",
+    "title": "Sliding Lightbox Gallery",
+    "category": "gallery",
+    "trigger": "click",
+    "libs": [
+      "gsap"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": null,
+    "duration_range": [
+      0.35,
+      1
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 16,
+      "bytes": 1496267,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "STEP-MACHINE",
+    "engine": "gsap",
+    "motion_signature": "click-swapped preview slides in, old one scales off",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "step-advance"
+  },
+  "review": {
+    "status": "public"
+  }
+}

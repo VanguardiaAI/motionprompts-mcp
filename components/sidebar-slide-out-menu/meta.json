@@ -1,0 +1,199 @@
+{
+  "slug": "sidebar-slide-out-menu",
+  "sourceDir": "cg-sidebar-slide-out-menu",
+  "title": "Sidebar Slide-Out Menu",
+  "description": "Clicking the bottom-right 'Get the Overlay' toggle slides a column of three cards in from the right edge (right: -110% to 0%) with a 0.075s GSAP stagger on a power4.out ease, while the page content blurs to 15px; clicking any card reverses the tween to slide the cards back out and unblur. Cards expand their copy and swap colours on CSS hover.",
+  "category": "menu",
+  "tags": [
+    "sidebar",
+    "slide-out",
+    "overlay",
+    "stagger",
+    "blur",
+    "cards",
+    "gsap",
+    "minimal"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "click": ".overlay-toggle",
+    "afterClickMs": 2000
+  },
+  "images": [
+    {
+      "file": "hero.jpg",
+      "desc": "high-contrast black-and-white cinematic still: a suited figure silhouetted in a lit doorway, dark negative space on the left for hero copy",
+      "role": "container background behind the site content",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "minimal",
+      "elegant",
+      "editorial"
+    ],
+    "useCase": [
+      "navigation",
+      "product-showcase"
+    ],
+    "useWhen": "Úsalo cuando quieras un panel lateral con tarjetas que entran escalonadas desde la derecha y desenfocan el fondo al abrirse.",
+    "aliases": [
+      "menú lateral",
+      "sidebar overlay",
+      "slide out menu",
+      "panel deslizante",
+      "tarjetas laterales",
+      "overlay menu"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 1,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#f4f4f0",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "accent",
+      "label": "Acento",
+      "type": "color",
+      "default": "#ffe500",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--accent"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#0a0a0a",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper-dim",
+      "label": "Texto",
+      "type": "color",
+      "default": "#8c8c88",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper-dim"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "sidebar-slide-out-menu",
+    "title": "Sidebar Slide-Out Menu",
+    "category": "menu",
+    "trigger": "click",
+    "libs": [
+      "gsap",
+      "phosphor-icons"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power4",
+    "duration_range": [
+      0.25,
+      1
+    ],
+    "stagger": 0.075,
+    "assets_required": {
+      "count": 1,
+      "bytes": 55862,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "CLICK-CURTAIN",
+    "engine": "gsap",
+    "motion_signature": "click-toggled staggered card slide-in with background blur",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "curtain-toggle"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

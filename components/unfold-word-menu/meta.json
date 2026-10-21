@@ -1,0 +1,289 @@
+{
+  "slug": "unfold-word-menu",
+  "sourceDir": "codegrid-wearecasey-menu",
+  "title": "Unfolding Words Menu",
+  "description": "Overlay menu where each link unfolds letter by letter: a frosted veil blurs the hero behind it (the photo also scales and softens), the index and first letter rise out of a mask, a thin light divider grows from its centre and the remaining letters slide in from the right while their container widens. Hovering a link shifts it sideways and dims the others, and the toggle flickers between Menu and Close.",
+  "category": "menu",
+  "tags": [
+    "overlay",
+    "menu",
+    "splittext",
+    "backdrop-blur",
+    "glassmorphism",
+    "typography",
+    "hover"
+  ],
+  "gsap": [
+    "SplitText"
+  ],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 600,
+    "click": ".uw-toggle",
+    "afterClickMs": 2800,
+    "clip": {
+      "seconds": 8,
+      "actions": [
+        {
+          "type": "click",
+          "selector": ".uw-toggle",
+          "at": 0.08
+        },
+        {
+          "type": "click",
+          "selector": ".uw-toggle",
+          "at": 0.7
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "hero.jpg",
+      "desc": "misty pine forest with mossy branches",
+      "role": "hero background, blurred behind the menu",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-09-05",
+  "motion": {
+    "slug": "unfold-word-menu",
+    "title": "Unfolding Words Menu",
+    "category": "menu",
+    "trigger": "click",
+    "libs": [
+      "gsap",
+      "SplitText"
+    ],
+    "complexity": 3,
+    "ease_family": "power3",
+    "duration_range": [
+      0.05,
+      1
+    ],
+    "stagger": 0.14,
+    "needs_lenis": false,
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "CLICK-CURTAIN",
+    "engine": "gsap",
+    "motion_signature": "veil fade with hero blur, per-link masked rise, divider scaleY and width unfold with char stagger; hover shift and dim",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "curtain-toggle",
+    "pinned": false,
+    "viewport_heights": null,
+    "assets_required": {
+      "count": 1,
+      "bytes": 403112,
+      "root_absolute_paths": true
+    }
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "uwInk",
+      "label": "Color del texto",
+      "type": "color",
+      "default": "#ece9e2",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--uw-ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "itemStagger",
+      "label": "Escalonado entre enlaces",
+      "type": "range",
+      "min": 0.04,
+      "max": 0.4,
+      "step": 0.01,
+      "default": 0.14,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "itemStagger"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "revealDuration",
+      "label": "Subida de la primera letra",
+      "type": "range",
+      "min": 0.3,
+      "max": 1.5,
+      "step": 0.05,
+      "default": 0.85,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "revealDuration"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "unfoldDuration",
+      "label": "Apertura de la palabra",
+      "type": "range",
+      "min": 0.4,
+      "max": 2,
+      "step": 0.05,
+      "default": 1,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "unfoldDuration"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "charStagger",
+      "label": "Escalonado entre letras",
+      "type": "range",
+      "min": 0,
+      "max": 0.12,
+      "step": 0.005,
+      "default": 0.045,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "charStagger"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "veilBlur",
+      "label": "Desenfoque del velo",
+      "type": "range",
+      "min": 0,
+      "max": 40,
+      "step": 1,
+      "default": 26,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "veilBlur"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "hoverShift",
+      "label": "Desplazamiento al pasar",
+      "type": "range",
+      "min": 0,
+      "max": 40,
+      "step": 1,
+      "default": 12,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "hoverShift"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "dimOthers",
+      "label": "Opacidad de los demás",
+      "type": "range",
+      "min": 0.1,
+      "max": 1,
+      "step": 0.05,
+      "default": 0.4,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "dimOthers"
+      },
+      "tier": "free"
+    }
+  ],
+  "intent": {
+    "mood": [
+      "editorial",
+      "elegant",
+      "cinematic"
+    ],
+    "useCase": [
+      "navigation",
+      "text-reveal"
+    ],
+    "useWhen": "Úsalo cuando el menú sea tipográfico y quieras que las palabras se desplieguen sobre la portada desenfocada, como en estudios de fotografía, cine o editoriales; pide una imagen de fondo con textura. No lo uses si los enlaces son muchos o muy largos: cada letra cuesta tiempo.",
+    "aliases": [
+      "menú tipográfico",
+      "menú de palabras",
+      "unfold menu",
+      "menú con blur",
+      "frosted menu",
+      "menú overlay serif"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "SplitText"
+    ],
+    "assetCount": 1,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": false,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "review": {
+    "status": "premium",
+    "comment": ""
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "slug": "overlay-menu",
+  "sourceDir": "codegrid-overlay-menu-gsap",
+  "title": "Meristem Overlay Menu",
+  "description": "Fullscreen overlay menu toggled by a hamburger button: a paused GSAP timeline scales four stacked green background layers in from the top (scaleY 0 to 1, 0.1s stagger, power3.inOut), then wipes the nav panel in with a clip-path polygon reveal while SplitText line-masked links slide up from y:100% with a 0.05s stagger (power3.out). Clicking again reverses the timeline and resets the link lines on close.",
+  "category": "menu",
+  "tags": [
+    "overlay",
+    "menu",
+    "hamburger",
+    "split-text",
+    "masked-lines",
+    "clip-path",
+    "stacked-layers",
+    "stagger"
+  ],
+  "gsap": [
+    "SplitText"
+  ],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 2600,
+    "click": ".nav-toggler"
+  },
+  "images": [
+    {
+      "file": "hero-garden.jpg",
+      "desc": "formal garden with a long gravel path receding between clipped topiary and stone urns; structured, verdant, editorial; echoes 'grown for the long view'; 2400x1350",
+      "role": "fullscreen hero background behind the menu",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "elegant",
+      "editorial",
+      "minimal"
+    ],
+    "useCase": [
+      "navigation"
+    ],
+    "useWhen": "Úsalo cuando quieras un menú de navegación a pantalla completa que se abre con botón hamburguesa y revela enlaces grandes animados.",
+    "aliases": [
+      "menú overlay",
+      "menú hamburguesa",
+      "fullscreen menu",
+      "overlay nav",
+      "menú pantalla completa",
+      "hamburger menu"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "SplitText"
+    ],
+    "assetCount": 1,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f4f8f5",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mint",
+      "label": "Acento",
+      "type": "color",
+      "default": "#6fd6ac",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--mint"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "overlay-menu",
+    "title": "Meristem Overlay Menu",
+    "category": "menu",
+    "trigger": "click",
+    "libs": [
+      "gsap",
+      "SplitText"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power3",
+    "duration_range": [
+      0.25,
+      0.75
+    ],
+    "stagger": 0.05,
+    "assets_required": {
+      "count": 2,
+      "bytes": 2318800,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "CLICK-CURTAIN",
+    "engine": "gsap",
+    "motion_signature": "click-toggled stack of 4 staggered scaleY curtains (0.1 stagger, power3.inOut, top-origin except a bottom-origin mint sliver) overlapped -=0.6 by a top-down clip-path reveal of .nav-items, then masked link lines rising y 100%→0% after a 0.85s delay with 0.05 stagger; reverse plays the whole thing backwards and resets lines to y:100%",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "curtain-toggle"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

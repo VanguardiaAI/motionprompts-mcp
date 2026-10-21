@@ -1,0 +1,455 @@
+{
+  "slug": "spotlight-list-hover",
+  "sourceDir": "codegrid-aardvarkbookclub-hover-effect",
+  "title": "Spotlight List Hover Cards",
+  "description": "Hover list inside a dark rounded panel: entering the list pops four glass-framed cards from scale 0 with an elastic ease; hovering a title swaps it for a handwritten version (opacity, back-out scale and blur), grows its row while the neighbours shrink in proportion to their distance, and reshuffles the cards with random offsets and rotation as they follow the row's height. A soft light in the panel follows the pointer.",
+  "category": "hover",
+  "tags": [
+    "hover",
+    "list",
+    "cards",
+    "elastic",
+    "blur",
+    "handwritten",
+    "glass",
+    "spotlight"
+  ],
+  "gsap": [
+    "CustomEase"
+  ],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 1200,
+    "scrollTo": 0.34,
+    "cursor": [
+      ".sl-item:nth-child(2)",
+      ".sl-item:nth-child(4)",
+      ".sl-item:nth-child(5)"
+    ]
+  },
+  "images": [
+    {
+      "file": "item_1_card_1.jpg",
+      "desc": "bold colour studio fashion (1/4)",
+      "role": "hover card for list item 1",
+      "replaced": true
+    },
+    {
+      "file": "item_1_card_2.jpg",
+      "desc": "bold colour studio fashion (2/4)",
+      "role": "hover card for list item 1",
+      "replaced": true
+    },
+    {
+      "file": "item_1_card_3.jpg",
+      "desc": "bold colour studio fashion (3/4)",
+      "role": "hover card for list item 1",
+      "replaced": true
+    },
+    {
+      "file": "item_1_card_4.jpg",
+      "desc": "bold colour studio fashion (4/4)",
+      "role": "hover card for list item 1",
+      "replaced": true
+    },
+    {
+      "file": "item_2_card_1.jpg",
+      "desc": "monochrome fashion portraits (1/4)",
+      "role": "hover card for list item 2",
+      "replaced": true
+    },
+    {
+      "file": "item_2_card_2.jpg",
+      "desc": "monochrome fashion portraits (2/4)",
+      "role": "hover card for list item 2",
+      "replaced": true
+    },
+    {
+      "file": "item_2_card_3.jpg",
+      "desc": "monochrome fashion portraits (3/4)",
+      "role": "hover card for list item 2",
+      "replaced": true
+    },
+    {
+      "file": "item_2_card_4.jpg",
+      "desc": "monochrome fashion portraits (4/4)",
+      "role": "hover card for list item 2",
+      "replaced": true
+    },
+    {
+      "file": "item_3_card_1.jpg",
+      "desc": "fashion in motion, flowing fabric (1/4)",
+      "role": "hover card for list item 3",
+      "replaced": true
+    },
+    {
+      "file": "item_3_card_2.jpg",
+      "desc": "fashion in motion, flowing fabric (2/4)",
+      "role": "hover card for list item 3",
+      "replaced": true
+    },
+    {
+      "file": "item_3_card_3.jpg",
+      "desc": "fashion in motion, flowing fabric (3/4)",
+      "role": "hover card for list item 3",
+      "replaced": true
+    },
+    {
+      "file": "item_3_card_4.jpg",
+      "desc": "fashion in motion, flowing fabric (4/4)",
+      "role": "hover card for list item 3",
+      "replaced": true
+    },
+    {
+      "file": "item_4_card_1.jpg",
+      "desc": "soft editorial portraits (1/4)",
+      "role": "hover card for list item 4",
+      "replaced": true
+    },
+    {
+      "file": "item_4_card_2.jpg",
+      "desc": "soft editorial portraits (2/4)",
+      "role": "hover card for list item 4",
+      "replaced": true
+    },
+    {
+      "file": "item_4_card_3.jpg",
+      "desc": "soft editorial portraits (3/4)",
+      "role": "hover card for list item 4",
+      "replaced": true
+    },
+    {
+      "file": "item_4_card_4.jpg",
+      "desc": "soft editorial portraits (4/4)",
+      "role": "hover card for list item 4",
+      "replaced": true
+    },
+    {
+      "file": "item_5_card_1.jpg",
+      "desc": "street style, walking (1/4)",
+      "role": "hover card for list item 5",
+      "replaced": true
+    },
+    {
+      "file": "item_5_card_2.jpg",
+      "desc": "street style, walking (2/4)",
+      "role": "hover card for list item 5",
+      "replaced": true
+    },
+    {
+      "file": "item_5_card_3.jpg",
+      "desc": "street style, walking (3/4)",
+      "role": "hover card for list item 5",
+      "replaced": true
+    },
+    {
+      "file": "item_5_card_4.jpg",
+      "desc": "street style, walking (4/4)",
+      "role": "hover card for list item 5",
+      "replaced": true
+    },
+    {
+      "file": "item_6_card_1.jpg",
+      "desc": "colour studio portraits (1/4)",
+      "role": "hover card for list item 6",
+      "replaced": true
+    },
+    {
+      "file": "item_6_card_2.jpg",
+      "desc": "colour studio portraits (2/4)",
+      "role": "hover card for list item 6",
+      "replaced": true
+    },
+    {
+      "file": "item_6_card_3.jpg",
+      "desc": "colour studio portraits (3/4)",
+      "role": "hover card for list item 6",
+      "replaced": true
+    },
+    {
+      "file": "item_6_card_4.jpg",
+      "desc": "colour studio portraits (4/4)",
+      "role": "hover card for list item 6",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-09-05",
+  "motion": {
+    "slug": "spotlight-list-hover",
+    "title": "Spotlight List Hover Cards",
+    "category": "hover",
+    "trigger": "hover",
+    "libs": [
+      "gsap",
+      "CustomEase"
+    ],
+    "complexity": 3,
+    "ease_family": "elastic",
+    "duration_range": [
+      0.1,
+      1
+    ],
+    "stagger": null,
+    "needs_lenis": false,
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "POINTER-LATCHED",
+    "engine": "gsap",
+    "motion_signature": "elastic card pop and reshuffle on hover, proximity-weighted row height redistribution, label blur/scale swap, pointer-following panel light",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "pointer-latch",
+    "pinned": false,
+    "viewport_heights": null,
+    "assets_required": {
+      "count": 24,
+      "bytes": 1417944,
+      "root_absolute_paths": true
+    }
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "slPanel",
+      "label": "Color del panel",
+      "type": "color",
+      "default": "#101114",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--sl-panel"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "slGlow",
+      "label": "Color de la luz",
+      "type": "color",
+      "default": "#6f7cff",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--sl-glow"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "slPaper",
+      "label": "Fondo de la página",
+      "type": "color",
+      "default": "#f2f0eb",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--sl-paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "hoverGrowth",
+      "label": "Crecimiento de la fila",
+      "type": "range",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "default": 50,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "hoverGrowth"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "cardXRange",
+      "label": "Azar horizontal",
+      "type": "range",
+      "min": 0,
+      "max": 300,
+      "step": 10,
+      "default": 100,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "cardXRange"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "cardYJitter",
+      "label": "Azar vertical",
+      "type": "range",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "default": 50,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "cardYJitter"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "cardRotationJitter",
+      "label": "Azar de giro",
+      "type": "range",
+      "min": 0,
+      "max": 45,
+      "step": 1,
+      "default": 20,
+      "unit": "°",
+      "apply": {
+        "kind": "js",
+        "path": "cardRotationJitter"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "cardFollow",
+      "label": "Seguimiento de la fila",
+      "type": "range",
+      "min": 0,
+      "max": 1,
+      "step": 0.05,
+      "default": 0.75,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "cardFollow"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "cardsDuration",
+      "label": "Recolocación de tarjetas",
+      "type": "range",
+      "min": 0.3,
+      "max": 2,
+      "step": 0.05,
+      "default": 1,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "cardsDuration"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "labelDuration",
+      "label": "Cambio de rótulo",
+      "type": "range",
+      "min": 0.1,
+      "max": 0.8,
+      "step": 0.05,
+      "default": 0.25,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "labelDuration"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "entryBlur",
+      "label": "Desenfoque de entrada",
+      "type": "range",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "default": 6,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "entryBlur"
+      },
+      "tier": "free"
+    }
+  ],
+  "intent": {
+    "mood": [
+      "bold",
+      "playful",
+      "editorial"
+    ],
+    "useCase": [
+      "hover-interaction",
+      "gallery",
+      "product-showcase"
+    ],
+    "useWhen": "Úsalo para un índice de colecciones, proyectos o categorías donde cada título tenga cuatro imágenes que asomen al pasar el cursor; funciona en moda, editorial y portafolios con seis a diez entradas. No lo uses en móvil como interacción principal: depende del hover.",
+    "aliases": [
+      "lista con hover",
+      "títulos con tarjetas",
+      "hover list cards",
+      "spotlight hover",
+      "índice con imágenes",
+      "lista manuscrita"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "CustomEase"
+    ],
+    "assetCount": 24,
+    "perfCost": "medium",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": false,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "review": {
+    "status": "premium",
+    "comment": ""
+  }
+}

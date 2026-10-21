@@ -1,0 +1,102 @@
+{
+  "slug": "ascii-hero-preloader-reveal",
+  "sourceDir": "codegrid-good-fella-landing-page-reveal",
+  "title": "ASCII Preloader Hero",
+  "title_es": "Hero ASCII con precarga",
+  "description": "A nested-block preloader gives way to a hero built as an ASCII grid from the image's brightness. Characters reveal from the center and melt into the real photo.",
+  "description_es": "Una precarga de bloques anidados da paso a un hero que se construye como rejilla ASCII a partir del brillo de la imagen. Los caracteres se revelan desde el centro y se funden con la foto real.",
+  "category": "preloader",
+  "tags": [
+    "ascii",
+    "preloader",
+    "hero",
+    "reveal",
+    "splittext",
+    "image"
+  ],
+  "gsap": [
+    "SplitText"
+  ],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 9000,
+    "clip": {
+      "seconds": 12
+    }
+  },
+  "images": [
+    {
+      "file": "hero-img.jpg",
+      "desc": "grabado xilográfico en blanco y negro de una botánica con cardos",
+      "role": "hero image sampled into ASCII",
+      "replaced": true
+    },
+    {
+      "file": "logo.svg",
+      "desc": "wordmark Grafia",
+      "role": "nav logo",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-10-10",
+  "status": {
+    "ported": true,
+    "verified": false,
+    "imagesReplaced": true,
+    "recolored": true
+  },
+  "premium": true,
+  "review": {
+    "status": "premium"
+  },
+  "motion": {
+    "slug": "ascii-hero-preloader-reveal",
+    "title": "ASCII Preloader Hero",
+    "category": "preloader",
+    "trigger": "load",
+    "libs": [
+      "gsap",
+      "SplitText"
+    ],
+    "complexity": 3,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power3",
+    "duration_range": [
+      0.01,
+      1
+    ],
+    "stagger": 0.075,
+    "assets_required": {
+      "count": 2,
+      "bytes": 0,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only"
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "entry-veil",
+        "reason": "velo de entrada a pantalla completa en la carga"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "LOAD-ONESHOT",
+    "engine": "gsap",
+    "motion_signature": "autoplay preloader: ASCII glyphs scramble in per character, then clear to reveal the hero",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "entry-veil"
+  }
+}

@@ -1,0 +1,293 @@
+{
+  "slug": "inline-spot-hover-cards",
+  "sourceDir": "codegrid-zentry-hover-animation",
+  "title": "Inline Spot Hover Cards",
+  "description": "Headline with three inline dots that open into image cards on hover: the dot grows to a fixed card size while the photo fades and sharpens in; a GSAP ticker loop then lerps the card toward the pointer (drift clamped to a radius, tilt clamped to an angle) and moves the photo the opposite way, as if seen through glass, with an iridescent edge on the open card. Leaving collapses it back to a breathing dot. Desktop only.",
+  "category": "hover",
+  "tags": [
+    "hover",
+    "headline",
+    "inline",
+    "3d-tilt",
+    "lerp",
+    "glass",
+    "iridescent",
+    "cards"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 1200,
+    "cursor": [
+      ".is-line:nth-child(2) .is-spot",
+      ".is-line:nth-child(4) .is-spot",
+      ".is-line:nth-child(6) .is-spot"
+    ]
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "misty forest",
+      "role": "spot card photo 1",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "brutalist concrete building",
+      "role": "spot card photo 2",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "sunset sky",
+      "role": "spot card photo 3",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-09-05",
+  "motion": {
+    "slug": "inline-spot-hover-cards",
+    "title": "Inline Spot Hover Cards",
+    "category": "hover",
+    "trigger": "hover",
+    "libs": [
+      "gsap"
+    ],
+    "complexity": 2,
+    "ease_family": "power3",
+    "duration_range": [
+      0.25,
+      0.75
+    ],
+    "stagger": null,
+    "needs_lenis": false,
+    "mobile_behavior": {
+      "kind": "disabled-below-breakpoint",
+      "media_queries": 2,
+      "reduced_motion": true
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "POINTER-CHASE",
+    "engine": "gsap+raf",
+    "motion_signature": "ticker lerp of drift and tilt toward the pointer with a counter-moving image; size tween on enter/leave; slow hue rotation of the glass edge",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow",
+    "pinned": false,
+    "viewport_heights": null,
+    "assets_required": {
+      "count": 3,
+      "bytes": 229469,
+      "root_absolute_paths": true
+    }
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "isPaper",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#eef0ea",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--is-paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "isInk",
+      "label": "Color del texto",
+      "type": "color",
+      "default": "#121316",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--is-ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "tiltMax",
+      "label": "Inclinación máxima",
+      "type": "range",
+      "min": 0,
+      "max": 45,
+      "step": 1,
+      "default": 20,
+      "unit": "°",
+      "apply": {
+        "kind": "js",
+        "path": "tiltMax"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "driftMax",
+      "label": "Deriva máxima",
+      "type": "range",
+      "min": 0,
+      "max": 80,
+      "step": 1,
+      "default": 25,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "driftMax"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "smoothing",
+      "label": "Suavizado",
+      "type": "range",
+      "min": 0.02,
+      "max": 0.3,
+      "step": 0.005,
+      "default": 0.075,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "smoothing"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "openDuration",
+      "label": "Apertura",
+      "type": "range",
+      "min": 0.2,
+      "max": 1.5,
+      "step": 0.05,
+      "default": 0.75,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "openDuration"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "closeDuration",
+      "label": "Cierre",
+      "type": "range",
+      "min": 0.1,
+      "max": 1.2,
+      "step": 0.05,
+      "default": 0.5,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "closeDuration"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "cardWidth",
+      "label": "Ancho de la tarjeta",
+      "type": "range",
+      "min": 8,
+      "max": 30,
+      "step": 0.5,
+      "default": 18,
+      "unit": "rem",
+      "apply": {
+        "kind": "js",
+        "path": "cardWidth"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "cardHeight",
+      "label": "Alto de la tarjeta",
+      "type": "range",
+      "min": 6,
+      "max": 24,
+      "step": 0.5,
+      "default": 14,
+      "unit": "rem",
+      "apply": {
+        "kind": "js",
+        "path": "cardHeight"
+      },
+      "tier": "free"
+    }
+  ],
+  "intent": {
+    "mood": [
+      "bold",
+      "playful",
+      "editorial"
+    ],
+    "useCase": [
+      "hero",
+      "hover-interaction",
+      "text-reveal"
+    ],
+    "useWhen": "Úsalo en un titular de hero cuando quieras esconder tres imágenes dentro del texto y que aparezcan solo al pasar el cursor, sin ocupar espacio; encaja en agencias, estudios y marcas con tipografía condensada. No lo uses si las imágenes deben verse en móvil: ahí los puntos no responden.",
+    "aliases": [
+      "puntos con imagen",
+      "hover en titular",
+      "inline image hover",
+      "titular con tarjetas",
+      "spot hover",
+      "texto con imágenes ocultas"
+    ]
+  },
+  "runtime": {
+    "level": "widget",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 3,
+    "perfCost": "light",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": false,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "review": {
+    "status": "premium",
+    "comment": ""
+  }
+}

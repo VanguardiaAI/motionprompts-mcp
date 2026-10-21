@@ -1,0 +1,113 @@
+{
+  "slug": "cassette-tape-menu",
+  "sourceDir": "codegrid-decathlonyestalgia-menu",
+  "title": "Cassette Tape Menu",
+  "title_es": "Menú de casetes",
+  "description": "An overlay opens with clip-path and a tape player slides in while the menu cassettes fan up. Opening and closing share a single timeline.",
+  "description_es": "Un overlay se abre con clip-path y entra un reproductor mientras los casetes del menú suben en abanico. Abrir y cerrar comparten una única timeline.",
+  "category": "menu",
+  "tags": [
+    "menu",
+    "overlay",
+    "clip-path",
+    "timeline",
+    "cassette"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 1000,
+    "clip": {
+      "seconds": 6
+    },
+    "click": ".nav-toggler",
+    "afterClickMs": 2500
+  },
+  "images": [
+    {
+      "file": "public/c/cassette-tape-menu/cassette.png",
+      "desc": "casete con degradado cónico melocotón, menta y verde bosque, sin texto",
+      "role": "imagen del reproductor central",
+      "replaced": true
+    },
+    {
+      "file": "public/c/cassette-tape-menu/menu-item-1.png",
+      "desc": "casete verde bosque con etiqueta RELEASES",
+      "role": "opción 1 del menú",
+      "replaced": true
+    },
+    {
+      "file": "public/c/cassette-tape-menu/menu-item-2.png",
+      "desc": "casete melocotón con etiqueta LIVE SHOWS",
+      "role": "opción 2 del menú",
+      "replaced": true
+    },
+    {
+      "file": "public/c/cassette-tape-menu/menu-item-3.png",
+      "desc": "casete menta con etiqueta LINER NOTES",
+      "role": "opción 3 del menú",
+      "replaced": true
+    },
+    {
+      "file": "public/c/cassette-tape-menu/menu-item-4.png",
+      "desc": "casete mostaza con etiqueta STORE",
+      "role": "opción 4 del menú",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-10-10",
+  "premium": true,
+  "status": {
+    "ported": true,
+    "verified": false,
+    "imagesReplaced": true,
+    "recolored": true
+  },
+  "review": {
+    "status": "premium"
+  },
+  "motion": {
+    "slug": "cassette-tape-menu",
+    "title": "Cassette Tape Menu",
+    "category": "menu",
+    "trigger": "click",
+    "libs": [
+      "gsap"
+    ],
+    "complexity": 3,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power3",
+    "duration_range": [
+      0.5,
+      1
+    ],
+    "stagger": 0.035,
+    "assets_required": {
+      "count": 5,
+      "bytes": 776061,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "width-branch"
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "TOGGLE-TIMELINE",
+    "engine": "gsap",
+    "motion_signature": "click toggle: overlay opens with clip-path, tape player slides in and menu cassettes fan up on one reversible timeline",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "curtain-toggle"
+  }
+}

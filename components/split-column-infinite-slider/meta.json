@@ -1,0 +1,304 @@
+{
+  "slug": "split-column-infinite-slider",
+  "sourceDir": "codegrid-glitchandgrit-infinite-slider",
+  "title": "Split Column Infinite Slider",
+  "description": "Two full-height columns driven by a virtual wheel or touch scroll: each project is a pair of photos, the left one revealed by a clip-path rising from the bottom and the right one descending from the top, with the images drifting in opposite directions and a single 100vw title block split across both columns that holds still while its slide is centred. Slides are created and removed around the current index with modulo wrapping, so the loop is infinite, and a light bar tracks progress.",
+  "category": "slider",
+  "tags": [
+    "slider",
+    "infinite",
+    "split",
+    "clip-path",
+    "wheel",
+    "raf",
+    "parallax",
+    "glass"
+  ],
+  "gsap": [],
+  "deps": [],
+  "preview": {
+    "waitMs": 1500
+  },
+  "images": [
+    {
+      "file": "left_1.jpg",
+      "desc": "blue mountain ridge",
+      "role": "project 1, left column",
+      "replaced": true
+    },
+    {
+      "file": "left_2.jpg",
+      "desc": "turquoise sea from above",
+      "role": "project 2, left column",
+      "replaced": true
+    },
+    {
+      "file": "left_3.jpg",
+      "desc": "desert road at dusk",
+      "role": "project 3, left column",
+      "replaced": true
+    },
+    {
+      "file": "left_4.jpg",
+      "desc": "milky way over a road",
+      "role": "project 4, left column",
+      "replaced": true
+    },
+    {
+      "file": "left_5.jpg",
+      "desc": "concrete building facade",
+      "role": "project 5, left column",
+      "replaced": true
+    },
+    {
+      "file": "right_1.jpg",
+      "desc": "misty limestone pillars",
+      "role": "project 1, right column",
+      "replaced": true
+    },
+    {
+      "file": "right_2.jpg",
+      "desc": "glacier ice texture",
+      "role": "project 2, right column",
+      "replaced": true
+    },
+    {
+      "file": "right_3.jpg",
+      "desc": "desert dunes",
+      "role": "project 3, right column",
+      "replaced": true
+    },
+    {
+      "file": "right_4.jpg",
+      "desc": "aurora over trees",
+      "role": "project 4, right column",
+      "replaced": true
+    },
+    {
+      "file": "right_5.jpg",
+      "desc": "ribbed concrete building",
+      "role": "project 5, right column",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-09-05",
+  "motion": {
+    "slug": "split-column-infinite-slider",
+    "title": "Split Column Infinite Slider",
+    "category": "slider",
+    "trigger": "wheel",
+    "libs": [],
+    "complexity": 3,
+    "ease_family": null,
+    "duration_range": null,
+    "stagger": null,
+    "needs_lenis": false,
+    "mobile_behavior": {
+      "kind": "touch-branch",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "la rueda alimenta su scroll virtual, no el de la página"
+    ],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "la rueda mueve su scroll virtual, no la página"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "CAPTURED-VIRTUAL-SCROLL",
+    "engine": "raf-lerp",
+    "motion_signature": "lerped virtual scroll; per-frame clip-path reveal, opposite image drift and held title drift on a windowed, modulo-wrapped slide pool",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow",
+    "pinned": false,
+    "viewport_heights": null,
+    "assets_required": {
+      "count": 10,
+      "bytes": 5070624,
+      "root_absolute_paths": true
+    }
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "scInk",
+      "label": "Color del texto",
+      "type": "color",
+      "default": "#f6f5f2",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--sc-ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "scrollSensitivity",
+      "label": "Rueda por proyecto",
+      "type": "range",
+      "min": 300,
+      "max": 3000,
+      "step": 50,
+      "default": 1200,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "scrollSensitivity"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "smoothness",
+      "label": "Suavizado",
+      "type": "range",
+      "min": 0.02,
+      "max": 0.2,
+      "step": 0.005,
+      "default": 0.05,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "smoothness"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "imageShift",
+      "label": "Deriva de la imagen",
+      "type": "range",
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "default": 25,
+      "unit": "%",
+      "apply": {
+        "kind": "js",
+        "path": "imageShift"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "copyShift",
+      "label": "Deriva del texto",
+      "type": "range",
+      "min": 0,
+      "max": 40,
+      "step": 1,
+      "default": 15,
+      "unit": "%",
+      "apply": {
+        "kind": "js",
+        "path": "copyShift"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "titleHold",
+      "label": "Meseta del título",
+      "type": "range",
+      "min": 0,
+      "max": 0.5,
+      "step": 0.05,
+      "default": 0.1,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "titleHold"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "imageZoom",
+      "label": "Escala de la imagen",
+      "type": "range",
+      "min": 1,
+      "max": 1.6,
+      "step": 0.05,
+      "default": 1.25,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "imageZoom"
+      },
+      "tier": "free"
+    }
+  ],
+  "intent": {
+    "mood": [
+      "bold",
+      "cinematic",
+      "editorial"
+    ],
+    "useCase": [
+      "slider",
+      "gallery",
+      "hero"
+    ],
+    "useWhen": "Úsalo como índice de proyectos a pantalla completa cuando cada proyecto tenga dos imágenes fuertes y un nombre corto que pueda partirse entre dos columnas; encaja en agencias, fotógrafos y estudios con cuatro a ocho proyectos. No lo uses dentro de una página con scroll normal: la rueda mueve su propio recorrido.",
+    "aliases": [
+      "slider de dos columnas",
+      "slider partido",
+      "split slider",
+      "slider infinito vertical",
+      "galería en dos columnas",
+      "column slider"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 10,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": false,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "review": {
+    "status": "premium",
+    "comment": ""
+  }
+}

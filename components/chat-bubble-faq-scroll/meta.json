@@ -1,0 +1,92 @@
+{
+  "slug": "chat-bubble-faq-scroll",
+  "sourceDir": "codegrid-crency-animated-faq",
+  "title": "Chat Bubble FAQ",
+  "title_es": "FAQ en burbujas de chat",
+  "description": "Each question and answer is born as a growing dot, shows a typing indicator and unfolds into a chat bubble paragraph by paragraph, all tied to scroll and fully reversible.",
+  "description_es": "Cada pregunta y respuesta nace como un punto que crece, muestra el indicador de escritura y se despliega en burbuja con el texto por párrafos, todo ligado al scroll y reversible.",
+  "category": "scroll",
+  "tags": [
+    "faq",
+    "chat",
+    "bubble",
+    "scroll",
+    "typing-indicator",
+    "lenis"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "scrollTo": 0.5,
+    "waitMs": 1500,
+    "clip": {
+      "seconds": 8
+    }
+  },
+  "images": [],
+  "updated": "2026-10-10",
+  "status": {
+    "ported": true,
+    "verified": false,
+    "imagesReplaced": true,
+    "recolored": true
+  },
+  "premium": true,
+  "review": {
+    "status": "premium"
+  },
+  "motion": {
+    "slug": "chat-bubble-faq-scroll",
+    "title": "Chat Bubble FAQ",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 3,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": true,
+    "ease_family": "power3",
+    "duration_range": [
+      0.3,
+      0.4
+    ],
+    "stagger": 0.05,
+    "assets_required": {
+      "count": 0,
+      "bytes": 0,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only"
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "Lenis posee el scroll de la página"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "SCROLL-TRIGGERED",
+    "engine": "gsap",
+    "motion_signature": "FAQ chat bubbles enter and expand as each one crosses the viewport, with a typing ping indicator",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "reveal-on-enter"
+  }
+}

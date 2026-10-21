@@ -1,0 +1,232 @@
+{
+  "slug": "cards",
+  "sourceDir": "cg-cards",
+  "title": "Interactive Calendar Cards",
+  "description": "A column of month cards, each showing a randomized grid of contribution-style pads with a few colored 'active' cells. Clicking an active pad triggers gsap.to to scale it up 20x to flood-fill the card, then reveals an image, title, copy and link that fly in with a staggered elastic.out gsap.fromTo (y and random rotation); a Back button reverses the animation.",
+  "category": "cards",
+  "tags": [
+    "cards",
+    "click-reveal",
+    "gsap",
+    "grid",
+    "contribution-graph",
+    "elastic",
+    "interactive",
+    "calendar",
+    "dark"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "click": ".pad.active",
+    "afterClickMs": 2600
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "A glossy black rounded-square 3D app icon floating on a dark grey backdrop, displaying a bright blue infinity/Meta-style ribbon logo",
+      "role": "detail image for the 'Modern Art Evolution' (May) and 'Conceptual Art Series' (August) card items",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "A hand holding up a frosted glass 'Pure Solution Essence' cosmetic bottle against a dark background with a shaft of light in the top-left corner",
+      "role": "detail image for the 'Sculpture Innovations' (May) and 'Street Art Chronicles' (August) card items",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "A brown kraft-paper box reading 'SHWOOD / ORIGINALS — HANDCRAFTED EYEWEAR' standing on a wooden table under warm dim light",
+      "role": "detail image for the 'Digital Illustration Magic' (May) card item",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "A white wireframe 3D figure of a snowboarder mid-trick, wrapped in concentric line-art spheres on a pure black background",
+      "role": "detail image for the 'Fusion Art Forms' (May) card item",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "A matte black pump bottle with a gold 'MF' monogram, dramatically spotlit on a tan-and-black studio floor",
+      "role": "detail image for the 'Abstract Painting Odyssey' (June) card item",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "A bronze metallic 'ELEGANT' cosmetic bottle lying in an open tin gift box, shot from above with soft window-blind shadows",
+      "role": "detail image for the 'Graphic Design Trends' (July) card item",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "A cluster of glossy white capsule-shaped containers numbered 07, 06 and 03 scattered on a black background",
+      "role": "detail image for the 'Contemporary Photography' (July) card item",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "A black smartphone lying on a dark surface, its screen glowing with the white word 'Hello' in near-darkness",
+      "role": "detail image for the 'Mixed Media Masterpieces' (July) card item",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "minimal",
+      "technical",
+      "playful"
+    ],
+    "useCase": [
+      "card-deck",
+      "gallery",
+      "product-showcase"
+    ],
+    "useWhen": "Úsalo para una lista de tarjetas mensuales tipo calendario donde cada celda de una cuadrícula abre, al hacer clic, una ficha con imagen, texto y enlace con rebote elástico.",
+    "aliases": [
+      "tarjetas calendario",
+      "grid de celdas",
+      "contribution graph cards",
+      "celdas clicables",
+      "pads interactivos",
+      "click reveal cards"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 8,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bg",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#141414",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bg"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "card",
+      "label": "Tarjeta",
+      "type": "color",
+      "default": "#1d1d1d",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--card"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Texto claro",
+      "type": "color",
+      "default": "#efece3",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "cards",
+    "title": "Interactive Calendar Cards",
+    "category": "cards",
+    "trigger": "click",
+    "libs": [
+      "gsap",
+      "ionicons"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "elastic",
+    "duration_range": [
+      0.075,
+      2
+    ],
+    "stagger": 0.1,
+    "assets_required": {
+      "count": 10,
+      "bytes": 615312,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 3,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "STEP-MACHINE",
+    "engine": "gsap",
+    "motion_signature": "click-scaled pad flood-fill (scale 20 in 0.3s, contained by the card's overflow:hidden), then a 2s elastic.out staggered fromTo of 3 content blocks from y:100 with a per-element random rotation (-30..30); Back reverses as a nested chain (fade 0.2s -> unscale 0.3s -> clearProps). No scroll-driven motion at all.",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "step-advance"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

@@ -1,0 +1,306 @@
+{
+  "slug": "gooey-blur-text-reveal",
+  "sourceDir": "codegrid-gooey-text-reveal",
+  "title": "Gooey Blur Text Reveal",
+  "description": "Line-by-line text reveal that reads like ink pooling into letters: each line is split with SplitText and wrapped in an inner span that starts at a large em-based blur and animates to sharp, while the outer line carries an SVG feColorMatrix alpha-threshold filter that hardens the soft edges into a gooey mass. Three modes per block (on load, once on scroll, scrubbed), Lenis smooth scroll, and banner photos that settle from a slight zoom as they pass.",
+  "category": "text",
+  "tags": [
+    "text",
+    "reveal",
+    "gooey",
+    "blur",
+    "splittext",
+    "scrolltrigger",
+    "lenis",
+    "svg-filter"
+  ],
+  "gsap": [
+    "SplitText",
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 2600,
+    "clip": {
+      "seconds": 9,
+      "actions": [
+        {
+          "type": "scroll",
+          "to": 0.5,
+          "mode": "pingpong"
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "tree canopy from below",
+      "role": "full-bleed banner 1",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "garden path with hedges",
+      "role": "full-bleed banner 2",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "lake with swans in mist",
+      "role": "full-bleed banner 3",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "misty pine forest",
+      "role": "full-bleed banner 4",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-09-05",
+  "motion": {
+    "slug": "gooey-blur-text-reveal",
+    "title": "Gooey Blur Text Reveal",
+    "category": "text",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "SplitText",
+      "ScrollTrigger",
+      "lenis"
+    ],
+    "complexity": 3,
+    "ease_family": "power3",
+    "duration_range": [
+      1.5,
+      1.5
+    ],
+    "stagger": 0.1,
+    "needs_lenis": true,
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de gooey-blur-text-reveal"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de gooey-blur-text-reveal"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de gooey-blur-text-reveal"
+      }
+    ],
+    "cluster": "SCROLL-LAGGED",
+    "engine": "gsap",
+    "motion_signature": "SplitText lines wrapped in an inner span whose em blur tweens to zero under an alpha-threshold SVG filter; load, once-on-enter and scrubbed variants; scrubbed banner scale",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-lagged",
+    "pinned": false,
+    "viewport_heights": null,
+    "assets_required": {
+      "count": 4,
+      "bytes": 3457490,
+      "root_absolute_paths": true
+    }
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "gbPaper",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#f4f3ef",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--gb-paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "gbInk",
+      "label": "Color del texto",
+      "type": "color",
+      "default": "#17181a",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--gb-ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "blurStart",
+      "label": "Desenfoque inicial",
+      "type": "range",
+      "min": 0.05,
+      "max": 1,
+      "step": 0.05,
+      "default": 0.35,
+      "unit": "em",
+      "apply": {
+        "kind": "js",
+        "path": "blurStart"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "duration",
+      "label": "Duración",
+      "type": "range",
+      "min": 0.3,
+      "max": 4,
+      "step": 0.1,
+      "default": 1.5,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "duration"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "stagger",
+      "label": "Escalonado entre líneas",
+      "type": "range",
+      "min": 0,
+      "max": 0.4,
+      "step": 0.01,
+      "default": 0.1,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "stagger"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bannerZoom",
+      "label": "Escala inicial de los banners",
+      "type": "range",
+      "min": 1,
+      "max": 1.5,
+      "step": 0.05,
+      "default": 1.15,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "bannerZoom"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "scrubStart",
+      "label": "Inicio del scrub",
+      "type": "range",
+      "min": 50,
+      "max": 95,
+      "step": 1,
+      "default": 75,
+      "unit": "%",
+      "apply": {
+        "kind": "js",
+        "path": "scrubStart"
+      },
+      "tier": "free"
+    }
+  ],
+  "intent": {
+    "mood": [
+      "editorial",
+      "organic",
+      "experimental"
+    ],
+    "useCase": [
+      "text-reveal",
+      "scroll-story",
+      "hero"
+    ],
+    "useWhen": "Úsalo cuando el texto sea el protagonista y quieras que cada línea se forme a partir de una mancha, en páginas largas de galerías, editoriales o manifiestos con tipografía pesada; los tres modos cubren carga, scroll y scrub. No lo uses con tipografías finas: el umbral del filtro las rompe.",
+    "aliases": [
+      "texto gooey",
+      "revelado con blur",
+      "texto que se forma",
+      "gooey text",
+      "blur text reveal",
+      "líneas desenfocadas"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "SplitText",
+      "ScrollTrigger"
+    ],
+    "assetCount": 4,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": false,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "review": {
+    "status": "premium",
+    "comment": ""
+  }
+}

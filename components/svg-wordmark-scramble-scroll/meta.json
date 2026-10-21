@@ -1,0 +1,92 @@
+{
+  "slug": "svg-wordmark-scramble-scroll",
+  "sourceDir": "svg-wordmark-scramble-scroll",
+  "title": "Scrambled Wordmark",
+  "title_es": "Wordmark revuelto",
+  "description": "A huge SVG wordmark repeated in cascading layers: on scroll, one of its letters slides out and turns into a vertical link whose label reveals with scrambled text.",
+  "description_es": "Un wordmark SVG enorme repetido en capas en cascada: con el scroll, una de sus letras se desplaza y se convierte en un enlace vertical cuya etiqueta se revela con texto revuelto.",
+  "category": "scroll",
+  "tags": [
+    "svg",
+    "wordmark",
+    "scramble-text",
+    "scroll",
+    "cascade",
+    "lenis"
+  ],
+  "gsap": [
+    "ScrollTrigger",
+    "ScrambleTextPlugin"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "scrollTo": 0.2,
+    "waitMs": 1500,
+    "clip": {
+      "seconds": 10
+    },
+    "afterScrollMs": 2000
+  },
+  "images": [],
+  "updated": "2026-10-10",
+  "status": {
+    "ported": true,
+    "verified": false,
+    "imagesReplaced": true,
+    "recolored": true
+  },
+  "premium": true,
+  "review": {
+    "status": "premium"
+  },
+  "motion": {
+    "slug": "svg-wordmark-scramble-scroll",
+    "title": "Scrambled Wordmark",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "ScrambleTextPlugin",
+      "lenis"
+    ],
+    "complexity": 3,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": true,
+    "ease_family": "none",
+    "duration_range": [
+      0.75,
+      0.75
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 0,
+      "bytes": 0,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only"
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "Lenis posee el scroll de la página"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "SCROLL-SCRUB",
+    "engine": "gsap",
+    "motion_signature": "scroll scrubs an SVG wordmark while its text scrambles into place",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-welded"
+  }
+}

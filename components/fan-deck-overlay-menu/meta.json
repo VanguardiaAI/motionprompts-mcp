@@ -1,0 +1,295 @@
+{
+  "slug": "fan-deck-overlay-menu",
+  "sourceDir": "codegrid-decathlonyestalgia-menu",
+  "title": "Fan Deck Overlay Menu",
+  "description": "Click-to-open overlay menu: the dark panel wipes up with a clip-path while a glass shelf rises and four frosted image cards climb out of it blurred and tilted, straighten, then fan out with a centre-out stagger. With the menu open the pointer parallaxes the fan and drags a specular highlight across each card's glass; closing gathers the deck back into the shelf before the panel wipes down.",
+  "category": "menu",
+  "tags": [
+    "overlay",
+    "menu",
+    "cards",
+    "fan",
+    "glassmorphism",
+    "clip-path",
+    "parallax",
+    "iridescent"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 600,
+    "click": ".fd-toggle",
+    "afterClickMs": 3200,
+    "clip": {
+      "seconds": 8,
+      "actions": [
+        {
+          "type": "click",
+          "selector": ".fd-toggle",
+          "at": 0.08
+        },
+        {
+          "type": "click",
+          "selector": ".fd-toggle",
+          "at": 0.62
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "contact.jpg",
+      "desc": "two people at a laptop, warm daylight",
+      "role": "menu card image · Contact",
+      "replaced": true
+    },
+    {
+      "file": "journal.jpg",
+      "desc": "stack of books on green",
+      "role": "menu card image · Journal",
+      "replaced": true
+    },
+    {
+      "file": "studio.jpg",
+      "desc": "arched white interior corridor",
+      "role": "menu card image · Studio",
+      "replaced": true
+    },
+    {
+      "file": "work.jpg",
+      "desc": "person drawing at a bright desk",
+      "role": "menu card image · Work",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-09-05",
+  "motion": {
+    "slug": "fan-deck-overlay-menu",
+    "title": "Fan Deck Overlay Menu",
+    "category": "menu",
+    "trigger": "click",
+    "libs": [
+      "gsap"
+    ],
+    "complexity": 3,
+    "ease_family": "power3",
+    "duration_range": [
+      0.25,
+      1.5
+    ],
+    "stagger": 0.035,
+    "needs_lenis": false,
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": true
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "CLICK-CURTAIN",
+    "engine": "gsap",
+    "motion_signature": "clip-path panel wipe, staggered card rise from a shelf and centre-out fan; pointer parallax via quickTo and a per-card specular highlight",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "curtain-toggle",
+    "pinned": false,
+    "viewport_heights": null,
+    "assets_required": {
+      "count": 4,
+      "bytes": 205235,
+      "root_absolute_paths": true
+    }
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "fdOverlay",
+      "label": "Color del panel",
+      "type": "color",
+      "default": "#15171d",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--fd-overlay"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "fdGlow",
+      "label": "Color de la luz",
+      "type": "color",
+      "default": "#7b6cf6",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--fd-glow"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "fdPaper",
+      "label": "Fondo de la página",
+      "type": "color",
+      "default": "#f3f1ec",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--fd-paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "openDuration",
+      "label": "Duración de apertura",
+      "type": "range",
+      "min": 0.4,
+      "max": 2,
+      "step": 0.05,
+      "default": 1,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "openDuration"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "fanAngle",
+      "label": "Ángulo del abanico",
+      "type": "range",
+      "min": 0,
+      "max": 16,
+      "step": 1,
+      "default": 7,
+      "unit": "°",
+      "apply": {
+        "kind": "js",
+        "path": "fanAngle"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "spacing",
+      "label": "Separación entre cartas",
+      "type": "range",
+      "min": 60,
+      "max": 140,
+      "step": 2,
+      "default": 108,
+      "unit": "%",
+      "apply": {
+        "kind": "js",
+        "path": "spacing"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "entryBlur",
+      "label": "Desenfoque de entrada",
+      "type": "range",
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "default": 14,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "entryBlur"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "parallax",
+      "label": "Paralaje del puntero",
+      "type": "range",
+      "min": 0,
+      "max": 40,
+      "step": 1,
+      "default": 14,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "parallax"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "hoverScale",
+      "label": "Escala al pasar",
+      "type": "range",
+      "min": 1,
+      "max": 1.15,
+      "step": 0.01,
+      "default": 1.05,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "hoverScale"
+      },
+      "tier": "free"
+    }
+  ],
+  "intent": {
+    "mood": [
+      "minimal",
+      "elegant",
+      "playful"
+    ],
+    "useCase": [
+      "navigation",
+      "hover-interaction"
+    ],
+    "useWhen": "Úsalo cuando el menú tenga cuatro o cinco destinos y quieras que cada uno se presente como una tarjeta con imagen en un panel que cubre la página al abrirse; encaja en estudios, marcas de producto y portafolios con pocas secciones. No lo uses con más de seis entradas ni si el menú tiene que verse sin tapar la página.",
+    "aliases": [
+      "menú de tarjetas",
+      "menú en abanico",
+      "overlay menu cards",
+      "fan menu",
+      "menú con imágenes",
+      "menú de cristal"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 4,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": false,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "review": {
+    "status": "premium",
+    "comment": ""
+  }
+}

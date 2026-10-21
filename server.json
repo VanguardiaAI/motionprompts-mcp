@@ -1,0 +1,47 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "dev.motionprompts/motionprompts",
+  "title": "motionprompts",
+  "description": "Plan pages, pick GSAP motion components and get their build prompts and composition rules.",
+  "websiteUrl": "https://motionprompts.dev/developers/",
+  "repository": {
+    "url": "https://github.com/VanguardiaAI/motionprompts-mcp",
+    "source": "github",
+    "id": "1317536311"
+  },
+  "version": "1.1.1",
+  "icons": [
+    {
+      "src": "https://motionprompts.dev/icon-512.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "motionprompts-mcp",
+      "version": "1.1.1",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://motionprompts.dev/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Optional. 'Bearer mpk_...' from motionprompts.dev/account unlocks the full prompts of the paid catalog.",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

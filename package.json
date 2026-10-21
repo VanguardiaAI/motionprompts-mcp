@@ -1,0 +1,37 @@
+{
+  "name": "motionprompts-mcp",
+  "version": "1.1.1",
+  "mcpName": "dev.motionprompts/motionprompts",
+  "description": "MCP server over a catalog of 259 production-grade GSAP motion components: search by design brief, plan a page's information architecture, and fetch copy-pasteable build prompts.",
+  "license": "SEE LICENSE IN LICENSE",
+  "type": "module",
+  "homepage": "https://motionprompts.dev/developers/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VanguardiaAI/motionprompts-mcp.git"
+  },
+  "bin": {
+    "motionprompts-mcp": "mcp/server.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "gsap",
+    "scrolltrigger",
+    "lenis",
+    "animation",
+    "web-design"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^4.4.3"
+  },
+  "scripts": {
+    "start": "node mcp/server.mjs",
+    "start:http": "node mcp/server-http.mjs",
+    "verify": "node mcp/lib/smoke.mjs"
+  }
+}

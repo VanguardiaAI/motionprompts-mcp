@@ -1,0 +1,136 @@
+{
+  "slug": "depth-stack-infinite-slider",
+  "sourceDir": "codegrid-danielkorr-slider",
+  "title": "Infinite Depth Stack",
+  "title_es": "Pila en profundidad",
+  "description": "An infinite wheel and touch slider: a stack of tilted cards that gain blur and lose brightness with depth, with smooth interpolation and a snap after you pause.",
+  "description_es": "Slider infinito por rueda y táctil: una pila de tarjetas inclinadas que ganan desenfoque y pierden brillo con la profundidad, con interpolación suave y encaje tras la pausa.",
+  "category": "slider",
+  "tags": [
+    "slider",
+    "infinite",
+    "wheel",
+    "touch",
+    "depth",
+    "blur",
+    "stack"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 1500,
+    "clip": {
+      "seconds": 8
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "bailarina en silueta sobre fondo plano magenta",
+      "role": "tarjeta de la pila",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "hombre de perfil con abrigo sobre fondo plano ámbar",
+      "role": "tarjeta de la pila",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "ciclista en salto sobre fondo plano menta",
+      "role": "tarjeta de la pila",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "mujer de espaldas sobre fondo plano violeta",
+      "role": "tarjeta de la pila",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "patinador agachado a contraluz sobre fondo plano chartreuse",
+      "role": "tarjeta de la pila",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "retrato a contraluz sobre fondo plano ciruela",
+      "role": "tarjeta de la pila",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "pareja caminando a contraluz sobre fondo plano lila",
+      "role": "tarjeta de la pila",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "mano con esfera de cristal sobre fondo plano pistacho",
+      "role": "tarjeta de la pila",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpg",
+      "desc": "saltadora de altura en Fosbury sobre el listón, fondo plano rosa eléctrico",
+      "role": "tarjeta de la pila",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpg",
+      "desc": "retrato con sombrero sobre fondo plano índigo",
+      "role": "tarjeta de la pila",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-10-10",
+  "premium": true,
+  "status": {
+    "ported": true,
+    "verified": false,
+    "imagesReplaced": true,
+    "recolored": true
+  },
+  "review": {
+    "status": "premium"
+  },
+  "motion": {
+    "slug": "depth-stack-infinite-slider",
+    "title": "Infinite Depth Stack",
+    "category": "slider",
+    "trigger": "wheel",
+    "libs": [
+      "gsap"
+    ],
+    "complexity": 4,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": null,
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 10,
+      "bytes": 0,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "no-mobile-handling"
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "INTEGRATOR",
+    "engine": "gsap",
+    "motion_signature": "wheel and touch drive a looping depth stack of slides, integrated per frame from the ticker with wrapped offsets",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  }
+}

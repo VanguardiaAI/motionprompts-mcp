@@ -1,0 +1,249 @@
+{
+  "slug": "parallax-effect",
+  "sourceDir": "codegrid-nextjs-parallax-effect",
+  "title": "Smooth Scroll Parallax Images",
+  "description": "Musician landing page where every image inside an overflow-hidden container drifts on scroll: a Lenis smooth-scroll instance feeds a target translateY (0.2x the relative scroll) and a requestAnimationFrame loop lerps toward it (factor 0.1), applying translateY plus scale(1.5) for a soft parallax lag on each portrait.",
+  "category": "scroll",
+  "tags": [
+    "parallax",
+    "scroll",
+    "lenis",
+    "lerp",
+    "raf",
+    "images",
+    "landing-page"
+  ],
+  "gsap": [],
+  "deps": [
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 800,
+    "scrollTo": 0.6,
+    "clip": {
+      "seconds": 9
+    }
+  },
+  "images": [
+    {
+      "file": "portrait1.jpg",
+      "desc": "portrait photo used as full-screen hero background",
+      "role": "hero background image with parallax drift",
+      "replaced": true
+    },
+    {
+      "file": "portrait10.jpg",
+      "desc": "portrait photo filling the projects section backdrop",
+      "role": "projects section background image",
+      "replaced": true
+    },
+    {
+      "file": "portrait4.jpg",
+      "desc": "portrait photo inside the half-height projects cover column",
+      "role": "projects cover image",
+      "replaced": true
+    },
+    {
+      "file": "portrait7.jpg",
+      "desc": "portrait photo in the about section right column",
+      "role": "about section portrait",
+      "replaced": true
+    },
+    {
+      "file": "portrait9.jpg",
+      "desc": "portrait photo behind the newsletter banner copy",
+      "role": "banner background image",
+      "replaced": true
+    },
+    {
+      "file": "portrait8.jpg",
+      "desc": "golden-hour open highway used in the footer block, tying to the album's road narrative",
+      "role": "footer road image",
+      "replaced": true
+    },
+    {
+      "file": "portrait2.jpg",
+      "desc": "unused portrait photo copied from source assets",
+      "role": "unused",
+      "replaced": true
+    },
+    {
+      "file": "portrait3.jpg",
+      "desc": "unused portrait photo copied from source assets",
+      "role": "unused",
+      "replaced": true
+    },
+    {
+      "file": "portrait5.jpg",
+      "desc": "unused portrait photo copied from source assets",
+      "role": "unused",
+      "replaced": true
+    },
+    {
+      "file": "portrait6.jpg",
+      "desc": "unused portrait photo copied from source assets",
+      "role": "unused",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "cinematic",
+      "editorial",
+      "elegant"
+    ],
+    "useCase": [
+      "scroll-story",
+      "hero",
+      "background"
+    ],
+    "useWhen": "Úsalo cuando quieras una landing con scroll suave donde las imágenes hacen parallax al desplazar, con un aire cinematográfico y editorial.",
+    "aliases": [
+      "parallax",
+      "efecto parallax",
+      "imágenes con parallax",
+      "scroll parallax",
+      "smooth scroll",
+      "parallax de imágenes"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 10,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "accent",
+      "label": "Acento",
+      "type": "color",
+      "default": "#ff4e45",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--accent"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#16161a",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "parallax-effect",
+    "title": "Smooth Scroll Parallax Images",
+    "category": "scroll",
+    "trigger": "scroll",
+    "libs": [
+      "lenis"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": 125,
+    "needs_lenis": true,
+    "ease_family": null,
+    "duration_range": [
+      0.2,
+      0.25
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 10,
+      "bytes": 1717039,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de parallax-effect"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de parallax-effect"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de parallax-effect"
+      }
+    ],
+    "cluster": "SCROLL-LAGGED",
+    "engine": "raf-lerp",
+    "motion_signature": "rAF-lerped translateY parallax driven by Lenis scroll",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-lagged"
+  },
+  "review": {
+    "status": "public"
+  }
+}

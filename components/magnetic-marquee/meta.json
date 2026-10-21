@@ -1,0 +1,317 @@
+{
+  "slug": "magnetic-marquee",
+  "sourceDir": "codegrid-magnetic-marquee",
+  "title": "Magnetic Spotlight Marquee",
+  "description": "Infinitely auto-scrolling image marquee strip (gsap.to with x-wrap modifiers) that magnetically follows the cursor's vertical position on mousemove, lerped in gsap.ticker (0.05 ease) and clamped 175px from the section edges. SplitText-split heading and copy lines rise out of the strip's way as it descends and receive a gaussian velocity 'wake' offset, while the content sits in mix-blend-mode: difference over the passing images.",
+  "category": "interactive",
+  "tags": [
+    "marquee",
+    "infinite",
+    "mousemove",
+    "magnetic",
+    "cursor-follow",
+    "lerp",
+    "split-text",
+    "mix-blend-mode",
+    "wake"
+  ],
+  "gsap": [
+    "SplitText"
+  ],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "click": ".spotlight",
+    "clip": {
+      "seconds": 8
+    }
+  },
+  "images": [
+    {
+      "file": "marquee-img-1.jpg",
+      "desc": "high-contrast black-and-white extreme close-up portrait of a woman's face with an intense gaze",
+      "role": "marquee frame 1 (studio portrait)",
+      "replaced": true
+    },
+    {
+      "file": "marquee-img-2.jpg",
+      "desc": "monochrome low-angle photograph of a modernist building facade, geometric window mullions and hard shadows",
+      "role": "marquee frame 2 (architecture)",
+      "replaced": true
+    },
+    {
+      "file": "marquee-img-3.jpg",
+      "desc": "grayscale mountain range under heavy cloud with mist drifting through forested ridges",
+      "role": "marquee frame 3 (landscape)",
+      "replaced": true
+    },
+    {
+      "file": "marquee-img-4.jpg",
+      "desc": "dark chiaroscuro black-and-white studio portrait of a woman turning toward the light against black",
+      "role": "marquee frame 4 (studio portrait)",
+      "replaced": true
+    },
+    {
+      "file": "marquee-img-5.jpg",
+      "desc": "moody monochrome close-up of an older person's weathered hands folded together, low key lighting",
+      "role": "marquee frame 5 (documentary detail)",
+      "replaced": true
+    },
+    {
+      "file": "marquee-img-6.jpg",
+      "desc": "black-and-white curved glass-tile building facade lit by a shaft of light, dark negative space",
+      "role": "marquee frame 6 (architecture)",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "editorial",
+      "bold"
+    ],
+    "useCase": [
+      "marquee",
+      "hero",
+      "gallery"
+    ],
+    "useWhen": "Úsalo para una banda de imágenes en scroll infinito que sigue el cursor, con titular superpuesto en mix-blend, como sección destacada de agencia o portfolio.",
+    "aliases": [
+      "marquee magnético",
+      "tira de imágenes infinita",
+      "infinite image strip",
+      "spotlight marquee",
+      "carrusel infinito",
+      "cursor marquee"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [
+      "SplitText"
+    ],
+    "assetCount": 6,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "bg",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#0a0a0b",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--bg"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#f2efe8",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "safelight",
+      "label": "Acento",
+      "type": "color",
+      "default": "#d8523c",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--safelight"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "muted",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#8a857b",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--muted"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "marqueeScrollSpeed",
+      "label": "Velocidad de la marquesina",
+      "type": "range",
+      "min": 20,
+      "max": 400,
+      "step": 10,
+      "default": 100,
+      "apply": {
+        "kind": "js",
+        "path": "marqueeScrollSpeed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "stripFollowEase",
+      "label": "Seguimiento de la banda",
+      "type": "range",
+      "min": 0.01,
+      "max": 0.4,
+      "step": 0.01,
+      "default": 0.05,
+      "apply": {
+        "kind": "js",
+        "path": "stripFollowEase"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "stripEdgeInset",
+      "label": "Margen de la banda",
+      "type": "range",
+      "min": 60,
+      "max": 400,
+      "step": 5,
+      "default": 175,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "stripEdgeInset"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "contentRiseRate",
+      "label": "Empuje del texto",
+      "type": "range",
+      "min": 0,
+      "max": 2,
+      "step": 0.05,
+      "default": 0.85,
+      "apply": {
+        "kind": "js",
+        "path": "contentRiseRate"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "wakeStrength",
+      "label": "Fuerza de la estela",
+      "type": "range",
+      "min": 0,
+      "max": 8,
+      "step": 0.25,
+      "default": 2.5,
+      "apply": {
+        "kind": "js",
+        "path": "wakeStrength"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "wakeReach",
+      "label": "Alcance de la estela",
+      "type": "range",
+      "min": 40,
+      "max": 400,
+      "step": 5,
+      "default": 125,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "wakeReach"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "magnetic-marquee",
+    "title": "Magnetic Spotlight Marquee",
+    "category": "interactive",
+    "trigger": "pointer",
+    "libs": [
+      "gsap",
+      "SplitText"
+    ],
+    "complexity": 3,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "none",
+    "duration_range": [
+      8,
+      17.28
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 6,
+      "bytes": 660136,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "POINTER-CHASE",
+    "engine": "gsap+raf",
+    "motion_signature": "cursor-magnetic infinite marquee strip with text wake",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  },
+  "review": {
+    "status": "public"
+  }
+}

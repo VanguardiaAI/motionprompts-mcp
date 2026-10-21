@@ -1,0 +1,100 @@
+{
+  "slug": "offcanvas-page-push-menu",
+  "title": "Page Push Menu",
+  "title_es": "Menú que empuja la página",
+  "description": "Opening the menu pushes the page down, shrinks and rounds it, revealing three columns of links whose words rise out of their mask. Logo and button slide aside on scroll.",
+  "description_es": "Al abrir el menú la página baja, encoge y se redondea, y debajo aparecen tres columnas de enlaces con las palabras saliendo de su máscara. El logo y el botón se apartan a los lados al hacer scroll.",
+  "category": "menu",
+  "tags": [
+    "menu",
+    "off-canvas",
+    "page-push",
+    "splittext",
+    "lenis",
+    "reveal"
+  ],
+  "gsap": [
+    "SplitText"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "scrollTo": 0,
+    "waitMs": 1200,
+    "clip": {
+      "seconds": 8
+    }
+  },
+  "images": [
+    {
+      "file": "hero.jpg",
+      "desc": "pasillo de hormigón verde botella con puertas de latón y luz rasante",
+      "role": "fondo de la portada",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-10-10",
+  "premium": true,
+  "status": {
+    "ported": true,
+    "verified": false,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": false,
+    "promptValidated": false
+  },
+  "review": {
+    "status": "premium"
+  },
+  "motion": {
+    "slug": "offcanvas-page-push-menu",
+    "title": "Page Push Menu",
+    "category": "menu",
+    "trigger": "click",
+    "libs": [
+      "gsap",
+      "SplitText",
+      "lenis"
+    ],
+    "complexity": 3,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": true,
+    "ease_family": "power3",
+    "duration_range": [
+      0.75,
+      1.5
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 1,
+      "bytes": 0,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "width-branch"
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "Lenis posee el scroll del contenedor de página"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "TOGGLE-TIMELINE",
+    "engine": "gsap",
+    "motion_signature": "click toggle: the whole page pushes aside to reveal an offcanvas menu, with split-text links entering",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "curtain-toggle"
+  }
+}

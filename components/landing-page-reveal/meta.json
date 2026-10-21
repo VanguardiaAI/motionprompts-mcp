@@ -1,0 +1,207 @@
+{
+  "slug": "landing-page-reveal",
+  "sourceDir": "24012024-Landing-Page-Reveal",
+  "title": "Kudos Landing Page Reveal",
+  "description": "A fullscreen preloader plays automatically on load: a randomized 0-to-100% counter runs while a stack of ten portrait images wipes across the frame via animated 'left' offsets, then GSAP power3.inOut tweens slide the counter out and a masked logo in, fade the overlay away, scale the hero image from 2 to 1, and slide the giant hero name and top nav into place. Triggered once on page load, roughly 8 seconds total.",
+  "category": "preloader",
+  "tags": [
+    "preloader",
+    "reveal",
+    "counter",
+    "clip-path",
+    "gsap",
+    "landing",
+    "hero",
+    "stagger",
+    "intro"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 11000,
+    "clip": {
+      "seconds": 9,
+      "settleMs": 500,
+      "actions": [
+        {
+          "type": "hold"
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "hero.jpg",
+      "desc": "low-key editorial fashion portrait — model in a white shirt and stone trousers against a dark warm-charcoal wall — used as the full-viewport hero the giant cream wordmark reveals over",
+      "role": "hero background image (scales from 2 to 1)",
+      "replaced": true
+    },
+    {
+      "file": "loader.jpg",
+      "desc": "warm camel-and-black editorial fashion portrait in raking light, repeated ten times in the preloader image stack that wipes across the frame",
+      "role": "preloader wiping image stack (used 10x)",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "editorial",
+      "elegant",
+      "minimal"
+    ],
+    "useCase": [
+      "preloader",
+      "hero",
+      "text-reveal"
+    ],
+    "useWhen": "Úsalo como intro de una landing de moda donde un contador y un stack de imágenes deslizantes desemboca en un nombre gigante sobre foto a pantalla completa.",
+    "aliases": [
+      "preloader con contador",
+      "landing reveal",
+      "intro de portada",
+      "revelado de hero",
+      "loading screen",
+      "giant name hero"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 2,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "color-accent",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#ffe500",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--color-accent"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "color-ink",
+      "label": "Fondo 2",
+      "type": "color",
+      "default": "#0a0a0a",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--color-ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "color-bone",
+      "label": "Fondo 3",
+      "type": "color",
+      "default": "#f4f4f0",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--color-bone"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "landing-page-reveal",
+    "title": "Kudos Landing Page Reveal",
+    "category": "preloader",
+    "trigger": "load",
+    "libs": [
+      "gsap"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power3",
+    "duration_range": [
+      0.25,
+      2
+    ],
+    "stagger": -0.1,
+    "assets_required": {
+      "count": 2,
+      "bytes": 439410,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "entry-veil",
+        "reason": "velo de entrada a pantalla completa en la carga"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "LOAD-ONESHOT",
+    "engine": "gsap",
+    "motion_signature": "timed preloader counter into staggered fullscreen reveal",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "entry-veil"
+  },
+  "review": {
+    "status": "public",
+    "comment": "En el vídeo se ve perfecto pero el texto \"Kudos\" se ve cortado por ambos lados en el ma letra K del principio y la S del final. Corrige el componente y graba de nuevo el vídeo."
+  }
+}

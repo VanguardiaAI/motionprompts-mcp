@@ -1,0 +1,616 @@
+[
+  {
+    "name": "continuous-follow",
+    "description": "El movimiento persigue una entrada viva (puntero, coordenada capturada o estado integrado) a través de un bucle por frame. No hay duración autorada: el tiempo lo fija el factor de filtro.",
+    "members": 52,
+    "ease": {
+      "primary": "power2.out",
+      "secondary": "power2.inOut",
+      "exit": "power2.inOut"
+    },
+    "duration": {
+      "fast": 0.25,
+      "base": 0.3,
+      "slow": 2
+    },
+    "stagger": {
+      "tight": 0.075,
+      "base": 0.1,
+      "loose": 0.1
+    },
+    "lenis": null,
+    "custom_ease_defs": {
+      "hop": {
+        "curve": "0.9, 0, 0.1, 1",
+        "variants_in_library": 1,
+        "chosen_by": 1
+      }
+    },
+    "scroll_philosophy": "mixed",
+    "reveal_vocabulary": [
+      "x-translate",
+      "y-translate"
+    ],
+    "transition_contract": "Mantiene un bucle por frame vivo mientras exista. No termina nunca por sí solo: quien lo integre debe decidir cuándo pausarlo, porque ningún componente lo hace.",
+    "_evidence": {
+      "time_authority": "input-continuous",
+      "clusters": [
+        "POINTER-CHASE",
+        "INTEGRATOR",
+        "CAPTURED-VIRTUAL-SCROLL"
+      ],
+      "lenis_members": "5/52",
+      "ease_top": [
+        "power2.out×8",
+        "power2.inOut×7",
+        "power4.inOut×6",
+        "power3.out×5",
+        "power4.out×5"
+      ],
+      "duration_samples": 132,
+      "stagger_samples": 11,
+      "lerp_band": [
+        0.01,
+        0.98
+      ],
+      "reveal_detail": [
+        {
+          "idiom": "x-translate",
+          "members": 21,
+          "share": 0.4
+        },
+        {
+          "idiom": "y-translate",
+          "members": 20,
+          "share": 0.38
+        }
+      ]
+    }
+  },
+  {
+    "name": "scrub-lagged",
+    "description": "La misma entrada que scrub-welded pero a través de un filtro con constante de tiempo real: sueltas la rueda y el movimiento sigue viajando cerca de un segundo. Es la receta de la casa.",
+    "members": 44,
+    "ease": {
+      "primary": "power2.out",
+      "secondary": "none",
+      "exit": "power2.in"
+    },
+    "duration": {
+      "fast": 0.3,
+      "base": 0.6,
+      "slow": 1.37
+    },
+    "stagger": {
+      "tight": 0.075,
+      "base": 0.1,
+      "loose": 0.25
+    },
+    "lenis": {
+      "lerp": 0.1,
+      "duration": null
+    },
+    "custom_ease_defs": {},
+    "scroll_philosophy": "scrub",
+    "reveal_vocabulary": [
+      "scale",
+      "opacity"
+    ],
+    "transition_contract": "Reclama N pantallas de pasillo y las mantiene pinneadas. La siguiente sección no puede empezar hasta que su rango cierra; encadenar dos exige sumar sus pasillos.",
+    "_evidence": {
+      "time_authority": "scroll-distance",
+      "clusters": [
+        "SCROLL-LAGGED"
+      ],
+      "lenis_members": "38/44",
+      "ease_top": [
+        "power2.out×21",
+        "none×18",
+        "power2.in×13",
+        "power4.inOut×10",
+        "power3.out×9"
+      ],
+      "duration_samples": 121,
+      "stagger_samples": 14,
+      "lerp_band": [
+        0.02,
+        0.95
+      ],
+      "reveal_detail": [
+        {
+          "idiom": "scale",
+          "members": 21,
+          "share": 0.48
+        },
+        {
+          "idiom": "opacity",
+          "members": 20,
+          "share": 0.45
+        }
+      ]
+    }
+  },
+  {
+    "name": "scrub-welded",
+    "description": "El valor renderizado es función pura de la posición de scroll, sin estado de suavizado: el scroll para y el movimiento para en el mismo frame. El ease se aplica a la distancia, no al tiempo.",
+    "members": 35,
+    "ease": {
+      "primary": "none",
+      "secondary": "power3.out",
+      "exit": "power2.in"
+    },
+    "duration": {
+      "fast": 0.25,
+      "base": 0.3,
+      "slow": 1
+    },
+    "stagger": {
+      "tight": 0.04,
+      "base": 0.05,
+      "loose": 0.1125
+    },
+    "lenis": {
+      "lerp": 0.1,
+      "duration": null
+    },
+    "custom_ease_defs": {},
+    "scroll_philosophy": "scrub",
+    "reveal_vocabulary": [
+      "opacity"
+    ],
+    "transition_contract": "Consume la posición de scroll pero no manufactura pasillo propio salvo por su pin. Entrega el control en cuanto su rango termina; puede encadenarse con otra sección scrub sin coordinación.",
+    "_evidence": {
+      "time_authority": "scroll-distance",
+      "clusters": [
+        "SCROLL-WELDED"
+      ],
+      "lenis_members": "30/35",
+      "ease_top": [
+        "none×18",
+        "power3.out×7",
+        "power2.out×5",
+        "power4.out×4",
+        "elastic.out(1,0.5)×4"
+      ],
+      "duration_samples": 74,
+      "stagger_samples": 4,
+      "lerp_band": [
+        0.05,
+        0.05
+      ],
+      "reveal_detail": [
+        {
+          "idiom": "opacity",
+          "members": 10,
+          "share": 0.29
+        }
+      ]
+    }
+  },
+  {
+    "name": "curtain-toggle",
+    "description": "Un clic enclava una timeline pausada que cubre el viewport desde una capa fija y luego revierte. Alternador binario, sin conjunto de ítems ni índice.",
+    "members": 27,
+    "ease": {
+      "primary": "power3.out",
+      "secondary": "power4.out",
+      "exit": "power4.inOut"
+    },
+    "duration": {
+      "fast": 0.3,
+      "base": 0.5,
+      "slow": 1.25
+    },
+    "stagger": {
+      "tight": 0.05,
+      "base": 0.075,
+      "loose": 0.1
+    },
+    "lenis": null,
+    "custom_ease_defs": {
+      "hop": {
+        "curve": "0.85, 0, 0.15, 1",
+        "variants_in_library": 4,
+        "chosen_by": 1
+      },
+      "pageTransition": {
+        "curve": "M0,0 C0.22,1 0.36,1 1,1",
+        "variants_in_library": 1,
+        "chosen_by": 1
+      }
+    },
+    "scroll_philosophy": "none",
+    "reveal_vocabulary": [
+      "opacity",
+      "y-translate",
+      "clip-path",
+      "scale",
+      "text-split"
+    ],
+    "transition_contract": "Vive en una capa fija por encima de todo y es reversible. No consume scroll; convive con cualquier sistema de cuerpo siempre que respete su z-index.",
+    "_evidence": {
+      "time_authority": "authored",
+      "clusters": [
+        "CLICK-CURTAIN"
+      ],
+      "lenis_members": "6/27",
+      "ease_top": [
+        "power3.out×19",
+        "power4.out×19",
+        "power4.inOut×17",
+        "hop×17",
+        "power2.out×16"
+      ],
+      "duration_samples": 232,
+      "stagger_samples": 44,
+      "lerp_band": [
+        0.05,
+        0.15
+      ],
+      "reveal_detail": [
+        {
+          "idiom": "opacity",
+          "members": 14,
+          "share": 0.52
+        },
+        {
+          "idiom": "y-translate",
+          "members": 12,
+          "share": 0.44
+        },
+        {
+          "idiom": "clip-path",
+          "members": 11,
+          "share": 0.41
+        },
+        {
+          "idiom": "scale",
+          "members": 11,
+          "share": 0.41
+        },
+        {
+          "idiom": "text-split",
+          "members": 10,
+          "share": 0.37
+        }
+      ]
+    }
+  },
+  {
+    "name": "entry-veil",
+    "description": "Timeline autónoma que arranca en la carga y corre hasta el final. Nada de lo que hace el usuario llega al render: dos visitantes ven un movimiento idéntico.",
+    "members": 24,
+    "ease": {
+      "primary": "hop",
+      "secondary": "power3.out",
+      "exit": "power4.inOut"
+    },
+    "duration": {
+      "fast": 0.75,
+      "base": 1,
+      "slow": 2
+    },
+    "stagger": {
+      "tight": 0.075,
+      "base": 0.1,
+      "loose": 0.2
+    },
+    "lenis": null,
+    "custom_ease_defs": {
+      "hop": {
+        "curve": "0.9, 0, 0.1, 1",
+        "variants_in_library": 7,
+        "chosen_by": 6
+      },
+      "glide": {
+        "curve": "0.8, 0, 0.2, 1",
+        "variants_in_library": 1,
+        "chosen_by": 2
+      },
+      "hop2": {
+        "curve": "M0,0 C0.078,0.617 0.114,0.716 0.255,0.828 0.373,0.922 0.561,1 1,1",
+        "variants_in_library": 2,
+        "chosen_by": 1
+      }
+    },
+    "scroll_philosophy": "none",
+    "reveal_vocabulary": [
+      "scale",
+      "clip-path",
+      "y-translate",
+      "opacity",
+      "text-split",
+      "rotation",
+      "mask"
+    ],
+    "transition_contract": "Ocupa el documento entero desde t=0 y debe terminar antes de que cualquier otro sistema empiece. Exclusivo: una página admite exactamente uno.",
+    "_evidence": {
+      "time_authority": "authored",
+      "clusters": [
+        "LOAD-ONESHOT"
+      ],
+      "lenis_members": "0/24",
+      "ease_top": [
+        "hop×50",
+        "power3.out×44",
+        "power4.inOut×28",
+        "power3.inOut×21",
+        "power2.inOut×14"
+      ],
+      "duration_samples": 272,
+      "stagger_samples": 59,
+      "lerp_band": null,
+      "reveal_detail": [
+        {
+          "idiom": "scale",
+          "members": 20,
+          "share": 0.83
+        },
+        {
+          "idiom": "clip-path",
+          "members": 17,
+          "share": 0.71
+        },
+        {
+          "idiom": "y-translate",
+          "members": 13,
+          "share": 0.54
+        },
+        {
+          "idiom": "opacity",
+          "members": 13,
+          "share": 0.54
+        },
+        {
+          "idiom": "text-split",
+          "members": 11,
+          "share": 0.46
+        },
+        {
+          "idiom": "rotation",
+          "members": 8,
+          "share": 0.33
+        },
+        {
+          "idiom": "mask",
+          "members": 7,
+          "share": 0.29
+        }
+      ]
+    }
+  },
+  {
+    "name": "step-advance",
+    "description": "Máquina de estados sobre un conjunto de ítems: un clic, una tecla o una muesca de rueda con verja avanza un índice y cada avance reproduce una tween acotada. Sin momento.",
+    "members": 22,
+    "ease": {
+      "primary": "hop",
+      "secondary": "power4.out",
+      "exit": "power2.inOut"
+    },
+    "duration": {
+      "fast": 0.4,
+      "base": 1,
+      "slow": 1.8
+    },
+    "stagger": {
+      "tight": 0.025,
+      "base": 0.05,
+      "loose": 0.1
+    },
+    "lenis": null,
+    "custom_ease_defs": {
+      "hop": {
+        "curve": "M0,0 C0.071,0.505 0.192,0.726 0.318,0.852 0.45,0.984 0.504,1 1,1",
+        "variants_in_library": 4,
+        "chosen_by": 2
+      }
+    },
+    "scroll_philosophy": "none",
+    "reveal_vocabulary": [
+      "scale",
+      "clip-path",
+      "y-translate",
+      "opacity",
+      "rotation",
+      "text-split"
+    ],
+    "transition_contract": "Encapsulado en su propio conjunto de ítems. No consume scroll de página salvo que capture la rueda; en ese caso pasa a ser exclusivo.",
+    "_evidence": {
+      "time_authority": "authored",
+      "clusters": [
+        "STEP-MACHINE"
+      ],
+      "lenis_members": "1/22",
+      "ease_top": [
+        "hop×21",
+        "power4.out×18",
+        "power2.inOut×16",
+        "power2.out×15",
+        ".87,0,.13,1×11"
+      ],
+      "duration_samples": 170,
+      "stagger_samples": 22,
+      "lerp_band": null,
+      "reveal_detail": [
+        {
+          "idiom": "scale",
+          "members": 12,
+          "share": 0.55
+        },
+        {
+          "idiom": "clip-path",
+          "members": 10,
+          "share": 0.45
+        },
+        {
+          "idiom": "y-translate",
+          "members": 9,
+          "share": 0.41
+        },
+        {
+          "idiom": "opacity",
+          "members": 9,
+          "share": 0.41
+        },
+        {
+          "idiom": "rotation",
+          "members": 8,
+          "share": 0.36
+        },
+        {
+          "idiom": "text-split",
+          "members": 6,
+          "share": 0.27
+        }
+      ]
+    }
+  },
+  {
+    "name": "pointer-latch",
+    "description": "El puntero cruza una frontera y dispara una timeline de duración fija. Las coordenadas del puntero no suavizan nada: la respuesta es discreta y por elemento.",
+    "members": 17,
+    "ease": {
+      "primary": "power2.out",
+      "secondary": "power4.out",
+      "exit": "power2.inOut"
+    },
+    "duration": {
+      "fast": 0.3,
+      "base": 0.5,
+      "slow": 1
+    },
+    "stagger": {
+      "tight": 0.025,
+      "base": 0.05,
+      "loose": 0.075
+    },
+    "lenis": null,
+    "custom_ease_defs": {},
+    "scroll_philosophy": "none",
+    "reveal_vocabulary": [
+      "y-translate",
+      "opacity"
+    ],
+    "transition_contract": "Puramente local al elemento. Es el único sistema que se puede aplicar en cantidad arbitraria sobre una misma página sin ningún contrato.",
+    "_evidence": {
+      "time_authority": "authored",
+      "clusters": [
+        "POINTER-LATCHED"
+      ],
+      "lenis_members": "3/17",
+      "ease_top": [
+        "power2.out×13",
+        "power4.out×12",
+        "power3.out×8",
+        "power2.inOut×1",
+        "sine.inOut×1"
+      ],
+      "duration_samples": 86,
+      "stagger_samples": 9,
+      "lerp_band": [
+        0.1,
+        0.1
+      ],
+      "reveal_detail": [
+        {
+          "idiom": "y-translate",
+          "members": 6,
+          "share": 0.35
+        },
+        {
+          "idiom": "opacity",
+          "members": 5,
+          "share": 0.29
+        }
+      ]
+    }
+  },
+  {
+    "name": "reveal-on-enter",
+    "description": "El scroll solo decide CUÁNDO. Cruzada la línea de disparo, el progreso es tiempo autorado y entre umbrales el valor es constante: rebobinar el scroll no rebobina la imagen.",
+    "members": 11,
+    "ease": {
+      "primary": "power2.out",
+      "secondary": "power3.out",
+      "exit": "power2.in"
+    },
+    "duration": {
+      "fast": 0.3,
+      "base": 0.75,
+      "slow": 0.75
+    },
+    "stagger": {
+      "tight": 0.04,
+      "base": 0.1,
+      "loose": 0.1
+    },
+    "lenis": {
+      "lerp": 0.1,
+      "duration": null
+    },
+    "custom_ease_defs": {},
+    "scroll_philosophy": "trigger-once",
+    "reveal_vocabulary": [
+      "y-translate",
+      "x-translate",
+      "opacity",
+      "scale",
+      "text-split",
+      "clip-path"
+    ],
+    "transition_contract": "No reclama pasillo. Se dispara al entrar en viewport y termina sola; es la única familia que se puede repetir N veces en la misma página sin coordinación.",
+    "_evidence": {
+      "time_authority": "authored",
+      "clusters": [
+        "SCROLL-THRESHOLD"
+      ],
+      "lenis_members": "9/11",
+      "ease_top": [
+        "power2.out×12",
+        "power3.out×5",
+        "power2.in×4",
+        "power1.out×2",
+        "power2.inOut×2"
+      ],
+      "duration_samples": 67,
+      "stagger_samples": 10,
+      "lerp_band": [
+        0.05,
+        0.05
+      ],
+      "reveal_detail": [
+        {
+          "idiom": "y-translate",
+          "members": 5,
+          "share": 0.45
+        },
+        {
+          "idiom": "x-translate",
+          "members": 5,
+          "share": 0.45
+        },
+        {
+          "idiom": "opacity",
+          "members": 5,
+          "share": 0.45
+        },
+        {
+          "idiom": "scale",
+          "members": 5,
+          "share": 0.45
+        },
+        {
+          "idiom": "text-split",
+          "members": 4,
+          "share": 0.36
+        },
+        {
+          "idiom": "clip-path",
+          "members": 3,
+          "share": 0.27
+        }
+      ]
+    }
+  }
+]

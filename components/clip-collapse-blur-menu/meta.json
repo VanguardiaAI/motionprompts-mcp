@@ -1,0 +1,116 @@
+{
+  "slug": "clip-collapse-blur-menu",
+  "sourceDir": "codegrid-forgeautomotive-menu",
+  "title": "Collapsing Page Menu",
+  "title_es": "Menú que recoge la página",
+  "description": "The page collapses to a point with clip-path while the menu comes in from depth, losing its blur. Links react on hover with split text.",
+  "description_es": "La página se recoge hacia un punto con clip-path mientras el menú entra desde la profundidad, perdiendo el desenfoque. Los enlaces reaccionan al hover con texto partido.",
+  "category": "menu",
+  "tags": [
+    "menu",
+    "clip-path",
+    "blur",
+    "splittext",
+    "hover",
+    "lenis"
+  ],
+  "gsap": [
+    "SplitText"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 1200,
+    "clip": {
+      "seconds": 8
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "moto de época de noche bajo una farola azulada",
+      "role": "imagen de la página",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "moto de época sobre una salina clara",
+      "role": "imagen de la página",
+      "replaced": true
+    },
+    {
+      "file": "nav-logo.svg",
+      "desc": "wordmark Vela Moto",
+      "role": "logo de la barra",
+      "replaced": true
+    },
+    {
+      "file": "logo.svg",
+      "desc": "wordmark Vela Moto",
+      "role": "logo auxiliar",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-10-10",
+  "status": {
+    "ported": true,
+    "verified": false,
+    "imagesReplaced": true,
+    "recolored": true
+  },
+  "premium": true,
+  "review": {
+    "status": "premium"
+  },
+  "motion": {
+    "slug": "clip-collapse-blur-menu",
+    "title": "Collapsing Page Menu",
+    "category": "menu",
+    "trigger": "click",
+    "libs": [
+      "gsap",
+      "SplitText",
+      "lenis"
+    ],
+    "complexity": 3,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": true,
+    "ease_family": "power3",
+    "duration_range": [
+      0.5,
+      1
+    ],
+    "stagger": 0.2,
+    "assets_required": {
+      "count": 4,
+      "bytes": 0,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "width-branch"
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "Lenis posee el scroll de la página"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "TOGGLE-TIMELINE",
+    "engine": "gsap",
+    "motion_signature": "click toggle: menu panel collapses by clip-path while the page blurs behind, split-text links stagger in",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "curtain-toggle"
+  }
+}

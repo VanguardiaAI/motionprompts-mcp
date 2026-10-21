@@ -1,0 +1,156 @@
+{
+  "slug": "zoom-out-mark-preloader",
+  "title": "Zoom-Out Mark Preloader",
+  "description": "A preloader with no veil: the blank white screen IS the interior of the brand's plus-sign mark, blown up until its crossing covers the viewport. A counter ticks 0 to 100 in ink over the white, then the mark zooms out on a logarithmic scale — so the recede reads at a constant rate instead of stalling — and the hero photograph is discovered around it rather than uncovered. The mark lands pixel-exact on the hero's own mark (both are the same two-bar cross, and the landing point and final scale are measured from it, not hard-coded), the two words fly in from opposite edges, and only once they have settled does the mark turn 360 degrees on its axis.",
+  "category": "preloader",
+  "tags": [
+    "preloader",
+    "loader",
+    "counter",
+    "zoom-out",
+    "logo-reveal",
+    "hero-reveal",
+    "logarithmic-scale",
+    "gsap-timeline",
+    "load-triggered",
+    "replayable",
+    "reduced-motion"
+  ],
+  "gsap": [],
+  "deps": ["gsap"],
+  "preview": {
+    "waitMs": 6000,
+    "clip": {
+      "seconds": 9,
+      "settleMs": 250,
+      "actions": [{ "type": "hold" }]
+    }
+  },
+  "images": [
+    {
+      "file": "hero.jpg",
+      "desc": "Interior of an old coastal smokehouse at first light: rows of split fish on weathered oak racks, whitewashed stone, and a single hard shaft of sun cutting through drifting woodsmoke onto a slate floor.",
+      "role": "Full-bleed hero photograph behind the mark. It is what the zoom-out discovers, so it is deliberately dark and low-key: the reveal only reads if the page underneath is not white.",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-08-17",
+  "intent": {
+    "mood": ["editorial", "minimal", "cinematic"],
+    "useCase": ["preloader", "hero", "logo"],
+    "useWhen": "Cuando la marca tenga un símbolo macizo (una cruz, un asterisco, una barra, un punto) y quieras que la pantalla en blanco de la carga sea el interior de ese símbolo, que se aleja hasta su sitio en el hero en vez de retirarse como un telón.",
+    "aliases": [
+      "preloader que se aleja",
+      "zoom out del logo",
+      "la pantalla blanca es el logo",
+      "intro con contador",
+      "logo zoom preloader",
+      "reveal desde dentro del simbolo",
+      "contador de carga"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 1,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": { "kind": "speed" },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Color de la marca",
+      "type": "color",
+      "default": "#ffffff",
+      "apply": { "kind": "cssvar", "name": "--paper" },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Tinta del contador",
+      "type": "color",
+      "default": "#16120e",
+      "apply": { "kind": "cssvar", "name": "--ink" },
+      "tier": "free"
+    },
+    {
+      "id": "night",
+      "label": "Fondo de la página",
+      "type": "color",
+      "default": "#0d0b09",
+      "apply": { "kind": "cssvar", "name": "--night" },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "zoom-out-mark-preloader",
+    "title": "Zoom-Out Mark Preloader",
+    "category": "preloader",
+    "trigger": "load",
+    "libs": ["gsap"],
+    "complexity": 3,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power2",
+    "duration_range": [0.3, 1.9],
+    "stagger": 0.07,
+    "assets_required": {
+      "count": 1,
+      "bytes": 246714,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": true
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "entry-veil",
+        "reason": "velo de entrada a pantalla completa en la carga (aunque aquí el velo ES la marca ampliada, no un rectángulo)"
+      },
+      {
+        "capability": "page-scroll-lock",
+        "reason": "fija overflow:hidden en body mientras dura la secuencia, vía la clase is-loading"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "LOAD-ONESHOT",
+    "engine": "gsap",
+    "motion_signature": "One paused-free gsap.timeline() fired on module evaluation, in four strictly sequential phases with no overlap between them beyond the two stated. A 1.8s power1.inOut tween counts an object from 0 to 100 and writes the rounded value into a text node while nothing moves on screen. After +=0.12 the counter fades out over 0.35s (power2.in) and, at the same instant, a second 1.9s power1.inOut tween drives a normalized 0-to-1 progress whose onUpdate writes scale = final * (start/final)^(1-p) — the scale is interpolated in LOG space, not linearly, so the recede reads at a constant rate; start is recomputed from the live viewport diagonal every frame and final is measured from the destination element, so neither end of the recede is a constant. On completion a callback swaps the preloader mark for the hero's, and at that same position the nav fades in over 0.6s while two words tween xPercent ±140 to 0 with opacity over 1.05s power4.out, stagger 0.07. Only after those finish does a 1s power2.inOut rotate the mark 360 degrees, with the standfirst and link fading up at <0.2. Total ≈5.9s. No scroll listener, no rAF loop of its own, no ScrollTrigger. Under prefers-reduced-motion the timeline never runs and document.getAnimations() stays at 0.",
+    "systems": ["curtain-toggle", "entry-veil", "pointer-latch", "reveal-on-enter", "step-advance"],
+    "native_system": "entry-veil"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

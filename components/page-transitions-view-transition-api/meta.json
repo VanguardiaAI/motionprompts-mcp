@@ -1,0 +1,249 @@
+{
+  "slug": "page-transitions-view-transition-api",
+  "sourceDir": "cg-page-transitions-view-transition-api",
+  "title": "Page Transitions with the View Transition API",
+  "description": "A multi-page portfolio where clicking a nav link is intercepted by the native Navigation API, which fetches the target HTML, swaps the document body inside document.startViewTransition(): the outgoing page fades to 40% and slides up while the incoming page wipes in from the bottom via an animated clip-path, both over 1.5s with a cubic-bezier(0.87,0,0.13,1) ease. Each destination then runs its own GSAP intro on mount, the home headline reveals character-by-character and the about paragraph reveals line-by-line (SplitType, power4.out y-translate), with Lenis smooth scrolling.",
+  "category": "transition",
+  "tags": [
+    "page-transition",
+    "view-transitions",
+    "navigation-api",
+    "clip-path",
+    "split-type",
+    "char-reveal",
+    "lenis",
+    "editorial",
+    "minimal"
+  ],
+  "gsap": [],
+  "deps": [
+    "lenis",
+    "gsap",
+    "split-type"
+  ],
+  "preview": {
+    "waitMs": 2500,
+    "click": "a[href=\"./work.html\"]",
+    "afterClickMs": 700,
+    "clip": {
+      "seconds": 9,
+      "settleMs": 400,
+      "actions": [
+        {
+          "type": "click",
+          "selector": "a[href=\"./work.html\"]",
+          "at": 0.6
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "img1.jpeg",
+      "desc": "pop-art comic-style portrait of a woman with cobalt-blue skin in a white coat against a deep blue field",
+      "role": "Work page, 'White Coat' — first stacked plate",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpeg",
+      "desc": "pop-art portrait in yellow sunglasses and a striped sweater against a signal-red background",
+      "role": "Work page, 'Signal Red' — second stacked plate",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpeg",
+      "desc": "flat-ink portrait of a woman with a blue bob in a Breton striped shirt on a light-blue field",
+      "role": "Work page, 'Breton' — third stacked plate",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpeg",
+      "desc": "pop-art editorial portrait, cobalt figure with hoop earring and dark collar on cream",
+      "role": "Work page, 'Off-Season' — fourth stacked plate",
+      "replaced": true
+    },
+    {
+      "file": "portrait.jpeg",
+      "desc": "cobalt-blue pop-art portrait used as the studio About-page image",
+      "role": "Studio page portrait in the left column",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-11",
+  "intent": {
+    "mood": [
+      "minimal",
+      "editorial",
+      "elegant"
+    ],
+    "useCase": [
+      "page-transition",
+      "navigation",
+      "text-reveal"
+    ],
+    "useWhen": "Úsalo para transiciones entre páginas reales de un portfolio con la Navigation API: la saliente sube y se desvanece mientras la nueva se revela con clip-path desde abajo.",
+    "aliases": [
+      "transición de páginas",
+      "view transitions",
+      "navigation api",
+      "page transition",
+      "clip path reveal",
+      "portfolio transition"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": true,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 5,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "cream",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#f1efe7",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--cream"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#16181c",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "cobalt",
+      "label": "Acento",
+      "type": "color",
+      "default": "#1b45d8",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--cobalt"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "page-transitions-view-transition-api",
+    "title": "Page Transitions with the View Transition API",
+    "category": "transition",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "lenis",
+      "split-type"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": true,
+    "ease_family": "power4",
+    "duration_range": [
+      0.25,
+      2
+    ],
+    "stagger": 0.075,
+    "assets_required": {
+      "count": 5,
+      "bytes": 705809,
+      "root_absolute_paths": false
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "instancia su propio Lenis"
+      }
+    ],
+    "conflicts_with": [
+      {
+        "with": "kaitonote-3d-gallery-showcase-scroll-animation",
+        "kind": "kills-all",
+        "reason": "kaitonote-3d-gallery-showcase-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de page-transitions-view-transition-api"
+      },
+      {
+        "with": "madeinuxstudio-page-transition",
+        "kind": "kills-all",
+        "reason": "madeinuxstudio-page-transition ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de page-transitions-view-transition-api"
+      },
+      {
+        "with": "nakedcityfilms-scroll-animation",
+        "kind": "kills-all",
+        "reason": "nakedcityfilms-scroll-animation ejecuta ScrollTrigger.getAll().kill() (también en resize) y destruye los triggers de page-transitions-view-transition-api"
+      }
+    ],
+    "cluster": "CLICK-CURTAIN",
+    "engine": "mixed",
+    "motion_signature": "native view-transition clip wipe plus GSAP text reveals",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "curtain-toggle"
+  },
+  "review": {
+    "status": "public",
+    "comment": "En Mobile no funciona el componente y en el vídeo hay que hacerlo más largo y hay que esperar un poco más a qué cargue el preloader y luego hacer clic para ver el efecto bien"
+  }
+}

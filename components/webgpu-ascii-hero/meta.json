@@ -1,0 +1,142 @@
+{
+  "slug": "webgpu-ascii-hero",
+  "title": "WebGPU ASCII Hero",
+  "description": "Full-bleed hero whose subject is a raymarched twisted torus quantised to monospaced characters entirely on the GPU — the first WebGPU component in the catalogue. Two passes and no mesh: an SDF scene shader raymarches the solid with tetrahedral normals and a Fresnel rim, then an ASCII pass reads it and picks one of ten 5x6 glyphs bit-packed into a u32 each, so there is no font, no atlas and no asset to load. The scene is drawn at the resolution of the character grid — one texel per glyph — which is why a 1600x1000 hero only raymarches ~13.000 pixels, under 1% of the canvas, and holds 60fps on integrated graphics. The key light hangs off the pointer with an exponentially damped follow, a click sends a rim pulse that decays on its own, and the whole ramp from sparse dots to dense asterisks IS the shading: at ten levels the tonal range is the modelling. A static poster is the LCP and never leaves the DOM, a real capability gate (it requests the adapter, it does not sniff navigator.gpu) decides whether the canvas is ever created, and an IntersectionObserver stops the loop the moment the hero leaves the screen.",
+  "category": "3d-webgl",
+  "tags": [
+    "webgpu",
+    "wgsl",
+    "ascii",
+    "raymarching",
+    "sdf",
+    "shader",
+    "hero",
+    "poster",
+    "monospace",
+    "vgpu"
+  ],
+  "gsap": [],
+  "deps": [
+    "vgpu"
+  ],
+  "preview": {
+    "waitMs": 4200,
+    "clip": {
+      "seconds": 9,
+      "actions": [
+        {
+          "type": "click",
+          "selector": ".stage",
+          "at": 0.22
+        },
+        {
+          "type": "click",
+          "selector": ".stage",
+          "at": 0.55
+        },
+        {
+          "type": "click",
+          "selector": ".stage",
+          "at": 0.81
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "poster-79a036d0.webp",
+      "desc": "Rendered headless from the source shaders with vgpu/node against Dawn (taller, `npm run tirar -- ascii --ancho 1600 --alto 1000`), not screenshotted from a browser. Same WGSL as the live view, so the still and the first frame agree by construction.",
+      "role": "The LCP. It is also the whole component for the ~15-20% of visitors without WebGPU, and it stays in the DOM so a lost context brings it straight back.",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-08-28",
+  "intent": {
+    "mood": [
+      "technical",
+      "futuristic",
+      "minimal"
+    ],
+    "useCase": [
+      "hero",
+      "background",
+      "product-showcase"
+    ],
+    "useWhen": "Úsalo cuando la marca quiera decir «esto es infraestructura» sin una foto de servidores: un objeto que se lee como salida de terminal, con la luz siguiendo al cursor. Encaja en dev tools, infra, seguridad, datos y cualquier producto cuyo público sepa lo que es un raymarch. El encuadre viene desplazado a la derecha a propósito, con el titular en la mitad izquierda, así que funciona como hero con texto encima sin pelearse con él. No lo uses si el público es generalista o si necesitas que el 100% de los visitantes vea movimiento: aquí uno de cada seis se queda en el póster.",
+    "aliases": [
+      "hero ascii",
+      "efecto ascii",
+      "arte ascii 3d",
+      "terminal hero",
+      "webgpu hero",
+      "shader ascii",
+      "hero de codigo",
+      "ascii art animado",
+      "raymarch hero"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": false,
+    "needsWebgl": true,
+    "needsCanvas": true,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 1,
+    "perfCost": "medium",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": false,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": false
+  },
+  "motion": {
+    "slug": "webgpu-ascii-hero",
+    "title": "WebGPU ASCII Hero",
+    "category": "3d-webgl",
+    "trigger": "pointer",
+    "libs": [
+      "vgpu"
+    ],
+    "complexity": 4,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "custom",
+    "duration_range": [
+      0.09,
+      0.6
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 1,
+      "bytes": 73296,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "touch-branch",
+      "media_queries": 2,
+      "reduced_motion": true
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "POINTER-CHASE",
+    "engine": "webgpu-raf",
+    "motion_signature": "rAF loop with exponentially damped pointer follow driving a WGSL uniform; two-pass raymarch to a grid-sized target, then GPU glyph quantisation",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow"
+  },
+  "review": {
+    "status": "premium",
+    "comment": ""
+  }
+}

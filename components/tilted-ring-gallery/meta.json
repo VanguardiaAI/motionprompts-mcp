@@ -1,0 +1,361 @@
+{
+  "slug": "tilted-ring-gallery",
+  "sourceDir": "codegrid-circular-image-gallery",
+  "title": "Tilted Ring Gallery",
+  "description": "Twelve glass-framed photos orbit on a tilted oval: a rAF loop advances the ring at an idle speed, each wheel event adds to the speed (capped) and sets the direction, and the speed eases back to idle. The photo under the pointer, found with elementFromPoint because the items move under a still cursor, scales up while the others desaturate, darken and blur.",
+  "category": "gallery",
+  "tags": [
+    "gallery",
+    "ring",
+    "orbit",
+    "wheel",
+    "raf",
+    "hover",
+    "blur",
+    "glass"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 1500
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "scenic landscape (1/4)",
+      "role": "ring photo",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpg",
+      "desc": "sky and clouds (2/4)",
+      "role": "ring photo",
+      "replaced": true
+    },
+    {
+      "file": "img11.jpg",
+      "desc": "sky and clouds (3/4)",
+      "role": "ring photo",
+      "replaced": true
+    },
+    {
+      "file": "img12.jpg",
+      "desc": "sky and clouds (4/4)",
+      "role": "ring photo",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "scenic landscape (2/4)",
+      "role": "ring photo",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "scenic landscape (3/4)",
+      "role": "ring photo",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "scenic landscape (4/4)",
+      "role": "ring photo",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "architecture exterior (1/4)",
+      "role": "ring photo",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "architecture exterior (2/4)",
+      "role": "ring photo",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "architecture exterior (3/4)",
+      "role": "ring photo",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "architecture exterior (4/4)",
+      "role": "ring photo",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpg",
+      "desc": "sky and clouds (1/4)",
+      "role": "ring photo",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-09-05",
+  "motion": {
+    "slug": "tilted-ring-gallery",
+    "title": "Tilted Ring Gallery",
+    "category": "gallery",
+    "trigger": "wheel",
+    "libs": [
+      "gsap"
+    ],
+    "complexity": 3,
+    "ease_family": "expo",
+    "duration_range": [
+      1,
+      1
+    ],
+    "stagger": null,
+    "needs_lenis": false,
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "CAPTURED-VIRTUAL-SCROLL",
+    "engine": "gsap+raf",
+    "motion_signature": "rAF ring rotation with wheel-accelerated, eased-back speed; elementFromPoint hover with scale, desaturate and blur tweens",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow",
+    "pinned": false,
+    "viewport_heights": null,
+    "assets_required": {
+      "count": 12,
+      "bytes": 906211,
+      "root_absolute_paths": true
+    }
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "trBg",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#0c0d10",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--tr-bg"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "count",
+      "label": "Número de fotos",
+      "type": "range",
+      "min": 3,
+      "max": 12,
+      "step": 1,
+      "default": 12,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "count"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ovalWidthRatio",
+      "label": "Ancho del óvalo",
+      "type": "range",
+      "min": 0.1,
+      "max": 0.45,
+      "step": 0.01,
+      "default": 0.28,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "ovalWidthRatio"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ovalHeightRatio",
+      "label": "Alto del óvalo",
+      "type": "range",
+      "min": 0.1,
+      "max": 0.45,
+      "step": 0.01,
+      "default": 0.26,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "ovalHeightRatio"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "tiltAngle",
+      "label": "Inclinación",
+      "type": "range",
+      "min": -45,
+      "max": 45,
+      "step": 1,
+      "default": -20,
+      "unit": "°",
+      "apply": {
+        "kind": "js",
+        "path": "tiltAngle"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "idleSpeed",
+      "label": "Velocidad en reposo",
+      "type": "range",
+      "min": 0,
+      "max": 0.3,
+      "step": 0.005,
+      "default": 0.035,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "idleSpeed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "scrollAcceleration",
+      "label": "Aceleración con la rueda",
+      "type": "range",
+      "min": 0.001,
+      "max": 0.02,
+      "step": 0.0005,
+      "default": 0.0055,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "scrollAcceleration"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "maxSpeed",
+      "label": "Velocidad máxima",
+      "type": "range",
+      "min": 0.5,
+      "max": 6,
+      "step": 0.1,
+      "default": 2.5,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "maxSpeed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "hoverScale",
+      "label": "Escala al pasar",
+      "type": "range",
+      "min": 1,
+      "max": 1.4,
+      "step": 0.01,
+      "default": 1.1,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "hoverScale"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "dimmedBrightness",
+      "label": "Brillo de las demás",
+      "type": "range",
+      "min": 0.1,
+      "max": 1,
+      "step": 0.05,
+      "default": 0.35,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "dimmedBrightness"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "dimmedBlur",
+      "label": "Desenfoque de las demás",
+      "type": "range",
+      "min": 0,
+      "max": 8,
+      "step": 0.5,
+      "default": 2,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "dimmedBlur"
+      },
+      "tier": "free"
+    }
+  ],
+  "intent": {
+    "mood": [
+      "cinematic",
+      "elegant",
+      "experimental"
+    ],
+    "useCase": [
+      "gallery",
+      "hero",
+      "background"
+    ],
+    "useWhen": "Úsalo como galería de portada cuando tengas ocho a doce fotos de peso parecido y quieras que floten y giren en un anillo, con la rueda como acelerador; encaja en fotografía, viajes y arquitectura. No lo uses si las fotos necesitan pie o enlace visible: aquí se miran, no se leen.",
+    "aliases": [
+      "galería en anillo",
+      "anillo de fotos",
+      "óvalo giratorio",
+      "ring gallery",
+      "galería orbital",
+      "fotos en órbita"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 12,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": false,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "review": {
+    "status": "premium",
+    "comment": ""
+  }
+}

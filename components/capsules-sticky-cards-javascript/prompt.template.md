@@ -1,0 +1,15 @@
+---
+slug: capsules-sticky-cards-javascript
+native_system: scrub-welded
+compatible_systems: [scrub-lagged, scrub-welded]
+tokens_used: 2
+structural_literals: 7
+structural:
+  - { kind: duration, literal: "0.5", rule: value/narrated }
+  - { kind: ease, literal: "\"power4.out\"", rule: value/narrated }
+  - { kind: ease, literal: "\"none\"", rule: ease/scrub-linear }
+# Generado por scripts/build-motion-templates. NO editar a mano: se regenera.
+# El prompt standalone intacto vive en prompt.md y es el que sirve la web.
+...
+
+> This prompt requires the Unlimited plan (Full Stack for MCP access). Get a key at https://motionprompts.dev/account/ and pass it as `Authorization: Bearer mpk_...`. Pricing: https://motionprompts.dev/pricing/

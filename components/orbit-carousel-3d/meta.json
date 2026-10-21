@@ -1,0 +1,289 @@
+{
+  "slug": "orbit-carousel-3d",
+  "sourceDir": "codegrid-and2es-3d-slider",
+  "title": "3D Orbit Carousel",
+  "description": "Ten photo panels placed with rotateY and translateZ around a pivot: the wheel (or a touch drag) turns the orbit through a lerped rAF loop while a glass preview at the centre counter-rotates to keep facing the camera and crossfades to the active photo. The pointer tilts the whole stage on both axes, panels fade and darken with their angle to the camera (depth fog), and a title chip updates with the active slide.",
+  "category": "slider",
+  "tags": [
+    "slider",
+    "carousel",
+    "3d",
+    "orbit",
+    "wheel",
+    "lerp",
+    "glass",
+    "depth"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 1500
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "black and white editorial portrait (1/4)",
+      "role": "orbit panel photo",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpg",
+      "desc": "dramatic studio portrait (2/2)",
+      "role": "orbit panel photo",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "black and white editorial portrait (2/4)",
+      "role": "orbit panel photo",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "black and white editorial portrait (3/4)",
+      "role": "orbit panel photo",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "black and white editorial portrait (4/4)",
+      "role": "orbit panel photo",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "monochrome fashion portrait (1/4)",
+      "role": "orbit panel photo",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "monochrome fashion portrait (2/4)",
+      "role": "orbit panel photo",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "monochrome fashion portrait (3/4)",
+      "role": "orbit panel photo",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "monochrome fashion portrait (4/4)",
+      "role": "orbit panel photo",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpg",
+      "desc": "dramatic studio portrait (1/2)",
+      "role": "orbit panel photo",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-09-05",
+  "motion": {
+    "slug": "orbit-carousel-3d",
+    "title": "3D Orbit Carousel",
+    "category": "slider",
+    "trigger": "wheel",
+    "libs": [
+      "gsap"
+    ],
+    "complexity": 3,
+    "ease_family": "power2",
+    "duration_range": [
+      0.18,
+      0.35
+    ],
+    "stagger": null,
+    "needs_lenis": false,
+    "mobile_behavior": {
+      "kind": "touch-branch",
+      "media_queries": 1,
+      "reduced_motion": false
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "CAPTURED-VIRTUAL-SCROLL",
+    "engine": "raf-lerp",
+    "motion_signature": "lerped orbit rotation from wheel delta, counter-rotated centre preview with crossfade, two-axis pointer tilt, per-frame depth fog",
+    "systems": [
+      "continuous-follow"
+    ],
+    "native_system": "continuous-follow",
+    "pinned": false,
+    "viewport_heights": null,
+    "assets_required": {
+      "count": 10,
+      "bytes": 442659,
+      "root_absolute_paths": true
+    }
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ocBg",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#e8e8e6",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--oc-bg"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "count",
+      "label": "Número de paneles",
+      "type": "range",
+      "min": 4,
+      "max": 10,
+      "step": 1,
+      "default": 10,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "count"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "orbitRadius",
+      "label": "Radio de la órbita",
+      "type": "range",
+      "min": 150,
+      "max": 800,
+      "step": 10,
+      "default": 400,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "orbitRadius"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "smoothing",
+      "label": "Suavizado",
+      "type": "range",
+      "min": 0.02,
+      "max": 0.3,
+      "step": 0.005,
+      "default": 0.05,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "smoothing"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "wheelSensitivity",
+      "label": "Sensibilidad de la rueda",
+      "type": "range",
+      "min": 0.05,
+      "max": 0.6,
+      "step": 0.01,
+      "default": 0.2,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "wheelSensitivity"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "maxTilt",
+      "label": "Inclinación máxima",
+      "type": "range",
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "default": 30,
+      "unit": "°",
+      "apply": {
+        "kind": "js",
+        "path": "maxTilt"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "depthFade",
+      "label": "Niebla de profundidad",
+      "type": "range",
+      "min": 0,
+      "max": 1,
+      "step": 0.05,
+      "default": 0.55,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "depthFade"
+      },
+      "tier": "free"
+    }
+  ],
+  "intent": {
+    "mood": [
+      "elegant",
+      "cinematic",
+      "minimal"
+    ],
+    "useCase": [
+      "slider",
+      "gallery",
+      "product-showcase"
+    ],
+    "useWhen": "Úsalo cuando tengas ocho a diez imágenes verticales (retratos, portadas, productos) y quieras un carrusel con profundidad real que gire con la rueda y se incline con el cursor; encaja en fotografía, moda y editorial. No lo uses si el usuario debe llegar a una diapositiva concreta con un clic: no hay paginación.",
+    "aliases": [
+      "carrusel 3D",
+      "carrusel orbital",
+      "slider en órbita",
+      "orbit slider",
+      "carrusel de retratos",
+      "carousel perspectiva"
+    ]
+  },
+  "runtime": {
+    "level": "section",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 10,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": false,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": false,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "review": {
+    "status": "premium",
+    "comment": ""
+  }
+}

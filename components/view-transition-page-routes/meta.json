@@ -1,0 +1,128 @@
+{
+  "slug": "view-transition-page-routes",
+  "sourceDir": "codegrid-view-page-transition",
+  "title": "Rutas con View Transitions",
+  "description": "Tres rutas simuladas en una sola página. Al cambiar de ruta, la vista saliente se encoge, gira y se apaga mientras la entrante aparece con un recorte desde la esquina. Usa document.startViewTransition y, donde no existe, la misma coreografía con GSAP.",
+  "category": "transition",
+  "tags": [
+    "page-transition",
+    "view-transitions",
+    "clip-path",
+    "splittext",
+    "lenis",
+    "editorial"
+  ],
+  "gsap": [
+    "SplitText"
+  ],
+  "deps": [
+    "gsap",
+    "lenis"
+  ],
+  "preview": {
+    "waitMs": 3500,
+    "clip": {
+      "seconds": 9,
+      "settleMs": 400,
+      "actions": [
+        {
+          "type": "click",
+          "selector": "a[data-route=\"projects\"]",
+          "at": 0.5
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "file": "public/c/view-transition-page-routes/img1.jpg",
+      "desc": "botella de vidrio y lino sobre plinto de terracota con sombra larga",
+      "role": "obra, primera lámina",
+      "replaced": true
+    },
+    {
+      "file": "public/c/view-transition-page-routes/img2.jpg",
+      "desc": "tres piedras en equilibrio sobre mesa hueso, fondo verde profundo",
+      "role": "obra, segunda lámina",
+      "replaced": true
+    },
+    {
+      "file": "public/c/view-transition-page-routes/img3.jpg",
+      "desc": "hierba de la pampa en jarrón de terracota con sombra diagonal",
+      "role": "obra, tercera lámina",
+      "replaced": true
+    },
+    {
+      "file": "public/c/view-transition-page-routes/img4.jpg",
+      "desc": "arco de yeso, esfera y cilindro en terracota y hueso",
+      "role": "obra, cuarta lámina",
+      "replaced": true
+    },
+    {
+      "file": "public/c/view-transition-page-routes/portrait.jpg",
+      "desc": "recorte del bodegón de piedras para la página de estudio",
+      "role": "columna izquierda de estudio",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-10-10",
+  "premium": true,
+  "status": {
+    "ported": true,
+    "verified": false,
+    "imagesReplaced": true,
+    "recolored": true
+  },
+  "review": {
+    "status": "premium"
+  },
+  "motion": {
+    "slug": "view-transition-page-routes",
+    "title": "Rutas con View Transitions",
+    "category": "transition",
+    "trigger": "click",
+    "libs": [
+      "gsap",
+      "SplitText",
+      "lenis"
+    ],
+    "complexity": 4,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": true,
+    "ease_family": "power3",
+    "duration_range": [
+      1,
+      2
+    ],
+    "stagger": 0.1,
+    "assets_required": {
+      "count": 5,
+      "bytes": 346480,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only"
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "entry-veil",
+        "reason": "velo de transición entre rutas"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "TOGGLE-TIMELINE",
+    "engine": "gsap",
+    "motion_signature": "link click runs a View Transition between routes, then split-text headings re-enter",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "curtain-toggle"
+  }
+}

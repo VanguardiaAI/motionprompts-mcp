@@ -1,0 +1,342 @@
+{
+  "slug": "circular-img-gallery",
+  "sourceDir": "cg-circular-img-gallery",
+  "title": "Circular Image Gallery",
+  "description": "On page load a GSAP timeline lays out 15 image tiles into a full circle, each scaling from 0 to 1 and rotating tangentially with a staggered power2.out entrance. Clicking any tile shrinks the others away (power2.in stagger) and animates the chosen tile to the center, scaling it up 5x; clicking again reverses it back into the ring.",
+  "category": "gallery",
+  "tags": [
+    "gallery",
+    "circular",
+    "gsap",
+    "timeline",
+    "click",
+    "radial",
+    "stagger",
+    "editorial",
+    "minimal"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 3000
+  },
+  "images": [
+    {
+      "file": "img1.jpg",
+      "desc": "Cinematic dark-teal scene of a lone silhouetted figure walking across a reflective floor toward bright light between towering slabs",
+      "role": "Gallery tile in the circular ring (first tile)",
+      "replaced": true
+    },
+    {
+      "file": "img2.jpg",
+      "desc": "Warm still life of a bundle of aged letters tied with twine beside a glass ink bottle and vintage photographs on a desk",
+      "role": "Gallery tile in the circular ring",
+      "replaced": true
+    },
+    {
+      "file": "img3.jpg",
+      "desc": "Astronaut standing on a hazy plain facing a giant pale sphere in a golden-orange sunset haze",
+      "role": "Gallery tile in the circular ring",
+      "replaced": true
+    },
+    {
+      "file": "img4.jpg",
+      "desc": "Moody dark portrait of a woman's lower face holding a lit cigarette, seen through a square cutout, blue nail polish",
+      "role": "Gallery tile in the circular ring",
+      "replaced": true
+    },
+    {
+      "file": "img5.jpg",
+      "desc": "Orange-lit silhouette of a person pressing an open hand against frosted glass",
+      "role": "Gallery tile in the circular ring",
+      "replaced": true
+    },
+    {
+      "file": "img6.jpg",
+      "desc": "Moody low-key portrait of a blonde woman with wavy hair against a dark smoky backdrop",
+      "role": "Gallery tile in the circular ring",
+      "replaced": true
+    },
+    {
+      "file": "img7.jpg",
+      "desc": "Autumn tree with amber-gold foliage beside a still misty lake at golden hour, a lone bench on the far bank",
+      "role": "Gallery tile in the circular ring",
+      "replaced": true
+    },
+    {
+      "file": "img8.jpg",
+      "desc": "Warm still life of a glass teapot of orange-infused tea on a side table beside a glowing fireplace with stacked firewood",
+      "role": "Gallery tile in the circular ring",
+      "replaced": true
+    },
+    {
+      "file": "img9.jpg",
+      "desc": "Person in a black suit with their face fully draped by a pale-blue tulle veil against a grey background",
+      "role": "Gallery tile in the circular ring",
+      "replaced": true
+    },
+    {
+      "file": "img10.jpg",
+      "desc": "Hazy orange-toned city skyline of skyscrapers backlit at sunset",
+      "role": "Gallery tile in the circular ring",
+      "replaced": true
+    },
+    {
+      "file": "img11.jpg",
+      "desc": "Moody blue-toned portrait of a woman with wet hair falling across her face, one hand raised",
+      "role": "Gallery tile in the circular ring",
+      "replaced": true
+    },
+    {
+      "file": "img12.jpg",
+      "desc": "Green-lit smooth 3D render of a faceless bald muscular figure with soft bokeh lights",
+      "role": "Gallery tile in the circular ring",
+      "replaced": true
+    },
+    {
+      "file": "img13.jpg",
+      "desc": "Red roses with green leaves and thorny stems floating against a black background",
+      "role": "Gallery tile in the circular ring",
+      "replaced": true
+    },
+    {
+      "file": "img14.jpg",
+      "desc": "Portrait of a woman wearing oversized black futuristic wraparound visor sunglasses on a warm orange background",
+      "role": "Gallery tile in the circular ring",
+      "replaced": true
+    },
+    {
+      "file": "img15.jpg",
+      "desc": "Blonde woman in a black swimsuit resting on a paddleboard on calm water at dusk",
+      "role": "Gallery tile in the circular ring",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "editorial",
+      "minimal",
+      "elegant"
+    ],
+    "useCase": [
+      "gallery",
+      "image-reveal",
+      "hero"
+    ],
+    "useWhen": "Cuando quieras mostrar una coleccion de imagenes en un anillo circular animado, con foco al hacer clic en cada tile.",
+    "aliases": [
+      "galeria circular",
+      "circular gallery",
+      "anillo de imagenes",
+      "radial gallery",
+      "image ring"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 15,
+    "perfCost": "light",
+    "mobileSafe": true
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "mpFontScale",
+      "label": "Tamaño del texto",
+      "type": "range",
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "apply": {
+        "kind": "rootstyle",
+        "prop": "font-size"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "chartreuse",
+      "label": "Acento",
+      "type": "color",
+      "default": "#d5e14e",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--chartreuse"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "ink",
+      "label": "Texto",
+      "type": "color",
+      "default": "#20241c",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--ink"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "paper",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#f2efe6",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--paper"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "olive",
+      "label": "Texto 2",
+      "type": "color",
+      "default": "#3a4034",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--olive"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "maxRadius",
+      "label": "Radio del anillo",
+      "type": "range",
+      "min": 120,
+      "max": 500,
+      "step": 10,
+      "default": 300,
+      "unit": "px",
+      "apply": {
+        "kind": "js",
+        "path": "maxRadius"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "radiusRatio",
+      "label": "Radio en pantalla pequeña",
+      "type": "range",
+      "min": 0.15,
+      "max": 0.5,
+      "step": 0.01,
+      "default": 0.35,
+      "apply": {
+        "kind": "js",
+        "path": "radiusRatio"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "entryStagger",
+      "label": "Escalonado de entrada",
+      "type": "range",
+      "min": 0,
+      "max": 0.4,
+      "step": 0.01,
+      "default": 0.1,
+      "unit": "s",
+      "apply": {
+        "kind": "js",
+        "path": "entryStagger"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "openScale",
+      "label": "Tamaño al abrir",
+      "type": "range",
+      "min": 2,
+      "max": 10,
+      "step": 0.5,
+      "default": 5,
+      "unit": "×",
+      "apply": {
+        "kind": "js",
+        "path": "openScale"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "circular-img-gallery",
+    "title": "Circular Image Gallery",
+    "category": "gallery",
+    "trigger": "click",
+    "libs": [
+      "gsap"
+    ],
+    "complexity": 1,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": false,
+    "ease_family": "power2",
+    "duration_range": [
+      0.0001,
+      1
+    ],
+    "stagger": 0.05,
+    "assets_required": {
+      "count": 15,
+      "bytes": 2656499,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 2,
+      "reduced_motion": false
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "html/body height fija en vh"
+    ],
+    "capabilities": [],
+    "conflicts_with": [],
+    "cluster": "STEP-MACHINE",
+    "engine": "gsap",
+    "motion_signature": "staggered radial ring assembly, click zooms tile center",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "step-advance"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

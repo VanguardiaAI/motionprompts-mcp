@@ -1,0 +1,183 @@
+{
+  "slug": "full-screen-slider",
+  "sourceDir": "cg-full-screen-slider",
+  "title": "Full Screen Slider",
+  "description": "A fullscreen vertical image slider driven by the mouse wheel: each wheel step reveals or hides a slide by tweening its clip-path polygon while gsap.to zooms the underlying image from scale 2 to 1, and three stacked text columns (number, name, year) slide by 30px each with staggered power4.inOut tweens. Triggered by the wheel event with an isAnimating lock.",
+  "category": "slider",
+  "tags": [
+    "fullscreen-slider",
+    "clip-path",
+    "wheel-scroll",
+    "gsap",
+    "image-reveal",
+    "vertical-slider",
+    "editorial",
+    "kinetic-typography",
+    "minimal"
+  ],
+  "gsap": [],
+  "deps": [
+    "gsap"
+  ],
+  "preview": {
+    "waitMs": 2500
+  },
+  "images": [
+    {
+      "file": "img-1.jpg",
+      "desc": "Black-and-white dancer holding a low turning pose against a pale studio wall",
+      "role": "slide 1 background — In the Clearing",
+      "replaced": true
+    },
+    {
+      "file": "img-2.jpg",
+      "desc": "Black-and-white dancer mid-lunge across shafts of light on a concrete wall, long-exposure blur",
+      "role": "slide 2 background — Concrete Light",
+      "replaced": true
+    },
+    {
+      "file": "img-3.jpg",
+      "desc": "Black-and-white dancer braced low to the floor in a darkened studio",
+      "role": "slide 3 background — Low Ground",
+      "replaced": true
+    },
+    {
+      "file": "img-4.jpg",
+      "desc": "Black-and-white ensemble of dancers blurred in motion across a stage",
+      "role": "slide 4 background — Chorus",
+      "replaced": true
+    },
+    {
+      "file": "img-5.jpg",
+      "desc": "Black-and-white solo dancer dissolving into a grainy long-exposure blur",
+      "role": "slide 5 background — Afterimage",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-07-17",
+  "intent": {
+    "mood": [
+      "editorial",
+      "elegant",
+      "minimal",
+      "cinematic"
+    ],
+    "useCase": [
+      "slider",
+      "gallery",
+      "hero",
+      "image-reveal"
+    ],
+    "useWhen": "Cuando quieras un slider a pantalla completa controlado con la rueda del ratón, con revelado por clip-path y tipografía numerada animada.",
+    "aliases": [
+      "slider pantalla completa",
+      "fullscreen slider",
+      "wheel slider",
+      "galeria vertical",
+      "clip path reveal",
+      "image slider"
+    ]
+  },
+  "runtime": {
+    "level": "page",
+    "hijacksScroll": false,
+    "needsWebgl": false,
+    "needsCanvas": false,
+    "physics": false,
+    "lottie": false,
+    "gsapPlugins": [],
+    "assetCount": 5,
+    "perfCost": "light",
+    "mobileSafe": false
+  },
+  "status": {
+    "ported": true,
+    "verified": true,
+    "imagesReplaced": true,
+    "recolored": true,
+    "promptWritten": true,
+    "promptValidated": true
+  },
+  "controls": [
+    {
+      "id": "mpSpeed",
+      "label": "Velocidad",
+      "type": "range",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1,
+      "unit": "×",
+      "apply": {
+        "kind": "speed"
+      },
+      "tier": "free"
+    },
+    {
+      "id": "coal",
+      "label": "Fondo",
+      "type": "color",
+      "default": "#0d0f12",
+      "apply": {
+        "kind": "cssvar",
+        "name": "--coal"
+      },
+      "tier": "free"
+    }
+  ],
+  "motion": {
+    "slug": "full-screen-slider",
+    "title": "Full Screen Slider",
+    "category": "slider",
+    "trigger": "wheel",
+    "libs": [
+      "gsap"
+    ],
+    "complexity": 2,
+    "pinned": false,
+    "viewport_heights": 400,
+    "needs_lenis": false,
+    "ease_family": "power4",
+    "duration_range": [
+      2,
+      2.6
+    ],
+    "stagger": null,
+    "assets_required": {
+      "count": 5,
+      "bytes": 809079,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only",
+      "media_queries": 1,
+      "reduced_motion": true
+    },
+    "solo_on_page": true,
+    "solo_reasons": [
+      "html/body overflow:hidden"
+    ],
+    "capabilities": [
+      {
+        "capability": "page-scroll-lock",
+        "reason": "fija overflow:hidden en html/body"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "STEP-MACHINE",
+    "engine": "gsap",
+    "motion_signature": "wheel-stepped clip-path slide reveal (bottom edge sweeps up over 2s power4.inOut) with a counter-moving power3.inOut image zoom from scale 2 / top 4em to scale 1 / top 0, plus a three-band odometer: .prefix/.names/.years translate in fixed 30px steps behind a 30px clip-path window, staggered 0.15s apart. Discrete, non-scrubbed, gated by an isAnimating boolean — no rAF loop, no inertia, no ScrollTrigger.",
+    "systems": [
+      "curtain-toggle",
+      "entry-veil",
+      "pointer-latch",
+      "reveal-on-enter",
+      "step-advance"
+    ],
+    "native_system": "step-advance"
+  },
+  "review": {
+    "status": "public",
+    "comment": ""
+  }
+}

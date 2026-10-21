@@ -1,0 +1,101 @@
+{
+  "slug": "page-curl-hero-shader",
+  "sourceDir": "codegrid-page-curl-scroll-animation",
+  "title": "Page Curl Hero",
+  "title_es": "Hero que se enrolla",
+  "description": "A WebGL shader peels the hero image off like a sheet rolling over a cylinder, with shadow and back face, driven by scroll.",
+  "description_es": "Un shader WebGL despega la imagen del hero como una hoja que se enrolla sobre un cilindro, con sombra y reverso, controlado por el scroll.",
+  "category": "3d-webgl",
+  "tags": [
+    "shader",
+    "webgl",
+    "page-curl",
+    "hero",
+    "scroll",
+    "scrub",
+    "three",
+    "lenis"
+  ],
+  "gsap": [
+    "ScrollTrigger"
+  ],
+  "deps": [
+    "gsap",
+    "lenis",
+    "three"
+  ],
+  "premium": true,
+  "preview": {
+    "scrollTo": 0.5,
+    "waitMs": 2000,
+    "clip": {
+      "seconds": 8
+    }
+  },
+  "images": [
+    {
+      "file": "hero-img.jpg",
+      "desc": "bodegón de arcilla con ánfora, dos jarras y ramas de olivo en salvia y crema con un acento lila",
+      "role": "hero image curled by the shader",
+      "replaced": true
+    }
+  ],
+  "updated": "2026-10-10",
+  "status": {
+    "ported": true,
+    "verified": false,
+    "imagesReplaced": true,
+    "recolored": true
+  },
+  "review": {
+    "status": "premium"
+  },
+  "motion": {
+    "slug": "page-curl-hero-shader",
+    "title": "Page Curl Hero",
+    "category": "3d-webgl",
+    "trigger": "scroll",
+    "libs": [
+      "gsap",
+      "ScrollTrigger",
+      "lenis",
+      "three"
+    ],
+    "complexity": 4,
+    "pinned": false,
+    "viewport_heights": null,
+    "needs_lenis": true,
+    "ease_family": "none",
+    "duration_range": null,
+    "stagger": null,
+    "assets_required": {
+      "count": 1,
+      "bytes": 0,
+      "root_absolute_paths": true
+    },
+    "mobile_behavior": {
+      "kind": "css-responsive-only"
+    },
+    "solo_on_page": false,
+    "solo_reasons": [],
+    "capabilities": [
+      {
+        "capability": "page-scroll-owner",
+        "reason": "Lenis posee el scroll de la página"
+      },
+      {
+        "capability": "first-canvas",
+        "reason": "canvas WebGL a pantalla completa en el hero"
+      }
+    ],
+    "conflicts_with": [],
+    "cluster": "SCROLL-SCRUB",
+    "engine": "gsap",
+    "motion_signature": "scroll scrubs a shader uniform that curls the hero image like a turning page",
+    "systems": [
+      "scrub-lagged",
+      "scrub-welded"
+    ],
+    "native_system": "scrub-welded"
+  }
+}
